@@ -1,3 +1,3 @@
 # loouq.github.io
 
-LooUQ iotQi platform public file respository
+LooUQ iotQi/iotQc platform public file respository
