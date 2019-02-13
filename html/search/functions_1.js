@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dowork',['DoWork',['../classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a48d81833d33e9fc507689f162a2c7f55',1,'iotQc::devices::modems::LTEQC96']]]
+  ['begin',['begin',['../classiot_qc_1_1containers_1_1_t_ring_buffer.html#a8de7fb702480c93d47ce424970584f52',1,'iotQc::containers::TRingBuffer']]]
 ];

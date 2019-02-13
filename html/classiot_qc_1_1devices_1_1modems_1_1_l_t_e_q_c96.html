@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="iotQc-Logo-(400x210-trans).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">iotQc Documentation
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
   </td>
  </tr>
@@ -112,6 +112,10 @@ Inheritance diagram for iotQc::devices::modems::LTEQC96:</div>
  <div class="center">
   <img src="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.png" usemap="#iotQc::devices::modems::LTEQC96_map" alt=""/>
   <map id="iotQc::devices::modems::LTEQC96_map" name="iotQc::devices::modems::LTEQC96_map">
+<area href="structiot_qc_1_1devices_1_1modems_1_1_i_modem.html" alt="iotQc::devices::modems::IModem" shape="rect" coords="0,0,238,24"/>
+<area href="classiot_qc_1_1network_1_1_i_network_adapter.html" alt="iotQc::network::INetworkAdapter" shape="rect" coords="248,0,486,24"/>
+<area href="classiot_qc_1_1network_1_1cellular_1_1_i_cellular_adapter.html" alt="iotQc::network::cellular::ICellularAdapter" shape="rect" coords="496,0,734,24"/>
+<area href="classiot_qc_1_1arduino_1_1_l_t_em1___q_c96.html" alt="iotQc::arduino::LTEm1_QC96" shape="rect" coords="248,112,486,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -150,7 +154,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2be52513bd4eab08db0fbb2e17828a1a"><td class="memItemLeft" align="right" valign="top"><a id="a2be52513bd4eab08db0fbb2e17828a1a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DeleteDefaults</b> (<a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html">LTEQC96</a>)</td></tr>
 <tr class="separator:a2be52513bd4eab08db0fbb2e17828a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85cde3a5cc190a58f46aac245ab2d5fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a85cde3a5cc190a58f46aac245ab2d5fc">LTEQC96</a> (io::IGpioController &amp;gpioController, io::ISpiController &amp;spiController, const GpioPin status, const GpioPin reset, const GpioPin powerKey)</td></tr>
+<tr class="memitem:a85cde3a5cc190a58f46aac245ab2d5fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a85cde3a5cc190a58f46aac245ab2d5fc">LTEQC96</a> (<a class="el" href="classiot_qc_1_1io_1_1_i_gpio_controller.html">io::IGpioController</a> &amp;gpioController, <a class="el" href="classiot_qc_1_1io_1_1_i_spi_controller.html">io::ISpiController</a> &amp;spiController, const GpioPin status, const GpioPin reset, const GpioPin powerKey)</td></tr>
 <tr class="memdesc:a85cde3a5cc190a58f46aac245ab2d5fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">CTA-LTEm1 driver constructor.  <a href="#a85cde3a5cc190a58f46aac245ab2d5fc">More...</a><br /></td></tr>
 <tr class="separator:a85cde3a5cc190a58f46aac245ab2d5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae18f689c005191b99ee78cdb305b4c35"><td class="memItemLeft" align="right" valign="top"><a id="ae18f689c005191b99ee78cdb305b4c35"></a>
@@ -170,15 +174,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:acca881b0fa8ec8d3aa33ddb32a035c04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#acca881b0fa8ec8d3aa33ddb32a035c04">Restart</a> ()</td></tr>
 <tr class="memdesc:acca881b0fa8ec8d3aa33ddb32a035c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">The update method for the driver.  <a href="#acca881b0fa8ec8d3aa33ddb32a035c04">More...</a><br /></td></tr>
 <tr class="separator:acca881b0fa8ec8d3aa33ddb32a035c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b9217caab4eff9d8b1b498d9f7c827b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a9b9217caab4eff9d8b1b498d9f7c827b">SendCommand</a> (const ATCommand &amp;atCommand, uint32_t timeDelay)</td></tr>
-<tr class="memdesc:a9b9217caab4eff9d8b1b498d9f7c827b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an ATCommand to the LTEm1 modem.  <a href="#a9b9217caab4eff9d8b1b498d9f7c827b">More...</a><br /></td></tr>
+<tr class="memitem:a9b9217caab4eff9d8b1b498d9f7c827b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a9b9217caab4eff9d8b1b498d9f7c827b">SendCommand</a> (const <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> &amp;atCommand, uint32_t timeDelay)</td></tr>
+<tr class="memdesc:a9b9217caab4eff9d8b1b498d9f7c827b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> to the LTEm1 modem.  <a href="#a9b9217caab4eff9d8b1b498d9f7c827b">More...</a><br /></td></tr>
 <tr class="separator:a9b9217caab4eff9d8b1b498d9f7c827b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8af2f2c5807d5aafa591afffe8dc258"><td class="memItemLeft" align="right" valign="top"><a id="aa8af2f2c5807d5aafa591afffe8dc258"></a>
-ATResponse &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>SendCommand</b> (const ATCommand &amp;atCommand)</td></tr>
-<tr class="separator:aa8af2f2c5807d5aafa591afffe8dc258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6310e9b74ade0878cb6ce5d9560c135"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiot_qc_1_1_a_t_response.html">ATResponse</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ac6310e9b74ade0878cb6ce5d9560c135">SendCommand</a> (const <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> &amp;atCommand)</td></tr>
+<tr class="memdesc:ac6310e9b74ade0878cb6ce5d9560c135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> to the LTEm1 modem.  <a href="#ac6310e9b74ade0878cb6ce5d9560c135">More...</a><br /></td></tr>
+<tr class="separator:ac6310e9b74ade0878cb6ce5d9560c135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a9e835e2069f18110333e66ef4ebfdc"><td class="memItemLeft" align="right" valign="top"><a id="a1a9e835e2069f18110333e66ef4ebfdc"></a>
-ATRequest *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a1a9e835e2069f18110333e66ef4ebfdc">SendRequest</a> (const ATCommand &amp;atCommand)</td></tr>
-<tr class="memdesc:a1a9e835e2069f18110333e66ef4ebfdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an ATCommand request to the modem. <br /></td></tr>
+<a class="el" href="classiot_qc_1_1framework_1_1_async_handle.html">ATRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a1a9e835e2069f18110333e66ef4ebfdc">SendRequest</a> (const <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> &amp;atCommand)</td></tr>
+<tr class="memdesc:a1a9e835e2069f18110333e66ef4ebfdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> request to the modem. <br /></td></tr>
 <tr class="separator:a1a9e835e2069f18110333e66ef4ebfdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ec0663b9904de86f6ce044380cb2460"><td class="memItemLeft" align="right" valign="top"><a id="a8ec0663b9904de86f6ce044380cb2460"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>Connect</b> ()</td></tr>
@@ -201,23 +205,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>AllowHardwareFlowCntr
 <tr class="memitem:aa43cb5640ca52aed16688a2e62104421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#aa43cb5640ca52aed16688a2e62104421">AllowVerboseResponse</a> (bool enableVerbose)</td></tr>
 <tr class="memdesc:aa43cb5640ca52aed16688a2e62104421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the verbose responses.  <a href="#aa43cb5640ca52aed16688a2e62104421">More...</a><br /></td></tr>
 <tr class="separator:aa43cb5640ca52aed16688a2e62104421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7a669631cbffc88d4e2803aa890398f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ad7a669631cbffc88d4e2803aa890398f">Ping</a> (const network::IPv4_Address &amp;ipAddress, unsigned int timeout=4000, unsigned int pingNum=4)</td></tr>
+<tr class="memitem:ad7a669631cbffc88d4e2803aa890398f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ad7a669631cbffc88d4e2803aa890398f">Ping</a> (const <a class="el" href="unioniot_qc_1_1network_1_1_i_pv4___address.html">network::IPv4_Address</a> &amp;ipAddress, unsigned int timeout=4000, unsigned int pingNum=4)</td></tr>
 <tr class="memdesc:ad7a669631cbffc88d4e2803aa890398f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to the <a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html" title="LTEQC96 driver class declaration. ">LTEQC96</a> modem (BG96).  <a href="#ad7a669631cbffc88d4e2803aa890398f">More...</a><br /></td></tr>
 <tr class="separator:ad7a669631cbffc88d4e2803aa890398f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38dd0a1298143b4905257aedbf0127f6"><td class="memItemLeft" align="right" valign="top"><a id="a38dd0a1298143b4905257aedbf0127f6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Ping</b> (const char hostName[], unsigned int timeout=4000, unsigned int pingNum=4)</td></tr>
 <tr class="separator:a38dd0a1298143b4905257aedbf0127f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc418fd8b2f80ebab2b50ac7c245261a"><td class="memItemLeft" align="right" valign="top"><a id="adc418fd8b2f80ebab2b50ac7c245261a"></a>
-network::IPv4_Address&#160;</td><td class="memItemRight" valign="bottom"><b>HostByName</b> (const char *hostName)</td></tr>
+<a class="el" href="unioniot_qc_1_1network_1_1_i_pv4___address.html">network::IPv4_Address</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HostByName</b> (const char *hostName)</td></tr>
 <tr class="separator:adc418fd8b2f80ebab2b50ac7c245261a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15c46c07886ce5cc6a3ec688c1dcc1e5"><td class="memItemLeft" align="right" valign="top">framework::AsyncHandle&lt; network::NetworkSocket &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a15c46c07886ce5cc6a3ec688c1dcc1e5">OpenSocket</a> (const network::IPv4_Address &amp;ipAddress, const network::socket_info &amp;socketInfo)</td></tr>
+<tr class="memitem:a15c46c07886ce5cc6a3ec688c1dcc1e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiot_qc_1_1framework_1_1_async_handle.html">framework::AsyncHandle</a>&lt; <a class="el" href="classiot_qc_1_1network_1_1_network_socket.html">network::NetworkSocket</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a15c46c07886ce5cc6a3ec688c1dcc1e5">OpenSocket</a> (const <a class="el" href="unioniot_qc_1_1network_1_1_i_pv4___address.html">network::IPv4_Address</a> &amp;ipAddress, const <a class="el" href="structiot_qc_1_1network_1_1socket__info.html">network::socket_info</a> &amp;socketInfo)</td></tr>
 <tr class="memdesc:a15c46c07886ce5cc6a3ec688c1dcc1e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open up a socket on the network.  <a href="#a15c46c07886ce5cc6a3ec688c1dcc1e5">More...</a><br /></td></tr>
 <tr class="separator:a15c46c07886ce5cc6a3ec688c1dcc1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23500db9245cfdfad401687fa0a45e75"><td class="memItemLeft" align="right" valign="top"><a id="a23500db9245cfdfad401687fa0a45e75"></a>
-network::cellular::connection_session&#160;</td><td class="memItemRight" valign="bottom"><b>AquireConnection</b> (int pdpIndex, const network::cellular::cellular_apn_context &amp;pdpContext)</td></tr>
+<a class="el" href="structiot_qc_1_1network_1_1cellular_1_1connection__session.html">network::cellular::connection_session</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AquireConnection</b> (int pdpIndex, const <a class="el" href="structiot_qc_1_1network_1_1cellular_1_1cellular__apn__context.html">network::cellular::cellular_apn_context</a> &amp;pdpContext)</td></tr>
 <tr class="separator:a23500db9245cfdfad401687fa0a45e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace9a237ff7d095d5146b4d178e2967f6"><td class="memItemLeft" align="right" valign="top"><a id="ace9a237ff7d095d5146b4d178e2967f6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseConnectionSession</b> (network::cellular::connection_session *connectionSession)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseConnectionSession</b> (<a class="el" href="structiot_qc_1_1network_1_1cellular_1_1connection__session.html">network::cellular::connection_session</a> *connectionSession)</td></tr>
 <tr class="separator:ace9a237ff7d095d5146b4d178e2967f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2beb0b9285b835263c145e2b8bd0ffb"><td class="memItemLeft" align="right" valign="top"><a id="ae2beb0b9285b835263c145e2b8bd0ffb"></a>
 int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetRSSI</b> ()</td></tr>
@@ -229,15 +233,15 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetImei</b> (
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetIccid</b> ()</td></tr>
 <tr class="separator:a1571d0bec69036ceb02994cb6cff7daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a4dee7eac4df352648079feff917cf0"><td class="memItemLeft" align="right" valign="top"><a id="a9a4dee7eac4df352648079feff917cf0"></a>
-network::IPv4_Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a9a4dee7eac4df352648079feff917cf0">GetIPv4Address</a> ()</td></tr>
+<a class="el" href="unioniot_qc_1_1network_1_1_i_pv4___address.html">network::IPv4_Address</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a9a4dee7eac4df352648079feff917cf0">GetIPv4Address</a> ()</td></tr>
 <tr class="memdesc:a9a4dee7eac4df352648079feff917cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the IPv4 address of the modem. <br /></td></tr>
 <tr class="separator:a9a4dee7eac4df352648079feff917cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40f62166058cdea6b4a5cccf7d88b9d5"><td class="memItemLeft" align="right" valign="top"><a id="a40f62166058cdea6b4a5cccf7d88b9d5"></a>
-network::IPv6_Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a40f62166058cdea6b4a5cccf7d88b9d5">GetIPv6Address</a> ()</td></tr>
+<a class="el" href="unioniot_qc_1_1network_1_1_i_pv6___address.html">network::IPv6_Address</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a40f62166058cdea6b4a5cccf7d88b9d5">GetIPv6Address</a> ()</td></tr>
 <tr class="memdesc:a40f62166058cdea6b4a5cccf7d88b9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the IPv6 address of the modem. <br /></td></tr>
 <tr class="separator:a40f62166058cdea6b4a5cccf7d88b9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd41c171b5c4584b216e6296c1b8013a"><td class="memItemLeft" align="right" valign="top"><a id="afd41c171b5c4584b216e6296c1b8013a"></a>
-ModemMessage *&#160;</td><td class="memItemRight" valign="bottom"><b>GetMessage</b> ()</td></tr>
+<a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_modem_message.html">ModemMessage</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetMessage</b> ()</td></tr>
 <tr class="separator:afd41c171b5c4584b216e6296c1b8013a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef081fc0646a6ac64393c1ca44a5f43d"><td class="memItemLeft" align="right" valign="top"><a id="aef081fc0646a6ac64393c1ca44a5f43d"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetManufacturerId</b> ()</td></tr>
@@ -253,7 +257,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSerialNumber</b> ()</td></tr>
 <tr class="separator:a552752532163a0f8906f1601cfc9b479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af556fab95df15235a9e6a6dd5a374c5e"><td class="memItemLeft" align="right" valign="top"><a id="af556fab95df15235a9e6a6dd5a374c5e"></a>
-network::cellular::connection_session &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetDefaultSession</b> ()</td></tr>
+<a class="el" href="structiot_qc_1_1network_1_1cellular_1_1connection__session.html">network::cellular::connection_session</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetDefaultSession</b> ()</td></tr>
 <tr class="separator:af556fab95df15235a9e6a6dd5a374c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8554c33f0dee78c21c484363a184334"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ae8554c33f0dee78c21c484363a184334">SetResponseTimeout</a> (uint32_t rspTimeout)</td></tr>
 <tr class="memdesc:ae8554c33f0dee78c21c484363a184334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the response timeout.  <a href="#ae8554c33f0dee78c21c484363a184334">More...</a><br /></td></tr>
@@ -271,11 +275,11 @@ network::cellular::connection_session &amp;&#160;</td><td class="memItemRight" v
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a15103dfb9c577dc9a2e3f9dfb3a2c015"><td class="memItemLeft" align="right" valign="top"><a id="a15103dfb9c577dc9a2e3f9dfb3a2c015"></a>
-framework::Event&lt; ConnectedHandler &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a15103dfb9c577dc9a2e3f9dfb3a2c015">Connected</a></td></tr>
+<a class="el" href="classiot_qc_1_1framework_1_1_event.html">framework::Event</a>&lt; ConnectedHandler &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a15103dfb9c577dc9a2e3f9dfb3a2c015">Connected</a></td></tr>
 <tr class="memdesc:a15103dfb9c577dc9a2e3f9dfb3a2c015"><td class="mdescLeft">&#160;</td><td class="mdescRight">An Event signifying the modem is connected. <br /></td></tr>
 <tr class="separator:a15103dfb9c577dc9a2e3f9dfb3a2c015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d86340425c00fb9fc7660e569d0b1cc"><td class="memItemLeft" align="right" valign="top"><a id="a7d86340425c00fb9fc7660e569d0b1cc"></a>
-framework::Event&lt; URCHandler &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a7d86340425c00fb9fc7660e569d0b1cc">URCReceived</a></td></tr>
+<a class="el" href="classiot_qc_1_1framework_1_1_event.html">framework::Event</a>&lt; URCHandler &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a7d86340425c00fb9fc7660e569d0b1cc">URCReceived</a></td></tr>
 <tr class="memdesc:a7d86340425c00fb9fc7660e569d0b1cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">An Event that is risen when an unsolicited response code is received. <br /></td></tr>
 <tr class="separator:a7d86340425c00fb9fc7660e569d0b1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -305,13 +309,13 @@ static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8244d601b7ec8cde62f6fe9acbda061a"><td class="memItemLeft" align="right" valign="top"><a id="a8244d601b7ec8cde62f6fe9acbda061a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendNetworkData</b> (network::NetworkSocket *socket, const uint8_t data[], size_t dataLength)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendNetworkData</b> (<a class="el" href="classiot_qc_1_1network_1_1_network_socket.html">network::NetworkSocket</a> *socket, const uint8_t data[], size_t dataLength)</td></tr>
 <tr class="separator:a8244d601b7ec8cde62f6fe9acbda061a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee1c2a35572903566cdffd8d190108fe"><td class="memItemLeft" align="right" valign="top"><a id="aee1c2a35572903566cdffd8d190108fe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseSocket</b> (network::NetworkSocket *socket)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseSocket</b> (<a class="el" href="classiot_qc_1_1network_1_1_network_socket.html">network::NetworkSocket</a> *socket)</td></tr>
 <tr class="separator:aee1c2a35572903566cdffd8d190108fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a793cec70f81315ed95f23b4ec4c7756a"><td class="memItemLeft" align="right" valign="top"><a id="a793cec70f81315ed95f23b4ec4c7756a"></a>
-io::ISpiController *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a793cec70f81315ed95f23b4ec4c7756a">GetSpiController</a> ()</td></tr>
+<a class="el" href="classiot_qc_1_1io_1_1_i_spi_controller.html">io::ISpiController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a793cec70f81315ed95f23b4ec4c7756a">GetSpiController</a> ()</td></tr>
 <tr class="memdesc:a793cec70f81315ed95f23b4ec4c7756a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spi controller. <br /></td></tr>
 <tr class="separator:a793cec70f81315ed95f23b4ec4c7756a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3732d7ae0b8b41504700ff942e264477"><td class="memItemLeft" align="right" valign="top"><a id="a3732d7ae0b8b41504700ff942e264477"></a>
@@ -321,16 +325,20 @@ GpioPin&#160;</td><td class="memItemRight" valign="bottom"><b>GetPowerKey</b> ()
 GpioPin&#160;</td><td class="memItemRight" valign="bottom"><b>GetResetPin</b> () const</td></tr>
 <tr class="separator:a2590428091602d654a9d60a69c875a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8c95a4f1685b6321033310c22e3cf94"><td class="memItemLeft" align="right" valign="top"><a id="aa8c95a4f1685b6321033310c22e3cf94"></a>
-io::LTEQC96Registers *&#160;</td><td class="memItemRight" valign="bottom"><b>GetRegisterFile</b> ()</td></tr>
+<a class="el" href="classiot_qc_1_1io_1_1_l_t_e_q_c96_registers.html">io::LTEQC96Registers</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetRegisterFile</b> ()</td></tr>
 <tr class="separator:aa8c95a4f1685b6321033310c22e3cf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classiot_qc_1_1network_1_1_i_network_adapter"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classiot_qc_1_1network_1_1_i_network_adapter')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classiot_qc_1_1network_1_1_i_network_adapter.html">iotQc::network::INetworkAdapter</a></td></tr>
+<tr class="memitem:ab6cfda3886e807d2fa073a3dacd4d9f8 inherit pro_methods_classiot_qc_1_1network_1_1_i_network_adapter"><td class="memItemLeft" align="right" valign="top"><a id="ab6cfda3886e807d2fa073a3dacd4d9f8"></a>
+<a class="el" href="classiot_qc_1_1network_1_1_network_socket.html">NetworkSocket</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>CreateSocket</b> (<a class="el" href="structiot_qc_1_1network_1_1socket__info.html">socket_info</a> socketInfo, uint16_t socketId)</td></tr>
+<tr class="separator:ab6cfda3886e807d2fa073a3dacd4d9f8 inherit pro_methods_classiot_qc_1_1network_1_1_i_network_adapter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ae6104cd9bfa2a95ae9661fc5e88d8b3a"><td class="memItemLeft" align="right" valign="top"><a id="ae6104cd9bfa2a95ae9661fc5e88d8b3a"></a>
-framework::Event&lt; OnPowerChange &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PoweredOn</b></td></tr>
+<a class="el" href="classiot_qc_1_1framework_1_1_event.html">framework::Event</a>&lt; OnPowerChange &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PoweredOn</b></td></tr>
 <tr class="separator:ae6104cd9bfa2a95ae9661fc5e88d8b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceea3282d370d13c0255d449ff8ec5c4"><td class="memItemLeft" align="right" valign="top"><a id="aceea3282d370d13c0255d449ff8ec5c4"></a>
-framework::Event&lt; OnPowerChange &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PoweredOff</b></td></tr>
+<a class="el" href="classiot_qc_1_1framework_1_1_event.html">framework::Event</a>&lt; OnPowerChange &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PoweredOff</b></td></tr>
 <tr class="separator:aceea3282d370d13c0255d449ff8ec5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -357,13 +365,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
         <tr>
           <td class="memname">iotQc::devices::modems::LTEQC96::LTEQC96 </td>
           <td>(</td>
-          <td class="paramtype">io::IGpioController &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiot_qc_1_1io_1_1_i_gpio_controller.html">io::IGpioController</a> &amp;&#160;</td>
           <td class="paramname"><em>gpioController</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">io::ISpiController &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiot_qc_1_1io_1_1_i_spi_controller.html">io::ISpiController</a> &amp;&#160;</td>
           <td class="paramname"><em>spiController</em>, </td>
         </tr>
         <tr>
@@ -523,17 +531,20 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">framework::AsyncHandle&lt; network::NetworkSocket &gt; * iotQc::devices::modems::LTEQC96::OpenSocket </td>
+          <td class="memname"><a class="el" href="classiot_qc_1_1framework_1_1_async_handle.html">framework::AsyncHandle</a>&lt; <a class="el" href="classiot_qc_1_1network_1_1_network_socket.html">network::NetworkSocket</a> &gt; * iotQc::devices::modems::LTEQC96::OpenSocket </td>
           <td>(</td>
-          <td class="paramtype">const network::IPv4_Address &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="unioniot_qc_1_1network_1_1_i_pv4___address.html">network::IPv4_Address</a> &amp;&#160;</td>
           <td class="paramname"><em>ipAddress</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const network::socket_info &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structiot_qc_1_1network_1_1socket__info.html">network::socket_info</a> &amp;&#160;</td>
           <td class="paramname"><em>socketInfo</em>&#160;</td>
         </tr>
         <tr>
@@ -542,6 +553,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Open up a socket on the network. </p>
@@ -554,6 +570,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a network socket. </dd></dl>
 
+<p>Implements <a class="el" href="classiot_qc_1_1network_1_1_i_network_adapter.html">iotQc::network::INetworkAdapter</a>.</p>
+
 </div>
 </div>
 <a id="ad7a669631cbffc88d4e2803aa890398f"></a>
@@ -561,11 +579,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void iotQc::devices::modems::LTEQC96::Ping </td>
           <td>(</td>
-          <td class="paramtype">const network::IPv4_Address &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="unioniot_qc_1_1network_1_1_i_pv4___address.html">network::IPv4_Address</a> &amp;&#160;</td>
           <td class="paramname"><em>ipAddress</em>, </td>
         </tr>
         <tr>
@@ -586,6 +607,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Send data to the <a class="el" href="classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html" title="LTEQC96 driver class declaration. ">LTEQC96</a> modem (BG96). </p>
@@ -597,6 +623,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
   </table>
   </dd>
 </dl>
+
+<p>Implements <a class="el" href="classiot_qc_1_1network_1_1_i_network_adapter.html">iotQc::network::INetworkAdapter</a>.</p>
 
 </div>
 </div>
@@ -627,7 +655,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </div>
 </div>
 <a id="a9b9217caab4eff9d8b1b498d9f7c827b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b9217caab4eff9d8b1b498d9f7c827b">&#9670;&nbsp;</a></span>SendCommand()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9217caab4eff9d8b1b498d9f7c827b">&#9670;&nbsp;</a></span>SendCommand() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -635,7 +663,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
         <tr>
           <td class="memname">void iotQc::devices::modems::LTEQC96::SendCommand </td>
           <td>(</td>
-          <td class="paramtype">const ATCommand &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> &amp;&#160;</td>
           <td class="paramname"><em>atCommand</em>, </td>
         </tr>
         <tr>
@@ -652,11 +680,37 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
       </table>
 </div><div class="memdoc">
 
-<p>Send an ATCommand to the LTEm1 modem. </p>
+<p>Send an <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> to the LTEm1 modem. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">atCommand</td><td>The AT Command. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timeDelay</td><td>The time to delay after processing the command. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac6310e9b74ade0878cb6ce5d9560c135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6310e9b74ade0878cb6ce5d9560c135">&#9670;&nbsp;</a></span>SendCommand() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiot_qc_1_1_a_t_response.html">iotQc::ATResponse</a> &amp; iotQc::devices::modems::LTEQC96::SendCommand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> &amp;&#160;</td>
+          <td class="paramname"><em>atCommand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send an <a class="el" href="classiot_qc_1_1_a_t_command.html">ATCommand</a> to the LTEm1 modem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">atCommand</td><td>The AT Command. </td></tr>
   </table>
   </dd>
 </dl>

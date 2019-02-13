@@ -54,7 +54,7 @@ var classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96 =
     [ "QuerySIMCard", "classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a73d1f7604860fe9b081651b39b8f6225", null ],
     [ "Restart", "classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#acca881b0fa8ec8d3aa33ddb32a035c04", null ],
     [ "SendCommand", "classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a9b9217caab4eff9d8b1b498d9f7c827b", null ],
-    [ "SendCommand", "classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#aa8af2f2c5807d5aafa591afffe8dc258", null ],
+    [ "SendCommand", "classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ac6310e9b74ade0878cb6ce5d9560c135", null ],
     [ "SendNetworkData", "classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a8244d601b7ec8cde62f6fe9acbda061a", null ],
     [ "SendRequest", "classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a1a9e835e2069f18110333e66ef4ebfdc", null ],
     [ "SetBaudRate", "classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#af78fe49a5a24b987d073ce13f721d64f", null ],
