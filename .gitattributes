@@ -1,0 +1,8 @@
+# Custom for Doxygen
+*.doxyfile	diff=astestplain
+*.xml		diff=astestplain
+*.jpg		binary
+*.png		binary
+*.svg		binary
+*.bmp		binary
+*.eps		binary
