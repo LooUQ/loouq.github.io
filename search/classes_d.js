@@ -1,13 +1,16 @@
 var searchData=
 [
-  ['smartpointer',['SmartPointer',['../d1/d54/classiot_qc_1_1memory_1_1_smart_pointer.html',1,'iotQc::memory']]],
-  ['smartpointer_3c_20iotqc_3a_3autilities_3a_3avoidfunctor_3c_20iotqc_3a_3aatresponse_20_26_20_3e_20_3e',['SmartPointer&lt; iotQc::utilities::VoidFunctor&lt; iotQc::ATResponse &amp; &gt; &gt;',['../d1/d54/classiot_qc_1_1memory_1_1_smart_pointer.html',1,'iotQc::memory']]],
-  ['smartpointer_3c_20iotqc_3a_3autilities_3a_3avoidfunctor_3c_20t_20_26_20_3e_20_3e',['SmartPointer&lt; iotQc::utilities::VoidFunctor&lt; T &amp; &gt; &gt;',['../d1/d54/classiot_qc_1_1memory_1_1_smart_pointer.html',1,'iotQc::memory']]],
-  ['socket_5finfo',['socket_info',['../d9/d40/structiot_qc_1_1network_1_1socket__info.html',1,'iotQc::network']]],
-  ['spayload',['SPayload',['../d2/d26/structiot_qc_1_1_s_payload.html',1,'iotQc']]],
-  ['sqc96pins',['SQc96Pins',['../de/d74/structiot_qc_1_1arduino_1_1_s_qc96_pins.html',1,'iotQc::arduino']]],
-  ['sstream',['SStream',['../da/d96/classiot_qc_1_1streams_1_1_s_stream.html',1,'iotQc::streams']]],
-  ['syncpointer',['SyncPointer',['../dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html',1,'iotQc::memory']]],
-  ['syncpointer_3c_20iotqc_3a_3autilities_3a_3avoidfunctor_3c_20iotqc_3a_3aatresponse_20_26_3e_20_3e',['SyncPointer&lt; iotQc::utilities::VoidFunctor&lt; iotQc::ATResponse &amp;&gt; &gt;',['../dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html',1,'iotQc::memory']]],
-  ['syncpointer_3c_20iotqc_3a_3autilities_3a_3avoidfunctor_3c_20t_20_26_3e_20_3e',['SyncPointer&lt; iotQc::utilities::VoidFunctor&lt; T &amp;&gt; &gt;',['../dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html',1,'iotQc::memory']]]
+  ['tarray',['TArray',['../d3/d67/classiot_qc_1_1containers_1_1_t_array.html',1,'iotQc::containers']]],
+  ['tarray_3c_20bool_2c_20n_20_3e',['TArray&lt; bool, N &gt;',['../d3/d67/classiot_qc_1_1containers_1_1_t_array.html',1,'iotQc::containers']]],
+  ['tarray_3c_20const_20char_20_2a_2c_2016u_20_3e',['TArray&lt; const char *, 16U &gt;',['../d3/d67/classiot_qc_1_1containers_1_1_t_array.html',1,'iotQc::containers']]],
+  ['tarray_3c_20gpiopin_2c_20n_20_3e',['TArray&lt; GpioPin, N &gt;',['../d3/d67/classiot_qc_1_1containers_1_1_t_array.html',1,'iotQc::containers']]],
+  ['tarray_3c_20iotqc_3a_3adevices_3a_3amodems_3a_3amodemmessage_20_2a_2c_208_20_3e',['TArray&lt; iotQc::devices::modems::ModemMessage *, 8 &gt;',['../d3/d67/classiot_qc_1_1containers_1_1_t_array.html',1,'iotQc::containers']]],
+  ['tarray_3c_20iotqc_3a_3anetwork_3a_3acellular_3a_3aconnection_5fsession_2c_20n_20_3e',['TArray&lt; iotQc::network::cellular::connection_session, N &gt;',['../d3/d67/classiot_qc_1_1containers_1_1_t_array.html',1,'iotQc::containers']]],
+  ['tarray_3c_20uint16_5ft_2c_20n_20_3e',['TArray&lt; uint16_t, N &gt;',['../d3/d67/classiot_qc_1_1containers_1_1_t_array.html',1,'iotQc::containers']]],
+  ['templated',['Templated',['../d0/dc4/class_templated.html',1,'']]],
+  ['this_5fthread',['this_thread',['../d2/dcb/structiot_qc_1_1threading_1_1this__thread.html',1,'iotQc::threading']]],
+  ['thread',['Thread',['../d4/d7b/classiot_qc_1_1threading_1_1_thread.html',1,'iotQc::threading']]],
+  ['tringbuffer',['TRingBuffer',['../d7/dcb/classiot_qc_1_1containers_1_1_t_ring_buffer.html',1,'iotQc::containers']]],
+  ['tstream',['TStream',['../db/d73/classiot_qc_1_1streams_1_1_t_stream.html',1,'iotQc::streams']]],
+  ['tstream_3c_20sstream_5ftype_2c_20n_20_3e',['TStream&lt; sstream_type, N &gt;',['../db/d73/classiot_qc_1_1streams_1_1_t_stream.html',1,'iotQc::streams']]]
 ];

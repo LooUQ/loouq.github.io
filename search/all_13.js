@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['vector',['Vector',['../dd/db8/classiot_qc_1_1containers_1_1_vector.html',1,'iotQc::containers']]],
-  ['vector_3c_20const_20char_20_2a_3e',['Vector&lt; const char *&gt;',['../dd/db8/classiot_qc_1_1containers_1_1_vector.html',1,'iotQc::containers']]],
-  ['vector_3c_20gpiopin_2c_20pinrange_20_3e',['Vector&lt; GpioPin, PINRANGE &gt;',['../dd/db8/classiot_qc_1_1containers_1_1_vector.html',1,'iotQc::containers']]],
-  ['voidfunctor',['VoidFunctor',['../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html',1,'iotQc::utilities']]],
-  ['voidfunctor_3c_20args_2e_2e_2e_20_3e',['VoidFunctor&lt; ARGS... &gt;',['../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html',1,'iotQc::utilities']]],
-  ['voidfunctor_3c_20iotqc_3a_3aatresponse_20_26_20_3e',['VoidFunctor&lt; iotQc::ATResponse &amp; &gt;',['../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html',1,'iotQc::utilities']]],
-  ['voidfunctor_3c_20t_20_26_20_3e',['VoidFunctor&lt; T &amp; &gt;',['../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html',1,'iotQc::utilities']]],
-  ['voidfunctor_3c_20t_2c_20voidfunctor_3c_20args_2e_2e_2e_20_3e_20_3e',['VoidFunctor&lt; T, VoidFunctor&lt; ARGS... &gt; &gt;',['../dc/d97/classiot_qc_1_1utilities_1_1_void_functor_3_01_t_00_01_void_functor_3_01_a_r_g_s_8_8_8_01_4_01_4.html',1,'iotQc::utilities']]]
+  ['updatecontroller',['UpdateController',['../de/d74/classiot_qc_1_1generics_1_1_i_hardware_controller.html#ad913fa3371b0f4b5584fd73a2b2746c4',1,'iotQc::generics::IHardwareController::UpdateController()'],['../d5/d62/classiot_qc_1_1arduino_1_1_arduino_gpio.html#a994548e6156ae78f0934f7253995c6f1',1,'iotQc::arduino::ArduinoGpio::UpdateController()'],['../de/dcb/classiot_qc_1_1arduino_1_1_arduino_spi.html#a0bea0a9dd0ea4999e9dcea7f9deedc39',1,'iotQc::arduino::ArduinoSpi::UpdateController()']]],
+  ['urcreceived',['URCReceived',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a7d86340425c00fb9fc7660e569d0b1cc',1,'iotQc::devices::modems::LTEQC96']]]
 ];

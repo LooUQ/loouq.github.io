@@ -18,6 +18,7 @@ var searchData=
   ['ipv4_5faddress',['IPv4_Address',['../d7/d26/unioniot_qc_1_1network_1_1_i_pv4___address.html',1,'iotQc::network']]],
   ['ipv6_5faddress',['IPv6_Address',['../dd/dba/unioniot_qc_1_1network_1_1_i_pv6___address.html',1,'iotQc::network']]],
   ['iradio',['IRadio',['../df/d98/classiot_qc_1_1devices_1_1radios_1_1_i_radio.html',1,'iotQc::devices::radios']]],
+  ['isconnected',['IsConnected',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a9021aa731291375ce07c41578308c633a6f4c4e0388a4ab44f8d689f170a1c299',1,'iotQc::devices::modems::LTEQC96']]],
   ['ispicontroller',['ISpiController',['../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html',1,'iotQc::io::ISpiController'],['../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html#a9b7abdc2de5b1cbe442f9d0021c71d25',1,'iotQc::io::ISpiController::ISpiController()']]],
   ['isready',['IsReady',['../d2/d7e/classiot_qc_1_1io_1_1_l_t_e_q_c96_registers.html#a07d403617b0dcb92795a029ba7e35f19',1,'iotQc::io::LTEQC96Registers']]],
   ['iterator',['iterator',['../d4/d47/classiot_qc_1_1containers_1_1_vector_1_1iterator.html',1,'iotQc::containers::Vector&lt; T, N &gt;::iterator'],['../db/d68/classiot_qc_1_1containers_1_1_t_array_1_1iterator.html',1,'iotQc::containers::TArray&lt; T, N &gt;::iterator'],['../d6/d2e/classiot_qc_1_1containers_1_1_t_ring_buffer_1_1iterator.html',1,'iotQc::containers::TRingBuffer&lt; T, N, container &gt;::iterator']]],
