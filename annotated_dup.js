@@ -85,9 +85,13 @@ var annotated_dup =
       [ "IoTString", "d9/d35/classiot_qc_1_1_io_t_string.html", "d9/d35/classiot_qc_1_1_io_t_string" ],
       [ "SPayload", "d2/d26/structiot_qc_1_1_s_payload.html", "d2/d26/structiot_qc_1_1_s_payload" ]
     ] ],
-    [ "HardwareIO", "d1/d42/class_hardware_i_o.html", null ],
+    [ "A", "d8/d4f/class_a.html", null ],
+    [ "A", "d8/d4f/class_a.html", null ],
+    [ "A", "d8/d4f/class_a.html", null ],
+    [ "A", "d8/d4f/class_a.html", null ],
     [ "LTEm1Class", "d8/df1/class_l_t_em1_class.html", "d8/df1/class_l_t_em1_class" ],
     [ "LTEm1Client", "d0/d80/class_l_t_em1_client.html", "d0/d80/class_l_t_em1_client" ],
     [ "LTEm1SSLClient", "df/d66/class_l_t_em1_s_s_l_client.html", "df/d66/class_l_t_em1_s_s_l_client" ],
-    [ "LTEm1UDP", "d3/d65/class_l_t_em1_u_d_p.html", "d3/d65/class_l_t_em1_u_d_p" ]
+    [ "LTEm1UDP", "d3/d65/class_l_t_em1_u_d_p.html", "d3/d65/class_l_t_em1_u_d_p" ],
+    [ "Templated", "d0/dc4/class_templated.html", null ]
 ];

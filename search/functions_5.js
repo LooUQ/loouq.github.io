@@ -8,10 +8,16 @@ var searchData=
   ['getclockspeed',['GetClockSpeed',['../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html#ad8a04017c5494bdeb506029fa8544b24',1,'iotQc::io::ISpiController']]],
   ['getfirmwareversion',['GetFirmwareVersion',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ae9037b65bf0ff63e73cb3b08f6074fa8',1,'iotQc::devices::modems::LTEQC96']]],
   ['getfullmessage',['GetFullMessage',['../df/d8c/classiot_qc_1_1devices_1_1modems_1_1_modem_message.html#a7bb51608fccf73556e634f38b1b40b5b',1,'iotQc::devices::modems::ModemMessage']]],
+  ['geticcid',['GetIccid',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a1571d0bec69036ceb02994cb6cff7daa',1,'iotQc::devices::modems::LTEQC96']]],
+  ['getimei',['GetImei',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#aa1697a87a04dc7d9b0ea0f3f1f8ed3c7',1,'iotQc::devices::modems::LTEQC96']]],
   ['getinterrupt',['GetInterrupt',['../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html#ae8009c02894f2f456469f1d1946d6435',1,'iotQc::io::ISpiController']]],
   ['getipv4address',['GetIPv4Address',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a9a4dee7eac4df352648079feff917cf0',1,'iotQc::devices::modems::LTEQC96']]],
   ['getipv6address',['GetIPv6Address',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a40f62166058cdea6b4a5cccf7d88b9d5',1,'iotQc::devices::modems::LTEQC96']]],
   ['getlasttoken',['GetLastToken',['../df/d8c/classiot_qc_1_1devices_1_1modems_1_1_modem_message.html#aecd7c9bb09e3cb815baab0d4dce43b0f',1,'iotQc::devices::modems::ModemMessage']]],
-  ['getmode',['GetMode',['../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html#af8cc530d2bc9e519c80a1b53dad08758',1,'iotQc::io::ISpiController']]],
+  ['getmessage',['GetMessage',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#afd41c171b5c4584b216e6296c1b8013a',1,'iotQc::devices::modems::LTEQC96']]],
+  ['getmode',['GetMode',['../d3/d97/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96_1_1_controller.html#a9af354839685746536ed17deb0536cc1',1,'iotQc::devices::modems::LTEQC96::Controller::GetMode()'],['../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html#af8cc530d2bc9e519c80a1b53dad08758',1,'iotQc::io::ISpiController::GetMode()']]],
+  ['getnetworkstate',['GetNetworkState',['../d3/d97/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96_1_1_controller.html#a8b8fd7d698db2dbd10b0fc7f26eeeea1',1,'iotQc::devices::modems::LTEQC96::Controller']]],
+  ['getrecenterror',['GetRecentError',['../d3/d97/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96_1_1_controller.html#aa7a3c7d4b9603b40c293427eef1a7631',1,'iotQc::devices::modems::LTEQC96::Controller']]],
+  ['getrssi',['GetRSSI',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ae2beb0b9285b835263c145e2b8bd0ffb',1,'iotQc::devices::modems::LTEQC96']]],
   ['getspicontroller',['GetSpiController',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a793cec70f81315ed95f23b4ec4c7756a',1,'iotQc::devices::modems::LTEQC96']]]
 ];

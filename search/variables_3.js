@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['receiveddata',['ReceivedData',['../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html#ae19111b0d82812cdb37d1d612ebe6290',1,'iotQc::io::ISpiController']]]
+  ['poweredoff',['PoweredOff',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#aceea3282d370d13c0255d449ff8ec5c4',1,'iotQc::devices::modems::LTEQC96']]],
+  ['poweredon',['PoweredOn',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ae6104cd9bfa2a95ae9661fc5e88d8b3a',1,'iotQc::devices::modems::LTEQC96']]]
 ];

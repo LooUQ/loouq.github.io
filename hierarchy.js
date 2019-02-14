@@ -1,6 +1,10 @@
 var hierarchy =
 [
     [ "iotQc::io::__register", "d1/daf/unioniot_qc_1_1io_1_1____register.html", null ],
+    [ "A", "d8/d4f/class_a.html", null ],
+    [ "A", "d8/d4f/class_a.html", null ],
+    [ "A", "d8/d4f/class_a.html", null ],
+    [ "A", "d8/d4f/class_a.html", null ],
     [ "iotQc::Application", "d9/d80/classiot_qc_1_1_application.html", null ],
     [ "iotQc::ATCommand", "db/d3f/classiot_qc_1_1_a_t_command.html", null ],
     [ "iotQc::ATResponse", "dc/dc6/classiot_qc_1_1_a_t_response.html", null ],
@@ -16,7 +20,7 @@ var hierarchy =
     [ "iotQc::containers::CQueue< T, N >", "d4/d29/classiot_qc_1_1containers_1_1_c_queue.html", [
       [ "iotQc::containers::MessagingQueue< T, N >", "d9/de1/classiot_qc_1_1containers_1_1_messaging_queue.html", null ]
     ] ],
-    [ "iotQc::containers::CQueue< iotQc::devices::modems::ModemMessage *>", "d4/d29/classiot_qc_1_1containers_1_1_c_queue.html", null ],
+    [ "iotQc::containers::CQueue< iotQc::devices::modems::ModemMessage * >", "d4/d29/classiot_qc_1_1containers_1_1_c_queue.html", null ],
     [ "iotQc::containers::CQueue< iotQc::network::cellular::connection_session, 3 >", "d4/d29/classiot_qc_1_1containers_1_1_c_queue.html", null ],
     [ "iotQc::containers::CQueue< uint16_t, 12 >", "d4/d29/classiot_qc_1_1containers_1_1_c_queue.html", null ],
     [ "iotQc::containers::CQueue< uint16_t, 6 >", "d4/d29/classiot_qc_1_1containers_1_1_c_queue.html", null ],
@@ -31,7 +35,6 @@ var hierarchy =
     [ "iotQc::framework::Event< utilities::VoidFunctor< ARGS... > >", "de/dca/classiot_qc_1_1framework_1_1_event_3_01utilities_1_1_void_functor_3_01_a_r_g_s_8_8_8_01_4_01_4.html", null ],
     [ "iotQc::utilities::Functor< RET, ARGS >", "de/dd8/classiot_qc_1_1utilities_1_1_functor.html", null ],
     [ "iotQc::io::GpioPinSet", "d9/d9d/structiot_qc_1_1io_1_1_gpio_pin_set.html", null ],
-    [ "HardwareIO", "d1/d42/class_hardware_i_o.html", null ],
     [ "iotQc::framework::IAsync", "d1/d74/classiot_qc_1_1framework_1_1_i_async.html", [
       [ "iotQc::framework::AsyncHandle< iotQc::ATResponse >", "d7/df4/classiot_qc_1_1framework_1_1_async_handle.html", null ],
       [ "iotQc::framework::AsyncHandle< T >", "d7/df4/classiot_qc_1_1framework_1_1_async_handle.html", null ]
@@ -82,10 +85,10 @@ var hierarchy =
       [ "iotQc::memory::SyncPointer< T >", "dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html", null ]
     ] ],
     [ "iotQc::memory::SmartPointer< iotQc::utilities::VoidFunctor< iotQc::ATResponse & > >", "d1/d54/classiot_qc_1_1memory_1_1_smart_pointer.html", [
-      [ "iotQc::memory::SyncPointer< iotQc::utilities::VoidFunctor< iotQc::ATResponse &> >", "dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html", null ]
+      [ "iotQc::memory::SyncPointer< iotQc::utilities::VoidFunctor< iotQc::ATResponse & > >", "dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html", null ]
     ] ],
     [ "iotQc::memory::SmartPointer< iotQc::utilities::VoidFunctor< T & > >", "d1/d54/classiot_qc_1_1memory_1_1_smart_pointer.html", [
-      [ "iotQc::memory::SyncPointer< iotQc::utilities::VoidFunctor< T &> >", "dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html", null ]
+      [ "iotQc::memory::SyncPointer< iotQc::utilities::VoidFunctor< T & > >", "dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html", null ]
     ] ],
     [ "iotQc::network::socket_info", "d9/d40/structiot_qc_1_1network_1_1socket__info.html", null ],
     [ "iotQc::SPayload", "d2/d26/structiot_qc_1_1_s_payload.html", null ],
@@ -97,6 +100,7 @@ var hierarchy =
     [ "iotQc::containers::TArray< iotQc::devices::modems::ModemMessage *, 8 >", "d3/d67/classiot_qc_1_1containers_1_1_t_array.html", null ],
     [ "iotQc::containers::TArray< iotQc::network::cellular::connection_session, N >", "d3/d67/classiot_qc_1_1containers_1_1_t_array.html", null ],
     [ "iotQc::containers::TArray< uint16_t, N >", "d3/d67/classiot_qc_1_1containers_1_1_t_array.html", null ],
+    [ "Templated", "d0/dc4/class_templated.html", null ],
     [ "iotQc::threading::this_thread", "d2/dcb/structiot_qc_1_1threading_1_1this__thread.html", null ],
     [ "iotQc::threading::Thread", "d4/d7b/classiot_qc_1_1threading_1_1_thread.html", null ],
     [ "iotQc::streams::TStream< T, N, ULBuffer >", "db/d73/classiot_qc_1_1streams_1_1_t_stream.html", null ],
@@ -107,7 +111,7 @@ var hierarchy =
       [ "LTEm1UDP", "d3/d65/class_l_t_em1_u_d_p.html", null ]
     ] ],
     [ "iotQc::containers::Vector< T, N >", "dd/db8/classiot_qc_1_1containers_1_1_vector.html", null ],
-    [ "iotQc::containers::Vector< const char *>", "dd/db8/classiot_qc_1_1containers_1_1_vector.html", null ],
+    [ "iotQc::containers::Vector< const char * >", "dd/db8/classiot_qc_1_1containers_1_1_vector.html", null ],
     [ "iotQc::containers::Vector< GpioPin, PINRANGE >", "dd/db8/classiot_qc_1_1containers_1_1_vector.html", null ],
     [ "iotQc::utilities::VoidFunctor< ARGS >", "d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html", null ],
     [ "iotQc::utilities::VoidFunctor< ARGS... >", "d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html", [
