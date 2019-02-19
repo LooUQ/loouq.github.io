@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['receiveddata',['ReceivedData',['../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html#ae19111b0d82812cdb37d1d612ebe6290',1,'iotQc::io::ISpiController']]]
+  ['object',['object',['../da/df0/structiot_qc_1_1memory_1_1_object_reference.html#a0d9495f2a8d8a803361dd737a4589652',1,'iotQc::memory::ObjectReference']]]
 ];

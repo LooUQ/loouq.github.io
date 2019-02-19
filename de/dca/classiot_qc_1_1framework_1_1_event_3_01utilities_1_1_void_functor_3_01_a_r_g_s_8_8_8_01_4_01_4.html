@@ -95,19 +95,134 @@ $(document).ready(function(){initNavTree('de/dca/classiot_qc_1_1framework_1_1_ev
 <div class="title">iotQc::framework::Event&lt; utilities::VoidFunctor&lt; ARGS... &gt; &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">Event</a> class that can be declared by a class object.  
+ <a href="../../de/dca/classiot_qc_1_1framework_1_1_event_3_01utilities_1_1_void_functor_3_01_a_r_g_s_8_8_8_01_4_01_4.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/d6d/_event_8h_source.html">Event.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aad673070675b2689ced4ba1520df8f61"><td class="memItemLeft" align="right" valign="top"><a id="aad673070675b2689ced4ba1520df8f61"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (FuncPtr function)</td></tr>
+<tr class="memitem:a587366a6217a535906befa64c197a292"><td class="memItemLeft" align="right" valign="top"><a id="a587366a6217a535906befa64c197a292"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dca/classiot_qc_1_1framework_1_1_event_3_01utilities_1_1_void_functor_3_01_a_r_g_s_8_8_8_01_4_01_4.html#a587366a6217a535906befa64c197a292">~Event</a> ()</td></tr>
+<tr class="memdesc:a587366a6217a535906befa64c197a292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a587366a6217a535906befa64c197a292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad673070675b2689ced4ba1520df8f61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dca/classiot_qc_1_1framework_1_1_event_3_01utilities_1_1_void_functor_3_01_a_r_g_s_8_8_8_01_4_01_4.html#aad673070675b2689ced4ba1520df8f61">operator+=</a> (FuncPtr function)</td></tr>
 <tr class="separator:aad673070675b2689ced4ba1520df8f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeba5059f882feab418d2d68ed8b1ce40"><td class="memItemLeft" align="right" valign="top"><a id="aeba5059f882feab418d2d68ed8b1ce40"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (<a class="el" href="../../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html">utilities::VoidFunctor</a>&lt; ARGS... &gt; *voidFunction)</td></tr>
+<tr class="memitem:aeba5059f882feab418d2d68ed8b1ce40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dca/classiot_qc_1_1framework_1_1_event_3_01utilities_1_1_void_functor_3_01_a_r_g_s_8_8_8_01_4_01_4.html#aeba5059f882feab418d2d68ed8b1ce40">operator+=</a> (<a class="el" href="../../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html">utilities::VoidFunctor</a>&lt; ARGS... &gt; *voidFunction)</td></tr>
 <tr class="separator:aeba5059f882feab418d2d68ed8b1ce40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a874ca5b8274460752facc5a60ed5c18d"><td class="memItemLeft" align="right" valign="top"><a id="a874ca5b8274460752facc5a60ed5c18d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (ARGS... params)</td></tr>
+<tr class="memitem:a874ca5b8274460752facc5a60ed5c18d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dca/classiot_qc_1_1framework_1_1_event_3_01utilities_1_1_void_functor_3_01_a_r_g_s_8_8_8_01_4_01_4.html#a874ca5b8274460752facc5a60ed5c18d">operator()</a> (ARGS... params)</td></tr>
 <tr class="separator:a874ca5b8274460752facc5a60ed5c18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename... ARGS&gt;<br />
+class iotQc::framework::Event&lt; utilities::VoidFunctor&lt; ARGS... &gt; &gt;</h3>
+
+<p><a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">Event</a> class that can be declared by a class object. </p>
+<p>Typically, a class will contain Events as member to represent signals that object can generate. The consumer may subscribe to these events so as to catch those generated signals. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a874ca5b8274460752facc5a60ed5c18d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874ca5b8274460752facc5a60ed5c18d">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... ARGS&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">iotQc::framework::Event</a>&lt; <a class="el" href="../../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html">utilities::VoidFunctor</a>&lt; ARGS... &gt; &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">ARGS...&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate signal operator. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">params</td><td>Arguments to forward to callback. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aad673070675b2689ced4ba1520df8f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad673070675b2689ced4ba1520df8f61">&#9670;&nbsp;</a></span>operator+=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... ARGS&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">iotQc::framework::Event</a>&lt; <a class="el" href="../../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html">utilities::VoidFunctor</a>&lt; ARGS... &gt; &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">FuncPtr&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subscribe operator. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td><a class="el" href="../../d8/d4f/class_a.html">A</a> member function to callback. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeba5059f882feab418d2d68ed8b1ce40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba5059f882feab418d2d68ed8b1ce40">&#9670;&nbsp;</a></span>operator+=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... ARGS&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">iotQc::framework::Event</a>&lt; <a class="el" href="../../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html">utilities::VoidFunctor</a>&lt; ARGS... &gt; &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/de2/classiot_qc_1_1utilities_1_1_void_functor.html">utilities::VoidFunctor</a>&lt; ARGS... &gt; *&#160;</td>
+          <td class="paramname"><em>voidFunction</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subscribe operator. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td><a class="el" href="../../d8/d4f/class_a.html">A</a> basic function callback. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>LooUQ-IoT-Core/src/framework/<a class="el" href="../../de/d6d/_event_8h_source.html">Event.h</a></li>
 </ul>

@@ -1,11 +1,10 @@
 var hierarchy =
 [
-    [ "iotQc::io::__register", "d1/daf/unioniot_qc_1_1io_1_1____register.html", null ],
-    [ "A", "d8/d4f/class_a.html", null ],
-    [ "A", "d8/d4f/class_a.html", null ],
-    [ "A", "d8/d4f/class_a.html", null ],
     [ "A", "d8/d4f/class_a.html", null ],
     [ "iotQc::Application", "d9/d80/classiot_qc_1_1_application.html", null ],
+    [ "Application", null, [
+      [ "EchoServerUWP::App", "d7/d50/class_echo_server_u_w_p_1_1_app.html", null ]
+    ] ],
     [ "iotQc::ATCommand", "db/d3f/classiot_qc_1_1_a_t_command.html", null ],
     [ "iotQc::ATResponse", "dc/dc6/classiot_qc_1_1_a_t_response.html", null ],
     [ "iotQc::network::cellular::cellular_apn_context", "d0/d9c/structiot_qc_1_1network_1_1cellular_1_1cellular__apn__context.html", null ],
@@ -48,14 +47,28 @@ var hierarchy =
         [ "iotQc::arduino::LTEm1_QC96", "df/d3b/classiot_qc_1_1arduino_1_1_l_t_em1___q_c96.html", null ]
       ] ]
     ] ],
+    [ "IComponentConnector", null, [
+      [ "EchoServerUWP::MainPage", "d6/da6/class_echo_server_u_w_p_1_1_main_page.html", null ],
+      [ "EchoServerUWP::UdpServiceLayout", "d6/d96/class_echo_server_u_w_p_1_1_udp_service_layout.html", null ],
+      [ "XamlBindingInfo::sealed", "d5/d55/class_xaml_binding_info_1_1sealed.html", null ]
+    ] ],
+    [ "IComponentConnector2", null, [
+      [ "EchoServerUWP::MainPage", "d6/da6/class_echo_server_u_w_p_1_1_main_page.html", null ],
+      [ "EchoServerUWP::UdpServiceLayout", "d6/d96/class_echo_server_u_w_p_1_1_udp_service_layout.html", null ]
+    ] ],
+    [ "IDataTemplateExtension", null, [
+      [ "XamlBindingInfo::sealed", "d5/d55/class_xaml_binding_info_1_1sealed.html", null ]
+    ] ],
     [ "iotQc::generics::IHardwareController", "de/d74/classiot_qc_1_1generics_1_1_i_hardware_controller.html", [
       [ "iotQc::io::IGpioController", "dc/d0a/classiot_qc_1_1io_1_1_i_gpio_controller.html", [
+        [ "CMockGpio", "d0/d8b/class_c_mock_gpio.html", null ],
         [ "iotQc::io::PlatformGpioController< PINRANGE >", "dc/d41/classiot_qc_1_1io_1_1_platform_gpio_controller.html", null ],
         [ "iotQc::io::PlatformGpioController< GPIO_PINS >", "dc/d41/classiot_qc_1_1io_1_1_platform_gpio_controller.html", [
           [ "iotQc::arduino::ArduinoGpio", "d5/d62/classiot_qc_1_1arduino_1_1_arduino_gpio.html", null ]
         ] ]
       ] ],
       [ "iotQc::io::ISpiController", "dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html", [
+        [ "CMockSpi", "d9/dc9/class_c_mock_spi.html", null ],
         [ "iotQc::arduino::ArduinoSpi", "de/dcb/classiot_qc_1_1arduino_1_1_arduino_spi.html", null ]
       ] ]
     ] ],
@@ -72,6 +85,20 @@ var hierarchy =
     [ "iotQc::containers::Vector< T, N >::iterator", "d4/d47/classiot_qc_1_1containers_1_1_vector_1_1iterator.html", null ],
     [ "iotQc::containers::TArray< T, N >::iterator", "db/d68/classiot_qc_1_1containers_1_1_t_array_1_1iterator.html", null ],
     [ "iotQc::containers::TRingBuffer< T, N, container >::iterator", "d6/d2e/classiot_qc_1_1containers_1_1_t_ring_buffer_1_1iterator.html", null ],
+    [ "XamlBindingInfo::IXamlBindings", "d5/d8a/class_xaml_binding_info_1_1_i_xaml_bindings.html", null ],
+    [ "IXamlMember", null, [
+      [ "XamlTypeInfo::InfoProvider::sealed", "da/d1c/class_xaml_type_info_1_1_info_provider_1_1sealed.html", null ]
+    ] ],
+    [ "IXamlMetadataProvider", null, [
+      [ "EchoServerUWP::App", "d7/d50/class_echo_server_u_w_p_1_1_app.html", null ]
+    ] ],
+    [ "IXamlType", null, [
+      [ "XamlTypeInfo::InfoProvider::sealed", "da/d1c/class_xaml_type_info_1_1_info_provider_1_1sealed.html", null ]
+    ] ],
+    [ "IXamlType", null, [
+      [ "XamlTypeInfo::InfoProvider::sealed", "da/d1c/class_xaml_type_info_1_1_info_provider_1_1sealed.html", null ]
+    ] ],
+    [ "sync_proj_file.LooUQProjectIntegrator", "d8/d2e/classsync__proj__file_1_1_loo_u_q_project_integrator.html", null ],
     [ "LTEm1Class", "d8/df1/class_l_t_em1_class.html", null ],
     [ "iotQc::io::LTEQC96Registers", "d2/d7e/classiot_qc_1_1io_1_1_l_t_e_q_c96_registers.html", null ],
     [ "iotQc::devices::modems::ModemMessage", "df/d8c/classiot_qc_1_1devices_1_1modems_1_1_modem_message.html", null ],
@@ -81,6 +108,11 @@ var hierarchy =
     [ "iotQc::memory::ObjectReference< T >", "da/df0/structiot_qc_1_1memory_1_1_object_reference.html", null ],
     [ "iotQc::memory::ObjectReference< iotQc::utilities::VoidFunctor< iotQc::ATResponse & > >", "da/df0/structiot_qc_1_1memory_1_1_object_reference.html", null ],
     [ "iotQc::memory::ObjectReference< iotQc::utilities::VoidFunctor< T & > >", "da/df0/structiot_qc_1_1memory_1_1_object_reference.html", null ],
+    [ "Page", null, [
+      [ "EchoServerUWP::MainPage", "d6/da6/class_echo_server_u_w_p_1_1_main_page.html", null ],
+      [ "EchoServerUWP::UdpServiceLayout", "d6/d96/class_echo_server_u_w_p_1_1_udp_service_layout.html", null ]
+    ] ],
+    [ "EchoServerUWP::sealed", "da/d3e/class_echo_server_u_w_p_1_1sealed.html", null ],
     [ "iotQc::memory::SmartPointer< T >", "d1/d54/classiot_qc_1_1memory_1_1_smart_pointer.html", [
       [ "iotQc::memory::SyncPointer< T >", "dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html", null ]
     ] ],
@@ -107,6 +139,7 @@ var hierarchy =
     [ "iotQc::streams::TStream< sstream_type, N >", "db/d73/classiot_qc_1_1streams_1_1_t_stream.html", [
       [ "iotQc::streams::SStream< N >", "da/d96/classiot_qc_1_1streams_1_1_s_stream.html", null ]
     ] ],
+    [ "TypeInfo", "d2/df4/struct_type_info.html", null ],
     [ "UDP", null, [
       [ "LTEm1UDP", "d3/d65/class_l_t_em1_u_d_p.html", null ]
     ] ],

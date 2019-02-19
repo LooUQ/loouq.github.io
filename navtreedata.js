@@ -24,6 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "iotQc Documentation", "index.html", [
+    [ "Introduction", "dd/db1/md__development-_projects__r_e_a_d_m_e.html", null ],
     [ "Introduction", "da/d3f/md_iot_qc-_device-_q_c96__r_e_a_d_m_e.html", null ],
     [ "Introduction", "df/ddb/md__loo_u_q-_io_t-_core__r_e_a_d_m_e.html", null ],
     [ "LooUQ - iotQc Tools and Library", "dd/d33/md__loo_u_q-_platform-_arduino__r_e_a_d_m_e.html", null ],
@@ -49,9 +50,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"d3/d65/class_l_t_em1_u_d_p.html#ac2203330eb091a2b1dd34fe1882b7bda",
-"da/d96/classiot_qc_1_1streams_1_1_s_stream.html#a99751f29610ffce49ff6f7fb47b3dfaa",
-"df/d60/structiot_qc_1_1network_1_1cellular_1_1connection__session.html#a0a3f3f43575260c936ff77c4f7939fd7"
+"d2/df4/struct_type_info.html",
+"d8/df1/class_l_t_em1_class.html#a913ce6439881fb2b540da281697b49bd",
+"dc/d0a/classiot_qc_1_1io_1_1_i_gpio_controller.html#abb815ff13581816ea25628e9f38946d7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

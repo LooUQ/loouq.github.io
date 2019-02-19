@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['networkstate',['NetworkState',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a9021aa731291375ce07c41578308c633',1,'iotQc::devices::modems::LTEQC96']]]
+  ['mode',['Mode',['../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html#ac454671a6f659b3535c4928d70d40376',1,'iotQc::io::ISpiController']]]
 ];

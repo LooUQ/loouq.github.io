@@ -98,16 +98,113 @@ $(document).ready(function(){initNavTree('dc/d1b/classiot_qc_1_1framework_1_1_ev
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abfb2d7cdf062590812231e0f459b7a4c"><td class="memItemLeft" align="right" valign="top"><a id="abfb2d7cdf062590812231e0f459b7a4c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (FuncPtr function_)</td></tr>
+<tr class="memitem:abfb2d7cdf062590812231e0f459b7a4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html#abfb2d7cdf062590812231e0f459b7a4c">operator+=</a> (FuncPtr function_)</td></tr>
 <tr class="separator:abfb2d7cdf062590812231e0f459b7a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4a39e4bdaca554d2f348f921f651662"><td class="memItemLeft" align="right" valign="top"><a id="af4a39e4bdaca554d2f348f921f651662"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
+<tr class="memitem:af4a39e4bdaca554d2f348f921f651662"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html#af4a39e4bdaca554d2f348f921f651662">operator bool</a> ()</td></tr>
 <tr class="separator:af4a39e4bdaca554d2f348f921f651662"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae74cad3dded4eefe5af914c395d460b6"><td class="memItemLeft" align="right" valign="top"><a id="ae74cad3dded4eefe5af914c395d460b6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator FuncPtr</b> ()</td></tr>
+<tr class="memitem:ae74cad3dded4eefe5af914c395d460b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html#ae74cad3dded4eefe5af914c395d460b6">operator FuncPtr</a> ()</td></tr>
+<tr class="memdesc:ae74cad3dded4eefe5af914c395d460b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raise <a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">Event</a> operator.  <a href="#ae74cad3dded4eefe5af914c395d460b6">More...</a><br /></td></tr>
 <tr class="separator:ae74cad3dded4eefe5af914c395d460b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename F&gt;<br />
+class iotQc::framework::Event&lt; F &gt;</h3>
+
+<p>an event that can be signaled. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af4a39e4bdaca554d2f348f921f651662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4a39e4bdaca554d2f348f921f651662">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">iotQc::framework::Event</a>&lt; F &gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Boolean operator. </p><dl class="section return"><dt>Returns</dt><dd>Whether this event is subscribed to. </dd></dl>
+
+</div>
+</div>
+<a id="ae74cad3dded4eefe5af914c395d460b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74cad3dded4eefe5af914c395d460b6">&#9670;&nbsp;</a></span>operator FuncPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">iotQc::framework::Event</a>&lt; F &gt;::operator FuncPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Raise <a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">Event</a> operator. </p>
+<p>This function operator is called to indicate the representing signal. Typically called by a class declaring the event to notify a consumer.</p>
+<dl class="section return"><dt>Returns</dt><dd>The callback. </dd></dl>
+
+</div>
+</div>
+<a id="abfb2d7cdf062590812231e0f459b7a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb2d7cdf062590812231e0f459b7a4c">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dc/d1b/classiot_qc_1_1framework_1_1_event.html">iotQc::framework::Event</a>&lt; F &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">FuncPtr&#160;</td>
+          <td class="paramname"><em>function_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subscribe operator. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">function_</td><td>The callback that will be called upon raise. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>LooUQ-IoT-Core/src/framework/<a class="el" href="../../de/d6d/_event_8h_source.html">Event.h</a></li>
 </ul>

@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['objectreference',['ObjectReference',['../da/df0/structiot_qc_1_1memory_1_1_object_reference.html',1,'iotQc::memory']]],
-  ['objectreference_3c_20iotqc_3a_3autilities_3a_3avoidfunctor_3c_20iotqc_3a_3aatresponse_20_26_20_3e_20_3e',['ObjectReference&lt; iotQc::utilities::VoidFunctor&lt; iotQc::ATResponse &amp; &gt; &gt;',['../da/df0/structiot_qc_1_1memory_1_1_object_reference.html',1,'iotQc::memory']]],
-  ['objectreference_3c_20iotqc_3a_3autilities_3a_3avoidfunctor_3c_20t_20_26_20_3e_20_3e',['ObjectReference&lt; iotQc::utilities::VoidFunctor&lt; T &amp; &gt; &gt;',['../da/df0/structiot_qc_1_1memory_1_1_object_reference.html',1,'iotQc::memory']]],
-  ['openpin',['OpenPin',['../dc/d41/classiot_qc_1_1io_1_1_platform_gpio_controller.html#a37b14feb1a138a3dc853380a2b228d9b',1,'iotQc::io::PlatformGpioController']]],
-  ['opensocket',['OpenSocket',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a15c46c07886ce5cc6a3ec688c1dcc1e5',1,'iotQc::devices::modems::LTEQC96']]],
-  ['output',['Output',['../dc/d0a/classiot_qc_1_1io_1_1_i_gpio_controller.html#a05afd9c233878a99f00a73ad55125edeaf6a5a231136e99c8b269108654f3daf3',1,'iotQc::io::IGpioController']]]
+  ['pending',['pending',['../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52fa20a05d2e834cd0fccc251cd0f4489216',1,'iotQc::framework::IAsync']]],
+  ['ping',['Ping',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ad7a669631cbffc88d4e2803aa890398f',1,'iotQc::devices::modems::LTEQC96']]],
+  ['platformgpiocontroller',['PlatformGpioController',['../dc/d41/classiot_qc_1_1io_1_1_platform_gpio_controller.html',1,'iotQc::io::PlatformGpioController&lt; PINRANGE &gt;'],['../dc/d41/classiot_qc_1_1io_1_1_platform_gpio_controller.html#a4a541194ad74c0524c1a31e7a49b38b0',1,'iotQc::io::PlatformGpioController::PlatformGpioController()']]],
+  ['platformgpiocontroller_3c_20gpio_5fpins_20_3e',['PlatformGpioController&lt; GPIO_PINS &gt;',['../dc/d41/classiot_qc_1_1io_1_1_platform_gpio_controller.html',1,'iotQc::io']]],
+  ['poweroff',['PowerOff',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a0c86e1643ca93cc71f753288a7870d0c',1,'iotQc::devices::modems::LTEQC96']]]
 ];
