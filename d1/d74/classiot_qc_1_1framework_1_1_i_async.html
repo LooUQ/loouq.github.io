@@ -110,31 +110,73 @@ Inheritance diagram for iotQc::framework::IAsync:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a93bd0df5e3baedfd6313779180d4e52f"><td class="memItemLeft" align="right" valign="top"><a id="a93bd0df5e3baedfd6313779180d4e52f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>async_status</b> { <b>pending</b>, 
-<b>available</b>, 
-<b>terminated</b>, 
-<b>error</b>
+<tr class="memitem:a93bd0df5e3baedfd6313779180d4e52f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52f">async_status</a> { <a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52fa20a05d2e834cd0fccc251cd0f4489216">pending</a>, 
+<a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52fa6a1fc4927cfb6689ccd456c01c6d38b3">available</a>, 
+<a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52fa4dff53e4a64ed2cd3be1530f571f108c">terminated</a>, 
+<a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52fa9fb2ce29e08cedc77e38c63478843e77">error</a>
  }</td></tr>
+<tr class="memdesc:a93bd0df5e3baedfd6313779180d4e52f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status of an asychronous operation/object.  <a href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52f">More...</a><br /></td></tr>
 <tr class="separator:a93bd0df5e3baedfd6313779180d4e52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a94be6c0c4e84428f8a584583d24b08e2"><td class="memItemLeft" align="right" valign="top"><a id="a94be6c0c4e84428f8a584583d24b08e2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a94be6c0c4e84428f8a584583d24b08e2">IAsync</a> ()</td></tr>
+<tr class="memdesc:a94be6c0c4e84428f8a584583d24b08e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="separator:a94be6c0c4e84428f8a584583d24b08e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71d8a3f736f9ffb9a71c4695ecda7ebe"><td class="memItemLeft" align="right" valign="top"><a id="a71d8a3f736f9ffb9a71c4695ecda7ebe"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a71d8a3f736f9ffb9a71c4695ecda7ebe">~IAsync</a> ()</td></tr>
+<tr class="memdesc:a71d8a3f736f9ffb9a71c4695ecda7ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a71d8a3f736f9ffb9a71c4695ecda7ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ed0dfb6112bd849f9de6230dca55115"><td class="memItemLeft" align="right" valign="top"><a id="a1ed0dfb6112bd849f9de6230dca55115"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Await</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a1ed0dfb6112bd849f9de6230dca55115">Await</a> ()</td></tr>
+<tr class="memdesc:a1ed0dfb6112bd849f9de6230dca55115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Await the requested object. <br /></td></tr>
 <tr class="separator:a1ed0dfb6112bd849f9de6230dca55115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9240ebd976e98bd481c0d49949b6e5"><td class="memItemLeft" align="right" valign="top"><a id="acb9240ebd976e98bd481c0d49949b6e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Abort</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#acb9240ebd976e98bd481c0d49949b6e5">Abort</a> ()</td></tr>
+<tr class="memdesc:acb9240ebd976e98bd481c0d49949b6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abort the awaiting operation. <br /></td></tr>
 <tr class="separator:acb9240ebd976e98bd481c0d49949b6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade3d61eec99d96c36cbd1803e6a04ef9"><td class="memItemLeft" align="right" valign="top"><a id="ade3d61eec99d96c36cbd1803e6a04ef9"></a>
-async_status&#160;</td><td class="memItemRight" valign="bottom"><b>GetStatus</b> () const</td></tr>
+<a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52f">async_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#ade3d61eec99d96c36cbd1803e6a04ef9">GetStatus</a> () const</td></tr>
+<tr class="memdesc:ade3d61eec99d96c36cbd1803e6a04ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of the asynchronous object/operation. <br /></td></tr>
 <tr class="separator:ade3d61eec99d96c36cbd1803e6a04ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ade8a09bfb575c251571951d1ca41c401"><td class="memItemLeft" align="right" valign="top"><a id="ade8a09bfb575c251571951d1ca41c401"></a>
-async_status&#160;</td><td class="memItemRight" valign="bottom"><b>m_Status</b></td></tr>
+<a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52f">async_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#ade8a09bfb575c251571951d1ca41c401">m_Status</a></td></tr>
+<tr class="memdesc:ade8a09bfb575c251571951d1ca41c401"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current status. <br /></td></tr>
 <tr class="separator:ade8a09bfb575c251571951d1ca41c401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>an interface for async objects. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a93bd0df5e3baedfd6313779180d4e52f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93bd0df5e3baedfd6313779180d4e52f">&#9670;&nbsp;</a></span>async_status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html#a93bd0df5e3baedfd6313779180d4e52f">iotQc::framework::IAsync::async_status</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The status of an asychronous operation/object. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a93bd0df5e3baedfd6313779180d4e52fa20a05d2e834cd0fccc251cd0f4489216"></a>pending&#160;</td><td class="fielddoc"><p>The object is pending. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a93bd0df5e3baedfd6313779180d4e52fa6a1fc4927cfb6689ccd456c01c6d38b3"></a>available&#160;</td><td class="fielddoc"><p>The object is available. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a93bd0df5e3baedfd6313779180d4e52fa4dff53e4a64ed2cd3be1530f571f108c"></a>terminated&#160;</td><td class="fielddoc"><p>The asynchronous operation was terminated. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a93bd0df5e3baedfd6313779180d4e52fa9fb2ce29e08cedc77e38c63478843e77"></a>error&#160;</td><td class="fielddoc"><p>There was an error in the asyn operation. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>LooUQ-IoT-Core/src/framework/<a class="el" href="../../d8/d7b/_async_object_8h_source.html">AsyncObject.h</a></li>
 </ul>

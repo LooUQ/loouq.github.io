@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['drivemode',['DriveMode',['../dc/d0a/classiot_qc_1_1io_1_1_i_gpio_controller.html#a05afd9c233878a99f00a73ad55125ede',1,'iotQc::io::IGpioController']]]
+  ['baud_5frate',['baud_rate',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a8aa9bf76ae246bcb8162e1ef4698e3ab',1,'iotQc::devices::modems::LTEQC96']]]
 ];

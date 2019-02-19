@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['ping',['Ping',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#ad7a669631cbffc88d4e2803aa890398f',1,'iotQc::devices::modems::LTEQC96::Ping(const network::IPv4_Address &amp;ipAddress, unsigned int timeout=4000, unsigned int pingNum=4)'],['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a38dd0a1298143b4905257aedbf0127f6',1,'iotQc::devices::modems::LTEQC96::Ping(const char hostName[], unsigned int timeout=4000, unsigned int pingNum=4)']]],
-  ['platformgpiocontroller',['PlatformGpioController',['../dc/d41/classiot_qc_1_1io_1_1_platform_gpio_controller.html#a4a541194ad74c0524c1a31e7a49b38b0',1,'iotQc::io::PlatformGpioController']]],
-  ['poweroff',['PowerOff',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#a0c86e1643ca93cc71f753288a7870d0c',1,'iotQc::devices::modems::LTEQC96']]]
+  ['readfifo',['ReadFIFO',['../d2/d7e/classiot_qc_1_1io_1_1_l_t_e_q_c96_registers.html#a59ec1dd4ce96effb3158069af7e1760b',1,'iotQc::io::LTEQC96Registers']]],
+  ['readregister',['ReadRegister',['../d2/d7e/classiot_qc_1_1io_1_1_l_t_e_q_c96_registers.html#a1498c8e0fa372d0094378e53d65ca7ed',1,'iotQc::io::LTEQC96Registers']]],
+  ['reset',['Reset',['../d2/d7e/classiot_qc_1_1io_1_1_l_t_e_q_c96_registers.html#a744b5789a09efa34ffb5cbf0a85f6d72',1,'iotQc::io::LTEQC96Registers::Reset()'],['../d1/d54/classiot_qc_1_1memory_1_1_smart_pointer.html#a2938845a3576dbdcff57adb734b62bb2',1,'iotQc::memory::SmartPointer::Reset()'],['../dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html#a9cb5f2894429a2455e10a3f5acc87408',1,'iotQc::memory::SyncPointer::Reset()']]],
+  ['restart',['Restart',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#acca881b0fa8ec8d3aa33ddb32a035c04',1,'iotQc::devices::modems::LTEQC96']]],
+  ['run',['Run',['../d3/d97/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96_1_1_controller.html#a5e50a2c34452261772ece9e7ce204b2f',1,'iotQc::devices::modems::LTEQC96::Controller']]]
 ];
