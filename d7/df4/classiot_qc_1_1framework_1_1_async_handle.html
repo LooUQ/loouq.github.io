@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.15-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,7 +21,7 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../loouq_stylesheet.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -28,7 +29,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="../../iotQc-Logo-(400x210-trans).png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../iotQc-Logo-(400x210-trans).png" style="height: 75px;width: 125px"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">iotQc Documentation
    &#160;<span id="projectnumber">0.0.1</span>
@@ -95,13 +96,16 @@ $(document).ready(function(){initNavTree('d7/df4/classiot_qc_1_1framework_1_1_as
 <div class="title">iotQc::framework::AsyncHandle&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A templated handle class.  
+ <a href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for iotQc::framework::AsyncHandle&lt; T &gt;:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.png" usemap="#iotQc::framework::AsyncHandle_3C_20T_20_3E_map" alt=""/>
   <map id="iotQc::framework::AsyncHandle_3C_20T_20_3E_map" name="iotQc::framework::AsyncHandle_3C_20T_20_3E_map">
-<area href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html" alt="iotQc::framework::IAsync" shape="rect" coords="0,0,220,24"/>
+<area href="../../d1/d74/classiot_qc_1_1framework_1_1_i_async.html" title="Defines an interface for async objects." alt="iotQc::framework::IAsync" shape="rect" coords="0,0,220,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -167,8 +171,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class iotQc::framework::AsyncHandle&lt; T &gt;</h3>
 
-<p>templated handle class.</p>
-<p>This class handle object in a "future" fashion. If an asychronous operation is required to obtain T object, then use an <a class="el" href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html">AsyncHandle</a> to refer to that object, obtain statuses and control. </p>
+<p>A templated handle class. </p>
+<p>This class handle object in a "future" fashion. If an asychronous operation is required to obtain T object, then use an <a class="el" href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html" title="A templated handle class.">AsyncHandle</a> to refer to that object, obtain statuses and control. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0492165342386e9bd96f0eb2e3fc03cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0492165342386e9bd96f0eb2e3fc03cc">&#9670;&nbsp;</a></span>AsyncHandle()</h2>
@@ -197,7 +201,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>Copy Constructor. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Copy the other <a class="el" href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html">AsyncHandle</a>'s pending object reference and handler. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Copy the other <a class="el" href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html" title="A templated handle class.">AsyncHandle</a>'s pending object reference and handler. </td></tr>
   </table>
   </dd>
 </dl>
@@ -238,7 +242,7 @@ template&lt;typename SyncFN &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>This <a class="el" href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html">AsyncHandle</a> with a valid object. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>This <a class="el" href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html" title="A templated handle class.">AsyncHandle</a> with a valid object. </dd></dl>
 
 </div>
 </div>
@@ -303,9 +307,9 @@ template&lt;typename LAMBDA &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Provide the <a class="el" href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html">AsyncHandle</a> with a callback to execute upon object presence. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Provide the <a class="el" href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html" title="A templated handle class.">AsyncHandle</a> with a callback to execute upon object presence. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">taskRequiringObject</td><td><a class="el" href="../../d8/d4f/class_a.html">A</a> lambda that will be called upon awaited object presense. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">taskRequiringObject</td><td>A lambda that will be called upon awaited object presense. </td></tr>
   </table>
   </dd>
 </dl>
@@ -317,13 +321,16 @@ template&lt;typename LAMBDA &gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.15-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>iotQc</b></li><li class="navelem"><b>framework</b></li><li class="navelem"><a class="el" href="../../d7/df4/classiot_qc_1_1framework_1_1_async_handle.html">AsyncHandle</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <li class="footer">
+    <a href="http://loouq.com">
+    <img alt="LogoWide" src="../../LooUQ-LogoWide-(300x60-trans).png" style="height: 26px;width: 120px"/></td></a></li>
+    <!-- <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li> -->
   </ul>
 </div>
 </body>

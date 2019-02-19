@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['introduction',['Introduction',['../dd/db1/md__development-_projects__r_e_a_d_m_e.html',1,'']]],
-  ['introduction',['Introduction',['../da/d3f/md_iot_qc-_device-_q_c96__r_e_a_d_m_e.html',1,'']]],
-  ['introduction',['Introduction',['../df/ddb/md__loo_u_q-_io_t-_core__r_e_a_d_m_e.html',1,'']]]
+  ['introducing_20iotqc',['Introducing iotQc',['../index.html',1,'']]],
+  ['iotqc_20_7c_20device_20_7c_20qc96',['iotQc | Device | QC96',['../da/d3f/md_iot_qc-_device-_q_c96__r_e_a_d_m_e.html',1,'']]]
 ];

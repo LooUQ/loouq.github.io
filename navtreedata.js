@@ -24,16 +24,16 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "iotQc Documentation", "index.html", [
-    [ "Introduction", "dd/db1/md__development-_projects__r_e_a_d_m_e.html", null ],
-    [ "Introduction", "da/d3f/md_iot_qc-_device-_q_c96__r_e_a_d_m_e.html", null ],
-    [ "Introduction", "df/ddb/md__loo_u_q-_io_t-_core__r_e_a_d_m_e.html", null ],
-    [ "LooUQ - iotQc Tools and Library", "dd/d33/md__loo_u_q-_platform-_arduino__r_e_a_d_m_e.html", null ],
+    [ "Introducing iotQc", "index.html", null ],
+    [ "iotQc | Device | QC96", "da/d3f/md_iot_qc-_device-_q_c96__r_e_a_d_m_e.html", null ],
+    [ "LooUQ | IoT-Core", "df/ddb/md__loo_u_q-_io_t-_core__r_e_a_d_m_e.html", null ],
+    [ "LooUQ | Platform | Arduino", "dd/d33/md__loo_u_q-_platform-_arduino__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
@@ -50,9 +50,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"d2/df4/struct_type_info.html",
-"d8/df1/class_l_t_em1_class.html#a913ce6439881fb2b540da281697b49bd",
-"dc/d0a/classiot_qc_1_1io_1_1_i_gpio_controller.html#abb815ff13581816ea25628e9f38946d7"
+"d3/d65/class_l_t_em1_u_d_p.html#aaa3c853aff6c90821388ebe154ecb268",
+"da/d96/classiot_qc_1_1streams_1_1_s_stream.html#a92a512fdde70f5daac3fdf8ba496c531",
+"df/d60/structiot_qc_1_1network_1_1cellular_1_1connection__session.html#a0350aa537d6d377ab686b1f571e15ec5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

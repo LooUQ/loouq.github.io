@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.15-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,7 +21,7 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../loouq_stylesheet.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -28,7 +29,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="../../iotQc-Logo-(400x210-trans).png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../iotQc-Logo-(400x210-trans).png" style="height: 75px;width: 125px"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">iotQc Documentation
    &#160;<span id="projectnumber">0.0.1</span>
@@ -103,7 +104,7 @@ Inheritance diagram for iotQc::arduino::ArduinoSpi:</div>
   <img src="../../de/dcb/classiot_qc_1_1arduino_1_1_arduino_spi.png" usemap="#iotQc::arduino::ArduinoSpi_map" alt=""/>
   <map id="iotQc::arduino::ArduinoSpi_map" name="iotQc::arduino::ArduinoSpi_map">
 <area href="../../dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html" title="An Spi interface for iotQc dervations." alt="iotQc::io::ISpiController" shape="rect" coords="0,56,218,80"/>
-<area href="../../de/d74/classiot_qc_1_1generics_1_1_i_hardware_controller.html" alt="iotQc::generics::IHardwareController" shape="rect" coords="0,0,218,24"/>
+<area href="../../de/d74/classiot_qc_1_1generics_1_1_i_hardware_controller.html" title="A generic interface for hardware controllers." alt="iotQc::generics::IHardwareController" shape="rect" coords="0,0,218,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -125,8 +126,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeController</b> ()</td></tr>
 <tr class="separator:a7a905af9710813c9a355e747ecea1167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bea0a9dd0ea4999e9dcea7f9deedc39"><td class="memItemLeft" align="right" valign="top"><a id="a0bea0a9dd0ea4999e9dcea7f9deedc39"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dcb/classiot_qc_1_1arduino_1_1_arduino_spi.html#a0bea0a9dd0ea4999e9dcea7f9deedc39">UpdateController</a> ()</td></tr>
-<tr class="memdesc:a0bea0a9dd0ea4999e9dcea7f9deedc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the interface by checking for data. <br /></td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateController</b> ()</td></tr>
 <tr class="separator:a0bea0a9dd0ea4999e9dcea7f9deedc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97d8f8f34b321bd5db8342d3382ed3f6"><td class="memItemLeft" align="right" valign="top"><a id="a97d8f8f34b321bd5db8342d3382ed3f6"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>VerifyInterface</b> ()</td></tr>
@@ -312,9 +312,9 @@ byte_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 <p>Full duplex transfer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">write_buffer</td><td><a class="el" href="../../d8/d4f/class_a.html">A</a> buffer to write to the Spi device </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">write_buffer</td><td>A buffer to write to the Spi device </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">write_size</td><td>The size of the write buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">read_buffer</td><td><a class="el" href="../../d8/d4f/class_a.html">A</a> buffer to hold the read bytes from Spi </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">read_buffer</td><td>A buffer to hold the read bytes from Spi </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">read_size</td><td>The bytes to be read from the Spi </td></tr>
   </table>
   </dd>
@@ -330,13 +330,16 @@ byte_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.15-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>iotQc</b></li><li class="navelem"><b>arduino</b></li><li class="navelem"><a class="el" href="../../de/dcb/classiot_qc_1_1arduino_1_1_arduino_spi.html">ArduinoSpi</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <li class="footer">
+    <a href="http://loouq.com">
+    <img alt="LogoWide" src="../../LooUQ-LogoWide-(300x60-trans).png" style="height: 26px;width: 120px"/></td></a></li>
+    <!-- <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li> -->
   </ul>
 </div>
 </body>

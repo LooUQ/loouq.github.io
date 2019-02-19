@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.15-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,7 +21,7 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../loouq_stylesheet.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -28,7 +29,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="../../iotQc-Logo-(400x210-trans).png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../iotQc-Logo-(400x210-trans).png" style="height: 75px;width: 125px"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">iotQc Documentation
    &#160;<span id="projectnumber">0.0.1</span>
@@ -96,50 +97,55 @@ $(document).ready(function(){initNavTree('db/d73/classiot_qc_1_1streams_1_1_t_st
 <div class="title">iotQc::streams::TStream&lt; T, N, ULBuffer &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A templated io stream.  
+ <a href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="../../d3/d99/_stream_8h_source.html">src/io/Stream.h</a>&quot;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4d2c1918b0da1a340db5e1493e34bf04"><td class="memItemLeft" align="right" valign="top"><a id="a4d2c1918b0da1a340db5e1493e34bf04"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Put</b> (const T item)</td></tr>
+<tr class="memitem:a4d2c1918b0da1a340db5e1493e34bf04"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#a4d2c1918b0da1a340db5e1493e34bf04">Put</a> (const T item)</td></tr>
+<tr class="memdesc:a4d2c1918b0da1a340db5e1493e34bf04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts T item into stream buffer.  <a href="#a4d2c1918b0da1a340db5e1493e34bf04">More...</a><br /></td></tr>
 <tr class="separator:a4d2c1918b0da1a340db5e1493e34bf04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8f01695063a44ae9bd737907c2c7cba"><td class="memItemLeft" align="right" valign="top"><a id="ab8f01695063a44ae9bd737907c2c7cba"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (const T block[], size_t blocksz)</td></tr>
+<tr class="memitem:ab8f01695063a44ae9bd737907c2c7cba"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#ab8f01695063a44ae9bd737907c2c7cba">Write</a> (const T block[], size_t blocksz)</td></tr>
+<tr class="memdesc:ab8f01695063a44ae9bd737907c2c7cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an array of T elements to the stream.  <a href="#ab8f01695063a44ae9bd737907c2c7cba">More...</a><br /></td></tr>
 <tr class="separator:ab8f01695063a44ae9bd737907c2c7cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37f5406b81ed3e9c08bd4a5add1b65a4"><td class="memItemLeft" align="right" valign="top"><a id="a37f5406b81ed3e9c08bd4a5add1b65a4"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (T block[], size_t blocksz)</td></tr>
+<tr class="memitem:a37f5406b81ed3e9c08bd4a5add1b65a4"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#a37f5406b81ed3e9c08bd4a5add1b65a4">Read</a> (T block[], size_t blocksz)</td></tr>
+<tr class="memdesc:a37f5406b81ed3e9c08bd4a5add1b65a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads elements from the stream.  <a href="#a37f5406b81ed3e9c08bd4a5add1b65a4">More...</a><br /></td></tr>
 <tr class="separator:a37f5406b81ed3e9c08bd4a5add1b65a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a525d09e7251b247f385dc52d725c32bb"><td class="memItemLeft" align="right" valign="top"><a id="a525d09e7251b247f385dc52d725c32bb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Seek</b> (size_t skipTs)</td></tr>
+<tr class="memitem:a525d09e7251b247f385dc52d725c32bb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#a525d09e7251b247f385dc52d725c32bb">Seek</a> (size_t skipTs)</td></tr>
+<tr class="memdesc:a525d09e7251b247f385dc52d725c32bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skip through the stream.  <a href="#a525d09e7251b247f385dc52d725c32bb">More...</a><br /></td></tr>
 <tr class="separator:a525d09e7251b247f385dc52d725c32bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0b6d5c4977715c0ecaffbdcd49f6403"><td class="memItemLeft" align="right" valign="top"><a id="ae0b6d5c4977715c0ecaffbdcd49f6403"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>AvailableForRead</b> () const</td></tr>
+<tr class="memitem:ae0b6d5c4977715c0ecaffbdcd49f6403"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#ae0b6d5c4977715c0ecaffbdcd49f6403">AvailableForRead</a> () const</td></tr>
+<tr class="memdesc:ae0b6d5c4977715c0ecaffbdcd49f6403"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if data is available for read.  <a href="#ae0b6d5c4977715c0ecaffbdcd49f6403">More...</a><br /></td></tr>
 <tr class="separator:ae0b6d5c4977715c0ecaffbdcd49f6403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9a80100d0de11a8e2cdb096799f0068"><td class="memItemLeft" align="right" valign="top"><a id="ae9a80100d0de11a8e2cdb096799f0068"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>AvailableForWrite</b> () const</td></tr>
+<tr class="memitem:ae9a80100d0de11a8e2cdb096799f0068"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#ae9a80100d0de11a8e2cdb096799f0068">AvailableForWrite</a> () const</td></tr>
+<tr class="memdesc:ae9a80100d0de11a8e2cdb096799f0068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the stream is able to be written to.  <a href="#ae9a80100d0de11a8e2cdb096799f0068">More...</a><br /></td></tr>
 <tr class="separator:ae9a80100d0de11a8e2cdb096799f0068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d359c0c8fe4798eb301ec9b23aa7ed1"><td class="memItemLeft" align="right" valign="top"><a id="a3d359c0c8fe4798eb301ec9b23aa7ed1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Flush</b> ()</td></tr>
+<tr class="memitem:a3d359c0c8fe4798eb301ec9b23aa7ed1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#a3d359c0c8fe4798eb301ec9b23aa7ed1">Flush</a> ()</td></tr>
+<tr class="memdesc:a3d359c0c8fe4798eb301ec9b23aa7ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the stream.  <a href="#a3d359c0c8fe4798eb301ec9b23aa7ed1">More...</a><br /></td></tr>
 <tr class="separator:a3d359c0c8fe4798eb301ec9b23aa7ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe61ef44c95b864dc3ba92778b10ad4d"><td class="memItemLeft" align="right" valign="top"><a id="afe61ef44c95b864dc3ba92778b10ad4d"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>ReadUntil</b> (const T &amp;t)</td></tr>
+<tr class="memitem:afe61ef44c95b864dc3ba92778b10ad4d"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#afe61ef44c95b864dc3ba92778b10ad4d">ReadUntil</a> (const T &amp;t)</td></tr>
+<tr class="memdesc:afe61ef44c95b864dc3ba92778b10ad4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read until a specified matching element is found.  <a href="#afe61ef44c95b864dc3ba92778b10ad4d">More...</a><br /></td></tr>
 <tr class="separator:afe61ef44c95b864dc3ba92778b10ad4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a114658a0813c62f182b0055859ad8383"><td class="memItemLeft" align="right" valign="top"><a id="a114658a0813c62f182b0055859ad8383"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (const T block[])</td></tr>
+<tr class="memitem:a114658a0813c62f182b0055859ad8383"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#a114658a0813c62f182b0055859ad8383">operator&lt;&lt;</a> (const T block[])</td></tr>
+<tr class="memdesc:a114658a0813c62f182b0055859ad8383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input Operator.  <a href="#a114658a0813c62f182b0055859ad8383">More...</a><br /></td></tr>
 <tr class="separator:a114658a0813c62f182b0055859ad8383"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aaac31dcbe610caa570affa20710148"><td class="memItemLeft" align="right" valign="top"><a id="a5aaac31dcbe610caa570affa20710148"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;&gt;</b> (T block[])</td></tr>
+<tr class="memitem:a5aaac31dcbe610caa570affa20710148"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#a5aaac31dcbe610caa570affa20710148">operator&gt;&gt;</a> (T block[])</td></tr>
+<tr class="memdesc:a5aaac31dcbe610caa570affa20710148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output Operator.  <a href="#a5aaac31dcbe610caa570affa20710148">More...</a><br /></td></tr>
 <tr class="separator:a5aaac31dcbe610caa570affa20710148"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a6c178d90496bc0d4d2edc058c7278"><td class="memItemLeft" align="right" valign="top"><a id="a92a6c178d90496bc0d4d2edc058c7278"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">TStream</a> &amp;other)</td></tr>
+<tr class="memitem:a92a6c178d90496bc0d4d2edc058c7278"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#a92a6c178d90496bc0d4d2edc058c7278">operator=</a> (const <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">TStream</a> &amp;other)</td></tr>
+<tr class="memdesc:a92a6c178d90496bc0d4d2edc058c7278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator.  <a href="#a92a6c178d90496bc0d4d2edc058c7278">More...</a><br /></td></tr>
 <tr class="separator:a92a6c178d90496bc0d4d2edc058c7278"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac54862297fec01768515689f17283d16"><td class="memItemLeft" align="right" valign="top"><a id="ac54862297fec01768515689f17283d16"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetAvailable</b> () const</td></tr>
+<tr class="memitem:ac54862297fec01768515689f17283d16"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#ac54862297fec01768515689f17283d16">GetAvailable</a> () const</td></tr>
+<tr class="memdesc:ac54862297fec01768515689f17283d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the available elements waiting in the stream.  <a href="#ac54862297fec01768515689f17283d16">More...</a><br /></td></tr>
 <tr class="separator:ac54862297fec01768515689f17283d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9b008fc7e01c3705a532f073bfb37a4"><td class="memItemLeft" align="right" valign="top"><a id="ab9b008fc7e01c3705a532f073bfb37a4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetStreamBlocks</b> (size_t blockSz)</td></tr>
+<tr class="memitem:ab9b008fc7e01c3705a532f073bfb37a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#ab9b008fc7e01c3705a532f073bfb37a4">SetStreamBlocks</a> (size_t blockSz)</td></tr>
+<tr class="memdesc:ab9b008fc7e01c3705a532f073bfb37a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the streaming block size.  <a href="#ab9b008fc7e01c3705a532f073bfb37a4">More...</a><br /></td></tr>
 <tr class="separator:ab9b008fc7e01c3705a532f073bfb37a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a323baaa07d3674d5df8666b8f4995eef"><td class="memItemLeft" align="right" valign="top"><a id="a323baaa07d3674d5df8666b8f4995eef"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>EoF</b> () const</td></tr>
+<tr class="memitem:a323baaa07d3674d5df8666b8f4995eef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#a323baaa07d3674d5df8666b8f4995eef">EoF</a> () const</td></tr>
+<tr class="memdesc:a323baaa07d3674d5df8666b8f4995eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the End-of-file flag.  <a href="#a323baaa07d3674d5df8666b8f4995eef">More...</a><br /></td></tr>
 <tr class="separator:a323baaa07d3674d5df8666b8f4995eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -153,18 +159,534 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 <tr class="memdesc:a2d683f6ea4bd39a5926fdf5566d3b9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ring buffer holding the data. <br /></td></tr>
 <tr class="separator:a2d683f6ea4bd39a5926fdf5566d3b9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T = char, unsigned int N = 64U, typename ULBuffer = containers::TRingBuffer&lt;T,N&gt;&gt;<br />
+class iotQc::streams::TStream&lt; T, N, ULBuffer &gt;</h3>
+
+<p>A templated io stream. </p>
+<p>An input/output stream class that can N number of T elements. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae0b6d5c4977715c0ecaffbdcd49f6403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b6d5c4977715c0ecaffbdcd49f6403">&#9670;&nbsp;</a></span>AvailableForRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::AvailableForRead </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if data is available for read. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the stream has data available for read. </dd></dl>
+
+</div>
+</div>
+<a id="ae9a80100d0de11a8e2cdb096799f0068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a80100d0de11a8e2cdb096799f0068">&#9670;&nbsp;</a></span>AvailableForWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::AvailableForWrite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the stream is able to be written to. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the stream can be written to. </dd></dl>
+
+</div>
+</div>
+<a id="a323baaa07d3674d5df8666b8f4995eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a323baaa07d3674d5df8666b8f4995eef">&#9670;&nbsp;</a></span>EoF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::EoF </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the End-of-file flag. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the stream is at the end of file. </dd></dl>
+
+</div>
+</div>
+<a id="a3d359c0c8fe4798eb301ec9b23aa7ed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d359c0c8fe4798eb301ec9b23aa7ed1">&#9670;&nbsp;</a></span>Flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::Flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flush the stream. </p>
+
+</div>
+</div>
+<a id="ac54862297fec01768515689f17283d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54862297fec01768515689f17283d16">&#9670;&nbsp;</a></span>GetAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::GetAvailable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the available elements waiting in the stream. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of elements available. </dd></dl>
+
+</div>
+</div>
+<a id="a114658a0813c62f182b0055859ad8383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a114658a0813c62f182b0055859ad8383">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const T&#160;</td>
+          <td class="paramname"><em>block</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Input Operator. </p>
+<p>Inputs rhs elements into the stream.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>The rhs elements that will be written to the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="../../da/d96/classiot_qc_1_1streams_1_1_s_stream.html#aca780a6377b131af9938581a8d856e1d">iotQc::streams::SStream&lt; N &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a92a6c178d90496bc0d4d2edc058c7278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a6c178d90496bc0d4d2edc058c7278">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">TStream</a>&lt; T, N, ULBuffer &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy assignment operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The other stream to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5aaac31dcbe610caa570affa20710148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aaac31dcbe610caa570affa20710148">&#9670;&nbsp;</a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>block</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Output Operator. </p>
+<p>Outputs elements to a rhs block of elements.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">block</td><td>The block to insert the elements into. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="../../da/d96/classiot_qc_1_1streams_1_1_s_stream.html#adf7664d0a815de8712cd61f568d30d80">iotQc::streams::SStream&lt; N &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a4d2c1918b0da1a340db5e1493e34bf04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d2c1918b0da1a340db5e1493e34bf04">&#9670;&nbsp;</a></span>Put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::Put </td>
+          <td>(</td>
+          <td class="paramtype">const T&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Puts T item into stream buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>The element to put into the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a37f5406b81ed3e9c08bd4a5add1b65a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f5406b81ed3e9c08bd4a5add1b65a4">&#9670;&nbsp;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::Read </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>block</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>blocksz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads elements from the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">block</td><td>The block to insert the element into. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blocksz</td><td>The number of elements to read from the stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of elements read into the block. </dd></dl>
+
+</div>
+</div>
+<a id="afe61ef44c95b864dc3ba92778b10ad4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe61ef44c95b864dc3ba92778b10ad4d">&#9670;&nbsp;</a></span>ReadUntil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::ReadUntil </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read until a specified matching element is found. </p>
+<p>If a matching element is found, the internal read block size is set to the number of elements to read.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td>The element to match and stop. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of elements to read for matching element. </dd></dl>
+
+</div>
+</div>
+<a id="a525d09e7251b247f385dc52d725c32bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525d09e7251b247f385dc52d725c32bb">&#9670;&nbsp;</a></span>Seek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::Seek </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>skipTs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Skip through the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">skipTs</td><td>The number of elements to skip. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab9b008fc7e01c3705a532f073bfb37a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b008fc7e01c3705a532f073bfb37a4">&#9670;&nbsp;</a></span>SetStreamBlocks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::SetStreamBlocks </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>blockSz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the streaming block size. </p>
+<p>By setting the streaming block, the stream will use this specified size to dictate the input and output operators for data length.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockSz</td><td>The size of the blocks being inputed/outputed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab8f01695063a44ae9bd737907c2c7cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f01695063a44ae9bd737907c2c7cba">&#9670;&nbsp;</a></span>Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, unsigned int N, typename ULBuffer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">iotQc::streams::TStream</a>&lt; T, N, ULBuffer &gt;::Write </td>
+          <td>(</td>
+          <td class="paramtype">const T&#160;</td>
+          <td class="paramname"><em>block</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>blocksz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes an array of T elements to the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>The block of T elements to copy into the stream. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blocksz</td><td>The number of T elements in the block. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of T elements that fit into the stream. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>LooUQ-IoT-Core/src/io/<a class="el" href="../../d3/d99/_stream_8h_source.html">Stream.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.15-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>iotQc</b></li><li class="navelem"><b>streams</b></li><li class="navelem"><a class="el" href="../../db/d73/classiot_qc_1_1streams_1_1_t_stream.html">TStream</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <li class="footer">
+    <a href="http://loouq.com">
+    <img alt="LogoWide" src="../../LooUQ-LogoWide-(300x60-trans).png" style="height: 26px;width: 120px"/></td></a></li>
+    <!-- <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li> -->
   </ul>
 </div>
 </body>
