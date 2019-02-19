@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['updatecontroller',['UpdateController',['../d0/d8b/class_c_mock_gpio.html#a4c1d7601b880bf7c9152ffd098ba7b58',1,'CMockGpio::UpdateController()'],['../d9/dc9/class_c_mock_spi.html#a98917da4fd5d97a08cf35f1a94254ba4',1,'CMockSpi::UpdateController()'],['../de/d74/classiot_qc_1_1generics_1_1_i_hardware_controller.html#ad913fa3371b0f4b5584fd73a2b2746c4',1,'iotQc::generics::IHardwareController::UpdateController()'],['../d5/d62/classiot_qc_1_1arduino_1_1_arduino_gpio.html#a994548e6156ae78f0934f7253995c6f1',1,'iotQc::arduino::ArduinoGpio::UpdateController()'],['../de/dcb/classiot_qc_1_1arduino_1_1_arduino_spi.html#a0bea0a9dd0ea4999e9dcea7f9deedc39',1,'iotQc::arduino::ArduinoSpi::UpdateController()']]]
+  ['read',['Read',['../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#a37f5406b81ed3e9c08bd4a5add1b65a4',1,'iotQc::streams::TStream']]],
+  ['readfifo',['ReadFIFO',['../d2/d7e/classiot_qc_1_1io_1_1_l_t_e_q_c96_registers.html#a59ec1dd4ce96effb3158069af7e1760b',1,'iotQc::io::LTEQC96Registers']]],
+  ['readregister',['ReadRegister',['../d2/d7e/classiot_qc_1_1io_1_1_l_t_e_q_c96_registers.html#a1498c8e0fa372d0094378e53d65ca7ed',1,'iotQc::io::LTEQC96Registers']]],
+  ['readuntil',['ReadUntil',['../db/d73/classiot_qc_1_1streams_1_1_t_stream.html#afe61ef44c95b864dc3ba92778b10ad4d',1,'iotQc::streams::TStream']]],
+  ['reset',['Reset',['../d2/d7e/classiot_qc_1_1io_1_1_l_t_e_q_c96_registers.html#a744b5789a09efa34ffb5cbf0a85f6d72',1,'iotQc::io::LTEQC96Registers::Reset()'],['../d1/d54/classiot_qc_1_1memory_1_1_smart_pointer.html#a2938845a3576dbdcff57adb734b62bb2',1,'iotQc::memory::SmartPointer::Reset()'],['../dd/d8e/classiot_qc_1_1memory_1_1_sync_pointer.html#a9cb5f2894429a2455e10a3f5acc87408',1,'iotQc::memory::SyncPointer::Reset()']]],
+  ['restart',['Restart',['../d1/d34/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96.html#acca881b0fa8ec8d3aa33ddb32a035c04',1,'iotQc::devices::modems::LTEQC96']]],
+  ['run',['Run',['../d3/d97/classiot_qc_1_1devices_1_1modems_1_1_l_t_e_q_c96_1_1_controller.html#a5e50a2c34452261772ece9e7ce204b2f',1,'iotQc::devices::modems::LTEQC96::Controller']]]
 ];

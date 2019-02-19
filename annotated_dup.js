@@ -1,11 +1,5 @@
 var annotated_dup =
 [
-    [ "EchoServerUWP", null, [
-      [ "App", "d7/d50/class_echo_server_u_w_p_1_1_app.html", "d7/d50/class_echo_server_u_w_p_1_1_app" ],
-      [ "MainPage", "d6/da6/class_echo_server_u_w_p_1_1_main_page.html", "d6/da6/class_echo_server_u_w_p_1_1_main_page" ],
-      [ "sealed", "da/d3e/class_echo_server_u_w_p_1_1sealed.html", "da/d3e/class_echo_server_u_w_p_1_1sealed" ],
-      [ "UdpServiceLayout", "d6/d96/class_echo_server_u_w_p_1_1_udp_service_layout.html", "d6/d96/class_echo_server_u_w_p_1_1_udp_service_layout" ]
-    ] ],
     [ "iotQc", null, [
       [ "arduino", null, [
         [ "ArduinoGpio", "d5/d62/classiot_qc_1_1arduino_1_1_arduino_gpio.html", "d5/d62/classiot_qc_1_1arduino_1_1_arduino_gpio" ],
@@ -42,6 +36,7 @@ var annotated_dup =
         [ "IHardwareController", "de/d74/classiot_qc_1_1generics_1_1_i_hardware_controller.html", "de/d74/classiot_qc_1_1generics_1_1_i_hardware_controller" ]
       ] ],
       [ "io", null, [
+        [ "__register", "d1/daf/unioniot_qc_1_1io_1_1____register.html", "d1/daf/unioniot_qc_1_1io_1_1____register" ],
         [ "GpioPinSet", "d9/d9d/structiot_qc_1_1io_1_1_gpio_pin_set.html", "d9/d9d/structiot_qc_1_1io_1_1_gpio_pin_set" ],
         [ "IGpioController", "dc/d0a/classiot_qc_1_1io_1_1_i_gpio_controller.html", "dc/d0a/classiot_qc_1_1io_1_1_i_gpio_controller" ],
         [ "ISpiController", "dd/d65/classiot_qc_1_1io_1_1_i_spi_controller.html", "dd/d65/classiot_qc_1_1io_1_1_i_spi_controller" ],
@@ -93,22 +88,10 @@ var annotated_dup =
     [ "sync_proj_file", null, [
       [ "LooUQProjectIntegrator", "d8/d2e/classsync__proj__file_1_1_loo_u_q_project_integrator.html", "d8/d2e/classsync__proj__file_1_1_loo_u_q_project_integrator" ]
     ] ],
-    [ "XamlBindingInfo", null, [
-      [ "IXamlBindings", "d5/d8a/class_xaml_binding_info_1_1_i_xaml_bindings.html", "d5/d8a/class_xaml_binding_info_1_1_i_xaml_bindings" ],
-      [ "sealed", "d5/d55/class_xaml_binding_info_1_1sealed.html", "d5/d55/class_xaml_binding_info_1_1sealed" ]
-    ] ],
-    [ "XamlTypeInfo", null, [
-      [ "InfoProvider", null, [
-        [ "sealed", "da/d1c/class_xaml_type_info_1_1_info_provider_1_1sealed.html", "da/d1c/class_xaml_type_info_1_1_info_provider_1_1sealed" ]
-      ] ]
-    ] ],
-    [ "A", "d8/d4f/class_a.html", null ],
-    [ "CMockGpio", "d0/d8b/class_c_mock_gpio.html", "d0/d8b/class_c_mock_gpio" ],
-    [ "CMockSpi", "d9/dc9/class_c_mock_spi.html", "d9/dc9/class_c_mock_spi" ],
     [ "LTEm1Class", "d8/df1/class_l_t_em1_class.html", "d8/df1/class_l_t_em1_class" ],
     [ "LTEm1Client", "d0/d80/class_l_t_em1_client.html", "d0/d80/class_l_t_em1_client" ],
     [ "LTEm1SSLClient", "df/d66/class_l_t_em1_s_s_l_client.html", "df/d66/class_l_t_em1_s_s_l_client" ],
     [ "LTEm1UDP", "d3/d65/class_l_t_em1_u_d_p.html", "d3/d65/class_l_t_em1_u_d_p" ],
     [ "Templated", "d0/dc4/class_templated.html", null ],
-    [ "TypeInfo", "d2/df4/struct_type_info.html", "d2/df4/struct_type_info" ]
+    [ "VoidFunctor< ARGS::::::>", "d4/d72/class_event_3_01utilities_1_1_void_functor_3_01_a_r_g_s_1_1_1_1_1_1_4.html", null ]
 ];
