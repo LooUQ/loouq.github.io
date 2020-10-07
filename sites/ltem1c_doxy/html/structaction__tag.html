@@ -20,11 +20,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEm1c
    &#160;<span id="projectnumber">v0.3</span>
    </div>
-   <div id="projectbrief">C99devicedriverfortheLooUQLTEm1LTEcellularmodem</div>
+   <div id="projectbrief">C99 device driver for the LooUQ LTEm1 cellular modem</div>
   </td>
  </tr>
  </tbody>
@@ -64,39 +65,132 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structaction__tag-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">action_tag Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="actions_8h_source.html">actions.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ad8addf8ec93ecf1c6fd9892564297a8a"><td class="memItemLeft" align="right" valign="top"><a id="ad8addf8ec93ecf1c6fd9892564297a8a"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>cmdStr</b> [IOP_TX_BUFFER_SZ]</td></tr>
-<tr class="separator:ad8addf8ec93ecf1c6fd9892564297a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a31b1ec543149c0d617e37f180cf685"><td class="memItemLeft" align="right" valign="top"><a id="a4a31b1ec543149c0d617e37f180cf685"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOpen</b></td></tr>
-<tr class="separator:a4a31b1ec543149c0d617e37f180cf685"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acace77c0ab6f8d9a6444392d6cc15ad4"><td class="memItemLeft" align="right" valign="top"><a id="acace77c0ab6f8d9a6444392d6cc15ad4"></a>
-unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>invokedAt</b></td></tr>
-<tr class="separator:acace77c0ab6f8d9a6444392d6cc15ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30923234e89ecde4434ef03a43f9305d"><td class="memItemLeft" align="right" valign="top"><a id="a30923234e89ecde4434ef03a43f9305d"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>resultCode</b></td></tr>
-<tr class="separator:a30923234e89ecde4434ef03a43f9305d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a7b14a5a5dafd1a4f9a6f0bffd5abd5"><td class="memItemLeft" align="right" valign="top"><a id="a2a7b14a5a5dafd1a4f9a6f0bffd5abd5"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>response</b></td></tr>
-<tr class="separator:a2a7b14a5a5dafd1a4f9a6f0bffd5abd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab03bec4acfd1a393018f7f823d865c62"><td class="memItemLeft" align="right" valign="top"><a id="ab03bec4acfd1a393018f7f823d865c62"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeoutMillis</b></td></tr>
-<tr class="separator:ab03bec4acfd1a393018f7f823d865c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ad0db0c0fa3a1c856fec5c2addd39b2"><td class="memItemLeft" align="right" valign="top"><a id="a0ad0db0c0fa3a1c856fec5c2addd39b2"></a>
-uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>taskCompleteParser_func</b> )(const char *response, char **endptr)</td></tr>
-<tr class="separator:a0ad0db0c0fa3a1c856fec5c2addd39b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+Data Fields</h2></td></tr>
+<tr class="memitem:a8664baf8552bdb7eaee20d25a9f3afba"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a8664baf8552bdb7eaee20d25a9f3afba">cmdStr</a> [<a class="el" href="iop_8h.html#ace6954db00eab481db6e35ed4491dd0a">IOP_TX_BUFFER_SZ</a>]</td></tr>
+<tr class="separator:a8664baf8552bdb7eaee20d25a9f3afba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">isOpen</a></td></tr>
+<tr class="separator:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa025870b78196833703150bca54e930a"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#aa025870b78196833703150bca54e930a">invokedAt</a></td></tr>
+<tr class="separator:aa025870b78196833703150bca54e930a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">resultCode</a></td></tr>
+<tr class="separator:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11373f02c42587a1853ad6c8be5fe10e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a></td></tr>
+<tr class="separator:a11373f02c42587a1853ad6c8be5fe10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62141174b7f53e381c1ce0ad0b47b867"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a62141174b7f53e381c1ce0ad0b47b867">timeoutMillis</a></td></tr>
+<tr class="separator:a62141174b7f53e381c1ce0ad0b47b867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="memItemLeft" align="right" valign="top">uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">taskCompleteParser_func</a> )(const char *<a class="el" href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>, char **endptr)</td></tr>
+<tr class="separator:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a8664baf8552bdb7eaee20d25a9f3afba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8664baf8552bdb7eaee20d25a9f3afba">&#9670;&nbsp;</a></span>cmdStr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char cmdStr[<a class="el" href="iop_8h.html#ace6954db00eab481db6e35ed4491dd0a">IOP_TX_BUFFER_SZ</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa025870b78196833703150bca54e930a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa025870b78196833703150bca54e930a">&#9670;&nbsp;</a></span>invokedAt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long invokedAt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a882afa92abc68d9b1fa39a42f56a8b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882afa92abc68d9b1fa39a42f56a8b3d">&#9670;&nbsp;</a></span>isOpen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isOpen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11373f02c42587a1853ad6c8be5fe10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11373f02c42587a1853ad6c8be5fe10e">&#9670;&nbsp;</a></span>response</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* response</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc00dec5f45402bb5c65d7451fb4d3ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc00dec5f45402bb5c65d7451fb4d3ad">&#9670;&nbsp;</a></span>resultCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t resultCode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78ce7b65f47dda02b282b22bc6ef5cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78ce7b65f47dda02b282b22bc6ef5cef">&#9670;&nbsp;</a></span>taskCompleteParser_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t(* taskCompleteParser_func) (const char *<a class="el" href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>, char **endptr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62141174b7f53e381c1ce0ad0b47b867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62141174b7f53e381c1ce0ad0b47b867">&#9670;&nbsp;</a></span>timeoutMillis</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t timeoutMillis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="actions_8h_source.html">actions.h</a></li>
+<li>src/<a class="el" href="actions_8h_source.html">actions.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

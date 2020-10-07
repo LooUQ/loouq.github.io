@@ -1,0 +1,153 @@
+\hypertarget{iop_8c}{}\doxysection{src/iop.c File Reference}
+\label{iop_8c}\index{src/iop.c@{src/iop.c}}
+{\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dbgprint.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{iop_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}
+\item 
+\#define \mbox{\hyperlink{iop_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
+\item 
+\#define \mbox{\hyperlink{iop_8c_a7d19c8e4b85d2ff5dc1267321330fe4d}{I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+A\+D\+V\+I\+N\+D\+EX}}(I\+N\+DX)~I\+N\+DX = (++I\+N\+DX == I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+C\+O\+U\+NT) ? 0 \+: I\+N\+DX
+\item 
+\#define \mbox{\hyperlink{iop_8c_abf43a3af3a4735d3f139e0ac8b2eac9c}{Q\+B\+G\+\_\+\+A\+P\+P\+R\+E\+A\+D\+Y\+\_\+\+M\+I\+L\+L\+I\+S\+M\+AX}}~5000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{iop_8h_a1ed4c59909ec1a9a0007da89586254ff}{iop\+\_\+t}} $\ast$ \mbox{\hyperlink{iop_8c_ad9607e474a95f9f242b2235d90efbb6b}{iop\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the Input/\+Output Process subsystem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{iop_8c_adc850da968c0996c7645ef06e277708f}{iop\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em Complete initialization and start running iop processes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{iop_8c_a1baf3b1228e8a750422d97cef2d336a8}{iop\+\_\+await\+App\+Ready}} ()
+\begin{DoxyCompactList}\small\item\em Verify L\+T\+Em1 is ready for I\+OP operations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{iop_8c_ad19ccc89f7192da89e035d24c479d158}{iop\+\_\+tx\+Send}} (const char $\ast$send\+Data, uint16\+\_\+t send\+Sz, bool send\+Immediate)
+\begin{DoxyCompactList}\small\item\em Start a (raw) send operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{iop_8c_aad96d9d4df9ebc33c08464531f757fb1}{iop\+\_\+reset\+Cmd\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Clear receive command response buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{iop_8c_a9db71023d7554c3ae473ab010d2f1acf}{iop\+\_\+reset\+Data\+Buffer}} (uint8\+\_\+t buf\+Indx)
+\begin{DoxyCompactList}\small\item\em Clear receive command response buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{iop_8c_a666094e51c449560d25b82867a708ca9}{iop\+\_\+tx\+Data\+Prompt\+Parser}} (const char $\ast$response, char $\ast$$\ast$endptr)
+\begin{DoxyCompactList}\small\item\em Response parser looking for \char`\"{}$>$\char`\"{} prompt to send data to network and then initiates the send . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{iop_8c_a499e14029136c4eb243a5458b6bac682}{iop\+\_\+rx\+Parse\+Immediate}} ()
+\begin{DoxyCompactList}\small\item\em Parse recv\textquotesingle{}d data (in command RX buffer) for async event preambles that need to be handled immediately. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{iop_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{iop_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{iop.c@{iop.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG}
+
+\mbox{\Hypertarget{iop_8c_a7d19c8e4b85d2ff5dc1267321330fe4d}\label{iop_8c_a7d19c8e4b85d2ff5dc1267321330fe4d}} 
+\index{iop.c@{iop.c}!IOP\_RXCTRLBLK\_ADVINDEX@{IOP\_RXCTRLBLK\_ADVINDEX}}
+\index{IOP\_RXCTRLBLK\_ADVINDEX@{IOP\_RXCTRLBLK\_ADVINDEX}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_RXCTRLBLK\_ADVINDEX}{IOP\_RXCTRLBLK\_ADVINDEX}}
+{\footnotesize\ttfamily \#define I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+A\+D\+V\+I\+N\+D\+EX(\begin{DoxyParamCaption}\item[{}]{I\+N\+DX }\end{DoxyParamCaption})~I\+N\+DX = (++I\+N\+DX == I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+C\+O\+U\+NT) ? 0 \+: I\+N\+DX}
+
+\mbox{\Hypertarget{iop_8c_a74e75242132eaabbc1c512488a135926}\label{iop_8c_a74e75242132eaabbc1c512488a135926}} 
+\index{iop.c@{iop.c}!MIN@{MIN}}
+\index{MIN@{MIN}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (x) \+: (y))}
+
+\mbox{\Hypertarget{iop_8c_abf43a3af3a4735d3f139e0ac8b2eac9c}\label{iop_8c_abf43a3af3a4735d3f139e0ac8b2eac9c}} 
+\index{iop.c@{iop.c}!QBG\_APPREADY\_MILLISMAX@{QBG\_APPREADY\_MILLISMAX}}
+\index{QBG\_APPREADY\_MILLISMAX@{QBG\_APPREADY\_MILLISMAX}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{QBG\_APPREADY\_MILLISMAX}{QBG\_APPREADY\_MILLISMAX}}
+{\footnotesize\ttfamily \#define Q\+B\+G\+\_\+\+A\+P\+P\+R\+E\+A\+D\+Y\+\_\+\+M\+I\+L\+L\+I\+S\+M\+AX~5000}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{iop_8c_a1baf3b1228e8a750422d97cef2d336a8}\label{iop_8c_a1baf3b1228e8a750422d97cef2d336a8}} 
+\index{iop.c@{iop.c}!iop\_awaitAppReady@{iop\_awaitAppReady}}
+\index{iop\_awaitAppReady@{iop\_awaitAppReady}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{iop\_awaitAppReady()}{iop\_awaitAppReady()}}
+{\footnotesize\ttfamily void iop\+\_\+await\+App\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verify L\+T\+Em1 is ready for I\+OP operations. 
+
+\mbox{\Hypertarget{iop_8c_ad9607e474a95f9f242b2235d90efbb6b}\label{iop_8c_ad9607e474a95f9f242b2235d90efbb6b}} 
+\index{iop.c@{iop.c}!iop\_create@{iop\_create}}
+\index{iop\_create@{iop\_create}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{iop\_create()}{iop\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iop_8h_a1ed4c59909ec1a9a0007da89586254ff}{iop\+\_\+t}}$\ast$ iop\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the Input/\+Output Process subsystem. 
+
+\mbox{\Hypertarget{iop_8c_aad96d9d4df9ebc33c08464531f757fb1}\label{iop_8c_aad96d9d4df9ebc33c08464531f757fb1}} 
+\index{iop.c@{iop.c}!iop\_resetCmdBuffer@{iop\_resetCmdBuffer}}
+\index{iop\_resetCmdBuffer@{iop\_resetCmdBuffer}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{iop\_resetCmdBuffer()}{iop\_resetCmdBuffer()}}
+{\footnotesize\ttfamily void iop\+\_\+reset\+Cmd\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear receive command response buffer. 
+
+\mbox{\Hypertarget{iop_8c_a9db71023d7554c3ae473ab010d2f1acf}\label{iop_8c_a9db71023d7554c3ae473ab010d2f1acf}} 
+\index{iop.c@{iop.c}!iop\_resetDataBuffer@{iop\_resetDataBuffer}}
+\index{iop\_resetDataBuffer@{iop\_resetDataBuffer}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{iop\_resetDataBuffer()}{iop\_resetDataBuffer()}}
+{\footnotesize\ttfamily void iop\+\_\+reset\+Data\+Buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{buf\+Indx }\end{DoxyParamCaption})}
+
+
+
+Clear receive command response buffer. 
+
+\mbox{\Hypertarget{iop_8c_a499e14029136c4eb243a5458b6bac682}\label{iop_8c_a499e14029136c4eb243a5458b6bac682}} 
+\index{iop.c@{iop.c}!iop\_rxParseImmediate@{iop\_rxParseImmediate}}
+\index{iop\_rxParseImmediate@{iop\_rxParseImmediate}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{iop\_rxParseImmediate()}{iop\_rxParseImmediate()}}
+{\footnotesize\ttfamily void iop\+\_\+rx\+Parse\+Immediate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Parse recv\textquotesingle{}d data (in command RX buffer) for async event preambles that need to be handled immediately. 
+
+\mbox{\Hypertarget{iop_8c_adc850da968c0996c7645ef06e277708f}\label{iop_8c_adc850da968c0996c7645ef06e277708f}} 
+\index{iop.c@{iop.c}!iop\_start@{iop\_start}}
+\index{iop\_start@{iop\_start}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{iop\_start()}{iop\_start()}}
+{\footnotesize\ttfamily void iop\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Complete initialization and start running iop processes. 
+
+\mbox{\Hypertarget{iop_8c_a666094e51c449560d25b82867a708ca9}\label{iop_8c_a666094e51c449560d25b82867a708ca9}} 
+\index{iop.c@{iop.c}!iop\_txDataPromptParser@{iop\_txDataPromptParser}}
+\index{iop\_txDataPromptParser@{iop\_txDataPromptParser}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{iop\_txDataPromptParser()}{iop\_txDataPromptParser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} iop\+\_\+tx\+Data\+Prompt\+Parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{response,  }\item[{char $\ast$$\ast$}]{endptr }\end{DoxyParamCaption})}
+
+
+
+Response parser looking for \char`\"{}$>$\char`\"{} prompt to send data to network and then initiates the send . 
+
+\mbox{\Hypertarget{iop_8c_ad19ccc89f7192da89e035d24c479d158}\label{iop_8c_ad19ccc89f7192da89e035d24c479d158}} 
+\index{iop.c@{iop.c}!iop\_txSend@{iop\_txSend}}
+\index{iop\_txSend@{iop\_txSend}!iop.c@{iop.c}}
+\doxysubsubsection{\texorpdfstring{iop\_txSend()}{iop\_txSend()}}
+{\footnotesize\ttfamily void iop\+\_\+tx\+Send (\begin{DoxyParamCaption}\item[{const char $\ast$}]{send\+Data,  }\item[{uint16\+\_\+t}]{send\+Sz,  }\item[{bool}]{send\+Immediate }\end{DoxyParamCaption})}
+
+
+
+Start a (raw) send operation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em send\+Data} & Pointer to char data to send out, input buffer can be discarded following call. \\
+\hline
+\mbox{\texttt{ in}}  & {\em send\+Sz} & The number of characters to send. \\
+\hline
+\mbox{\texttt{ in}}  & {\em send\+Immediate} & Send queued data, if false continue queueing and wait to send. \\
+\hline
+\end{DoxyParams}

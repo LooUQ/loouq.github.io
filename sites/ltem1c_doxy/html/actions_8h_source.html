@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LTEm1c: actions.h Source File</title>
+<title>LTEm1c: src/actions.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,11 +20,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEm1c
    &#160;<span id="projectnumber">v0.3</span>
    </div>
-   <div id="projectbrief">C99devicedriverfortheLooUQLTEm1LTEcellularmodem</div>
+   <div id="projectbrief">C99 device driver for the LooUQ LTEm1 cellular modem</div>
   </td>
  </tr>
  </tbody>
@@ -47,7 +48,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,12 +62,17 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">actions.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2020 LooUQ Incorporated.</span></div>
+<a href="actions_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2020 LooUQ Incorporated.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Licensed under the MIT license. See LICENSE file in the project root for full license information.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef _ACTIONS_H_</span></div>
@@ -78,50 +83,50 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ACTION_RETRIES_DEFAULT 10</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ACTION_RETRY_INTERVALmillis 100</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define ACTION_TIMEOUT_DEFAULTmillis 500</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="actions_8h.html#a4d62077f56bf0d4ca29b93ff9943ab7d">   12</a></span>&#160;<span class="preprocessor">#define ACTION_RETRIES_DEFAULT 10</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="actions_8h.html#a021c8a4946bbb0d831010de2925d9744">   13</a></span>&#160;<span class="preprocessor">#define ACTION_RETRY_INTERVALmillis 100</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="actions_8h.html#a55b5450e7d55ef7c9a13a7568c6254e6">   14</a></span>&#160;<span class="preprocessor">#define ACTION_TIMEOUT_DEFAULTmillis 500</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structaction__tag.html">   16</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structaction__tag.html">action_tag</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">char</span> cmdStr[IOP_TX_BUFFER_SZ];</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">bool</span> isOpen;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> invokedAt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structaction__tag.html#a8664baf8552bdb7eaee20d25a9f3afba">   18</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structaction__tag.html#a8664baf8552bdb7eaee20d25a9f3afba">cmdStr</a>[<a class="code" href="iop_8h.html#ace6954db00eab481db6e35ed4491dd0a">IOP_TX_BUFFER_SZ</a>];</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structaction__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">   19</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structaction__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">isOpen</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structaction__tag.html#aa025870b78196833703150bca54e930a">   20</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="structaction__tag.html#aa025870b78196833703150bca54e930a">invokedAt</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// char *resultHead;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// char *resultTail;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// uint8_t resultSz;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    uint16_t resultCode;                    <span class="comment">// 0 is pending, otherwise ACTION_RESULT_* codes</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">char</span> *response;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    uint16_t timeoutMillis;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    uint16_t (*taskCompleteParser_func)(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keywordtype">char</span> **endptr);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;} <a class="code" href="structaction__tag.html">action_t</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structaction__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">   24</a></span>&#160;    uint16_t <a class="code" href="structaction__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">resultCode</a>;                    <span class="comment">// 0 is pending, otherwise ACTION_RESULT_* codes</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">   25</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structaction__tag.html#a62141174b7f53e381c1ce0ad0b47b867">   26</a></span>&#160;    uint16_t <a class="code" href="structaction__tag.html#a62141174b7f53e381c1ce0ad0b47b867">timeoutMillis</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structaction__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">   27</a></span>&#160;    uint16_t (*<a class="code" href="structaction__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">taskCompleteParser_func</a>)(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>, <span class="keywordtype">char</span> **endptr);</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="actions_8h.html#adbd2d16df717d239d0e1059f636ea5a0">   28</a></span>&#160;} <a class="code" href="actions_8h.html#adbd2d16df717d239d0e1059f636ea5a0">action_t</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structaction_result__tag.html">   31</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structaction_result__tag.html">actionResult_tag</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    resultCode_t statusCode;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">char</span> *response;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;} <a class="code" href="structaction_result__tag.html">actionResult_t</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structaction_result__tag.html#aebfca2e66f7adfe0d876ca72b1080052">   33</a></span>&#160;    <a class="code" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> <a class="code" href="structaction_result__tag.html#aebfca2e66f7adfe0d876ca72b1080052">statusCode</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structaction_result__tag.html#a11373f02c42587a1853ad6c8be5fe10e">   34</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structaction_result__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="actions_8h.html#ae712b701323ddcdad6db94073bf45530">   35</a></span>&#160;} <a class="code" href="actions_8h.html#ae712b701323ddcdad6db94073bf45530">actionResult_t</a>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">bool</span> action_tryInvoke(<span class="keyword">const</span> <span class="keywordtype">char</span> *cmdStr);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">bool</span> action_tryInvokeAdv(<span class="keyword">const</span> <span class="keywordtype">char</span> *cmdStr, uint8_t retries, uint16_t timeout, uint16_t (*customCmdCompleteParser_func)(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keywordtype">char</span> **endptr));</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> action_sendRaw(<span class="keyword">const</span> <span class="keywordtype">char</span> *data, uint16_t dataSz, uint16_t timeoutMillis, uint16_t (*customCmdCompleteParser_func)(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keywordtype">char</span> **endptr));</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> action_sendRawWithEOTs(<span class="keyword">const</span> <span class="keywordtype">char</span> *data, uint16_t dataSz, <span class="keyword">const</span> <span class="keywordtype">char</span>* eotPhrase, uint16_t timeoutMillis, uint16_t (*customCmdCompleteParser_func)(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keywordtype">char</span> **endptr));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="actions_8h.html#aeffecde3975bac07ef8977ca60ccdb47">action_tryInvoke</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *cmdStr);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="actions_8h.html#a90dc98235267b14541cdbac15f574c03">action_tryInvokeAdv</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *cmdStr, uint8_t retries, uint16_t timeout, uint16_t (*customCmdCompleteParser_func)(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keywordtype">char</span> **endptr));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="actions_8h.html#aa23b0494beb62210c28d2452df1d9bf1">action_sendRaw</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *data, uint16_t dataSz, uint16_t timeoutMillis, uint16_t (*customCmdCompleteParser_func)(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keywordtype">char</span> **endptr));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="actions_8h.html#abe8c023696d2ec117064cc8297dab730">action_sendRawWithEOTs</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *data, uint16_t dataSz, <span class="keyword">const</span> <span class="keywordtype">char</span>* eotPhrase, uint16_t timeoutMillis, uint16_t (*customCmdCompleteParser_func)(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keywordtype">char</span> **endptr));</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<a class="code" href="structaction_result__tag.html">actionResult_t</a> action_awaitResult(<span class="keywordtype">bool</span> closeAction);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<a class="code" href="structaction_result__tag.html">actionResult_t</a> action_getResult(<span class="keywordtype">bool</span> closeAction);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">bool</span> actn_acquireLock(<span class="keyword">const</span> <span class="keywordtype">char</span> *cmdStr, uint8_t retries);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> action_close();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<a class="code" href="structaction_result__tag.html">actionResult_t</a> <a class="code" href="actions_8h.html#a0ee7f4cd6c9b90092e25b7b4a4d50be1">action_awaitResult</a>(<span class="keywordtype">bool</span> closeAction);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<a class="code" href="structaction_result__tag.html">actionResult_t</a> <a class="code" href="actions_8h.html#a5c2c186297b1fa683dfa7f807dc211f8">action_getResult</a>(<span class="keywordtype">bool</span> closeAction);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="actions_8h.html#a4ebff35eeb105c5536cdb994d11d2573">actn_acquireLock</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *cmdStr, uint8_t retries);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> <a class="code" href="actions_8h.html#ad900c7fe409458bdff8b72e09828b490">action_close</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;resultCode_t action_okResultParser(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keywordtype">char</span>** endptr);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;resultCode_t action_defaultResultParser(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keyword">const</span> <span class="keywordtype">char</span> *landmark, <span class="keywordtype">bool</span> landmarkReqd, uint8_t gap, <span class="keyword">const</span> <span class="keywordtype">char</span> *terminator, <span class="keywordtype">char</span>** endptr);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;resultCode_t action_tokenResultParser(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keyword">const</span> <span class="keywordtype">char</span> *landmark, <span class="keywordtype">char</span> token, uint8_t reqdTokens, <span class="keyword">const</span> <span class="keywordtype">char</span> *terminator, <span class="keywordtype">char</span>** endptr);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;resultCode_t action_serviceResponseParser(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keyword">const</span> <span class="keywordtype">char</span> *landmark, uint8_t resultIndx, <span class="keywordtype">char</span>** endptr);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> <a class="code" href="actions_8h.html#abb10c49a8c22f9660ab5c2e0885552e3">action_okResultParser</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keywordtype">char</span>** endptr);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> <a class="code" href="actions_8h.html#a92cb5955b0b25d59bc7a14ffd6462a6d">action_defaultResultParser</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keyword">const</span> <span class="keywordtype">char</span> *landmark, <span class="keywordtype">bool</span> landmarkReqd, uint8_t gap, <span class="keyword">const</span> <span class="keywordtype">char</span> *terminator, <span class="keywordtype">char</span>** endptr);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<a class="code" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> <a class="code" href="actions_8h.html#ac72cff5eb861ea8343b92da941f21569">action_tokenResultParser</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keyword">const</span> <span class="keywordtype">char</span> *landmark, <span class="keywordtype">char</span> token, uint8_t reqdTokens, <span class="keyword">const</span> <span class="keywordtype">char</span> *terminator, <span class="keywordtype">char</span>** endptr);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> <a class="code" href="actions_8h.html#a46c456c01c810e6c8561441208ecf87d">action_serviceResponseParser</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *response, <span class="keyword">const</span> <span class="keywordtype">char</span> *landmark, uint8_t resultIndx, <span class="keywordtype">char</span>** endptr);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -130,8 +135,33 @@ $(function() {
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif  </span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructaction__tag_html_a882afa92abc68d9b1fa39a42f56a8b3d"><div class="ttname"><a href="structaction__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">action_tag::isOpen</a></div><div class="ttdeci">bool isOpen</div><div class="ttdef"><b>Definition:</b> actions.h:19</div></div>
+<div class="ttc" id="astructaction__tag_html_a62141174b7f53e381c1ce0ad0b47b867"><div class="ttname"><a href="structaction__tag.html#a62141174b7f53e381c1ce0ad0b47b867">action_tag::timeoutMillis</a></div><div class="ttdeci">uint16_t timeoutMillis</div><div class="ttdef"><b>Definition:</b> actions.h:26</div></div>
+<div class="ttc" id="astructaction__tag_html_a11373f02c42587a1853ad6c8be5fe10e"><div class="ttname"><a href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">action_tag::response</a></div><div class="ttdeci">char * response</div><div class="ttdef"><b>Definition:</b> actions.h:25</div></div>
+<div class="ttc" id="aactions_8h_html_a46c456c01c810e6c8561441208ecf87d"><div class="ttname"><a href="actions_8h.html#a46c456c01c810e6c8561441208ecf87d">action_serviceResponseParser</a></div><div class="ttdeci">resultCode_t action_serviceResponseParser(const char *response, const char *landmark, uint8_t resultIndx, char **endptr)</div><div class="ttdoc">[private] Parser for open connection response, shared by UDP/TCP/SSL.</div><div class="ttdef"><b>Definition:</b> actions.c:346</div></div>
+<div class="ttc" id="aactions_8h_html_a0ee7f4cd6c9b90092e25b7b4a4d50be1"><div class="ttname"><a href="actions_8h.html#a0ee7f4cd6c9b90092e25b7b4a4d50be1">action_awaitResult</a></div><div class="ttdeci">actionResult_t action_awaitResult(bool closeAction)</div><div class="ttdoc">Waits for an AT command result until completed response or timeout.</div><div class="ttdef"><b>Definition:</b> actions.c:116</div></div>
+<div class="ttc" id="altem1c_8h_html_a700eddbbbf80623f66eb7ae253ecd887"><div class="ttname"><a href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a></div><div class="ttdeci">uint16_t resultCode_t</div><div class="ttdef"><b>Definition:</b> ltem1c.h:94</div></div>
+<div class="ttc" id="aiop_8h_html_ace6954db00eab481db6e35ed4491dd0a"><div class="ttname"><a href="iop_8h.html#ace6954db00eab481db6e35ed4491dd0a">IOP_TX_BUFFER_SZ</a></div><div class="ttdeci">#define IOP_TX_BUFFER_SZ</div><div class="ttdef"><b>Definition:</b> iop.h:44</div></div>
+<div class="ttc" id="aactions_8h_html_aa23b0494beb62210c28d2452df1d9bf1"><div class="ttname"><a href="actions_8h.html#aa23b0494beb62210c28d2452df1d9bf1">action_sendRaw</a></div><div class="ttdeci">void action_sendRaw(const char *data, uint16_t dataSz, uint16_t timeoutMillis, uint16_t(*customCmdCompleteParser_func)(const char *response, char **endptr))</div><div class="ttdoc">Performs data transfer (send) sub-action.</div><div class="ttdef"><b>Definition:</b> actions.c:77</div></div>
+<div class="ttc" id="aactions_8h_html_adbd2d16df717d239d0e1059f636ea5a0"><div class="ttname"><a href="actions_8h.html#adbd2d16df717d239d0e1059f636ea5a0">action_t</a></div><div class="ttdeci">struct action_tag action_t</div></div>
+<div class="ttc" id="aactions_8h_html_abe8c023696d2ec117064cc8297dab730"><div class="ttname"><a href="actions_8h.html#abe8c023696d2ec117064cc8297dab730">action_sendRawWithEOTs</a></div><div class="ttdeci">void action_sendRawWithEOTs(const char *data, uint16_t dataSz, const char *eotPhrase, uint16_t timeoutMillis, uint16_t(*customCmdCompleteParser_func)(const char *response, char **endptr))</div><div class="ttdoc">Performs data transfer (send) sub-action.</div><div class="ttdef"><b>Definition:</b> actions.c:97</div></div>
+<div class="ttc" id="aactions_8h_html_ae712b701323ddcdad6db94073bf45530"><div class="ttname"><a href="actions_8h.html#ae712b701323ddcdad6db94073bf45530">actionResult_t</a></div><div class="ttdeci">struct actionResult_tag actionResult_t</div></div>
+<div class="ttc" id="astructaction_result__tag_html_aebfca2e66f7adfe0d876ca72b1080052"><div class="ttname"><a href="structaction_result__tag.html#aebfca2e66f7adfe0d876ca72b1080052">actionResult_tag::statusCode</a></div><div class="ttdeci">resultCode_t statusCode</div><div class="ttdef"><b>Definition:</b> actions.h:33</div></div>
+<div class="ttc" id="aactions_8h_html_a92cb5955b0b25d59bc7a14ffd6462a6d"><div class="ttname"><a href="actions_8h.html#a92cb5955b0b25d59bc7a14ffd6462a6d">action_defaultResultParser</a></div><div class="ttdeci">resultCode_t action_defaultResultParser(const char *response, const char *landmark, bool landmarkReqd, uint8_t gap, const char *terminator, char **endptr)</div><div class="ttdoc">Performs a standardized parse of command responses. This function can be wrapped to match atcmd comma...</div><div class="ttdef"><b>Definition:</b> actions.c:210</div></div>
+<div class="ttc" id="aactions_8h_html_aeffecde3975bac07ef8977ca60ccdb47"><div class="ttname"><a href="actions_8h.html#aeffecde3975bac07ef8977ca60ccdb47">action_tryInvoke</a></div><div class="ttdeci">bool action_tryInvoke(const char *cmdStr)</div><div class="ttdoc">Invokes a BGx AT command with default action values.</div><div class="ttdef"><b>Definition:</b> actions.c:37</div></div>
+<div class="ttc" id="astructaction__tag_html_a8664baf8552bdb7eaee20d25a9f3afba"><div class="ttname"><a href="structaction__tag.html#a8664baf8552bdb7eaee20d25a9f3afba">action_tag::cmdStr</a></div><div class="ttdeci">char cmdStr[IOP_TX_BUFFER_SZ]</div><div class="ttdef"><b>Definition:</b> actions.h:18</div></div>
+<div class="ttc" id="aactions_8h_html_a90dc98235267b14541cdbac15f574c03"><div class="ttname"><a href="actions_8h.html#a90dc98235267b14541cdbac15f574c03">action_tryInvokeAdv</a></div><div class="ttdeci">bool action_tryInvokeAdv(const char *cmdStr, uint8_t retries, uint16_t timeout, uint16_t(*customCmdCompleteParser_func)(const char *response, char **endptr))</div><div class="ttdoc">Invokes a BGx AT command with application specified action values.</div><div class="ttdef"><b>Definition:</b> actions.c:53</div></div>
+<div class="ttc" id="aactions_8h_html_abb10c49a8c22f9660ab5c2e0885552e3"><div class="ttname"><a href="actions_8h.html#abb10c49a8c22f9660ab5c2e0885552e3">action_okResultParser</a></div><div class="ttdeci">resultCode_t action_okResultParser(const char *response, char **endptr)</div><div class="ttdoc">Validate the response ends in a BGxx OK value.</div><div class="ttdef"><b>Definition:</b> actions.c:336</div></div>
 <div class="ttc" id="astructaction_result__tag_html"><div class="ttname"><a href="structaction_result__tag.html">actionResult_tag</a></div><div class="ttdef"><b>Definition:</b> actions.h:32</div></div>
+<div class="ttc" id="aactions_8h_html_ad900c7fe409458bdff8b72e09828b490"><div class="ttname"><a href="actions_8h.html#ad900c7fe409458bdff8b72e09828b490">action_close</a></div><div class="ttdeci">void action_close()</div><div class="ttdoc">Closes (completes) a Bgx AT command structure and frees action resource (release action lock).</div><div class="ttdef"><b>Definition:</b> actions.c:21</div></div>
+<div class="ttc" id="astructaction_result__tag_html_a11373f02c42587a1853ad6c8be5fe10e"><div class="ttname"><a href="structaction_result__tag.html#a11373f02c42587a1853ad6c8be5fe10e">actionResult_tag::response</a></div><div class="ttdeci">char * response</div><div class="ttdef"><b>Definition:</b> actions.h:34</div></div>
+<div class="ttc" id="astructaction__tag_html_a78ce7b65f47dda02b282b22bc6ef5cef"><div class="ttname"><a href="structaction__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">action_tag::taskCompleteParser_func</a></div><div class="ttdeci">uint16_t(* taskCompleteParser_func)(const char *response, char **endptr)</div><div class="ttdef"><b>Definition:</b> actions.h:27</div></div>
+<div class="ttc" id="aactions_8h_html_a4ebff35eeb105c5536cdb994d11d2573"><div class="ttname"><a href="actions_8h.html#a4ebff35eeb105c5536cdb994d11d2573">actn_acquireLock</a></div><div class="ttdeci">bool actn_acquireLock(const char *cmdStr, uint8_t retries)</div><div class="ttdoc">Attempts to get exclusive access to QBG module command interface.</div><div class="ttdef"><b>Definition:</b> actions.c:400</div></div>
 <div class="ttc" id="astructaction__tag_html"><div class="ttname"><a href="structaction__tag.html">action_tag</a></div><div class="ttdef"><b>Definition:</b> actions.h:17</div></div>
+<div class="ttc" id="aactions_8h_html_ac72cff5eb861ea8343b92da941f21569"><div class="ttname"><a href="actions_8h.html#ac72cff5eb861ea8343b92da941f21569">action_tokenResultParser</a></div><div class="ttdeci">resultCode_t action_tokenResultParser(const char *response, const char *landmark, char token, uint8_t reqdTokens, const char *terminator, char **endptr)</div><div class="ttdoc">Performs a standardized parse of command responses. This function can be wrapped to match atcmd comma...</div><div class="ttdef"><b>Definition:</b> actions.c:289</div></div>
+<div class="ttc" id="astructaction__tag_html_aa025870b78196833703150bca54e930a"><div class="ttname"><a href="structaction__tag.html#aa025870b78196833703150bca54e930a">action_tag::invokedAt</a></div><div class="ttdeci">unsigned long invokedAt</div><div class="ttdef"><b>Definition:</b> actions.h:20</div></div>
+<div class="ttc" id="aactions_8h_html_a5c2c186297b1fa683dfa7f807dc211f8"><div class="ttname"><a href="actions_8h.html#a5c2c186297b1fa683dfa7f807dc211f8">action_getResult</a></div><div class="ttdeci">actionResult_t action_getResult(bool closeAction)</div><div class="ttdoc">Gets command response and returns immediately.</div><div class="ttdef"><b>Definition:</b> actions.c:140</div></div>
+<div class="ttc" id="astructaction__tag_html_adc00dec5f45402bb5c65d7451fb4d3ad"><div class="ttname"><a href="structaction__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">action_tag::resultCode</a></div><div class="ttdeci">uint16_t resultCode</div><div class="ttdef"><b>Definition:</b> actions.h:24</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

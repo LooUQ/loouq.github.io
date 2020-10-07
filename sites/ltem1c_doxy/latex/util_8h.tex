@@ -1,0 +1,76 @@
+\hypertarget{util_8h}{}\doxysection{src/util.h File Reference}
+\label{util_8h}\index{src/util.h@{src/util.h}}
+{\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionip__addr__tag}{ip\+\_\+addr\+\_\+tag}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{util_8h_a43f184aad162561e959911496948ced2}{I\+P\+\_\+\+D\+I\+S\+P\+L\+AY}}(N\+U\+M\+\_\+\+IP,  S\+T\+R\+I\+N\+G\+\_\+\+IP)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef union \mbox{\hyperlink{unionip__addr__tag}{ip\+\_\+addr\+\_\+tag}} \mbox{\hyperlink{util_8h_a99ff989cc769d1e9f14375f4ee090ff2}{ip\+\_\+addr\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{util_8h_ad3a0da52a4a81a13fe7ebf964268a455}{str\+Token}} (char $\ast$source, int delimiter, char $\ast$token, uint8\+\_\+t token\+Max)
+\begin{DoxyCompactList}\small\item\em Simple string to packed numeric IP address parser. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{util_8h_a43f184aad162561e959911496948ced2}\label{util_8h_a43f184aad162561e959911496948ced2}} 
+\index{util.h@{util.h}!IP\_DISPLAY@{IP\_DISPLAY}}
+\index{IP\_DISPLAY@{IP\_DISPLAY}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{IP\_DISPLAY}{IP\_DISPLAY}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+D\+I\+S\+P\+L\+AY(\begin{DoxyParamCaption}\item[{}]{N\+U\+M\+\_\+\+IP,  }\item[{}]{S\+T\+R\+I\+N\+G\+\_\+\+IP }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} STRING\_IP\#\#[16]; \(\backslash\)}
+\DoxyCodeLine{sprintf(STRING\_IP, \textcolor{stringliteral}{"{}\%d.\%d.\%d.\%d"{}}, NUM\_IP\#\#.octet[0] , NUM\_IP\#\#.octet[1], NUM\_IP\#\#.octet[2], NUM\_IP\#\#.octet[3]);}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{util_8h_a99ff989cc769d1e9f14375f4ee090ff2}\label{util_8h_a99ff989cc769d1e9f14375f4ee090ff2}} 
+\index{util.h@{util.h}!ip\_addr\_t@{ip\_addr\_t}}
+\index{ip\_addr\_t@{ip\_addr\_t}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{ip\_addr\_t}{ip\_addr\_t}}
+{\footnotesize\ttfamily typedef union \mbox{\hyperlink{unionip__addr__tag}{ip\+\_\+addr\+\_\+tag}} \mbox{\hyperlink{util_8h_a99ff989cc769d1e9f14375f4ee090ff2}{ip\+\_\+addr\+\_\+t}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{util_8h_ad3a0da52a4a81a13fe7ebf964268a455}\label{util_8h_ad3a0da52a4a81a13fe7ebf964268a455}} 
+\index{util.h@{util.h}!strToken@{strToken}}
+\index{strToken@{strToken}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{strToken()}{strToken()}}
+{\footnotesize\ttfamily char$\ast$ str\+Token (\begin{DoxyParamCaption}\item[{char $\ast$}]{source,  }\item[{int}]{delimiter,  }\item[{char $\ast$}]{token,  }\item[{uint8\+\_\+t}]{token\+Max }\end{DoxyParamCaption})}
+
+
+
+Simple string to packed numeric IP address parser. 
+
+C99 thread-\/safe implementation of c-\/string token extractor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em source} & The source to extract tokens from. \\
+\hline
+\mbox{\texttt{ in}}  & {\em delimeter} & The character delimeter as an integer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em token} & Buffer containing the token. \\
+\hline
+\mbox{\texttt{ in}}  & {\em token\+Max} & The maximum size for the extracted token.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the continue point of tokenization. 
+\end{DoxyReturn}

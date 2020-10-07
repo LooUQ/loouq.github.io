@@ -20,11 +20,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEm1c
    &#160;<span id="projectnumber">v0.3</span>
    </div>
-   <div id="projectbrief">C99devicedriverfortheLooUQLTEm1LTEcellularmodem</div>
+   <div id="projectbrief">C99 device driver for the LooUQ LTEm1 cellular modem</div>
   </td>
  </tr>
  </tbody>
@@ -64,36 +65,116 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structmqtt__tag-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">mqtt_tag Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="mqtt_8h_source.html">mqtt.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a98c38a5dcd0bff6e0d56146b24632468"><td class="memItemLeft" align="right" valign="top"><a id="a98c38a5dcd0bff6e0d56146b24632468"></a>
-mqttStatus_t&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
-<tr class="separator:a98c38a5dcd0bff6e0d56146b24632468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8df01df4bf555ebeac45e3ad901d8aa9"><td class="memItemLeft" align="right" valign="top"><a id="a8df01df4bf555ebeac45e3ad901d8aa9"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>msgId</b></td></tr>
-<tr class="separator:a8df01df4bf555ebeac45e3ad901d8aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad985ea1ab416845a77057a5b49efb59c"><td class="memItemLeft" align="right" valign="top"><a id="ad985ea1ab416845a77057a5b49efb59c"></a>
-<a class="el" href="structmqtt_subscription__tag.html">mqttSubscription_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>subscriptions</b> [MQTT_TOPIC_MAXCNT]</td></tr>
-<tr class="separator:ad985ea1ab416845a77057a5b49efb59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41759f02ebad33e27745387aec94e099"><td class="memItemLeft" align="right" valign="top"><a id="a41759f02ebad33e27745387aec94e099"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>firstChunkBegin</b></td></tr>
-<tr class="separator:a41759f02ebad33e27745387aec94e099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa16cc088994b5bff41deb9edbbccb12f"><td class="memItemLeft" align="right" valign="top"><a id="aa16cc088994b5bff41deb9edbbccb12f"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>firstChunkSz</b></td></tr>
-<tr class="separator:aa16cc088994b5bff41deb9edbbccb12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c8d4adc44719b11d9a9d67d8b87831e"><td class="memItemLeft" align="right" valign="top"><a id="a0c8d4adc44719b11d9a9d67d8b87831e"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>dataBufferIndx</b></td></tr>
-<tr class="separator:a0c8d4adc44719b11d9a9d67d8b87831e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+Data Fields</h2></td></tr>
+<tr class="memitem:a22b01753d409aacca5b5fc4f6027b694"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#a22b01753d409aacca5b5fc4f6027b694">state</a></td></tr>
+<tr class="separator:a22b01753d409aacca5b5fc4f6027b694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2acf66d2c12f7b04f90ed704f5ac215c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#a2acf66d2c12f7b04f90ed704f5ac215c">msgId</a></td></tr>
+<tr class="separator:a2acf66d2c12f7b04f90ed704f5ac215c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4be52e58b888608de6f795fbc3be555"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mqtt_8h.html#a46dc892f05acfdb27f05881e54cd1122">mqttSubscription_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#aa4be52e58b888608de6f795fbc3be555">subscriptions</a> [<a class="el" href="mqtt_8h.html#a1d503fbf4b1c060dca196dd00b7c48db">MQTT_TOPIC_MAXCNT</a>]</td></tr>
+<tr class="separator:aa4be52e58b888608de6f795fbc3be555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17799675d32ab0177ca95eca86285f34"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#a17799675d32ab0177ca95eca86285f34">firstChunkBegin</a></td></tr>
+<tr class="separator:a17799675d32ab0177ca95eca86285f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21c02fc8af3a019cd744173f583d3096"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#a21c02fc8af3a019cd744173f583d3096">firstChunkSz</a></td></tr>
+<tr class="separator:a21c02fc8af3a019cd744173f583d3096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adab807efc09cb10f5017455fd0a8f701"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#adab807efc09cb10f5017455fd0a8f701">dataBufferIndx</a></td></tr>
+<tr class="separator:adab807efc09cb10f5017455fd0a8f701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="adab807efc09cb10f5017455fd0a8f701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adab807efc09cb10f5017455fd0a8f701">&#9670;&nbsp;</a></span>dataBufferIndx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dataBufferIndx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17799675d32ab0177ca95eca86285f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17799675d32ab0177ca95eca86285f34">&#9670;&nbsp;</a></span>firstChunkBegin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* firstChunkBegin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21c02fc8af3a019cd744173f583d3096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21c02fc8af3a019cd744173f583d3096">&#9670;&nbsp;</a></span>firstChunkSz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t firstChunkSz</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2acf66d2c12f7b04f90ed704f5ac215c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2acf66d2c12f7b04f90ed704f5ac215c">&#9670;&nbsp;</a></span>msgId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t msgId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22b01753d409aacca5b5fc4f6027b694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22b01753d409aacca5b5fc4f6027b694">&#9670;&nbsp;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a> state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4be52e58b888608de6f795fbc3be555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4be52e58b888608de6f795fbc3be555">&#9670;&nbsp;</a></span>subscriptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mqtt_8h.html#a46dc892f05acfdb27f05881e54cd1122">mqttSubscription_t</a> subscriptions[<a class="el" href="mqtt_8h.html#a1d503fbf4b1c060dca196dd00b7c48db">MQTT_TOPIC_MAXCNT</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="mqtt_8h_source.html">mqtt.h</a></li>
+<li>src/<a class="el" href="mqtt_8h_source.html">mqtt.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

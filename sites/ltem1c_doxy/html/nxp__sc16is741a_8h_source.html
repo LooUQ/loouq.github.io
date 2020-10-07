@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LTEm1c: nxp_sc16is741a.h Source File</title>
+<title>LTEm1c: src/nxp_sc16is741a.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,11 +20,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEm1c
    &#160;<span id="projectnumber">v0.3</span>
    </div>
-   <div id="projectbrief">C99devicedriverfortheLooUQLTEm1LTEcellularmodem</div>
+   <div id="projectbrief">C99 device driver for the LooUQ LTEm1 cellular modem</div>
   </td>
  </tr>
  </tbody>
@@ -47,7 +48,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,12 +62,17 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">nxp_sc16is741a.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<a href="nxp__sc16is741a_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  \file nxp_sc16is741a.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *  \author Jensen Miller, Greg Terrell</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  \license MIT License</span></div>
@@ -106,38 +111,38 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;platform/platform_spi.h&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="platform__spi_8h.html">platform/platform_spi.h</a>&quot;</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#pragma region structures</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define SC16IS741A_FIFO_BUFFER_SZ   0x40</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define SC16IS741A_FIFO_RnW_READ    0x01</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define SC16IS741A_FIFO_RnW_WRITE   0x00</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a96fcf737cf0a7d899ac4b26981c7c4f8">   44</a></span>&#160;<span class="preprocessor">#define SC16IS741A_FIFO_BUFFER_SZ   0x40</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ab399189b9c72f4d48f2f52c3fa6291fb">   45</a></span>&#160;<span class="preprocessor">#define SC16IS741A_FIFO_RnW_READ    0x01</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a535cc745813812df867f27ee2df57aaa">   46</a></span>&#160;<span class="preprocessor">#define SC16IS741A_FIFO_RnW_WRITE   0x00</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// NXP Bridge register set selector values (applied to LCR register)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define SC16IS741A_REG_SET_GENERAL  0x00</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define SC16IS741A_REG_SET_SPECIAL  0x80</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define SC16IS741A_REG_SET_ENHANCED 0xBF</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ad89f1d08d65704795e9f9ca345813665">   49</a></span>&#160;<span class="preprocessor">#define SC16IS741A_REG_SET_GENERAL  0x00</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a101d5c157b724be68bff309a5a842ea6">   50</a></span>&#160;<span class="preprocessor">#define SC16IS741A_REG_SET_SPECIAL  0x80</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aa9d01dc2458beb79eb7c040a65ad817c">   51</a></span>&#160;<span class="preprocessor">#define SC16IS741A_REG_SET_ENHANCED 0xBF</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#define SC16IS741A_HW_RESET_DELAY      1U</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#define SC16IS741A_SW_RESET_MASK       0x08</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aeb1470ab1187215363f3649ae8d7fe5f">   53</a></span>&#160;<span class="preprocessor">#define SC16IS741A_HW_RESET_DELAY      1U</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aea5009adfeff721b9fb52fe25a14e7ea">   54</a></span>&#160;<span class="preprocessor">#define SC16IS741A_SW_RESET_MASK       0x08</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">typedef</span> <span class="keyword">const</span> uint8_t ro8;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">typedef</span> uint8_t rw8;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">   57</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">const</span> uint8_t <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">   58</a></span>&#160;<span class="keyword">typedef</span> uint8_t <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="union____sc16is741a__reg__addr__byte____.html">   67</a></span>&#160;<span class="keyword">union </span><a class="code" href="union____sc16is741a__reg__addr__byte____.html">__sc16is741a_reg_addr_byte__</a></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">struct</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        ro8 : 1;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        rw8 CH0 : 1;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        rw8 CH1 : 1;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        rw8 A : 4;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        rw8 RnW : 1;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="union____sc16is741a__reg__addr__byte____.html#a2c9c8133ee16e0f206bdf4920f0950af">   71</a></span>&#160;        <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> : 1;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="union____sc16is741a__reg__addr__byte____.html#a0a40c66f4fe9408f321c71b965574b41">   72</a></span>&#160;        <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="union____sc16is741a__reg__addr__byte____.html#a0a40c66f4fe9408f321c71b965574b41">CH0</a> : 1;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="union____sc16is741a__reg__addr__byte____.html#a8cc413c917f33cb91ba3256690a0825b">   73</a></span>&#160;        <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="union____sc16is741a__reg__addr__byte____.html#a8cc413c917f33cb91ba3256690a0825b">CH1</a> : 1;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="union____sc16is741a__reg__addr__byte____.html#aa4a8b11c1a38ee1952761b02f6b7283e">   74</a></span>&#160;        <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="union____sc16is741a__reg__addr__byte____.html#aa4a8b11c1a38ee1952761b02f6b7283e">A</a> : 4;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="union____sc16is741a__reg__addr__byte____.html#ae8ec0a10f3faf3057547ac69217c1cd1">   75</a></span>&#160;        <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="union____sc16is741a__reg__addr__byte____.html#ae8ec0a10f3faf3057547ac69217c1cd1">RnW</a> : 1;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    };</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    uint8_t reg_address;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="union____sc16is741a__reg__addr__byte____.html#a779eebec483facae3559285e7bc840de">   77</a></span>&#160;    uint8_t <a class="code" href="union____sc16is741a__reg__addr__byte____.html#a779eebec483facae3559285e7bc840de">reg_address</a>;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
@@ -146,10 +151,10 @@ $(function() {
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">struct</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">union </span><a class="code" href="union____sc16is741a__reg__addr__byte____.html">__sc16is741a_reg_addr_byte__</a> reg_addr;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        uint8_t reg_data;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">union </span><a class="code" href="union____sc16is741a__reg__addr__byte____.html">__sc16is741a_reg_addr_byte__</a> <a class="code" href="union____sc16is741a__reg__payload____.html#a34ae98613e9c7dee89171220930c243f">reg_addr</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="union____sc16is741a__reg__payload____.html#a35b74d69bd6f987cf3027c7d6ecb1aab">   90</a></span>&#160;        uint8_t <a class="code" href="union____sc16is741a__reg__payload____.html#a35b74d69bd6f987cf3027c7d6ecb1aab">reg_data</a>;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    };</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    uint16_t reg_payload;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="union____sc16is741a__reg__payload____.html#a0915f67ea14a584b4dd2924c741f5994">   92</a></span>&#160;    uint16_t <a class="code" href="union____sc16is741a__reg__payload____.html#a0915f67ea14a584b4dd2924c741f5994">reg_payload</a>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
@@ -165,7 +170,7 @@ $(function() {
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//typedef sc16is741a_device_t* sc16is741a_device;</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#define DEF_SC16IS741A_REG(REG_NAME, REG_BITS) \</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">  108</a></span>&#160;<span class="preprocessor">#define DEF_SC16IS741A_REG(REG_NAME, REG_BITS) \</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">typedef union \</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">{ \</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">    struct { \</span></div>
@@ -175,31 +180,31 @@ $(function() {
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">} SC16IS741A_##REG_NAME;</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5">  118</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    SC16IS741A_FIFO_ADDR = 0x00U,</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    SC16IS741A_IER_ADDR = 0x01U,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    SC16IS741A_FCR_ADDR = 0x02U,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    SC16IS741A_IIR_ADDR = 0x02U,</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    SC16IS741A_LCR_ADDR = 0x03U,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    SC16IS741A_MCR_ADDR = 0x04U,</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    SC16IS741A_LSR_ADDR = 0x05U,</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    SC16IS741A_MSR_ADDR = 0x06U,</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    SC16IS741A_SPR_ADDR = 0x07U,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    SC16IS741A_TCR_ADDR = 0x06U,</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    SC16IS741A_TLR_ADDR = 0x07U,</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    SC16IS741A_TXLVL_ADDR = 0x08U,</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    SC16IS741A_RXLVL_ADDR = 0x09U,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    SC16IS741A_UARTRST_ADDR = 0x0EU,</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    SC16IS741A_EFCR_ADDR = 0x0FU,</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    SC16IS741A_DLL_ADDR = 0x00U,</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    SC16IS741A_DLH_ADDR = 0x01U,</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    SC16IS741A_EFR_ADDR = 0x02U,</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    SC16IS741A_XON1_ADDR = 0x04U,</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    SC16IS741A_XON2_ADDR = 0x05U,</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    SC16IS741A_XOFF1_ADDR = 0x06U,</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    SC16IS741A_XOFF2_ADDR = 0x07U</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;} sc16is741a_reg_addr;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a9cfb007c26d77506850e4494e1c8be2b">  120</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a9cfb007c26d77506850e4494e1c8be2b">SC16IS741A_FIFO_ADDR</a> = 0x00U,</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ae8329b5b92b42e1b187a1176b326d02b">  121</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ae8329b5b92b42e1b187a1176b326d02b">SC16IS741A_IER_ADDR</a> = 0x01U,</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a3b4d413680cadacbfcad02fba2efb402">  122</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a3b4d413680cadacbfcad02fba2efb402">SC16IS741A_FCR_ADDR</a> = 0x02U,</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a5fcb183a6939b63df422b6efc6563aeb">  123</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a5fcb183a6939b63df422b6efc6563aeb">SC16IS741A_IIR_ADDR</a> = 0x02U,</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ad0be9b4ad0835b7fc37bf0b8de66acba">  124</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ad0be9b4ad0835b7fc37bf0b8de66acba">SC16IS741A_LCR_ADDR</a> = 0x03U,</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a67bbaf8564272045d2b0d6b74ad1e9e3">  125</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a67bbaf8564272045d2b0d6b74ad1e9e3">SC16IS741A_MCR_ADDR</a> = 0x04U,</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ae21512f939aff618be7742c3fd9f405b">  126</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ae21512f939aff618be7742c3fd9f405b">SC16IS741A_LSR_ADDR</a> = 0x05U,</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a40a9cc748ccd0ab1645fb523ec2d2eab">  127</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a40a9cc748ccd0ab1645fb523ec2d2eab">SC16IS741A_MSR_ADDR</a> = 0x06U,</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a8703459cfafe31e7ee2e8ce9f90999fb">  128</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a8703459cfafe31e7ee2e8ce9f90999fb">SC16IS741A_SPR_ADDR</a> = 0x07U,</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ae4ae7c736e0c5209375a876df6e06bbf">  129</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ae4ae7c736e0c5209375a876df6e06bbf">SC16IS741A_TCR_ADDR</a> = 0x06U,</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a72fd6c09e78366c039974e95aae43fee">  130</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a72fd6c09e78366c039974e95aae43fee">SC16IS741A_TLR_ADDR</a> = 0x07U,</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a1494c8f6ced89e25058f4028a9ade39c">  131</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a1494c8f6ced89e25058f4028a9ade39c">SC16IS741A_TXLVL_ADDR</a> = 0x08U,</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a9dbf2d1da7f1ddff7991ea443fc75ff6">  132</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a9dbf2d1da7f1ddff7991ea443fc75ff6">SC16IS741A_RXLVL_ADDR</a> = 0x09U,</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a7d53bd822207abe46d43e6cb096d430f">  133</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a7d53bd822207abe46d43e6cb096d430f">SC16IS741A_UARTRST_ADDR</a> = 0x0EU,</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a34f62fe9215974cfaa480e2633e03be6">  134</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a34f62fe9215974cfaa480e2633e03be6">SC16IS741A_EFCR_ADDR</a> = 0x0FU,</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a9e668c0b967b0c8132acb2ed9a2e001c">  135</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a9e668c0b967b0c8132acb2ed9a2e001c">SC16IS741A_DLL_ADDR</a> = 0x00U,</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5aaa29ed1eeb7c64efda04ff79a918cd01">  136</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5aaa29ed1eeb7c64efda04ff79a918cd01">SC16IS741A_DLH_ADDR</a> = 0x01U,</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ab1bd9e2a9f78083882786b2aa96939de">  137</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ab1bd9e2a9f78083882786b2aa96939de">SC16IS741A_EFR_ADDR</a> = 0x02U,</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a452cc36e342450385463f913aef34762">  138</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a452cc36e342450385463f913aef34762">SC16IS741A_XON1_ADDR</a> = 0x04U,</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a4e06d545440ce8fd2ba367dba1e8db11">  139</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a4e06d545440ce8fd2ba367dba1e8db11">SC16IS741A_XON2_ADDR</a> = 0x05U,</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a18f9f28582db101ada5f79fd0c3781a4">  140</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a18f9f28582db101ada5f79fd0c3781a4">SC16IS741A_XOFF1_ADDR</a> = 0x06U,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a397ba753cc449c355b03fccab29b9beb">SC16IS741A_XOFF2_ADDR</a> = 0x07U</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a397ba753cc449c355b03fccab29b9beb">  142</a></span>&#160;} <a class="code" href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5">sc16is741a_reg_addr</a>;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span></div>
@@ -210,154 +215,154 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;DEF_SC16IS741A_REG(IER,</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    rw8 RHR_DATA_AVAIL_INT_EN : 1;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    rw8 THR_EMPTY_INT_EN : 1;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    rw8 RECEIVE_LINE_STAT_INT_EN : 1;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    rw8 MDM_STAT_INT_EN : 1;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    rw8 SLP_MODE_EN : 1;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    rw8 nXOFF_INT_EN : 1;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    rw8 nRTS_INT_EN : 1;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    rw8 nCTS_INT_EN : 1;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ab6cf44f286ed5cb43fa7e0541a7434be">  156</a></span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(IER,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> RHR_DATA_AVAIL_INT_EN : 1;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> THR_EMPTY_INT_EN : 1;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> RECEIVE_LINE_STAT_INT_EN : 1;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> MDM_STAT_INT_EN : 1;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> SLP_MODE_EN : 1;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> nXOFF_INT_EN : 1;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> nRTS_INT_EN : 1;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> nCTS_INT_EN : 1;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;)        </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;DEF_SC16IS741A_REG(FCR,</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    rw8 FIFO_EN : 1;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    rw8 RX_FIFO_RST : 1;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    rw8 TX_FIFO_RST : 1;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    ro8 : 1;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    rw8 TX_TRIGGER_LVL : 2;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    rw8 RX_TRIGGER_LVL : 2;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(FCR,</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4c97a26393ae88ade1599bb906d2c7f3">  172</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#a4c97a26393ae88ade1599bb906d2c7f3">FIFO_EN</a> : 1;</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ad9ed8898e7d20f5934d1a4a0ea3d9655">  173</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#ad9ed8898e7d20f5934d1a4a0ea3d9655">RX_FIFO_RST</a> : 1;</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a39c1fed3e8f74ce0a7f9f36d61b4b4b8">  174</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#a39c1fed3e8f74ce0a7f9f36d61b4b4b8">TX_FIFO_RST</a> : 1;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a2c9c8133ee16e0f206bdf4920f0950af">  175</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> : 1;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aaa1751f5ef0832f47f1cf68add30f843">  176</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#aaa1751f5ef0832f47f1cf68add30f843">TX_TRIGGER_LVL</a> : 2;</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aa3d049dd67e3454650020072880b16d2">  177</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#aa3d049dd67e3454650020072880b16d2">RX_TRIGGER_LVL</a> : 2;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;)</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2">  181</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    TX_LVL_8SPACES = 0b00U,</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    TX_LVL_16SPACES = 0b01U,</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    TX_LVL_32SPACES = 0b10U,</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    TX_LVL_56SPACES = 0b11U</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;} sc16is741a_fcr_tx_trigger_val;</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2ac39ae09eea7f0d75a7a8076e480e8083">  183</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2ac39ae09eea7f0d75a7a8076e480e8083">TX_LVL_8SPACES</a> = 0b00U,</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2a658102cbf37e4adedf36b5ba0b655297">  184</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2a658102cbf37e4adedf36b5ba0b655297">TX_LVL_16SPACES</a> = 0b01U,</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2ad52fe23530d85bb8b724f7ae2adeb5ee">  185</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2ad52fe23530d85bb8b724f7ae2adeb5ee">TX_LVL_32SPACES</a> = 0b10U,</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2a3cb2d52f966d0ef47cac47a1865c82ba">TX_LVL_56SPACES</a> = 0b11U</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2a3cb2d52f966d0ef47cac47a1865c82ba">  187</a></span>&#160;} <a class="code" href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2">sc16is741a_fcr_tx_trigger_val</a>;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182">  190</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;{</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    RX_LVL_8CHARS = 0b00U,</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    RX_LVL_16CHARS = 0b01U,</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    RX_LVL_56CHARS = 0b10U,</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    RX_LVL_60CHARS = 0b11U</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;} sc16is741a_fcr_rx_trigger_val;</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182aed6ccb3e032a306f36ac267e169e63a9">  192</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182aed6ccb3e032a306f36ac267e169e63a9">RX_LVL_8CHARS</a> = 0b00U,</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182afb3ca57dec46f622b2d44faa325f90f8">  193</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182afb3ca57dec46f622b2d44faa325f90f8">RX_LVL_16CHARS</a> = 0b01U,</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182a234f2e2c8a115546d0e51c6da47e0e94">  194</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182a234f2e2c8a115546d0e51c6da47e0e94">RX_LVL_56CHARS</a> = 0b10U,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182ab0ba3a5691f1ad1f2a476db77f01e79c">RX_LVL_60CHARS</a> = 0b11U</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182ab0ba3a5691f1ad1f2a476db77f01e79c">  196</a></span>&#160;} <a class="code" href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182">sc16is741a_fcr_rx_trigger_val</a>;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105ee">  202</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    IRQ_1_RCVR_STATUS_ERROR = 0x03U,</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    IRQ_2_RCVR_TIMEOUT = 0x06U,</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    IRQ_2_RCVR_RHR = 0x02U,</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    IRQ_3_XMIT_THR = 0x01U,</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    IRQ_4_MODEM = 0x00U,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    IRQ_6_XOFF = 0x08U,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    IRQ_7_CTSRTS = 0x10U</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;} sc16is741a_irq_priority_val;</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea05e372e92787251ae623dcd195dfc126">  204</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea05e372e92787251ae623dcd195dfc126">IRQ_1_RCVR_STATUS_ERROR</a> = 0x03U,</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea9b07d7963f1025113b7587de37cae7e5">  205</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea9b07d7963f1025113b7587de37cae7e5">IRQ_2_RCVR_TIMEOUT</a> = 0x06U,</div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea151d5245b9ee151b6b03930e2c16c6cc">  206</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea151d5245b9ee151b6b03930e2c16c6cc">IRQ_2_RCVR_RHR</a> = 0x02U,</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea715139237399718aef577c132b172fa3">  207</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea715139237399718aef577c132b172fa3">IRQ_3_XMIT_THR</a> = 0x01U,</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eeaa4d48c95243053a41429d1f5e9ff22f3">  208</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eeaa4d48c95243053a41429d1f5e9ff22f3">IRQ_4_MODEM</a> = 0x00U,</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea310db71e960f668b2377556a57eea86b">  209</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea310db71e960f668b2377556a57eea86b">IRQ_6_XOFF</a> = 0x08U,</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea1598a2cda85314daf45a066342021ca3">IRQ_7_CTSRTS</a> = 0x10U</div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea1598a2cda85314daf45a066342021ca3">  211</a></span>&#160;} <a class="code" href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105ee">sc16is741a_irq_priority_val</a>;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;DEF_SC16IS741A_REG(IIR,</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    ro8 IRQ_nPENDING : 1;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    ro8 IRQ_SOURCE : 5;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    ro8 FIFO_EN : 2;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aaa9509f96134a369871d287398b6f4f6">  217</a></span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(IIR,</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> IRQ_nPENDING : 1;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> IRQ_SOURCE : 5;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> <a class="code" href="nxp__sc16is741a_8h.html#a4c97a26393ae88ade1599bb906d2c7f3">FIFO_EN</a> : 2;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;)</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;DEF_SC16IS741A_REG(LCR, </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    rw8 WORD_LEN : 2;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    rw8 STOP : 1;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    rw8 PARITY_EN : 1;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    rw8 EVEN_PARITY : 1;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    rw8 SET_PARITY : 1;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    rw8 SET_BREAK : 1;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    rw8 DIVISOR_LATCH_EN : 1;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(LCR, </div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#abcb9d86a70811f9ea595a8ce176c2a07">  228</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#abcb9d86a70811f9ea595a8ce176c2a07">WORD_LEN</a> : 2;</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#abcf8205c9a5a0e895c25312d99e5c9a5">  229</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#abcf8205c9a5a0e895c25312d99e5c9a5">STOP</a> : 1;</div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ab07ddd22ac93d5204eb1eb40d419fdd9">  230</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#ab07ddd22ac93d5204eb1eb40d419fdd9">PARITY_EN</a> : 1;</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a98d889f385d8345b06426cc32a505b8a">  231</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#a98d889f385d8345b06426cc32a505b8a">EVEN_PARITY</a> : 1;</div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aa3f45d8a6aad7a70af07cd07b967cc9a">  232</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#aa3f45d8a6aad7a70af07cd07b967cc9a">SET_PARITY</a> : 1;</div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ac3357c425911be2f9872eb2e9f21b6f4">  233</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#ac3357c425911be2f9872eb2e9f21b6f4">SET_BREAK</a> : 1;</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#acd42dc3bb2dfefa64c3581cbd3ed68ac">  234</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#acd42dc3bb2dfefa64c3581cbd3ed68ac">DIVISOR_LATCH_EN</a> : 1;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;)</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;DEF_SC16IS741A_REG(MCR,</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    ro8 : 1;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    rw8 nRTS : 1;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    rw8 TCR_TLR_EN : 1;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    ro8 : 1;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    rw8 LOOPBACK_EN : 1;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    rw8 XON_ANY : 1;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    rw8 IRDA_MODE_EN : 1;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    rw8 CLOCK_DIVISOR : 1;</div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a9d2859ebef1bd29e9062e90cdd4e672e">  241</a></span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(MCR,</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> : 1;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> nRTS : 1;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> TCR_TLR_EN : 1;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> : 1;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> LOOPBACK_EN : 1;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> XON_ANY : 1;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> IRDA_MODE_EN : 1;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> CLOCK_DIVISOR : 1;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;)</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;DEF_SC16IS741A_REG(LSR,</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    ro8 DATA_IN_RECVR : 1;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    ro8 OVERRUN_ERROR : 1;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    ro8 PARITY_ERROR : 1;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    ro8 FRAMING_ERROR : 1;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    ro8 BREAK_INT : 1;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    ro8 THR_EMPTY : 1;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    ro8 THR_TSR_EMPTY : 1;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    ro8 FIFO_DATA_ERROR : 1;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(LSR,</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aba07d3d6fcfeca2a544fa5bf9ed7c00e">  257</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> <a class="code" href="nxp__sc16is741a_8h.html#aba07d3d6fcfeca2a544fa5bf9ed7c00e">DATA_IN_RECVR</a> : 1;</div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a7a34904e6e213bd6af34f75f73995b6f">  258</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> <a class="code" href="nxp__sc16is741a_8h.html#a7a34904e6e213bd6af34f75f73995b6f">OVERRUN_ERROR</a> : 1;</div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#acfe561e11c6a2d57da09b2af1cb70218">  259</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> <a class="code" href="nxp__sc16is741a_8h.html#acfe561e11c6a2d57da09b2af1cb70218">PARITY_ERROR</a> : 1;</div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aa3cc4573fc5489b2c17a3dbe9dde83c1">  260</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> <a class="code" href="nxp__sc16is741a_8h.html#aa3cc4573fc5489b2c17a3dbe9dde83c1">FRAMING_ERROR</a> : 1;</div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aa21d28fcdc28b8ca77b95a0b19a9da82">  261</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> <a class="code" href="nxp__sc16is741a_8h.html#aa21d28fcdc28b8ca77b95a0b19a9da82">BREAK_INT</a> : 1;</div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aefed6f0a47aa65dfd5e70b1c19b23b3c">  262</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> <a class="code" href="nxp__sc16is741a_8h.html#aefed6f0a47aa65dfd5e70b1c19b23b3c">THR_EMPTY</a> : 1;</div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#af46b41b90234c1cce61c053334be51ad">  263</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> <a class="code" href="nxp__sc16is741a_8h.html#af46b41b90234c1cce61c053334be51ad">THR_TSR_EMPTY</a> : 1;</div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a5a5f464a718187d832f13b9b7fecdec8">  264</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> <a class="code" href="nxp__sc16is741a_8h.html#a5a5f464a718187d832f13b9b7fecdec8">FIFO_DATA_ERROR</a> : 1;</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;)</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;#define NXP_LSR_DATA_IN_RECVR 0x01U</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;#define NXP_LSR_THR_EMPTY 0x02U</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;#define NXP_LSR_FIFO_DATA_ERROR 0x80U</div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a3aed578e58153a3d43f9d55cef4da265">  267</a></span>&#160;#define <a class="code" href="nxp__sc16is741a_8h.html#a3aed578e58153a3d43f9d55cef4da265">NXP_LSR_DATA_IN_RECVR</a> 0x01U</div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a53028eb667547e521afe802dd8edabad">  268</a></span>&#160;#define <a class="code" href="nxp__sc16is741a_8h.html#a53028eb667547e521afe802dd8edabad">NXP_LSR_THR_EMPTY</a> 0x02U</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ae7e77fd239c5d9dfba4bcdfecd83f4b8">  269</a></span>&#160;#define <a class="code" href="nxp__sc16is741a_8h.html#ae7e77fd239c5d9dfba4bcdfecd83f4b8">NXP_LSR_FIFO_DATA_ERROR</a> 0x80U</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;DEF_SC16IS741A_REG(MSR,</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    ro8 DELTA_CTS : 1;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    ro8 : 3;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    ro8 CTS : 1;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    ro8 : 3;</div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a84f5a9d0716926a99c9ba8cfcba4f3a8">  274</a></span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(MSR,</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> DELTA_CTS : 1;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> : 3;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> CTS : 1;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> : 3;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;)</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;DEF_SC16IS741A_REG(SPR,</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    rw8 DATA;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(SPR,</div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ab6ea38dfcb975b2e6cc6cb8e6c794d6f">  286</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#ab6ea38dfcb975b2e6cc6cb8e6c794d6f">DATA</a>;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;)</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;DEF_SC16IS741A_REG(UARTRST,</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    ro8 : 3;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    rw8 UART_SWRST : 1;</div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a847be6833d51b2b6b902b94d96f60bc3">  293</a></span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(UARTRST,</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> : 3;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> UART_SWRST : 1;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;)</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;DEF_SC16IS741A_REG(EFCR,</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    rw8 MODE_9BIT_EN : 1;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    rw8 RECVR_DISABLE : 1;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    rw8 TRANSMITTER_DISABLE : 1;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    ro8 : 1;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    rw8 AUTO_RS_485_RTS_DIR_CTRL : 1;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    rw8 AUTO_RS_485_RTS_OUTPUT_INV : 1;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    ro8 : 1;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    rw8 IRDA_MODE : 1;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(EFCR,</div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aa3b9420b844ce54427f2996016b0cf80">  303</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#aa3b9420b844ce54427f2996016b0cf80">MODE_9BIT_EN</a> : 1;</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a622cb8926103ce9c65ee37731846a195">  304</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#a622cb8926103ce9c65ee37731846a195">RECVR_DISABLE</a> : 1;</div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ae5fe41645a8cbacafa4532199016c595">  305</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#ae5fe41645a8cbacafa4532199016c595">TRANSMITTER_DISABLE</a> : 1;</div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#adcead66ebfd1da9652d08ab70bc3ceef">  306</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> : 1;</div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ad991a140d501b49103ee31f756575c88">  307</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#ad991a140d501b49103ee31f756575c88">AUTO_RS_485_RTS_DIR_CTRL</a> : 1;</div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a7151b137cfac6f2546678aab42977522">  308</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#a7151b137cfac6f2546678aab42977522">AUTO_RS_485_RTS_OUTPUT_INV</a> : 1;</div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a737576320767176b6bf5fdf6e48b090d">  309</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a> : 1;</div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ac6a77d9c064ce9fb069ad3f473f963aa">  310</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#ac6a77d9c064ce9fb069ad3f473f963aa">IRDA_MODE</a> : 1;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;)</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;DEF_SC16IS741A_REG(TLR,</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    rw8 TX_TRIGGER_LVL : 4;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    rw8 RX_TRIGGER_LVL : 4;</div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a937a8e1586914d9c0e8712422d5e2e84">  317</a></span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(TLR,</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#aaa1751f5ef0832f47f1cf68add30f843">TX_TRIGGER_LVL</a> : 4;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#aa3d049dd67e3454650020072880b16d2">RX_TRIGGER_LVL</a> : 4;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;)</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;DEF_SC16IS741A_REG(EFR, </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    rw8 SWFLOW_CTRL : 4;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    rw8 ENHANCED_FNS_EN : 1;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    rw8 SPECIAL_CHAR_DETECT : 1;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    rw8 AUTO_nRTS : 1;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    rw8 AUTO_nCTS : 1;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<a class="code" href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a>(EFR, </div>
+<div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aeb79d1fca83b69a707efc8c3878e3897">  327</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#aeb79d1fca83b69a707efc8c3878e3897">SWFLOW_CTRL</a> : 4;</div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aa33c1d8532a9e06bf5b24007f1bc5e56">  328</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#aa33c1d8532a9e06bf5b24007f1bc5e56">ENHANCED_FNS_EN</a> : 1;</div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#aebaa51f996b1dc77d37ee5fb66b5d731">  329</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#aebaa51f996b1dc77d37ee5fb66b5d731">SPECIAL_CHAR_DETECT</a> : 1;</div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a62a9c2483c1803bca6812eb185104c7c">  330</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#a62a9c2483c1803bca6812eb185104c7c">AUTO_nRTS</a> : 1;</div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#ad0991f208682c610540dbc7b443f2306">  331</a></span>&#160;    <a class="code" href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a> <a class="code" href="nxp__sc16is741a_8h.html#ad0991f208682c610540dbc7b443f2306">AUTO_nCTS</a> : 1;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;)</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3c">  334</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;{</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  resetFifo_action_Rx = 0x02U,</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  resetFifo_action_Tx = 0x04U,</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  resetFifo_action_RxTx = 0x06U</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;} resetFifo_action_t;</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3caf1bf788f187e21e44becee8002f74ecf">  336</a></span>&#160;  <a class="code" href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3caf1bf788f187e21e44becee8002f74ecf">resetFifo_action_Rx</a> = 0x02U,</div>
+<div class="line"><a name="l00337"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3ca8ba845cf1514b9d53060463d5cd07631">  337</a></span>&#160;  <a class="code" href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3ca8ba845cf1514b9d53060463d5cd07631">resetFifo_action_Tx</a> = 0x04U,</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <a class="code" href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3caa9411a8a7ee3f02e017302c2640e6b80">resetFifo_action_RxTx</a> = 0x06U</div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3caa9411a8a7ee3f02e017302c2640e6b80">  339</a></span>&#160;} <a class="code" href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3c">resetFifo_action_t</a>;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">#pragma endregion</span></div>
@@ -365,19 +370,19 @@ $(function() {
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">// sc16is741a_device_t *sc16is741a_create(uint8_t chipSelLine, uint32_t spiClockSpeed, uint32_t uartBaudrate);</span></div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">// void sc16is741a_uninit();</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="keywordtype">void</span> sc16is741a_start();</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keywordtype">void</span> sc16is741a_enableIrqMode();</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nxp__sc16is741a_8h.html#ab2d61af08e17da328a46f5b393d93261">sc16is741a_start</a>();</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nxp__sc16is741a_8h.html#ae4837de522a032c36b4288a4a0d2933d">sc16is741a_enableIrqMode</a>();</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="keywordtype">void</span> sc16is741a_write(<span class="keyword">const</span> <span class="keywordtype">void</span> * src, uint8_t src_len);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keywordtype">void</span> sc16is741a_read(<span class="keywordtype">void</span>* dest, uint8_t dest_len);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nxp__sc16is741a_8h.html#aa291a938807dc1c2e2cd29992485900e">sc16is741a_write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> * src, uint8_t src_len);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nxp__sc16is741a_8h.html#afca17cb0ad758e2a4c251495abb3aa2a">sc16is741a_read</a>(<span class="keywordtype">void</span>* dest, uint8_t dest_len);</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="keywordtype">void</span> sc16is741a_writeReg(uint8_t reg_addr, uint8_t reg_data);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;uint8_t sc16is741a_readReg(uint8_t reg_addr);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nxp__sc16is741a_8h.html#a2aad0bdf1532bb94f82db70cd77c32e4">sc16is741a_writeReg</a>(uint8_t reg_addr, uint8_t reg_data);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;uint8_t <a class="code" href="nxp__sc16is741a_8h.html#a7b7c49cde4b06a3f288024abbbe7489b">sc16is741a_readReg</a>(uint8_t reg_addr);</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="keywordtype">void</span> sc16is741a_resetFifo(resetFifo_action_t resetAction);</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keywordtype">void</span> sc16is741a_flushRxFifo();</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nxp__sc16is741a_8h.html#aa542d0420b5e03c371a80bd5017f800b">sc16is741a_resetFifo</a>(<a class="code" href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3c">resetFifo_action_t</a> resetAction);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nxp__sc16is741a_8h.html#ab9db945c1fa2df0414a09f42766477ef">sc16is741a_flushRxFifo</a>();</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="keywordtype">void</span> displayFifoStatus(<span class="keyword">const</span> <span class="keywordtype">char</span> *dispMsg);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nxp__sc16is741a_8h.html#aefbd4d0e153fb8b46f61afbd08f1bff2">displayFifoStatus</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *dispMsg);</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -387,8 +392,109 @@ $(function() {
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* !__NXP_SC16IS741A_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5aaa29ed1eeb7c64efda04ff79a918cd01"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5aaa29ed1eeb7c64efda04ff79a918cd01">SC16IS741A_DLH_ADDR</a></div><div class="ttdeci">@ SC16IS741A_DLH_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:136</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a39c1fed3e8f74ce0a7f9f36d61b4b4b8"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a39c1fed3e8f74ce0a7f9f36d61b4b4b8">TX_FIFO_RST</a></div><div class="ttdeci">rw8 TX_FIFO_RST</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:174</div></div>
+<div class="ttc" id="aplatform__spi_8h_html"><div class="ttname"><a href="platform__spi_8h.html">platform_spi.h</a></div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a397ba753cc449c355b03fccab29b9beb"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a397ba753cc449c355b03fccab29b9beb">SC16IS741A_XOFF2_ADDR</a></div><div class="ttdeci">@ SC16IS741A_XOFF2_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:141</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a8ead74b40710969b1449284ab45105eea05e372e92787251ae623dcd195dfc126"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea05e372e92787251ae623dcd195dfc126">IRQ_1_RCVR_STATUS_ERROR</a></div><div class="ttdeci">@ IRQ_1_RCVR_STATUS_ERROR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:204</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aa542d0420b5e03c371a80bd5017f800b"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aa542d0420b5e03c371a80bd5017f800b">sc16is741a_resetFifo</a></div><div class="ttdeci">void sc16is741a_resetFifo(resetFifo_action_t resetAction)</div><div class="ttdoc">Perform reset on bridge FIFO.</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.c:190</div></div>
 <div class="ttc" id="aunion____sc16is741a__reg__payload_____html"><div class="ttname"><a href="union____sc16is741a__reg__payload____.html">__sc16is741a_reg_payload__</a></div><div class="ttdoc">SC16IS741A SPI bytes containing address and register value.</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:86</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5ae8329b5b92b42e1b187a1176b326d02b"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ae8329b5b92b42e1b187a1176b326d02b">SC16IS741A_IER_ADDR</a></div><div class="ttdeci">@ SC16IS741A_IER_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:121</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4d5bc53c395930accc1f62e6349037b2ac39ae09eea7f0d75a7a8076e480e8083"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2ac39ae09eea7f0d75a7a8076e480e8083">TX_LVL_8SPACES</a></div><div class="ttdeci">@ TX_LVL_8SPACES</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:183</div></div>
 <div class="ttc" id="aunion____sc16is741a__reg__addr__byte_____html"><div class="ttname"><a href="union____sc16is741a__reg__addr__byte____.html">__sc16is741a_reg_addr_byte__</a></div><div class="ttdoc">SC16IS741A First SPI byte for register addressing.</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:68</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5">sc16is741a_reg_addr</a></div><div class="ttdeci">sc16is741a_reg_addr</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:119</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a1494c8f6ced89e25058f4028a9ade39c"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a1494c8f6ced89e25058f4028a9ade39c">SC16IS741A_TXLVL_ADDR</a></div><div class="ttdeci">@ SC16IS741A_TXLVL_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:131</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a3aed578e58153a3d43f9d55cef4da265"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a3aed578e58153a3d43f9d55cef4da265">NXP_LSR_DATA_IN_RECVR</a></div><div class="ttdeci">#define NXP_LSR_DATA_IN_RECVR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:267</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a8ead74b40710969b1449284ab45105eea310db71e960f668b2377556a57eea86b"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea310db71e960f668b2377556a57eea86b">IRQ_6_XOFF</a></div><div class="ttdeci">@ IRQ_6_XOFF</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:209</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a8ead74b40710969b1449284ab45105eea9b07d7963f1025113b7587de37cae7e5"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea9b07d7963f1025113b7587de37cae7e5">IRQ_2_RCVR_TIMEOUT</a></div><div class="ttdeci">@ IRQ_2_RCVR_TIMEOUT</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:205</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a8ead74b40710969b1449284ab45105ee"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105ee">sc16is741a_irq_priority_val</a></div><div class="ttdeci">sc16is741a_irq_priority_val</div><div class="ttdoc">Decode for Interrupt indicator register priority bits.</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:203</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a4e06d545440ce8fd2ba367dba1e8db11"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a4e06d545440ce8fd2ba367dba1e8db11">SC16IS741A_XON2_ADDR</a></div><div class="ttdeci">@ SC16IS741A_XON2_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:139</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a67bbaf8564272045d2b0d6b74ad1e9e3"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a67bbaf8564272045d2b0d6b74ad1e9e3">SC16IS741A_MCR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_MCR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:125</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4246003429d5e164a0103c72f9056cfb"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4246003429d5e164a0103c72f9056cfb">DEF_SC16IS741A_REG</a></div><div class="ttdeci">#define DEF_SC16IS741A_REG(REG_NAME, REG_BITS)</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:108</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a9dbf2d1da7f1ddff7991ea443fc75ff6"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a9dbf2d1da7f1ddff7991ea443fc75ff6">SC16IS741A_RXLVL_ADDR</a></div><div class="ttdeci">@ SC16IS741A_RXLVL_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:132</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aaa1751f5ef0832f47f1cf68add30f843"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aaa1751f5ef0832f47f1cf68add30f843">TX_TRIGGER_LVL</a></div><div class="ttdeci">rw8 TX_TRIGGER_LVL</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:176</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a0afe2c580cccb666fc66686c3dec1182ab0ba3a5691f1ad1f2a476db77f01e79c"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182ab0ba3a5691f1ad1f2a476db77f01e79c">RX_LVL_60CHARS</a></div><div class="ttdeci">@ RX_LVL_60CHARS</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:195</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a7b7c49cde4b06a3f288024abbbe7489b"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a7b7c49cde4b06a3f288024abbbe7489b">sc16is741a_readReg</a></div><div class="ttdeci">uint8_t sc16is741a_readReg(uint8_t reg_addr)</div><div class="ttdoc">Read from a SC16IS741A bridge register.</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.c:115</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a7151b137cfac6f2546678aab42977522"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a7151b137cfac6f2546678aab42977522">AUTO_RS_485_RTS_OUTPUT_INV</a></div><div class="ttdeci">rw8 AUTO_RS_485_RTS_OUTPUT_INV</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:308</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a9d7d71f02c224486d3794fbb833a0b3caf1bf788f187e21e44becee8002f74ecf"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3caf1bf788f187e21e44becee8002f74ecf">resetFifo_action_Rx</a></div><div class="ttdeci">@ resetFifo_action_Rx</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:336</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_acfe561e11c6a2d57da09b2af1cb70218"><div class="ttname"><a href="nxp__sc16is741a_8h.html#acfe561e11c6a2d57da09b2af1cb70218">PARITY_ERROR</a></div><div class="ttdeci">ro8 PARITY_ERROR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:259</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5ab1bd9e2a9f78083882786b2aa96939de"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ab1bd9e2a9f78083882786b2aa96939de">SC16IS741A_EFR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_EFR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:137</div></div>
+<div class="ttc" id="aunion____sc16is741a__reg__addr__byte_____html_a0a40c66f4fe9408f321c71b965574b41"><div class="ttname"><a href="union____sc16is741a__reg__addr__byte____.html#a0a40c66f4fe9408f321c71b965574b41">__sc16is741a_reg_addr_byte__::CH0</a></div><div class="ttdeci">rw8 CH0</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:72</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ae7e77fd239c5d9dfba4bcdfecd83f4b8"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ae7e77fd239c5d9dfba4bcdfecd83f4b8">NXP_LSR_FIFO_DATA_ERROR</a></div><div class="ttdeci">#define NXP_LSR_FIFO_DATA_ERROR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:269</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a8ead74b40710969b1449284ab45105eea151d5245b9ee151b6b03930e2c16c6cc"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea151d5245b9ee151b6b03930e2c16c6cc">IRQ_2_RCVR_RHR</a></div><div class="ttdeci">@ IRQ_2_RCVR_RHR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:206</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aa21d28fcdc28b8ca77b95a0b19a9da82"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aa21d28fcdc28b8ca77b95a0b19a9da82">BREAK_INT</a></div><div class="ttdeci">ro8 BREAK_INT</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:261</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a0afe2c580cccb666fc66686c3dec1182afb3ca57dec46f622b2d44faa325f90f8"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182afb3ca57dec46f622b2d44faa325f90f8">RX_LVL_16CHARS</a></div><div class="ttdeci">@ RX_LVL_16CHARS</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:193</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a452cc36e342450385463f913aef34762"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a452cc36e342450385463f913aef34762">SC16IS741A_XON1_ADDR</a></div><div class="ttdeci">@ SC16IS741A_XON1_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:138</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aefed6f0a47aa65dfd5e70b1c19b23b3c"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aefed6f0a47aa65dfd5e70b1c19b23b3c">THR_EMPTY</a></div><div class="ttdeci">ro8 THR_EMPTY</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:262</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a3b4d413680cadacbfcad02fba2efb402"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a3b4d413680cadacbfcad02fba2efb402">SC16IS741A_FCR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_FCR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:122</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aa3b9420b844ce54427f2996016b0cf80"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aa3b9420b844ce54427f2996016b0cf80">MODE_9BIT_EN</a></div><div class="ttdeci">rw8 MODE_9BIT_EN</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:303</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a7d53bd822207abe46d43e6cb096d430f"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a7d53bd822207abe46d43e6cb096d430f">SC16IS741A_UARTRST_ADDR</a></div><div class="ttdeci">@ SC16IS741A_UARTRST_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:133</div></div>
+<div class="ttc" id="aunion____sc16is741a__reg__payload_____html_a34ae98613e9c7dee89171220930c243f"><div class="ttname"><a href="union____sc16is741a__reg__payload____.html#a34ae98613e9c7dee89171220930c243f">__sc16is741a_reg_payload__::reg_addr</a></div><div class="ttdeci">union __sc16is741a_reg_addr_byte__ reg_addr</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:89</div></div>
+<div class="ttc" id="aunion____sc16is741a__reg__addr__byte_____html_aa4a8b11c1a38ee1952761b02f6b7283e"><div class="ttname"><a href="union____sc16is741a__reg__addr__byte____.html#aa4a8b11c1a38ee1952761b02f6b7283e">__sc16is741a_reg_addr_byte__::A</a></div><div class="ttdeci">rw8 A</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:74</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a0afe2c580cccb666fc66686c3dec1182a234f2e2c8a115546d0e51c6da47e0e94"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182a234f2e2c8a115546d0e51c6da47e0e94">RX_LVL_56CHARS</a></div><div class="ttdeci">@ RX_LVL_56CHARS</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:194</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ab9db945c1fa2df0414a09f42766477ef"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ab9db945c1fa2df0414a09f42766477ef">sc16is741a_flushRxFifo</a></div><div class="ttdeci">void sc16is741a_flushRxFifo()</div><div class="ttdoc">Flush contents of RX FIFO.</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.c:201</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aba07d3d6fcfeca2a544fa5bf9ed7c00e"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aba07d3d6fcfeca2a544fa5bf9ed7c00e">DATA_IN_RECVR</a></div><div class="ttdeci">ro8 DATA_IN_RECVR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:257</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a40a9cc748ccd0ab1645fb523ec2d2eab"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a40a9cc748ccd0ab1645fb523ec2d2eab">SC16IS741A_MSR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_MSR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:127</div></div>
+<div class="ttc" id="aunion____sc16is741a__reg__addr__byte_____html_a779eebec483facae3559285e7bc840de"><div class="ttname"><a href="union____sc16is741a__reg__addr__byte____.html#a779eebec483facae3559285e7bc840de">__sc16is741a_reg_addr_byte__::reg_address</a></div><div class="ttdeci">uint8_t reg_address</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:77</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_acd42dc3bb2dfefa64c3581cbd3ed68ac"><div class="ttname"><a href="nxp__sc16is741a_8h.html#acd42dc3bb2dfefa64c3581cbd3ed68ac">DIVISOR_LATCH_EN</a></div><div class="ttdeci">rw8 DIVISOR_LATCH_EN</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:234</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a9e668c0b967b0c8132acb2ed9a2e001c"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a9e668c0b967b0c8132acb2ed9a2e001c">SC16IS741A_DLL_ADDR</a></div><div class="ttdeci">@ SC16IS741A_DLL_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:135</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ac6a77d9c064ce9fb069ad3f473f963aa"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ac6a77d9c064ce9fb069ad3f473f963aa">IRDA_MODE</a></div><div class="ttdeci">rw8 IRDA_MODE</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:310</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a34f62fe9215974cfaa480e2633e03be6"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a34f62fe9215974cfaa480e2633e03be6">SC16IS741A_EFCR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_EFCR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:134</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4d5bc53c395930accc1f62e6349037b2ad52fe23530d85bb8b724f7ae2adeb5ee"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2ad52fe23530d85bb8b724f7ae2adeb5ee">TX_LVL_32SPACES</a></div><div class="ttdeci">@ TX_LVL_32SPACES</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:185</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ac3357c425911be2f9872eb2e9f21b6f4"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ac3357c425911be2f9872eb2e9f21b6f4">SET_BREAK</a></div><div class="ttdeci">rw8 SET_BREAK</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:233</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aa33c1d8532a9e06bf5b24007f1bc5e56"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aa33c1d8532a9e06bf5b24007f1bc5e56">ENHANCED_FNS_EN</a></div><div class="ttdeci">rw8 ENHANCED_FNS_EN</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:328</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a5a5f464a718187d832f13b9b7fecdec8"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a5a5f464a718187d832f13b9b7fecdec8">FIFO_DATA_ERROR</a></div><div class="ttdeci">ro8 FIFO_DATA_ERROR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:264</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aa3cc4573fc5489b2c17a3dbe9dde83c1"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aa3cc4573fc5489b2c17a3dbe9dde83c1">FRAMING_ERROR</a></div><div class="ttdeci">ro8 FRAMING_ERROR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:260</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ab6ea38dfcb975b2e6cc6cb8e6c794d6f"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ab6ea38dfcb975b2e6cc6cb8e6c794d6f">DATA</a></div><div class="ttdeci">rw8 DATA</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:286</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a0afe2c580cccb666fc66686c3dec1182"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182">sc16is741a_fcr_rx_trigger_val</a></div><div class="ttdeci">sc16is741a_fcr_rx_trigger_val</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:191</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a8ead74b40710969b1449284ab45105eea1598a2cda85314daf45a066342021ca3"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea1598a2cda85314daf45a066342021ca3">IRQ_7_CTSRTS</a></div><div class="ttdeci">@ IRQ_7_CTSRTS</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:210</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ad0991f208682c610540dbc7b443f2306"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ad0991f208682c610540dbc7b443f2306">AUTO_nCTS</a></div><div class="ttdeci">rw8 AUTO_nCTS</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:331</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ab2d61af08e17da328a46f5b393d93261"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ab2d61af08e17da328a46f5b393d93261">sc16is741a_start</a></div><div class="ttdeci">void sc16is741a_start()</div><div class="ttdoc">Configure NXP bridge HW in basic mode (no IRQ, no level triggering).</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.c:45</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5ae21512f939aff618be7742c3fd9f405b"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ae21512f939aff618be7742c3fd9f405b">SC16IS741A_LSR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_LSR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:126</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4c97a26393ae88ade1599bb906d2c7f3"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4c97a26393ae88ade1599bb906d2c7f3">FIFO_EN</a></div><div class="ttdeci">rw8 FIFO_EN</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:172</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aefbd4d0e153fb8b46f61afbd08f1bff2"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aefbd4d0e153fb8b46f61afbd08f1bff2">displayFifoStatus</a></div><div class="ttdeci">void displayFifoStatus(const char *dispMsg)</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.c:216</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_afca17cb0ad758e2a4c251495abb3aa2a"><div class="ttname"><a href="nxp__sc16is741a_8h.html#afca17cb0ad758e2a4c251495abb3aa2a">sc16is741a_read</a></div><div class="ttdeci">void sc16is741a_read(void *dest, uint8_t dest_len)</div><div class="ttdoc">Reads through the SC16IS741A bridge (its RX FIFO).</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.c:155</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ae5fe41645a8cbacafa4532199016c595"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ae5fe41645a8cbacafa4532199016c595">TRANSMITTER_DISABLE</a></div><div class="ttdeci">rw8 TRANSMITTER_DISABLE</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:305</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a0afe2c580cccb666fc66686c3dec1182aed6ccb3e032a306f36ac267e169e63a9"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a0afe2c580cccb666fc66686c3dec1182aed6ccb3e032a306f36ac267e169e63a9">RX_LVL_8CHARS</a></div><div class="ttdeci">@ RX_LVL_8CHARS</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:192</div></div>
+<div class="ttc" id="aunion____sc16is741a__reg__payload_____html_a35b74d69bd6f987cf3027c7d6ecb1aab"><div class="ttname"><a href="union____sc16is741a__reg__payload____.html#a35b74d69bd6f987cf3027c7d6ecb1aab">__sc16is741a_reg_payload__::reg_data</a></div><div class="ttdeci">uint8_t reg_data</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:90</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4d5bc53c395930accc1f62e6349037b2"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2">sc16is741a_fcr_tx_trigger_val</a></div><div class="ttdeci">sc16is741a_fcr_tx_trigger_val</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:182</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ae4837de522a032c36b4288a4a0d2933d"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ae4837de522a032c36b4288a4a0d2933d">sc16is741a_enableIrqMode</a></div><div class="ttdeci">void sc16is741a_enableIrqMode()</div><div class="ttdoc">Enable IRQ servicing for communications between SC16IS741 and BG96.</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.c:81</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a8ead74b40710969b1449284ab45105eea715139237399718aef577c132b172fa3"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eea715139237399718aef577c132b172fa3">IRQ_3_XMIT_THR</a></div><div class="ttdeci">@ IRQ_3_XMIT_THR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:207</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ad991a140d501b49103ee31f756575c88"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ad991a140d501b49103ee31f756575c88">AUTO_RS_485_RTS_DIR_CTRL</a></div><div class="ttdeci">rw8 AUTO_RS_485_RTS_DIR_CTRL</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:307</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aa3f45d8a6aad7a70af07cd07b967cc9a"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aa3f45d8a6aad7a70af07cd07b967cc9a">SET_PARITY</a></div><div class="ttdeci">rw8 SET_PARITY</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:232</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a2d85ebc0a8cb851cbfd125d4d7613833"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833">ro8</a></div><div class="ttdeci">const uint8_t ro8</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:57</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a62a9c2483c1803bca6812eb185104c7c"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a62a9c2483c1803bca6812eb185104c7c">AUTO_nRTS</a></div><div class="ttdeci">rw8 AUTO_nRTS</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:330</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a8ead74b40710969b1449284ab45105eeaa4d48c95243053a41429d1f5e9ff22f3"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a8ead74b40710969b1449284ab45105eeaa4d48c95243053a41429d1f5e9ff22f3">IRQ_4_MODEM</a></div><div class="ttdeci">@ IRQ_4_MODEM</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:208</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4d5bc53c395930accc1f62e6349037b2a3cb2d52f966d0ef47cac47a1865c82ba"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2a3cb2d52f966d0ef47cac47a1865c82ba">TX_LVL_56SPACES</a></div><div class="ttdeci">@ TX_LVL_56SPACES</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:186</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a7a34904e6e213bd6af34f75f73995b6f"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a7a34904e6e213bd6af34f75f73995b6f">OVERRUN_ERROR</a></div><div class="ttdeci">ro8 OVERRUN_ERROR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:258</div></div>
+<div class="ttc" id="aunion____sc16is741a__reg__payload_____html_a0915f67ea14a584b4dd2924c741f5994"><div class="ttname"><a href="union____sc16is741a__reg__payload____.html#a0915f67ea14a584b4dd2924c741f5994">__sc16is741a_reg_payload__::reg_payload</a></div><div class="ttdeci">uint16_t reg_payload</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:92</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a98d889f385d8345b06426cc32a505b8a"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a98d889f385d8345b06426cc32a505b8a">EVEN_PARITY</a></div><div class="ttdeci">rw8 EVEN_PARITY</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:231</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a9d7d71f02c224486d3794fbb833a0b3c"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3c">resetFifo_action_t</a></div><div class="ttdeci">resetFifo_action_t</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:335</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4d5bc53c395930accc1f62e6349037b2a658102cbf37e4adedf36b5ba0b655297"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4d5bc53c395930accc1f62e6349037b2a658102cbf37e4adedf36b5ba0b655297">TX_LVL_16SPACES</a></div><div class="ttdeci">@ TX_LVL_16SPACES</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:184</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_abcb9d86a70811f9ea595a8ce176c2a07"><div class="ttname"><a href="nxp__sc16is741a_8h.html#abcb9d86a70811f9ea595a8ce176c2a07">WORD_LEN</a></div><div class="ttdeci">rw8 WORD_LEN</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:228</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a2aad0bdf1532bb94f82db70cd77c32e4"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a2aad0bdf1532bb94f82db70cd77c32e4">sc16is741a_writeReg</a></div><div class="ttdeci">void sc16is741a_writeReg(uint8_t reg_addr, uint8_t reg_data)</div><div class="ttdoc">Write to a SC16IS741A bridge register.</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.c:134</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_af46b41b90234c1cce61c053334be51ad"><div class="ttname"><a href="nxp__sc16is741a_8h.html#af46b41b90234c1cce61c053334be51ad">THR_TSR_EMPTY</a></div><div class="ttdeci">ro8 THR_TSR_EMPTY</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:263</div></div>
+<div class="ttc" id="aunion____sc16is741a__reg__addr__byte_____html_ae8ec0a10f3faf3057547ac69217c1cd1"><div class="ttname"><a href="union____sc16is741a__reg__addr__byte____.html#ae8ec0a10f3faf3057547ac69217c1cd1">__sc16is741a_reg_addr_byte__::RnW</a></div><div class="ttdeci">rw8 RnW</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:75</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5ad0be9b4ad0835b7fc37bf0b8de66acba"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ad0be9b4ad0835b7fc37bf0b8de66acba">SC16IS741A_LCR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_LCR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:124</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_abcf8205c9a5a0e895c25312d99e5c9a5"><div class="ttname"><a href="nxp__sc16is741a_8h.html#abcf8205c9a5a0e895c25312d99e5c9a5">STOP</a></div><div class="ttdeci">rw8 STOP</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:229</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a72fd6c09e78366c039974e95aae43fee"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a72fd6c09e78366c039974e95aae43fee">SC16IS741A_TLR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_TLR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:130</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5ae4ae7c736e0c5209375a876df6e06bbf"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5ae4ae7c736e0c5209375a876df6e06bbf">SC16IS741A_TCR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_TCR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:129</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a8703459cfafe31e7ee2e8ce9f90999fb"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a8703459cfafe31e7ee2e8ce9f90999fb">SC16IS741A_SPR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_SPR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:128</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aeb79d1fca83b69a707efc8c3878e3897"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aeb79d1fca83b69a707efc8c3878e3897">SWFLOW_CTRL</a></div><div class="ttdeci">rw8 SWFLOW_CTRL</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:327</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a5fcb183a6939b63df422b6efc6563aeb"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a5fcb183a6939b63df422b6efc6563aeb">SC16IS741A_IIR_ADDR</a></div><div class="ttdeci">@ SC16IS741A_IIR_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:123</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a18f9f28582db101ada5f79fd0c3781a4"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a18f9f28582db101ada5f79fd0c3781a4">SC16IS741A_XOFF1_ADDR</a></div><div class="ttdeci">@ SC16IS741A_XOFF1_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:140</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a3a3190f88e82e5b73c014a753594afc9"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a3a3190f88e82e5b73c014a753594afc9">rw8</a></div><div class="ttdeci">uint8_t rw8</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:58</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aa3d049dd67e3454650020072880b16d2"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aa3d049dd67e3454650020072880b16d2">RX_TRIGGER_LVL</a></div><div class="ttdeci">rw8 RX_TRIGGER_LVL</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:177</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a4776e503a26e75f55bdba7f98f9531f5a9cfb007c26d77506850e4494e1c8be2b"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a4776e503a26e75f55bdba7f98f9531f5a9cfb007c26d77506850e4494e1c8be2b">SC16IS741A_FIFO_ADDR</a></div><div class="ttdeci">@ SC16IS741A_FIFO_ADDR</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:120</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a53028eb667547e521afe802dd8edabad"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a53028eb667547e521afe802dd8edabad">NXP_LSR_THR_EMPTY</a></div><div class="ttdeci">#define NXP_LSR_THR_EMPTY</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:268</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ab07ddd22ac93d5204eb1eb40d419fdd9"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ab07ddd22ac93d5204eb1eb40d419fdd9">PARITY_EN</a></div><div class="ttdeci">rw8 PARITY_EN</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:230</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a9d7d71f02c224486d3794fbb833a0b3caa9411a8a7ee3f02e017302c2640e6b80"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3caa9411a8a7ee3f02e017302c2640e6b80">resetFifo_action_RxTx</a></div><div class="ttdeci">@ resetFifo_action_RxTx</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:338</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aebaa51f996b1dc77d37ee5fb66b5d731"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aebaa51f996b1dc77d37ee5fb66b5d731">SPECIAL_CHAR_DETECT</a></div><div class="ttdeci">rw8 SPECIAL_CHAR_DETECT</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:329</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_ad9ed8898e7d20f5934d1a4a0ea3d9655"><div class="ttname"><a href="nxp__sc16is741a_8h.html#ad9ed8898e7d20f5934d1a4a0ea3d9655">RX_FIFO_RST</a></div><div class="ttdeci">rw8 RX_FIFO_RST</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:173</div></div>
+<div class="ttc" id="aunion____sc16is741a__reg__addr__byte_____html_a8cc413c917f33cb91ba3256690a0825b"><div class="ttname"><a href="union____sc16is741a__reg__addr__byte____.html#a8cc413c917f33cb91ba3256690a0825b">__sc16is741a_reg_addr_byte__::CH1</a></div><div class="ttdeci">rw8 CH1</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:73</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_aa291a938807dc1c2e2cd29992485900e"><div class="ttname"><a href="nxp__sc16is741a_8h.html#aa291a938807dc1c2e2cd29992485900e">sc16is741a_write</a></div><div class="ttdeci">void sc16is741a_write(const void *src, uint8_t src_len)</div><div class="ttdoc">Write through the SC16IS741A bridge.</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.c:174</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a622cb8926103ce9c65ee37731846a195"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a622cb8926103ce9c65ee37731846a195">RECVR_DISABLE</a></div><div class="ttdeci">rw8 RECVR_DISABLE</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:304</div></div>
+<div class="ttc" id="anxp__sc16is741a_8h_html_a9d7d71f02c224486d3794fbb833a0b3ca8ba845cf1514b9d53060463d5cd07631"><div class="ttname"><a href="nxp__sc16is741a_8h.html#a9d7d71f02c224486d3794fbb833a0b3ca8ba845cf1514b9d53060463d5cd07631">resetFifo_action_Tx</a></div><div class="ttdeci">@ resetFifo_action_Tx</div><div class="ttdef"><b>Definition:</b> nxp_sc16is741a.h:337</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

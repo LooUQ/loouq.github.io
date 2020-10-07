@@ -1,0 +1,161 @@
+\hypertarget{ltem1c_8c}{}\doxysection{src/ltem1c.c File Reference}
+\label{ltem1c_8c}\index{src/ltem1c.c@{src/ltem1c.c}}
+{\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dbgprint.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltem1c_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ltem1c_8c_a086d495b268c2e52fd6c9d5fcd5b4aaa}{ltem1\+\_\+create}} (const \mbox{\hyperlink{platform__gpio_8h_a8dcfc8ee1f002aa2c8f93b2767098f3c}{ltem1\+Pin\+Config\+\_\+t}} ltem1\+\_\+config, \mbox{\hyperlink{ltem1c_8h_a220524831e7a4cc5f185ec9701cb4687}{ltem1\+Start\+\_\+t}} ltem1\+Start, \mbox{\hyperlink{ltem1c_8h_a851af9c9372883a12ee77d0f6129a0fc}{ltem1\+Functionality\+\_\+t}} func\+Level)
+\begin{DoxyCompactList}\small\item\em Initialize the L\+T\+Em1 modem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltem1c_8c_a61b6ff310cf112009b61853ea1175f06}{ltem1\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em Power on and start the modem (perform component init). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltem1c_8c_a79654e95c6a67fe444fb90646e36f200}{ltem1\+\_\+reset}} ()
+\begin{DoxyCompactList}\small\item\em Performs a HW reset of L\+T\+Em1 and optionally executes start sequence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltem1c_8c_a6b4d032dcddcbdcbd8e36ab760eb3da6}{ltem1\+\_\+stop}} ()
+\begin{DoxyCompactList}\small\item\em Powers off the modem without destroying memory objects. Modem device will require \mbox{\hyperlink{ltem1c_8c_a61b6ff310cf112009b61853ea1175f06}{ltem1\+\_\+start()}} to reinit HW. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltem1c_8c_af582158b4c99662d49265210b892683a}{ltem1\+\_\+destroy}} ()
+\begin{DoxyCompactList}\small\item\em Uninitialize the L\+TE modem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltem1c_8c_a20c7000ff6277c3f2bf6690f872774c0}{ltem1\+\_\+do\+Work}} ()
+\begin{DoxyCompactList}\small\item\em Background work task runner. To be called in application Loop() periodically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltem1c_8c_a5d715c596561f6711f3bb80957e838a4}{ltem1\+\_\+fault\+Handler}} (uint16\+\_\+t status\+Code, const char $\ast$fault\+Msg)
+\begin{DoxyCompactList}\small\item\em Function of last resort, catestrophic failure Background work task runner. To be called in application Loop() periodically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltem1c_8c_a58498dd7f65011fe668a49a04bbc6d13}{ltem1\+\_\+register\+Application\+Fault\+Handler}} (void $\ast$custom\+Fault\+Handler)
+\begin{DoxyCompactList}\small\item\em Registers the address (void$\ast$) of your application custom fault handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ltem1c_8h_af0e3c59e4d3e14ce47a3372aff4dd7fa}{ltem1\+Device\+\_\+t}} $\ast$ \mbox{\hyperlink{ltem1c_8c_ae1d900c6ccd0da637e6ddc6af05f0a65}{g\+\_\+ltem1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltem1c_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltem1c_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltem1c.c@{ltem1c.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltem1c_8c_a086d495b268c2e52fd6c9d5fcd5b4aaa}\label{ltem1c_8c_a086d495b268c2e52fd6c9d5fcd5b4aaa}} 
+\index{ltem1c.c@{ltem1c.c}!ltem1\_create@{ltem1\_create}}
+\index{ltem1\_create@{ltem1\_create}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{ltem1\_create()}{ltem1\_create()}}
+{\footnotesize\ttfamily void ltem1\+\_\+create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{platform__gpio_8h_a8dcfc8ee1f002aa2c8f93b2767098f3c}{ltem1\+Pin\+Config\+\_\+t}}}]{ltem1\+\_\+config,  }\item[{\mbox{\hyperlink{ltem1c_8h_a220524831e7a4cc5f185ec9701cb4687}{ltem1\+Start\+\_\+t}}}]{ltem1\+Start,  }\item[{\mbox{\hyperlink{ltem1c_8h_a851af9c9372883a12ee77d0f6129a0fc}{ltem1\+Functionality\+\_\+t}}}]{func\+Level }\end{DoxyParamCaption})}
+
+
+
+Initialize the L\+T\+Em1 modem. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ltem1\+\_\+config} & The L\+TE modem gpio pin configuration. \\
+\hline
+\mbox{\texttt{ in}}  & {\em func\+Level} & Determines the L\+T\+Em1 functionality to create and start. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltem1c_8c_af582158b4c99662d49265210b892683a}\label{ltem1c_8c_af582158b4c99662d49265210b892683a}} 
+\index{ltem1c.c@{ltem1c.c}!ltem1\_destroy@{ltem1\_destroy}}
+\index{ltem1\_destroy@{ltem1\_destroy}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{ltem1\_destroy()}{ltem1\_destroy()}}
+{\footnotesize\ttfamily void ltem1\+\_\+destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uninitialize the L\+TE modem. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em modem} & The L\+TE modem. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltem1c_8c_a20c7000ff6277c3f2bf6690f872774c0}\label{ltem1c_8c_a20c7000ff6277c3f2bf6690f872774c0}} 
+\index{ltem1c.c@{ltem1c.c}!ltem1\_doWork@{ltem1\_doWork}}
+\index{ltem1\_doWork@{ltem1\_doWork}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{ltem1\_doWork()}{ltem1\_doWork()}}
+{\footnotesize\ttfamily void ltem1\+\_\+do\+Work (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Background work task runner. To be called in application Loop() periodically. 
+
+\mbox{\Hypertarget{ltem1c_8c_a5d715c596561f6711f3bb80957e838a4}\label{ltem1c_8c_a5d715c596561f6711f3bb80957e838a4}} 
+\index{ltem1c.c@{ltem1c.c}!ltem1\_faultHandler@{ltem1\_faultHandler}}
+\index{ltem1\_faultHandler@{ltem1\_faultHandler}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{ltem1\_faultHandler()}{ltem1\_faultHandler()}}
+{\footnotesize\ttfamily void ltem1\+\_\+fault\+Handler (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{status\+Code,  }\item[{const char $\ast$}]{fault\+Msg }\end{DoxyParamCaption})}
+
+
+
+Function of last resort, catestrophic failure Background work task runner. To be called in application Loop() periodically. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fault\+Msg} & -\/ Message from origination about the fatal condition. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltem1c_8c_a58498dd7f65011fe668a49a04bbc6d13}\label{ltem1c_8c_a58498dd7f65011fe668a49a04bbc6d13}} 
+\index{ltem1c.c@{ltem1c.c}!ltem1\_registerApplicationFaultHandler@{ltem1\_registerApplicationFaultHandler}}
+\index{ltem1\_registerApplicationFaultHandler@{ltem1\_registerApplicationFaultHandler}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{ltem1\_registerApplicationFaultHandler()}{ltem1\_registerApplicationFaultHandler()}}
+{\footnotesize\ttfamily void ltem1\+\_\+register\+Application\+Fault\+Handler (\begin{DoxyParamCaption}\item[{void $\ast$}]{custom\+Fault\+Handler }\end{DoxyParamCaption})}
+
+
+
+Registers the address (void$\ast$) of your application custom fault handler. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em custom\+Fault\+Handler} & -\/ Pointer to application provided fault handler. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltem1c_8c_a79654e95c6a67fe444fb90646e36f200}\label{ltem1c_8c_a79654e95c6a67fe444fb90646e36f200}} 
+\index{ltem1c.c@{ltem1c.c}!ltem1\_reset@{ltem1\_reset}}
+\index{ltem1\_reset@{ltem1\_reset}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{ltem1\_reset()}{ltem1\_reset()}}
+{\footnotesize\ttfamily void ltem1\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs a HW reset of L\+T\+Em1 and optionally executes start sequence. 
+
+\mbox{\Hypertarget{ltem1c_8c_a61b6ff310cf112009b61853ea1175f06}\label{ltem1c_8c_a61b6ff310cf112009b61853ea1175f06}} 
+\index{ltem1c.c@{ltem1c.c}!ltem1\_start@{ltem1\_start}}
+\index{ltem1\_start@{ltem1\_start}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{ltem1\_start()}{ltem1\_start()}}
+{\footnotesize\ttfamily void ltem1\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Power on and start the modem (perform component init). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func\+Level} & -\/ Enum specifying which L\+T\+Em1c subsystems should be initialized and started. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltem1c_8c_a6b4d032dcddcbdcbd8e36ab760eb3da6}\label{ltem1c_8c_a6b4d032dcddcbdcbd8e36ab760eb3da6}} 
+\index{ltem1c.c@{ltem1c.c}!ltem1\_stop@{ltem1\_stop}}
+\index{ltem1\_stop@{ltem1\_stop}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{ltem1\_stop()}{ltem1\_stop()}}
+{\footnotesize\ttfamily void ltem1\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Powers off the modem without destroying memory objects. Modem device will require \mbox{\hyperlink{ltem1c_8c_a61b6ff310cf112009b61853ea1175f06}{ltem1\+\_\+start()}} to reinit HW. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ltem1c_8c_ae1d900c6ccd0da637e6ddc6af05f0a65}\label{ltem1c_8c_ae1d900c6ccd0da637e6ddc6af05f0a65}} 
+\index{ltem1c.c@{ltem1c.c}!g\_ltem1@{g\_ltem1}}
+\index{g\_ltem1@{g\_ltem1}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{g\_ltem1}{g\_ltem1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_af0e3c59e4d3e14ce47a3372aff4dd7fa}{ltem1\+Device\+\_\+t}}$\ast$ g\+\_\+ltem1}
+

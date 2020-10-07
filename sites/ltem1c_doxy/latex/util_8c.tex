@@ -1,0 +1,51 @@
+\hypertarget{util_8c}{}\doxysection{src/util.c File Reference}
+\label{util_8c}\index{src/util.c@{src/util.c}}
+{\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{util_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{util_8c_ad3a0da52a4a81a13fe7ebf964268a455}{str\+Token}} (char $\ast$source, int delimiter, char $\ast$token, uint8\+\_\+t token\+Max)
+\begin{DoxyCompactList}\small\item\em Simple string to packed numeric IP address parser. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{util_8c_a74e75242132eaabbc1c512488a135926}\label{util_8c_a74e75242132eaabbc1c512488a135926}} 
+\index{util.c@{util.c}!MIN@{MIN}}
+\index{MIN@{MIN}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (x) \+: (y))}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{util_8c_ad3a0da52a4a81a13fe7ebf964268a455}\label{util_8c_ad3a0da52a4a81a13fe7ebf964268a455}} 
+\index{util.c@{util.c}!strToken@{strToken}}
+\index{strToken@{strToken}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{strToken()}{strToken()}}
+{\footnotesize\ttfamily char$\ast$ str\+Token (\begin{DoxyParamCaption}\item[{char $\ast$}]{source,  }\item[{int}]{delimiter,  }\item[{char $\ast$}]{token,  }\item[{uint8\+\_\+t}]{token\+Max }\end{DoxyParamCaption})}
+
+
+
+Simple string to packed numeric IP address parser. 
+
+C99 thread-\/safe implementation of c-\/string token extractor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em source} & The source to extract tokens from. \\
+\hline
+\mbox{\texttt{ in}}  & {\em delimeter} & The character delimeter as an integer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em token} & Buffer containing the token. \\
+\hline
+\mbox{\texttt{ in}}  & {\em token\+Max} & The maximum size for the extracted token.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the continue point of tokenization. 
+\end{DoxyReturn}

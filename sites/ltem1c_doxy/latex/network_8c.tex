@@ -1,0 +1,137 @@
+\hypertarget{network_8c}{}\doxysection{src/network.c File Reference}
+\label{network_8c}\index{src/network.c@{src/network.c}}
+{\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dbgprint.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{network_8c_acded44a40a84c6e4ecf02b6da518ce4e}{P\+R\+O\+T\+O\+C\+O\+L\+S\+\_\+\+C\+M\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+SZ}}~80
+\item 
+\#define \mbox{\hyperlink{network_8c_a460c2e54a89634be2775c6c29775a50a}{I\+P\+\_\+\+Q\+I\+A\+C\+T\+\_\+\+SZ}}~8
+\item 
+\#define \mbox{\hyperlink{network_8c_a804ecb67b072321269af36bc17d26886}{T\+O\+K\+E\+N\+\_\+\+B\+U\+F\+\_\+\+SZ}}~16
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{network_8h_afdeb09cbf237e761c59dcb9084f01a3a}{network\+\_\+t}} $\ast$ \mbox{\hyperlink{network_8c_a9eae2977201164408f29a0c63d1b6af1}{ntwk\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the IP network contexts structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{network_8h_a58db2e79250f681c695c651d586fd25f}{network\+Operator\+\_\+t}} \mbox{\hyperlink{network_8c_abdbd836a01669dcf68329ef31c73d45a}{ntwk\+\_\+await\+Operator}} (uint16\+\_\+t wait\+Duration)
+\begin{DoxyCompactList}\small\item\em Wait for a network operator name and network mode. Can be cancelled in threaded env via g\+\_\+ltem1-\/$>$cancellation\+Request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{network_8c_a6cb36944e65bd0ef93451e6a8fd6195e}{ntwk\+\_\+fetch\+Data\+Contexts}} ()
+\begin{DoxyCompactList}\small\item\em Get A\+PN active status and optionally activate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{network_8c_a870dbc1f5a56e38b24d41ab69d4cb04e}{ntwk\+\_\+activate\+Context}} (uint8\+\_\+t context\+Num)
+\begin{DoxyCompactList}\small\item\em Activate A\+PN. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{network_8c_a10b23d2cf0330849919f987a7f681d5c}{ntwk\+\_\+deactivate\+Context}} (uint8\+\_\+t contxt\+Id)
+\begin{DoxyCompactList}\small\item\em Deactivate A\+PN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{network_8c_a8c489a5a54698c77fa4447651d481ab7}{ntwk\+\_\+close\+Context}} (uint8\+\_\+t contxt\+Id)
+\begin{DoxyCompactList}\small\item\em Close out all T\+C\+P/\+IP sockets on a context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{network_8c_a460c2e54a89634be2775c6c29775a50a}\label{network_8c_a460c2e54a89634be2775c6c29775a50a}} 
+\index{network.c@{network.c}!IP\_QIACT\_SZ@{IP\_QIACT\_SZ}}
+\index{IP\_QIACT\_SZ@{IP\_QIACT\_SZ}!network.c@{network.c}}
+\doxysubsubsection{\texorpdfstring{IP\_QIACT\_SZ}{IP\_QIACT\_SZ}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+Q\+I\+A\+C\+T\+\_\+\+SZ~8}
+
+\mbox{\Hypertarget{network_8c_acded44a40a84c6e4ecf02b6da518ce4e}\label{network_8c_acded44a40a84c6e4ecf02b6da518ce4e}} 
+\index{network.c@{network.c}!PROTOCOLS\_CMD\_BUFFER\_SZ@{PROTOCOLS\_CMD\_BUFFER\_SZ}}
+\index{PROTOCOLS\_CMD\_BUFFER\_SZ@{PROTOCOLS\_CMD\_BUFFER\_SZ}!network.c@{network.c}}
+\doxysubsubsection{\texorpdfstring{PROTOCOLS\_CMD\_BUFFER\_SZ}{PROTOCOLS\_CMD\_BUFFER\_SZ}}
+{\footnotesize\ttfamily \#define P\+R\+O\+T\+O\+C\+O\+L\+S\+\_\+\+C\+M\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+SZ~80}
+
+\mbox{\Hypertarget{network_8c_a804ecb67b072321269af36bc17d26886}\label{network_8c_a804ecb67b072321269af36bc17d26886}} 
+\index{network.c@{network.c}!TOKEN\_BUF\_SZ@{TOKEN\_BUF\_SZ}}
+\index{TOKEN\_BUF\_SZ@{TOKEN\_BUF\_SZ}!network.c@{network.c}}
+\doxysubsubsection{\texorpdfstring{TOKEN\_BUF\_SZ}{TOKEN\_BUF\_SZ}}
+{\footnotesize\ttfamily \#define T\+O\+K\+E\+N\+\_\+\+B\+U\+F\+\_\+\+SZ~16}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{network_8c_a870dbc1f5a56e38b24d41ab69d4cb04e}\label{network_8c_a870dbc1f5a56e38b24d41ab69d4cb04e}} 
+\index{network.c@{network.c}!ntwk\_activateContext@{ntwk\_activateContext}}
+\index{ntwk\_activateContext@{ntwk\_activateContext}!network.c@{network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_activateContext()}{ntwk\_activateContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} ntwk\+\_\+activate\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{context\+Num }\end{DoxyParamCaption})}
+
+
+
+Activate A\+PN. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em context\+Num} & The A\+PN to operate on. Typically 0 or 1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{network_8c_abdbd836a01669dcf68329ef31c73d45a}\label{network_8c_abdbd836a01669dcf68329ef31c73d45a}} 
+\index{network.c@{network.c}!ntwk\_awaitOperator@{ntwk\_awaitOperator}}
+\index{ntwk\_awaitOperator@{ntwk\_awaitOperator}!network.c@{network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_awaitOperator()}{ntwk\_awaitOperator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{network_8h_a58db2e79250f681c695c651d586fd25f}{network\+Operator\+\_\+t}} ntwk\+\_\+await\+Operator (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{wait\+Duration }\end{DoxyParamCaption})}
+
+
+
+Wait for a network operator name and network mode. Can be cancelled in threaded env via g\+\_\+ltem1-\/$>$cancellation\+Request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wait\+Duration} & \mbox{[}in\mbox{]} Number of seconds to wait for a network. Supply 0 for no wait.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct containing the network operator name (oper\+Name) and network mode (ntwk\+Mode). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{network_8c_a8c489a5a54698c77fa4447651d481ab7}\label{network_8c_a8c489a5a54698c77fa4447651d481ab7}} 
+\index{network.c@{network.c}!ntwk\_closeContext@{ntwk\_closeContext}}
+\index{ntwk\_closeContext@{ntwk\_closeContext}!network.c@{network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_closeContext()}{ntwk\_closeContext()}}
+{\footnotesize\ttfamily void ntwk\+\_\+close\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{contxt\+Id }\end{DoxyParamCaption})}
+
+
+
+Close out all T\+C\+P/\+IP sockets on a context. 
+
+\mbox{\Hypertarget{network_8c_a9eae2977201164408f29a0c63d1b6af1}\label{network_8c_a9eae2977201164408f29a0c63d1b6af1}} 
+\index{network.c@{network.c}!ntwk\_create@{ntwk\_create}}
+\index{ntwk\_create@{ntwk\_create}!network.c@{network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_create()}{ntwk\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{network_8h_afdeb09cbf237e761c59dcb9084f01a3a}{network\+\_\+t}}$\ast$ ntwk\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the IP network contexts structure. 
+
+\mbox{\Hypertarget{network_8c_a10b23d2cf0330849919f987a7f681d5c}\label{network_8c_a10b23d2cf0330849919f987a7f681d5c}} 
+\index{network.c@{network.c}!ntwk\_deactivateContext@{ntwk\_deactivateContext}}
+\index{ntwk\_deactivateContext@{ntwk\_deactivateContext}!network.c@{network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_deactivateContext()}{ntwk\_deactivateContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} ntwk\+\_\+deactivate\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{contxt\+Id }\end{DoxyParamCaption})}
+
+
+
+Deactivate A\+PN. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em context\+Num} & The A\+PN to operate on. Typically 0 or 1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{network_8c_a6cb36944e65bd0ef93451e6a8fd6195e}\label{network_8c_a6cb36944e65bd0ef93451e6a8fd6195e}} 
+\index{network.c@{network.c}!ntwk\_fetchDataContexts@{ntwk\_fetchDataContexts}}
+\index{ntwk\_fetchDataContexts@{ntwk\_fetchDataContexts}!network.c@{network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_fetchDataContexts()}{ntwk\_fetchDataContexts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} ntwk\+\_\+fetch\+Data\+Contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get A\+PN active status and optionally activate. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em context\+Num} & The A\+PN to operate on. Typically 0 or 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em activate} & Attempt to activate the A\+PN if found not active. \\
+\hline
+\end{DoxyParams}

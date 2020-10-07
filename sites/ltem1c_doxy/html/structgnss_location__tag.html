@@ -20,11 +20,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEm1c
    &#160;<span id="projectnumber">v0.3</span>
    </div>
-   <div id="projectbrief">C99devicedriverfortheLooUQLTEm1LTEcellularmodem</div>
+   <div id="projectbrief">C99 device driver for the LooUQ LTEm1 cellular modem</div>
   </td>
  </tr>
  </tbody>
@@ -64,54 +65,212 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structgnss_location__tag-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">gnssLocation_tag Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="gnss_8h_source.html">gnss.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a5e0808ca2296d1d72db3a0ab03a5dc67"><td class="memItemLeft" align="right" valign="top"><a id="a5e0808ca2296d1d72db3a0ab03a5dc67"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>utc</b> [11]</td></tr>
-<tr class="separator:a5e0808ca2296d1d72db3a0ab03a5dc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20f48fb30a5ae1a0fd6f535097b9ff9f"><td class="memItemLeft" align="right" valign="top"><a id="a20f48fb30a5ae1a0fd6f535097b9ff9f"></a>
-<a class="el" href="structgnss__latlon__tag.html">gnss_latlon_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lat</b></td></tr>
-<tr class="separator:a20f48fb30a5ae1a0fd6f535097b9ff9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c44e095abf001ad62f1bce912b1889a"><td class="memItemLeft" align="right" valign="top"><a id="a5c44e095abf001ad62f1bce912b1889a"></a>
-<a class="el" href="structgnss__latlon__tag.html">gnss_latlon_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lon</b></td></tr>
-<tr class="separator:a5c44e095abf001ad62f1bce912b1889a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5770634c31064c90ae0f3603329a50f6"><td class="memItemLeft" align="right" valign="top"><a id="a5770634c31064c90ae0f3603329a50f6"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>hdop</b></td></tr>
-<tr class="separator:a5770634c31064c90ae0f3603329a50f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae485b0384a0801c390ba41ed56ea8781"><td class="memItemLeft" align="right" valign="top"><a id="ae485b0384a0801c390ba41ed56ea8781"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>altitude</b></td></tr>
-<tr class="separator:ae485b0384a0801c390ba41ed56ea8781"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfd440ec1a9559a71a8bb8a1a62f0da1"><td class="memItemLeft" align="right" valign="top"><a id="abfd440ec1a9559a71a8bb8a1a62f0da1"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>fixType</b></td></tr>
-<tr class="separator:abfd440ec1a9559a71a8bb8a1a62f0da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad433aa04bb6a1d86e47a24a62fee75f5"><td class="memItemLeft" align="right" valign="top"><a id="ad433aa04bb6a1d86e47a24a62fee75f5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>course</b></td></tr>
-<tr class="separator:ad433aa04bb6a1d86e47a24a62fee75f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe4575e363da8d94418b107276436bf5"><td class="memItemLeft" align="right" valign="top"><a id="afe4575e363da8d94418b107276436bf5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>speedkm</b></td></tr>
-<tr class="separator:afe4575e363da8d94418b107276436bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72f7c14833dc417af8637d4412c68fce"><td class="memItemLeft" align="right" valign="top"><a id="a72f7c14833dc417af8637d4412c68fce"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>speedkn</b></td></tr>
-<tr class="separator:a72f7c14833dc417af8637d4412c68fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab4655f301965fa50208eefba0cb7e10"><td class="memItemLeft" align="right" valign="top"><a id="aab4655f301965fa50208eefba0cb7e10"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>date</b> [7]</td></tr>
-<tr class="separator:aab4655f301965fa50208eefba0cb7e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a354c61993172bec2f7dfb720fa21b8d4"><td class="memItemLeft" align="right" valign="top"><a id="a354c61993172bec2f7dfb720fa21b8d4"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>nsat</b></td></tr>
-<tr class="separator:a354c61993172bec2f7dfb720fa21b8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa0e680ef36c4c218c10cf2561c7c472"><td class="memItemLeft" align="right" valign="top"><a id="afa0e680ef36c4c218c10cf2561c7c472"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>statusCode</b></td></tr>
-<tr class="separator:afa0e680ef36c4c218c10cf2561c7c472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+Data Fields</h2></td></tr>
+<tr class="memitem:a6ae8d28098d79f0dcb73395e7d2698df"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a6ae8d28098d79f0dcb73395e7d2698df">utc</a> [11]</td></tr>
+<tr class="separator:a6ae8d28098d79f0dcb73395e7d2698df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a69dc037237e8b7e078e07108a4f35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gnss_8h.html#a7fb5f996ad0280dea37f6c01720ec081">gnss_latlon_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a02a69dc037237e8b7e078e07108a4f35">lat</a></td></tr>
+<tr class="separator:a02a69dc037237e8b7e078e07108a4f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c655e2b8eff4c0c4d3a3a6daa8b7d4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gnss_8h.html#a7fb5f996ad0280dea37f6c01720ec081">gnss_latlon_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a5c655e2b8eff4c0c4d3a3a6daa8b7d4f">lon</a></td></tr>
+<tr class="separator:a5c655e2b8eff4c0c4d3a3a6daa8b7d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3e6d0a80cec3520fd65b477f420415"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a8c3e6d0a80cec3520fd65b477f420415">hdop</a></td></tr>
+<tr class="separator:a8c3e6d0a80cec3520fd65b477f420415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e13a4b4ae0cefdac2a413284239caa6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a0e13a4b4ae0cefdac2a413284239caa6">altitude</a></td></tr>
+<tr class="separator:a0e13a4b4ae0cefdac2a413284239caa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04398e6b3b3d95a5cdca3b2d816062d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#aa04398e6b3b3d95a5cdca3b2d816062d">fixType</a></td></tr>
+<tr class="separator:aa04398e6b3b3d95a5cdca3b2d816062d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6894c88aabf335922736a63b2b87b97"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#ac6894c88aabf335922736a63b2b87b97">course</a></td></tr>
+<tr class="separator:ac6894c88aabf335922736a63b2b87b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab23b7f27e268c4f053742bd655b8127f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#ab23b7f27e268c4f053742bd655b8127f">speedkm</a></td></tr>
+<tr class="separator:ab23b7f27e268c4f053742bd655b8127f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55935babd00748a6657bd683cf4a9ee"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#aa55935babd00748a6657bd683cf4a9ee">speedkn</a></td></tr>
+<tr class="separator:aa55935babd00748a6657bd683cf4a9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad217ba16d0b42c0e3c986247572e9ec8"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#ad217ba16d0b42c0e3c986247572e9ec8">date</a> [7]</td></tr>
+<tr class="separator:ad217ba16d0b42c0e3c986247572e9ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5c2a56263f9ac50dbd2e77755bf528"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#aaf5c2a56263f9ac50dbd2e77755bf528">nsat</a></td></tr>
+<tr class="separator:aaf5c2a56263f9ac50dbd2e77755bf528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade31e7fd99344e8c35f2c373af659551"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#ade31e7fd99344e8c35f2c373af659551">statusCode</a></td></tr>
+<tr class="separator:ade31e7fd99344e8c35f2c373af659551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a0e13a4b4ae0cefdac2a413284239caa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e13a4b4ae0cefdac2a413284239caa6">&#9670;&nbsp;</a></span>altitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float altitude</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6894c88aabf335922736a63b2b87b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6894c88aabf335922736a63b2b87b97">&#9670;&nbsp;</a></span>course</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float course</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad217ba16d0b42c0e3c986247572e9ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad217ba16d0b42c0e3c986247572e9ec8">&#9670;&nbsp;</a></span>date</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char date[7]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa04398e6b3b3d95a5cdca3b2d816062d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04398e6b3b3d95a5cdca3b2d816062d">&#9670;&nbsp;</a></span>fixType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t fixType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c3e6d0a80cec3520fd65b477f420415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3e6d0a80cec3520fd65b477f420415">&#9670;&nbsp;</a></span>hdop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float hdop</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02a69dc037237e8b7e078e07108a4f35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a69dc037237e8b7e078e07108a4f35">&#9670;&nbsp;</a></span>lat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gnss_8h.html#a7fb5f996ad0280dea37f6c01720ec081">gnss_latlon_t</a> lat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c655e2b8eff4c0c4d3a3a6daa8b7d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c655e2b8eff4c0c4d3a3a6daa8b7d4f">&#9670;&nbsp;</a></span>lon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gnss_8h.html#a7fb5f996ad0280dea37f6c01720ec081">gnss_latlon_t</a> lon</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf5c2a56263f9ac50dbd2e77755bf528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf5c2a56263f9ac50dbd2e77755bf528">&#9670;&nbsp;</a></span>nsat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t nsat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab23b7f27e268c4f053742bd655b8127f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23b7f27e268c4f053742bd655b8127f">&#9670;&nbsp;</a></span>speedkm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float speedkm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa55935babd00748a6657bd683cf4a9ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa55935babd00748a6657bd683cf4a9ee">&#9670;&nbsp;</a></span>speedkn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float speedkn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade31e7fd99344e8c35f2c373af659551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade31e7fd99344e8c35f2c373af659551">&#9670;&nbsp;</a></span>statusCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t statusCode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ae8d28098d79f0dcb73395e7d2698df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae8d28098d79f0dcb73395e7d2698df">&#9670;&nbsp;</a></span>utc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char utc[11]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="gnss_8h_source.html">gnss.h</a></li>
+<li>src/<a class="el" href="gnss_8h_source.html">gnss.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

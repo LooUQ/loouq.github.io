@@ -1,0 +1,9 @@
+digraph "__sc16is741a_reg_payload__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="__sc16is741a_reg_payload__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="SC16IS741A SPI bytes containing address and register value."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" reg_addr" ,fontname="Helvetica"];
+  Node2 [label="__sc16is741a_reg_addr\l_byte__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$union____sc16is741a__reg__addr__byte____.html",tooltip="SC16IS741A First SPI byte for register addressing."];
+}

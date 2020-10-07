@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LTEm1c: network.h Source File</title>
+<title>LTEm1c: src/network.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,11 +20,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEm1c
    &#160;<span id="projectnumber">v0.3</span>
    </div>
-   <div id="projectbrief">C99devicedriverfortheLooUQLTEm1LTEcellularmodem</div>
+   <div id="projectbrief">C99 device driver for the LooUQ LTEm1 cellular modem</div>
   </td>
  </tr>
  </tbody>
@@ -47,7 +48,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,12 +62,17 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">network.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<a href="network_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  \file network.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *  \author Greg Terrell</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  \license MIT License</span></div>
@@ -95,71 +100,71 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifndef __PROTOCOLS_H__</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define __PROTOCOLS_H__</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;ltem1c.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ltem1c_8h.html">ltem1c.h</a>&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define NTWK_CONTEXT_COUNT 3</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define NTWK_DEFAULT_CONTEXT 255</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="network_8h.html#a199a579720563c3cd1437be25c2cbcc1">   32</a></span>&#160;<span class="preprocessor">#define NTWK_CONTEXT_COUNT 3</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="network_8h.html#abc12cbbf63bd95b21fba604df2ba5203">   33</a></span>&#160;<span class="preprocessor">#define NTWK_DEFAULT_CONTEXT 255</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5f">   35</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    protocol_tcp = 0x00,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    protocol_udp = 0x01,</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa030558b5b57bba711bfed356ca009906">   37</a></span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa030558b5b57bba711bfed356ca009906">protocol_tcp</a> = 0x00,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa5bd4b9120131858ad72573514e250933">   38</a></span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa5bd4b9120131858ad72573514e250933">protocol_udp</a> = 0x01,</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//protocol_tcpListener = 0x02,</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//protocol_udpService = 0x03,</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    protocol_ssl = 0x02,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    protocol_AnyIP = 0x02,</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5faf0061dc3c11d93f1068cc42a76ba0d91">   41</a></span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5faf0061dc3c11d93f1068cc42a76ba0d91">protocol_ssl</a> = 0x02,</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa93c8764bc52c13671d9fda6b68d3ac3e">   42</a></span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa93c8764bc52c13671d9fda6b68d3ac3e">protocol_AnyIP</a> = 0x02,</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    protocol_http = 0x20,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    protocol_https = 0x21,</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa93aa4f4446d8b8dc99a238d59f16798b">   44</a></span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa93aa4f4446d8b8dc99a238d59f16798b">protocol_http</a> = 0x20,</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa0cd71b9324de746eb65609585436b6e3">   45</a></span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa0cd71b9324de746eb65609585436b6e3">protocol_https</a> = 0x21,</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    protocol_mqtt = 0x30,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    protocol_mqtts = 0x31,</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa1410bc7ff4e5f24154b9776a2850ab2d">   47</a></span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa1410bc7ff4e5f24154b9776a2850ab2d">protocol_mqtt</a> = 0x30,</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa7e729fed4553c316849a81625e5b3451">   48</a></span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa7e729fed4553c316849a81625e5b3451">protocol_mqtts</a> = 0x31,</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    protocol_void = 0xFF</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} protocol_t;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fab8d57aa0639ca27248fd5223f1c47d44">protocol_void</a> = 0xFF</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fab8d57aa0639ca27248fd5223f1c47d44">   51</a></span>&#160;} <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5f">protocol_t</a>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="network_8h.html#ad44f426957683a22a1f3e1952adcfaec">   54</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    context_state_inactive = 0,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    context_state_active = 1</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} context_state_t;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="network_8h.html#ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff">   56</a></span>&#160;    <a class="code" href="network_8h.html#ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff">context_state_inactive</a> = 0,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="network_8h.html#ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d">context_state_active</a> = 1</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="network_8h.html#ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d">   58</a></span>&#160;} <a class="code" href="network_8h.html#ad44f426957683a22a1f3e1952adcfaec">context_state_t</a>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1">   61</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    context_type_IPV4 = 1,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    context_type_IPV6 = 2</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} context_type_t;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3">   63</a></span>&#160;    <a class="code" href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3">context_type_IPV4</a> = 1,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd">context_type_IPV6</a> = 2</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd">   65</a></span>&#160;} <a class="code" href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1">context_type_t</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#define NTWKOPERATOR_OPERNAME_SZ 29</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#define NTWKOPERATOR_NTWKMODE_SZ 11</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="network_8h.html#abf515f44acdf402c33ea1e6c73db595b">   68</a></span>&#160;<span class="preprocessor">#define NTWKOPERATOR_OPERNAME_SZ 29</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="network_8h.html#a8898d0f9834fb724fb39721ad75a4400">   69</a></span>&#160;<span class="preprocessor">#define NTWKOPERATOR_NTWKMODE_SZ 11</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structnetwork_operator__tag.html">   71</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structnetwork_operator__tag.html">networkOperator_tag</a></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">char</span> operName[29];</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">char</span> ntwkMode[11];</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <a class="code" href="structnetwork_operator__tag.html">networkOperator_t</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structnetwork_operator__tag.html#a6f2492b1f8835c138fc107004ccf4d38">   73</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structnetwork_operator__tag.html#a6f2492b1f8835c138fc107004ccf4d38">operName</a>[29];</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structnetwork_operator__tag.html#abbd2b701684549b371938ae1081cdb9c">   74</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structnetwork_operator__tag.html#abbd2b701684549b371938ae1081cdb9c">ntwkMode</a>[11];</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="network_8h.html#a58db2e79250f681c695c651d586fd25f">   75</a></span>&#160;} <a class="code" href="network_8h.html#a58db2e79250f681c695c651d586fd25f">networkOperator_t</a>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#define PDPCONTEXT_APNNAME_SZ 21</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#define PDPCONTEXT_IPADDRESS_SZ 16</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="network_8h.html#a7ff42bd3012e862def198e4aa0760745">   77</a></span>&#160;<span class="preprocessor">#define PDPCONTEXT_APNNAME_SZ 21</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="network_8h.html#a16fe9467dfc91dbfe6b63ef1b984ba00">   78</a></span>&#160;<span class="preprocessor">#define PDPCONTEXT_IPADDRESS_SZ 16</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structpdp_context__tag.html">   80</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structpdp_context__tag.html">pdpContext_tag</a></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    context_state_t contextState;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    context_type_t contextType;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">char</span> apnName[21];</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">char</span> ipAddress[16];</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} <a class="code" href="structpdp_context__tag.html">pdpContext_t</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structpdp_context__tag.html#aef683140651b2e7853d667b30274fef7">   82</a></span>&#160;    <a class="code" href="network_8h.html#ad44f426957683a22a1f3e1952adcfaec">context_state_t</a> <a class="code" href="structpdp_context__tag.html#aef683140651b2e7853d667b30274fef7">contextState</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structpdp_context__tag.html#a6be60f241b8c6e6f65fd1724ebb87a4b">   83</a></span>&#160;    <a class="code" href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1">context_type_t</a> <a class="code" href="structpdp_context__tag.html#a6be60f241b8c6e6f65fd1724ebb87a4b">contextType</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structpdp_context__tag.html#a8b4e63cd4c9baaf9d90a1ff750b485b7">   84</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structpdp_context__tag.html#a8b4e63cd4c9baaf9d90a1ff750b485b7">apnName</a>[21];</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="structpdp_context__tag.html#a5ad0b447cc593426dbdc96b969bec1e9">   85</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structpdp_context__tag.html#a5ad0b447cc593426dbdc96b969bec1e9">ipAddress</a>[16];</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="network_8h.html#a2e3bffac3c81c2a93542e7824346c6ec">   86</a></span>&#160;} <a class="code" href="network_8h.html#a2e3bffac3c81c2a93542e7824346c6ec">pdpContext_t</a>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="structnetwork__tag.html">   89</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structnetwork__tag.html">network_tag</a></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="structnetwork_operator__tag.html">networkOperator_t</a> *networkOperator;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="structpdp_context__tag.html">pdpContext_t</a> contexts[NTWK_CONTEXT_COUNT];</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <a class="code" href="structnetwork__tag.html">network_t</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="structnetwork__tag.html#a3a0a83567f05e79ecd901d43221525fc">   91</a></span>&#160;    <a class="code" href="structnetwork_operator__tag.html">networkOperator_t</a> *<a class="code" href="structnetwork__tag.html#a3a0a83567f05e79ecd901d43221525fc">networkOperator</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structnetwork__tag.html#aa820e25f01d72f37c62d47817845d0ba">   92</a></span>&#160;    <a class="code" href="structpdp_context__tag.html">pdpContext_t</a> <a class="code" href="structnetwork__tag.html#aa820e25f01d72f37c62d47817845d0ba">contexts</a>[<a class="code" href="network_8h.html#a199a579720563c3cd1437be25c2cbcc1">NTWK_CONTEXT_COUNT</a>];</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="network_8h.html#afdeb09cbf237e761c59dcb9084f01a3a">   93</a></span>&#160;} <a class="code" href="network_8h.html#afdeb09cbf237e761c59dcb9084f01a3a">network_t</a>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -168,15 +173,15 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<a class="code" href="structnetwork__tag.html">network_t</a> *ntwk_create();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<a class="code" href="structnetwork__tag.html">network_t</a> *<a class="code" href="network_8h.html#a9eae2977201164408f29a0c63d1b6af1">ntwk_create</a>();</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<a class="code" href="structnetwork_operator__tag.html">networkOperator_t</a> ntwk_awaitOperator(uint16_t waitDuration);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<a class="code" href="structnetwork_operator__tag.html">networkOperator_t</a> <a class="code" href="network_8h.html#abdbd836a01669dcf68329ef31c73d45a">ntwk_awaitOperator</a>(uint16_t waitDuration);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;resultCode_t ntwk_fetchDataContexts();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;resultCode_t ntwk_activateContext(uint8_t contxtId);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;resultCode_t ntwk_deactivateContext(uint8_t contxtId);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<a class="code" href="structpdp_context__tag.html">pdpContext_t</a> ntwk_getDataContext(uint8_t contxtId);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keywordtype">void</span> ntwk_closeContext(uint8_t contxtId);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<a class="code" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> <a class="code" href="network_8h.html#a6cb36944e65bd0ef93451e6a8fd6195e">ntwk_fetchDataContexts</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<a class="code" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> <a class="code" href="network_8h.html#a0a5f8568902e2380561199e75cf802fd">ntwk_activateContext</a>(uint8_t contxtId);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<a class="code" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> <a class="code" href="network_8h.html#a10b23d2cf0330849919f987a7f681d5c">ntwk_deactivateContext</a>(uint8_t contxtId);</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="network_8h.html#a327a49547f9dafed3a0377fd4369a103">  109</a></span>&#160;<a class="code" href="structpdp_context__tag.html">pdpContext_t</a> <a class="code" href="network_8h.html#a327a49547f9dafed3a0377fd4369a103">ntwk_getDataContext</a>(uint8_t contxtId);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keywordtype">void</span> <a class="code" href="network_8h.html#a8c489a5a54698c77fa4447651d481ab7">ntwk_closeContext</a>(uint8_t contxtId);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -185,9 +190,46 @@ $(function() {
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* !__PROTOCOLS_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructnetwork_operator__tag_html_a6f2492b1f8835c138fc107004ccf4d38"><div class="ttname"><a href="structnetwork_operator__tag.html#a6f2492b1f8835c138fc107004ccf4d38">networkOperator_tag::operName</a></div><div class="ttdeci">char operName[29]</div><div class="ttdef"><b>Definition:</b> network.h:73</div></div>
+<div class="ttc" id="anetwork_8h_html_a6cb36944e65bd0ef93451e6a8fd6195e"><div class="ttname"><a href="network_8h.html#a6cb36944e65bd0ef93451e6a8fd6195e">ntwk_fetchDataContexts</a></div><div class="ttdeci">resultCode_t ntwk_fetchDataContexts()</div><div class="ttdoc">Get APN active status and optionally activate.</div><div class="ttdef"><b>Definition:</b> network.c:90</div></div>
+<div class="ttc" id="anetwork_8h_html_ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff"><div class="ttname"><a href="network_8h.html#ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff">context_state_inactive</a></div><div class="ttdeci">@ context_state_inactive</div><div class="ttdef"><b>Definition:</b> network.h:56</div></div>
 <div class="ttc" id="astructnetwork_operator__tag_html"><div class="ttname"><a href="structnetwork_operator__tag.html">networkOperator_tag</a></div><div class="ttdef"><b>Definition:</b> network.h:72</div></div>
+<div class="ttc" id="anetwork_8h_html_abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd"><div class="ttname"><a href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd">context_type_IPV6</a></div><div class="ttdeci">@ context_type_IPV6</div><div class="ttdef"><b>Definition:</b> network.h:64</div></div>
+<div class="ttc" id="altem1c_8h_html_a700eddbbbf80623f66eb7ae253ecd887"><div class="ttname"><a href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a></div><div class="ttdeci">uint16_t resultCode_t</div><div class="ttdef"><b>Definition:</b> ltem1c.h:94</div></div>
+<div class="ttc" id="anetwork_8h_html_abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3"><div class="ttname"><a href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3">context_type_IPV4</a></div><div class="ttdeci">@ context_type_IPV4</div><div class="ttdef"><b>Definition:</b> network.h:63</div></div>
+<div class="ttc" id="astructnetwork__tag_html_a3a0a83567f05e79ecd901d43221525fc"><div class="ttname"><a href="structnetwork__tag.html#a3a0a83567f05e79ecd901d43221525fc">network_tag::networkOperator</a></div><div class="ttdeci">networkOperator_t * networkOperator</div><div class="ttdef"><b>Definition:</b> network.h:91</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5fa7e729fed4553c316849a81625e5b3451"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa7e729fed4553c316849a81625e5b3451">protocol_mqtts</a></div><div class="ttdeci">@ protocol_mqtts</div><div class="ttdef"><b>Definition:</b> network.h:48</div></div>
 <div class="ttc" id="astructnetwork__tag_html"><div class="ttname"><a href="structnetwork__tag.html">network_tag</a></div><div class="ttdef"><b>Definition:</b> network.h:90</div></div>
+<div class="ttc" id="astructpdp_context__tag_html_a5ad0b447cc593426dbdc96b969bec1e9"><div class="ttname"><a href="structpdp_context__tag.html#a5ad0b447cc593426dbdc96b969bec1e9">pdpContext_tag::ipAddress</a></div><div class="ttdeci">char ipAddress[16]</div><div class="ttdef"><b>Definition:</b> network.h:85</div></div>
+<div class="ttc" id="astructnetwork_operator__tag_html_abbd2b701684549b371938ae1081cdb9c"><div class="ttname"><a href="structnetwork_operator__tag.html#abbd2b701684549b371938ae1081cdb9c">networkOperator_tag::ntwkMode</a></div><div class="ttdeci">char ntwkMode[11]</div><div class="ttdef"><b>Definition:</b> network.h:74</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5faf0061dc3c11d93f1068cc42a76ba0d91"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5faf0061dc3c11d93f1068cc42a76ba0d91">protocol_ssl</a></div><div class="ttdeci">@ protocol_ssl</div><div class="ttdef"><b>Definition:</b> network.h:41</div></div>
+<div class="ttc" id="astructpdp_context__tag_html_a8b4e63cd4c9baaf9d90a1ff750b485b7"><div class="ttname"><a href="structpdp_context__tag.html#a8b4e63cd4c9baaf9d90a1ff750b485b7">pdpContext_tag::apnName</a></div><div class="ttdeci">char apnName[21]</div><div class="ttdef"><b>Definition:</b> network.h:84</div></div>
+<div class="ttc" id="anetwork_8h_html_ad44f426957683a22a1f3e1952adcfaec"><div class="ttname"><a href="network_8h.html#ad44f426957683a22a1f3e1952adcfaec">context_state_t</a></div><div class="ttdeci">context_state_t</div><div class="ttdef"><b>Definition:</b> network.h:55</div></div>
 <div class="ttc" id="astructpdp_context__tag_html"><div class="ttname"><a href="structpdp_context__tag.html">pdpContext_tag</a></div><div class="ttdef"><b>Definition:</b> network.h:81</div></div>
+<div class="ttc" id="anetwork_8h_html_a2e3bffac3c81c2a93542e7824346c6ec"><div class="ttname"><a href="network_8h.html#a2e3bffac3c81c2a93542e7824346c6ec">pdpContext_t</a></div><div class="ttdeci">struct pdpContext_tag pdpContext_t</div></div>
+<div class="ttc" id="astructpdp_context__tag_html_a6be60f241b8c6e6f65fd1724ebb87a4b"><div class="ttname"><a href="structpdp_context__tag.html#a6be60f241b8c6e6f65fd1724ebb87a4b">pdpContext_tag::contextType</a></div><div class="ttdeci">context_type_t contextType</div><div class="ttdef"><b>Definition:</b> network.h:83</div></div>
+<div class="ttc" id="anetwork_8h_html_a199a579720563c3cd1437be25c2cbcc1"><div class="ttname"><a href="network_8h.html#a199a579720563c3cd1437be25c2cbcc1">NTWK_CONTEXT_COUNT</a></div><div class="ttdeci">#define NTWK_CONTEXT_COUNT</div><div class="ttdef"><b>Definition:</b> network.h:32</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5fa1410bc7ff4e5f24154b9776a2850ab2d"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa1410bc7ff4e5f24154b9776a2850ab2d">protocol_mqtt</a></div><div class="ttdeci">@ protocol_mqtt</div><div class="ttdef"><b>Definition:</b> network.h:47</div></div>
+<div class="ttc" id="anetwork_8h_html_abc74437f14f9413f5bc01cd5523e13f1"><div class="ttname"><a href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1">context_type_t</a></div><div class="ttdeci">context_type_t</div><div class="ttdef"><b>Definition:</b> network.h:62</div></div>
+<div class="ttc" id="altem1c_8h_html"><div class="ttname"><a href="ltem1c_8h.html">ltem1c.h</a></div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5fa93aa4f4446d8b8dc99a238d59f16798b"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa93aa4f4446d8b8dc99a238d59f16798b">protocol_http</a></div><div class="ttdeci">@ protocol_http</div><div class="ttdef"><b>Definition:</b> network.h:44</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5fab8d57aa0639ca27248fd5223f1c47d44"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fab8d57aa0639ca27248fd5223f1c47d44">protocol_void</a></div><div class="ttdeci">@ protocol_void</div><div class="ttdef"><b>Definition:</b> network.h:50</div></div>
+<div class="ttc" id="anetwork_8h_html_afdeb09cbf237e761c59dcb9084f01a3a"><div class="ttname"><a href="network_8h.html#afdeb09cbf237e761c59dcb9084f01a3a">network_t</a></div><div class="ttdeci">struct network_tag network_t</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5fa0cd71b9324de746eb65609585436b6e3"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa0cd71b9324de746eb65609585436b6e3">protocol_https</a></div><div class="ttdeci">@ protocol_https</div><div class="ttdef"><b>Definition:</b> network.h:45</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5fa93c8764bc52c13671d9fda6b68d3ac3e"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa93c8764bc52c13671d9fda6b68d3ac3e">protocol_AnyIP</a></div><div class="ttdeci">@ protocol_AnyIP</div><div class="ttdef"><b>Definition:</b> network.h:42</div></div>
+<div class="ttc" id="anetwork_8h_html_a9eae2977201164408f29a0c63d1b6af1"><div class="ttname"><a href="network_8h.html#a9eae2977201164408f29a0c63d1b6af1">ntwk_create</a></div><div class="ttdeci">network_t * ntwk_create()</div><div class="ttdoc">Initialize the IP network contexts structure.</div><div class="ttdef"><b>Definition:</b> network.c:28</div></div>
+<div class="ttc" id="anetwork_8h_html_a8c489a5a54698c77fa4447651d481ab7"><div class="ttname"><a href="network_8h.html#a8c489a5a54698c77fa4447651d481ab7">ntwk_closeContext</a></div><div class="ttdeci">void ntwk_closeContext(uint8_t contxtId)</div><div class="ttdoc">Close out all TCP/IP sockets on a context.</div><div class="ttdef"><b>Definition:</b> network.c:197</div></div>
+<div class="ttc" id="astructpdp_context__tag_html_aef683140651b2e7853d667b30274fef7"><div class="ttname"><a href="structpdp_context__tag.html#aef683140651b2e7853d667b30274fef7">pdpContext_tag::contextState</a></div><div class="ttdeci">context_state_t contextState</div><div class="ttdef"><b>Definition:</b> network.h:82</div></div>
+<div class="ttc" id="anetwork_8h_html_a0a5f8568902e2380561199e75cf802fd"><div class="ttname"><a href="network_8h.html#a0a5f8568902e2380561199e75cf802fd">ntwk_activateContext</a></div><div class="ttdeci">resultCode_t ntwk_activateContext(uint8_t contxtId)</div><div class="ttdoc">Activate APN.</div><div class="ttdef"><b>Definition:</b> network.c:157</div></div>
+<div class="ttc" id="anetwork_8h_html_a327a49547f9dafed3a0377fd4369a103"><div class="ttname"><a href="network_8h.html#a327a49547f9dafed3a0377fd4369a103">ntwk_getDataContext</a></div><div class="ttdeci">pdpContext_t ntwk_getDataContext(uint8_t contxtId)</div></div>
+<div class="ttc" id="astructnetwork__tag_html_aa820e25f01d72f37c62d47817845d0ba"><div class="ttname"><a href="structnetwork__tag.html#aa820e25f01d72f37c62d47817845d0ba">network_tag::contexts</a></div><div class="ttdeci">pdpContext_t contexts[NTWK_CONTEXT_COUNT]</div><div class="ttdef"><b>Definition:</b> network.h:92</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5f"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5f">protocol_t</a></div><div class="ttdeci">protocol_t</div><div class="ttdef"><b>Definition:</b> network.h:36</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5fa030558b5b57bba711bfed356ca009906"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa030558b5b57bba711bfed356ca009906">protocol_tcp</a></div><div class="ttdeci">@ protocol_tcp</div><div class="ttdef"><b>Definition:</b> network.h:37</div></div>
+<div class="ttc" id="anetwork_8h_html_ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d"><div class="ttname"><a href="network_8h.html#ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d">context_state_active</a></div><div class="ttdeci">@ context_state_active</div><div class="ttdef"><b>Definition:</b> network.h:57</div></div>
+<div class="ttc" id="anetwork_8h_html_a58db2e79250f681c695c651d586fd25f"><div class="ttname"><a href="network_8h.html#a58db2e79250f681c695c651d586fd25f">networkOperator_t</a></div><div class="ttdeci">struct networkOperator_tag networkOperator_t</div></div>
+<div class="ttc" id="anetwork_8h_html_abdbd836a01669dcf68329ef31c73d45a"><div class="ttname"><a href="network_8h.html#abdbd836a01669dcf68329ef31c73d45a">ntwk_awaitOperator</a></div><div class="ttdeci">networkOperator_t ntwk_awaitOperator(uint16_t waitDuration)</div><div class="ttdoc">Wait for a network operator name and network mode. Can be cancelled in threaded env via g_ltem1-&gt;canc...</div><div class="ttdef"><b>Definition:</b> network.c:63</div></div>
+<div class="ttc" id="anetwork_8h_html_a10b23d2cf0330849919f987a7f681d5c"><div class="ttname"><a href="network_8h.html#a10b23d2cf0330849919f987a7f681d5c">ntwk_deactivateContext</a></div><div class="ttdeci">resultCode_t ntwk_deactivateContext(uint8_t contxtId)</div><div class="ttdoc">Deactivate APN.</div><div class="ttdef"><b>Definition:</b> network.c:176</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5fa5bd4b9120131858ad72573514e250933"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5fa5bd4b9120131858ad72573514e250933">protocol_udp</a></div><div class="ttdeci">@ protocol_udp</div><div class="ttdef"><b>Definition:</b> network.h:38</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

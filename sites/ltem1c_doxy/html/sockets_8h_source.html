@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LTEm1c: sockets.h Source File</title>
+<title>LTEm1c: src/sockets.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,11 +20,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEm1c
    &#160;<span id="projectnumber">v0.3</span>
    </div>
-   <div id="projectbrief">C99devicedriverfortheLooUQLTEm1LTEcellularmodem</div>
+   <div id="projectbrief">C99 device driver for the LooUQ LTEm1 cellular modem</div>
   </td>
  </tr>
  </tbody>
@@ -47,7 +48,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,12 +62,17 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">sockets.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<a href="sockets_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  \file ip.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *  \author Greg Terrell</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  \license MIT License</span></div>
@@ -95,7 +100,7 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifndef __IP_H__</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define __IP_H__</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;ltem1c.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ltem1c_8h.html">ltem1c.h</a>&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/* future may support incoming connections, network carriers do not support this without premium plans or VPNs</span></div>
@@ -103,33 +108,33 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * typedef void (*receiver_func_t)(socketId_t scktId, const char * data, uint16_t dataSz, const char * rmtHost, const char * rmtPort);</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define SOCKET_COUNT 6</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define SOCKET_CLOSED 255</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define SOCKET_RESULT_PREVOPEN 563</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="sockets_8h.html#aa4bd064da03e2e71627c660f9a7fcbbb">   37</a></span>&#160;<span class="preprocessor">#define SOCKET_COUNT 6</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="sockets_8h.html#a62339be9edf850874f36823c3a5cb3d0">   38</a></span>&#160;<span class="preprocessor">#define SOCKET_CLOSED 255</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="sockets_8h.html#abaa4cd965771235934c5d931cfe5af29">   39</a></span>&#160;<span class="preprocessor">#define SOCKET_RESULT_PREVOPEN 563</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">typedef</span> uint8_t socketId_t; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">typedef</span> uint16_t socketResult_t;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">   41</a></span>&#160;<span class="keyword">typedef</span> uint8_t <a class="code" href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">socketId_t</a>; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="sockets_8h.html#ab7cf20e66a2d8ef88c5befa4f4bf8276">   42</a></span>&#160;<span class="keyword">typedef</span> uint16_t <a class="code" href="sockets_8h.html#ab7cf20e66a2d8ef88c5befa4f4bf8276">socketResult_t</a>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">typedef</span> void (*receiver_func_t)(socketId_t scktId, <span class="keywordtype">void</span> *data, uint16_t dataSz);</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="sockets_8h.html#a31421c2c2ed9b8c0ac84f91d0c6027e5">   44</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="sockets_8h.html#a31421c2c2ed9b8c0ac84f91d0c6027e5">receiver_func_t</a>)(<a class="code" href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">socketId_t</a> scktId, <span class="keywordtype">void</span> *data, uint16_t dataSz);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structsocket_ctrl__tag.html">   47</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsocket_ctrl__tag.html">socketCtrl_tag</a></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    protocol_t protocol;            <span class="comment">// application public protocol: UDP/TCP/SSL/HTTP/MQTT etc.</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    socketId_t socketId;            <span class="comment">// socket number</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> open;                      <span class="comment">// has the application opened this socket</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> dataPending;               <span class="comment">// BGx reported data pending</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    uint8_t dataBufferIndx;         <span class="comment">// buffer indx holding data </span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    uint8_t pdpContextId;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    receiver_func_t receiver_func;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;} <a class="code" href="structsocket_ctrl__tag.html">socketCtrl_t</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structsocket_ctrl__tag.html#a60b084aaf44cc3f9359e1e93f92c162f">   49</a></span>&#160;    <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5f">protocol_t</a> <a class="code" href="structsocket_ctrl__tag.html#a60b084aaf44cc3f9359e1e93f92c162f">protocol</a>;            <span class="comment">// application public protocol: UDP/TCP/SSL/HTTP/MQTT etc.</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structsocket_ctrl__tag.html#aa67a15da6991635f5e111a8130c45bb4">   50</a></span>&#160;    <a class="code" href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">socketId_t</a> <a class="code" href="structsocket_ctrl__tag.html#aa67a15da6991635f5e111a8130c45bb4">socketId</a>;            <span class="comment">// socket number</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structsocket_ctrl__tag.html#a8c7e45250b1eb6821dd59fb2a9a016d7">   51</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structsocket_ctrl__tag.html#a8c7e45250b1eb6821dd59fb2a9a016d7">open</a>;                      <span class="comment">// has the application opened this socket</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structsocket_ctrl__tag.html#a0aa4b1a1d45612b09ac1926c0006ef61">   52</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structsocket_ctrl__tag.html#a0aa4b1a1d45612b09ac1926c0006ef61">dataPending</a>;               <span class="comment">// BGx reported data pending</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structsocket_ctrl__tag.html#adab807efc09cb10f5017455fd0a8f701">   53</a></span>&#160;    uint8_t <a class="code" href="structsocket_ctrl__tag.html#adab807efc09cb10f5017455fd0a8f701">dataBufferIndx</a>;         <span class="comment">// buffer indx holding data </span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structsocket_ctrl__tag.html#af022b7937f29e6346f0ef344d1ea8e4a">   54</a></span>&#160;    uint8_t <a class="code" href="structsocket_ctrl__tag.html#af022b7937f29e6346f0ef344d1ea8e4a">pdpContextId</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structsocket_ctrl__tag.html#a94ab9d935477e80c1ad121b414036fe1">   55</a></span>&#160;    <a class="code" href="sockets_8h.html#a31421c2c2ed9b8c0ac84f91d0c6027e5">receiver_func_t</a> <a class="code" href="structsocket_ctrl__tag.html#a94ab9d935477e80c1ad121b414036fe1">receiver_func</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="sockets_8h.html#a74d98e23a65a8898f1e87ff7ba81bdd9">   56</a></span>&#160;} <a class="code" href="sockets_8h.html#a74d98e23a65a8898f1e87ff7ba81bdd9">socketCtrl_t</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structsockets__tag.html">   59</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsockets__tag.html">sockets_tag</a></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="structsocket_ctrl__tag.html">socketCtrl_t</a> socketCtrls[LTEM1_SOCKET_COUNT];</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structsockets__tag.html#ada7d60b0e970ad5d81107853bb4907e7">   61</a></span>&#160;    <a class="code" href="structsocket_ctrl__tag.html">socketCtrl_t</a> <a class="code" href="structsockets__tag.html#ada7d60b0e970ad5d81107853bb4907e7">socketCtrls</a>[<a class="code" href="ltem1c_8h.html#a8f675b08de9e665dfc0c4a8205d3eb9f">LTEM1_SOCKET_COUNT</a>];</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;} <a class="code" href="structsockets__tag.html">sockets_t</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="sockets_8h.html#a919cf35125bef3806395ac5f49e2b61d">   63</a></span>&#160;} <a class="code" href="sockets_8h.html#a919cf35125bef3806395ac5f49e2b61d">sockets_t</a>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -138,14 +143,14 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<a class="code" href="structsockets__tag.html">sockets_t</a> *sckt_create();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<a class="code" href="structsockets__tag.html">sockets_t</a> *<a class="code" href="sockets_8h.html#ae8a9086120ad6504040b5db042328a0d">sckt_create</a>();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;socketResult_t sckt_open(socketId_t socketId, protocol_t protocol, <span class="keyword">const</span> <span class="keywordtype">char</span> *host, uint16_t rmtPort, uint16_t lclPort, receiver_func_t rcvr_func);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> sckt_close(uint8_t socketNum);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> sckt_reset(uint8_t socketNum);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<a class="code" href="sockets_8h.html#ab7cf20e66a2d8ef88c5befa4f4bf8276">socketResult_t</a> <a class="code" href="sockets_8h.html#a87ad7c6255c73ac3069902a28024469c">sckt_open</a>(<a class="code" href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">socketId_t</a> socketId, <a class="code" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5f">protocol_t</a> protocol, <span class="keyword">const</span> <span class="keywordtype">char</span> *host, uint16_t rmtPort, uint16_t lclPort, <a class="code" href="sockets_8h.html#a31421c2c2ed9b8c0ac84f91d0c6027e5">receiver_func_t</a> rcvr_func);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sockets_8h.html#ac5fafa0b43b91673f4d35293aa1693d1">sckt_close</a>(uint8_t socketNum);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sockets_8h.html#aa983e35228a0853dab1b143e3f752bc2">sckt_reset</a>(uint8_t socketNum);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;socketResult_t sckt_send(socketId_t socketId, <span class="keyword">const</span> <span class="keywordtype">char</span> *data, uint16_t dataSz);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span> sckt_doWork();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<a class="code" href="sockets_8h.html#ab7cf20e66a2d8ef88c5befa4f4bf8276">socketResult_t</a> <a class="code" href="sockets_8h.html#a7c9f32544b937ebb7f63e9499ef15e82">sckt_send</a>(<a class="code" href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">socketId_t</a> socketId, <span class="keyword">const</span> <span class="keywordtype">char</span> *data, uint16_t dataSz);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sockets_8h.html#accd2287873108ebef20cdf22563105c4">sckt_doWork</a>();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -154,8 +159,30 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* !__IP_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="asockets_8h_html_ab7cf20e66a2d8ef88c5befa4f4bf8276"><div class="ttname"><a href="sockets_8h.html#ab7cf20e66a2d8ef88c5befa4f4bf8276">socketResult_t</a></div><div class="ttdeci">uint16_t socketResult_t</div><div class="ttdef"><b>Definition:</b> sockets.h:42</div></div>
+<div class="ttc" id="astructsocket_ctrl__tag_html_a94ab9d935477e80c1ad121b414036fe1"><div class="ttname"><a href="structsocket_ctrl__tag.html#a94ab9d935477e80c1ad121b414036fe1">socketCtrl_tag::receiver_func</a></div><div class="ttdeci">receiver_func_t receiver_func</div><div class="ttdef"><b>Definition:</b> sockets.h:55</div></div>
+<div class="ttc" id="asockets_8h_html_a74d98e23a65a8898f1e87ff7ba81bdd9"><div class="ttname"><a href="sockets_8h.html#a74d98e23a65a8898f1e87ff7ba81bdd9">socketCtrl_t</a></div><div class="ttdeci">struct socketCtrl_tag socketCtrl_t</div></div>
+<div class="ttc" id="asockets_8h_html_a31421c2c2ed9b8c0ac84f91d0c6027e5"><div class="ttname"><a href="sockets_8h.html#a31421c2c2ed9b8c0ac84f91d0c6027e5">receiver_func_t</a></div><div class="ttdeci">void(* receiver_func_t)(socketId_t scktId, void *data, uint16_t dataSz)</div><div class="ttdef"><b>Definition:</b> sockets.h:44</div></div>
 <div class="ttc" id="astructsockets__tag_html"><div class="ttname"><a href="structsockets__tag.html">sockets_tag</a></div><div class="ttdef"><b>Definition:</b> sockets.h:60</div></div>
+<div class="ttc" id="asockets_8h_html_aeb1420e8be8247110f490e2fc48881b7"><div class="ttname"><a href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">socketId_t</a></div><div class="ttdeci">uint8_t socketId_t</div><div class="ttdef"><b>Definition:</b> sockets.h:41</div></div>
+<div class="ttc" id="asockets_8h_html_ae8a9086120ad6504040b5db042328a0d"><div class="ttname"><a href="sockets_8h.html#ae8a9086120ad6504040b5db042328a0d">sckt_create</a></div><div class="ttdeci">sockets_t * sckt_create()</div><div class="ttdoc">Initialize the IP protocols structure.</div><div class="ttdef"><b>Definition:</b> sockets.c:38</div></div>
+<div class="ttc" id="asockets_8h_html_ac5fafa0b43b91673f4d35293aa1693d1"><div class="ttname"><a href="sockets_8h.html#ac5fafa0b43b91673f4d35293aa1693d1">sckt_close</a></div><div class="ttdeci">void sckt_close(uint8_t socketNum)</div><div class="ttdoc">Close an established (open) connection socket.</div><div class="ttdef"><b>Definition:</b> sockets.c:162</div></div>
+<div class="ttc" id="astructsocket_ctrl__tag_html_a0aa4b1a1d45612b09ac1926c0006ef61"><div class="ttname"><a href="structsocket_ctrl__tag.html#a0aa4b1a1d45612b09ac1926c0006ef61">socketCtrl_tag::dataPending</a></div><div class="ttdeci">bool dataPending</div><div class="ttdef"><b>Definition:</b> sockets.h:52</div></div>
+<div class="ttc" id="astructsocket_ctrl__tag_html_adab807efc09cb10f5017455fd0a8f701"><div class="ttname"><a href="structsocket_ctrl__tag.html#adab807efc09cb10f5017455fd0a8f701">socketCtrl_tag::dataBufferIndx</a></div><div class="ttdeci">uint8_t dataBufferIndx</div><div class="ttdef"><b>Definition:</b> sockets.h:53</div></div>
+<div class="ttc" id="astructsocket_ctrl__tag_html_a8c7e45250b1eb6821dd59fb2a9a016d7"><div class="ttname"><a href="structsocket_ctrl__tag.html#a8c7e45250b1eb6821dd59fb2a9a016d7">socketCtrl_tag::open</a></div><div class="ttdeci">bool open</div><div class="ttdef"><b>Definition:</b> sockets.h:51</div></div>
+<div class="ttc" id="asockets_8h_html_a87ad7c6255c73ac3069902a28024469c"><div class="ttname"><a href="sockets_8h.html#a87ad7c6255c73ac3069902a28024469c">sckt_open</a></div><div class="ttdeci">socketResult_t sckt_open(socketId_t socketId, protocol_t protocol, const char *host, uint16_t rmtPort, uint16_t lclPort, receiver_func_t rcvr_func)</div><div class="ttdoc">Open a data connection (socket) to d data to an established endpoint via protocol used to open socket...</div><div class="ttdef"><b>Definition:</b> sockets.c:76</div></div>
+<div class="ttc" id="asockets_8h_html_a7c9f32544b937ebb7f63e9499ef15e82"><div class="ttname"><a href="sockets_8h.html#a7c9f32544b937ebb7f63e9499ef15e82">sckt_send</a></div><div class="ttdeci">socketResult_t sckt_send(socketId_t socketId, const char *data, uint16_t dataSz)</div><div class="ttdoc">Send data to an established endpoint via protocol used to open socket (TCP/UDP/TCP INCOMING).</div><div class="ttdef"><b>Definition:</b> sockets.c:206</div></div>
+<div class="ttc" id="asockets_8h_html_accd2287873108ebef20cdf22563105c4"><div class="ttname"><a href="sockets_8h.html#accd2287873108ebef20cdf22563105c4">sckt_doWork</a></div><div class="ttdeci">void sckt_doWork()</div><div class="ttdoc">Perform background tasks to move socket data through pipeline and update status values.</div><div class="ttdef"><b>Definition:</b> sockets.c:240</div></div>
+<div class="ttc" id="astructsocket_ctrl__tag_html_aa67a15da6991635f5e111a8130c45bb4"><div class="ttname"><a href="structsocket_ctrl__tag.html#aa67a15da6991635f5e111a8130c45bb4">socketCtrl_tag::socketId</a></div><div class="ttdeci">socketId_t socketId</div><div class="ttdef"><b>Definition:</b> sockets.h:50</div></div>
+<div class="ttc" id="asockets_8h_html_aa983e35228a0853dab1b143e3f752bc2"><div class="ttname"><a href="sockets_8h.html#aa983e35228a0853dab1b143e3f752bc2">sckt_reset</a></div><div class="ttdeci">void sckt_reset(uint8_t socketNum)</div><div class="ttdoc">Reset open socket connection. This function drains the connection's data pipeline.</div><div class="ttdef"><b>Definition:</b> sockets.c:190</div></div>
 <div class="ttc" id="astructsocket_ctrl__tag_html"><div class="ttname"><a href="structsocket_ctrl__tag.html">socketCtrl_tag</a></div><div class="ttdef"><b>Definition:</b> sockets.h:48</div></div>
+<div class="ttc" id="altem1c_8h_html"><div class="ttname"><a href="ltem1c_8h.html">ltem1c.h</a></div></div>
+<div class="ttc" id="astructsocket_ctrl__tag_html_af022b7937f29e6346f0ef344d1ea8e4a"><div class="ttname"><a href="structsocket_ctrl__tag.html#af022b7937f29e6346f0ef344d1ea8e4a">socketCtrl_tag::pdpContextId</a></div><div class="ttdeci">uint8_t pdpContextId</div><div class="ttdef"><b>Definition:</b> sockets.h:54</div></div>
+<div class="ttc" id="astructsocket_ctrl__tag_html_a60b084aaf44cc3f9359e1e93f92c162f"><div class="ttname"><a href="structsocket_ctrl__tag.html#a60b084aaf44cc3f9359e1e93f92c162f">socketCtrl_tag::protocol</a></div><div class="ttdeci">protocol_t protocol</div><div class="ttdef"><b>Definition:</b> sockets.h:49</div></div>
+<div class="ttc" id="asockets_8h_html_a919cf35125bef3806395ac5f49e2b61d"><div class="ttname"><a href="sockets_8h.html#a919cf35125bef3806395ac5f49e2b61d">sockets_t</a></div><div class="ttdeci">struct sockets_tag sockets_t</div></div>
+<div class="ttc" id="anetwork_8h_html_a91e19fa4fff461493e1a41f7c7aa4e5f"><div class="ttname"><a href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5f">protocol_t</a></div><div class="ttdeci">protocol_t</div><div class="ttdef"><b>Definition:</b> network.h:36</div></div>
+<div class="ttc" id="astructsockets__tag_html_ada7d60b0e970ad5d81107853bb4907e7"><div class="ttname"><a href="structsockets__tag.html#ada7d60b0e970ad5d81107853bb4907e7">sockets_tag::socketCtrls</a></div><div class="ttdeci">socketCtrl_t socketCtrls[LTEM1_SOCKET_COUNT]</div><div class="ttdef"><b>Definition:</b> sockets.h:61</div></div>
+<div class="ttc" id="altem1c_8h_html_a8f675b08de9e665dfc0c4a8205d3eb9f"><div class="ttname"><a href="ltem1c_8h.html#a8f675b08de9e665dfc0c4a8205d3eb9f">LTEM1_SOCKET_COUNT</a></div><div class="ttdeci">#define LTEM1_SOCKET_COUNT</div><div class="ttdef"><b>Definition:</b> ltem1c.h:61</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

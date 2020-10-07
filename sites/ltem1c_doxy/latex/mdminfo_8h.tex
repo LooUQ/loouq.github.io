@@ -1,0 +1,96 @@
+\hypertarget{mdminfo_8h}{}\doxysection{src/mdminfo.h File Reference}
+\label{mdminfo_8h}\index{src/mdminfo.h@{src/mdminfo.h}}
+{\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmodem_info__tag}{modem\+Info\+\_\+tag}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mdminfo_8h_afdd47f2e64bfe1c3efd8df695a225738}{M\+D\+M\+I\+N\+F\+O\+\_\+\+I\+M\+E\+I\+\_\+\+SZ}}~= 16
+\item 
+\#define \mbox{\hyperlink{mdminfo_8h_acdc8a423237b4912557c65828385de97}{M\+D\+M\+I\+N\+F\+O\+\_\+\+I\+C\+C\+I\+D\+\_\+\+SZ}}~= 21
+\item 
+\#define \mbox{\hyperlink{mdminfo_8h_a09b9a0eae54d0009c31edff92d3e2dc9}{M\+D\+M\+I\+N\+F\+O\+\_\+\+F\+W\+V\+E\+R\+\_\+\+SZ}}~= 41
+\item 
+\#define \mbox{\hyperlink{mdminfo_8h_ae48fa359712eb0417e075234d283fa71}{M\+D\+M\+I\+N\+F\+O\+\_\+\+M\+F\+G\+I\+N\+F\+O\+\_\+\+SZ}}~41
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structmodem_info__tag}{modem\+Info\+\_\+tag}} \mbox{\hyperlink{mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}} \mbox{\hyperlink{mdminfo_8h_a26d96f4a00ecb5c1b7a8f078437b7f1e}{mdminfo\+\_\+ltem1}} ()
+\begin{DoxyCompactList}\small\item\em Get the L\+T\+Em1 static device identification\textbackslash{}provisioning information. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{mdminfo_8h_a1d9b7f567f1ad5f5393d1bd84b461fa0}{mdminfo\+\_\+rssi}} ()
+\begin{DoxyCompactList}\small\item\em Get the static device provisioning information about the L\+T\+Em1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mdminfo_8h_a09b9a0eae54d0009c31edff92d3e2dc9}\label{mdminfo_8h_a09b9a0eae54d0009c31edff92d3e2dc9}} 
+\index{mdminfo.h@{mdminfo.h}!MDMINFO\_FWVER\_SZ@{MDMINFO\_FWVER\_SZ}}
+\index{MDMINFO\_FWVER\_SZ@{MDMINFO\_FWVER\_SZ}!mdminfo.h@{mdminfo.h}}
+\doxysubsubsection{\texorpdfstring{MDMINFO\_FWVER\_SZ}{MDMINFO\_FWVER\_SZ}}
+{\footnotesize\ttfamily \#define M\+D\+M\+I\+N\+F\+O\+\_\+\+F\+W\+V\+E\+R\+\_\+\+SZ~= 41}
+
+\mbox{\Hypertarget{mdminfo_8h_acdc8a423237b4912557c65828385de97}\label{mdminfo_8h_acdc8a423237b4912557c65828385de97}} 
+\index{mdminfo.h@{mdminfo.h}!MDMINFO\_ICCID\_SZ@{MDMINFO\_ICCID\_SZ}}
+\index{MDMINFO\_ICCID\_SZ@{MDMINFO\_ICCID\_SZ}!mdminfo.h@{mdminfo.h}}
+\doxysubsubsection{\texorpdfstring{MDMINFO\_ICCID\_SZ}{MDMINFO\_ICCID\_SZ}}
+{\footnotesize\ttfamily \#define M\+D\+M\+I\+N\+F\+O\+\_\+\+I\+C\+C\+I\+D\+\_\+\+SZ~= 21}
+
+\mbox{\Hypertarget{mdminfo_8h_afdd47f2e64bfe1c3efd8df695a225738}\label{mdminfo_8h_afdd47f2e64bfe1c3efd8df695a225738}} 
+\index{mdminfo.h@{mdminfo.h}!MDMINFO\_IMEI\_SZ@{MDMINFO\_IMEI\_SZ}}
+\index{MDMINFO\_IMEI\_SZ@{MDMINFO\_IMEI\_SZ}!mdminfo.h@{mdminfo.h}}
+\doxysubsubsection{\texorpdfstring{MDMINFO\_IMEI\_SZ}{MDMINFO\_IMEI\_SZ}}
+{\footnotesize\ttfamily \#define M\+D\+M\+I\+N\+F\+O\+\_\+\+I\+M\+E\+I\+\_\+\+SZ~= 16}
+
+\mbox{\Hypertarget{mdminfo_8h_ae48fa359712eb0417e075234d283fa71}\label{mdminfo_8h_ae48fa359712eb0417e075234d283fa71}} 
+\index{mdminfo.h@{mdminfo.h}!MDMINFO\_MFGINFO\_SZ@{MDMINFO\_MFGINFO\_SZ}}
+\index{MDMINFO\_MFGINFO\_SZ@{MDMINFO\_MFGINFO\_SZ}!mdminfo.h@{mdminfo.h}}
+\doxysubsubsection{\texorpdfstring{MDMINFO\_MFGINFO\_SZ}{MDMINFO\_MFGINFO\_SZ}}
+{\footnotesize\ttfamily \#define M\+D\+M\+I\+N\+F\+O\+\_\+\+M\+F\+G\+I\+N\+F\+O\+\_\+\+SZ~41}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}\label{mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}} 
+\index{mdminfo.h@{mdminfo.h}!modemInfo\_t@{modemInfo\_t}}
+\index{modemInfo\_t@{modemInfo\_t}!mdminfo.h@{mdminfo.h}}
+\doxysubsubsection{\texorpdfstring{modemInfo\_t}{modemInfo\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmodem_info__tag}{modem\+Info\+\_\+tag}} \mbox{\hyperlink{mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mdminfo_8h_a26d96f4a00ecb5c1b7a8f078437b7f1e}\label{mdminfo_8h_a26d96f4a00ecb5c1b7a8f078437b7f1e}} 
+\index{mdminfo.h@{mdminfo.h}!mdminfo\_ltem1@{mdminfo\_ltem1}}
+\index{mdminfo\_ltem1@{mdminfo\_ltem1}!mdminfo.h@{mdminfo.h}}
+\doxysubsubsection{\texorpdfstring{mdminfo\_ltem1()}{mdminfo\_ltem1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}} mdminfo\+\_\+ltem1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the L\+T\+Em1 static device identification\textbackslash{}provisioning information. 
+
+\begin{DoxyReturn}{Returns}
+Modem information structure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mdminfo_8h_a1d9b7f567f1ad5f5393d1bd84b461fa0}\label{mdminfo_8h_a1d9b7f567f1ad5f5393d1bd84b461fa0}} 
+\index{mdminfo.h@{mdminfo.h}!mdminfo\_rssi@{mdminfo\_rssi}}
+\index{mdminfo\_rssi@{mdminfo\_rssi}!mdminfo.h@{mdminfo.h}}
+\doxysubsubsection{\texorpdfstring{mdminfo\_rssi()}{mdminfo\_rssi()}}
+{\footnotesize\ttfamily int16\+\_\+t mdminfo\+\_\+rssi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the static device provisioning information about the L\+T\+Em1. 
+
+\begin{DoxyReturn}{Returns}
+The radio signal strength in the range of -\/51d\+Bm to -\/113d\+Bm (-\/999 is no signal) 
+\end{DoxyReturn}

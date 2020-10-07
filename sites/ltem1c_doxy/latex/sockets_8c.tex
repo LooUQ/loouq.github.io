@@ -1,0 +1,168 @@
+\hypertarget{sockets_8c}{}\doxysection{src/sockets.c File Reference}
+\label{sockets_8c}\index{src/sockets.c@{src/sockets.c}}
+{\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dbgprint.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sockets_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}
+\item 
+\#define \mbox{\hyperlink{sockets_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
+\item 
+\#define \mbox{\hyperlink{sockets_8c_aee35eaa645f4efef5d7c2043cbd62ea1}{S\+O\+C\+K\+E\+T\+S\+\_\+\+C\+M\+D\+B\+U\+F\+\_\+\+SZ}}~80
+\item 
+\#define \mbox{\hyperlink{sockets_8c_a600b2e94f8d46a69578f5901a8eefd18}{I\+R\+D\+\_\+\+R\+E\+T\+R\+I\+ES}}~10
+\item 
+\#define \mbox{\hyperlink{sockets_8c_a7b168b578554fea2a14beb34107dd17d}{I\+R\+D\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+X\+SZ}}~1500
+\item 
+\#define \mbox{\hyperlink{sockets_8c_a48b1663a06062f775262a363ce4c9e6d}{A\+S\+C\+I\+I\+\_\+s\+S\+E\+N\+D\+OK}}~\char`\"{}S\+E\+ND O\+K\textbackslash{}r\textbackslash{}n\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sockets_8h_a919cf35125bef3806395ac5f49e2b61d}{sockets\+\_\+t}} $\ast$ \mbox{\hyperlink{sockets_8c_ae8a9086120ad6504040b5db042328a0d}{sckt\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the IP protocols structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} \mbox{\hyperlink{sockets_8c_a87ad7c6255c73ac3069902a28024469c}{sckt\+\_\+open}} (\mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} socket\+Id, \mbox{\hyperlink{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5f}{protocol\+\_\+t}} protocol, const char $\ast$host, uint16\+\_\+t rmt\+Port, uint16\+\_\+t lcl\+Port, \mbox{\hyperlink{sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}{receiver\+\_\+func\+\_\+t}} rcvr\+\_\+func)
+\begin{DoxyCompactList}\small\item\em Open a data connection (socket) to d data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sockets_8c_a938a6003effe7eece78f0de391e99891}{sckt\+\_\+close}} (uint8\+\_\+t socket\+Id)
+\begin{DoxyCompactList}\small\item\em Close an established (open) connection socket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sockets_8c_a441ffe9e7b3f84a8fd606149766dae64}{sckt\+\_\+reset}} (uint8\+\_\+t socket\+Id)
+\begin{DoxyCompactList}\small\item\em Reset open socket connection. This function drains the connection\textquotesingle{}s data pipeline. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} \mbox{\hyperlink{sockets_8c_a7c9f32544b937ebb7f63e9499ef15e82}{sckt\+\_\+send}} (\mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} socket\+Id, const char $\ast$data, uint16\+\_\+t data\+Sz)
+\begin{DoxyCompactList}\small\item\em Send data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sockets_8c_accd2287873108ebef20cdf22563105c4}{sckt\+\_\+do\+Work}} ()
+\begin{DoxyCompactList}\small\item\em Perform background tasks to move socket data through pipeline and update status values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sockets_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{sockets_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{sockets.c@{sockets.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG}
+
+\mbox{\Hypertarget{sockets_8c_a48b1663a06062f775262a363ce4c9e6d}\label{sockets_8c_a48b1663a06062f775262a363ce4c9e6d}} 
+\index{sockets.c@{sockets.c}!ASCII\_sSENDOK@{ASCII\_sSENDOK}}
+\index{ASCII\_sSENDOK@{ASCII\_sSENDOK}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{ASCII\_sSENDOK}{ASCII\_sSENDOK}}
+{\footnotesize\ttfamily \#define A\+S\+C\+I\+I\+\_\+s\+S\+E\+N\+D\+OK~\char`\"{}S\+E\+ND O\+K\textbackslash{}r\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{sockets_8c_a7b168b578554fea2a14beb34107dd17d}\label{sockets_8c_a7b168b578554fea2a14beb34107dd17d}} 
+\index{sockets.c@{sockets.c}!IRD\_REQ\_MAXSZ@{IRD\_REQ\_MAXSZ}}
+\index{IRD\_REQ\_MAXSZ@{IRD\_REQ\_MAXSZ}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{IRD\_REQ\_MAXSZ}{IRD\_REQ\_MAXSZ}}
+{\footnotesize\ttfamily \#define I\+R\+D\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+X\+SZ~1500}
+
+\mbox{\Hypertarget{sockets_8c_a600b2e94f8d46a69578f5901a8eefd18}\label{sockets_8c_a600b2e94f8d46a69578f5901a8eefd18}} 
+\index{sockets.c@{sockets.c}!IRD\_RETRIES@{IRD\_RETRIES}}
+\index{IRD\_RETRIES@{IRD\_RETRIES}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{IRD\_RETRIES}{IRD\_RETRIES}}
+{\footnotesize\ttfamily \#define I\+R\+D\+\_\+\+R\+E\+T\+R\+I\+ES~10}
+
+\mbox{\Hypertarget{sockets_8c_a74e75242132eaabbc1c512488a135926}\label{sockets_8c_a74e75242132eaabbc1c512488a135926}} 
+\index{sockets.c@{sockets.c}!MIN@{MIN}}
+\index{MIN@{MIN}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (x) \+: (y))}
+
+\mbox{\Hypertarget{sockets_8c_aee35eaa645f4efef5d7c2043cbd62ea1}\label{sockets_8c_aee35eaa645f4efef5d7c2043cbd62ea1}} 
+\index{sockets.c@{sockets.c}!SOCKETS\_CMDBUF\_SZ@{SOCKETS\_CMDBUF\_SZ}}
+\index{SOCKETS\_CMDBUF\_SZ@{SOCKETS\_CMDBUF\_SZ}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{SOCKETS\_CMDBUF\_SZ}{SOCKETS\_CMDBUF\_SZ}}
+{\footnotesize\ttfamily \#define S\+O\+C\+K\+E\+T\+S\+\_\+\+C\+M\+D\+B\+U\+F\+\_\+\+SZ~80}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sockets_8c_a938a6003effe7eece78f0de391e99891}\label{sockets_8c_a938a6003effe7eece78f0de391e99891}} 
+\index{sockets.c@{sockets.c}!sckt\_close@{sckt\_close}}
+\index{sckt\_close@{sckt\_close}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_close()}{sckt\_close()}}
+{\footnotesize\ttfamily void sckt\+\_\+close (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{socket\+Id }\end{DoxyParamCaption})}
+
+
+
+Close an established (open) connection socket. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em socket\+Num} & -\/ The connection socket to close. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sockets_8c_ae8a9086120ad6504040b5db042328a0d}\label{sockets_8c_ae8a9086120ad6504040b5db042328a0d}} 
+\index{sockets.c@{sockets.c}!sckt\_create@{sckt\_create}}
+\index{sckt\_create@{sckt\_create}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_create()}{sckt\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sockets_8h_a919cf35125bef3806395ac5f49e2b61d}{sockets\+\_\+t}}$\ast$ sckt\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the IP protocols structure. 
+
+\mbox{\Hypertarget{sockets_8c_accd2287873108ebef20cdf22563105c4}\label{sockets_8c_accd2287873108ebef20cdf22563105c4}} 
+\index{sockets.c@{sockets.c}!sckt\_doWork@{sckt\_doWork}}
+\index{sckt\_doWork@{sckt\_doWork}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_doWork()}{sckt\_doWork()}}
+{\footnotesize\ttfamily void sckt\+\_\+do\+Work (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform background tasks to move socket data through pipeline and update status values. 
+
+\mbox{\Hypertarget{sockets_8c_a87ad7c6255c73ac3069902a28024469c}\label{sockets_8c_a87ad7c6255c73ac3069902a28024469c}} 
+\index{sockets.c@{sockets.c}!sckt\_open@{sckt\_open}}
+\index{sckt\_open@{sckt\_open}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_open()}{sckt\_open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} sckt\+\_\+open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}}}]{socket\+Id,  }\item[{\mbox{\hyperlink{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5f}{protocol\+\_\+t}}}]{protocol,  }\item[{const char $\ast$}]{host,  }\item[{uint16\+\_\+t}]{rmt\+Port,  }\item[{uint16\+\_\+t}]{lcl\+Port,  }\item[{\mbox{\hyperlink{sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}{receiver\+\_\+func\+\_\+t}}}]{rcvr\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Open a data connection (socket) to d data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em protocol} & The IP protocol to use for the connection (T\+C\+P/\+U\+D\+P/\+T\+CP L\+I\+S\+T\+E\+N\+E\+R/\+U\+DP S\+E\+R\+V\+I\+C\+E/\+S\+SL). \\
+\hline
+\mbox{\texttt{ in}}  & {\em host} & The IP address (string) or domain name of the remote host to communicate with. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rmt\+Port} & The port number at the remote host. \\
+\hline
+\mbox{\texttt{ in}}  & {\em lcl\+Port} & The port number on this side of the conversation, set to 0 to auto-\/assign. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ip\+Receiver\+\_\+func} & The callback function in your application to be notified of received data ready. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sockets_8c_a441ffe9e7b3f84a8fd606149766dae64}\label{sockets_8c_a441ffe9e7b3f84a8fd606149766dae64}} 
+\index{sockets.c@{sockets.c}!sckt\_reset@{sckt\_reset}}
+\index{sckt\_reset@{sckt\_reset}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_reset()}{sckt\_reset()}}
+{\footnotesize\ttfamily void sckt\+\_\+reset (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{socket\+Id }\end{DoxyParamCaption})}
+
+
+
+Reset open socket connection. This function drains the connection\textquotesingle{}s data pipeline. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The connection socket to reset. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sockets_8c_a7c9f32544b937ebb7f63e9499ef15e82}\label{sockets_8c_a7c9f32544b937ebb7f63e9499ef15e82}} 
+\index{sockets.c@{sockets.c}!sckt\_send@{sckt\_send}}
+\index{sckt\_send@{sckt\_send}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_send()}{sckt\_send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} sckt\+\_\+send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}}}]{socket\+Id,  }\item[{const char $\ast$}]{data,  }\item[{uint16\+\_\+t}]{data\+Sz }\end{DoxyParamCaption})}
+
+
+
+Send data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em -\/} & socket\+Id The connection socket returned from open. \\
+\hline
+\mbox{\texttt{ in}}  & {\em -\/} & data A character pointer containing the data to send. \\
+\hline
+\mbox{\texttt{ in}}  & {\em -\/} & data\+Sz The size of the buffer ($<$ 1501 bytes). \\
+\hline
+\end{DoxyParams}

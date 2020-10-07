@@ -1,0 +1,40 @@
+\hypertarget{md_version-history_autotoc_md10}{}\doxysection{v0.\+3 -\/ I\+O\+P Redesign (\+Oct 6, 2020)}\label{md_version-history_autotoc_md10}
+Overhaul of the I\+OP buffering system.
+\begin{DoxyItemize}
+\item Simplified receive buffer management and eliminated copies from receive pipeline
+\begin{DoxyItemize}
+\item Small copy $<$60 chars remains (required) for M\+Q\+TT receives
+\end{DoxyItemize}
+\item Reduce code in I\+SR path, push processing to do\+Work() background path
+\item Finishing M\+Q\+TT support
+\begin{DoxyItemize}
+\item Publish to topic
+\item Subscribe\textbackslash{}unsubscribe to topics
+\item Support for C2D (cloud-\/to-\/device) topic based properties
+\item Receiver events per subscription (subscriptions can share a receiver function or have distinct receiver functions)
+\end{DoxyItemize}
+\item Multiple fixes
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md11}{}\doxysection{v0.\+2 -\/ Fixes and Enhancements (\+Jun 25, 2020)}\label{md_version-history_autotoc_md11}
+
+\begin{DoxyItemize}
+\item T\+C\+P/\+U\+DP large packets (60 $<$ packets $<$=1460 bytes), M\+Q\+T\+T(s) functional, Geo-\/\+Fence support
+\item Improved performance in interrupt servicing
+\item Some memory optimizations
+\item Background tasks alignment for R\+T\+OS and Arduino Scheduler compatibility
+\item Added Geo-\/\+Fence support
+\item F\+O\+TA partial support for D\+F\+O\+TA via H\+T\+T\+PS (file system F\+O\+TA is a roadmap feature )
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md12}{}\doxysection{v0.\+1 -\/ Initial publish}\label{md_version-history_autotoc_md12}
+First release of a functional L\+T\+Em1 driver. Supported sockets (T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL) and limited M\+Q\+TT.
+\begin{DoxyItemize}
+\item Pure C99
+\item Hardware/platform abstraction. Tested on S\+A\+M\+D21 and Arduino foundation but adaptable to R\+T\+OS
+\item Abstraction of AT commands workflow, simple methods allow for invoke and await pattern
+\item Minimal copy design
+\item Network (cellular) connectivity, G\+N\+SS, and AT command support
+\item Initial T\+C\+P/\+U\+DP send/recv (very small packets)
+\item G\+N\+SS (G\+PS) support
+\item Tests (VS Code Arduino) for above
+\item Central I\+OP (input\textbackslash{}output processor) to handle B\+Gx communications and buffer management
+\item Implements T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL clients using a Sockets pattern with receiver events
+\item Started M\+Q\+TT support 
+\end{DoxyItemize}
