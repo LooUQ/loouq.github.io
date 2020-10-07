@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['readme_2emd_708',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+  ['quectel_5fbg_2ec_748',['quectel_bg.c',['../quectel__bg_8c.html',1,'']]],
+  ['quectel_5fbg_2eh_749',['quectel_bg.h',['../quectel__bg_8h.html',1,'']]]
 ];

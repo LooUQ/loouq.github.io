@@ -1,4 +1,4 @@
-Loo\+UQ Circuit River L\+T\+Em1 modem driver implemented in C99 for portability and a small footprint.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\#\# Pre-\/\+Release -\/ v0.\+3 (release candidate)}\label{md__r_e_a_d_m_e_autotoc_md1}
+Loo\+UQ Circuit River L\+T\+Em1 modem driver implemented in C99 for portability and a small footprint.\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\#\# Pre-\/\+Release -\/ v0.\+3 (release candidate)}\label{md__r_e_a_d_m_e_autotoc_md7}
 The Loo\+UQ L\+T\+Em1c driver supports the Loo\+UQ Circuit River L\+T\+Em1 L\+TE modem. The L\+T\+Em1 is designed to allow for cost-\/effective cellular communications in embedded systems by supporting L\+TE C\+A\+T-\/\+M1 and L\+TE C\+A\+T-\/\+N\+B1 (N\+B-\/\+I\+OT) communications. The L\+T\+Em1 is certified for use on the Verizon network and a registered device for the T-\/\+Mobile (formerly Sprint) Curiosity Network. It is also fully tested and supported using Hologram S\+I\+Ms.
 
 \href{https://loouq.github.io/resources/CTA-LTEM1_DataSheet.pdf}{\texttt{ L\+T\+Em1 Modem Specifications}}
@@ -12,12 +12,12 @@ The Loo\+UQ L\+T\+Em1c driver supports the Loo\+UQ Circuit River L\+T\+Em1 L\+TE
 \DoxyHorRuler{0}
   
 
-All of the core (blue) subsystems are functional. Extension subsystems (copper, with wide-\/borders) are optional and can be built into the application, or omitted to reduced code size. Grey boxes indicate future feature areas.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Getting Started}\label{md__r_e_a_d_m_e_autotoc_md3}
+All of the core (blue) subsystems are functional. Extension subsystems (copper, with wide-\/borders) are optional and can be built into the application, or omitted to reduced code size. Grey boxes indicate future feature areas.\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{Getting Started}\label{md__r_e_a_d_m_e_autotoc_md9}
 {\itshape 1st off, thanks for taking a look at the L\+T\+Em1 hardware and L\+T\+Em1c software!}
 
 The best way to get started understanding L\+T\+Em1c and considering it for your projects {\itshape today} is to look at the tests folder in the repository. This will be supplemented in the coming weeks. Working on getting doxygen documentation available soon and some real world example projects. The tests folder contains a series of progressive L\+T\+Em1c tests. Starting with simple platform I/O verification, thru M\+Q\+TT protocol support. Each test builds on a succesful previous level test.
 
-Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{L\+T\+Em1 Subsystems}\label{md__r_e_a_d_m_e_autotoc_md4}
+Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{L\+T\+Em1 Subsystems}\label{md__r_e_a_d_m_e_autotoc_md10}
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
 \hline
@@ -36,4 +36,4 @@ Each test shows the process for initializing, starting services, and a loop exer
 {\itshape mqtt\+\_\+}  &Support for M\+Q\+TT client functionality is built here. Attach, connect, subscribe, unsubscribe and publish all are supported. Limited testing so far on Q\+OS levels and advance features like clean and will. The M\+Q\+TT module supports message properties appended to the topic and has a property parser available.   \\\cline{1-2}
 {\itshape iop\+\_\+}  &Generally you won\textquotesingle{}t directly interact with the iop\+\_\+ subsystem. It performs the buffer management to/from hardware. It interfaces with the action\+\_\+, sockets\+\_\+, and mqtt\+\_\+ subsystems to perform the necessary transfers.   \\\cline{1-2}
 \end{longtabu}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Stay Tuned, Greg}\label{md__r_e_a_d_m_e_autotoc_md5}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{Stay Tuned, Greg}\label{md__r_e_a_d_m_e_autotoc_md11}
