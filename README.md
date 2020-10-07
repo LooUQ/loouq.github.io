@@ -1,1 +1,0 @@
-The LooUQ GitHub Pages
