@@ -28,5 +28,6 @@ var searchData=
   ['coord_5fsz_87',['COORD_SZ',['../geo_8c.html#a2031980b63739295cb00370c562502ea',1,'geo.c']]],
   ['count_88',['count',['../structmqtt_msg_props__tag.html#a20302e2c99a60d3f612dba57e3f6333b',1,'mqttMsgProps_tag']]],
   ['course_89',['course',['../structgnss_location__tag.html#ac6894c88aabf335922736a63b2b87b97',1,'gnssLocation_tag']]],
-  ['cspin_90',['csPin',['../structspi_config__tag.html#a9c751605c57bb71f035da6e6758bc48f',1,'spiConfig_tag']]]
+  ['cspin_90',['csPin',['../structspi_config__tag.html#a9c751605c57bb71f035da6e6758bc48f',1,'spiConfig_tag']]],
+  ['circuit_20river_20_2d_20ltem1c_91',['Circuit River - LTEm1c',['../md__r_e_a_d_m_e.html',1,'']]]
 ];
