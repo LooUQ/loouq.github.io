@@ -71,20 +71,29 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Circular buffer for use in the transmit functions.  
+ <a href="structcbuf__t.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="cbuf_8h_source.html">cbuf.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a56ed84df35de10bdb65e72b184309497"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcbuf__t.html#a56ed84df35de10bdb65e72b184309497">buffer</a></td></tr>
+<tr class="memdesc:a56ed84df35de10bdb65e72b184309497"><td class="mdescLeft">&#160;</td><td class="mdescRight">The internal char buffer storing the text.  <a href="structcbuf__t.html#a56ed84df35de10bdb65e72b184309497">More...</a><br /></td></tr>
 <tr class="separator:a56ed84df35de10bdb65e72b184309497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20358970b1abaf992eb85e071e454653"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcbuf__t.html#a20358970b1abaf992eb85e071e454653">head</a></td></tr>
+<tr class="memdesc:a20358970b1abaf992eb85e071e454653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer offset to the position where the next char will be added (pushed).  <a href="structcbuf__t.html#a20358970b1abaf992eb85e071e454653">More...</a><br /></td></tr>
 <tr class="separator:a20358970b1abaf992eb85e071e454653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff39d864a6594bc5f4a5e365282e00fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcbuf__t.html#aff39d864a6594bc5f4a5e365282e00fe">tail</a></td></tr>
+<tr class="memdesc:aff39d864a6594bc5f4a5e365282e00fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer offset to the consumer position, where the next request will be sourced.  <a href="structcbuf__t.html#aff39d864a6594bc5f4a5e365282e00fe">More...</a><br /></td></tr>
 <tr class="separator:aff39d864a6594bc5f4a5e365282e00fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a245b5bee0d02a20222d815dbeaaac0fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcbuf__t.html#a245b5bee0d02a20222d815dbeaaac0fb">maxlen</a></td></tr>
+<tr class="memdesc:a245b5bee0d02a20222d815dbeaaac0fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total size of the buffer.  <a href="structcbuf__t.html#a245b5bee0d02a20222d815dbeaaac0fb">More...</a><br /></td></tr>
 <tr class="separator:a245b5bee0d02a20222d815dbeaaac0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Circular buffer for use in the transmit functions. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="a56ed84df35de10bdb65e72b184309497"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56ed84df35de10bdb65e72b184309497">&#9670;&nbsp;</a></span>buffer</h2>
 
@@ -96,6 +105,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The internal char buffer storing the text. </p>
 
 </div>
 </div>
@@ -111,6 +122,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Integer offset to the position where the next char will be added (pushed). </p>
+
 </div>
 </div>
 <a id="a245b5bee0d02a20222d815dbeaaac0fb"></a>
@@ -125,6 +138,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The total size of the buffer. </p>
+
 </div>
 </div>
 <a id="aff39d864a6594bc5f4a5e365282e00fe"></a>
@@ -138,6 +153,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Integer offset to the consumer position, where the next request will be sourced. </p>
 
 </div>
 </div>

@@ -2,18 +2,28 @@
 \label{structiop_tx_ctrl_block__tag}\index{iopTxCtrlBlock\_tag@{iopTxCtrlBlock\_tag}}
 
 
+Struct for a I\+OP transmit (TX) buffer control block. Tracks progress of chunk sends to L\+T\+Em1.  
+
+
+
+
 {\ttfamily \#include $<$iop.\+h$>$}
 
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 char $\ast$ \mbox{\hyperlink{structiop_tx_ctrl_block__tag_af29281513dc2bc0d2bf31925d70e540d}{tx\+Buf}}
-\item 
+\begin{DoxyCompactList}\small\item\em Pointer to the base address of the TX buffer. Fixed, doesn\textquotesingle{}t change with operations. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{structiop_tx_ctrl_block__tag_aa6cb6a7df6eea073faf8b5f63726d2f0}{chunk\+Ptr}}
-\item 
+\begin{DoxyCompactList}\small\item\em Pointer to the next \char`\"{}chunk\char`\"{} of data to send to modem. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{structiop_tx_ctrl_block__tag_a053699540c69e6a7285bd3c0e51fc112}{remain\+Sz}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Remaining number of bytes in buffer to send to modem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Struct for a I\+OP transmit (TX) buffer control block. Tracks progress of chunk sends to L\+T\+Em1. 
+
+L\+T\+Em1 S\+PI bridge works with chunks of $\sim$64 bytes (actual transfers are usually 58 -\/ 62 bytes). I\+OP abstracts S\+PI chunks from senders. 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structiop_tx_ctrl_block__tag_aa6cb6a7df6eea073faf8b5f63726d2f0}\label{structiop_tx_ctrl_block__tag_aa6cb6a7df6eea073faf8b5f63726d2f0}} 
@@ -22,17 +32,29 @@ size\+\_\+t \mbox{\hyperlink{structiop_tx_ctrl_block__tag_a053699540c69e6a7285bd
 \doxysubsubsection{\texorpdfstring{chunkPtr}{chunkPtr}}
 {\footnotesize\ttfamily char$\ast$ chunk\+Ptr}
 
+
+
+Pointer to the next \char`\"{}chunk\char`\"{} of data to send to modem. 
+
 \mbox{\Hypertarget{structiop_tx_ctrl_block__tag_a053699540c69e6a7285bd3c0e51fc112}\label{structiop_tx_ctrl_block__tag_a053699540c69e6a7285bd3c0e51fc112}} 
 \index{iopTxCtrlBlock\_tag@{iopTxCtrlBlock\_tag}!remainSz@{remainSz}}
 \index{remainSz@{remainSz}!iopTxCtrlBlock\_tag@{iopTxCtrlBlock\_tag}}
 \doxysubsubsection{\texorpdfstring{remainSz}{remainSz}}
 {\footnotesize\ttfamily size\+\_\+t remain\+Sz}
 
+
+
+Remaining number of bytes in buffer to send to modem. 
+
 \mbox{\Hypertarget{structiop_tx_ctrl_block__tag_af29281513dc2bc0d2bf31925d70e540d}\label{structiop_tx_ctrl_block__tag_af29281513dc2bc0d2bf31925d70e540d}} 
 \index{iopTxCtrlBlock\_tag@{iopTxCtrlBlock\_tag}!txBuf@{txBuf}}
 \index{txBuf@{txBuf}!iopTxCtrlBlock\_tag@{iopTxCtrlBlock\_tag}}
 \doxysubsubsection{\texorpdfstring{txBuf}{txBuf}}
 {\footnotesize\ttfamily char$\ast$ tx\+Buf}
+
+
+
+Pointer to the base address of the TX buffer. Fixed, doesn\textquotesingle{}t change with operations. 
 
 
 

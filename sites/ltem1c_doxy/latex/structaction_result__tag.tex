@@ -2,16 +2,24 @@
 \label{structaction_result__tag}\index{actionResult\_tag@{actionResult\_tag}}
 
 
+Result structure returned from a action request (await or get).  
+
+
+
+
 {\ttfamily \#include $<$actions.\+h$>$}
 
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{structaction_result__tag_aebfca2e66f7adfe0d876ca72b1080052}{status\+Code}}
-\item 
+\begin{DoxyCompactList}\small\item\em The H\+T\+ML style status code, indicates the sucess or failure (type) for the command\textquotesingle{}s invocation. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{structaction_result__tag_a11373f02c42587a1853ad6c8be5fe10e}{response}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The char c-\/string containing the full response from the B\+Gx. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Result structure returned from a action request (await or get). 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structaction_result__tag_a11373f02c42587a1853ad6c8be5fe10e}\label{structaction_result__tag_a11373f02c42587a1853ad6c8be5fe10e}} 
@@ -20,11 +28,19 @@ char $\ast$ \mbox{\hyperlink{structaction_result__tag_a11373f02c42587a1853ad6c8b
 \doxysubsubsection{\texorpdfstring{response}{response}}
 {\footnotesize\ttfamily char$\ast$ response}
 
+
+
+The char c-\/string containing the full response from the B\+Gx. 
+
 \mbox{\Hypertarget{structaction_result__tag_aebfca2e66f7adfe0d876ca72b1080052}\label{structaction_result__tag_aebfca2e66f7adfe0d876ca72b1080052}} 
 \index{actionResult\_tag@{actionResult\_tag}!statusCode@{statusCode}}
 \index{statusCode@{statusCode}!actionResult\_tag@{actionResult\_tag}}
 \doxysubsubsection{\texorpdfstring{statusCode}{statusCode}}
 {\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} status\+Code}
+
+
+
+The H\+T\+ML style status code, indicates the sucess or failure (type) for the command\textquotesingle{}s invocation. 
 
 
 

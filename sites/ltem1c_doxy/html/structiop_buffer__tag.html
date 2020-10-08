@@ -71,28 +71,42 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Struct for a IOP smart buffer. Contains the char buffer and controls to marshall data between IOP and consumer (cmd,sockets,mqtt,etc.).  
+ <a href="structiop_buffer__tag.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="iop_8h_source.html">iop.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:aff2566f4c366b48d73479bef43ee4d2e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a></td></tr>
+<tr class="memdesc:aff2566f4c366b48d73479bef43ee4d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">data buffer, does not change while used.  <a href="structiop_buffer__tag.html#aff2566f4c366b48d73479bef43ee4d2e">More...</a><br /></td></tr>
 <tr class="separator:aff2566f4c366b48d73479bef43ee4d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1b419d45d90e073673bcc74b216210"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html#ade1b419d45d90e073673bcc74b216210">bufferEnd</a></td></tr>
+<tr class="memdesc:ade1b419d45d90e073673bcc74b216210"><td class="mdescLeft">&#160;</td><td class="mdescRight">end of physical buffer  <a href="structiop_buffer__tag.html#ade1b419d45d90e073673bcc74b216210">More...</a><br /></td></tr>
 <tr class="separator:ade1b419d45d90e073673bcc74b216210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a873ff4f063e5db6eabcc2e96671c9591"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html#a873ff4f063e5db6eabcc2e96671c9591">head</a></td></tr>
+<tr class="memdesc:a873ff4f063e5db6eabcc2e96671c9591"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill (in)  <a href="structiop_buffer__tag.html#a873ff4f063e5db6eabcc2e96671c9591">More...</a><br /></td></tr>
 <tr class="separator:a873ff4f063e5db6eabcc2e96671c9591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabb0d62ee491eba71516b8a7137ae4c7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html#aabb0d62ee491eba71516b8a7137ae4c7">prevHead</a></td></tr>
+<tr class="memdesc:aabb0d62ee491eba71516b8a7137ae4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">if the last chunk is copied or consumed immediately used to restore head  <a href="structiop_buffer__tag.html#aabb0d62ee491eba71516b8a7137ae4c7">More...</a><br /></td></tr>
 <tr class="separator:aabb0d62ee491eba71516b8a7137ae4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d574830314033345fbbdc871af29b7d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html#a1d574830314033345fbbdc871af29b7d">tail</a></td></tr>
+<tr class="memdesc:a1d574830314033345fbbdc871af29b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">consumer (out)  <a href="structiop_buffer__tag.html#a1d574830314033345fbbdc871af29b7d">More...</a><br /></td></tr>
 <tr class="separator:a1d574830314033345fbbdc871af29b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac007cc83d8747f0db51b12bf338b8877"><td class="memItemLeft" align="right" valign="top"><a class="el" href="iop_8h.html#afcf2c451d40c6d56cb76f1e79132ed92">iopDataPeer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html#ac007cc83d8747f0db51b12bf338b8877">dataPeer</a></td></tr>
+<tr class="memdesc:ac007cc83d8747f0db51b12bf338b8877"><td class="mdescLeft">&#160;</td><td class="mdescRight">data owner, peer sourcing this data  <a href="structiop_buffer__tag.html#ac007cc83d8747f0db51b12bf338b8877">More...</a><br /></td></tr>
 <tr class="separator:ac007cc83d8747f0db51b12bf338b8877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9204dde30d698dca94e1928c8cfefdbf"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html#a9204dde30d698dca94e1928c8cfefdbf">irdSz</a></td></tr>
+<tr class="memdesc:a9204dde30d698dca94e1928c8cfefdbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of expected bytes (sockets: reported by BGx IRD message)  <a href="structiop_buffer__tag.html#a9204dde30d698dca94e1928c8cfefdbf">More...</a><br /></td></tr>
 <tr class="separator:a9204dde30d698dca94e1928c8cfefdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82a99f40fde1f46139d8a8c5eec8a3aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html#a82a99f40fde1f46139d8a8c5eec8a3aa">dataReady</a></td></tr>
+<tr class="memdesc:a82a99f40fde1f46139d8a8c5eec8a3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">EOT (End-Of-Transmission) reached, either # of expected bytes received or EOT char sequence detected.  <a href="structiop_buffer__tag.html#a82a99f40fde1f46139d8a8c5eec8a3aa">More...</a><br /></td></tr>
 <tr class="separator:a82a99f40fde1f46139d8a8c5eec8a3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Struct for a IOP smart buffer. Contains the char buffer and controls to marshall data between IOP and consumer (cmd,sockets,mqtt,etc.). </p>
+<p>Head and tail reference incoming (head) and outgoing (tail). IOP loads head, consumers (commands,sockets,mqtt,etc.) read from tail. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="aff2566f4c366b48d73479bef43ee4d2e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff2566f4c366b48d73479bef43ee4d2e">&#9670;&nbsp;</a></span>buffer</h2>
 
@@ -104,6 +118,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>data buffer, does not change while used. </p>
 
 </div>
 </div>
@@ -119,6 +135,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>end of physical buffer </p>
+
 </div>
 </div>
 <a id="ac007cc83d8747f0db51b12bf338b8877"></a>
@@ -132,6 +150,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>data owner, peer sourcing this data </p>
 
 </div>
 </div>
@@ -147,6 +167,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>EOT (End-Of-Transmission) reached, either # of expected bytes received or EOT char sequence detected. </p>
+
 </div>
 </div>
 <a id="a873ff4f063e5db6eabcc2e96671c9591"></a>
@@ -160,6 +182,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>fill (in) </p>
 
 </div>
 </div>
@@ -175,6 +199,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>the number of expected bytes (sockets: reported by BGx IRD message) </p>
+
 </div>
 </div>
 <a id="aabb0d62ee491eba71516b8a7137ae4c7"></a>
@@ -189,6 +215,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>if the last chunk is copied or consumed immediately used to restore head </p>
+
 </div>
 </div>
 <a id="a1d574830314033345fbbdc871af29b7d"></a>
@@ -202,6 +230,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>consumer (out) </p>
 
 </div>
 </div>

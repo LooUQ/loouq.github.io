@@ -2,20 +2,28 @@
 \label{structcbuf__t}\index{cbuf\_t@{cbuf\_t}}
 
 
+Circular buffer for use in the transmit functions.  
+
+
+
+
 {\ttfamily \#include $<$cbuf.\+h$>$}
 
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 uint8\+\_\+t $\ast$ \mbox{\hyperlink{structcbuf__t_a56ed84df35de10bdb65e72b184309497}{buffer}}
-\item 
+\begin{DoxyCompactList}\small\item\em The internal char buffer storing the text. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structcbuf__t_a20358970b1abaf992eb85e071e454653}{head}}
-\item 
+\begin{DoxyCompactList}\small\item\em Integer offset to the position where the next char will be added (pushed). \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structcbuf__t_aff39d864a6594bc5f4a5e365282e00fe}{tail}}
-\item 
+\begin{DoxyCompactList}\small\item\em Integer offset to the consumer position, where the next request will be sourced. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structcbuf__t_a245b5bee0d02a20222d815dbeaaac0fb}{maxlen}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The total size of the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Circular buffer for use in the transmit functions. 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structcbuf__t_a56ed84df35de10bdb65e72b184309497}\label{structcbuf__t_a56ed84df35de10bdb65e72b184309497}} 
@@ -24,11 +32,19 @@ int \mbox{\hyperlink{structcbuf__t_a245b5bee0d02a20222d815dbeaaac0fb}{maxlen}}
 \doxysubsubsection{\texorpdfstring{buffer}{buffer}}
 {\footnotesize\ttfamily uint8\+\_\+t$\ast$ buffer}
 
+
+
+The internal char buffer storing the text. 
+
 \mbox{\Hypertarget{structcbuf__t_a20358970b1abaf992eb85e071e454653}\label{structcbuf__t_a20358970b1abaf992eb85e071e454653}} 
 \index{cbuf\_t@{cbuf\_t}!head@{head}}
 \index{head@{head}!cbuf\_t@{cbuf\_t}}
 \doxysubsubsection{\texorpdfstring{head}{head}}
 {\footnotesize\ttfamily int head}
+
+
+
+Integer offset to the position where the next char will be added (pushed). 
 
 \mbox{\Hypertarget{structcbuf__t_a245b5bee0d02a20222d815dbeaaac0fb}\label{structcbuf__t_a245b5bee0d02a20222d815dbeaaac0fb}} 
 \index{cbuf\_t@{cbuf\_t}!maxlen@{maxlen}}
@@ -36,11 +52,19 @@ int \mbox{\hyperlink{structcbuf__t_a245b5bee0d02a20222d815dbeaaac0fb}{maxlen}}
 \doxysubsubsection{\texorpdfstring{maxlen}{maxlen}}
 {\footnotesize\ttfamily int maxlen}
 
+
+
+The total size of the buffer. 
+
 \mbox{\Hypertarget{structcbuf__t_aff39d864a6594bc5f4a5e365282e00fe}\label{structcbuf__t_aff39d864a6594bc5f4a5e365282e00fe}} 
 \index{cbuf\_t@{cbuf\_t}!tail@{tail}}
 \index{tail@{tail}!cbuf\_t@{cbuf\_t}}
 \doxysubsubsection{\texorpdfstring{tail}{tail}}
 {\footnotesize\ttfamily int tail}
+
+
+
+Integer offset to the consumer position, where the next request will be sourced. 
 
 
 

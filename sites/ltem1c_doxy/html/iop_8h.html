@@ -91,10 +91,13 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpeer_type_map__tag.html">peerTypeMap_tag</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html">iopBuffer_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for a IOP smart buffer. Contains the char buffer and controls to marshall data between IOP and consumer (cmd,sockets,mqtt,etc.).  <a href="structiop_buffer__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_tx_ctrl_block__tag.html">iopTxCtrlBlock_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for a IOP transmit (TX) buffer control block. Tracks progress of chunk sends to LTEm1.  <a href="structiop_tx_ctrl_block__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html">iop_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1.  <a href="structiop__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -133,10 +136,13 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a860bd27bc7a3b9593ff71a49def3caef"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structpeer_type_map__tag.html">peerTypeMap_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="iop_8h.html#a860bd27bc7a3b9593ff71a49def3caef">peerTypeMap_t</a></td></tr>
 <tr class="separator:a860bd27bc7a3b9593ff71a49def3caef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f5794d6ebb16471baa9b404dbac155d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structiop_buffer__tag.html">iopBuffer_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">iopBuffer_t</a></td></tr>
+<tr class="memdesc:a1f5794d6ebb16471baa9b404dbac155d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for a IOP smart buffer. Contains the char buffer and controls to marshall data between IOP and consumer (cmd,sockets,mqtt,etc.).  <a href="iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">More...</a><br /></td></tr>
 <tr class="separator:a1f5794d6ebb16471baa9b404dbac155d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f6966fc7b13bc2b2c81c3e1e543da31"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structiop_tx_ctrl_block__tag.html">iopTxCtrlBlock_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="iop_8h.html#a5f6966fc7b13bc2b2c81c3e1e543da31">iopTxCtrlBlock_t</a></td></tr>
+<tr class="memdesc:a5f6966fc7b13bc2b2c81c3e1e543da31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for a IOP transmit (TX) buffer control block. Tracks progress of chunk sends to LTEm1.  <a href="iop_8h.html#a5f6966fc7b13bc2b2c81c3e1e543da31">More...</a><br /></td></tr>
 <tr class="separator:a5f6966fc7b13bc2b2c81c3e1e543da31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ed4c59909ec1a9a0007da89586254ff"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structiop__tag.html">iop_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="iop_8h.html#a1ed4c59909ec1a9a0007da89586254ff">iop_t</a></td></tr>
+<tr class="memdesc:a1ed4c59909ec1a9a0007da89586254ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1.  <a href="iop_8h.html#a1ed4c59909ec1a9a0007da89586254ff">More...</a><br /></td></tr>
 <tr class="separator:a1ed4c59909ec1a9a0007da89586254ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -389,6 +395,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1. </p>
+
 </div>
 </div>
 <a id="a1f5794d6ebb16471baa9b404dbac155d"></a>
@@ -402,6 +410,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Struct for a IOP smart buffer. Contains the char buffer and controls to marshall data between IOP and consumer (cmd,sockets,mqtt,etc.). </p>
+<p>Head and tail reference incoming (head) and outgoing (tail). IOP loads head, consumers (commands,sockets,mqtt,etc.) read from tail. </p>
 
 </div>
 </div>
@@ -430,6 +441,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Struct for a IOP transmit (TX) buffer control block. Tracks progress of chunk sends to LTEm1. </p>
+<p>LTEm1 SPI bridge works with chunks of ~64 bytes (actual transfers are usually 58 - 62 bytes). IOP abstracts SPI chunks from senders. </p>
 
 </div>
 </div>

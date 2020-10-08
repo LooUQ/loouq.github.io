@@ -2,24 +2,32 @@
 \label{structiop__tag}\index{iop\_tag@{iop\_tag}}
 
 
+Struct for the I\+OP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1.  
+
+
+
+
 {\ttfamily \#include $<$iop.\+h$>$}
 
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structcbuf__t}{cbuf\+\_\+t}} $\ast$ \mbox{\hyperlink{structiop__tag_ae8fcab96ab403b0c0b89c2fdd74a2ac8}{tx\+Buf}}
-\item 
+\begin{DoxyCompactList}\small\item\em transmit buffer (there is just one) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}} $\ast$ \mbox{\hyperlink{structiop__tag_aba8a893ba549b27ead7c4ecc7a25b057}{rx\+Cmd\+Buf}}
-\item 
+\begin{DoxyCompactList}\small\item\em command receive buffer, this is the default RX buffer \end{DoxyCompactList}\item 
 \mbox{\hyperlink{iop_8h_afcf2c451d40c6d56cb76f1e79132ed92}{iop\+Data\+Peer\+\_\+t}} \mbox{\hyperlink{structiop__tag_a52048c68d5750b887e72958a6983cdb2}{rx\+Data\+Peer}}
-\item 
+\begin{DoxyCompactList}\small\item\em protocol data source\+: if no peer, I\+OP is in command mode \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{structiop__tag_a03f9c4d94b0bc50d9dec134a4f8f55d0}{rx\+Data\+Buf\+Indx}}
-\item 
+\begin{DoxyCompactList}\small\item\em data goes into this slot rx\+Data\+Bufs \end{DoxyCompactList}\item 
 \mbox{\hyperlink{iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}} $\ast$ \mbox{\hyperlink{structiop__tag_a8022e777adbae0d01364bed96e018a71}{rx\+Data\+Bufs}} \mbox{[}\mbox{\hyperlink{iop_8h_a334b237ed433f40d502f5f17ff4a688c}{I\+O\+P\+\_\+\+R\+X\+\_\+\+D\+A\+T\+A\+B\+U\+F\+F\+E\+R\+S\+\_\+\+M\+AX}}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em the data buffers (smart buffer structs) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{iop_8h_a860bd27bc7a3b9593ff71a49def3caef}{peer\+Type\+Map\+\_\+t}} \mbox{\hyperlink{structiop__tag_ae6a02b1e34b41656319f5197e5a60439}{peer\+Type\+Map}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em map of possible I\+OP peers, used to optimise I\+SR string scanning \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Struct for the I\+OP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structiop__tag_ae6a02b1e34b41656319f5197e5a60439}\label{structiop__tag_ae6a02b1e34b41656319f5197e5a60439}} 
@@ -28,11 +36,19 @@ uint8\+\_\+t \mbox{\hyperlink{structiop__tag_a03f9c4d94b0bc50d9dec134a4f8f55d0}{
 \doxysubsubsection{\texorpdfstring{peerTypeMap}{peerTypeMap}}
 {\footnotesize\ttfamily \mbox{\hyperlink{iop_8h_a860bd27bc7a3b9593ff71a49def3caef}{peer\+Type\+Map\+\_\+t}} peer\+Type\+Map}
 
+
+
+map of possible I\+OP peers, used to optimise I\+SR string scanning 
+
 \mbox{\Hypertarget{structiop__tag_aba8a893ba549b27ead7c4ecc7a25b057}\label{structiop__tag_aba8a893ba549b27ead7c4ecc7a25b057}} 
 \index{iop\_tag@{iop\_tag}!rxCmdBuf@{rxCmdBuf}}
 \index{rxCmdBuf@{rxCmdBuf}!iop\_tag@{iop\_tag}}
 \doxysubsubsection{\texorpdfstring{rxCmdBuf}{rxCmdBuf}}
 {\footnotesize\ttfamily \mbox{\hyperlink{iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}}$\ast$ rx\+Cmd\+Buf}
+
+
+
+command receive buffer, this is the default RX buffer 
 
 \mbox{\Hypertarget{structiop__tag_a03f9c4d94b0bc50d9dec134a4f8f55d0}\label{structiop__tag_a03f9c4d94b0bc50d9dec134a4f8f55d0}} 
 \index{iop\_tag@{iop\_tag}!rxDataBufIndx@{rxDataBufIndx}}
@@ -40,11 +56,19 @@ uint8\+\_\+t \mbox{\hyperlink{structiop__tag_a03f9c4d94b0bc50d9dec134a4f8f55d0}{
 \doxysubsubsection{\texorpdfstring{rxDataBufIndx}{rxDataBufIndx}}
 {\footnotesize\ttfamily uint8\+\_\+t rx\+Data\+Buf\+Indx}
 
+
+
+data goes into this slot rx\+Data\+Bufs 
+
 \mbox{\Hypertarget{structiop__tag_a8022e777adbae0d01364bed96e018a71}\label{structiop__tag_a8022e777adbae0d01364bed96e018a71}} 
 \index{iop\_tag@{iop\_tag}!rxDataBufs@{rxDataBufs}}
 \index{rxDataBufs@{rxDataBufs}!iop\_tag@{iop\_tag}}
 \doxysubsubsection{\texorpdfstring{rxDataBufs}{rxDataBufs}}
 {\footnotesize\ttfamily \mbox{\hyperlink{iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}}$\ast$ rx\+Data\+Bufs\mbox{[}\mbox{\hyperlink{iop_8h_a334b237ed433f40d502f5f17ff4a688c}{I\+O\+P\+\_\+\+R\+X\+\_\+\+D\+A\+T\+A\+B\+U\+F\+F\+E\+R\+S\+\_\+\+M\+AX}}\mbox{]}}
+
+
+
+the data buffers (smart buffer structs) 
 
 \mbox{\Hypertarget{structiop__tag_a52048c68d5750b887e72958a6983cdb2}\label{structiop__tag_a52048c68d5750b887e72958a6983cdb2}} 
 \index{iop\_tag@{iop\_tag}!rxDataPeer@{rxDataPeer}}
@@ -52,11 +76,19 @@ uint8\+\_\+t \mbox{\hyperlink{structiop__tag_a03f9c4d94b0bc50d9dec134a4f8f55d0}{
 \doxysubsubsection{\texorpdfstring{rxDataPeer}{rxDataPeer}}
 {\footnotesize\ttfamily \mbox{\hyperlink{iop_8h_afcf2c451d40c6d56cb76f1e79132ed92}{iop\+Data\+Peer\+\_\+t}} rx\+Data\+Peer}
 
+
+
+protocol data source\+: if no peer, I\+OP is in command mode 
+
 \mbox{\Hypertarget{structiop__tag_ae8fcab96ab403b0c0b89c2fdd74a2ac8}\label{structiop__tag_ae8fcab96ab403b0c0b89c2fdd74a2ac8}} 
 \index{iop\_tag@{iop\_tag}!txBuf@{txBuf}}
 \index{txBuf@{txBuf}!iop\_tag@{iop\_tag}}
 \doxysubsubsection{\texorpdfstring{txBuf}{txBuf}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structcbuf__t}{cbuf\+\_\+t}}$\ast$ tx\+Buf}
+
+
+
+transmit buffer (there is just one) 
 
 
 

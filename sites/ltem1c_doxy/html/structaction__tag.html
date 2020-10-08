@@ -71,26 +71,38 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Structure to control invocation and management of an AT command with the BGx module.  
+ <a href="structaction__tag.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="actions_8h_source.html">actions.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a8664baf8552bdb7eaee20d25a9f3afba"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a8664baf8552bdb7eaee20d25a9f3afba">cmdStr</a> [<a class="el" href="iop_8h.html#ace6954db00eab481db6e35ed4491dd0a">IOP_TX_BUFFER_SZ</a>]</td></tr>
+<tr class="memdesc:a8664baf8552bdb7eaee20d25a9f3afba"><td class="mdescLeft">&#160;</td><td class="mdescRight">AT command string to be passed to the BGx module.  <a href="structaction__tag.html#a8664baf8552bdb7eaee20d25a9f3afba">More...</a><br /></td></tr>
 <tr class="separator:a8664baf8552bdb7eaee20d25a9f3afba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">isOpen</a></td></tr>
+<tr class="memdesc:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation.  <a href="structaction__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">More...</a><br /></td></tr>
 <tr class="separator:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa025870b78196833703150bca54e930a"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#aa025870b78196833703150bca54e930a">invokedAt</a></td></tr>
+<tr class="memdesc:aa025870b78196833703150bca54e930a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tick value at the command invocation, used for timeout detection.  <a href="structaction__tag.html#aa025870b78196833703150bca54e930a">More...</a><br /></td></tr>
 <tr class="separator:aa025870b78196833703150bca54e930a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">resultCode</a></td></tr>
+<tr class="memdesc:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML type response code, 0 is special "pending" status, see ACTION_RESULT_* codes.  <a href="structaction__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">More...</a><br /></td></tr>
 <tr class="separator:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11373f02c42587a1853ad6c8be5fe10e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a></td></tr>
+<tr class="memdesc:a11373f02c42587a1853ad6c8be5fe10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The response to the command received from the BGx.  <a href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">More...</a><br /></td></tr>
 <tr class="separator:a11373f02c42587a1853ad6c8be5fe10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62141174b7f53e381c1ce0ad0b47b867"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a62141174b7f53e381c1ce0ad0b47b867">timeoutMillis</a></td></tr>
+<tr class="memdesc:a62141174b7f53e381c1ce0ad0b47b867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timout in milliseconds for the command, defaults to 300mS. BGx documentation indicates cmds with longer timeout.  <a href="structaction__tag.html#a62141174b7f53e381c1ce0ad0b47b867">More...</a><br /></td></tr>
 <tr class="separator:a62141174b7f53e381c1ce0ad0b47b867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="memItemLeft" align="right" valign="top">uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">taskCompleteParser_func</a> )(const char *<a class="el" href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>, char **endptr)</td></tr>
+<tr class="memdesc:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to parse the response looking for completion.  <a href="structaction__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">More...</a><br /></td></tr>
 <tr class="separator:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Structure to control invocation and management of an AT command with the BGx module. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="a8664baf8552bdb7eaee20d25a9f3afba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8664baf8552bdb7eaee20d25a9f3afba">&#9670;&nbsp;</a></span>cmdStr</h2>
 
@@ -102,6 +114,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>AT command string to be passed to the BGx module. </p>
 
 </div>
 </div>
@@ -117,6 +131,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Tick value at the command invocation, used for timeout detection. </p>
+
 </div>
 </div>
 <a id="a882afa92abc68d9b1fa39a42f56a8b3d"></a>
@@ -130,6 +146,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation. </p>
 
 </div>
 </div>
@@ -145,6 +163,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The response to the command received from the BGx. </p>
+
 </div>
 </div>
 <a id="adc00dec5f45402bb5c65d7451fb4d3ad"></a>
@@ -158,6 +178,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>HTML type response code, 0 is special "pending" status, see ACTION_RESULT_* codes. </p>
 
 </div>
 </div>
@@ -173,6 +195,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Function to parse the response looking for completion. </p>
+
 </div>
 </div>
 <a id="a62141174b7f53e381c1ce0ad0b47b867"></a>
@@ -186,6 +210,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Timout in milliseconds for the command, defaults to 300mS. BGx documentation indicates cmds with longer timeout. </p>
 
 </div>
 </div>

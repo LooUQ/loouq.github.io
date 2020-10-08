@@ -11,11 +11,11 @@
 struct \mbox{\hyperlink{structpeer_type_map__tag}{peer\+Type\+Map\+\_\+tag}}
 \item 
 struct \mbox{\hyperlink{structiop_buffer__tag}{iop\+Buffer\+\_\+tag}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct for a I\+OP smart buffer. Contains the char buffer and controls to marshall data between I\+OP and consumer (cmd,sockets,mqtt,etc.). \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structiop_tx_ctrl_block__tag}{iop\+Tx\+Ctrl\+Block\+\_\+tag}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct for a I\+OP transmit (TX) buffer control block. Tracks progress of chunk sends to L\+T\+Em1. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structiop__tag}{iop\+\_\+tag}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct for the I\+OP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,11 +53,11 @@ typedef enum \mbox{\hyperlink{iop_8h_adf9145cad45509030860224eec6e656e}{iop\+Dat
 typedef struct \mbox{\hyperlink{structpeer_type_map__tag}{peer\+Type\+Map\+\_\+tag}} \mbox{\hyperlink{iop_8h_a860bd27bc7a3b9593ff71a49def3caef}{peer\+Type\+Map\+\_\+t}}
 \item 
 typedef struct \mbox{\hyperlink{structiop_buffer__tag}{iop\+Buffer\+\_\+tag}} \mbox{\hyperlink{iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct for a I\+OP smart buffer. Contains the char buffer and controls to marshall data between I\+OP and consumer (cmd,sockets,mqtt,etc.). \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structiop_tx_ctrl_block__tag}{iop\+Tx\+Ctrl\+Block\+\_\+tag}} \mbox{\hyperlink{iop_8h_a5f6966fc7b13bc2b2c81c3e1e543da31}{iop\+Tx\+Ctrl\+Block\+\_\+t}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct for a I\+OP transmit (TX) buffer control block. Tracks progress of chunk sends to L\+T\+Em1. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structiop__tag}{iop\+\_\+tag}} \mbox{\hyperlink{iop_8h_a1ed4c59909ec1a9a0007da89586254ff}{iop\+\_\+t}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct for the I\+OP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -187,13 +187,21 @@ void \mbox{\hyperlink{iop_8h_aad96d9d4df9ebc33c08464531f757fb1}{iop\+\_\+reset\+
 \doxysubsubsection{\texorpdfstring{iop\_t}{iop\_t}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structiop__tag}{iop\+\_\+tag}} \mbox{\hyperlink{iop_8h_a1ed4c59909ec1a9a0007da89586254ff}{iop\+\_\+t}}}
 
+
+
+Struct for the I\+OP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. 
+
 \mbox{\Hypertarget{iop_8h_a1f5794d6ebb16471baa9b404dbac155d}\label{iop_8h_a1f5794d6ebb16471baa9b404dbac155d}} 
 \index{iop.h@{iop.h}!iopBuffer\_t@{iopBuffer\_t}}
 \index{iopBuffer\_t@{iopBuffer\_t}!iop.h@{iop.h}}
 \doxysubsubsection{\texorpdfstring{iopBuffer\_t}{iopBuffer\_t}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structiop_buffer__tag}{iop\+Buffer\+\_\+tag}} \mbox{\hyperlink{iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}}}
 
-\mbox{\Hypertarget{iop_8h_afcf2c451d40c6d56cb76f1e79132ed92}\label{iop_8h_afcf2c451d40c6d56cb76f1e79132ed92}} 
+
+
+Struct for a I\+OP smart buffer. Contains the char buffer and controls to marshall data between I\+OP and consumer (cmd,sockets,mqtt,etc.). 
+
+Head and tail reference incoming (head) and outgoing (tail). I\+OP loads head, consumers (commands,sockets,mqtt,etc.) read from tail. \mbox{\Hypertarget{iop_8h_afcf2c451d40c6d56cb76f1e79132ed92}\label{iop_8h_afcf2c451d40c6d56cb76f1e79132ed92}} 
 \index{iop.h@{iop.h}!iopDataPeer\_t@{iopDataPeer\_t}}
 \index{iopDataPeer\_t@{iopDataPeer\_t}!iop.h@{iop.h}}
 \doxysubsubsection{\texorpdfstring{iopDataPeer\_t}{iopDataPeer\_t}}
@@ -205,7 +213,11 @@ void \mbox{\hyperlink{iop_8h_aad96d9d4df9ebc33c08464531f757fb1}{iop\+\_\+reset\+
 \doxysubsubsection{\texorpdfstring{iopTxCtrlBlock\_t}{iopTxCtrlBlock\_t}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structiop_tx_ctrl_block__tag}{iop\+Tx\+Ctrl\+Block\+\_\+tag}} \mbox{\hyperlink{iop_8h_a5f6966fc7b13bc2b2c81c3e1e543da31}{iop\+Tx\+Ctrl\+Block\+\_\+t}}}
 
-\mbox{\Hypertarget{iop_8h_a860bd27bc7a3b9593ff71a49def3caef}\label{iop_8h_a860bd27bc7a3b9593ff71a49def3caef}} 
+
+
+Struct for a I\+OP transmit (TX) buffer control block. Tracks progress of chunk sends to L\+T\+Em1. 
+
+L\+T\+Em1 S\+PI bridge works with chunks of $\sim$64 bytes (actual transfers are usually 58 -\/ 62 bytes). I\+OP abstracts S\+PI chunks from senders. \mbox{\Hypertarget{iop_8h_a860bd27bc7a3b9593ff71a49def3caef}\label{iop_8h_a860bd27bc7a3b9593ff71a49def3caef}} 
 \index{iop.h@{iop.h}!peerTypeMap\_t@{peerTypeMap\_t}}
 \index{peerTypeMap\_t@{peerTypeMap\_t}!iop.h@{iop.h}}
 \doxysubsubsection{\texorpdfstring{peerTypeMap\_t}{peerTypeMap\_t}}

@@ -4,16 +4,16 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structgnss__latlon__tag}{gnss\+\_\+latlon\+\_\+tag}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct containing both the location value (latitude or longitude) and a char indicating direction (char only for D\+MS formats). \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structgnss_location__tag}{gnss\+Location\+\_\+tag}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct containing a G\+N\+SS location fix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \mbox{\hyperlink{structgnss__latlon__tag}{gnss\+\_\+latlon\+\_\+tag}} \mbox{\hyperlink{gnss_8h_a7fb5f996ad0280dea37f6c01720ec081}{gnss\+\_\+latlon\+\_\+t}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct containing both the location value (latitude or longitude) and a char indicating direction (char only for D\+MS formats). \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structgnss_location__tag}{gnss\+Location\+\_\+tag}} \mbox{\hyperlink{gnss_8h_a7208b78f87202cf33a6c2f6dc64cf4b1}{gnss\+Location\+\_\+t}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct containing a G\+N\+SS location fix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,7 +21,7 @@ enum \mbox{\hyperlink{gnss_8h_a46b97d6f8fb57adfb8286e47f114254f}{gnss\+\_\+forma
 \mbox{\hyperlink{gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa5ae188cff5324e72f416cb9d0c7ff983}{gnss\+\_\+format\+\_\+dms\+Precise}} = 1, 
 \mbox{\hyperlink{gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa9af098c45656fbc2d248c4f2283be453}{gnss\+\_\+format\+\_\+dcm\+Degrees}} = 2
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enum describing the output format for location data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,11 +44,19 @@ void \mbox{\hyperlink{gnss_8h_a5739ed960c4cc10339e3a7dbde8b6429}{gnss\+\_\+geo\+
 \doxysubsubsection{\texorpdfstring{gnss\_latlon\_t}{gnss\_latlon\_t}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structgnss__latlon__tag}{gnss\+\_\+latlon\+\_\+tag}} \mbox{\hyperlink{gnss_8h_a7fb5f996ad0280dea37f6c01720ec081}{gnss\+\_\+latlon\+\_\+t}}}
 
+
+
+Struct containing both the location value (latitude or longitude) and a char indicating direction (char only for D\+MS formats). 
+
 \mbox{\Hypertarget{gnss_8h_a7208b78f87202cf33a6c2f6dc64cf4b1}\label{gnss_8h_a7208b78f87202cf33a6c2f6dc64cf4b1}} 
 \index{gnss.h@{gnss.h}!gnssLocation\_t@{gnssLocation\_t}}
 \index{gnssLocation\_t@{gnssLocation\_t}!gnss.h@{gnss.h}}
 \doxysubsubsection{\texorpdfstring{gnssLocation\_t}{gnssLocation\_t}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structgnss_location__tag}{gnss\+Location\+\_\+tag}} \mbox{\hyperlink{gnss_8h_a7208b78f87202cf33a6c2f6dc64cf4b1}{gnss\+Location\+\_\+t}}}
+
+
+
+Struct containing a G\+N\+SS location fix. 
 
 
 
@@ -59,17 +67,21 @@ void \mbox{\hyperlink{gnss_8h_a5739ed960c4cc10339e3a7dbde8b6429}{gnss\+\_\+geo\+
 \doxysubsubsection{\texorpdfstring{gnss\_format\_t}{gnss\_format\_t}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{gnss_8h_a46b97d6f8fb57adfb8286e47f114254f}{gnss\+\_\+format\+\_\+t}}}
 
+
+
+Enum describing the output format for location data. 
+
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{gnss\_format\_dms@{gnss\_format\_dms}!gnss.h@{gnss.h}}\index{gnss.h@{gnss.h}!gnss\_format\_dms@{gnss\_format\_dms}}}\mbox{\Hypertarget{gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa2be7b41c6412b0d4e8a20b25d882ef91}\label{gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa2be7b41c6412b0d4e8a20b25d882ef91}} 
-gnss\+\_\+format\+\_\+dms&\\
+gnss\+\_\+format\+\_\+dms&Output as degrees, minutes; default resolution. Format\+: ddmm.\+mmmm N/S,dddmm.\+mmmm E/W. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{gnss\_format\_dmsPrecise@{gnss\_format\_dmsPrecise}!gnss.h@{gnss.h}}\index{gnss.h@{gnss.h}!gnss\_format\_dmsPrecise@{gnss\_format\_dmsPrecise}}}\mbox{\Hypertarget{gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa5ae188cff5324e72f416cb9d0c7ff983}\label{gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa5ae188cff5324e72f416cb9d0c7ff983}} 
-gnss\+\_\+format\+\_\+dms\+Precise&\\
+gnss\+\_\+format\+\_\+dms\+Precise&Output as degrees, minutes; precise. Format\+: ddmm.\+mmmmmm N/S,dddmm.\+mmmmmm E/W. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{gnss\_format\_dcmDegrees@{gnss\_format\_dcmDegrees}!gnss.h@{gnss.h}}\index{gnss.h@{gnss.h}!gnss\_format\_dcmDegrees@{gnss\_format\_dcmDegrees}}}\mbox{\Hypertarget{gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa9af098c45656fbc2d248c4f2283be453}\label{gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa9af098c45656fbc2d248c4f2283be453}} 
-gnss\+\_\+format\+\_\+dcm\+Degrees&\\
+gnss\+\_\+format\+\_\+dcm\+Degrees&Output as decimal latitude, longitude. Format\+: (-\/)dd.\+ddddd,(-\/)ddd.\+ddddd. \\
 \hline
 
 \end{DoxyEnumFields}

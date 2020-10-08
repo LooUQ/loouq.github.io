@@ -71,24 +71,35 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1.  
+ <a href="structiop__tag.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="iop_8h_source.html">iop.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:ae8fcab96ab403b0c0b89c2fdd74a2ac8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcbuf__t.html">cbuf_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#ae8fcab96ab403b0c0b89c2fdd74a2ac8">txBuf</a></td></tr>
+<tr class="memdesc:ae8fcab96ab403b0c0b89c2fdd74a2ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">transmit buffer (there is just one)  <a href="structiop__tag.html#ae8fcab96ab403b0c0b89c2fdd74a2ac8">More...</a><br /></td></tr>
 <tr class="separator:ae8fcab96ab403b0c0b89c2fdd74a2ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba8a893ba549b27ead7c4ecc7a25b057"><td class="memItemLeft" align="right" valign="top"><a class="el" href="iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">iopBuffer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#aba8a893ba549b27ead7c4ecc7a25b057">rxCmdBuf</a></td></tr>
+<tr class="memdesc:aba8a893ba549b27ead7c4ecc7a25b057"><td class="mdescLeft">&#160;</td><td class="mdescRight">command receive buffer, this is the default RX buffer  <a href="structiop__tag.html#aba8a893ba549b27ead7c4ecc7a25b057">More...</a><br /></td></tr>
 <tr class="separator:aba8a893ba549b27ead7c4ecc7a25b057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52048c68d5750b887e72958a6983cdb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="iop_8h.html#afcf2c451d40c6d56cb76f1e79132ed92">iopDataPeer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a52048c68d5750b887e72958a6983cdb2">rxDataPeer</a></td></tr>
+<tr class="memdesc:a52048c68d5750b887e72958a6983cdb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">protocol data source: if no peer, IOP is in command mode  <a href="structiop__tag.html#a52048c68d5750b887e72958a6983cdb2">More...</a><br /></td></tr>
 <tr class="separator:a52048c68d5750b887e72958a6983cdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03f9c4d94b0bc50d9dec134a4f8f55d0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a03f9c4d94b0bc50d9dec134a4f8f55d0">rxDataBufIndx</a></td></tr>
+<tr class="memdesc:a03f9c4d94b0bc50d9dec134a4f8f55d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">data goes into this slot rxDataBufs  <a href="structiop__tag.html#a03f9c4d94b0bc50d9dec134a4f8f55d0">More...</a><br /></td></tr>
 <tr class="separator:a03f9c4d94b0bc50d9dec134a4f8f55d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8022e777adbae0d01364bed96e018a71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">iopBuffer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a8022e777adbae0d01364bed96e018a71">rxDataBufs</a> [<a class="el" href="iop_8h.html#a334b237ed433f40d502f5f17ff4a688c">IOP_RX_DATABUFFERS_MAX</a>]</td></tr>
+<tr class="memdesc:a8022e777adbae0d01364bed96e018a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">the data buffers (smart buffer structs)  <a href="structiop__tag.html#a8022e777adbae0d01364bed96e018a71">More...</a><br /></td></tr>
 <tr class="separator:a8022e777adbae0d01364bed96e018a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6a02b1e34b41656319f5197e5a60439"><td class="memItemLeft" align="right" valign="top"><a class="el" href="iop_8h.html#a860bd27bc7a3b9593ff71a49def3caef">peerTypeMap_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#ae6a02b1e34b41656319f5197e5a60439">peerTypeMap</a></td></tr>
+<tr class="memdesc:ae6a02b1e34b41656319f5197e5a60439"><td class="mdescLeft">&#160;</td><td class="mdescRight">map of possible IOP peers, used to optimise ISR string scanning  <a href="structiop__tag.html#ae6a02b1e34b41656319f5197e5a60439">More...</a><br /></td></tr>
 <tr class="separator:ae6a02b1e34b41656319f5197e5a60439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="ae6a02b1e34b41656319f5197e5a60439"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6a02b1e34b41656319f5197e5a60439">&#9670;&nbsp;</a></span>peerTypeMap</h2>
 
@@ -100,6 +111,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>map of possible IOP peers, used to optimise ISR string scanning </p>
 
 </div>
 </div>
@@ -115,6 +128,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>command receive buffer, this is the default RX buffer </p>
+
 </div>
 </div>
 <a id="a03f9c4d94b0bc50d9dec134a4f8f55d0"></a>
@@ -128,6 +143,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>data goes into this slot rxDataBufs </p>
 
 </div>
 </div>
@@ -143,6 +160,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>the data buffers (smart buffer structs) </p>
+
 </div>
 </div>
 <a id="a52048c68d5750b887e72958a6983cdb2"></a>
@@ -157,6 +176,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>protocol data source: if no peer, IOP is in command mode </p>
+
 </div>
 </div>
 <a id="ae8fcab96ab403b0c0b89c2fdd74a2ac8"></a>
@@ -170,6 +191,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>transmit buffer (there is just one) </p>
 
 </div>
 </div>

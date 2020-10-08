@@ -69,7 +69,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>LooUQ Circuit River LTEm1 modem driver implemented in C99 for portability and a small footprint.</p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 ## Pre-Release - v0.3 (release candidate)</h1>
 <p>The LooUQ LTEm1c driver supports the LooUQ Circuit River LTEm1 LTE modem. The LTEm1 is designed to allow for cost-effective cellular communications in embedded systems by supporting LTE CAT-M1 and LTE CAT-NB1 (NB-IOT) communications. The LTEm1 is certified for use on the Verizon network and a registered device for the T-Mobile (formerly Sprint) Curiosity Network. It is also fully tested and supported using Hologram SIMs.</p>
 <p><a href="https://loouq.github.io/resources/CTA-LTEM1_DataSheet.pdf">LTEm1 Modem Specifications</a></p>
@@ -81,12 +81,12 @@ $(function() {
 <img src="LTEm1c Stack.png" alt=""/>
 </div>
 <p>All of the core (blue) subsystems are functional. Extension subsystems (copper, with wide-borders) are optional and can be built into the application, or omitted to reduced code size. Grey boxes indicate future feature areas.</p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Getting Started</h1>
 <p><em>1st off, thanks for taking a look at the LTEm1 hardware and LTEm1c software!</em></p>
 <p>The best way to get started understanding LTEm1c and considering it for your projects <em>today</em> is to look at the tests folder in the repository. This will be supplemented in the coming weeks. Working on getting doxygen documentation available soon and some real world example projects. The tests folder contains a series of progressive LTEm1c tests. Starting with simple platform I/O verification, thru MQTT protocol support. Each test builds on a succesful previous level test.</p>
 <p>Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.</p>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 LTEm1 Subsystems</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -106,8 +106,16 @@ LTEm1 Subsystems</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><em>iop_</em>  </td><td class="markdownTableBodyNone">Generally you won't directly interact with the iop_ subsystem. It performs the buffer management to/from hardware. It interfaces with the action_, sockets_, and mqtt_ subsystems to perform the necessary transfers.   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md11"></a>
-Stay Tuned, Greg</h1>
+<h1><a class="anchor" id="autotoc_md12"></a>
+Future Directions</h1>
+<p>If you have an opinion on any of these functions and their applicability to your product\project please let LooUQ know. Send your thoughts to <a href="#" onclick="location.href='mai'+'lto:'+'ans'+'we'+'rs@'+'lo'+'ouq'+'.c'+'om'; return false;">answe<span style="display: none;">.nosp@m.</span>rs@l<span style="display: none;">.nosp@m.</span>oouq.<span style="display: none;">.nosp@m.</span>com</a>.</p><ul>
+<li>Power Management - Support for PSM, wake options, etc.</li>
+<li>HTTP(S) - Support for HTTP client in driver (not using raw TCP)</li>
+<li>FTP(S) - Support for FTP client in driver (not using raw TCP)</li>
+<li>File System - Support for file storage on BGx via driver (BG96 has approx. 10MB available)</li>
+<li>FOTA - Support for scheduled FOTA</li>
+</ul>
+<p>**Stay Tuned, Greg@LooUQ** </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
