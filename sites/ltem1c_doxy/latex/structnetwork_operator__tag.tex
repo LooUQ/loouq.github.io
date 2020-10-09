@@ -2,16 +2,24 @@
 \label{structnetwork_operator__tag}\index{networkOperator\_tag@{networkOperator\_tag}}
 
 
+Struct respresenting an A\+C\+T\+I\+VE network carrier/operator.  
+
+
+
+
 {\ttfamily \#include $<$network.\+h$>$}
 
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 char \mbox{\hyperlink{structnetwork_operator__tag_a6f2492b1f8835c138fc107004ccf4d38}{oper\+Name}} \mbox{[}29\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Carrier name, some carriers may report as 6-\/digit numeric carrier ID. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{structnetwork_operator__tag_abbd2b701684549b371938ae1081cdb9c}{ntwk\+Mode}} \mbox{[}11\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Network carrier protocol mode\+: C\+A\+T\+M-\/1 or N\+B-\/\+I\+OT for B\+Gx. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Struct respresenting an A\+C\+T\+I\+VE network carrier/operator. 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structnetwork_operator__tag_abbd2b701684549b371938ae1081cdb9c}\label{structnetwork_operator__tag_abbd2b701684549b371938ae1081cdb9c}} 
@@ -20,11 +28,19 @@ char \mbox{\hyperlink{structnetwork_operator__tag_abbd2b701684549b371938ae1081cd
 \doxysubsubsection{\texorpdfstring{ntwkMode}{ntwkMode}}
 {\footnotesize\ttfamily char ntwk\+Mode\mbox{[}11\mbox{]}}
 
+
+
+Network carrier protocol mode\+: C\+A\+T\+M-\/1 or N\+B-\/\+I\+OT for B\+Gx. 
+
 \mbox{\Hypertarget{structnetwork_operator__tag_a6f2492b1f8835c138fc107004ccf4d38}\label{structnetwork_operator__tag_a6f2492b1f8835c138fc107004ccf4d38}} 
 \index{networkOperator\_tag@{networkOperator\_tag}!operName@{operName}}
 \index{operName@{operName}!networkOperator\_tag@{networkOperator\_tag}}
 \doxysubsubsection{\texorpdfstring{operName}{operName}}
 {\footnotesize\ttfamily char oper\+Name\mbox{[}29\mbox{]}}
+
+
+
+Carrier name, some carriers may report as 6-\/digit numeric carrier ID. 
 
 
 

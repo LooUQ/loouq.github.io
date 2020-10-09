@@ -5,9 +5,9 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structsocket_ctrl__tag}{socket\+Ctrl\+\_\+tag}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct representing the state of a T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL socket connection. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structsockets__tag}{sockets\+\_\+tag}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct representing the sockets service. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,11 +25,11 @@ typedef uint8\+\_\+t \mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881
 typedef uint16\+\_\+t \mbox{\hyperlink{sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}}
 \item 
 typedef void($\ast$ \mbox{\hyperlink{sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}{receiver\+\_\+func\+\_\+t}}) (\mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} sckt\+Id, void $\ast$data, uint16\+\_\+t data\+Sz)
-\item 
+\begin{DoxyCompactList}\small\item\em typedef for the socket services data receiver function. Connects sockets to the applicatoin (receive). \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structsocket_ctrl__tag}{socket\+Ctrl\+\_\+tag}} \mbox{\hyperlink{sockets_8h_a74d98e23a65a8898f1e87ff7ba81bdd9}{socket\+Ctrl\+\_\+t}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct representing the state of a T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL socket connection. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structsockets__tag}{sockets\+\_\+tag}} \mbox{\hyperlink{sockets_8h_a919cf35125bef3806395ac5f49e2b61d}{sockets\+\_\+t}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct representing the sockets service. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -75,11 +75,19 @@ void \mbox{\hyperlink{sockets_8h_accd2287873108ebef20cdf22563105c4}{sckt\+\_\+do
 \doxysubsubsection{\texorpdfstring{receiver\_func\_t}{receiver\_func\_t}}
 {\footnotesize\ttfamily typedef void($\ast$ receiver\+\_\+func\+\_\+t) (\mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} sckt\+Id, void $\ast$data, uint16\+\_\+t data\+Sz)}
 
+
+
+typedef for the socket services data receiver function. Connects sockets to the applicatoin (receive). 
+
 \mbox{\Hypertarget{sockets_8h_a74d98e23a65a8898f1e87ff7ba81bdd9}\label{sockets_8h_a74d98e23a65a8898f1e87ff7ba81bdd9}} 
 \index{sockets.h@{sockets.h}!socketCtrl\_t@{socketCtrl\_t}}
 \index{socketCtrl\_t@{socketCtrl\_t}!sockets.h@{sockets.h}}
 \doxysubsubsection{\texorpdfstring{socketCtrl\_t}{socketCtrl\_t}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structsocket_ctrl__tag}{socket\+Ctrl\+\_\+tag}} \mbox{\hyperlink{sockets_8h_a74d98e23a65a8898f1e87ff7ba81bdd9}{socket\+Ctrl\+\_\+t}}}
+
+
+
+Struct representing the state of a T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL socket connection. 
 
 \mbox{\Hypertarget{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}\label{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}} 
 \index{sockets.h@{sockets.h}!socketId\_t@{socketId\_t}}
@@ -101,6 +109,10 @@ void \mbox{\hyperlink{sockets_8h_accd2287873108ebef20cdf22563105c4}{sckt\+\_\+do
 
 
 
+Struct representing the sockets service. 
+
+
+
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{sockets_8h_ac5fafa0b43b91673f4d35293aa1693d1}\label{sockets_8h_ac5fafa0b43b91673f4d35293aa1693d1}} 
 \index{sockets.h@{sockets.h}!sckt\_close@{sckt\_close}}
@@ -114,7 +126,7 @@ Close an established (open) connection socket.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em socket\+Num} & -\/ The connection socket to close. \\
+\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The socket ID or number for the connection to close. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{sockets_8h_ae8a9086120ad6504040b5db042328a0d}\label{sockets_8h_ae8a9086120ad6504040b5db042328a0d}} 
@@ -149,15 +161,17 @@ Open a data connection (socket) to d data to an established endpoint via protoco
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em protocol} & The IP protocol to use for the connection (T\+C\+P/\+U\+D\+P/\+T\+CP L\+I\+S\+T\+E\+N\+E\+R/\+U\+DP S\+E\+R\+V\+I\+C\+E/\+S\+SL). \\
+\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The ID or number specifying the socket connect to open. \\
 \hline
-\mbox{\texttt{ in}}  & {\em host} & The IP address (string) or domain name of the remote host to communicate with. \\
+\mbox{\texttt{ in}}  & {\em protocol} & -\/ The IP protocol to use for the connection (T\+C\+P/\+U\+D\+P/\+T\+CP L\+I\+S\+T\+E\+N\+E\+R/\+U\+DP S\+E\+R\+V\+I\+C\+E/\+S\+SL). \\
 \hline
-\mbox{\texttt{ in}}  & {\em rmt\+Port} & The port number at the remote host. \\
+\mbox{\texttt{ in}}  & {\em host} & -\/ The IP address (string) or domain name of the remote host to communicate with. \\
 \hline
-\mbox{\texttt{ in}}  & {\em lcl\+Port} & The port number on this side of the conversation, set to 0 to auto-\/assign. \\
+\mbox{\texttt{ in}}  & {\em rmt\+Port} & -\/ The port number at the remote host. \\
 \hline
-\mbox{\texttt{ in}}  & {\em ip\+Receiver\+\_\+func} & The callback function in your application to be notified of received data ready. \\
+\mbox{\texttt{ in}}  & {\em lcl\+Port} & -\/ The port number on this side of the conversation, set to 0 to auto-\/assign. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rcvr\+\_\+func} & The callback function in your application to be notified of received data ready. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{sockets_8h_aa983e35228a0853dab1b143e3f752bc2}\label{sockets_8h_aa983e35228a0853dab1b143e3f752bc2}} 
@@ -187,10 +201,10 @@ Send data to an established endpoint via protocol used to open socket (T\+C\+P/\
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em -\/} & socket\+Id The connection socket returned from open. \\
+\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The connection socket returned from open. \\
 \hline
-\mbox{\texttt{ in}}  & {\em -\/} & data A character pointer containing the data to send. \\
+\mbox{\texttt{ in}}  & {\em data} & -\/ A character pointer containing the data to send. \\
 \hline
-\mbox{\texttt{ in}}  & {\em -\/} & data\+Sz The size of the buffer ($<$ 1501 bytes). \\
+\mbox{\texttt{ in}}  & {\em data\+Sz} & -\/ The size of the buffer ($<$ 1501 bytes). \\
 \hline
 \end{DoxyParams}

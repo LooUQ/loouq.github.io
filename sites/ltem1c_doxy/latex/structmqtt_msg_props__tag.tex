@@ -2,18 +2,26 @@
 \label{structmqtt_msg_props__tag}\index{mqttMsgProps\_tag@{mqttMsgProps\_tag}}
 
 
+Struct exposing the properties collection (names and values as c-\/strings) for a received message.  
+
+
+
+
 {\ttfamily \#include $<$mqtt.\+h$>$}
 
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 uint8\+\_\+t \mbox{\hyperlink{structmqtt_msg_props__tag_a20302e2c99a60d3f612dba57e3f6333b}{count}}
-\item 
+\begin{DoxyCompactList}\small\item\em During parsing, how many properties (name/value pairs) were found. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{structmqtt_msg_props__tag_a98c8cb9e36043de85ff385d226484368}{names}} \mbox{[}\mbox{\hyperlink{mqtt_8h_acdb74e5c43e94d95825d04eecd10ac00}{M\+Q\+T\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+E\+S\+\_\+\+C\+NT}}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Array of property names. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{structmqtt_msg_props__tag_acb54980f4e90fadadf05f5f7af631873}{values}} \mbox{[}\mbox{\hyperlink{mqtt_8h_acdb74e5c43e94d95825d04eecd10ac00}{M\+Q\+T\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+E\+S\+\_\+\+C\+NT}}\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Array of property values (as c-\/strings). Application is responsible for any type conversion. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Struct exposing the properties collection (names and values as c-\/strings) for a received message. 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structmqtt_msg_props__tag_a20302e2c99a60d3f612dba57e3f6333b}\label{structmqtt_msg_props__tag_a20302e2c99a60d3f612dba57e3f6333b}} 
@@ -22,17 +30,29 @@ char $\ast$ \mbox{\hyperlink{structmqtt_msg_props__tag_acb54980f4e90fadadf05f5f7
 \doxysubsubsection{\texorpdfstring{count}{count}}
 {\footnotesize\ttfamily uint8\+\_\+t count}
 
+
+
+During parsing, how many properties (name/value pairs) were found. 
+
 \mbox{\Hypertarget{structmqtt_msg_props__tag_a98c8cb9e36043de85ff385d226484368}\label{structmqtt_msg_props__tag_a98c8cb9e36043de85ff385d226484368}} 
 \index{mqttMsgProps\_tag@{mqttMsgProps\_tag}!names@{names}}
 \index{names@{names}!mqttMsgProps\_tag@{mqttMsgProps\_tag}}
 \doxysubsubsection{\texorpdfstring{names}{names}}
 {\footnotesize\ttfamily char$\ast$ names\mbox{[}\mbox{\hyperlink{mqtt_8h_acdb74e5c43e94d95825d04eecd10ac00}{M\+Q\+T\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+E\+S\+\_\+\+C\+NT}}\mbox{]}}
 
+
+
+Array of property names. 
+
 \mbox{\Hypertarget{structmqtt_msg_props__tag_acb54980f4e90fadadf05f5f7af631873}\label{structmqtt_msg_props__tag_acb54980f4e90fadadf05f5f7af631873}} 
 \index{mqttMsgProps\_tag@{mqttMsgProps\_tag}!values@{values}}
 \index{values@{values}!mqttMsgProps\_tag@{mqttMsgProps\_tag}}
 \doxysubsubsection{\texorpdfstring{values}{values}}
 {\footnotesize\ttfamily char$\ast$ values\mbox{[}\mbox{\hyperlink{mqtt_8h_acdb74e5c43e94d95825d04eecd10ac00}{M\+Q\+T\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+E\+S\+\_\+\+C\+NT}}\mbox{]}}
+
+
+
+Array of property values (as c-\/strings). Application is responsible for any type conversion. 
 
 
 

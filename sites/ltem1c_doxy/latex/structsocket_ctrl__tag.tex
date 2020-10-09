@@ -2,26 +2,34 @@
 \label{structsocket_ctrl__tag}\index{socketCtrl\_tag@{socketCtrl\_tag}}
 
 
+Struct representing the state of a T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL socket connection.  
+
+
+
+
 {\ttfamily \#include $<$sockets.\+h$>$}
 
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5f}{protocol\+\_\+t}} \mbox{\hyperlink{structsocket_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}{protocol}}
-\item 
+\begin{DoxyCompactList}\small\item\em Socket\textquotesingle{}s protocol \+: U\+DP\textbackslash{}\+T\+CP\textbackslash{}\+S\+SL. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} \mbox{\hyperlink{structsocket_ctrl__tag_aa67a15da6991635f5e111a8130c45bb4}{socket\+Id}}
-\item 
+\begin{DoxyCompactList}\small\item\em Socket I\+D/number. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structsocket_ctrl__tag_a8c7e45250b1eb6821dd59fb2a9a016d7}{open}}
-\item 
+\begin{DoxyCompactList}\small\item\em Is the socket in an open state. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structsocket_ctrl__tag_a0aa4b1a1d45612b09ac1926c0006ef61}{data\+Pending}}
-\item 
+\begin{DoxyCompactList}\small\item\em The data pipeline has data (or the likelihood of data), triggered when B\+Gx reports data pending (U\+RC \char`\"{}recv\char`\"{}). \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{structsocket_ctrl__tag_adab807efc09cb10f5017455fd0a8f701}{data\+Buffer\+Indx}}
-\item 
+\begin{DoxyCompactList}\small\item\em buffer indx holding data \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{structsocket_ctrl__tag_af022b7937f29e6346f0ef344d1ea8e4a}{pdp\+Context\+Id}}
-\item 
+\begin{DoxyCompactList}\small\item\em Which network context is this data flow associated with. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}{receiver\+\_\+func\+\_\+t}} \mbox{\hyperlink{structsocket_ctrl__tag_a94ab9d935477e80c1ad121b414036fe1}{receiver\+\_\+func}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Data receive function for socket data. This func is invoked for every receive event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Struct representing the state of a T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL socket connection. 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structsocket_ctrl__tag_adab807efc09cb10f5017455fd0a8f701}\label{structsocket_ctrl__tag_adab807efc09cb10f5017455fd0a8f701}} 
@@ -30,11 +38,19 @@ uint8\+\_\+t \mbox{\hyperlink{structsocket_ctrl__tag_af022b7937f29e6346f0ef344d1
 \doxysubsubsection{\texorpdfstring{dataBufferIndx}{dataBufferIndx}}
 {\footnotesize\ttfamily uint8\+\_\+t data\+Buffer\+Indx}
 
+
+
+buffer indx holding data 
+
 \mbox{\Hypertarget{structsocket_ctrl__tag_a0aa4b1a1d45612b09ac1926c0006ef61}\label{structsocket_ctrl__tag_a0aa4b1a1d45612b09ac1926c0006ef61}} 
 \index{socketCtrl\_tag@{socketCtrl\_tag}!dataPending@{dataPending}}
 \index{dataPending@{dataPending}!socketCtrl\_tag@{socketCtrl\_tag}}
 \doxysubsubsection{\texorpdfstring{dataPending}{dataPending}}
 {\footnotesize\ttfamily bool data\+Pending}
+
+
+
+The data pipeline has data (or the likelihood of data), triggered when B\+Gx reports data pending (U\+RC \char`\"{}recv\char`\"{}). 
 
 \mbox{\Hypertarget{structsocket_ctrl__tag_a8c7e45250b1eb6821dd59fb2a9a016d7}\label{structsocket_ctrl__tag_a8c7e45250b1eb6821dd59fb2a9a016d7}} 
 \index{socketCtrl\_tag@{socketCtrl\_tag}!open@{open}}
@@ -42,11 +58,19 @@ uint8\+\_\+t \mbox{\hyperlink{structsocket_ctrl__tag_af022b7937f29e6346f0ef344d1
 \doxysubsubsection{\texorpdfstring{open}{open}}
 {\footnotesize\ttfamily bool open}
 
+
+
+Is the socket in an open state. 
+
 \mbox{\Hypertarget{structsocket_ctrl__tag_af022b7937f29e6346f0ef344d1ea8e4a}\label{structsocket_ctrl__tag_af022b7937f29e6346f0ef344d1ea8e4a}} 
 \index{socketCtrl\_tag@{socketCtrl\_tag}!pdpContextId@{pdpContextId}}
 \index{pdpContextId@{pdpContextId}!socketCtrl\_tag@{socketCtrl\_tag}}
 \doxysubsubsection{\texorpdfstring{pdpContextId}{pdpContextId}}
 {\footnotesize\ttfamily uint8\+\_\+t pdp\+Context\+Id}
+
+
+
+Which network context is this data flow associated with. 
 
 \mbox{\Hypertarget{structsocket_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}\label{structsocket_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}} 
 \index{socketCtrl\_tag@{socketCtrl\_tag}!protocol@{protocol}}
@@ -54,17 +78,29 @@ uint8\+\_\+t \mbox{\hyperlink{structsocket_ctrl__tag_af022b7937f29e6346f0ef344d1
 \doxysubsubsection{\texorpdfstring{protocol}{protocol}}
 {\footnotesize\ttfamily \mbox{\hyperlink{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5f}{protocol\+\_\+t}} protocol}
 
+
+
+Socket\textquotesingle{}s protocol \+: U\+DP\textbackslash{}\+T\+CP\textbackslash{}\+S\+SL. 
+
 \mbox{\Hypertarget{structsocket_ctrl__tag_a94ab9d935477e80c1ad121b414036fe1}\label{structsocket_ctrl__tag_a94ab9d935477e80c1ad121b414036fe1}} 
 \index{socketCtrl\_tag@{socketCtrl\_tag}!receiver\_func@{receiver\_func}}
 \index{receiver\_func@{receiver\_func}!socketCtrl\_tag@{socketCtrl\_tag}}
 \doxysubsubsection{\texorpdfstring{receiver\_func}{receiver\_func}}
 {\footnotesize\ttfamily \mbox{\hyperlink{sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}{receiver\+\_\+func\+\_\+t}} receiver\+\_\+func}
 
+
+
+Data receive function for socket data. This func is invoked for every receive event. 
+
 \mbox{\Hypertarget{structsocket_ctrl__tag_aa67a15da6991635f5e111a8130c45bb4}\label{structsocket_ctrl__tag_aa67a15da6991635f5e111a8130c45bb4}} 
 \index{socketCtrl\_tag@{socketCtrl\_tag}!socketId@{socketId}}
 \index{socketId@{socketId}!socketCtrl\_tag@{socketCtrl\_tag}}
 \doxysubsubsection{\texorpdfstring{socketId}{socketId}}
 {\footnotesize\ttfamily \mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} socket\+Id}
+
+
+
+Socket I\+D/number. 
 
 
 

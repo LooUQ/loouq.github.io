@@ -55,9 +55,11 @@ Initialize the L\+T\+Em1 modem.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em ltem1\+\_\+config} & The L\+TE modem gpio pin configuration. \\
+\mbox{\texttt{ in}}  & {\em ltem1\+\_\+config} & -\/ The L\+TE modem gpio pin configuration. \\
 \hline
-\mbox{\texttt{ in}}  & {\em func\+Level} & Determines the L\+T\+Em1 functionality to create and start. \\
+\mbox{\texttt{ in}}  & {\em ltem1\+Start} & -\/ Determines if the L\+T\+Em1 is power ON or O\+FF during start. \\
+\hline
+\mbox{\texttt{ in}}  & {\em func\+Level} & -\/ Determines the L\+T\+Em1 functionality to create and start. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{ltem1c_8c_af582158b4c99662d49265210b892683a}\label{ltem1c_8c_af582158b4c99662d49265210b892683a}} 
@@ -97,6 +99,8 @@ Function of last resort, catestrophic failure Background work task runner. To be
 
 
 \begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em status\+Code} & -\/ H\+T\+TP style result code, generally sourced from B\+Gx response to an operation. \\
+\hline
 \mbox{\texttt{ in}}  & {\em fault\+Msg} & -\/ Message from origination about the fatal condition. \\
 \hline
 \end{DoxyParams}

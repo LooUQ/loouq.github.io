@@ -40,7 +40,7 @@ bool \mbox{\hyperlink{actions_8c_ae950676c877c6390a7167338a58c15e0}{action\+\_\+
 \begin{DoxyCompactList}\small\item\em Invokes a B\+Gx AT command with application specified action values. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{actions_8c_af58416862c6759de1ce45f423a048658}{action\+\_\+send\+Raw}} (const char $\ast$data, uint16\+\_\+t data\+Sz, uint16\+\_\+t timeout\+Millis, uint16\+\_\+t($\ast$task\+Complete\+Parser\+\_\+func)(const char $\ast$response, char $\ast$$\ast$endptr))
 \begin{DoxyCompactList}\small\item\em Performs data transfer (send) sub-\/action. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{actions_8c_ac1d513653ebec291578eec77d259f758}{action\+\_\+send\+Raw\+With\+E\+O\+Ts}} (const char $\ast$data, uint16\+\_\+t data\+Sz, const char $\ast$eot\+Phrase, uint16\+\_\+t timeout\+Millis, uint16\+\_\+t($\ast$task\+Complete\+Parser)(const char $\ast$response, char $\ast$$\ast$endptr))
+void \mbox{\hyperlink{actions_8c_a313480e67e5f770161804fe2b6da9574}{action\+\_\+send\+Raw\+With\+E\+O\+Ts}} (const char $\ast$data, uint16\+\_\+t data\+Sz, const char $\ast$eot\+Phrase, uint16\+\_\+t timeout\+Millis, uint16\+\_\+t($\ast$task\+Complete\+Parser\+\_\+func)(const char $\ast$response, char $\ast$$\ast$endptr))
 \begin{DoxyCompactList}\small\item\em Performs data transfer (send) sub-\/action. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{actions_8h_ae712b701323ddcdad6db94073bf45530}{action\+Result\+\_\+t}} \mbox{\hyperlink{actions_8c_a0ee7f4cd6c9b90092e25b7b4a4d50be1}{action\+\_\+await\+Result}} (bool close\+Action)
 \begin{DoxyCompactList}\small\item\em Waits for an AT command result until completed response or timeout. \end{DoxyCompactList}\item 
@@ -180,7 +180,7 @@ Performs a standardized parse of command responses. This function can be wrapped
 \hline
 \mbox{\texttt{ in}}  & {\em preamble\+Reqd} & -\/ The preamble string is required, set to false to search for only gap and terminator \\
 \hline
-\mbox{\texttt{ in}}  & {\em gap} & -\/ The min. char count between preamble (or start) and terminator (0 is valid). \\
+\mbox{\texttt{ in}}  & {\em gap\+Reqd} & -\/ The min. char count between preamble (or start) and terminator (0 is valid). \\
 \hline
 \mbox{\texttt{ in}}  & {\em terminator} & -\/ The string to signal the end of the command response. \\
 \hline
@@ -220,7 +220,9 @@ Validate the response ends in a B\+Gxx OK value.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em response} & -\/ Pointer to the command response received from the B\+Gxx.\\
+\mbox{\texttt{ in}}  & {\em response} & -\/ Pointer to the command response received from the B\+Gx. \\
+\hline
+\mbox{\texttt{ out}}  & {\em endptr} & -\/ Char pointer to the next char in response after parser match\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -247,11 +249,11 @@ Performs data transfer (send) sub-\/action.
 \mbox{\texttt{ in}}  & {\em task\+Complete\+Parser\+\_\+func} & -\/ Function pointer to parser looking for task completion \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{actions_8c_ac1d513653ebec291578eec77d259f758}\label{actions_8c_ac1d513653ebec291578eec77d259f758}} 
+\mbox{\Hypertarget{actions_8c_a313480e67e5f770161804fe2b6da9574}\label{actions_8c_a313480e67e5f770161804fe2b6da9574}} 
 \index{actions.c@{actions.c}!action\_sendRawWithEOTs@{action\_sendRawWithEOTs}}
 \index{action\_sendRawWithEOTs@{action\_sendRawWithEOTs}!actions.c@{actions.c}}
 \doxysubsubsection{\texorpdfstring{action\_sendRawWithEOTs()}{action\_sendRawWithEOTs()}}
-{\footnotesize\ttfamily void action\+\_\+send\+Raw\+With\+E\+O\+Ts (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{uint16\+\_\+t}]{data\+Sz,  }\item[{const char $\ast$}]{eot\+Phrase,  }\item[{uint16\+\_\+t}]{timeout\+Millis,  }\item[{uint16\+\_\+t($\ast$)(const char $\ast$response, char $\ast$$\ast$endptr)}]{task\+Complete\+Parser }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void action\+\_\+send\+Raw\+With\+E\+O\+Ts (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{uint16\+\_\+t}]{data\+Sz,  }\item[{const char $\ast$}]{eot\+Phrase,  }\item[{uint16\+\_\+t}]{timeout\+Millis,  }\item[{uint16\+\_\+t($\ast$)(const char $\ast$response, char $\ast$$\ast$endptr)}]{task\+Complete\+Parser\+\_\+func }\end{DoxyParamCaption})}
 
 
 
@@ -262,6 +264,12 @@ Performs data transfer (send) sub-\/action.
 \mbox{\texttt{ in}}  & {\em data} & -\/ Pointer to the block of binary data to send. \\
 \hline
 \mbox{\texttt{ in}}  & {\em data\+Sz} & -\/ The size of the data block. \\
+\hline
+\mbox{\texttt{ in}}  & {\em eot\+Phrase} & -\/ Char string that is sent a the end-\/of-\/transmission. \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+Millis} & -\/ Timeout period (in millisecs) for send to complete. \\
+\hline
+\mbox{\texttt{ in}}  & {\em task\+Complete\+Parser\+\_\+func} & -\/ Function pointer to parser looking for task completion \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{actions_8c_a12978da1cd17c327b4b12de03ff524cb}\label{actions_8c_a12978da1cd17c327b4b12de03ff524cb}} 
@@ -292,7 +300,11 @@ Performs a standardized parse of command responses. This function can be wrapped
 \hline
 \mbox{\texttt{ in}}  & {\em delim} & -\/ The token delimeter char. \\
 \hline
-\mbox{\texttt{ in}}  & {\em min\+Tokens} & -\/ The minimum number of tokens expected.\\
+\mbox{\texttt{ in}}  & {\em reqd\+Tokens} & -\/ The minimum number of tokens expected. \\
+\hline
+\mbox{\texttt{ in}}  & {\em terminator} & -\/ Text to look for indicating the sucessful end of command response. \\
+\hline
+\mbox{\texttt{ out}}  & {\em endptr} & -\/ Char pointer to the next char in response after parser match\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -310,11 +322,7 @@ Invokes a B\+Gx AT command with default action values.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em cmd\+Str} & -\/ The command string to send to the B\+G96 module. \\
-\hline
-\mbox{\texttt{ in}}  & {\em retry} & -\/ Function will retry busy module if set to true. \\
-\hline
-\mbox{\texttt{ in}}  & {\em task\+Complete\+Parser} & -\/ Custom command response parser to signal result is complete. N\+U\+LL for std parser.\\
+\mbox{\texttt{ in}}  & {\em cmd\+Str} & -\/ The command string to send to the B\+G96 module.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -334,7 +342,9 @@ Invokes a B\+Gx AT command with application specified action values.
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em cmd\+Str} & -\/ The command string to send to the B\+G96 module. \\
 \hline
-\mbox{\texttt{ in}}  & {\em retry} & -\/ Function will retry busy module if set to true. \\
+\mbox{\texttt{ in}}  & {\em retries} & -\/ Number of retries to obtain action lock that should be attempted. 0 = no retries. \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout} & -\/ Number of milliseconds the action can take. If 0, the system default timeout is used. \\
 \hline
 \mbox{\texttt{ in}}  & {\em task\+Complete\+Parser} & -\/ Custom command response parser to signal result is complete. N\+U\+LL for std parser.\\
 \hline
@@ -354,8 +364,8 @@ Attempts to get exclusive access to Q\+BG module command interface.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em action\+Cmd} & -\/ Pointer to action structure. \\
+\mbox{\texttt{ in}}  & {\em cmd\+Str} & -\/ The AT command text. \\
 \hline
-\mbox{\texttt{ in}}  & {\em retry} & -\/ If exclusive access is not initially garnered, should retries be attempted. \\
+\mbox{\texttt{ in}}  & {\em retries} & -\/ Number of retries to be attempted, while obtaining lock. \\
 \hline
 \end{DoxyParams}

@@ -126,7 +126,7 @@ Disconnect and close a connection to a M\+Q\+TT server.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em socket\+Id} & The socket based identifier for the connection to close \\
+\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The socket based identifier for the connection to close \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{mqtt_8c_ac822866e75d60d51788f6a4514a375ec}\label{mqtt_8c_ac822866e75d60d51788f6a4514a375ec}} 
@@ -141,13 +141,13 @@ Connect (authenticate) to a M\+Q\+TT server.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em socket\+Id} & The socket based identifier for the connection to close. \\
+\mbox{\texttt{ in}}  & {\em client\+Id} & -\/ The client or device identifier for the connection. \\
 \hline
-\mbox{\texttt{ in}}  & {\em client\+Id} & The client or device identifier for the connection. \\
+\mbox{\texttt{ in}}  & {\em username} & -\/ The user identifier or name for the connection to authenticate. \\
 \hline
-\mbox{\texttt{ in}}  & {\em username} & The user identifier or name for the connection to authenticate. \\
+\mbox{\texttt{ in}}  & {\em password} & -\/ The secret string or phrase to authenticate the connection. \\
 \hline
-\mbox{\texttt{ in}}  & {\em password} & The secret string or phrase to authenticate the connection.\\
+\mbox{\texttt{ in}}  & {\em session\+Clean} & -\/ Directs M\+Q\+TT to preserve or flush messages received prior to the session start.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -185,15 +185,13 @@ Open a remote M\+Q\+TT server for use.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em socket\+Id} & The socket based identifier to use for the server connection. \\
+\mbox{\texttt{ in}}  & {\em host} & -\/ The host IP address or name of the remote server. \\
 \hline
-\mbox{\texttt{ in}}  & {\em host} & The host IP address or name of the remote server. \\
+\mbox{\texttt{ in}}  & {\em port} & -\/ The IP port number to use for the communications. \\
 \hline
-\mbox{\texttt{ in}}  & {\em port} & The IP port number to use for the communications. \\
+\mbox{\texttt{ in}}  & {\em use\+Ssl\+Version} & -\/ Specifies the version and options for use of S\+SL to protect communications. \\
 \hline
-\mbox{\texttt{ in}}  & {\em use\+Ssl\+Version} & Specifies the version and options for use of S\+SL to protect communications. \\
-\hline
-\mbox{\texttt{ in}}  & {\em use\+Mqtt\+Version} & Specifies the M\+Q\+TT protocol revision to use for communications.\\
+\mbox{\texttt{ in}}  & {\em use\+Mqtt\+Version} & -\/ Specifies the M\+Q\+TT protocol revision to use for communications.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -210,8 +208,8 @@ A socket\+Result\+\_\+t value indicating the success or type of failure.
 Parses the topic properties string into a mqtt\+Properties structure (M\+U\+T\+A\+T\+ES, NO C\+O\+PY). 
 
 
-\begin{DoxyParams}{Parameters}
-{\em topic\+Props} & \mbox{[}in\mbox{]} Char pointer to the c-\/string containing message properties passed in topic\\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em topic\+Props} & -\/ Char pointer to the c-\/string containing message properties passed in topic\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -229,11 +227,11 @@ Publish a message to server.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em $\ast$topic} & The topic to receive the message on the server. \\
+\mbox{\texttt{ in}}  & {\em $\ast$topic} & -\/ The topic to receive the message on the server. \\
 \hline
-\mbox{\texttt{ in}}  & {\em qos} & The M\+Q\+TT Q\+OS to be assigned to sent message. \\
+\mbox{\texttt{ in}}  & {\em qos} & -\/ The M\+Q\+TT Q\+OS to be assigned to sent message. \\
 \hline
-\mbox{\texttt{ in}}  & {\em $\ast$message} & Pointer to message to be sent.\\
+\mbox{\texttt{ in}}  & {\em $\ast$message} & -\/ Pointer to message to be sent.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -251,7 +249,7 @@ Query the status of the M\+Q\+TT server state.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em host} & (optional) A char string to match with the currently connected server. Host is not checked if null string passed.\\
+\mbox{\texttt{ in}}  & {\em host} & -\/ (optional) A char string to match with the currently connected server. Host is not checked if null string passed.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -269,13 +267,11 @@ Subscribe to a topic on the M\+Q\+TT server.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em socket\+Id} & The socket based identifier for the M\+Q\+TT server connection to update. \\
+\mbox{\texttt{ in}}  & {\em topic} & -\/ The messaging topic to subscribe to. \\
 \hline
-\mbox{\texttt{ in}}  & {\em topic} & The messaging topic to subscribe to. \\
+\mbox{\texttt{ in}}  & {\em qos} & -\/ The Q\+OS level for messages subscribed to. \\
 \hline
-\mbox{\texttt{ in}}  & {\em qos} & The Q\+OS level for messages subscribed to. \\
-\hline
-\mbox{\texttt{ in}}  & {\em recv\+\_\+func} & The receiver function in the application to receive subscribed messages on arrival.\\
+\mbox{\texttt{ in}}  & {\em recv\+\_\+func} & -\/ The receiver function in the application to receive subscribed messages on arrival.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -293,9 +289,7 @@ Unsubscribe to a topic on the M\+Q\+TT server.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em socket\+Id} & The socket based identifier for the M\+Q\+TT server connection to update. \\
-\hline
-\mbox{\texttt{ in}}  & {\em topic} & The messaging topic to unsubscribe from.\\
+\mbox{\texttt{ in}}  & {\em topic} & -\/ The messaging topic to unsubscribe from.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

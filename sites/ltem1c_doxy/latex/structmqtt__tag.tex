@@ -2,24 +2,32 @@
 \label{structmqtt__tag}\index{mqtt\_tag@{mqtt\_tag}}
 
 
+Struct describing the M\+Q\+TT service.  
+
+
+
+
 {\ttfamily \#include $<$mqtt.\+h$>$}
 
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} \mbox{\hyperlink{structmqtt__tag_a22b01753d409aacca5b5fc4f6027b694}{state}}
-\item 
+\begin{DoxyCompactList}\small\item\em Current state of the M\+Q\+TT protocol services on device. \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{structmqtt__tag_a2acf66d2c12f7b04f90ed704f5ac215c}{msg\+Id}}
-\item 
+\begin{DoxyCompactList}\small\item\em M\+Q\+TT in-\/flight message ID, automatically incremented, rolls at max value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{mqtt_8h_a46dc892f05acfdb27f05881e54cd1122}{mqtt\+Subscription\+\_\+t}} \mbox{\hyperlink{structmqtt__tag_aa4be52e58b888608de6f795fbc3be555}{subscriptions}} \mbox{[}\mbox{\hyperlink{mqtt_8h_a1d503fbf4b1c060dca196dd00b7c48db}{M\+Q\+T\+T\+\_\+\+T\+O\+P\+I\+C\+\_\+\+M\+A\+X\+C\+NT}}\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Array of M\+Q\+TT topic subscriptions. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{structmqtt__tag_a17799675d32ab0177ca95eca86285f34}{first\+Chunk\+Begin}}
-\item 
+\begin{DoxyCompactList}\small\item\em B\+Gx M\+Q\+TT sends data in notification, 1st chunk ($\sim$64 chars) will land in cmd buffer (all U\+R\+Cs go there) \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{structmqtt__tag_a21c02fc8af3a019cd744173f583d3096}{first\+Chunk\+Sz}}
 \item 
 uint8\+\_\+t \mbox{\hyperlink{structmqtt__tag_adab807efc09cb10f5017455fd0a8f701}{data\+Buffer\+Indx}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em index to I\+OP data buffer holding last completed message (set to I\+O\+P\+\_\+\+N\+O\+\_\+\+B\+UF if no recv ready) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Struct describing the M\+Q\+TT service. 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structmqtt__tag_adab807efc09cb10f5017455fd0a8f701}\label{structmqtt__tag_adab807efc09cb10f5017455fd0a8f701}} 
@@ -28,11 +36,19 @@ uint8\+\_\+t \mbox{\hyperlink{structmqtt__tag_adab807efc09cb10f5017455fd0a8f701}
 \doxysubsubsection{\texorpdfstring{dataBufferIndx}{dataBufferIndx}}
 {\footnotesize\ttfamily uint8\+\_\+t data\+Buffer\+Indx}
 
+
+
+index to I\+OP data buffer holding last completed message (set to I\+O\+P\+\_\+\+N\+O\+\_\+\+B\+UF if no recv ready) 
+
 \mbox{\Hypertarget{structmqtt__tag_a17799675d32ab0177ca95eca86285f34}\label{structmqtt__tag_a17799675d32ab0177ca95eca86285f34}} 
 \index{mqtt\_tag@{mqtt\_tag}!firstChunkBegin@{firstChunkBegin}}
 \index{firstChunkBegin@{firstChunkBegin}!mqtt\_tag@{mqtt\_tag}}
 \doxysubsubsection{\texorpdfstring{firstChunkBegin}{firstChunkBegin}}
 {\footnotesize\ttfamily char$\ast$ first\+Chunk\+Begin}
+
+
+
+B\+Gx M\+Q\+TT sends data in notification, 1st chunk ($\sim$64 chars) will land in cmd buffer (all U\+R\+Cs go there) 
 
 \mbox{\Hypertarget{structmqtt__tag_a21c02fc8af3a019cd744173f583d3096}\label{structmqtt__tag_a21c02fc8af3a019cd744173f583d3096}} 
 \index{mqtt\_tag@{mqtt\_tag}!firstChunkSz@{firstChunkSz}}
@@ -40,11 +56,15 @@ uint8\+\_\+t \mbox{\hyperlink{structmqtt__tag_adab807efc09cb10f5017455fd0a8f701}
 \doxysubsubsection{\texorpdfstring{firstChunkSz}{firstChunkSz}}
 {\footnotesize\ttfamily uint8\+\_\+t first\+Chunk\+Sz}
 
-\mbox{\Hypertarget{structmqtt__tag_a2acf66d2c12f7b04f90ed704f5ac215c}\label{structmqtt__tag_a2acf66d2c12f7b04f90ed704f5ac215c}} 
+at recv complete, this chunk needs copied to the start of the data buffer and removed from cmd buffer (I\+M\+M\+E\+D\+I\+A\+T\+E\+LY) struct below is populated when recv buffer is complete and ready \mbox{\Hypertarget{structmqtt__tag_a2acf66d2c12f7b04f90ed704f5ac215c}\label{structmqtt__tag_a2acf66d2c12f7b04f90ed704f5ac215c}} 
 \index{mqtt\_tag@{mqtt\_tag}!msgId@{msgId}}
 \index{msgId@{msgId}!mqtt\_tag@{mqtt\_tag}}
 \doxysubsubsection{\texorpdfstring{msgId}{msgId}}
 {\footnotesize\ttfamily uint16\+\_\+t msg\+Id}
+
+
+
+M\+Q\+TT in-\/flight message ID, automatically incremented, rolls at max value. 
 
 \mbox{\Hypertarget{structmqtt__tag_a22b01753d409aacca5b5fc4f6027b694}\label{structmqtt__tag_a22b01753d409aacca5b5fc4f6027b694}} 
 \index{mqtt\_tag@{mqtt\_tag}!state@{state}}
@@ -52,11 +72,19 @@ uint8\+\_\+t \mbox{\hyperlink{structmqtt__tag_adab807efc09cb10f5017455fd0a8f701}
 \doxysubsubsection{\texorpdfstring{state}{state}}
 {\footnotesize\ttfamily \mbox{\hyperlink{mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} state}
 
+
+
+Current state of the M\+Q\+TT protocol services on device. 
+
 \mbox{\Hypertarget{structmqtt__tag_aa4be52e58b888608de6f795fbc3be555}\label{structmqtt__tag_aa4be52e58b888608de6f795fbc3be555}} 
 \index{mqtt\_tag@{mqtt\_tag}!subscriptions@{subscriptions}}
 \index{subscriptions@{subscriptions}!mqtt\_tag@{mqtt\_tag}}
 \doxysubsubsection{\texorpdfstring{subscriptions}{subscriptions}}
 {\footnotesize\ttfamily \mbox{\hyperlink{mqtt_8h_a46dc892f05acfdb27f05881e54cd1122}{mqtt\+Subscription\+\_\+t}} subscriptions\mbox{[}\mbox{\hyperlink{mqtt_8h_a1d503fbf4b1c060dca196dd00b7c48db}{M\+Q\+T\+T\+\_\+\+T\+O\+P\+I\+C\+\_\+\+M\+A\+X\+C\+NT}}\mbox{]}}
+
+
+
+Array of M\+Q\+TT topic subscriptions. 
 
 
 

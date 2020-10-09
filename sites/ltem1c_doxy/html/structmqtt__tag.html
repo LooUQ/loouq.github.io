@@ -71,24 +71,34 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Struct describing the MQTT service.  
+ <a href="structmqtt__tag.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="mqtt_8h_source.html">mqtt.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a22b01753d409aacca5b5fc4f6027b694"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#a22b01753d409aacca5b5fc4f6027b694">state</a></td></tr>
+<tr class="memdesc:a22b01753d409aacca5b5fc4f6027b694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state of the MQTT protocol services on device.  <a href="structmqtt__tag.html#a22b01753d409aacca5b5fc4f6027b694">More...</a><br /></td></tr>
 <tr class="separator:a22b01753d409aacca5b5fc4f6027b694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2acf66d2c12f7b04f90ed704f5ac215c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#a2acf66d2c12f7b04f90ed704f5ac215c">msgId</a></td></tr>
+<tr class="memdesc:a2acf66d2c12f7b04f90ed704f5ac215c"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTT in-flight message ID, automatically incremented, rolls at max value.  <a href="structmqtt__tag.html#a2acf66d2c12f7b04f90ed704f5ac215c">More...</a><br /></td></tr>
 <tr class="separator:a2acf66d2c12f7b04f90ed704f5ac215c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4be52e58b888608de6f795fbc3be555"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mqtt_8h.html#a46dc892f05acfdb27f05881e54cd1122">mqttSubscription_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#aa4be52e58b888608de6f795fbc3be555">subscriptions</a> [<a class="el" href="mqtt_8h.html#a1d503fbf4b1c060dca196dd00b7c48db">MQTT_TOPIC_MAXCNT</a>]</td></tr>
+<tr class="memdesc:aa4be52e58b888608de6f795fbc3be555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of MQTT topic subscriptions.  <a href="structmqtt__tag.html#aa4be52e58b888608de6f795fbc3be555">More...</a><br /></td></tr>
 <tr class="separator:aa4be52e58b888608de6f795fbc3be555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17799675d32ab0177ca95eca86285f34"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#a17799675d32ab0177ca95eca86285f34">firstChunkBegin</a></td></tr>
+<tr class="memdesc:a17799675d32ab0177ca95eca86285f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGx MQTT sends data in notification, 1st chunk (~64 chars) will land in cmd buffer (all URCs go there)  <a href="structmqtt__tag.html#a17799675d32ab0177ca95eca86285f34">More...</a><br /></td></tr>
 <tr class="separator:a17799675d32ab0177ca95eca86285f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21c02fc8af3a019cd744173f583d3096"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#a21c02fc8af3a019cd744173f583d3096">firstChunkSz</a></td></tr>
 <tr class="separator:a21c02fc8af3a019cd744173f583d3096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adab807efc09cb10f5017455fd0a8f701"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html#adab807efc09cb10f5017455fd0a8f701">dataBufferIndx</a></td></tr>
+<tr class="memdesc:adab807efc09cb10f5017455fd0a8f701"><td class="mdescLeft">&#160;</td><td class="mdescRight">index to IOP data buffer holding last completed message (set to IOP_NO_BUF if no recv ready)  <a href="structmqtt__tag.html#adab807efc09cb10f5017455fd0a8f701">More...</a><br /></td></tr>
 <tr class="separator:adab807efc09cb10f5017455fd0a8f701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Struct describing the MQTT service. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="adab807efc09cb10f5017455fd0a8f701"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adab807efc09cb10f5017455fd0a8f701">&#9670;&nbsp;</a></span>dataBufferIndx</h2>
 
@@ -100,6 +110,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>index to IOP data buffer holding last completed message (set to IOP_NO_BUF if no recv ready) </p>
 
 </div>
 </div>
@@ -115,6 +127,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>BGx MQTT sends data in notification, 1st chunk (~64 chars) will land in cmd buffer (all URCs go there) </p>
+
 </div>
 </div>
 <a id="a21c02fc8af3a019cd744173f583d3096"></a>
@@ -128,6 +142,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>at recv complete, this chunk needs copied to the start of the data buffer and removed from cmd buffer (IMMEDIATELY) struct below is populated when recv buffer is complete and ready </p>
 
 </div>
 </div>
@@ -143,6 +158,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>MQTT in-flight message ID, automatically incremented, rolls at max value. </p>
+
 </div>
 </div>
 <a id="a22b01753d409aacca5b5fc4f6027b694"></a>
@@ -157,6 +174,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Current state of the MQTT protocol services on device. </p>
+
 </div>
 </div>
 <a id="aa4be52e58b888608de6f795fbc3be555"></a>
@@ -170,6 +189,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Array of MQTT topic subscriptions. </p>
 
 </div>
 </div>

@@ -105,16 +105,19 @@ Enumerations</h2></td></tr>
 <a class="el" href="quectel__bg_8h.html#a147bba7e20cc24461d0c91d9ebfd881bab1d36f587350dfc189347fbbf3894a2c">qbg_readyState_powerOn</a> = 1, 
 <a class="el" href="quectel__bg_8h.html#a147bba7e20cc24461d0c91d9ebfd881ba2f8b72f80346ddb0c45e0321f3d52f1b">qbg_readyState_appReady</a> = 2
  }</td></tr>
+<tr class="memdesc:a147bba7e20cc24461d0c91d9ebfd881b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum describing the current BGx module state.  <a href="quectel__bg_8h.html#a147bba7e20cc24461d0c91d9ebfd881b">More...</a><br /></td></tr>
 <tr class="separator:a147bba7e20cc24461d0c91d9ebfd881b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1a289b110c85590df8e3c8628820432"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quectel__bg_8h.html#aa1a289b110c85590df8e3c8628820432">qbg_nw_scan_mode_t</a> { <a class="el" href="quectel__bg_8h.html#aa1a289b110c85590df8e3c8628820432a494904fd8160bb2b1bc5a462b2ebe68d">qbg_nw_scan_mode_auto</a> = 0U, 
 <a class="el" href="quectel__bg_8h.html#aa1a289b110c85590df8e3c8628820432a451a5aa0ed800c9d08302b5249d8b2dd">qbg_nw_scan_mode_gsmonly</a> = 1U, 
 <a class="el" href="quectel__bg_8h.html#aa1a289b110c85590df8e3c8628820432a573b73decba7990830452044da0bf2ef">qbg_nw_scan_mode_lteonly</a> = 3U
  }</td></tr>
+<tr class="memdesc:aa1a289b110c85590df8e3c8628820432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum describing the mode the BGx module is using to look for available networks (carriers).  <a href="quectel__bg_8h.html#aa1a289b110c85590df8e3c8628820432">More...</a><br /></td></tr>
 <tr class="separator:aa1a289b110c85590df8e3c8628820432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2191ec3f5a5386782fe35c35116bd17f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quectel__bg_8h.html#a2191ec3f5a5386782fe35c35116bd17f">qbg_nw_iot_mode_t</a> { <a class="el" href="quectel__bg_8h.html#a2191ec3f5a5386782fe35c35116bd17fa9925c3857d89a5e9073b4ffef915a561">qbg_nw_iot_mode_m1</a> = 0U, 
 <a class="el" href="quectel__bg_8h.html#a2191ec3f5a5386782fe35c35116bd17fac3f4a26bd26b6dd1fa6724929d00dbb8">qbg_nw_iot_mode_nb1</a> = 1U, 
 <a class="el" href="quectel__bg_8h.html#a2191ec3f5a5386782fe35c35116bd17fa9ec8555596d3f782c76ee46ed928b278">qbg_nw_iot_mode_m1nb1</a> = 2U
  }</td></tr>
+<tr class="memdesc:a2191ec3f5a5386782fe35c35116bd17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum describing the available options for an IoT protocol when connecting to the network.  <a href="quectel__bg_8h.html#a2191ec3f5a5386782fe35c35116bd17f">More...</a><br /></td></tr>
 <tr class="separator:a2191ec3f5a5386782fe35c35116bd17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -265,10 +268,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum describing the available options for an IoT protocol when connecting to the network. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2191ec3f5a5386782fe35c35116bd17fa9925c3857d89a5e9073b4ffef915a561"></a>qbg_nw_iot_mode_m1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2191ec3f5a5386782fe35c35116bd17fac3f4a26bd26b6dd1fa6724929d00dbb8"></a>qbg_nw_iot_mode_nb1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2191ec3f5a5386782fe35c35116bd17fa9ec8555596d3f782c76ee46ed928b278"></a>qbg_nw_iot_mode_m1nb1&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2191ec3f5a5386782fe35c35116bd17fa9925c3857d89a5e9073b4ffef915a561"></a>qbg_nw_iot_mode_m1&#160;</td><td class="fielddoc"><p>CAT-M1 only mode: BGx is filtering visible networks and only considering CAT-M1 connections. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2191ec3f5a5386782fe35c35116bd17fac3f4a26bd26b6dd1fa6724929d00dbb8"></a>qbg_nw_iot_mode_nb1&#160;</td><td class="fielddoc"><p>NB-IOT only mode: BGx is filtering visible networks and only considering NB-IOT connections. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2191ec3f5a5386782fe35c35116bd17fa9ec8555596d3f782c76ee46ed928b278"></a>qbg_nw_iot_mode_m1nb1&#160;</td><td class="fielddoc"><p>The BGx will connect to either a CAT-M1 or NB-IOT network. </p>
+</td></tr>
 </table>
 
 </div>
@@ -284,10 +292,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum describing the mode the BGx module is using to look for available networks (carriers). </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa1a289b110c85590df8e3c8628820432a494904fd8160bb2b1bc5a462b2ebe68d"></a>qbg_nw_scan_mode_auto&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aa1a289b110c85590df8e3c8628820432a451a5aa0ed800c9d08302b5249d8b2dd"></a>qbg_nw_scan_mode_gsmonly&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aa1a289b110c85590df8e3c8628820432a573b73decba7990830452044da0bf2ef"></a>qbg_nw_scan_mode_lteonly&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa1a289b110c85590df8e3c8628820432a494904fd8160bb2b1bc5a462b2ebe68d"></a>qbg_nw_scan_mode_auto&#160;</td><td class="fielddoc"><p>BGx is considering either GSM or LTE carrier connections. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa1a289b110c85590df8e3c8628820432a451a5aa0ed800c9d08302b5249d8b2dd"></a>qbg_nw_scan_mode_gsmonly&#160;</td><td class="fielddoc"><p>GSM only mode: BGx is filtering visible networks and only considering connections to GSM endpoints. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa1a289b110c85590df8e3c8628820432a573b73decba7990830452044da0bf2ef"></a>qbg_nw_scan_mode_lteonly&#160;</td><td class="fielddoc"><p>LTE only mode: BGx is filtering visible networks and only considering connections to LTE endpoints. </p>
+</td></tr>
 </table>
 
 </div>
@@ -303,10 +316,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum describing the current BGx module state. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a147bba7e20cc24461d0c91d9ebfd881bab278e3d768b1801d2dba9bc18e712a5f"></a>qbg_readyState_powerOff&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a147bba7e20cc24461d0c91d9ebfd881bab1d36f587350dfc189347fbbf3894a2c"></a>qbg_readyState_powerOn&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a147bba7e20cc24461d0c91d9ebfd881ba2f8b72f80346ddb0c45e0321f3d52f1b"></a>qbg_readyState_appReady&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a147bba7e20cc24461d0c91d9ebfd881bab278e3d768b1801d2dba9bc18e712a5f"></a>qbg_readyState_powerOff&#160;</td><td class="fielddoc"><p>BGx is powered off, in this state all components on the LTEm1 are powered down. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a147bba7e20cc24461d0c91d9ebfd881bab1d36f587350dfc189347fbbf3894a2c"></a>qbg_readyState_powerOn&#160;</td><td class="fielddoc"><p>BGx is powered ON, while powered on the BGx may not be able to interact fully with the host application. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a147bba7e20cc24461d0c91d9ebfd881ba2f8b72f80346ddb0c45e0321f3d52f1b"></a>qbg_readyState_appReady&#160;</td><td class="fielddoc"><p>BGx is powered ON and ready for application/services. </p>
+</td></tr>
 </table>
 
 </div>

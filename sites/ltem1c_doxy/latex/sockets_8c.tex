@@ -86,7 +86,7 @@ Close an established (open) connection socket.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em socket\+Num} & -\/ The connection socket to close. \\
+\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The socket ID or number for the connection to close. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{sockets_8c_ae8a9086120ad6504040b5db042328a0d}\label{sockets_8c_ae8a9086120ad6504040b5db042328a0d}} 
@@ -121,15 +121,17 @@ Open a data connection (socket) to d data to an established endpoint via protoco
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em protocol} & The IP protocol to use for the connection (T\+C\+P/\+U\+D\+P/\+T\+CP L\+I\+S\+T\+E\+N\+E\+R/\+U\+DP S\+E\+R\+V\+I\+C\+E/\+S\+SL). \\
+\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The ID or number specifying the socket connect to open. \\
 \hline
-\mbox{\texttt{ in}}  & {\em host} & The IP address (string) or domain name of the remote host to communicate with. \\
+\mbox{\texttt{ in}}  & {\em protocol} & -\/ The IP protocol to use for the connection (T\+C\+P/\+U\+D\+P/\+T\+CP L\+I\+S\+T\+E\+N\+E\+R/\+U\+DP S\+E\+R\+V\+I\+C\+E/\+S\+SL). \\
 \hline
-\mbox{\texttt{ in}}  & {\em rmt\+Port} & The port number at the remote host. \\
+\mbox{\texttt{ in}}  & {\em host} & -\/ The IP address (string) or domain name of the remote host to communicate with. \\
 \hline
-\mbox{\texttt{ in}}  & {\em lcl\+Port} & The port number on this side of the conversation, set to 0 to auto-\/assign. \\
+\mbox{\texttt{ in}}  & {\em rmt\+Port} & -\/ The port number at the remote host. \\
 \hline
-\mbox{\texttt{ in}}  & {\em ip\+Receiver\+\_\+func} & The callback function in your application to be notified of received data ready. \\
+\mbox{\texttt{ in}}  & {\em lcl\+Port} & -\/ The port number on this side of the conversation, set to 0 to auto-\/assign. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rcvr\+\_\+func} & The callback function in your application to be notified of received data ready. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{sockets_8c_a441ffe9e7b3f84a8fd606149766dae64}\label{sockets_8c_a441ffe9e7b3f84a8fd606149766dae64}} 
@@ -159,10 +161,10 @@ Send data to an established endpoint via protocol used to open socket (T\+C\+P/\
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em -\/} & socket\+Id The connection socket returned from open. \\
+\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The connection socket returned from open. \\
 \hline
-\mbox{\texttt{ in}}  & {\em -\/} & data A character pointer containing the data to send. \\
+\mbox{\texttt{ in}}  & {\em data} & -\/ A character pointer containing the data to send. \\
 \hline
-\mbox{\texttt{ in}}  & {\em -\/} & data\+Sz The size of the buffer ($<$ 1501 bytes). \\
+\mbox{\texttt{ in}}  & {\em data\+Sz} & -\/ The size of the buffer ($<$ 1501 bytes). \\
 \hline
 \end{DoxyParams}

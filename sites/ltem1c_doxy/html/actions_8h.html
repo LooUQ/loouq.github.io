@@ -327,7 +327,7 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">response</td><td>- The string returned from the getResult function. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">preamble</td><td>- The string to look for to signal start of response match. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">preambleReqd</td><td>- The preamble string is required, set to false to search for only gap and terminator </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gap</td><td>- The min. char count between preamble (or start) and terminator (0 is valid). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gapReqd</td><td>- The min. char count between preamble (or start) and terminator (0 is valid). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">terminator</td><td>- The string to signal the end of the command response. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">endptr</td><td>- Char pointer to the next char in response after parser match</td></tr>
   </table>
@@ -393,7 +393,8 @@ Functions</h2></td></tr>
 <p>Validate the response ends in a BGxx OK value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">response</td><td>- Pointer to the command response received from the BGxx.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">response</td><td>- Pointer to the command response received from the BGx. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">endptr</td><td>- Char pointer to the next char in response after parser match</td></tr>
   </table>
   </dd>
 </dl>
@@ -486,7 +487,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint16_t(*)(const char *response, char **endptr)&#160;</td>
-          <td class="paramname"><em>taskCompleteParser</em>&#160;</td>
+          <td class="paramname"><em>taskCompleteParser_func</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -501,6 +502,9 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- Pointer to the block of binary data to send. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dataSz</td><td>- The size of the data block. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">eotPhrase</td><td>- Char string that is sent a the end-of-transmission. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeoutMillis</td><td>- Timeout period (in millisecs) for send to complete. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">taskCompleteParser_func</td><td>- Function pointer to parser looking for task completion </td></tr>
   </table>
   </dd>
 </dl>
@@ -605,7 +609,9 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">response</td><td>- The string returned from the getResult function. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">preamble</td><td>- The string to look for to signal response matches command (scans from end backwards). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">delim</td><td>- The token delimeter char. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">minTokens</td><td>- The minimum number of tokens expected.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reqdTokens</td><td>- The minimum number of tokens expected. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">terminator</td><td>- Text to look for indicating the sucessful end of command response. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">endptr</td><td>- Char pointer to the next char in response after parser match</td></tr>
   </table>
   </dd>
 </dl>
@@ -632,9 +638,7 @@ Functions</h2></td></tr>
 <p>Invokes a BGx AT command with default action values. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">cmdStr</td><td>- The command string to send to the BG96 module. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">retry</td><td>- Function will retry busy module if set to true. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">taskCompleteParser</td><td>- Custom command response parser to signal result is complete. NULL for std parser.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmdStr</td><td>- The command string to send to the BG96 module.</td></tr>
   </table>
   </dd>
 </dl>
@@ -684,7 +688,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cmdStr</td><td>- The command string to send to the BG96 module. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">retry</td><td>- Function will retry busy module if set to true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">retries</td><td>- Number of retries to obtain action lock that should be attempted. 0 = no retries. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>- Number of milliseconds the action can take. If 0, the system default timeout is used. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">taskCompleteParser</td><td>- Custom command response parser to signal result is complete. NULL for std parser.</td></tr>
   </table>
   </dd>
@@ -722,8 +727,8 @@ Functions</h2></td></tr>
 <p>Attempts to get exclusive access to QBG module command interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">actionCmd</td><td>- Pointer to action structure. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">retry</td><td>- If exclusive access is not initially garnered, should retries be attempted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmdStr</td><td>- The AT command text. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">retries</td><td>- Number of retries to be attempted, while obtaining lock. </td></tr>
   </table>
   </dd>
 </dl>

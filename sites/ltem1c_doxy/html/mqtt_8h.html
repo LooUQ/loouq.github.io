@@ -85,10 +85,13 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_msg_props__tag.html">mqttMsgProps_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct exposing the properties collection (names and values as c-strings) for a received message.  <a href="structmqtt_msg_props__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_subscription__tag.html">mqttSubscription_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing a MQTT topic subscription.  <a href="structmqtt_subscription__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html">mqtt_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing the MQTT service.  <a href="structmqtt__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -115,24 +118,34 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ac778976d0ddfac2c6ee9d150a8b7d846"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2">mqttResult_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#ac778976d0ddfac2c6ee9d150a8b7d846">mqttResult_t</a></td></tr>
+<tr class="memdesc:ac778976d0ddfac2c6ee9d150a8b7d846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emum describing the results of a MQTT publish.  <a href="mqtt_8h.html#ac778976d0ddfac2c6ee9d150a8b7d846">More...</a><br /></td></tr>
 <tr class="separator:ac778976d0ddfac2c6ee9d150a8b7d846"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4fb66f436707c44f2e350dbc5108224"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58">sslVersion_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224">sslVersion_t</a></td></tr>
+<tr class="memdesc:af4fb66f436707c44f2e350dbc5108224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of available SSL version options for an SSL connection.  <a href="mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224">More...</a><br /></td></tr>
 <tr class="separator:af4fb66f436707c44f2e350dbc5108224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6396985642256a42f60af322da5124f"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767">mqttVersion_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#af6396985642256a42f60af322da5124f">mqttVersion_t</a></td></tr>
+<tr class="memdesc:af6396985642256a42f60af322da5124f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of available MQTT protocol version options.  <a href="mqtt_8h.html#af6396985642256a42f60af322da5124f">More...</a><br /></td></tr>
 <tr class="separator:af6396985642256a42f60af322da5124f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab96c1d590faaf00728d862d36838bb3c"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1">mqttQos_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a></td></tr>
+<tr class="memdesc:ab96c1d590faaf00728d862d36838bb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum specifying the MQTT QOS for a publish and subscribed topics.  <a href="mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">More...</a><br /></td></tr>
 <tr class="separator:ab96c1d590faaf00728d862d36838bb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a455558a85512fdfa977572eae49314c0"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2">mqttSession_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#a455558a85512fdfa977572eae49314c0">mqttSession_t</a></td></tr>
+<tr class="memdesc:a455558a85512fdfa977572eae49314c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum specifying behavior for messages pre-session establishment (session starts with connect, not open).  <a href="mqtt_8h.html#a455558a85512fdfa977572eae49314c0">More...</a><br /></td></tr>
 <tr class="separator:a455558a85512fdfa977572eae49314c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a148a3f73f6a3ee40ff17182f67586932"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39">mqttStatus_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a></td></tr>
+<tr class="memdesc:a148a3f73f6a3ee40ff17182f67586932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emum describing current state of the MQTT protocol service.  <a href="mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">More...</a><br /></td></tr>
 <tr class="separator:a148a3f73f6a3ee40ff17182f67586932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fa2744a20779d55b15a988132969ec0"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmqtt_msg_props__tag.html">mqttMsgProps_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#a4fa2744a20779d55b15a988132969ec0">mqttMsgProps_t</a></td></tr>
+<tr class="memdesc:a4fa2744a20779d55b15a988132969ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct exposing the properties collection (names and values as c-strings) for a received message.  <a href="mqtt_8h.html#a4fa2744a20779d55b15a988132969ec0">More...</a><br /></td></tr>
 <tr class="separator:a4fa2744a20779d55b15a988132969ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9d7613c182a7c45b5e6abe73cd5e04c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#ad9d7613c182a7c45b5e6abe73cd5e04c">mqttRecv_func_t</a>) (char *topic, char *props, char *message)</td></tr>
+<tr class="memdesc:ad9d7613c182a7c45b5e6abe73cd5e04c"><td class="mdescLeft">&#160;</td><td class="mdescRight">typedef of MQTT subscription receiver function (required signature).  <a href="mqtt_8h.html#ad9d7613c182a7c45b5e6abe73cd5e04c">More...</a><br /></td></tr>
 <tr class="separator:ad9d7613c182a7c45b5e6abe73cd5e04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46dc892f05acfdb27f05881e54cd1122"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmqtt_subscription__tag.html">mqttSubscription_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#a46dc892f05acfdb27f05881e54cd1122">mqttSubscription_t</a></td></tr>
+<tr class="memdesc:a46dc892f05acfdb27f05881e54cd1122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing a MQTT topic subscription.  <a href="mqtt_8h.html#a46dc892f05acfdb27f05881e54cd1122">More...</a><br /></td></tr>
 <tr class="separator:a46dc892f05acfdb27f05881e54cd1122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1744988046ae8938df0f8369d90f2d42"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmqtt__tag.html">mqtt_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#a1744988046ae8938df0f8369d90f2d42">mqtt_t</a></td></tr>
+<tr class="memdesc:a1744988046ae8938df0f8369d90f2d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing the MQTT service.  <a href="mqtt_8h.html#a1744988046ae8938df0f8369d90f2d42">More...</a><br /></td></tr>
 <tr class="separator:a1744988046ae8938df0f8369d90f2d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -141,6 +154,7 @@ Enumerations</h2></td></tr>
 <a class="el" href="mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2aedc68fc3c221d4a32102685a1bf9197a">mqttResult_retransmission</a> = 1, 
 <a class="el" href="mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2a7767af10058c9e03b912b38547decf10">mqttResult_failed</a> = 2
  }</td></tr>
+<tr class="memdesc:aeb87ffe09946888ae33f48618357ebd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emum describing the results of a MQTT publish.  <a href="mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2">More...</a><br /></td></tr>
 <tr class="separator:aeb87ffe09946888ae33f48618357ebd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fe217ea8607b0396e3e2d4d8b174f58"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58">sslVersion_tag</a> { <br />
 &#160;&#160;<a class="el" href="mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58abcccf511229deffad374c6007a33a0c0">sslVersion_none</a> = 255, 
@@ -152,25 +166,30 @@ Enumerations</h2></td></tr>
 <a class="el" href="mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58a4969b38ac7bda01a8ae065887a06c0e9">sslVersion_any</a> = 4
 <br />
  }</td></tr>
+<tr class="memdesc:a4fe217ea8607b0396e3e2d4d8b174f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of available SSL version options for an SSL connection.  <a href="mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58">More...</a><br /></td></tr>
 <tr class="separator:a4fe217ea8607b0396e3e2d4d8b174f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ade03ddc4349123bb244da87f1b767"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767">mqttVersion_tag</a> { <a class="el" href="mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767a6ebff9cc916721b89a6bfcef4998f9f7">mqttVersion_3</a> = 3, 
 <a class="el" href="mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767acba79b73a8bc8355937cb8ace9e9994d">mqttVersion_311</a> = 4
  }</td></tr>
+<tr class="memdesc:ad1ade03ddc4349123bb244da87f1b767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of available MQTT protocol version options.  <a href="mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767">More...</a><br /></td></tr>
 <tr class="separator:ad1ade03ddc4349123bb244da87f1b767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a550b228936d6a66ce971cdc331a53fd1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1">mqttQos_tag</a> { <a class="el" href="mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1a09ddfba73d199ba75940e283d4de78e8">mqttQos_0</a> = 0, 
 <a class="el" href="mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1a85cc5be7463e90f6f10d09f44d60d302">mqttQos_1</a> = 1, 
 <a class="el" href="mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1a6a558f77969f80fb08755863f64d6f4f">mqttQos_2</a> = 2, 
 <a class="el" href="mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1a8c8f9687563c5189305c22c7590c71bc">mqttQos_maxAzure</a> = 1
  }</td></tr>
+<tr class="memdesc:a550b228936d6a66ce971cdc331a53fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum specifying the MQTT QOS for a publish and subscribed topics.  <a href="mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1">More...</a><br /></td></tr>
 <tr class="separator:a550b228936d6a66ce971cdc331a53fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff6fa5bd5d79dc17b987e00b771579c2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2">mqttSession_tag</a> { <a class="el" href="mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2aa6cfdfeab547134eb31f3cfa64c321bb">mqttSession_preserve</a> = 0, 
 <a class="el" href="mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2a2ad8567e4938d0a9b6ba01eeb4c815a1">mqttSession_cleanStart</a> = 1
  }</td></tr>
+<tr class="memdesc:aff6fa5bd5d79dc17b987e00b771579c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum specifying behavior for messages pre-session establishment (session starts with connect, not open).  <a href="mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2">More...</a><br /></td></tr>
 <tr class="separator:aff6fa5bd5d79dc17b987e00b771579c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51686657313aedeaa79d74869e1d9d39"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39">mqttStatus_tag</a> { <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a37e8870d905360c3b22986f3b0e7755c">mqttStatus_idle</a> = 0, 
 <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a56db1975479de9626cfae7946a30ea27">mqttStatus_open</a> = 1, 
 <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a853a3a16d911725ec825390a9bb4d9ac">mqttStatus_conn</a> = 2
  }</td></tr>
+<tr class="memdesc:a51686657313aedeaa79d74869e1d9d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emum describing current state of the MQTT protocol service.  <a href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39">More...</a><br /></td></tr>
 <tr class="separator:a51686657313aedeaa79d74869e1d9d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -346,6 +365,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Struct describing the MQTT service. </p>
+
 </div>
 </div>
 <a id="a4fa2744a20779d55b15a988132969ec0"></a>
@@ -359,6 +380,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Struct exposing the properties collection (names and values as c-strings) for a received message. </p>
 
 </div>
 </div>
@@ -374,6 +397,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Enum specifying the MQTT QOS for a publish and subscribed topics. </p>
+
 </div>
 </div>
 <a id="ad9d7613c182a7c45b5e6abe73cd5e04c"></a>
@@ -387,6 +412,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>typedef of MQTT subscription receiver function (required signature). </p>
 
 </div>
 </div>
@@ -402,6 +429,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Emum describing the results of a MQTT publish. </p>
+
 </div>
 </div>
 <a id="a455558a85512fdfa977572eae49314c0"></a>
@@ -415,6 +444,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum specifying behavior for messages pre-session establishment (session starts with connect, not open). </p>
 
 </div>
 </div>
@@ -430,6 +461,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Emum describing current state of the MQTT protocol service. </p>
+
 </div>
 </div>
 <a id="a46dc892f05acfdb27f05881e54cd1122"></a>
@@ -443,6 +476,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Struct describing a MQTT topic subscription. </p>
 
 </div>
 </div>
@@ -458,6 +493,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Enum of available MQTT protocol version options. </p>
+
 </div>
 </div>
 <a id="af4fb66f436707c44f2e350dbc5108224"></a>
@@ -471,6 +508,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum of available SSL version options for an SSL connection. </p>
 
 </div>
 </div>
@@ -486,11 +525,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum specifying the MQTT QOS for a publish and subscribed topics. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a550b228936d6a66ce971cdc331a53fd1a09ddfba73d199ba75940e283d4de78e8"></a>mqttQos_0&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a550b228936d6a66ce971cdc331a53fd1a85cc5be7463e90f6f10d09f44d60d302"></a>mqttQos_1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a550b228936d6a66ce971cdc331a53fd1a6a558f77969f80fb08755863f64d6f4f"></a>mqttQos_2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a550b228936d6a66ce971cdc331a53fd1a8c8f9687563c5189305c22c7590c71bc"></a>mqttQos_maxAzure&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a550b228936d6a66ce971cdc331a53fd1a09ddfba73d199ba75940e283d4de78e8"></a>mqttQos_0&#160;</td><td class="fielddoc"><p>QOS 0: At most once (aka send and forget) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a550b228936d6a66ce971cdc331a53fd1a85cc5be7463e90f6f10d09f44d60d302"></a>mqttQos_1&#160;</td><td class="fielddoc"><p>QOS 1: At least once. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a550b228936d6a66ce971cdc331a53fd1a6a558f77969f80fb08755863f64d6f4f"></a>mqttQos_2&#160;</td><td class="fielddoc"><p>QOS 2: Exactly once. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a550b228936d6a66ce971cdc331a53fd1a8c8f9687563c5189305c22c7590c71bc"></a>mqttQos_maxAzure&#160;</td><td class="fielddoc"><p>MS Azure IoTHub max QOS (setting to QOS2 will force disconnect) </p>
+</td></tr>
 </table>
 
 </div>
@@ -506,10 +551,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Emum describing the results of a MQTT publish. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aeb87ffe09946888ae33f48618357ebd2a975935ea6219ab31f1927235b69095fb"></a>mqttResult_success&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aeb87ffe09946888ae33f48618357ebd2aedc68fc3c221d4a32102685a1bf9197a"></a>mqttResult_retransmission&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aeb87ffe09946888ae33f48618357ebd2a7767af10058c9e03b912b38547decf10"></a>mqttResult_failed&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aeb87ffe09946888ae33f48618357ebd2a975935ea6219ab31f1927235b69095fb"></a>mqttResult_success&#160;</td><td class="fielddoc"><p>Sucessful publish. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeb87ffe09946888ae33f48618357ebd2aedc68fc3c221d4a32102685a1bf9197a"></a>mqttResult_retransmission&#160;</td><td class="fielddoc"><p>Publish Sucessful, with retransmission. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeb87ffe09946888ae33f48618357ebd2a7767af10058c9e03b912b38547decf10"></a>mqttResult_failed&#160;</td><td class="fielddoc"><p>Publish failed. </p>
+</td></tr>
 </table>
 
 </div>
@@ -525,9 +575,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum specifying behavior for messages pre-session establishment (session starts with connect, not open). </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aff6fa5bd5d79dc17b987e00b771579c2aa6cfdfeab547134eb31f3cfa64c321bb"></a>mqttSession_preserve&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aff6fa5bd5d79dc17b987e00b771579c2a2ad8567e4938d0a9b6ba01eeb4c815a1"></a>mqttSession_cleanStart&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aff6fa5bd5d79dc17b987e00b771579c2aa6cfdfeab547134eb31f3cfa64c321bb"></a>mqttSession_preserve&#160;</td><td class="fielddoc"><p>Preserve message that arrive previous to session and deliver to application. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aff6fa5bd5d79dc17b987e00b771579c2a2ad8567e4938d0a9b6ba01eeb4c815a1"></a>mqttSession_cleanStart&#160;</td><td class="fielddoc"><p>Clear out any previously received messages and start session "clean". </p>
+</td></tr>
 </table>
 
 </div>
@@ -543,10 +597,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Emum describing current state of the MQTT protocol service. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a37e8870d905360c3b22986f3b0e7755c"></a>mqttStatus_idle&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a56db1975479de9626cfae7946a30ea27"></a>mqttStatus_open&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a853a3a16d911725ec825390a9bb4d9ac"></a>mqttStatus_conn&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a37e8870d905360c3b22986f3b0e7755c"></a>mqttStatus_idle&#160;</td><td class="fielddoc"><p>MQTT is idle, not active. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a56db1975479de9626cfae7946a30ea27"></a>mqttStatus_open&#160;</td><td class="fielddoc"><p>MQTT is open, open but not connected. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a853a3a16d911725ec825390a9bb4d9ac"></a>mqttStatus_conn&#160;</td><td class="fielddoc"><p>MQTT is connected, in session with server. </p>
+</td></tr>
 </table>
 
 </div>
@@ -562,9 +621,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum of available MQTT protocol version options. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad1ade03ddc4349123bb244da87f1b767a6ebff9cc916721b89a6bfcef4998f9f7"></a>mqttVersion_3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad1ade03ddc4349123bb244da87f1b767acba79b73a8bc8355937cb8ace9e9994d"></a>mqttVersion_311&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad1ade03ddc4349123bb244da87f1b767a6ebff9cc916721b89a6bfcef4998f9f7"></a>mqttVersion_3&#160;</td><td class="fielddoc"><p>Set behavior to MQTT version 3.0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad1ade03ddc4349123bb244da87f1b767acba79b73a8bc8355937cb8ace9e9994d"></a>mqttVersion_311&#160;</td><td class="fielddoc"><p>Set behavior to MQTT version 3.1.1, Note: this is not MQTT 4.0. </p>
+</td></tr>
 </table>
 
 </div>
@@ -580,13 +643,21 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum of available SSL version options for an SSL connection. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58abcccf511229deffad374c6007a33a0c0"></a>sslVersion_none&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58aac126f250ef89e0f6048962e80253c58"></a>sslVersion_ssl30&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58a43f40ef1b72850f596689dff84d1ff35"></a>sslVersion_tls10&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58acf7df3dd78ef7ef23a7f287eea404d26"></a>sslVersion_tls11&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58a87fda49f4e59a4f7d8c2271d00acb9c3"></a>sslVersion_tls12&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58a4969b38ac7bda01a8ae065887a06c0e9"></a>sslVersion_any&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58abcccf511229deffad374c6007a33a0c0"></a>sslVersion_none&#160;</td><td class="fielddoc"><p>Not set. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58aac126f250ef89e0f6048962e80253c58"></a>sslVersion_ssl30&#160;</td><td class="fielddoc"><p>Require SSL v3.0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58a43f40ef1b72850f596689dff84d1ff35"></a>sslVersion_tls10&#160;</td><td class="fielddoc"><p>Require TLS v1.0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58acf7df3dd78ef7ef23a7f287eea404d26"></a>sslVersion_tls11&#160;</td><td class="fielddoc"><p>Require TLS v1.1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58a87fda49f4e59a4f7d8c2271d00acb9c3"></a>sslVersion_tls12&#160;</td><td class="fielddoc"><p>Require TLS v1.2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58a4969b38ac7bda01a8ae065887a06c0e9"></a>sslVersion_any&#160;</td><td class="fielddoc"><p>Any SSL/TLS version is acceptable. </p>
+</td></tr>
 </table>
 
 </div>
@@ -610,7 +681,7 @@ Functions</h2></td></tr>
 <p>Disconnect and close a connection to a MQTT server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>The socket based identifier for the connection to close </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>- The socket based identifier for the connection to close </td></tr>
   </table>
   </dd>
 </dl>
@@ -658,10 +729,10 @@ Functions</h2></td></tr>
 <p>Connect (authenticate) to a MQTT server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>The socket based identifier for the connection to close. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">clientId</td><td>The client or device identifier for the connection. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">username</td><td>The user identifier or name for the connection to authenticate. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">password</td><td>The secret string or phrase to authenticate the connection.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">clientId</td><td>- The client or device identifier for the connection. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">username</td><td>- The user identifier or name for the connection to authenticate. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">password</td><td>- The secret string or phrase to authenticate the connection. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sessionClean</td><td>- Directs MQTT to preserve or flush messages received prior to the session start.</td></tr>
   </table>
   </dd>
 </dl>
@@ -748,11 +819,10 @@ Functions</h2></td></tr>
 <p>Open a remote MQTT server for use. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>The socket based identifier to use for the server connection. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">host</td><td>The host IP address or name of the remote server. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>The IP port number to use for the communications. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">useSslVersion</td><td>Specifies the version and options for use of SSL to protect communications. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">useMqttVersion</td><td>Specifies the MQTT protocol revision to use for communications.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">host</td><td>- The host IP address or name of the remote server. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>- The IP port number to use for the communications. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useSslVersion</td><td>- Specifies the version and options for use of SSL to protect communications. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useMqttVersion</td><td>- Specifies the MQTT protocol revision to use for communications.</td></tr>
   </table>
   </dd>
 </dl>
@@ -779,7 +849,7 @@ Functions</h2></td></tr>
 <p>Parses the topic properties string into a mqttProperties structure (MUTATES, NO COPY). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">topicProps</td><td>[in] Char pointer to the c-string containing message properties passed in topic</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">topicProps</td><td>- Char pointer to the c-string containing message properties passed in topic</td></tr>
   </table>
   </dd>
 </dl>
@@ -822,9 +892,9 @@ Functions</h2></td></tr>
 <p>Publish a message to server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*topic</td><td>The topic to receive the message on the server. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">qos</td><td>The MQTT QOS to be assigned to sent message. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*message</td><td>Pointer to message to be sent.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*topic</td><td>- The topic to receive the message on the server. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">qos</td><td>- The MQTT QOS to be assigned to sent message. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*message</td><td>- Pointer to message to be sent.</td></tr>
   </table>
   </dd>
 </dl>
@@ -851,7 +921,7 @@ Functions</h2></td></tr>
 <p>Query the status of the MQTT server state. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">host</td><td>(optional) A char string to match with the currently connected server. Host is not checked if null string passed.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">host</td><td>- (optional) A char string to match with the currently connected server. Host is not checked if null string passed.</td></tr>
   </table>
   </dd>
 </dl>
@@ -894,10 +964,9 @@ Functions</h2></td></tr>
 <p>Subscribe to a topic on the MQTT server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>The socket based identifier for the MQTT server connection to update. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">topic</td><td>The messaging topic to subscribe to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">qos</td><td>The QOS level for messages subscribed to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">recv_func</td><td>The receiver function in the application to receive subscribed messages on arrival.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">topic</td><td>- The messaging topic to subscribe to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">qos</td><td>- The QOS level for messages subscribed to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">recv_func</td><td>- The receiver function in the application to receive subscribed messages on arrival.</td></tr>
   </table>
   </dd>
 </dl>
@@ -924,8 +993,7 @@ Functions</h2></td></tr>
 <p>Unsubscribe to a topic on the MQTT server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>The socket based identifier for the MQTT server connection to update. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">topic</td><td>The messaging topic to unsubscribe from.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">topic</td><td>- The messaging topic to unsubscribe from.</td></tr>
   </table>
   </dd>
 </dl>

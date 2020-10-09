@@ -233,7 +233,7 @@ Functions</h2></td></tr>
 <p>Close an established (open) connection socket. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">socketNum</td><td>- The connection socket to close. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>- The socket ID or number for the connection to close. </td></tr>
   </table>
   </dd>
 </dl>
@@ -331,11 +331,12 @@ Functions</h2></td></tr>
 <p>Open a data connection (socket) to d data to an established endpoint via protocol used to open socket (TCP/UDP/TCP INCOMING). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">protocol</td><td>The IP protocol to use for the connection (TCP/UDP/TCP LISTENER/UDP SERVICE/SSL). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">host</td><td>The IP address (string) or domain name of the remote host to communicate with. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rmtPort</td><td>The port number at the remote host. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">lclPort</td><td>The port number on this side of the conversation, set to 0 to auto-assign. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ipReceiver_func</td><td>The callback function in your application to be notified of received data ready. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>- The ID or number specifying the socket connect to open. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">protocol</td><td>- The IP protocol to use for the connection (TCP/UDP/TCP LISTENER/UDP SERVICE/SSL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">host</td><td>- The IP address (string) or domain name of the remote host to communicate with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rmtPort</td><td>- The port number at the remote host. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lclPort</td><td>- The port number on this side of the conversation, set to 0 to auto-assign. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rcvr_func</td><td>The callback function in your application to be notified of received data ready. </td></tr>
   </table>
   </dd>
 </dl>
@@ -403,9 +404,9 @@ Functions</h2></td></tr>
 <p>Send data to an established endpoint via protocol used to open socket (TCP/UDP/TCP INCOMING). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">-</td><td>socketId The connection socket returned from open. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">-</td><td>data A character pointer containing the data to send. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">-</td><td>dataSz The size of the buffer (&lt; 1501 bytes). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>- The connection socket returned from open. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- A character pointer containing the data to send. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataSz</td><td>- The size of the buffer (&lt; 1501 bytes). </td></tr>
   </table>
   </dd>
 </dl>

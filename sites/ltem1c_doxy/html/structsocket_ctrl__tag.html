@@ -71,26 +71,38 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Struct representing the state of a TCP\UDP\SSL socket connection.  
+ <a href="structsocket_ctrl__tag.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="sockets_8h_source.html">sockets.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a60b084aaf44cc3f9359e1e93f92c162f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="network_8h.html#a91e19fa4fff461493e1a41f7c7aa4e5f">protocol_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsocket_ctrl__tag.html#a60b084aaf44cc3f9359e1e93f92c162f">protocol</a></td></tr>
+<tr class="memdesc:a60b084aaf44cc3f9359e1e93f92c162f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket's protocol : UDP\TCP\SSL.  <a href="structsocket_ctrl__tag.html#a60b084aaf44cc3f9359e1e93f92c162f">More...</a><br /></td></tr>
 <tr class="separator:a60b084aaf44cc3f9359e1e93f92c162f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa67a15da6991635f5e111a8130c45bb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">socketId_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsocket_ctrl__tag.html#aa67a15da6991635f5e111a8130c45bb4">socketId</a></td></tr>
+<tr class="memdesc:aa67a15da6991635f5e111a8130c45bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket ID/number.  <a href="structsocket_ctrl__tag.html#aa67a15da6991635f5e111a8130c45bb4">More...</a><br /></td></tr>
 <tr class="separator:aa67a15da6991635f5e111a8130c45bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c7e45250b1eb6821dd59fb2a9a016d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsocket_ctrl__tag.html#a8c7e45250b1eb6821dd59fb2a9a016d7">open</a></td></tr>
+<tr class="memdesc:a8c7e45250b1eb6821dd59fb2a9a016d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the socket in an open state.  <a href="structsocket_ctrl__tag.html#a8c7e45250b1eb6821dd59fb2a9a016d7">More...</a><br /></td></tr>
 <tr class="separator:a8c7e45250b1eb6821dd59fb2a9a016d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aa4b1a1d45612b09ac1926c0006ef61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsocket_ctrl__tag.html#a0aa4b1a1d45612b09ac1926c0006ef61">dataPending</a></td></tr>
+<tr class="memdesc:a0aa4b1a1d45612b09ac1926c0006ef61"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data pipeline has data (or the likelihood of data), triggered when BGx reports data pending (URC "recv").  <a href="structsocket_ctrl__tag.html#a0aa4b1a1d45612b09ac1926c0006ef61">More...</a><br /></td></tr>
 <tr class="separator:a0aa4b1a1d45612b09ac1926c0006ef61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adab807efc09cb10f5017455fd0a8f701"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsocket_ctrl__tag.html#adab807efc09cb10f5017455fd0a8f701">dataBufferIndx</a></td></tr>
+<tr class="memdesc:adab807efc09cb10f5017455fd0a8f701"><td class="mdescLeft">&#160;</td><td class="mdescRight">buffer indx holding data  <a href="structsocket_ctrl__tag.html#adab807efc09cb10f5017455fd0a8f701">More...</a><br /></td></tr>
 <tr class="separator:adab807efc09cb10f5017455fd0a8f701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af022b7937f29e6346f0ef344d1ea8e4a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsocket_ctrl__tag.html#af022b7937f29e6346f0ef344d1ea8e4a">pdpContextId</a></td></tr>
+<tr class="memdesc:af022b7937f29e6346f0ef344d1ea8e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which network context is this data flow associated with.  <a href="structsocket_ctrl__tag.html#af022b7937f29e6346f0ef344d1ea8e4a">More...</a><br /></td></tr>
 <tr class="separator:af022b7937f29e6346f0ef344d1ea8e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94ab9d935477e80c1ad121b414036fe1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sockets_8h.html#a31421c2c2ed9b8c0ac84f91d0c6027e5">receiver_func_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsocket_ctrl__tag.html#a94ab9d935477e80c1ad121b414036fe1">receiver_func</a></td></tr>
+<tr class="memdesc:a94ab9d935477e80c1ad121b414036fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data receive function for socket data. This func is invoked for every receive event.  <a href="structsocket_ctrl__tag.html#a94ab9d935477e80c1ad121b414036fe1">More...</a><br /></td></tr>
 <tr class="separator:a94ab9d935477e80c1ad121b414036fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Struct representing the state of a TCP\UDP\SSL socket connection. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="adab807efc09cb10f5017455fd0a8f701"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adab807efc09cb10f5017455fd0a8f701">&#9670;&nbsp;</a></span>dataBufferIndx</h2>
 
@@ -102,6 +114,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>buffer indx holding data </p>
 
 </div>
 </div>
@@ -117,6 +131,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The data pipeline has data (or the likelihood of data), triggered when BGx reports data pending (URC "recv"). </p>
+
 </div>
 </div>
 <a id="a8c7e45250b1eb6821dd59fb2a9a016d7"></a>
@@ -130,6 +146,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Is the socket in an open state. </p>
 
 </div>
 </div>
@@ -145,6 +163,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Which network context is this data flow associated with. </p>
+
 </div>
 </div>
 <a id="a60b084aaf44cc3f9359e1e93f92c162f"></a>
@@ -158,6 +178,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Socket's protocol : UDP\TCP\SSL. </p>
 
 </div>
 </div>
@@ -173,6 +195,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Data receive function for socket data. This func is invoked for every receive event. </p>
+
 </div>
 </div>
 <a id="aa67a15da6991635f5e111a8130c45bb4"></a>
@@ -186,6 +210,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Socket ID/number. </p>
 
 </div>
 </div>

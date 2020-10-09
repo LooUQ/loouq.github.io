@@ -71,18 +71,26 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Struct exposing the properties collection (names and values as c-strings) for a received message.  
+ <a href="structmqtt_msg_props__tag.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="mqtt_8h_source.html">mqtt.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a20302e2c99a60d3f612dba57e3f6333b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_msg_props__tag.html#a20302e2c99a60d3f612dba57e3f6333b">count</a></td></tr>
+<tr class="memdesc:a20302e2c99a60d3f612dba57e3f6333b"><td class="mdescLeft">&#160;</td><td class="mdescRight">During parsing, how many properties (name/value pairs) were found.  <a href="structmqtt_msg_props__tag.html#a20302e2c99a60d3f612dba57e3f6333b">More...</a><br /></td></tr>
 <tr class="separator:a20302e2c99a60d3f612dba57e3f6333b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98c8cb9e36043de85ff385d226484368"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_msg_props__tag.html#a98c8cb9e36043de85ff385d226484368">names</a> [<a class="el" href="mqtt_8h.html#acdb74e5c43e94d95825d04eecd10ac00">MQTT_PROPERTIES_CNT</a>]</td></tr>
+<tr class="memdesc:a98c8cb9e36043de85ff385d226484368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of property names.  <a href="structmqtt_msg_props__tag.html#a98c8cb9e36043de85ff385d226484368">More...</a><br /></td></tr>
 <tr class="separator:a98c8cb9e36043de85ff385d226484368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb54980f4e90fadadf05f5f7af631873"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_msg_props__tag.html#acb54980f4e90fadadf05f5f7af631873">values</a> [<a class="el" href="mqtt_8h.html#acdb74e5c43e94d95825d04eecd10ac00">MQTT_PROPERTIES_CNT</a>]</td></tr>
+<tr class="memdesc:acb54980f4e90fadadf05f5f7af631873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of property values (as c-strings). Application is responsible for any type conversion.  <a href="structmqtt_msg_props__tag.html#acb54980f4e90fadadf05f5f7af631873">More...</a><br /></td></tr>
 <tr class="separator:acb54980f4e90fadadf05f5f7af631873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Struct exposing the properties collection (names and values as c-strings) for a received message. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="a20302e2c99a60d3f612dba57e3f6333b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20302e2c99a60d3f612dba57e3f6333b">&#9670;&nbsp;</a></span>count</h2>
 
@@ -94,6 +102,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>During parsing, how many properties (name/value pairs) were found. </p>
 
 </div>
 </div>
@@ -109,6 +119,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Array of property names. </p>
+
 </div>
 </div>
 <a id="acb54980f4e90fadadf05f5f7af631873"></a>
@@ -122,6 +134,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Array of property values (as c-strings). Application is responsible for any type conversion. </p>
 
 </div>
 </div>

@@ -108,39 +108,39 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">sprintf(STRING_IP, &quot;%d.%d.%d.%d&quot;, NUM_IP##.octet[0] , NUM_IP##.octet[1], NUM_IP##.octet[2], NUM_IP##.octet[3]);</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="unionip__addr__tag.html">   37</a></span>&#160;<span class="keyword">union </span><a class="code" href="unionip__addr__tag.html">ip_addr_tag</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="unionip__addr__tag.html#a1822ce23a3bd6c88f73e562d8a94f1d5">   39</a></span>&#160;    uint8_t <a class="code" href="unionip__addr__tag.html#a1822ce23a3bd6c88f73e562d8a94f1d5">octet</a>[4];</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="unionip__addr__tag.html#a18e911137f39a5785b77c26a9432565f">   40</a></span>&#160;    uint32_t <a class="code" href="unionip__addr__tag.html#a18e911137f39a5785b77c26a9432565f">packed</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">typedef</span> <span class="keyword">union </span><a class="code" href="unionip__addr__tag.html">ip_addr_tag</a> <a class="code" href="unionip__addr__tag.html">ip_addr_t</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="unionip__addr__tag.html">   40</a></span>&#160;<span class="keyword">union </span><a class="code" href="unionip__addr__tag.html">ip_addr_tag</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="unionip__addr__tag.html#a1822ce23a3bd6c88f73e562d8a94f1d5">   42</a></span>&#160;    uint8_t <a class="code" href="unionip__addr__tag.html#a1822ce23a3bd6c88f73e562d8a94f1d5">octet</a>[4];</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="unionip__addr__tag.html#a18e911137f39a5785b77c26a9432565f">   43</a></span>&#160;    uint32_t <a class="code" href="unionip__addr__tag.html#a18e911137f39a5785b77c26a9432565f">packed</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">/* seems like the only survivor is strToken which is referenced in gnss and network modules, likely move to ltem1c.c and drop util.c */</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//ip_addr_t util_parseIpAddr(const char *ipStr);</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//void floatToString(float fVal, char *buf, uint8_t bufSz, uint8_t precision);</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="util_8h.html#ad3a0da52a4a81a13fe7ebf964268a455">strToken</a>(<span class="keywordtype">char</span> *source, <span class="keywordtype">int</span> delimiter, <span class="keywordtype">char</span> *token, uint8_t tokenMax);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//const char *strlenSafe(const char *charStr, uint16_t maxSz);</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif // !__cplusplus</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* !__LTEM1C_UTIL_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">typedef</span> <span class="keyword">union </span><a class="code" href="unionip__addr__tag.html">ip_addr_tag</a> <a class="code" href="unionip__addr__tag.html">ip_addr_t</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/* seems like the only survivor is strToken which is referenced in gnss and network modules, likely move to ltem1c.c and drop util.c */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//ip_addr_t util_parseIpAddr(const char *ipStr);</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//void floatToString(float fVal, char *buf, uint8_t bufSz, uint8_t precision);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="util_8h.html#ad3a0da52a4a81a13fe7ebf964268a455">strToken</a>(<span class="keywordtype">char</span> *source, <span class="keywordtype">int</span> delimiter, <span class="keywordtype">char</span> *token, uint8_t tokenMax);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//const char *strlenSafe(const char *charStr, uint16_t maxSz);</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif // !__cplusplus</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* !__LTEM1C_UTIL_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="autil_8h_html_ad3a0da52a4a81a13fe7ebf964268a455"><div class="ttname"><a href="util_8h.html#ad3a0da52a4a81a13fe7ebf964268a455">strToken</a></div><div class="ttdeci">char * strToken(char *source, int delimiter, char *token, uint8_t tokenMax)</div><div class="ttdoc">Simple string to packed numeric IP address parser.</div><div class="ttdef"><b>Definition:</b> util.c:85</div></div>
-<div class="ttc" id="aunionip__addr__tag_html_a1822ce23a3bd6c88f73e562d8a94f1d5"><div class="ttname"><a href="unionip__addr__tag.html#a1822ce23a3bd6c88f73e562d8a94f1d5">ip_addr_tag::octet</a></div><div class="ttdeci">uint8_t octet[4]</div><div class="ttdef"><b>Definition:</b> util.h:39</div></div>
+<div class="ttc" id="aunionip__addr__tag_html_a1822ce23a3bd6c88f73e562d8a94f1d5"><div class="ttname"><a href="unionip__addr__tag.html#a1822ce23a3bd6c88f73e562d8a94f1d5">ip_addr_tag::octet</a></div><div class="ttdeci">uint8_t octet[4]</div><div class="ttdef"><b>Definition:</b> util.h:42</div></div>
 <div class="ttc" id="altem1c_8h_html"><div class="ttname"><a href="ltem1c_8h.html">ltem1c.h</a></div></div>
-<div class="ttc" id="aunionip__addr__tag_html"><div class="ttname"><a href="unionip__addr__tag.html">ip_addr_tag</a></div><div class="ttdef"><b>Definition:</b> util.h:38</div></div>
-<div class="ttc" id="aunionip__addr__tag_html_a18e911137f39a5785b77c26a9432565f"><div class="ttname"><a href="unionip__addr__tag.html#a18e911137f39a5785b77c26a9432565f">ip_addr_tag::packed</a></div><div class="ttdeci">uint32_t packed</div><div class="ttdef"><b>Definition:</b> util.h:40</div></div>
+<div class="ttc" id="aunionip__addr__tag_html"><div class="ttname"><a href="unionip__addr__tag.html">ip_addr_tag</a></div><div class="ttdoc">Union datatype to facilitate display and manipulation of an IPv4 address.</div><div class="ttdef"><b>Definition:</b> util.h:41</div></div>
+<div class="ttc" id="aunionip__addr__tag_html_a18e911137f39a5785b77c26a9432565f"><div class="ttname"><a href="unionip__addr__tag.html#a18e911137f39a5785b77c26a9432565f">ip_addr_tag::packed</a></div><div class="ttdeci">uint32_t packed</div><div class="ttdef"><b>Definition:</b> util.h:43</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

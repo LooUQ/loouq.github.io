@@ -5,11 +5,11 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structnetwork_operator__tag}{network\+Operator\+\_\+tag}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct respresenting an A\+C\+T\+I\+VE network carrier/operator. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structpdp_context__tag}{pdp\+Context\+\_\+tag}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct representing the state of an active P\+DP context (aka\+: A\+PN or data context). \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structnetwork__tag}{network\+\_\+tag}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct representing the full connectivity with a connected network carrier. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,11 +29,11 @@ struct \mbox{\hyperlink{structnetwork__tag}{network\+\_\+tag}}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \mbox{\hyperlink{structnetwork_operator__tag}{network\+Operator\+\_\+tag}} \mbox{\hyperlink{network_8h_a58db2e79250f681c695c651d586fd25f}{network\+Operator\+\_\+t}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct respresenting an A\+C\+T\+I\+VE network carrier/operator. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structpdp_context__tag}{pdp\+Context\+\_\+tag}} \mbox{\hyperlink{network_8h_a2e3bffac3c81c2a93542e7824346c6ec}{pdp\+Context\+\_\+t}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struct representing the state of an active P\+DP context (aka\+: A\+PN or data context). \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structnetwork__tag}{network\+\_\+tag}} \mbox{\hyperlink{network_8h_afdeb09cbf237e761c59dcb9084f01a3a}{network\+\_\+t}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct representing the full connectivity with a connected network carrier. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,15 +50,15 @@ enum \mbox{\hyperlink{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5f}{protocol\+\_
 \newline
 \mbox{\hyperlink{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fab8d57aa0639ca27248fd5223f1c47d44}{protocol\+\_\+void}} = 0x\+FF
  \}
-\item 
+\begin{DoxyCompactList}\small\item\em Enum of protocols available on the modem. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaec}{context\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff}{context\+\_\+state\+\_\+inactive}} = 0, 
 \mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d}{context\+\_\+state\+\_\+active}} = 1
  \}
-\item 
+\begin{DoxyCompactList}\small\item\em Enum of network carrier A\+PN or data contect state. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1}{context\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3}{context\+\_\+type\+\_\+\+I\+P\+V4}} = 1, 
 \mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd}{context\+\_\+type\+\_\+\+I\+P\+V6}} = 2
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enum of the two common A\+PN contexts provided by network carriers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -124,17 +124,29 @@ void \mbox{\hyperlink{network_8h_a8c489a5a54698c77fa4447651d481ab7}{ntwk\+\_\+cl
 \doxysubsubsection{\texorpdfstring{network\_t}{network\_t}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structnetwork__tag}{network\+\_\+tag}} \mbox{\hyperlink{network_8h_afdeb09cbf237e761c59dcb9084f01a3a}{network\+\_\+t}}}
 
+
+
+Struct representing the full connectivity with a connected network carrier. 
+
 \mbox{\Hypertarget{network_8h_a58db2e79250f681c695c651d586fd25f}\label{network_8h_a58db2e79250f681c695c651d586fd25f}} 
 \index{network.h@{network.h}!networkOperator\_t@{networkOperator\_t}}
 \index{networkOperator\_t@{networkOperator\_t}!network.h@{network.h}}
 \doxysubsubsection{\texorpdfstring{networkOperator\_t}{networkOperator\_t}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structnetwork_operator__tag}{network\+Operator\+\_\+tag}} \mbox{\hyperlink{network_8h_a58db2e79250f681c695c651d586fd25f}{network\+Operator\+\_\+t}}}
 
+
+
+Struct respresenting an A\+C\+T\+I\+VE network carrier/operator. 
+
 \mbox{\Hypertarget{network_8h_a2e3bffac3c81c2a93542e7824346c6ec}\label{network_8h_a2e3bffac3c81c2a93542e7824346c6ec}} 
 \index{network.h@{network.h}!pdpContext\_t@{pdpContext\_t}}
 \index{pdpContext\_t@{pdpContext\_t}!network.h@{network.h}}
 \doxysubsubsection{\texorpdfstring{pdpContext\_t}{pdpContext\_t}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structpdp_context__tag}{pdp\+Context\+\_\+tag}} \mbox{\hyperlink{network_8h_a2e3bffac3c81c2a93542e7824346c6ec}{pdp\+Context\+\_\+t}}}
+
+
+
+Struct representing the state of an active P\+DP context (aka\+: A\+PN or data context). 
 
 
 
@@ -145,13 +157,17 @@ void \mbox{\hyperlink{network_8h_a8c489a5a54698c77fa4447651d481ab7}{ntwk\+\_\+cl
 \doxysubsubsection{\texorpdfstring{context\_state\_t}{context\_state\_t}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaec}{context\+\_\+state\+\_\+t}}}
 
+
+
+Enum of network carrier A\+PN or data contect state. 
+
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{context\_state\_inactive@{context\_state\_inactive}!network.h@{network.h}}\index{network.h@{network.h}!context\_state\_inactive@{context\_state\_inactive}}}\mbox{\Hypertarget{network_8h_ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff}\label{network_8h_ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff}} 
-context\+\_\+state\+\_\+inactive&\\
+context\+\_\+state\+\_\+inactive&Inactive. Note\+: the modem may be connected to a network, but it is not in a active communications state. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{context\_state\_active@{context\_state\_active}!network.h@{network.h}}\index{network.h@{network.h}!context\_state\_active@{context\_state\_active}}}\mbox{\Hypertarget{network_8h_ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d}\label{network_8h_ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d}} 
-context\+\_\+state\+\_\+active&\\
+context\+\_\+state\+\_\+active&Active, A\+PN is open and ready. Modem should have an IP address via the A\+PN at this state. \\
 \hline
 
 \end{DoxyEnumFields}
@@ -161,13 +177,17 @@ context\+\_\+state\+\_\+active&\\
 \doxysubsubsection{\texorpdfstring{context\_type\_t}{context\_type\_t}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1}{context\+\_\+type\+\_\+t}}}
 
+
+
+Enum of the two common A\+PN contexts provided by network carriers. 
+
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{context\_type\_IPV4@{context\_type\_IPV4}!network.h@{network.h}}\index{network.h@{network.h}!context\_type\_IPV4@{context\_type\_IPV4}}}\mbox{\Hypertarget{network_8h_abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3}\label{network_8h_abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3}} 
-context\+\_\+type\+\_\+\+I\+P\+V4&\\
+context\+\_\+type\+\_\+\+I\+P\+V4&IP v4, 32-\/bit address (ex\+: 192.\+168.\+37.\+52) \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{context\_type\_IPV6@{context\_type\_IPV6}!network.h@{network.h}}\index{network.h@{network.h}!context\_type\_IPV6@{context\_type\_IPV6}}}\mbox{\Hypertarget{network_8h_abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd}\label{network_8h_abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd}} 
-context\+\_\+type\+\_\+\+I\+P\+V6&\\
+context\+\_\+type\+\_\+\+I\+P\+V6&IP v6, 128-\/bit address (ex\+: 2001\+:0db8\+:0000\+:0000\+:0000\+:8a2e\+:0370\+:7334) \\
 \hline
 
 \end{DoxyEnumFields}
@@ -177,41 +197,45 @@ context\+\_\+type\+\_\+\+I\+P\+V6&\\
 \doxysubsubsection{\texorpdfstring{protocol\_t}{protocol\_t}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5f}{protocol\+\_\+t}}}
 
-\begin{DoxyEnumFields}{Enumerator}
+
+
+Enum of protocols available on the modem. 
+
+Note\+: all of the protocols are clients, while the B\+Gx line of modules support server mode the network carriers generally don\textquotesingle{}t \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_tcp@{protocol\_tcp}!network.h@{network.h}}\index{network.h@{network.h}!protocol\_tcp@{protocol\_tcp}}}\mbox{\Hypertarget{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa030558b5b57bba711bfed356ca009906}\label{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa030558b5b57bba711bfed356ca009906}} 
-protocol\+\_\+tcp&\\
+protocol\+\_\+tcp&T\+CP client. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_udp@{protocol\_udp}!network.h@{network.h}}\index{network.h@{network.h}!protocol\_udp@{protocol\_udp}}}\mbox{\Hypertarget{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa5bd4b9120131858ad72573514e250933}\label{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa5bd4b9120131858ad72573514e250933}} 
-protocol\+\_\+udp&\\
+protocol\+\_\+udp&U\+DP client. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_ssl@{protocol\_ssl}!network.h@{network.h}}\index{network.h@{network.h}!protocol\_ssl@{protocol\_ssl}}}\mbox{\Hypertarget{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5faf0061dc3c11d93f1068cc42a76ba0d91}\label{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5faf0061dc3c11d93f1068cc42a76ba0d91}} 
-protocol\+\_\+ssl&\\
+protocol\+\_\+ssl&S\+SL client. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_AnyIP@{protocol\_AnyIP}!network.h@{network.h}}\index{network.h@{network.h}!protocol\_AnyIP@{protocol\_AnyIP}}}\mbox{\Hypertarget{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa93c8764bc52c13671d9fda6b68d3ac3e}\label{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa93c8764bc52c13671d9fda6b68d3ac3e}} 
-protocol\+\_\+\+Any\+IP&\\
+protocol\+\_\+\+Any\+IP&special value that includes any of the above IP basic transport protocols. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_http@{protocol\_http}!network.h@{network.h}}\index{network.h@{network.h}!protocol\_http@{protocol\_http}}}\mbox{\Hypertarget{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa93aa4f4446d8b8dc99a238d59f16798b}\label{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa93aa4f4446d8b8dc99a238d59f16798b}} 
-protocol\+\_\+http&\\
+protocol\+\_\+http&H\+T\+TP client. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_https@{protocol\_https}!network.h@{network.h}}\index{network.h@{network.h}!protocol\_https@{protocol\_https}}}\mbox{\Hypertarget{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa0cd71b9324de746eb65609585436b6e3}\label{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa0cd71b9324de746eb65609585436b6e3}} 
-protocol\+\_\+https&\\
+protocol\+\_\+https&H\+T\+T\+PS client, H\+T\+TP over S\+SL. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_mqtt@{protocol\_mqtt}!network.h@{network.h}}\index{network.h@{network.h}!protocol\_mqtt@{protocol\_mqtt}}}\mbox{\Hypertarget{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa1410bc7ff4e5f24154b9776a2850ab2d}\label{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa1410bc7ff4e5f24154b9776a2850ab2d}} 
-protocol\+\_\+mqtt&\\
+protocol\+\_\+mqtt&M\+Q\+TT messaging client. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_mqtts@{protocol\_mqtts}!network.h@{network.h}}\index{network.h@{network.h}!protocol\_mqtts@{protocol\_mqtts}}}\mbox{\Hypertarget{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa7e729fed4553c316849a81625e5b3451}\label{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fa7e729fed4553c316849a81625e5b3451}} 
-protocol\+\_\+mqtts&\\
+protocol\+\_\+mqtts&M\+Q\+TT over S\+SL. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_void@{protocol\_void}!network.h@{network.h}}\index{network.h@{network.h}!protocol\_void@{protocol\_void}}}\mbox{\Hypertarget{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fab8d57aa0639ca27248fd5223f1c47d44}\label{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fab8d57aa0639ca27248fd5223f1c47d44}} 
-protocol\+\_\+void&\\
+protocol\+\_\+void&No protocol, used in code to generally signal a null condition. \\
 \hline
 
 \end{DoxyEnumFields}

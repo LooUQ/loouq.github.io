@@ -2,20 +2,28 @@
 \label{structmodem_info__tag}\index{modemInfo\_tag@{modemInfo\_tag}}
 
 
+Struct holding information about the physical B\+Gx module.  
+
+
+
+
 {\ttfamily \#include $<$mdminfo.\+h$>$}
 
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 char \mbox{\hyperlink{structmodem_info__tag_a88a26351acdc52f2ca61a6c864197a2f}{imei}} \mbox{[}16\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em I\+M\+EI (15 digits) International Mobile Equipment Identity, set in the B\+Gx itself at manufacture. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{structmodem_info__tag_a082e37d774043b84d66195ed2aa27e14}{iccid}} \mbox{[}21\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em I\+C\+C\+ID (20 digits) Integrated Circuit Card ID. Set in the S\+IM card at manufacture. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{structmodem_info__tag_aff7bf84d9f4b6c1de87298af4bfa36b8}{mfgmodel}} \mbox{[}21\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em The Quectel model number of the B\+Gx device. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{structmodem_info__tag_a3134892526155e9ea5a230985e2856c0}{fwver}} \mbox{[}41\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Firmware version of the B\+Gx device. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Struct holding information about the physical B\+Gx module. 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structmodem_info__tag_a3134892526155e9ea5a230985e2856c0}\label{structmodem_info__tag_a3134892526155e9ea5a230985e2856c0}} 
@@ -24,11 +32,19 @@ char \mbox{\hyperlink{structmodem_info__tag_a3134892526155e9ea5a230985e2856c0}{f
 \doxysubsubsection{\texorpdfstring{fwver}{fwver}}
 {\footnotesize\ttfamily char fwver\mbox{[}41\mbox{]}}
 
+
+
+Firmware version of the B\+Gx device. 
+
 \mbox{\Hypertarget{structmodem_info__tag_a082e37d774043b84d66195ed2aa27e14}\label{structmodem_info__tag_a082e37d774043b84d66195ed2aa27e14}} 
 \index{modemInfo\_tag@{modemInfo\_tag}!iccid@{iccid}}
 \index{iccid@{iccid}!modemInfo\_tag@{modemInfo\_tag}}
 \doxysubsubsection{\texorpdfstring{iccid}{iccid}}
 {\footnotesize\ttfamily char iccid\mbox{[}21\mbox{]}}
+
+
+
+I\+C\+C\+ID (20 digits) Integrated Circuit Card ID. Set in the S\+IM card at manufacture. 
 
 \mbox{\Hypertarget{structmodem_info__tag_a88a26351acdc52f2ca61a6c864197a2f}\label{structmodem_info__tag_a88a26351acdc52f2ca61a6c864197a2f}} 
 \index{modemInfo\_tag@{modemInfo\_tag}!imei@{imei}}
@@ -36,11 +52,19 @@ char \mbox{\hyperlink{structmodem_info__tag_a3134892526155e9ea5a230985e2856c0}{f
 \doxysubsubsection{\texorpdfstring{imei}{imei}}
 {\footnotesize\ttfamily char imei\mbox{[}16\mbox{]}}
 
+
+
+I\+M\+EI (15 digits) International Mobile Equipment Identity, set in the B\+Gx itself at manufacture. 
+
 \mbox{\Hypertarget{structmodem_info__tag_aff7bf84d9f4b6c1de87298af4bfa36b8}\label{structmodem_info__tag_aff7bf84d9f4b6c1de87298af4bfa36b8}} 
 \index{modemInfo\_tag@{modemInfo\_tag}!mfgmodel@{mfgmodel}}
 \index{mfgmodel@{mfgmodel}!modemInfo\_tag@{modemInfo\_tag}}
 \doxysubsubsection{\texorpdfstring{mfgmodel}{mfgmodel}}
 {\footnotesize\ttfamily char mfgmodel\mbox{[}21\mbox{]}}
+
+
+
+The Quectel model number of the B\+Gx device. 
 
 
 

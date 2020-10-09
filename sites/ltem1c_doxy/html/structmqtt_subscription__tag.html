@@ -71,18 +71,26 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Struct describing a MQTT topic subscription.  
+ <a href="structmqtt_subscription__tag.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="mqtt_8h_source.html">mqtt.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a78274885a9e15386f39b28535a8d1b09"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_subscription__tag.html#a78274885a9e15386f39b28535a8d1b09">topicName</a> [<a class="el" href="mqtt_8h.html#a92a0a7c82262c99f6e8dac90fc98c991">MQTT_TOPIC_NAME_SZ</a>]</td></tr>
+<tr class="memdesc:a78274885a9e15386f39b28535a8d1b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Topic name. Note if the topic registered with '#' wildcard, this is removed from the topic name.  <a href="structmqtt_subscription__tag.html#a78274885a9e15386f39b28535a8d1b09">More...</a><br /></td></tr>
 <tr class="separator:a78274885a9e15386f39b28535a8d1b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accdd598bfafa3ab3fd21b695a60fd900"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_subscription__tag.html#accdd598bfafa3ab3fd21b695a60fd900">wildcard</a></td></tr>
+<tr class="memdesc:accdd598bfafa3ab3fd21b695a60fd900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to '#' if multilevel wildcard specified when subscribing to topic.  <a href="structmqtt_subscription__tag.html#accdd598bfafa3ab3fd21b695a60fd900">More...</a><br /></td></tr>
 <tr class="separator:accdd598bfafa3ab3fd21b695a60fd900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a263e4bf3b5716f6ad11dfde1072cd339"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mqtt_8h.html#ad9d7613c182a7c45b5e6abe73cd5e04c">mqttRecv_func_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_subscription__tag.html#a263e4bf3b5716f6ad11dfde1072cd339">receiver_func</a></td></tr>
+<tr class="memdesc:a263e4bf3b5716f6ad11dfde1072cd339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to receive incoming messages (event). Note that receiver_func can be unique or shared amongst subscriptions.  <a href="structmqtt_subscription__tag.html#a263e4bf3b5716f6ad11dfde1072cd339">More...</a><br /></td></tr>
 <tr class="separator:a263e4bf3b5716f6ad11dfde1072cd339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Struct describing a MQTT topic subscription. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
 <a id="a263e4bf3b5716f6ad11dfde1072cd339"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a263e4bf3b5716f6ad11dfde1072cd339">&#9670;&nbsp;</a></span>receiver_func</h2>
 
@@ -94,6 +102,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function to receive incoming messages (event). Note that receiver_func can be unique or shared amongst subscriptions. </p>
 
 </div>
 </div>
@@ -109,6 +119,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Topic name. Note if the topic registered with '#' wildcard, this is removed from the topic name. </p>
+
 </div>
 </div>
 <a id="accdd598bfafa3ab3fd21b695a60fd900"></a>
@@ -122,6 +134,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set to '#' if multilevel wildcard specified when subscribing to topic. </p>
 
 </div>
 </div>

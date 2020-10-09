@@ -168,8 +168,9 @@ Variables</h2></td></tr>
 <p>Initialize the LTEm1 modem. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ltem1_config</td><td>The LTE modem gpio pin configuration. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">funcLevel</td><td>Determines the LTEm1 functionality to create and start. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ltem1_config</td><td>- The LTE modem gpio pin configuration. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ltem1Start</td><td>- Determines if the LTEm1 is power ON or OFF during start. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">funcLevel</td><td>- Determines the LTEm1 functionality to create and start. </td></tr>
   </table>
   </dd>
 </dl>
@@ -249,6 +250,7 @@ Variables</h2></td></tr>
 <p>Function of last resort, catestrophic failure Background work task runner. To be called in application Loop() periodically. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">statusCode</td><td>- HTTP style result code, generally sourced from BGx response to an operation. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">faultMsg</td><td>- Message from origination about the fatal condition. </td></tr>
   </table>
   </dd>
