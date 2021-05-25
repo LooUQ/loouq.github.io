@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['context_5fstate_5ft_1066',['context_state_t',['../network_8h.html#ad44f426957683a22a1f3e1952adcfaec',1,'network.h']]],
-  ['context_5ftype_5ft_1067',['context_type_t',['../network_8h.html#abc74437f14f9413f5bc01cd5523e13f1',1,'network.h']]]
+  ['contextiptype_5ftag_1258',['contextIpType_tag',['../network_8h.html#ae48d14a25e81a367cf5ed681dc97da2d',1,'network.h']]]
 ];

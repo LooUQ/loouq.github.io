@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['val_679',['val',['../structgnss__latlon__tag.html#a26f18cc5d2179adc30fc1a7544962178',1,'gnss_latlon_tag']]],
-  ['values_680',['values',['../structmqtt_msg_props__tag.html#acb54980f4e90fadadf05f5f7af631873',1,'mqttMsgProps_tag']]],
-  ['version_2dhistory_2emd_681',['version-history.md',['../version-history_8md.html',1,'']]]
+  ['utc_794',['utc',['../structgnss_location__tag.html#a6ae8d28098d79f0dcb73395e7d2698df',1,'gnssLocation_tag']]],
+  ['uxplor_5fpinconfig_795',['uxplor_pinConfig',['../pin_configuration_8txt.html#adc6d3c6bde51d2afabbd304d874c0f53',1,'pinConfiguration.txt']]]
 ];

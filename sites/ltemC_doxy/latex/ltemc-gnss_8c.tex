@@ -1,0 +1,125 @@
+\hypertarget{ltemc-gnss_8c}{}\doxysection{src/ltemc-\/gnss.c File Reference}
+\label{ltemc-gnss_8c}\index{src/ltemc-\/gnss.c@{src/ltemc-\/gnss.c}}
+{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/gnss.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-gnss_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\item 
+\#define \mbox{\hyperlink{ltemc-gnss_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\item 
+\#define \mbox{\hyperlink{ltemc-gnss_8c_a37a3e35f73f6c48d80425a4dae63a1e8}{G\+N\+S\+S\+\_\+\+C\+M\+D\+\_\+\+R\+E\+S\+U\+L\+T\+B\+U\+F\+\_\+\+SZ}}~90
+\item 
+\#define \mbox{\hyperlink{ltemc-gnss_8c_ab20d33444f3a0db2dd9c8e41a3d01652}{G\+N\+S\+S\+\_\+\+L\+O\+C\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET}}~12
+\item 
+\#define \mbox{\hyperlink{ltemc-gnss_8c_a98794225032db909e1345e88e8d260de}{G\+N\+S\+S\+\_\+\+L\+O\+C\+\_\+\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+T\+O\+K\+E\+N\+C\+O\+U\+NT}}~11
+\item 
+\#define \mbox{\hyperlink{ltemc-gnss_8c_ad85f774f6e231c56158f6ba3ac22d209}{G\+N\+S\+S\+\_\+\+T\+I\+M\+E\+O\+U\+Tml}}~800
+\item 
+\#define \mbox{\hyperlink{ltemc-gnss_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
+\item 
+\#define \mbox{\hyperlink{ltemc-gnss_8c_a804ecb67b072321269af36bc17d26886}{T\+O\+K\+E\+N\+\_\+\+B\+U\+F\+\_\+\+SZ}}~12
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-gnss_8c_a8743198221b51ffe544bd16ecfe22ab7}{gnss\+\_\+on}} ()
+\begin{DoxyCompactList}\small\item\em Turn G\+N\+SS\textbackslash{}\+G\+PS subsystem on. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-gnss_8c_ad88660fe85512a86a06c88650457c210}{gnss\+\_\+off}} ()
+\begin{DoxyCompactList}\small\item\em Turn G\+N\+SS\textbackslash{}\+G\+PS subsystem off. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-gnss_8h_a7208b78f87202cf33a6c2f6dc64cf4b1}{gnss\+Location\+\_\+t}} \mbox{\hyperlink{ltemc-gnss_8c_a9413e5c78c4efb1aa3ae5daebad7bd46}{gnss\+\_\+get\+Location}} ()
+\begin{DoxyCompactList}\small\item\em Query B\+Gx for current location\textbackslash{}positioning information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-gnss_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltemc-gnss_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+
+\mbox{\Hypertarget{ltemc-gnss_8c_a37a3e35f73f6c48d80425a4dae63a1e8}\label{ltemc-gnss_8c_a37a3e35f73f6c48d80425a4dae63a1e8}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!GNSS\_CMD\_RESULTBUF\_SZ@{GNSS\_CMD\_RESULTBUF\_SZ}}
+\index{GNSS\_CMD\_RESULTBUF\_SZ@{GNSS\_CMD\_RESULTBUF\_SZ}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{GNSS\_CMD\_RESULTBUF\_SZ}{GNSS\_CMD\_RESULTBUF\_SZ}}
+{\footnotesize\ttfamily \#define G\+N\+S\+S\+\_\+\+C\+M\+D\+\_\+\+R\+E\+S\+U\+L\+T\+B\+U\+F\+\_\+\+SZ~90}
+
+\mbox{\Hypertarget{ltemc-gnss_8c_ab20d33444f3a0db2dd9c8e41a3d01652}\label{ltemc-gnss_8c_ab20d33444f3a0db2dd9c8e41a3d01652}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!GNSS\_LOC\_DATAOFFSET@{GNSS\_LOC\_DATAOFFSET}}
+\index{GNSS\_LOC\_DATAOFFSET@{GNSS\_LOC\_DATAOFFSET}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{GNSS\_LOC\_DATAOFFSET}{GNSS\_LOC\_DATAOFFSET}}
+{\footnotesize\ttfamily \#define G\+N\+S\+S\+\_\+\+L\+O\+C\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET~12}
+
+\mbox{\Hypertarget{ltemc-gnss_8c_a98794225032db909e1345e88e8d260de}\label{ltemc-gnss_8c_a98794225032db909e1345e88e8d260de}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!GNSS\_LOC\_EXPECTED\_TOKENCOUNT@{GNSS\_LOC\_EXPECTED\_TOKENCOUNT}}
+\index{GNSS\_LOC\_EXPECTED\_TOKENCOUNT@{GNSS\_LOC\_EXPECTED\_TOKENCOUNT}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{GNSS\_LOC\_EXPECTED\_TOKENCOUNT}{GNSS\_LOC\_EXPECTED\_TOKENCOUNT}}
+{\footnotesize\ttfamily \#define G\+N\+S\+S\+\_\+\+L\+O\+C\+\_\+\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+T\+O\+K\+E\+N\+C\+O\+U\+NT~11}
+
+\mbox{\Hypertarget{ltemc-gnss_8c_ad85f774f6e231c56158f6ba3ac22d209}\label{ltemc-gnss_8c_ad85f774f6e231c56158f6ba3ac22d209}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!GNSS\_TIMEOUTml@{GNSS\_TIMEOUTml}}
+\index{GNSS\_TIMEOUTml@{GNSS\_TIMEOUTml}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{GNSS\_TIMEOUTml}{GNSS\_TIMEOUTml}}
+{\footnotesize\ttfamily \#define G\+N\+S\+S\+\_\+\+T\+I\+M\+E\+O\+U\+Tml~800}
+
+\mbox{\Hypertarget{ltemc-gnss_8c_a74e75242132eaabbc1c512488a135926}\label{ltemc-gnss_8c_a74e75242132eaabbc1c512488a135926}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!MIN@{MIN}}
+\index{MIN@{MIN}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (x) \+: (y))}
+
+\mbox{\Hypertarget{ltemc-gnss_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-gnss_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+\mbox{\Hypertarget{ltemc-gnss_8c_a804ecb67b072321269af36bc17d26886}\label{ltemc-gnss_8c_a804ecb67b072321269af36bc17d26886}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!TOKEN\_BUF\_SZ@{TOKEN\_BUF\_SZ}}
+\index{TOKEN\_BUF\_SZ@{TOKEN\_BUF\_SZ}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{TOKEN\_BUF\_SZ}{TOKEN\_BUF\_SZ}}
+{\footnotesize\ttfamily \#define T\+O\+K\+E\+N\+\_\+\+B\+U\+F\+\_\+\+SZ~12}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-gnss_8c_a9413e5c78c4efb1aa3ae5daebad7bd46}\label{ltemc-gnss_8c_a9413e5c78c4efb1aa3ae5daebad7bd46}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!gnss\_getLocation@{gnss\_getLocation}}
+\index{gnss\_getLocation@{gnss\_getLocation}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{gnss\_getLocation()}{gnss\_getLocation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-gnss_8h_a7208b78f87202cf33a6c2f6dc64cf4b1}{gnss\+Location\+\_\+t}} gnss\+\_\+get\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Query B\+Gx for current location\textbackslash{}positioning information. 
+
+\begin{DoxyReturn}{Returns}
+G\+N\+SS location struct, see gnss.\+h for details. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-gnss_8c_ad88660fe85512a86a06c88650457c210}\label{ltemc-gnss_8c_ad88660fe85512a86a06c88650457c210}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!gnss\_off@{gnss\_off}}
+\index{gnss\_off@{gnss\_off}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{gnss\_off()}{gnss\_off()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} gnss\+\_\+off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Turn G\+N\+SS\textbackslash{}\+G\+PS subsystem off. 
+
+\begin{DoxyReturn}{Returns}
+Result code representing status of operation, OK = 200. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-gnss_8c_a8743198221b51ffe544bd16ecfe22ab7}\label{ltemc-gnss_8c_a8743198221b51ffe544bd16ecfe22ab7}} 
+\index{ltemc-\/gnss.c@{ltemc-\/gnss.c}!gnss\_on@{gnss\_on}}
+\index{gnss\_on@{gnss\_on}!ltemc-\/gnss.c@{ltemc-\/gnss.c}}
+\doxysubsubsection{\texorpdfstring{gnss\_on()}{gnss\_on()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} gnss\+\_\+on (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Turn G\+N\+SS\textbackslash{}\+G\+PS subsystem on. 
+
+\begin{DoxyReturn}{Returns}
+Result code representing status of operation, OK = 200. 
+\end{DoxyReturn}

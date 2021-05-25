@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pdpcontext_5fapnname_5fsz_1331',['PDPCONTEXT_APNNAME_SZ',['../network_8h.html#a7ff42bd3012e862def198e4aa0760745',1,'network.h']]],
-  ['pdpcontext_5fipaddress_5fsz_1332',['PDPCONTEXT_IPADDRESS_SZ',['../network_8h.html#a16fe9467dfc91dbfe6b63ef1b984ba00',1,'network.h']]],
-  ['protocols_5fcmd_5fbuffer_5fsz_1333',['PROTOCOLS_CMD_BUFFER_SZ',['../network_8c.html#acded44a40a84c6e4ecf02b6da518ce4e',1,'network.c']]]
+  ['ok_5fcompleted_5flength_1561',['OK_COMPLETED_LENGTH',['../actions_8c.html#a61021f847281b56ea58bf62fa421061d',1,'actions.c']]],
+  ['ok_5fcompleted_5fstring_1562',['OK_COMPLETED_STRING',['../actions_8c.html#a94cc840dcfa6352171624a582482388d',1,'actions.c']]]
 ];

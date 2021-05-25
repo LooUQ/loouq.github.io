@@ -129,6 +129,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aa983e35228a0853dab1b143e3f752bc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sockets_8h.html#aa983e35228a0853dab1b143e3f752bc2">sckt_reset</a> (uint8_t socketNum)</td></tr>
 <tr class="memdesc:aa983e35228a0853dab1b143e3f752bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset open socket connection. This function drains the connection's data pipeline.  <a href="sockets_8h.html#aa983e35228a0853dab1b143e3f752bc2">More...</a><br /></td></tr>
 <tr class="separator:aa983e35228a0853dab1b143e3f752bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7730f332e79c71e823ecb26859cec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sockets_8h.html#a1a7730f332e79c71e823ecb26859cec0">sckt_closeAll</a> (uint8_t contxtId)</td></tr>
+<tr class="memdesc:a1a7730f332e79c71e823ecb26859cec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close out all TCP/IP sockets on a context.  <a href="sockets_8h.html#a1a7730f332e79c71e823ecb26859cec0">More...</a><br /></td></tr>
+<tr class="separator:a1a7730f332e79c71e823ecb26859cec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c9f32544b937ebb7f63e9499ef15e82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sockets_8h.html#ab7cf20e66a2d8ef88c5befa4f4bf8276">socketResult_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sockets_8h.html#a7c9f32544b937ebb7f63e9499ef15e82">sckt_send</a> (<a class="el" href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">socketId_t</a> socketId, const char *data, uint16_t dataSz)</td></tr>
 <tr class="memdesc:a7c9f32544b937ebb7f63e9499ef15e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to an established endpoint via protocol used to open socket (TCP/UDP/TCP INCOMING).  <a href="sockets_8h.html#a7c9f32544b937ebb7f63e9499ef15e82">More...</a><br /></td></tr>
 <tr class="separator:a7c9f32544b937ebb7f63e9499ef15e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,6 +283,26 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a1a7730f332e79c71e823ecb26859cec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a7730f332e79c71e823ecb26859cec0">&#9670;&nbsp;</a></span>sckt_closeAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sckt_closeAll </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>contxtId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close out all TCP/IP sockets on a context. </p>
 
 </div>
 </div>

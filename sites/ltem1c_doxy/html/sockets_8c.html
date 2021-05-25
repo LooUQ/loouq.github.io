@@ -76,12 +76,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="ltem1c_8h_source.html">ltem1c.h</a>&quot;</code><br />
-<code>#include &quot;dbgprint.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a152fc5203b90b1cff03b7b78579b8f52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sockets_8c.html#a152fc5203b90b1cff03b7b78579b8f52">_DEBUG</a></td></tr>
-<tr class="separator:a152fc5203b90b1cff03b7b78579b8f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74e75242132eaabbc1c512488a135926"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sockets_8c.html#a74e75242132eaabbc1c512488a135926">MIN</a>(x,  y)&#160;&#160;&#160;(((x) &lt; (y)) ? (x) : (y))</td></tr>
 <tr class="separator:a74e75242132eaabbc1c512488a135926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee35eaa645f4efef5d7c2043cbd62ea1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sockets_8c.html#aee35eaa645f4efef5d7c2043cbd62ea1">SOCKETS_CMDBUF_SZ</a>&#160;&#160;&#160;80</td></tr>
@@ -107,6 +104,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a441ffe9e7b3f84a8fd606149766dae64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sockets_8c.html#a441ffe9e7b3f84a8fd606149766dae64">sckt_reset</a> (uint8_t socketId)</td></tr>
 <tr class="memdesc:a441ffe9e7b3f84a8fd606149766dae64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset open socket connection. This function drains the connection's data pipeline.  <a href="sockets_8c.html#a441ffe9e7b3f84a8fd606149766dae64">More...</a><br /></td></tr>
 <tr class="separator:a441ffe9e7b3f84a8fd606149766dae64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7730f332e79c71e823ecb26859cec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sockets_8c.html#a1a7730f332e79c71e823ecb26859cec0">sckt_closeAll</a> (uint8_t contxtId)</td></tr>
+<tr class="memdesc:a1a7730f332e79c71e823ecb26859cec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close out all TCP/IP sockets on a context.  <a href="sockets_8c.html#a1a7730f332e79c71e823ecb26859cec0">More...</a><br /></td></tr>
+<tr class="separator:a1a7730f332e79c71e823ecb26859cec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c9f32544b937ebb7f63e9499ef15e82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sockets_8h.html#ab7cf20e66a2d8ef88c5befa4f4bf8276">socketResult_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sockets_8c.html#a7c9f32544b937ebb7f63e9499ef15e82">sckt_send</a> (<a class="el" href="sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7">socketId_t</a> socketId, const char *data, uint16_t dataSz)</td></tr>
 <tr class="memdesc:a7c9f32544b937ebb7f63e9499ef15e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to an established endpoint via protocol used to open socket (TCP/UDP/TCP INCOMING).  <a href="sockets_8c.html#a7c9f32544b937ebb7f63e9499ef15e82">More...</a><br /></td></tr>
 <tr class="separator:a7c9f32544b937ebb7f63e9499ef15e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,20 +115,6 @@ Functions</h2></td></tr>
 <tr class="separator:accd2287873108ebef20cdf22563105c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a152fc5203b90b1cff03b7b78579b8f52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a152fc5203b90b1cff03b7b78579b8f52">&#9670;&nbsp;</a></span>_DEBUG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _DEBUG</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a48b1663a06062f775262a363ce4c9e6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48b1663a06062f775262a363ce4c9e6d">&#9670;&nbsp;</a></span>ASCII_sSENDOK</h2>
 
@@ -237,6 +223,26 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a1a7730f332e79c71e823ecb26859cec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a7730f332e79c71e823ecb26859cec0">&#9670;&nbsp;</a></span>sckt_closeAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sckt_closeAll </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>contxtId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close out all TCP/IP sockets on a context. </p>
 
 </div>
 </div>

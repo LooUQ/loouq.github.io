@@ -1,12 +1,18 @@
 var searchData=
 [
-  ['qbg_5fnw_5fiot_5fmode_5fm1_1174',['qbg_nw_iot_mode_m1',['../quectel__bg_8h.html#a2191ec3f5a5386782fe35c35116bd17fa9925c3857d89a5e9073b4ffef915a561',1,'quectel_bg.h']]],
-  ['qbg_5fnw_5fiot_5fmode_5fm1nb1_1175',['qbg_nw_iot_mode_m1nb1',['../quectel__bg_8h.html#a2191ec3f5a5386782fe35c35116bd17fa9ec8555596d3f782c76ee46ed928b278',1,'quectel_bg.h']]],
-  ['qbg_5fnw_5fiot_5fmode_5fnb1_1176',['qbg_nw_iot_mode_nb1',['../quectel__bg_8h.html#a2191ec3f5a5386782fe35c35116bd17fac3f4a26bd26b6dd1fa6724929d00dbb8',1,'quectel_bg.h']]],
-  ['qbg_5fnw_5fscan_5fmode_5fauto_1177',['qbg_nw_scan_mode_auto',['../quectel__bg_8h.html#aa1a289b110c85590df8e3c8628820432a494904fd8160bb2b1bc5a462b2ebe68d',1,'quectel_bg.h']]],
-  ['qbg_5fnw_5fscan_5fmode_5fgsmonly_1178',['qbg_nw_scan_mode_gsmonly',['../quectel__bg_8h.html#aa1a289b110c85590df8e3c8628820432a451a5aa0ed800c9d08302b5249d8b2dd',1,'quectel_bg.h']]],
-  ['qbg_5fnw_5fscan_5fmode_5flteonly_1179',['qbg_nw_scan_mode_lteonly',['../quectel__bg_8h.html#aa1a289b110c85590df8e3c8628820432a573b73decba7990830452044da0bf2ef',1,'quectel_bg.h']]],
-  ['qbg_5freadystate_5fappready_1180',['qbg_readyState_appReady',['../quectel__bg_8h.html#a147bba7e20cc24461d0c91d9ebfd881ba2f8b72f80346ddb0c45e0321f3d52f1b',1,'quectel_bg.h']]],
-  ['qbg_5freadystate_5fpoweroff_1181',['qbg_readyState_powerOff',['../quectel__bg_8h.html#a147bba7e20cc24461d0c91d9ebfd881bab278e3d768b1801d2dba9bc18e712a5f',1,'quectel_bg.h']]],
-  ['qbg_5freadystate_5fpoweron_1182',['qbg_readyState_powerOn',['../quectel__bg_8h.html#a147bba7e20cc24461d0c91d9ebfd881bab1d36f587350dfc189347fbbf3894a2c',1,'quectel_bg.h']]]
+  ['mqttqos_5f0_1374',['mqttQos_0',['../mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1a09ddfba73d199ba75940e283d4de78e8',1,'mqtt.h']]],
+  ['mqttqos_5f1_1375',['mqttQos_1',['../mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1a85cc5be7463e90f6f10d09f44d60d302',1,'mqtt.h']]],
+  ['mqttqos_5f2_1376',['mqttQos_2',['../mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1a6a558f77969f80fb08755863f64d6f4f',1,'mqtt.h']]],
+  ['mqttqos_5fmaxazure_1377',['mqttQos_maxAzure',['../mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1a8c8f9687563c5189305c22c7590c71bc',1,'mqtt.h']]],
+  ['mqttresult_5ffailed_1378',['mqttResult_failed',['../mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2a7767af10058c9e03b912b38547decf10',1,'mqtt.h']]],
+  ['mqttresult_5fretransmission_1379',['mqttResult_retransmission',['../mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2aedc68fc3c221d4a32102685a1bf9197a',1,'mqtt.h']]],
+  ['mqttresult_5fsuccess_1380',['mqttResult_success',['../mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2a975935ea6219ab31f1927235b69095fb',1,'mqtt.h']]],
+  ['mqttsession_5fcleanstart_1381',['mqttSession_cleanStart',['../mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2a2ad8567e4938d0a9b6ba01eeb4c815a1',1,'mqtt.h']]],
+  ['mqttsession_5fpreserve_1382',['mqttSession_preserve',['../mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2aa6cfdfeab547134eb31f3cfa64c321bb',1,'mqtt.h']]],
+  ['mqttstatus_5fbadhost_1383',['mqttStatus_badHost',['../mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39aac64fd52794c9e9ee49a82442992cc64',1,'mqtt.h']]],
+  ['mqttstatus_5fclosed_1384',['mqttStatus_closed',['../mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39ada8342e02f0afb8fb3a997a7eb4ea6ca',1,'mqtt.h']]],
+  ['mqttstatus_5fconnected_1385',['mqttStatus_connected',['../mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39af001d69f757d9c37adc01227d2dae517',1,'mqtt.h']]],
+  ['mqttstatus_5fopen_1386',['mqttStatus_open',['../mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a56db1975479de9626cfae7946a30ea27',1,'mqtt.h']]],
+  ['mqttversion_5f3_1387',['mqttVersion_3',['../mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767a6ebff9cc916721b89a6bfcef4998f9f7',1,'mqtt.h']]],
+  ['mqttversion_5f311_1388',['mqttVersion_311',['../mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767acba79b73a8bc8355937cb8ace9e9994d',1,'mqtt.h']]]
 ];

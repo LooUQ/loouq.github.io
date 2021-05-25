@@ -41,6 +41,8 @@ void \mbox{\hyperlink{sockets_8h_ac5fafa0b43b91673f4d35293aa1693d1}{sckt\+\_\+cl
 \begin{DoxyCompactList}\small\item\em Close an established (open) connection socket. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sockets_8h_aa983e35228a0853dab1b143e3f752bc2}{sckt\+\_\+reset}} (uint8\+\_\+t socket\+Num)
 \begin{DoxyCompactList}\small\item\em Reset open socket connection. This function drains the connection\textquotesingle{}s data pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sockets_8h_a1a7730f332e79c71e823ecb26859cec0}{sckt\+\_\+close\+All}} (uint8\+\_\+t contxt\+Id)
+\begin{DoxyCompactList}\small\item\em Close out all T\+C\+P/\+IP sockets on a context. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} \mbox{\hyperlink{sockets_8h_a7c9f32544b937ebb7f63e9499ef15e82}{sckt\+\_\+send}} (\mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} socket\+Id, const char $\ast$data, uint16\+\_\+t data\+Sz)
 \begin{DoxyCompactList}\small\item\em Send data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sockets_8h_accd2287873108ebef20cdf22563105c4}{sckt\+\_\+do\+Work}} ()
@@ -129,6 +131,16 @@ Close an established (open) connection socket.
 \mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The socket ID or number for the connection to close. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{sockets_8h_a1a7730f332e79c71e823ecb26859cec0}\label{sockets_8h_a1a7730f332e79c71e823ecb26859cec0}} 
+\index{sockets.h@{sockets.h}!sckt\_closeAll@{sckt\_closeAll}}
+\index{sckt\_closeAll@{sckt\_closeAll}!sockets.h@{sockets.h}}
+\doxysubsubsection{\texorpdfstring{sckt\_closeAll()}{sckt\_closeAll()}}
+{\footnotesize\ttfamily void sckt\+\_\+close\+All (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{contxt\+Id }\end{DoxyParamCaption})}
+
+
+
+Close out all T\+C\+P/\+IP sockets on a context. 
+
 \mbox{\Hypertarget{sockets_8h_ae8a9086120ad6504040b5db042328a0d}\label{sockets_8h_ae8a9086120ad6504040b5db042328a0d}} 
 \index{sockets.h@{sockets.h}!sckt\_create@{sckt\_create}}
 \index{sckt\_create@{sckt\_create}!sockets.h@{sockets.h}}

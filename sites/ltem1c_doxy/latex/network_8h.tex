@@ -7,13 +7,13 @@
 struct \mbox{\hyperlink{structnetwork_operator__tag}{network\+Operator\+\_\+tag}}
 \begin{DoxyCompactList}\small\item\em Struct respresenting an A\+C\+T\+I\+VE network carrier/operator. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structpdp_context__tag}{pdp\+Context\+\_\+tag}}
-\begin{DoxyCompactList}\small\item\em Struct representing the state of an active P\+DP context (aka\+: A\+PN or data context). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data context). \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structnetwork__tag}{network\+\_\+tag}}
 \begin{DoxyCompactList}\small\item\em Struct representing the full connectivity with a connected network carrier. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{network_8h_a199a579720563c3cd1437be25c2cbcc1}{N\+T\+W\+K\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+C\+O\+U\+NT}}~3
+\#define \mbox{\hyperlink{network_8h_a02459719fa5ad33a0aaf1b0117621a32}{B\+G\+X\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+C\+O\+U\+NT}}~3
 \item 
 \#define \mbox{\hyperlink{network_8h_abc12cbbf63bd95b21fba604df2ba5203}{N\+T\+W\+K\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+T\+E\+XT}}~255
 \item 
@@ -28,10 +28,12 @@ struct \mbox{\hyperlink{structnetwork__tag}{network\+\_\+tag}}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
+typedef enum \mbox{\hyperlink{network_8h_ae48d14a25e81a367cf5ed681dc97da2d}{context\+Ip\+Type\+\_\+tag}} \mbox{\hyperlink{network_8h_ac15f57a0f1baeca7fdf9d3108d5f3719}{context\+Ip\+Type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enum of the two common A\+PN contexts provided by network carriers. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structnetwork_operator__tag}{network\+Operator\+\_\+tag}} \mbox{\hyperlink{network_8h_a58db2e79250f681c695c651d586fd25f}{network\+Operator\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em Struct respresenting an A\+C\+T\+I\+VE network carrier/operator. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structpdp_context__tag}{pdp\+Context\+\_\+tag}} \mbox{\hyperlink{network_8h_a2e3bffac3c81c2a93542e7824346c6ec}{pdp\+Context\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em Struct representing the state of an active P\+DP context (aka\+: A\+PN or data context). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data context). \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structnetwork__tag}{network\+\_\+tag}} \mbox{\hyperlink{network_8h_afdeb09cbf237e761c59dcb9084f01a3a}{network\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em Struct representing the full connectivity with a connected network carrier. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
@@ -51,12 +53,8 @@ enum \mbox{\hyperlink{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5f}{protocol\+\_
 \mbox{\hyperlink{network_8h_a91e19fa4fff461493e1a41f7c7aa4e5fab8d57aa0639ca27248fd5223f1c47d44}{protocol\+\_\+void}} = 0x\+FF
  \}
 \begin{DoxyCompactList}\small\item\em Enum of protocols available on the modem. \end{DoxyCompactList}\item 
-enum \mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaec}{context\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff}{context\+\_\+state\+\_\+inactive}} = 0, 
-\mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d}{context\+\_\+state\+\_\+active}} = 1
- \}
-\begin{DoxyCompactList}\small\item\em Enum of network carrier A\+PN or data contect state. \end{DoxyCompactList}\item 
-enum \mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1}{context\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3}{context\+\_\+type\+\_\+\+I\+P\+V4}} = 1, 
-\mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd}{context\+\_\+type\+\_\+\+I\+P\+V6}} = 2
+enum \mbox{\hyperlink{network_8h_ae48d14a25e81a367cf5ed681dc97da2d}{context\+Ip\+Type\+\_\+tag}} \{ \mbox{\hyperlink{network_8h_ae48d14a25e81a367cf5ed681dc97da2da558366106a0998151d0f04fca762f60c}{context\+Ip\+Type\+\_\+\+I\+P\+V4}} = 1, 
+\mbox{\hyperlink{network_8h_ae48d14a25e81a367cf5ed681dc97da2da0f639b89802e074ed92e376613fcd61f}{context\+Ip\+Type\+\_\+\+I\+P\+V6}} = 2
  \}
 \begin{DoxyCompactList}\small\item\em Enum of the two common A\+PN contexts provided by network carriers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
@@ -66,24 +64,24 @@ enum \mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1}{context\+\_\
 \begin{DoxyCompactList}\small\item\em Initialize the IP network contexts structure. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{network_8h_a58db2e79250f681c695c651d586fd25f}{network\+Operator\+\_\+t}} \mbox{\hyperlink{network_8h_abdbd836a01669dcf68329ef31c73d45a}{ntwk\+\_\+await\+Operator}} (uint16\+\_\+t wait\+Duration)
 \begin{DoxyCompactList}\small\item\em Wait for a network operator name and network mode. Can be cancelled in threaded env via g\+\_\+ltem1-\/$>$cancellation\+Request. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{network_8h_a6cb36944e65bd0ef93451e6a8fd6195e}{ntwk\+\_\+fetch\+Data\+Contexts}} ()
-\begin{DoxyCompactList}\small\item\em Get A\+PN active status and optionally activate. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{network_8h_a0a5f8568902e2380561199e75cf802fd}{ntwk\+\_\+activate\+Context}} (uint8\+\_\+t contxt\+Id)
+uint8\+\_\+t \mbox{\hyperlink{network_8h_ab775d4790c65cc1c9d19bb70c805b808}{ntwk\+\_\+get\+Active\+Pdp\+Contexts}} ()
+\begin{DoxyCompactList}\small\item\em Get collection of A\+PN active data contexts from B\+Gx. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{network_8h_a2e3bffac3c81c2a93542e7824346c6ec}{pdp\+Context\+\_\+t}} $\ast$ \mbox{\hyperlink{network_8h_aca7e37553c5979dfc0fc99a1c0e1a50d}{ntwk\+\_\+get\+Pdp\+Context}} (uint8\+\_\+t contxt\+Id)
+\begin{DoxyCompactList}\small\item\em Get A\+PN\textbackslash{}\+P\+DP Context information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{network_8h_a1c89922d8c330ce6a33debe96c48e317}{ntwk\+\_\+activate\+Pdp\+Context}} (uint8\+\_\+t contxt\+Id)
 \begin{DoxyCompactList}\small\item\em Activate A\+PN. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{network_8h_a10b23d2cf0330849919f987a7f681d5c}{ntwk\+\_\+deactivate\+Context}} (uint8\+\_\+t contxt\+Id)
+void \mbox{\hyperlink{network_8h_ad3bc4e9d0b6d6f181ac180fbd91d5ce0}{ntwk\+\_\+deactivate\+Pdp\+Context}} (uint8\+\_\+t contxt\+Id)
 \begin{DoxyCompactList}\small\item\em Deactivate A\+PN. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{network_8h_a2e3bffac3c81c2a93542e7824346c6ec}{pdp\+Context\+\_\+t}} \mbox{\hyperlink{network_8h_a327a49547f9dafed3a0377fd4369a103}{ntwk\+\_\+get\+Data\+Context}} (uint8\+\_\+t contxt\+Id)
-\item 
-void \mbox{\hyperlink{network_8h_a8c489a5a54698c77fa4447651d481ab7}{ntwk\+\_\+close\+Context}} (uint8\+\_\+t contxt\+Id)
-\begin{DoxyCompactList}\small\item\em Close out all T\+C\+P/\+IP sockets on a context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{network_8h_a44958b492843d449944cfc78d937241d}{ntwk\+\_\+reset\+Pdp\+Contexts}} ()
+\begin{DoxyCompactList}\small\item\em Reset (deactivate\textbackslash{}activate) all network A\+P\+Ns. Note\+: activate and deactivate have side effects, they internally call get\+Active\+Contexts prior to return. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{network_8h_a199a579720563c3cd1437be25c2cbcc1}\label{network_8h_a199a579720563c3cd1437be25c2cbcc1}} 
-\index{network.h@{network.h}!NTWK\_CONTEXT\_COUNT@{NTWK\_CONTEXT\_COUNT}}
-\index{NTWK\_CONTEXT\_COUNT@{NTWK\_CONTEXT\_COUNT}!network.h@{network.h}}
-\doxysubsubsection{\texorpdfstring{NTWK\_CONTEXT\_COUNT}{NTWK\_CONTEXT\_COUNT}}
-{\footnotesize\ttfamily \#define N\+T\+W\+K\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+C\+O\+U\+NT~3}
+\mbox{\Hypertarget{network_8h_a02459719fa5ad33a0aaf1b0117621a32}\label{network_8h_a02459719fa5ad33a0aaf1b0117621a32}} 
+\index{network.h@{network.h}!BGX\_CONTEXT\_COUNT@{BGX\_CONTEXT\_COUNT}}
+\index{BGX\_CONTEXT\_COUNT@{BGX\_CONTEXT\_COUNT}!network.h@{network.h}}
+\doxysubsubsection{\texorpdfstring{BGX\_CONTEXT\_COUNT}{BGX\_CONTEXT\_COUNT}}
+{\footnotesize\ttfamily \#define B\+G\+X\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+C\+O\+U\+NT~3}
 
 \mbox{\Hypertarget{network_8h_abc12cbbf63bd95b21fba604df2ba5203}\label{network_8h_abc12cbbf63bd95b21fba604df2ba5203}} 
 \index{network.h@{network.h}!NTWK\_DEFAULT\_CONTEXT@{NTWK\_DEFAULT\_CONTEXT}}
@@ -118,6 +116,16 @@ void \mbox{\hyperlink{network_8h_a8c489a5a54698c77fa4447651d481ab7}{ntwk\+\_\+cl
 
 
 \doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{network_8h_ac15f57a0f1baeca7fdf9d3108d5f3719}\label{network_8h_ac15f57a0f1baeca7fdf9d3108d5f3719}} 
+\index{network.h@{network.h}!contextIpType\_t@{contextIpType\_t}}
+\index{contextIpType\_t@{contextIpType\_t}!network.h@{network.h}}
+\doxysubsubsection{\texorpdfstring{contextIpType\_t}{contextIpType\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{network_8h_ae48d14a25e81a367cf5ed681dc97da2d}{context\+Ip\+Type\+\_\+tag}} \mbox{\hyperlink{network_8h_ac15f57a0f1baeca7fdf9d3108d5f3719}{context\+Ip\+Type\+\_\+t}}}
+
+
+
+Enum of the two common A\+PN contexts provided by network carriers. 
+
 \mbox{\Hypertarget{network_8h_afdeb09cbf237e761c59dcb9084f01a3a}\label{network_8h_afdeb09cbf237e761c59dcb9084f01a3a}} 
 \index{network.h@{network.h}!network\_t@{network\_t}}
 \index{network\_t@{network\_t}!network.h@{network.h}}
@@ -146,48 +154,28 @@ Struct respresenting an A\+C\+T\+I\+VE network carrier/operator.
 
 
 
-Struct representing the state of an active P\+DP context (aka\+: A\+PN or data context). 
+Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data context). 
 
 
 
 \doxysubsection{Enumeration Type Documentation}
-\mbox{\Hypertarget{network_8h_ad44f426957683a22a1f3e1952adcfaec}\label{network_8h_ad44f426957683a22a1f3e1952adcfaec}} 
-\index{network.h@{network.h}!context\_state\_t@{context\_state\_t}}
-\index{context\_state\_t@{context\_state\_t}!network.h@{network.h}}
-\doxysubsubsection{\texorpdfstring{context\_state\_t}{context\_state\_t}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaec}{context\+\_\+state\+\_\+t}}}
-
-
-
-Enum of network carrier A\+PN or data contect state. 
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{context\_state\_inactive@{context\_state\_inactive}!network.h@{network.h}}\index{network.h@{network.h}!context\_state\_inactive@{context\_state\_inactive}}}\mbox{\Hypertarget{network_8h_ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff}\label{network_8h_ad44f426957683a22a1f3e1952adcfaeca96b269b1bca4c243ecd658e5f4e43bff}} 
-context\+\_\+state\+\_\+inactive&Inactive. Note\+: the modem may be connected to a network, but it is not in a active communications state. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{context\_state\_active@{context\_state\_active}!network.h@{network.h}}\index{network.h@{network.h}!context\_state\_active@{context\_state\_active}}}\mbox{\Hypertarget{network_8h_ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d}\label{network_8h_ad44f426957683a22a1f3e1952adcfaeca5dad7e949566f663a64249d61759d38d}} 
-context\+\_\+state\+\_\+active&Active, A\+PN is open and ready. Modem should have an IP address via the A\+PN at this state. \\
-\hline
-
-\end{DoxyEnumFields}
-\mbox{\Hypertarget{network_8h_abc74437f14f9413f5bc01cd5523e13f1}\label{network_8h_abc74437f14f9413f5bc01cd5523e13f1}} 
-\index{network.h@{network.h}!context\_type\_t@{context\_type\_t}}
-\index{context\_type\_t@{context\_type\_t}!network.h@{network.h}}
-\doxysubsubsection{\texorpdfstring{context\_type\_t}{context\_type\_t}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1}{context\+\_\+type\+\_\+t}}}
+\mbox{\Hypertarget{network_8h_ae48d14a25e81a367cf5ed681dc97da2d}\label{network_8h_ae48d14a25e81a367cf5ed681dc97da2d}} 
+\index{network.h@{network.h}!contextIpType\_tag@{contextIpType\_tag}}
+\index{contextIpType\_tag@{contextIpType\_tag}!network.h@{network.h}}
+\doxysubsubsection{\texorpdfstring{contextIpType\_tag}{contextIpType\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{network_8h_ae48d14a25e81a367cf5ed681dc97da2d}{context\+Ip\+Type\+\_\+tag}}}
 
 
 
 Enum of the two common A\+PN contexts provided by network carriers. 
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{context\_type\_IPV4@{context\_type\_IPV4}!network.h@{network.h}}\index{network.h@{network.h}!context\_type\_IPV4@{context\_type\_IPV4}}}\mbox{\Hypertarget{network_8h_abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3}\label{network_8h_abc74437f14f9413f5bc01cd5523e13f1a096e4c190dc0c23bf06dbf72f73527a3}} 
-context\+\_\+type\+\_\+\+I\+P\+V4&IP v4, 32-\/bit address (ex\+: 192.\+168.\+37.\+52) \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{contextIpType\_IPV4@{contextIpType\_IPV4}!network.h@{network.h}}\index{network.h@{network.h}!contextIpType\_IPV4@{contextIpType\_IPV4}}}\mbox{\Hypertarget{network_8h_ae48d14a25e81a367cf5ed681dc97da2da558366106a0998151d0f04fca762f60c}\label{network_8h_ae48d14a25e81a367cf5ed681dc97da2da558366106a0998151d0f04fca762f60c}} 
+context\+Ip\+Type\+\_\+\+I\+P\+V4&IP v4, 32-\/bit address (ex\+: 192.\+168.\+37.\+52) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{context\_type\_IPV6@{context\_type\_IPV6}!network.h@{network.h}}\index{network.h@{network.h}!context\_type\_IPV6@{context\_type\_IPV6}}}\mbox{\Hypertarget{network_8h_abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd}\label{network_8h_abc74437f14f9413f5bc01cd5523e13f1a8cbcf0fc1ff83f2cbd0ce74fb0d3fabd}} 
-context\+\_\+type\+\_\+\+I\+P\+V6&IP v6, 128-\/bit address (ex\+: 2001\+:0db8\+:0000\+:0000\+:0000\+:8a2e\+:0370\+:7334) \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{contextIpType\_IPV6@{contextIpType\_IPV6}!network.h@{network.h}}\index{network.h@{network.h}!contextIpType\_IPV6@{contextIpType\_IPV6}}}\mbox{\Hypertarget{network_8h_ae48d14a25e81a367cf5ed681dc97da2da0f639b89802e074ed92e376613fcd61f}\label{network_8h_ae48d14a25e81a367cf5ed681dc97da2da0f639b89802e074ed92e376613fcd61f}} 
+context\+Ip\+Type\+\_\+\+I\+P\+V6&IP v6, 128-\/bit address (ex\+: 2001\+:0db8\+:0000\+:0000\+:0000\+:8a2e\+:0370\+:7334) \\
 \hline
 
 \end{DoxyEnumFields}
@@ -242,11 +230,11 @@ protocol\+\_\+void&No protocol, used in code to generally signal a null conditio
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{network_8h_a0a5f8568902e2380561199e75cf802fd}\label{network_8h_a0a5f8568902e2380561199e75cf802fd}} 
-\index{network.h@{network.h}!ntwk\_activateContext@{ntwk\_activateContext}}
-\index{ntwk\_activateContext@{ntwk\_activateContext}!network.h@{network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_activateContext()}{ntwk\_activateContext()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} ntwk\+\_\+activate\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{context\+Num }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{network_8h_a1c89922d8c330ce6a33debe96c48e317}\label{network_8h_a1c89922d8c330ce6a33debe96c48e317}} 
+\index{network.h@{network.h}!ntwk\_activatePdpContext@{ntwk\_activatePdpContext}}
+\index{ntwk\_activatePdpContext@{ntwk\_activatePdpContext}!network.h@{network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_activatePdpContext()}{ntwk\_activatePdpContext()}}
+{\footnotesize\ttfamily void ntwk\+\_\+activate\+Pdp\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id }\end{DoxyParamCaption})}
 
 
 
@@ -254,7 +242,7 @@ Activate A\+PN.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em context\+Num} & The A\+PN to operate on. Typically 0 or 1 \\
+\mbox{\texttt{ in}}  & {\em cntxt\+Id} & The A\+PN to operate on. Typically 0 or 1 \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{network_8h_abdbd836a01669dcf68329ef31c73d45a}\label{network_8h_abdbd836a01669dcf68329ef31c73d45a}} 
@@ -275,16 +263,6 @@ Wait for a network operator name and network mode. Can be cancelled in threaded 
 \begin{DoxyReturn}{Returns}
 Struct containing the network operator name (oper\+Name) and network mode (ntwk\+Mode). 
 \end{DoxyReturn}
-\mbox{\Hypertarget{network_8h_a8c489a5a54698c77fa4447651d481ab7}\label{network_8h_a8c489a5a54698c77fa4447651d481ab7}} 
-\index{network.h@{network.h}!ntwk\_closeContext@{ntwk\_closeContext}}
-\index{ntwk\_closeContext@{ntwk\_closeContext}!network.h@{network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_closeContext()}{ntwk\_closeContext()}}
-{\footnotesize\ttfamily void ntwk\+\_\+close\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{contxt\+Id }\end{DoxyParamCaption})}
-
-
-
-Close out all T\+C\+P/\+IP sockets on a context. 
-
 \mbox{\Hypertarget{network_8h_a9eae2977201164408f29a0c63d1b6af1}\label{network_8h_a9eae2977201164408f29a0c63d1b6af1}} 
 \index{network.h@{network.h}!ntwk\_create@{ntwk\_create}}
 \index{ntwk\_create@{ntwk\_create}!network.h@{network.h}}
@@ -295,11 +273,11 @@ Close out all T\+C\+P/\+IP sockets on a context.
 
 Initialize the IP network contexts structure. 
 
-\mbox{\Hypertarget{network_8h_a10b23d2cf0330849919f987a7f681d5c}\label{network_8h_a10b23d2cf0330849919f987a7f681d5c}} 
-\index{network.h@{network.h}!ntwk\_deactivateContext@{ntwk\_deactivateContext}}
-\index{ntwk\_deactivateContext@{ntwk\_deactivateContext}!network.h@{network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_deactivateContext()}{ntwk\_deactivateContext()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} ntwk\+\_\+deactivate\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{contxt\+Id }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{network_8h_ad3bc4e9d0b6d6f181ac180fbd91d5ce0}\label{network_8h_ad3bc4e9d0b6d6f181ac180fbd91d5ce0}} 
+\index{network.h@{network.h}!ntwk\_deactivatePdpContext@{ntwk\_deactivatePdpContext}}
+\index{ntwk\_deactivatePdpContext@{ntwk\_deactivatePdpContext}!network.h@{network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_deactivatePdpContext()}{ntwk\_deactivatePdpContext()}}
+{\footnotesize\ttfamily void ntwk\+\_\+deactivate\+Pdp\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id }\end{DoxyParamCaption})}
 
 
 
@@ -307,29 +285,47 @@ Deactivate A\+PN.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em context\+Num} & The A\+PN to operate on. Typically 0 or 1 \\
+\mbox{\texttt{ in}}  & {\em cntxt\+Id} & The A\+PN number to operate on. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{network_8h_a6cb36944e65bd0ef93451e6a8fd6195e}\label{network_8h_a6cb36944e65bd0ef93451e6a8fd6195e}} 
-\index{network.h@{network.h}!ntwk\_fetchDataContexts@{ntwk\_fetchDataContexts}}
-\index{ntwk\_fetchDataContexts@{ntwk\_fetchDataContexts}!network.h@{network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_fetchDataContexts()}{ntwk\_fetchDataContexts()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} ntwk\+\_\+fetch\+Data\+Contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{network_8h_ab775d4790c65cc1c9d19bb70c805b808}\label{network_8h_ab775d4790c65cc1c9d19bb70c805b808}} 
+\index{network.h@{network.h}!ntwk\_getActivePdpContexts@{ntwk\_getActivePdpContexts}}
+\index{ntwk\_getActivePdpContexts@{ntwk\_getActivePdpContexts}!network.h@{network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_getActivePdpContexts()}{ntwk\_getActivePdpContexts()}}
+{\footnotesize\ttfamily uint8\+\_\+t ntwk\+\_\+get\+Active\+Pdp\+Contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Get A\+PN active status and optionally activate. 
+Get collection of A\+PN active data contexts from B\+Gx. 
+
+\begin{DoxyReturn}{Returns}
+Count of active data contexts (B\+Gx max is 3). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{network_8h_aca7e37553c5979dfc0fc99a1c0e1a50d}\label{network_8h_aca7e37553c5979dfc0fc99a1c0e1a50d}} 
+\index{network.h@{network.h}!ntwk\_getPdpContext@{ntwk\_getPdpContext}}
+\index{ntwk\_getPdpContext@{ntwk\_getPdpContext}!network.h@{network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_getPdpContext()}{ntwk\_getPdpContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{network_8h_a2e3bffac3c81c2a93542e7824346c6ec}{pdp\+Context\+\_\+t}}$\ast$ ntwk\+\_\+get\+Pdp\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id }\end{DoxyParamCaption})}
+
+
+
+Get A\+PN\textbackslash{}\+P\+DP Context information. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em context\+Num} & The A\+PN to operate on. Typically 0 or 1 \\
-\hline
-\mbox{\texttt{ in}}  & {\em activate} & Attempt to activate the A\+PN if found not active. \\
+\mbox{\texttt{ in}}  & {\em cntxt\+Id} & The A\+PN to retreive.\\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{network_8h_a327a49547f9dafed3a0377fd4369a103}\label{network_8h_a327a49547f9dafed3a0377fd4369a103}} 
-\index{network.h@{network.h}!ntwk\_getDataContext@{ntwk\_getDataContext}}
-\index{ntwk\_getDataContext@{ntwk\_getDataContext}!network.h@{network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_getDataContext()}{ntwk\_getDataContext()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{network_8h_a2e3bffac3c81c2a93542e7824346c6ec}{pdp\+Context\+\_\+t}} ntwk\+\_\+get\+Data\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{contxt\+Id }\end{DoxyParamCaption})}
+\begin{DoxyReturn}{Returns}
+Pointer to A\+PN info in active A\+PN table, N\+U\+LL if not active 
+\end{DoxyReturn}
+\mbox{\Hypertarget{network_8h_a44958b492843d449944cfc78d937241d}\label{network_8h_a44958b492843d449944cfc78d937241d}} 
+\index{network.h@{network.h}!ntwk\_resetPdpContexts@{ntwk\_resetPdpContexts}}
+\index{ntwk\_resetPdpContexts@{ntwk\_resetPdpContexts}!network.h@{network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_resetPdpContexts()}{ntwk\_resetPdpContexts()}}
+{\footnotesize\ttfamily void ntwk\+\_\+reset\+Pdp\+Contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset (deactivate\textbackslash{}activate) all network A\+P\+Ns. Note\+: activate and deactivate have side effects, they internally call get\+Active\+Contexts prior to return. 
 

@@ -87,13 +87,17 @@ $(function() {
 : <a class="el" href="mdminfo_8h.html#a1d9b7f567f1ad5f5393d1bd84b461fa0">mdminfo.h</a>
 , <a class="el" href="mdminfo_8c.html#a1d9b7f567f1ad5f5393d1bd84b461fa0">mdminfo.c</a>
 </li>
+<li>mdminfo_rssiBars()
+: <a class="el" href="mdminfo_8c.html#af770a3d7781daf66572cb4c05695b3a7">mdminfo.c</a>
+, <a class="el" href="mdminfo_8h.html#af770a3d7781daf66572cb4c05695b3a7">mdminfo.h</a>
+</li>
 <li>MIN
-: <a class="el" href="actions_8c.html#a74e75242132eaabbc1c512488a135926">actions.c</a>
+: <a class="el" href="sockets_8c.html#a74e75242132eaabbc1c512488a135926">sockets.c</a>
+, <a class="el" href="actions_8c.html#a74e75242132eaabbc1c512488a135926">actions.c</a>
 , <a class="el" href="gnss_8c.html#a74e75242132eaabbc1c512488a135926">gnss.c</a>
 , <a class="el" href="iop_8c.html#a74e75242132eaabbc1c512488a135926">iop.c</a>
 , <a class="el" href="mqtt_8c.html#a74e75242132eaabbc1c512488a135926">mqtt.c</a>
-, <a class="el" href="sockets_8c.html#a74e75242132eaabbc1c512488a135926">sockets.c</a>
-, <a class="el" href="util_8c.html#a74e75242132eaabbc1c512488a135926">util.c</a>
+, <a class="el" href="network_8c.html#a74e75242132eaabbc1c512488a135926">network.c</a>
 </li>
 <li>MODE_9BIT_EN
 : <a class="el" href="nxp__sc16is741a_8h.html#aa3b9420b844ce54427f2996016b0cf80">nxp_sc16is741a.h</a>
@@ -139,10 +143,6 @@ $(function() {
 <li>MQTT_OPENED_STATUS
 : <a class="el" href="mqtt_8c.html#af3cced492a5aef2f4e621446c507bd91">mqtt.c</a>
 </li>
-<li>mqtt_parseTopicProperties()
-: <a class="el" href="mqtt_8c.html#ad9a890c17cc5d9bad1bffe53c937a54c">mqtt.c</a>
-, <a class="el" href="mqtt_8h.html#ad9a890c17cc5d9bad1bffe53c937a54c">mqtt.h</a>
-</li>
 <li>MQTT_PROPERTIES_CNT
 : <a class="el" href="mqtt_8h.html#acdb74e5c43e94d95825d04eecd10ac00">mqtt.h</a>
 </li>
@@ -150,11 +150,17 @@ $(function() {
 : <a class="el" href="mqtt_8c.html#adc88fecb007d9e383518d98432d8697e">mqtt.c</a>
 , <a class="el" href="mqtt_8h.html#adc88fecb007d9e383518d98432d8697e">mqtt.h</a>
 </li>
+<li>MQTT_PUBLISH_TIMEOUT
+: <a class="el" href="mqtt_8c.html#ae8370b235c0ba262d7151bc3d09dd7e7">mqtt.c</a>
+</li>
 <li>MQTT_PUBSUB_CMDSZ
 : <a class="el" href="mqtt_8c.html#ad86d60736c0ec82a0ceeaf2da9cb7fe7">mqtt.c</a>
 </li>
 <li>MQTT_PUBSUB_RSPSZ
 : <a class="el" href="mqtt_8c.html#aae28fa98e6b1b5231ca30a2996af98c0">mqtt.c</a>
+</li>
+<li>mqtt_recvFunc_t
+: <a class="el" href="mqtt_8h.html#a98539737eefd41c88388bada5c4116b4">mqtt.h</a>
 </li>
 <li>MQTT_SOCKET_ID
 : <a class="el" href="mqtt_8h.html#a39f3ff2dfec33cbcba1a4d7bfde97716">mqtt.h</a>
@@ -164,8 +170,8 @@ $(function() {
 , <a class="el" href="mqtt_8h.html#ae6eb878c9e21291c02914d7d858ae560">mqtt.h</a>
 </li>
 <li>mqtt_subscribe()
-: <a class="el" href="mqtt_8c.html#a8c22c7a78836c7c9602cbc93eac7ce07">mqtt.c</a>
-, <a class="el" href="mqtt_8h.html#a391707650624dffe9887f879a1088124">mqtt.h</a>
+: <a class="el" href="mqtt_8c.html#a2362e1fabbeca14804f8c6498c252af2">mqtt.c</a>
+, <a class="el" href="mqtt_8h.html#a1c503c0ad9c20969e8b2b93fd1ff4316">mqtt.h</a>
 </li>
 <li>mqtt_t
 : <a class="el" href="mqtt_8h.html#a1744988046ae8938df0f8369d90f2d42">mqtt.h</a>
@@ -185,15 +191,12 @@ $(function() {
 <li>MQTT_TOPIC_PUBOVRHD_SZ
 : <a class="el" href="mqtt_8h.html#af81909ab3ca64b459fa95f3fa9c34984">mqtt.h</a>
 </li>
-<li>MQTT_TOPIC_TOTAL_SZ
-: <a class="el" href="mqtt_8h.html#a8fede12a7160856d4db9779bd5965370">mqtt.h</a>
+<li>MQTT_TOPIC_SZ
+: <a class="el" href="mqtt_8h.html#ad82c4327ab339e4dc6c906ba49029460">mqtt.h</a>
 </li>
 <li>mqtt_unsubscribe()
 : <a class="el" href="mqtt_8c.html#a593a1f29a23660b911c5392a8d0f8cbf">mqtt.c</a>
 , <a class="el" href="mqtt_8h.html#a593a1f29a23660b911c5392a8d0f8cbf">mqtt.h</a>
-</li>
-<li>mqttMsgProps_t
-: <a class="el" href="mqtt_8h.html#a4fa2744a20779d55b15a988132969ec0">mqtt.h</a>
 </li>
 <li>mqttQos_0
 : <a class="el" href="mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1a09ddfba73d199ba75940e283d4de78e8">mqtt.h</a>
@@ -212,9 +215,6 @@ $(function() {
 </li>
 <li>mqttQos_tag
 : <a class="el" href="mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1">mqtt.h</a>
-</li>
-<li>mqttRecv_func_t
-: <a class="el" href="mqtt_8h.html#ad9d7613c182a7c45b5e6abe73cd5e04c">mqtt.h</a>
 </li>
 <li>mqttResult_failed
 : <a class="el" href="mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2a7767af10058c9e03b912b38547decf10">mqtt.h</a>
@@ -243,11 +243,14 @@ $(function() {
 <li>mqttSession_tag
 : <a class="el" href="mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2">mqtt.h</a>
 </li>
-<li>mqttStatus_conn
-: <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a853a3a16d911725ec825390a9bb4d9ac">mqtt.h</a>
+<li>mqttStatus_badHost
+: <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39aac64fd52794c9e9ee49a82442992cc64">mqtt.h</a>
 </li>
-<li>mqttStatus_idle
-: <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a37e8870d905360c3b22986f3b0e7755c">mqtt.h</a>
+<li>mqttStatus_closed
+: <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39ada8342e02f0afb8fb3a997a7eb4ea6ca">mqtt.h</a>
+</li>
+<li>mqttStatus_connected
+: <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39af001d69f757d9c37adc01227d2dae517">mqtt.h</a>
 </li>
 <li>mqttStatus_open
 : <a class="el" href="mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a56db1975479de9626cfae7946a30ea27">mqtt.h</a>

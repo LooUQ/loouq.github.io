@@ -1,0 +1,265 @@
+\hypertarget{ltemc-nxp-sc16is_8c}{}\doxysection{src/ltemc-\/nxp-\/sc16is.c File Reference}
+\label{ltemc-nxp-sc16is_8c}\index{src/ltemc-\/nxp-\/sc16is.c@{src/ltemc-\/nxp-\/sc16is.c}}
+{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_ac68c9cc3a2aa93d4a25933c31d0e6196}{R\+E\+G\+\_\+\+M\+O\+D\+I\+FY}}(R\+E\+G\+\_\+\+N\+A\+ME,  M\+O\+D\+I\+F\+Y\+\_\+\+A\+C\+T\+I\+ON)
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a339030a67178d85b1abe985185314175}{B\+A\+U\+D\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+I\+S\+O\+R\+\_\+\+D\+LL}}~0x04U
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_aba290521903e109f6f78c778b5960d86}{B\+A\+U\+D\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+I\+S\+O\+R\+\_\+\+D\+LH}}~0x00U
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_af0be76e6f18cb3bd7fc9d3c77360a232}{S\+C16\+I\+S741\+A\+\_\+\+L\+C\+R\+\_\+\+U\+A\+R\+T\+\_\+\+F\+R\+A\+M\+I\+NG}}~0x03U
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a53d21a33b3a78035e5795c98a92d3d74}{S\+C16\+I\+S741\+A\+\_\+\+T\+L\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+L\+E\+V\+E\+LS}}~0x22U
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a486051436d3775e7379ca391ed627c6c}{F\+C\+R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+M\+O\+DE}}~0x\+B7U
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a0e010f72b2d3455dfa86b525f7411f84}{F\+C\+R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+I\+O\+P\+\_\+\+F\+I\+F\+O\+\_\+\+E\+N\+A\+B\+LE}}~0x\+B1U
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_af4433407807d17fa6b8954751a0f414a}{F\+C\+R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+I\+O\+P\+\_\+\+R\+X\+\_\+\+F\+L\+U\+SH}}~0x02U
+\item 
+\#define \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a432c24a31ec63a7e3199f065dae63273}{F\+C\+R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+I\+O\+P\+\_\+\+T\+X\+\_\+\+F\+L\+U\+SH}}~0x04U
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ltemc-nxp-sc16is_8c_ab2d61af08e17da328a46f5b393d93261}{sc16is741a\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em Configure N\+XP bridge HW in basic mode (no I\+RQ, no level triggering). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-nxp-sc16is_8c_ae4837de522a032c36b4288a4a0d2933d}{sc16is741a\+\_\+enable\+Irq\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Enable I\+RQ servicing for communications between S\+C16\+I\+S741 and B\+G96. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-nxp-sc16is_8c_ac6a0838bd285ea8f82a5414aa392adc2}{sc16is741a\+\_\+chk\+Comm\+Ready}} ()
+\begin{DoxyCompactList}\small\item\em Perform simple write\textbackslash{}read using S\+C16\+I\+S741A scratchpad register. Used to test S\+PI communications. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a7b7c49cde4b06a3f288024abbbe7489b}{sc16is741a\+\_\+read\+Reg}} (uint8\+\_\+t reg\+\_\+addr)
+\begin{DoxyCompactList}\small\item\em Read from a S\+C16\+I\+S741A bridge register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a2aad0bdf1532bb94f82db70cd77c32e4}{sc16is741a\+\_\+write\+Reg}} (uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t reg\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Write to a S\+C16\+I\+S741A bridge register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-nxp-sc16is_8c_afca17cb0ad758e2a4c251495abb3aa2a}{sc16is741a\+\_\+read}} (void $\ast$dest, uint8\+\_\+t dest\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Reads through the S\+C16\+I\+S741A bridge (its RX F\+I\+FO). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-nxp-sc16is_8c_aa291a938807dc1c2e2cd29992485900e}{sc16is741a\+\_\+write}} (const void $\ast$src, uint8\+\_\+t src\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Write through the S\+C16\+I\+S741A bridge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-nxp-sc16is_8c_aa542d0420b5e03c371a80bd5017f800b}{sc16is741a\+\_\+reset\+Fifo}} (\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a9d7d71f02c224486d3794fbb833a0b3c}{reset\+Fifo\+\_\+action\+\_\+t}} reset\+Action)
+\begin{DoxyCompactList}\small\item\em Perform reset on bridge F\+I\+FO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-nxp-sc16is_8c_ab9db945c1fa2df0414a09f42766477ef}{sc16is741a\+\_\+flush\+Rx\+Fifo}} ()
+\begin{DoxyCompactList}\small\item\em Flush contents of RX F\+I\+FO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-nxp-sc16is_8c_aefbd4d0e153fb8b46f61afbd08f1bff2}{display\+Fifo\+Status}} (const char $\ast$disp\+Msg)
+\begin{DoxyCompactList}\small\item\em Debug\+: Show F\+I\+FO buffers fill level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltemc-nxp-sc16is_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_aba290521903e109f6f78c778b5960d86}\label{ltemc-nxp-sc16is_8c_aba290521903e109f6f78c778b5960d86}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!BAUDCLOCK\_DIVISOR\_DLH@{BAUDCLOCK\_DIVISOR\_DLH}}
+\index{BAUDCLOCK\_DIVISOR\_DLH@{BAUDCLOCK\_DIVISOR\_DLH}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{BAUDCLOCK\_DIVISOR\_DLH}{BAUDCLOCK\_DIVISOR\_DLH}}
+{\footnotesize\ttfamily \#define B\+A\+U\+D\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+I\+S\+O\+R\+\_\+\+D\+LH~0x00U}
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_a339030a67178d85b1abe985185314175}\label{ltemc-nxp-sc16is_8c_a339030a67178d85b1abe985185314175}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!BAUDCLOCK\_DIVISOR\_DLL@{BAUDCLOCK\_DIVISOR\_DLL}}
+\index{BAUDCLOCK\_DIVISOR\_DLL@{BAUDCLOCK\_DIVISOR\_DLL}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{BAUDCLOCK\_DIVISOR\_DLL}{BAUDCLOCK\_DIVISOR\_DLL}}
+{\footnotesize\ttfamily \#define B\+A\+U\+D\+C\+L\+O\+C\+K\+\_\+\+D\+I\+V\+I\+S\+O\+R\+\_\+\+D\+LL~0x04U}
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_a486051436d3775e7379ca391ed627c6c}\label{ltemc-nxp-sc16is_8c_a486051436d3775e7379ca391ed627c6c}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!FCR\_REGISTER\_VALUE\_BASIC\_MODE@{FCR\_REGISTER\_VALUE\_BASIC\_MODE}}
+\index{FCR\_REGISTER\_VALUE\_BASIC\_MODE@{FCR\_REGISTER\_VALUE\_BASIC\_MODE}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{FCR\_REGISTER\_VALUE\_BASIC\_MODE}{FCR\_REGISTER\_VALUE\_BASIC\_MODE}}
+{\footnotesize\ttfamily \#define F\+C\+R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+M\+O\+DE~0x\+B7U}
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_a0e010f72b2d3455dfa86b525f7411f84}\label{ltemc-nxp-sc16is_8c_a0e010f72b2d3455dfa86b525f7411f84}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!FCR\_REGISTER\_VALUE\_IOP\_FIFO\_ENABLE@{FCR\_REGISTER\_VALUE\_IOP\_FIFO\_ENABLE}}
+\index{FCR\_REGISTER\_VALUE\_IOP\_FIFO\_ENABLE@{FCR\_REGISTER\_VALUE\_IOP\_FIFO\_ENABLE}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{FCR\_REGISTER\_VALUE\_IOP\_FIFO\_ENABLE}{FCR\_REGISTER\_VALUE\_IOP\_FIFO\_ENABLE}}
+{\footnotesize\ttfamily \#define F\+C\+R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+I\+O\+P\+\_\+\+F\+I\+F\+O\+\_\+\+E\+N\+A\+B\+LE~0x\+B1U}
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_af4433407807d17fa6b8954751a0f414a}\label{ltemc-nxp-sc16is_8c_af4433407807d17fa6b8954751a0f414a}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!FCR\_REGISTER\_VALUE\_IOP\_RX\_FLUSH@{FCR\_REGISTER\_VALUE\_IOP\_RX\_FLUSH}}
+\index{FCR\_REGISTER\_VALUE\_IOP\_RX\_FLUSH@{FCR\_REGISTER\_VALUE\_IOP\_RX\_FLUSH}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{FCR\_REGISTER\_VALUE\_IOP\_RX\_FLUSH}{FCR\_REGISTER\_VALUE\_IOP\_RX\_FLUSH}}
+{\footnotesize\ttfamily \#define F\+C\+R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+I\+O\+P\+\_\+\+R\+X\+\_\+\+F\+L\+U\+SH~0x02U}
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_a432c24a31ec63a7e3199f065dae63273}\label{ltemc-nxp-sc16is_8c_a432c24a31ec63a7e3199f065dae63273}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!FCR\_REGISTER\_VALUE\_IOP\_TX\_FLUSH@{FCR\_REGISTER\_VALUE\_IOP\_TX\_FLUSH}}
+\index{FCR\_REGISTER\_VALUE\_IOP\_TX\_FLUSH@{FCR\_REGISTER\_VALUE\_IOP\_TX\_FLUSH}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{FCR\_REGISTER\_VALUE\_IOP\_TX\_FLUSH}{FCR\_REGISTER\_VALUE\_IOP\_TX\_FLUSH}}
+{\footnotesize\ttfamily \#define F\+C\+R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+I\+O\+P\+\_\+\+T\+X\+\_\+\+F\+L\+U\+SH~0x04U}
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-nxp-sc16is_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_ac68c9cc3a2aa93d4a25933c31d0e6196}\label{ltemc-nxp-sc16is_8c_ac68c9cc3a2aa93d4a25933c31d0e6196}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!REG\_MODIFY@{REG\_MODIFY}}
+\index{REG\_MODIFY@{REG\_MODIFY}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{REG\_MODIFY}{REG\_MODIFY}}
+{\footnotesize\ttfamily \#define R\+E\+G\+\_\+\+M\+O\+D\+I\+FY(\begin{DoxyParamCaption}\item[{}]{R\+E\+G\+\_\+\+N\+A\+ME,  }\item[{}]{M\+O\+D\+I\+F\+Y\+\_\+\+A\+C\+T\+I\+ON }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{REG\_NAME REG\_NAME\#\#\_reg = \{0\}; \(\backslash\)}
+\DoxyCodeLine{REG\_NAME\#\#\_reg.reg = \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a7b7c49cde4b06a3f288024abbbe7489b}{sc16is741a\_readReg}}(REG\_NAME\#\#\_ADDR); \mbox{\hyperlink{ltemc-nxp-sc16is_8c_a2aad0bdf1532bb94f82db70cd77c32e4}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{ltemc-nxp-sc16is_8c_a2aad0bdf1532bb94f82db70cd77c32e4}{MODIFY\_ACTION \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{ltemc-nxp-sc16is_8c_a2aad0bdf1532bb94f82db70cd77c32e4}{sc16is741a\_writeReg}}(REG\_NAME\#\#\_ADDR, REG\_NAME\#\#\_reg.reg);}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_af0be76e6f18cb3bd7fc9d3c77360a232}\label{ltemc-nxp-sc16is_8c_af0be76e6f18cb3bd7fc9d3c77360a232}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!SC16IS741A\_LCR\_UART\_FRAMING@{SC16IS741A\_LCR\_UART\_FRAMING}}
+\index{SC16IS741A\_LCR\_UART\_FRAMING@{SC16IS741A\_LCR\_UART\_FRAMING}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{SC16IS741A\_LCR\_UART\_FRAMING}{SC16IS741A\_LCR\_UART\_FRAMING}}
+{\footnotesize\ttfamily \#define S\+C16\+I\+S741\+A\+\_\+\+L\+C\+R\+\_\+\+U\+A\+R\+T\+\_\+\+F\+R\+A\+M\+I\+NG~0x03U}
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_a53d21a33b3a78035e5795c98a92d3d74}\label{ltemc-nxp-sc16is_8c_a53d21a33b3a78035e5795c98a92d3d74}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!SC16IS741A\_TLR\_TRIGGER\_LEVELS@{SC16IS741A\_TLR\_TRIGGER\_LEVELS}}
+\index{SC16IS741A\_TLR\_TRIGGER\_LEVELS@{SC16IS741A\_TLR\_TRIGGER\_LEVELS}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{SC16IS741A\_TLR\_TRIGGER\_LEVELS}{SC16IS741A\_TLR\_TRIGGER\_LEVELS}}
+{\footnotesize\ttfamily \#define S\+C16\+I\+S741\+A\+\_\+\+T\+L\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+L\+E\+V\+E\+LS~0x22U}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_aefbd4d0e153fb8b46f61afbd08f1bff2}\label{ltemc-nxp-sc16is_8c_aefbd4d0e153fb8b46f61afbd08f1bff2}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!displayFifoStatus@{displayFifoStatus}}
+\index{displayFifoStatus@{displayFifoStatus}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{displayFifoStatus()}{displayFifoStatus()}}
+{\footnotesize\ttfamily void display\+Fifo\+Status (\begin{DoxyParamCaption}\item[{const char $\ast$}]{disp\+Msg }\end{DoxyParamCaption})}
+
+
+
+Debug\+: Show F\+I\+FO buffers fill level. 
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_ac6a0838bd285ea8f82a5414aa392adc2}\label{ltemc-nxp-sc16is_8c_ac6a0838bd285ea8f82a5414aa392adc2}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!sc16is741a\_chkCommReady@{sc16is741a\_chkCommReady}}
+\index{sc16is741a\_chkCommReady@{sc16is741a\_chkCommReady}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{sc16is741a\_chkCommReady()}{sc16is741a\_chkCommReady()}}
+{\footnotesize\ttfamily bool sc16is741a\+\_\+chk\+Comm\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform simple write\textbackslash{}read using S\+C16\+I\+S741A scratchpad register. Used to test S\+PI communications. 
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_ae4837de522a032c36b4288a4a0d2933d}\label{ltemc-nxp-sc16is_8c_ae4837de522a032c36b4288a4a0d2933d}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!sc16is741a\_enableIrqMode@{sc16is741a\_enableIrqMode}}
+\index{sc16is741a\_enableIrqMode@{sc16is741a\_enableIrqMode}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{sc16is741a\_enableIrqMode()}{sc16is741a\_enableIrqMode()}}
+{\footnotesize\ttfamily void sc16is741a\+\_\+enable\+Irq\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enable I\+RQ servicing for communications between S\+C16\+I\+S741 and B\+G96. 
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_ab9db945c1fa2df0414a09f42766477ef}\label{ltemc-nxp-sc16is_8c_ab9db945c1fa2df0414a09f42766477ef}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!sc16is741a\_flushRxFifo@{sc16is741a\_flushRxFifo}}
+\index{sc16is741a\_flushRxFifo@{sc16is741a\_flushRxFifo}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{sc16is741a\_flushRxFifo()}{sc16is741a\_flushRxFifo()}}
+{\footnotesize\ttfamily void sc16is741a\+\_\+flush\+Rx\+Fifo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Flush contents of RX F\+I\+FO. 
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_afca17cb0ad758e2a4c251495abb3aa2a}\label{ltemc-nxp-sc16is_8c_afca17cb0ad758e2a4c251495abb3aa2a}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!sc16is741a\_read@{sc16is741a\_read}}
+\index{sc16is741a\_read@{sc16is741a\_read}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{sc16is741a\_read()}{sc16is741a\_read()}}
+{\footnotesize\ttfamily void sc16is741a\+\_\+read (\begin{DoxyParamCaption}\item[{void $\ast$}]{dest,  }\item[{uint8\+\_\+t}]{dest\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Reads through the S\+C16\+I\+S741A bridge (its RX F\+I\+FO). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & \mbox{[}out\mbox{]} -\/ The destination buffer. \\
+\hline
+{\em dest\+\_\+len} & \mbox{[}in\mbox{]} -\/ The length of the destination buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_a7b7c49cde4b06a3f288024abbbe7489b}\label{ltemc-nxp-sc16is_8c_a7b7c49cde4b06a3f288024abbbe7489b}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!sc16is741a\_readReg@{sc16is741a\_readReg}}
+\index{sc16is741a\_readReg@{sc16is741a\_readReg}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{sc16is741a\_readReg()}{sc16is741a\_readReg()}}
+{\footnotesize\ttfamily uint8\+\_\+t sc16is741a\+\_\+read\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+Read from a S\+C16\+I\+S741A bridge register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+\_\+addr} & \mbox{[}in\mbox{]} -\/ The register address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reg\+\_\+data -\/ Byte of data read from register 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_aa542d0420b5e03c371a80bd5017f800b}\label{ltemc-nxp-sc16is_8c_aa542d0420b5e03c371a80bd5017f800b}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!sc16is741a\_resetFifo@{sc16is741a\_resetFifo}}
+\index{sc16is741a\_resetFifo@{sc16is741a\_resetFifo}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{sc16is741a\_resetFifo()}{sc16is741a\_resetFifo()}}
+{\footnotesize\ttfamily void sc16is741a\+\_\+reset\+Fifo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a9d7d71f02c224486d3794fbb833a0b3c}{reset\+Fifo\+\_\+action\+\_\+t}}}]{reset\+Action }\end{DoxyParamCaption})}
+
+
+
+Perform reset on bridge F\+I\+FO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reset\+Action} & \mbox{[}in\mbox{]} -\/ What to reset TX, RX or both. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_ab2d61af08e17da328a46f5b393d93261}\label{ltemc-nxp-sc16is_8c_ab2d61af08e17da328a46f5b393d93261}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!sc16is741a\_start@{sc16is741a\_start}}
+\index{sc16is741a\_start@{sc16is741a\_start}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{sc16is741a\_start()}{sc16is741a\_start()}}
+{\footnotesize\ttfamily void sc16is741a\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configure N\+XP bridge HW in basic mode (no I\+RQ, no level triggering). 
+
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_aa291a938807dc1c2e2cd29992485900e}\label{ltemc-nxp-sc16is_8c_aa291a938807dc1c2e2cd29992485900e}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!sc16is741a\_write@{sc16is741a\_write}}
+\index{sc16is741a\_write@{sc16is741a\_write}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{sc16is741a\_write()}{sc16is741a\_write()}}
+{\footnotesize\ttfamily void sc16is741a\+\_\+write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{src,  }\item[{uint8\+\_\+t}]{src\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Write through the S\+C16\+I\+S741A bridge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & \mbox{[}in\mbox{]} -\/ The source data to write. \\
+\hline
+{\em src\+\_\+len} & \mbox{[}in\mbox{]} -\/ The length of the source. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-nxp-sc16is_8c_a2aad0bdf1532bb94f82db70cd77c32e4}\label{ltemc-nxp-sc16is_8c_a2aad0bdf1532bb94f82db70cd77c32e4}} 
+\index{ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}!sc16is741a\_writeReg@{sc16is741a\_writeReg}}
+\index{sc16is741a\_writeReg@{sc16is741a\_writeReg}!ltemc-\/nxp-\/sc16is.c@{ltemc-\/nxp-\/sc16is.c}}
+\doxysubsubsection{\texorpdfstring{sc16is741a\_writeReg()}{sc16is741a\_writeReg()}}
+{\footnotesize\ttfamily void sc16is741a\+\_\+write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg\+\_\+addr,  }\item[{uint8\+\_\+t}]{reg\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Write to a S\+C16\+I\+S741A bridge register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+\_\+addr} & \mbox{[}in\mbox{]} -\/ The register address. \\
+\hline
+{\em reg\+\_\+data} & \mbox{[}in\mbox{]} -\/ Pointer to the data to write to the register. \\
+\hline
+\end{DoxyParams}

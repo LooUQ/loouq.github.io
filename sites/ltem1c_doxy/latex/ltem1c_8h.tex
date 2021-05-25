@@ -3,12 +3,13 @@
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}platform/platform\+\_\+debug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}platform/platform\+\_\+pins.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}platform/platform\+\_\+gpio.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}platform/platform\+\_\+timing.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}platform/platform\+\_\+spi.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}nxp\+\_\+sc16is741a.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}quectel\+\_\+bg.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}iop.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}actions.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}mdminfo.\+h\char`\"{}}\newline
@@ -70,11 +71,15 @@ struct \mbox{\hyperlink{structltem1_device__tag}{ltem1\+Device\+\_\+tag}}
 \item 
 \#define \mbox{\hyperlink{ltem1c_8h_a0fda4b44fd52ad33bbafa4cef0306d5a}{R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+A\+D\+R\+E\+Q\+U\+E\+ST}}~400
 \item 
+\#define \mbox{\hyperlink{ltem1c_8h_a55443bad183ce4af75763c2f5af0d587}{R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+F\+O\+R\+B\+I\+D\+D\+EN}}~403
+\item 
 \#define \mbox{\hyperlink{ltem1c_8h_aaa2014a03f51b8c56b59f9f328b6c423}{R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+N\+O\+T\+F\+O\+U\+ND}}~404
 \item 
 \#define \mbox{\hyperlink{ltem1c_8h_abac4f84b3e78cc614658c4df31cabd3e}{R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+T\+I\+M\+E\+O\+UT}}~408
 \item 
 \#define \mbox{\hyperlink{ltem1c_8h_a58c08b01c1640177806215af48ebeae0}{R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT}}~409
+\item 
+\#define \mbox{\hyperlink{ltem1c_8h_a363fd981eef7c01050d773d6a2700fb0}{R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+A\+N\+C\+E\+L\+L\+ED}}~499
 \item 
 \#define \mbox{\hyperlink{ltem1c_8h_aabd429f079f219cca0a201657ef9b9a1}{R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+OR}}~500
 \end{DoxyCompactItemize}
@@ -117,12 +122,16 @@ void \mbox{\hyperlink{ltem1c_8h_a79654e95c6a67fe444fb90646e36f200}{ltem1\+\_\+re
 void \mbox{\hyperlink{ltem1c_8h_a20c7000ff6277c3f2bf6690f872774c0}{ltem1\+\_\+do\+Work}} ()
 \begin{DoxyCompactList}\small\item\em Background work task runner. To be called in application Loop() periodically. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltem1c_8h_a16962565e46d30d4d7b9a76f061fe15a}{ltem1\+\_\+fault\+Handler}} (uint16\+\_\+t status\+Code, const char $\ast$fault) \+\_\+\+\_\+attribute\+\_\+\+\_\+((noreturn))
-\begin{DoxyCompactList}\small\item\em Function of last resort, catestrophic failure Background work task runner. To be called in application Loop() periodically. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function of last resort, catestrophic failure Background work task runner. To be called in application Loop() periodically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltem1c_8h_a2afe43fa4c4c3db98c35e9eae9fda4e5}{ltem1\+\_\+set\+Yield\+Cb}} (\mbox{\hyperlink{platform__timing_8h_a1066ad01c72dad80aaa76602d3cdce94}{platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t}} yield\+Cb\+\_\+func)
+\begin{DoxyCompactList}\small\item\em Registers the address (void$\ast$) of your application yield callback handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{ltem1c_8h_af0e3c59e4d3e14ce47a3372aff4dd7fa}{ltem1\+Device\+\_\+t}} $\ast$ \mbox{\hyperlink{ltem1c_8h_ae1d900c6ccd0da637e6ddc6af05f0a65}{g\+\_\+ltem1}}
 \begin{DoxyCompactList}\small\item\em The L\+T\+Em1 \char`\"{}object\char`\"{}, since this is C99 like the instance class. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{ltem1c_8h_a65b5fb1443bd8c12cc7a2be264a5cede}{g\+\_\+dbg\+Buffer}} \mbox{[}\mbox{\hyperlink{platform__debug_8h_a55b0e7bf15961b6e7b12903cf107f67b}{D\+B\+G\+B\+U\+F\+F\+E\+R\+\_\+\+SZ}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em global shared buffer for debug output \end{DoxyCompactList}\item 
 \mbox{\hyperlink{platform__gpio_8h_a8dcfc8ee1f002aa2c8f93b2767098f3c}{ltem1\+Pin\+Config\+\_\+t}} \mbox{\hyperlink{ltem1c_8h_a4ee560c673862498d6dc516cb8e808bc}{F\+E\+A\+T\+H\+E\+R\+\_\+\+B\+R\+E\+A\+K\+O\+UT}}
 \begin{DoxyCompactList}\small\item\em obsolete \end{DoxyCompactList}\item 
 \mbox{\hyperlink{platform__gpio_8h_a8dcfc8ee1f002aa2c8f93b2767098f3c}{ltem1\+Pin\+Config\+\_\+t}} \mbox{\hyperlink{ltem1c_8h_a0a6522e501ed1a0e57bb7e77b38f57ac}{R\+P\+I\+\_\+\+B\+R\+E\+A\+K\+O\+UT}}
@@ -250,6 +259,12 @@ void \mbox{\hyperlink{ltem1c_8h_a16962565e46d30d4d7b9a76f061fe15a}{ltem1\+\_\+fa
 \doxysubsubsection{\texorpdfstring{RESULT\_CODE\_BADREQUEST}{RESULT\_CODE\_BADREQUEST}}
 {\footnotesize\ttfamily \#define R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+A\+D\+R\+E\+Q\+U\+E\+ST~400}
 
+\mbox{\Hypertarget{ltem1c_8h_a363fd981eef7c01050d773d6a2700fb0}\label{ltem1c_8h_a363fd981eef7c01050d773d6a2700fb0}} 
+\index{ltem1c.h@{ltem1c.h}!RESULT\_CODE\_CANCELLED@{RESULT\_CODE\_CANCELLED}}
+\index{RESULT\_CODE\_CANCELLED@{RESULT\_CODE\_CANCELLED}!ltem1c.h@{ltem1c.h}}
+\doxysubsubsection{\texorpdfstring{RESULT\_CODE\_CANCELLED}{RESULT\_CODE\_CANCELLED}}
+{\footnotesize\ttfamily \#define R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+A\+N\+C\+E\+L\+L\+ED~499}
+
 \mbox{\Hypertarget{ltem1c_8h_a58c08b01c1640177806215af48ebeae0}\label{ltem1c_8h_a58c08b01c1640177806215af48ebeae0}} 
 \index{ltem1c.h@{ltem1c.h}!RESULT\_CODE\_CONFLICT@{RESULT\_CODE\_CONFLICT}}
 \index{RESULT\_CODE\_CONFLICT@{RESULT\_CODE\_CONFLICT}!ltem1c.h@{ltem1c.h}}
@@ -267,6 +282,12 @@ void \mbox{\hyperlink{ltem1c_8h_a16962565e46d30d4d7b9a76f061fe15a}{ltem1\+\_\+fa
 \index{RESULT\_CODE\_ERRORS\_BASE@{RESULT\_CODE\_ERRORS\_BASE}!ltem1c.h@{ltem1c.h}}
 \doxysubsubsection{\texorpdfstring{RESULT\_CODE\_ERRORS\_BASE}{RESULT\_CODE\_ERRORS\_BASE}}
 {\footnotesize\ttfamily \#define R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+S\+\_\+\+B\+A\+SE~400}
+
+\mbox{\Hypertarget{ltem1c_8h_a55443bad183ce4af75763c2f5af0d587}\label{ltem1c_8h_a55443bad183ce4af75763c2f5af0d587}} 
+\index{ltem1c.h@{ltem1c.h}!RESULT\_CODE\_FORBIDDEN@{RESULT\_CODE\_FORBIDDEN}}
+\index{RESULT\_CODE\_FORBIDDEN@{RESULT\_CODE\_FORBIDDEN}!ltem1c.h@{ltem1c.h}}
+\doxysubsubsection{\texorpdfstring{RESULT\_CODE\_FORBIDDEN}{RESULT\_CODE\_FORBIDDEN}}
+{\footnotesize\ttfamily \#define R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+D\+E\+\_\+\+F\+O\+R\+B\+I\+D\+D\+EN~403}
 
 \mbox{\Hypertarget{ltem1c_8h_aaa2014a03f51b8c56b59f9f328b6c423}\label{ltem1c_8h_aaa2014a03f51b8c56b59f9f328b6c423}} 
 \index{ltem1c.h@{ltem1c.h}!RESULT\_CODE\_NOTFOUND@{RESULT\_CODE\_NOTFOUND}}
@@ -440,6 +461,21 @@ Function of last resort, catestrophic failure Background work task runner. To be
 
 Performs a HW reset of L\+T\+Em1 and optionally executes start sequence. 
 
+\mbox{\Hypertarget{ltem1c_8h_a2afe43fa4c4c3db98c35e9eae9fda4e5}\label{ltem1c_8h_a2afe43fa4c4c3db98c35e9eae9fda4e5}} 
+\index{ltem1c.h@{ltem1c.h}!ltem1\_setYieldCb@{ltem1\_setYieldCb}}
+\index{ltem1\_setYieldCb@{ltem1\_setYieldCb}!ltem1c.h@{ltem1c.h}}
+\doxysubsubsection{\texorpdfstring{ltem1\_setYieldCb()}{ltem1\_setYieldCb()}}
+{\footnotesize\ttfamily void ltem1\+\_\+set\+Yield\+Cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{platform__timing_8h_a1066ad01c72dad80aaa76602d3cdce94}{platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t}}}]{yield\+Cb\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Registers the address (void$\ast$) of your application yield callback handler. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em custom\+Fault\+Handler} & -\/ Pointer to application provided fault handler. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ltem1c_8h_a61b6ff310cf112009b61853ea1175f06}\label{ltem1c_8h_a61b6ff310cf112009b61853ea1175f06}} 
 \index{ltem1c.h@{ltem1c.h}!ltem1\_start@{ltem1\_start}}
 \index{ltem1\_start@{ltem1\_start}!ltem1c.h@{ltem1c.h}}
@@ -477,6 +513,16 @@ Powers off the modem without destroying memory objects. Modem device will requir
 
 
 obsolete 
+
+\mbox{\Hypertarget{ltem1c_8h_a65b5fb1443bd8c12cc7a2be264a5cede}\label{ltem1c_8h_a65b5fb1443bd8c12cc7a2be264a5cede}} 
+\index{ltem1c.h@{ltem1c.h}!g\_dbgBuffer@{g\_dbgBuffer}}
+\index{g\_dbgBuffer@{g\_dbgBuffer}!ltem1c.h@{ltem1c.h}}
+\doxysubsubsection{\texorpdfstring{g\_dbgBuffer}{g\_dbgBuffer}}
+{\footnotesize\ttfamily char g\+\_\+dbg\+Buffer\mbox{[}\mbox{\hyperlink{platform__debug_8h_a55b0e7bf15961b6e7b12903cf107f67b}{D\+B\+G\+B\+U\+F\+F\+E\+R\+\_\+\+SZ}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+global shared buffer for debug output 
 
 \mbox{\Hypertarget{ltem1c_8h_ae1d900c6ccd0da637e6ddc6af05f0a65}\label{ltem1c_8h_ae1d900c6ccd0da637e6ddc6af05f0a65}} 
 \index{ltem1c.h@{ltem1c.h}!g\_ltem1@{g\_ltem1}}

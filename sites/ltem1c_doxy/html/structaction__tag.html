@@ -84,9 +84,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">isOpen</a></td></tr>
 <tr class="memdesc:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation.  <a href="structaction__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">More...</a><br /></td></tr>
 <tr class="separator:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa025870b78196833703150bca54e930a"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#aa025870b78196833703150bca54e930a">invokedAt</a></td></tr>
-<tr class="memdesc:aa025870b78196833703150bca54e930a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tick value at the command invocation, used for timeout detection.  <a href="structaction__tag.html#aa025870b78196833703150bca54e930a">More...</a><br /></td></tr>
-<tr class="separator:aa025870b78196833703150bca54e930a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5060510445edaff8c6d26aba0141eaae"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a5060510445edaff8c6d26aba0141eaae">invokedAt</a></td></tr>
+<tr class="memdesc:a5060510445edaff8c6d26aba0141eaae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tick value at the command invocation, used for timeout detection.  <a href="structaction__tag.html#a5060510445edaff8c6d26aba0141eaae">More...</a><br /></td></tr>
+<tr class="separator:a5060510445edaff8c6d26aba0141eaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">resultCode</a></td></tr>
 <tr class="memdesc:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML type response code, 0 is special "pending" status, see ACTION_RESULT_* codes.  <a href="structaction__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">More...</a><br /></td></tr>
 <tr class="separator:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,6 +99,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="memItemLeft" align="right" valign="top">uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">taskCompleteParser_func</a> )(const char *<a class="el" href="structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>, char **endptr)</td></tr>
 <tr class="memdesc:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to parse the response looking for completion.  <a href="structaction__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">More...</a><br /></td></tr>
 <tr class="separator:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792d200de5c767230e258f4914c74783"><td class="memItemLeft" align="right" valign="top"><a class="el" href="actions_8h.html#af06d2e8c937f71e77a858116c3f813ef">actionHistory_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html#a792d200de5c767230e258f4914c74783">lastAction</a></td></tr>
+<tr class="memdesc:a792d200de5c767230e258f4914c74783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct containing information on last action response.  <a href="structaction__tag.html#a792d200de5c767230e258f4914c74783">More...</a><br /></td></tr>
+<tr class="separator:a792d200de5c767230e258f4914c74783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure to control invocation and management of an AT command with the BGx module. </p>
@@ -119,14 +122,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="aa025870b78196833703150bca54e930a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa025870b78196833703150bca54e930a">&#9670;&nbsp;</a></span>invokedAt</h2>
+<a id="a5060510445edaff8c6d26aba0141eaae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5060510445edaff8c6d26aba0141eaae">&#9670;&nbsp;</a></span>invokedAt</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long invokedAt</td>
+          <td class="memname">uint32_t invokedAt</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -148,6 +151,23 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation. </p>
+
+</div>
+</div>
+<a id="a792d200de5c767230e258f4914c74783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792d200de5c767230e258f4914c74783">&#9670;&nbsp;</a></span>lastAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="actions_8h.html#af06d2e8c937f71e77a858116c3f813ef">actionHistory_t</a>* lastAction</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Struct containing information on last action response. </p>
+<dl class="section return"><dt>Returns</dt><dd>. NOTE: only set on NON-SUCCESS. </dd></dl>
 
 </div>
 </div>

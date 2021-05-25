@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['qbg_5fnw_5fiot_5fmode_5ft_1084',['qbg_nw_iot_mode_t',['../quectel__bg_8h.html#a2191ec3f5a5386782fe35c35116bd17f',1,'quectel_bg.h']]],
-  ['qbg_5fnw_5fscan_5fmode_5ft_1085',['qbg_nw_scan_mode_t',['../quectel__bg_8h.html#aa1a289b110c85590df8e3c8628820432',1,'quectel_bg.h']]],
-  ['qbgreadystate_5ft_1086',['qbgReadyState_t',['../quectel__bg_8h.html#a147bba7e20cc24461d0c91d9ebfd881b',1,'quectel_bg.h']]]
+  ['mqttqos_5ftag_1274',['mqttQos_tag',['../mqtt_8h.html#a550b228936d6a66ce971cdc331a53fd1',1,'mqtt.h']]],
+  ['mqttresult_5ftag_1275',['mqttResult_tag',['../mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2',1,'mqtt.h']]],
+  ['mqttsession_5ftag_1276',['mqttSession_tag',['../mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2',1,'mqtt.h']]],
+  ['mqttstatus_5ftag_1277',['mqttStatus_tag',['../mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39',1,'mqtt.h']]],
+  ['mqttversion_5ftag_1278',['mqttVersion_tag',['../mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767',1,'mqtt.h']]]
 ];

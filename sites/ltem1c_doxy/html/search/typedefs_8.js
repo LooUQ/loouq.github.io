@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['socketctrl_5ft_1059',['socketCtrl_t',['../sockets_8h.html#a74d98e23a65a8898f1e87ff7ba81bdd9',1,'sockets.h']]],
-  ['socketid_5ft_1060',['socketId_t',['../sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7',1,'sockets.h']]],
-  ['socketresult_5ft_1061',['socketResult_t',['../sockets_8h.html#ab7cf20e66a2d8ef88c5befa4f4bf8276',1,'sockets.h']]],
-  ['sockets_5ft_1062',['sockets_t',['../sockets_8h.html#a919cf35125bef3806395ac5f49e2b61d',1,'sockets.h']]],
-  ['spiconfig_5ft_1063',['spiConfig_t',['../platform__spi_8h.html#a544993c1366bae29dcf938a4a78244af',1,'platform_spi.h']]],
-  ['spidevice_5ft_1064',['spiDevice_t',['../platform__spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8',1,'platform_spi.h']]],
-  ['sslversion_5ft_1065',['sslVersion_t',['../mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224',1,'mqtt.h']]]
+  ['lqcjsonproptype_5ft_1227',['lqcJsonPropType_t',['../lqc__collections_8h.html#a3375d8e1f920e1c55796c8e6bd5f48e0',1,'lqc_collections.h']]],
+  ['lqcjsonpropvalue_5ft_1228',['lqcJsonPropValue_t',['../lqc__collections_8h.html#adc7bbc6b88a96174569cf32877c775d0',1,'lqc_collections.h']]],
+  ['ltem1device_5ft_1229',['ltem1Device_t',['../ltem1c_8h.html#af0e3c59e4d3e14ce47a3372aff4dd7fa',1,'ltem1c.h']]],
+  ['ltem1pinconfig_5ft_1230',['ltem1PinConfig_t',['../platform__gpio_8h.html#a8dcfc8ee1f002aa2c8f93b2767098f3c',1,'platform_gpio.h']]]
 ];

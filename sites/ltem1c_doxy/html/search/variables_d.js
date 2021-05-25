@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['octet_945',['octet',['../unionip__addr__tag.html#a1822ce23a3bd6c88f73e562d8a94f1d5',1,'ip_addr_tag']]],
-  ['open_946',['open',['../structsocket_ctrl__tag.html#a8c7e45250b1eb6821dd59fb2a9a016d7',1,'socketCtrl_tag']]],
-  ['opername_947',['operName',['../structnetwork_operator__tag.html#a6f2492b1f8835c138fc107004ccf4d38',1,'networkOperator_tag']]],
-  ['overrun_5ferror_948',['OVERRUN_ERROR',['../nxp__sc16is741a_8h.html#a7a34904e6e213bd6af34f75f73995b6f',1,'nxp_sc16is741a.h']]]
+  ['namepattern_1108',['namePattern',['../structfile_list_result__tag.html#a0eecee741076eafc24854640f4b5f0f9',1,'fileListResult_tag']]],
+  ['net_1109',['net',['../mqtt__testing_8txt.html#a93541b02dd644537004cd4ab44a2fe5d',1,'mqtt_testing.txt']]],
+  ['network_1110',['network',['../structltem1_device__tag.html#a56cc8881cfd18b793bbb458a4ee26eb4',1,'ltem1Device_tag']]],
+  ['networkoperator_1111',['networkOperator',['../structnetwork__tag.html#a3a0a83567f05e79ecd901d43221525fc',1,'network_tag']]],
+  ['nsat_1112',['nsat',['../structgnss_location__tag.html#aaf5c2a56263f9ac50dbd2e77755bf528',1,'gnssLocation_tag']]],
+  ['ntwkdetail_1113',['ntwkDetail',['../_az_io_t_hub_01ssl_trace_8txt.html#a7e22600cd9fe4343910ea48d4a6b20dd',1,'AzIoTHub sslTrace.txt']]],
+  ['ntwkinfo_1114',['ntwkInfo',['../_az_io_t_hub_01ssl_trace_8txt.html#a26d23e83c839d953b08a61a1870f8c51',1,'AzIoTHub sslTrace.txt']]],
+  ['ntwkmode_1115',['ntwkMode',['../structnetwork_operator__tag.html#abbd2b701684549b371938ae1081cdb9c',1,'networkOperator_tag']]],
+  ['nxpsettings_1116',['nxpSettings',['../structarduino__spi__tag.html#a4b6b81b429a706d864f1a9c0eb9e124c',1,'arduino_spi_tag']]]
 ];

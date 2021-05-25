@@ -1,11 +1,8 @@
 \hypertarget{actions_8c}{}\doxysection{src/actions.c File Reference}
 \label{actions_8c}\index{src/actions.c@{src/actions.c}}
 {\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}dbgprint.\+h\char`\"{}}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{actions_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}
 \item 
 \#define \mbox{\hyperlink{actions_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
 \item 
@@ -53,18 +50,14 @@ void \mbox{\hyperlink{actions_8c_a313480e67e5f770161804fe2b6da9574}{action\+\_\+
 \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{actions_8c_abb10c49a8c22f9660ab5c2e0885552e3}{action\+\_\+ok\+Result\+Parser}} (const char $\ast$response, char $\ast$$\ast$endptr)
 \begin{DoxyCompactList}\small\item\em Validate the response ends in a B\+Gxx OK value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{actions_8c_a12978da1cd17c327b4b12de03ff524cb}{action\+\_\+service\+Response\+Parser}} (const char $\ast$response, const char $\ast$preamble, uint8\+\_\+t result\+Indx, char $\ast$$\ast$endptr)
-\begin{DoxyCompactList}\small\item\em \mbox{[}private\mbox{]} Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+SL. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+SL. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{actions_8c_a657dc5291edd9a7e48c2866aac75ea73}{action\+\_\+str\+Token}} (char $\ast$source, int delimiter, char $\ast$token, uint8\+\_\+t token\+Max)
+\begin{DoxyCompactList}\small\item\em C-\/string token grabber. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{actions_8c_a4ebff35eeb105c5536cdb994d11d2573}{actn\+\_\+acquire\+Lock}} (const char $\ast$cmd\+Str, uint8\+\_\+t retries)
 \begin{DoxyCompactList}\small\item\em Attempts to get exclusive access to Q\+BG module command interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{actions_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{actions_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
-\index{actions.c@{actions.c}!\_DEBUG@{\_DEBUG}}
-\index{\_DEBUG@{\_DEBUG}!actions.c@{actions.c}}
-\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
-{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG}
-
 \mbox{\Hypertarget{actions_8c_a8315e0406778f049b10b6e1542611d18}\label{actions_8c_a8315e0406778f049b10b6e1542611d18}} 
 \index{actions.c@{actions.c}!CME\_PREABLE@{CME\_PREABLE}}
 \index{CME\_PREABLE@{CME\_PREABLE}!actions.c@{actions.c}}
@@ -280,7 +273,17 @@ Performs data transfer (send) sub-\/action.
 
 
 
-\mbox{[}private\mbox{]} Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+SL. 
+Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+SL. 
+
+\mbox{\Hypertarget{actions_8c_a657dc5291edd9a7e48c2866aac75ea73}\label{actions_8c_a657dc5291edd9a7e48c2866aac75ea73}} 
+\index{actions.c@{actions.c}!action\_strToken@{action\_strToken}}
+\index{action\_strToken@{action\_strToken}!actions.c@{actions.c}}
+\doxysubsubsection{\texorpdfstring{action\_strToken()}{action\_strToken()}}
+{\footnotesize\ttfamily char$\ast$ action\+\_\+str\+Token (\begin{DoxyParamCaption}\item[{char $\ast$}]{source,  }\item[{int}]{delimiter,  }\item[{char $\ast$}]{token,  }\item[{uint8\+\_\+t}]{token\+Max }\end{DoxyParamCaption})}
+
+
+
+C-\/string token grabber. 
 
 \mbox{\Hypertarget{actions_8c_a905333ceb23800696a33acc11dab7a0d}\label{actions_8c_a905333ceb23800696a33acc11dab7a0d}} 
 \index{actions.c@{actions.c}!action\_tokenResultParser@{action\_tokenResultParser}}

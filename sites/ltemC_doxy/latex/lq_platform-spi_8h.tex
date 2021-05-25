@@ -1,0 +1,216 @@
+\hypertarget{lq_platform-spi_8h}{}\doxysection{src/platform/lq\+Platform-\/spi.h File Reference}
+\label{lq_platform-spi_8h}\index{src/platform/lqPlatform-\/spi.h@{src/platform/lqPlatform-\/spi.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structspi_config__tag}{spi\+Config\+\_\+tag}}
+\item 
+struct \mbox{\hyperlink{structspi_device__tag}{spi\+Device\+\_\+tag}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lq_platform-spi_8h_a5abf39c836b14008e4aa9f8a35cf5a0d}{S\+P\+I\+\_\+\+N\+O\+\_\+\+I\+R\+Q\+\_\+\+P\+R\+O\+T\+E\+C\+T\+I\+ON}}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structspi_config__tag}{spi\+Config\+\_\+tag}} \mbox{\hyperlink{lq_platform-spi_8h_a544993c1366bae29dcf938a4a78244af}{spi\+Config\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structspi_device__tag}{spi\+Device\+\_\+tag}} \mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983}{spi\+Bit\+Order\+\_\+t}} \{ \mbox{\hyperlink{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983ace0bc2651cb10b18a0fb04ffc2f23342}{spi\+Bit\+Order\+\_\+lsb\+First}} = 0x0, 
+\mbox{\hyperlink{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983af2dfc0fffad69f3c3a7d0035f22ab049}{spi\+Bit\+Order\+\_\+msb\+First}} = 0x1
+ \}
+\item 
+enum \mbox{\hyperlink{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2a}{spi\+Data\+Mode\+\_\+t}} \{ \mbox{\hyperlink{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aac51c31510b0bd33d6d0c53999946e7cc}{spi\+Data\+Mode\+\_\+0}} = 0x02, 
+\mbox{\hyperlink{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aad827ce1b584320e05e39bd8d73eb198e}{spi\+Data\+Mode\+\_\+1}} = 0x00, 
+\mbox{\hyperlink{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aa3e3c7d6589eba599af421c28ec4afe79}{spi\+Data\+Mode\+\_\+2}} = 0x03, 
+\mbox{\hyperlink{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aa5332a8182ed21c315178c846426bd17d}{spi\+Data\+Mode\+\_\+3}} = 0x01
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$ \mbox{\hyperlink{lq_platform-spi_8h_a5e629af9e158854d6d41a0dba7ecc75a}{spi\+\_\+create}} (uint8\+\_\+t chip\+Sel\+Line)
+\begin{DoxyCompactList}\small\item\em Initialize and configure S\+PI resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lq_platform-spi_8h_a45c8d9705d1bc13c7ec70802a093d6fd}{spi\+\_\+start}} (\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$spi)
+\begin{DoxyCompactList}\small\item\em Start S\+PI facility. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lq_platform-spi_8h_ac43205ab2b3a372d691038846af215e1}{spi\+\_\+stop}} (\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$spi)
+\begin{DoxyCompactList}\small\item\em Shutdown S\+PI facility. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lq_platform-spi_8h_a2e81266ae193ee01843d1983f4e9c070}{spi\+\_\+protect\+From\+Interrupt}} (\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$spi, int8\+\_\+t irq\+Number)
+\begin{DoxyCompactList}\small\item\em Uninitialize and deallocate memory from the S\+PI resource. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{lq_platform-spi_8h_a76655f833572c833b081b7f84d4e1667}{spi\+\_\+transfer\+Byte}} (\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$spi, uint8\+\_\+t write\+Val)
+\begin{DoxyCompactList}\small\item\em Transfer a byte to the N\+XP bridge. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{lq_platform-spi_8h_a9a6086ceffbbf588c2c92c07add96505}{spi\+\_\+transfer\+Word}} (\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$spi, uint16\+\_\+t write\+Val)
+\begin{DoxyCompactList}\small\item\em Transfer a word (16-\/bits) to the N\+XP bridge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lq_platform-spi_8h_ac614af75d420958206ff201e47c6c22e}{spi\+\_\+transfer\+Buffer}} (\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$spi, uint8\+\_\+t reg\+Addr\+Byte, void $\ast$buf, size\+\_\+t xfer\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Transfer a buffer to the N\+XP bridge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lq_platform-spi_8h_a5abf39c836b14008e4aa9f8a35cf5a0d}\label{lq_platform-spi_8h_a5abf39c836b14008e4aa9f8a35cf5a0d}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!SPI\_NO\_IRQ\_PROTECTION@{SPI\_NO\_IRQ\_PROTECTION}}
+\index{SPI\_NO\_IRQ\_PROTECTION@{SPI\_NO\_IRQ\_PROTECTION}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{SPI\_NO\_IRQ\_PROTECTION}{SPI\_NO\_IRQ\_PROTECTION}}
+{\footnotesize\ttfamily \#define S\+P\+I\+\_\+\+N\+O\+\_\+\+I\+R\+Q\+\_\+\+P\+R\+O\+T\+E\+C\+T\+I\+ON~-\/1}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{lq_platform-spi_8h_a544993c1366bae29dcf938a4a78244af}\label{lq_platform-spi_8h_a544993c1366bae29dcf938a4a78244af}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiConfig\_t@{spiConfig\_t}}
+\index{spiConfig\_t@{spiConfig\_t}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spiConfig\_t}{spiConfig\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structspi_config__tag}{spi\+Config\+\_\+tag}} \mbox{\hyperlink{lq_platform-spi_8h_a544993c1366bae29dcf938a4a78244af}{spi\+Config\+\_\+t}}}
+
+\mbox{\Hypertarget{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}\label{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiDevice\_t@{spiDevice\_t}}
+\index{spiDevice\_t@{spiDevice\_t}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spiDevice\_t}{spiDevice\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structspi_device__tag}{spi\+Device\+\_\+tag}} \mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983}\label{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiBitOrder\_t@{spiBitOrder\_t}}
+\index{spiBitOrder\_t@{spiBitOrder\_t}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spiBitOrder\_t}{spiBitOrder\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983}{spi\+Bit\+Order\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiBitOrder\_lsbFirst@{spiBitOrder\_lsbFirst}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiBitOrder\_lsbFirst@{spiBitOrder\_lsbFirst}}}\mbox{\Hypertarget{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983ace0bc2651cb10b18a0fb04ffc2f23342}\label{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983ace0bc2651cb10b18a0fb04ffc2f23342}} 
+spi\+Bit\+Order\+\_\+lsb\+First&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiBitOrder\_msbFirst@{spiBitOrder\_msbFirst}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiBitOrder\_msbFirst@{spiBitOrder\_msbFirst}}}\mbox{\Hypertarget{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983af2dfc0fffad69f3c3a7d0035f22ab049}\label{lq_platform-spi_8h_a41e9db63135115a4aeec30d37da5f983af2dfc0fffad69f3c3a7d0035f22ab049}} 
+spi\+Bit\+Order\+\_\+msb\+First&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2a}\label{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2a}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiDataMode\_t@{spiDataMode\_t}}
+\index{spiDataMode\_t@{spiDataMode\_t}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spiDataMode\_t}{spiDataMode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2a}{spi\+Data\+Mode\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiDataMode\_0@{spiDataMode\_0}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiDataMode\_0@{spiDataMode\_0}}}\mbox{\Hypertarget{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aac51c31510b0bd33d6d0c53999946e7cc}\label{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aac51c31510b0bd33d6d0c53999946e7cc}} 
+spi\+Data\+Mode\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiDataMode\_1@{spiDataMode\_1}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiDataMode\_1@{spiDataMode\_1}}}\mbox{\Hypertarget{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aad827ce1b584320e05e39bd8d73eb198e}\label{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aad827ce1b584320e05e39bd8d73eb198e}} 
+spi\+Data\+Mode\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiDataMode\_2@{spiDataMode\_2}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiDataMode\_2@{spiDataMode\_2}}}\mbox{\Hypertarget{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aa3e3c7d6589eba599af421c28ec4afe79}\label{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aa3e3c7d6589eba599af421c28ec4afe79}} 
+spi\+Data\+Mode\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{spiDataMode\_3@{spiDataMode\_3}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spiDataMode\_3@{spiDataMode\_3}}}\mbox{\Hypertarget{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aa5332a8182ed21c315178c846426bd17d}\label{lq_platform-spi_8h_a56cf6a29389ff85388002cb9d2c5df2aa5332a8182ed21c315178c846426bd17d}} 
+spi\+Data\+Mode\+\_\+3&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lq_platform-spi_8h_a5e629af9e158854d6d41a0dba7ecc75a}\label{lq_platform-spi_8h_a5e629af9e158854d6d41a0dba7ecc75a}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_create@{spi\_create}}
+\index{spi\_create@{spi\_create}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_create()}{spi\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}}$\ast$ spi\+\_\+create (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{chip\+Sel\+Line }\end{DoxyParamCaption})}
+
+
+
+Initialize and configure S\+PI resource. 
+
+\mbox{\Hypertarget{lq_platform-spi_8h_a2e81266ae193ee01843d1983f4e9c070}\label{lq_platform-spi_8h_a2e81266ae193ee01843d1983f4e9c070}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_protectFromInterrupt@{spi\_protectFromInterrupt}}
+\index{spi\_protectFromInterrupt@{spi\_protectFromInterrupt}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_protectFromInterrupt()}{spi\_protectFromInterrupt()}}
+{\footnotesize\ttfamily void spi\+\_\+protect\+From\+Interrupt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$}]{spi,  }\item[{int8\+\_\+t}]{irq\+Number }\end{DoxyParamCaption})}
+
+
+
+Uninitialize and deallocate memory from the S\+PI resource. 
+
+\mbox{\Hypertarget{lq_platform-spi_8h_a45c8d9705d1bc13c7ec70802a093d6fd}\label{lq_platform-spi_8h_a45c8d9705d1bc13c7ec70802a093d6fd}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_start@{spi\_start}}
+\index{spi\_start@{spi\_start}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_start()}{spi\_start()}}
+{\footnotesize\ttfamily void spi\+\_\+start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$}]{spi }\end{DoxyParamCaption})}
+
+
+
+Start S\+PI facility. 
+
+\mbox{\Hypertarget{lq_platform-spi_8h_ac43205ab2b3a372d691038846af215e1}\label{lq_platform-spi_8h_ac43205ab2b3a372d691038846af215e1}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_stop@{spi\_stop}}
+\index{spi\_stop@{spi\_stop}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_stop()}{spi\_stop()}}
+{\footnotesize\ttfamily void spi\+\_\+stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$}]{spi }\end{DoxyParamCaption})}
+
+
+
+Shutdown S\+PI facility. 
+
+\mbox{\Hypertarget{lq_platform-spi_8h_ac614af75d420958206ff201e47c6c22e}\label{lq_platform-spi_8h_ac614af75d420958206ff201e47c6c22e}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_transferBuffer@{spi\_transferBuffer}}
+\index{spi\_transferBuffer@{spi\_transferBuffer}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_transferBuffer()}{spi\_transferBuffer()}}
+{\footnotesize\ttfamily void spi\+\_\+transfer\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$}]{spi,  }\item[{uint8\+\_\+t}]{reg\+Addr\+Byte,  }\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{xfer\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Transfer a buffer to the N\+XP bridge. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em spi} & The S\+PI device for communications. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reg\+Addr\+Byte} & Bridge register address specifying the I/O to perform. \\
+\hline
+ & {\em \mbox{[}in} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lq_platform-spi_8h_a76655f833572c833b081b7f84d4e1667}\label{lq_platform-spi_8h_a76655f833572c833b081b7f84d4e1667}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_transferByte@{spi\_transferByte}}
+\index{spi\_transferByte@{spi\_transferByte}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_transferByte()}{spi\_transferByte()}}
+{\footnotesize\ttfamily uint8\+\_\+t spi\+\_\+transfer\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$}]{spi,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Transfer a byte to the N\+XP bridge. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em spi} & The S\+PI device for communications. \\
+\hline
+ & {\em \mbox{[}in} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lq_platform-spi_8h_a9a6086ceffbbf588c2c92c07add96505}\label{lq_platform-spi_8h_a9a6086ceffbbf588c2c92c07add96505}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_transferWord@{spi\_transferWord}}
+\index{spi\_transferWord@{spi\_transferWord}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_transferWord()}{spi\_transferWord()}}
+{\footnotesize\ttfamily uint16\+\_\+t spi\+\_\+transfer\+Word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lq_platform-spi_8h_a664213cc5a053dc9f3e47fd3a71226e8}{spi\+Device\+\_\+t}} $\ast$}]{spi,  }\item[{uint16\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Transfer a word (16-\/bits) to the N\+XP bridge. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em spi} & The S\+PI device for communications. \\
+\hline
+ & {\em \mbox{[}in} & \\
+\hline
+\end{DoxyParams}

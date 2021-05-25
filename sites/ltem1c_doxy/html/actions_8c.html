@@ -76,12 +76,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="ltem1c_8h_source.html">ltem1c.h</a>&quot;</code><br />
-<code>#include &quot;dbgprint.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a152fc5203b90b1cff03b7b78579b8f52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8c.html#a152fc5203b90b1cff03b7b78579b8f52">_DEBUG</a></td></tr>
-<tr class="separator:a152fc5203b90b1cff03b7b78579b8f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74e75242132eaabbc1c512488a135926"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8c.html#a74e75242132eaabbc1c512488a135926">MIN</a>(x,  y)&#160;&#160;&#160;(((x) &lt; (y)) ? (x) : (y))</td></tr>
 <tr class="separator:a74e75242132eaabbc1c512488a135926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94cc840dcfa6352171624a582482388d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8c.html#a94cc840dcfa6352171624a582482388d">OK_COMPLETED_STRING</a>&#160;&#160;&#160;&quot;OK\r\n&quot;</td></tr>
@@ -138,27 +135,16 @@ Functions</h2></td></tr>
 <tr class="memdesc:abb10c49a8c22f9660ab5c2e0885552e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate the response ends in a BGxx OK value.  <a href="actions_8c.html#abb10c49a8c22f9660ab5c2e0885552e3">More...</a><br /></td></tr>
 <tr class="separator:abb10c49a8c22f9660ab5c2e0885552e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12978da1cd17c327b4b12de03ff524cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8c.html#a12978da1cd17c327b4b12de03ff524cb">action_serviceResponseParser</a> (const char *response, const char *preamble, uint8_t resultIndx, char **endptr)</td></tr>
-<tr class="memdesc:a12978da1cd17c327b4b12de03ff524cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">[private] Parser for open connection response, shared by UDP/TCP/SSL.  <a href="actions_8c.html#a12978da1cd17c327b4b12de03ff524cb">More...</a><br /></td></tr>
+<tr class="memdesc:a12978da1cd17c327b4b12de03ff524cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser for open connection response, shared by UDP/TCP/SSL.  <a href="actions_8c.html#a12978da1cd17c327b4b12de03ff524cb">More...</a><br /></td></tr>
 <tr class="separator:a12978da1cd17c327b4b12de03ff524cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657dc5291edd9a7e48c2866aac75ea73"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8c.html#a657dc5291edd9a7e48c2866aac75ea73">action_strToken</a> (char *source, int delimiter, char *token, uint8_t tokenMax)</td></tr>
+<tr class="memdesc:a657dc5291edd9a7e48c2866aac75ea73"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string token grabber.  <a href="actions_8c.html#a657dc5291edd9a7e48c2866aac75ea73">More...</a><br /></td></tr>
+<tr class="separator:a657dc5291edd9a7e48c2866aac75ea73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ebff35eeb105c5536cdb994d11d2573"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8c.html#a4ebff35eeb105c5536cdb994d11d2573">actn_acquireLock</a> (const char *cmdStr, uint8_t retries)</td></tr>
 <tr class="memdesc:a4ebff35eeb105c5536cdb994d11d2573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to get exclusive access to QBG module command interface.  <a href="actions_8c.html#a4ebff35eeb105c5536cdb994d11d2573">More...</a><br /></td></tr>
 <tr class="separator:a4ebff35eeb105c5536cdb994d11d2573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a152fc5203b90b1cff03b7b78579b8f52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a152fc5203b90b1cff03b7b78579b8f52">&#9670;&nbsp;</a></span>_DEBUG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _DEBUG</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8315e0406778f049b10b6e1542611d18"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8315e0406778f049b10b6e1542611d18">&#9670;&nbsp;</a></span>CME_PREABLE</h2>
 
@@ -652,7 +638,49 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>[private] Parser for open connection response, shared by UDP/TCP/SSL. </p>
+<p>Parser for open connection response, shared by UDP/TCP/SSL. </p>
+
+</div>
+</div>
+<a id="a657dc5291edd9a7e48c2866aac75ea73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657dc5291edd9a7e48c2866aac75ea73">&#9670;&nbsp;</a></span>action_strToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* action_strToken </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delimiter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>tokenMax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C-string token grabber. </p>
 
 </div>
 </div>

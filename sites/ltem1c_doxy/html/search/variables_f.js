@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['qbg_5finitcmds_960',['qbg_initCmds',['../quectel__bg_8c.html#a1d4f4dde31edc393e62b6278a0218d24',1,'quectel_bg.c']]],
-  ['qbgreadystate_961',['qbgReadyState',['../structltem1_device__tag.html#a4c823cc492a5660ab1b9766726774474',1,'ltem1Device_tag']]],
-  ['qiurc_962',['QIURC',['../cmd_01response_01examples_8txt.html#a06f73baf15c13152e346a3070019e4e1',1,'cmd response examples.txt']]],
-  ['qmtcfg_963',['QMTCFG',['../mqtt__testing_8txt.html#a9b17ed17e231e15a768f004cefca5e40',1,'QMTCFG():&#160;mqtt_testing.txt'],['../_s_a_s_01generation_01results_8txt.html#a9b17ed17e231e15a768f004cefca5e40',1,'QMTCFG():&#160;SAS generation results.txt']]],
-  ['qmtconn_964',['QMTCONN',['../mqtt__testing_8txt.html#a8d7760b076333f655e4f91eee493e6ba',1,'QMTCONN():&#160;mqtt_testing.txt'],['../_s_a_s_01generation_01results_8txt.html#a4c90270333f5dc9e4087134903191d9e',1,'QMTCONN():&#160;SAS generation results.txt']]],
-  ['qmtopen_965',['QMTOPEN',['../mqtt__testing_8txt.html#a8daf1e2c833c22f47038b94accafed69',1,'QMTOPEN():&#160;mqtt_testing.txt'],['../_s_a_s_01generation_01results_8txt.html#a54c759ac9c6d544cf50c5d8ebc19fad8',1,'QMTOPEN():&#160;SAS generation results.txt']]],
-  ['qping_966',['QPING',['../cmd_01response_01examples_8txt.html#a17843a26b8c1a1720c473d14b1ecec04',1,'cmd response examples.txt']]],
-  ['qsslcfg_967',['QSSLCFG',['../mqtt__testing_8txt.html#acf86d232eee30518e922be32144e94f5',1,'mqtt_testing.txt']]]
+  ['parity_5fen_1120',['PARITY_EN',['../nxp__sc16is741a_8h.html#ab07ddd22ac93d5204eb1eb40d419fdd9',1,'nxp_sc16is741a.h']]],
+  ['parity_5ferror_1121',['PARITY_ERROR',['../nxp__sc16is741a_8h.html#acfe561e11c6a2d57da09b2af1cb70218',1,'nxp_sc16is741a.h']]],
+  ['pdpcontext_1122',['pdpContext',['../structpeer_type_map__tag.html#a798301b30895bbdf8e998b0ac2495d5c',1,'peerTypeMap_tag']]],
+  ['pdpcontextid_1123',['pdpContextId',['../structsocket_ctrl__tag.html#af022b7937f29e6346f0ef344d1ea8e4a',1,'socketCtrl_tag']]],
+  ['peertypemap_1124',['peerTypeMap',['../structiop__tag.html#ae6a02b1e34b41656319f5197e5a60439',1,'iop_tag']]],
+  ['pinconfig_1125',['pinConfig',['../structltem1_device__tag.html#a028a8ce5d5e1f1835874f64677798585',1,'ltem1Device_tag']]],
+  ['platform_5fyieldcb_5ffunc_1126',['platform_yieldCB_func',['../arduino__timing_8cpp.html#ad1cc3e5ec1a873b34530cb04064b1b79',1,'platform_yieldCB_func():&#160;arduino_timing.cpp'],['../platform__timing_8h.html#ad1cc3e5ec1a873b34530cb04064b1b79',1,'platform_yieldCB_func():&#160;arduino_timing.cpp']]],
+  ['position_1127',['position',['../structgeo__result__tag.html#a5f7de4436a79d0fd01d2ddfb2f5cdd1c',1,'geo_result_tag']]],
+  ['powerkeypin_1128',['powerkeyPin',['../structltem1_pin_config__tag.html#ac4ee7b6f736d865efd82f857eea8ddaa',1,'ltem1PinConfig_tag']]],
+  ['prevhead_1129',['prevHead',['../structiop_buffer__tag.html#aabb0d62ee491eba71516b8a7137ae4c7',1,'iopBuffer_tag']]],
+  ['protocol_1130',['protocol',['../structsocket_ctrl__tag.html#a60b084aaf44cc3f9359e1e93f92c162f',1,'socketCtrl_tag']]]
 ];

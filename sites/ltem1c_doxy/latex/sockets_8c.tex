@@ -1,11 +1,8 @@
 \hypertarget{sockets_8c}{}\doxysection{src/sockets.c File Reference}
 \label{sockets_8c}\index{src/sockets.c@{src/sockets.c}}
 {\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}dbgprint.\+h\char`\"{}}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{sockets_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}
 \item 
 \#define \mbox{\hyperlink{sockets_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
 \item 
@@ -28,6 +25,8 @@ void \mbox{\hyperlink{sockets_8c_a938a6003effe7eece78f0de391e99891}{sckt\+\_\+cl
 \begin{DoxyCompactList}\small\item\em Close an established (open) connection socket. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sockets_8c_a441ffe9e7b3f84a8fd606149766dae64}{sckt\+\_\+reset}} (uint8\+\_\+t socket\+Id)
 \begin{DoxyCompactList}\small\item\em Reset open socket connection. This function drains the connection\textquotesingle{}s data pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sockets_8c_a1a7730f332e79c71e823ecb26859cec0}{sckt\+\_\+close\+All}} (uint8\+\_\+t contxt\+Id)
+\begin{DoxyCompactList}\small\item\em Close out all T\+C\+P/\+IP sockets on a context. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} \mbox{\hyperlink{sockets_8c_a7c9f32544b937ebb7f63e9499ef15e82}{sckt\+\_\+send}} (\mbox{\hyperlink{sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} socket\+Id, const char $\ast$data, uint16\+\_\+t data\+Sz)
 \begin{DoxyCompactList}\small\item\em Send data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sockets_8c_accd2287873108ebef20cdf22563105c4}{sckt\+\_\+do\+Work}} ()
@@ -35,12 +34,6 @@ void \mbox{\hyperlink{sockets_8c_accd2287873108ebef20cdf22563105c4}{sckt\+\_\+do
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{sockets_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{sockets_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
-\index{sockets.c@{sockets.c}!\_DEBUG@{\_DEBUG}}
-\index{\_DEBUG@{\_DEBUG}!sockets.c@{sockets.c}}
-\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
-{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG}
-
 \mbox{\Hypertarget{sockets_8c_a48b1663a06062f775262a363ce4c9e6d}\label{sockets_8c_a48b1663a06062f775262a363ce4c9e6d}} 
 \index{sockets.c@{sockets.c}!ASCII\_sSENDOK@{ASCII\_sSENDOK}}
 \index{ASCII\_sSENDOK@{ASCII\_sSENDOK}!sockets.c@{sockets.c}}
@@ -89,6 +82,16 @@ Close an established (open) connection socket.
 \mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The socket ID or number for the connection to close. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{sockets_8c_a1a7730f332e79c71e823ecb26859cec0}\label{sockets_8c_a1a7730f332e79c71e823ecb26859cec0}} 
+\index{sockets.c@{sockets.c}!sckt\_closeAll@{sckt\_closeAll}}
+\index{sckt\_closeAll@{sckt\_closeAll}!sockets.c@{sockets.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_closeAll()}{sckt\_closeAll()}}
+{\footnotesize\ttfamily void sckt\+\_\+close\+All (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{contxt\+Id }\end{DoxyParamCaption})}
+
+
+
+Close out all T\+C\+P/\+IP sockets on a context. 
+
 \mbox{\Hypertarget{sockets_8c_ae8a9086120ad6504040b5db042328a0d}\label{sockets_8c_ae8a9086120ad6504040b5db042328a0d}} 
 \index{sockets.c@{sockets.c}!sckt\_create@{sckt\_create}}
 \index{sckt\_create@{sckt\_create}!sockets.c@{sockets.c}}

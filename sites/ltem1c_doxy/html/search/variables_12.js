@@ -1,14 +1,21 @@
 var searchData=
 [
-  ['tail_1007',['tail',['../structcbuf__t.html#aff39d864a6594bc5f4a5e365282e00fe',1,'cbuf_t::tail()'],['../structiop_buffer__tag.html#a1d574830314033345fbbdc871af29b7d',1,'iopBuffer_tag::tail()']]],
-  ['taskcompleteparser_5ffunc_1008',['taskCompleteParser_func',['../structaction__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef',1,'action_tag']]],
-  ['tcpudpsocket_1009',['tcpudpSocket',['../structpeer_type_map__tag.html#a7e250ee87f132149aeaf134cbde26aa2',1,'peerTypeMap_tag']]],
-  ['thr_5fempty_1010',['THR_EMPTY',['../nxp__sc16is741a_8h.html#aefed6f0a47aa65dfd5e70b1c19b23b3c',1,'nxp_sc16is741a.h']]],
-  ['thr_5ftsr_5fempty_1011',['THR_TSR_EMPTY',['../nxp__sc16is741a_8h.html#af46b41b90234c1cce61c053334be51ad',1,'nxp_sc16is741a.h']]],
-  ['timeoutmillis_1012',['timeoutMillis',['../structaction__tag.html#a62141174b7f53e381c1ce0ad0b47b867',1,'action_tag']]],
-  ['topicname_1013',['topicName',['../structmqtt_subscription__tag.html#a78274885a9e15386f39b28535a8d1b09',1,'mqttSubscription_tag']]],
-  ['transmitter_5fdisable_1014',['TRANSMITTER_DISABLE',['../nxp__sc16is741a_8h.html#ae5fe41645a8cbacafa4532199016c595',1,'nxp_sc16is741a.h']]],
-  ['tx_5ffifo_5frst_1015',['TX_FIFO_RST',['../nxp__sc16is741a_8h.html#a39c1fed3e8f74ce0a7f9f36d61b4b4b8',1,'nxp_sc16is741a.h']]],
-  ['tx_5ftrigger_5flvl_1016',['TX_TRIGGER_LVL',['../nxp__sc16is741a_8h.html#aaa1751f5ef0832f47f1cf68add30f843',1,'nxp_sc16is741a.h']]],
-  ['txbuf_1017',['txBuf',['../structiop_tx_ctrl_block__tag.html#af29281513dc2bc0d2bf31925d70e540d',1,'iopTxCtrlBlock_tag::txBuf()'],['../structiop__tag.html#ae8fcab96ab403b0c0b89c2fdd74a2ac8',1,'iop_tag::txBuf()']]]
+  ['set_5fbreak_1159',['SET_BREAK',['../nxp__sc16is741a_8h.html#ac3357c425911be2f9872eb2e9f21b6f4',1,'nxp_sc16is741a.h']]],
+  ['set_5fparity_1160',['SET_PARITY',['../nxp__sc16is741a_8h.html#aa3f45d8a6aad7a70af07cd07b967cc9a',1,'nxp_sc16is741a.h']]],
+  ['size_1161',['size',['../structfile_upload_result__tag.html#ab2c6b258f02add8fdf4cfc7c371dd772',1,'fileUploadResult_tag::size()'],['../structfile_download_result__tag.html#ab2c6b258f02add8fdf4cfc7c371dd772',1,'fileDownloadResult_tag::size()']]],
+  ['socketctrls_1162',['socketCtrls',['../structsockets__tag.html#ada7d60b0e970ad5d81107853bb4907e7',1,'sockets_tag']]],
+  ['socketid_1163',['socketId',['../structsocket_ctrl__tag.html#aa67a15da6991635f5e111a8130c45bb4',1,'socketCtrl_tag']]],
+  ['sockets_1164',['sockets',['../structltem1_device__tag.html#a28c68e9d0a1b36bd73379e3d2abfaf5f',1,'ltem1Device_tag']]],
+  ['special_5fchar_5fdetect_1165',['SPECIAL_CHAR_DETECT',['../nxp__sc16is741a_8h.html#aebaa51f996b1dc77d37ee5fb66b5d731',1,'nxp_sc16is741a.h']]],
+  ['speedkm_1166',['speedkm',['../structgnss_location__tag.html#ab23b7f27e268c4f053742bd655b8127f',1,'gnssLocation_tag']]],
+  ['speedkn_1167',['speedkn',['../structgnss_location__tag.html#aa55935babd00748a6657bd683cf4a9ee',1,'gnssLocation_tag']]],
+  ['spi_1168',['spi',['../structltem1_device__tag.html#ac601bfed69a49573d0dd28b73a9f171e',1,'ltem1Device_tag']]],
+  ['spicspin_1169',['spiCsPin',['../structltem1_pin_config__tag.html#ac682adb9987d45a6e34640c076531055',1,'ltem1PinConfig_tag']]],
+  ['sslsocket_1170',['sslSocket',['../structpeer_type_map__tag.html#a668a8685ad4528f7e4b846ba58593950',1,'peerTypeMap_tag']]],
+  ['state_1171',['state',['../structmqtt__tag.html#a22b01753d409aacca5b5fc4f6027b694',1,'mqtt_tag']]],
+  ['statuscode_1172',['statusCode',['../structaction_history__tag.html#aebfca2e66f7adfe0d876ca72b1080052',1,'actionHistory_tag::statusCode()'],['../structaction_result__tag.html#aebfca2e66f7adfe0d876ca72b1080052',1,'actionResult_tag::statusCode()'],['../structgnss_location__tag.html#ade31e7fd99344e8c35f2c373af659551',1,'gnssLocation_tag::statusCode()']]],
+  ['statuspin_1173',['statusPin',['../structltem1_pin_config__tag.html#ab828feab0523b696ab148038e2a34f91',1,'ltem1PinConfig_tag']]],
+  ['stop_1174',['STOP',['../nxp__sc16is741a_8h.html#abcf8205c9a5a0e895c25312d99e5c9a5',1,'nxp_sc16is741a.h']]],
+  ['subscriptions_1175',['subscriptions',['../structmqtt__tag.html#aa4be52e58b888608de6f795fbc3be555',1,'mqtt_tag']]],
+  ['swflow_5fctrl_1176',['SWFLOW_CTRL',['../nxp__sc16is741a_8h.html#aeb79d1fca83b69a707efc8c3878e3897',1,'nxp_sc16is741a.h']]]
 ];

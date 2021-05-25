@@ -69,7 +69,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">arduino_timing.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -79,22 +80,29 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a440b5d091cb087ccc725fc774ef67e9a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino__timing_8cpp.html#a440b5d091cb087ccc725fc774ef67e9a">timing_millis</a> ()</td></tr>
-<tr class="separator:a440b5d091cb087ccc725fc774ef67e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbd609c6c5f67c87670a6ab7822c1b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino__timing_8cpp.html#afbd609c6c5f67c87670a6ab7822c1b86">timing_yield</a> ()</td></tr>
-<tr class="separator:afbd609c6c5f67c87670a6ab7822c1b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa17e6bab22444d6c05d957342a4d3c99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino__timing_8cpp.html#aa17e6bab22444d6c05d957342a4d3c99">timing_delay</a> (uint32_t delay_ms)</td></tr>
-<tr class="separator:aa17e6bab22444d6c05d957342a4d3c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712e2c306912c63a4ea84a7c15eeffc0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino__timing_8cpp.html#a712e2c306912c63a4ea84a7c15eeffc0">lMillis</a> ()</td></tr>
+<tr class="separator:a712e2c306912c63a4ea84a7c15eeffc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6de0142ccfd98e70f3c088ae2dd84bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino__timing_8cpp.html#af6de0142ccfd98e70f3c088ae2dd84bc">lYield</a> ()</td></tr>
+<tr class="separator:af6de0142ccfd98e70f3c088ae2dd84bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ef4c7d3d9010694cd973d0208f4808"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino__timing_8cpp.html#a29ef4c7d3d9010694cd973d0208f4808">lDelay</a> (uint32_t delay_ms)</td></tr>
+<tr class="separator:a29ef4c7d3d9010694cd973d0208f4808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e0887c68b184a6445ecda8a323eb64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino__timing_8cpp.html#a50e0887c68b184a6445ecda8a323eb64">lTimerExpired</a> (uint32_t timerBase, uint32_t timerTimeout)</td></tr>
+<tr class="separator:a50e0887c68b184a6445ecda8a323eb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad1cc3e5ec1a873b34530cb04064b1b79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="platform__timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino__timing_8cpp.html#ad1cc3e5ec1a873b34530cb04064b1b79">platform_yieldCB_func</a></td></tr>
+<tr class="separator:ad1cc3e5ec1a873b34530cb04064b1b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aa17e6bab22444d6c05d957342a4d3c99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa17e6bab22444d6c05d957342a4d3c99">&#9670;&nbsp;</a></span>timing_delay()</h2>
+<a id="a29ef4c7d3d9010694cd973d0208f4808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ef4c7d3d9010694cd973d0208f4808">&#9670;&nbsp;</a></span>lDelay()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void timing_delay </td>
+          <td class="memname">void lDelay </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>delay_ms</em></td><td>)</td>
@@ -105,14 +113,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a440b5d091cb087ccc725fc774ef67e9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a440b5d091cb087ccc725fc774ef67e9a">&#9670;&nbsp;</a></span>timing_millis()</h2>
+<a id="a712e2c306912c63a4ea84a7c15eeffc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712e2c306912c63a4ea84a7c15eeffc0">&#9670;&nbsp;</a></span>lMillis()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t timing_millis </td>
+          <td class="memname">uint32_t lMillis </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -122,17 +130,60 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afbd609c6c5f67c87670a6ab7822c1b86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbd609c6c5f67c87670a6ab7822c1b86">&#9670;&nbsp;</a></span>timing_yield()</h2>
+<a id="a50e0887c68b184a6445ecda8a323eb64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e0887c68b184a6445ecda8a323eb64">&#9670;&nbsp;</a></span>lTimerExpired()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void timing_yield </td>
+          <td class="memname">bool lTimerExpired </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timerBase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timerTimeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6de0142ccfd98e70f3c088ae2dd84bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6de0142ccfd98e70f3c088ae2dd84bc">&#9670;&nbsp;</a></span>lYield()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lYield </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ad1cc3e5ec1a873b34530cb04064b1b79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1cc3e5ec1a873b34530cb04064b1b79">&#9670;&nbsp;</a></span>platform_yieldCB_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="platform__timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a> platform_yieldCB_func</td>
         </tr>
       </table>
 </div><div class="memdoc">

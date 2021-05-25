@@ -99,35 +99,52 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef __PLATFORM_TIMING_H__</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define __PLATFORM_TIMING_H__</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// yield callback allows host application to be signalled when the LTEm1 is awaiting network events</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="platform__timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">   32</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="platform__timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a>)();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <a class="code" href="platform__timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a> <a class="code" href="platform__timing_8h.html#ad1cc3e5ec1a873b34530cb04064b1b79">platform_yieldCB_func</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>platformThread_tag* platform_thread;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;uint32_t <a class="code" href="platform__timing_8h.html#a440b5d091cb087ccc725fc774ef67e9a">timing_millis</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="platform__timing_8h.html#afbd609c6c5f67c87670a6ab7822c1b86">timing_yield</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// typedef struct lTiming_tag</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// {</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//     yieldCB_func_t yieldCB_func;        ///&lt; Callback (CB) to host application when driver code is waiting for network events, allows for background\watchdog\etc.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//     bool cancellationRequest;           ///&lt; For RTOS implementations, token to request cancellation of background operation.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// } lTiming_t;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// platform implementation should support task switching here</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="platform__timing_8h.html#aa17e6bab22444d6c05d957342a4d3c99">timing_delay</a>(uint32_t delay_ms);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* !__PLATFORM_TIMING_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;uint32_t <a class="code" href="platform__timing_8h.html#a712e2c306912c63a4ea84a7c15eeffc0">lMillis</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="platform__timing_8h.html#af6de0142ccfd98e70f3c088ae2dd84bc">lYield</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// platform implementation should support task switching here</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="platform__timing_8h.html#a29ef4c7d3d9010694cd973d0208f4808">lDelay</a>(uint32_t delay_ms);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="platform__timing_8h.html#a50e0887c68b184a6445ecda8a323eb64">lTimerExpired</a>(uint32_t timerBase, uint32_t timerTimeout);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* !__PLATFORM_TIMING_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aplatform__timing_8h_html_aa17e6bab22444d6c05d957342a4d3c99"><div class="ttname"><a href="platform__timing_8h.html#aa17e6bab22444d6c05d957342a4d3c99">timing_delay</a></div><div class="ttdeci">void timing_delay(uint32_t delay_ms)</div><div class="ttdef"><b>Definition:</b> arduino_timing.cpp:25</div></div>
-<div class="ttc" id="aplatform__timing_8h_html_afbd609c6c5f67c87670a6ab7822c1b86"><div class="ttname"><a href="platform__timing_8h.html#afbd609c6c5f67c87670a6ab7822c1b86">timing_yield</a></div><div class="ttdeci">void timing_yield()</div><div class="ttdef"><b>Definition:</b> arduino_timing.cpp:19</div></div>
-<div class="ttc" id="aplatform__timing_8h_html_a440b5d091cb087ccc725fc774ef67e9a"><div class="ttname"><a href="platform__timing_8h.html#a440b5d091cb087ccc725fc774ef67e9a">timing_millis</a></div><div class="ttdeci">uint32_t timing_millis()</div><div class="ttdef"><b>Definition:</b> arduino_timing.cpp:13</div></div>
+<div class="ttc" id="aplatform__timing_8h_html_a29ef4c7d3d9010694cd973d0208f4808"><div class="ttname"><a href="platform__timing_8h.html#a29ef4c7d3d9010694cd973d0208f4808">lDelay</a></div><div class="ttdeci">void lDelay(uint32_t delay_ms)</div><div class="ttdef"><b>Definition:</b> arduino_timing.cpp:29</div></div>
+<div class="ttc" id="aplatform__timing_8h_html_a1066ad01c72dad80aaa76602d3cdce94"><div class="ttname"><a href="platform__timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a></div><div class="ttdeci">void(* platform_yieldCB_func_t)()</div><div class="ttdef"><b>Definition:</b> platform_timing.h:32</div></div>
+<div class="ttc" id="aplatform__timing_8h_html_ad1cc3e5ec1a873b34530cb04064b1b79"><div class="ttname"><a href="platform__timing_8h.html#ad1cc3e5ec1a873b34530cb04064b1b79">platform_yieldCB_func</a></div><div class="ttdeci">platform_yieldCB_func_t platform_yieldCB_func</div><div class="ttdef"><b>Definition:</b> arduino_timing.cpp:13</div></div>
+<div class="ttc" id="aplatform__timing_8h_html_a712e2c306912c63a4ea84a7c15eeffc0"><div class="ttname"><a href="platform__timing_8h.html#a712e2c306912c63a4ea84a7c15eeffc0">lMillis</a></div><div class="ttdeci">uint32_t lMillis()</div><div class="ttdef"><b>Definition:</b> arduino_timing.cpp:16</div></div>
+<div class="ttc" id="aplatform__timing_8h_html_af6de0142ccfd98e70f3c088ae2dd84bc"><div class="ttname"><a href="platform__timing_8h.html#af6de0142ccfd98e70f3c088ae2dd84bc">lYield</a></div><div class="ttdeci">void lYield()</div><div class="ttdef"><b>Definition:</b> arduino_timing.cpp:21</div></div>
+<div class="ttc" id="aplatform__timing_8h_html_a50e0887c68b184a6445ecda8a323eb64"><div class="ttname"><a href="platform__timing_8h.html#a50e0887c68b184a6445ecda8a323eb64">lTimerExpired</a></div><div class="ttdeci">bool lTimerExpired(uint32_t timerBase, uint32_t timerTimeout)</div><div class="ttdef"><b>Definition:</b> arduino_timing.cpp:34</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

@@ -1,0 +1,113 @@
+\hypertarget{ltemc-mdminfo_8c}{}\doxysection{src/ltemc-\/mdminfo.c File Reference}
+\label{ltemc-mdminfo_8c}\index{src/ltemc-\/mdminfo.c@{src/ltemc-\/mdminfo.c}}
+{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-mdminfo_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\item 
+\#define \mbox{\hyperlink{ltemc-mdminfo_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\item 
+\#define \mbox{\hyperlink{ltemc-mdminfo_8c_a4d5f1afdedb11362914d6be1d7666c4d}{I\+M\+E\+I\+\_\+\+O\+F\+F\+S\+ET}}~2
+\item 
+\#define \mbox{\hyperlink{ltemc-mdminfo_8c_a51354002ac8a3a774a627c7139981c2a}{I\+M\+E\+I\+\_\+\+S\+I\+ZE}}~15
+\item 
+\#define \mbox{\hyperlink{ltemc-mdminfo_8c_aaaf1ef1578b174077b9981ee4114ab2e}{I\+C\+C\+I\+D\+\_\+\+O\+F\+F\+S\+ET}}~10
+\item 
+\#define \mbox{\hyperlink{ltemc-mdminfo_8c_a2f671789b2574fc26c6cdd29a4e16331}{I\+C\+C\+I\+D\+\_\+\+S\+I\+ZE}}~20
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ltemc-mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}} \mbox{\hyperlink{ltemc-mdminfo_8c_a72503fcbcdb4da00355449068a51013a}{mdminfo\+\_\+ltem}} ()
+\begin{DoxyCompactList}\small\item\em Get the L\+T\+Em1 static device identification\textbackslash{}provisioning information. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{ltemc-mdminfo_8c_a1d9b7f567f1ad5f5393d1bd84b461fa0}{mdminfo\+\_\+rssi}} ()
+\begin{DoxyCompactList}\small\item\em Get the static device provisioning information about the L\+T\+Em1. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ltemc-mdminfo_8c_af770a3d7781daf66572cb4c05695b3a7}{mdminfo\+\_\+rssi\+Bars}} (uint8\+\_\+t number\+Of\+Bars)
+\begin{DoxyCompactList}\small\item\em Get the R\+S\+SI value as a calculate bar count for visualizations. Like on a smartphone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-mdminfo_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltemc-mdminfo_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+
+\mbox{\Hypertarget{ltemc-mdminfo_8c_aaaf1ef1578b174077b9981ee4114ab2e}\label{ltemc-mdminfo_8c_aaaf1ef1578b174077b9981ee4114ab2e}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!ICCID\_OFFSET@{ICCID\_OFFSET}}
+\index{ICCID\_OFFSET@{ICCID\_OFFSET}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{ICCID\_OFFSET}{ICCID\_OFFSET}}
+{\footnotesize\ttfamily \#define I\+C\+C\+I\+D\+\_\+\+O\+F\+F\+S\+ET~10}
+
+\mbox{\Hypertarget{ltemc-mdminfo_8c_a2f671789b2574fc26c6cdd29a4e16331}\label{ltemc-mdminfo_8c_a2f671789b2574fc26c6cdd29a4e16331}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!ICCID\_SIZE@{ICCID\_SIZE}}
+\index{ICCID\_SIZE@{ICCID\_SIZE}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{ICCID\_SIZE}{ICCID\_SIZE}}
+{\footnotesize\ttfamily \#define I\+C\+C\+I\+D\+\_\+\+S\+I\+ZE~20}
+
+\mbox{\Hypertarget{ltemc-mdminfo_8c_a4d5f1afdedb11362914d6be1d7666c4d}\label{ltemc-mdminfo_8c_a4d5f1afdedb11362914d6be1d7666c4d}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!IMEI\_OFFSET@{IMEI\_OFFSET}}
+\index{IMEI\_OFFSET@{IMEI\_OFFSET}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{IMEI\_OFFSET}{IMEI\_OFFSET}}
+{\footnotesize\ttfamily \#define I\+M\+E\+I\+\_\+\+O\+F\+F\+S\+ET~2}
+
+\mbox{\Hypertarget{ltemc-mdminfo_8c_a51354002ac8a3a774a627c7139981c2a}\label{ltemc-mdminfo_8c_a51354002ac8a3a774a627c7139981c2a}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!IMEI\_SIZE@{IMEI\_SIZE}}
+\index{IMEI\_SIZE@{IMEI\_SIZE}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{IMEI\_SIZE}{IMEI\_SIZE}}
+{\footnotesize\ttfamily \#define I\+M\+E\+I\+\_\+\+S\+I\+ZE~15}
+
+\mbox{\Hypertarget{ltemc-mdminfo_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-mdminfo_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-mdminfo_8c_a72503fcbcdb4da00355449068a51013a}\label{ltemc-mdminfo_8c_a72503fcbcdb4da00355449068a51013a}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!mdminfo\_ltem@{mdminfo\_ltem}}
+\index{mdminfo\_ltem@{mdminfo\_ltem}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{mdminfo\_ltem()}{mdminfo\_ltem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}} mdminfo\+\_\+ltem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the L\+T\+Em1 static device identification\textbackslash{}provisioning information. 
+
+\begin{DoxyReturn}{Returns}
+Modem information struct, see mdminfo.\+h for details. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mdminfo_8c_a1d9b7f567f1ad5f5393d1bd84b461fa0}\label{ltemc-mdminfo_8c_a1d9b7f567f1ad5f5393d1bd84b461fa0}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!mdminfo\_rssi@{mdminfo\_rssi}}
+\index{mdminfo\_rssi@{mdminfo\_rssi}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{mdminfo\_rssi()}{mdminfo\_rssi()}}
+{\footnotesize\ttfamily int16\+\_\+t mdminfo\+\_\+rssi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the static device provisioning information about the L\+T\+Em1. 
+
+\begin{DoxyReturn}{Returns}
+The radio signal strength in the range of -\/51d\+Bm to -\/113d\+Bm (-\/999 is no signal) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mdminfo_8c_af770a3d7781daf66572cb4c05695b3a7}\label{ltemc-mdminfo_8c_af770a3d7781daf66572cb4c05695b3a7}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!mdminfo\_rssiBars@{mdminfo\_rssiBars}}
+\index{mdminfo\_rssiBars@{mdminfo\_rssiBars}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{mdminfo\_rssiBars()}{mdminfo\_rssiBars()}}
+{\footnotesize\ttfamily uint8\+\_\+t mdminfo\+\_\+rssi\+Bars (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{number\+Of\+Bars }\end{DoxyParamCaption})}
+
+
+
+Get the R\+S\+SI value as a calculate bar count for visualizations. Like on a smartphone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+Bars} & \mbox{[}in\mbox{]} The total number of bars on your display.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bars to indicate based on the current R\+S\+SI and your scale. 
+\end{DoxyReturn}

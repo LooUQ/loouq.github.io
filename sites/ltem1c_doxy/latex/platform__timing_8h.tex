@@ -1,33 +1,69 @@
 \hypertarget{platform__timing_8h}{}\doxysection{src/platform/platform\+\_\+timing.h File Reference}
 \label{platform__timing_8h}\index{src/platform/platform\_timing.h@{src/platform/platform\_timing.h}}
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{platform__timing_8h_a1066ad01c72dad80aaa76602d3cdce94}{platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t}}) ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{platform__timing_8h_a440b5d091cb087ccc725fc774ef67e9a}{timing\+\_\+millis}} ()
+uint32\+\_\+t \mbox{\hyperlink{platform__timing_8h_a712e2c306912c63a4ea84a7c15eeffc0}{l\+Millis}} ()
 \item 
-void \mbox{\hyperlink{platform__timing_8h_afbd609c6c5f67c87670a6ab7822c1b86}{timing\+\_\+yield}} ()
+void \mbox{\hyperlink{platform__timing_8h_af6de0142ccfd98e70f3c088ae2dd84bc}{l\+Yield}} ()
 \item 
-void \mbox{\hyperlink{platform__timing_8h_aa17e6bab22444d6c05d957342a4d3c99}{timing\+\_\+delay}} (uint32\+\_\+t delay\+\_\+ms)
+void \mbox{\hyperlink{platform__timing_8h_a29ef4c7d3d9010694cd973d0208f4808}{l\+Delay}} (uint32\+\_\+t delay\+\_\+ms)
+\item 
+bool \mbox{\hyperlink{platform__timing_8h_a50e0887c68b184a6445ecda8a323eb64}{l\+Timer\+Expired}} (uint32\+\_\+t timer\+Base, uint32\+\_\+t timer\+Timeout)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{platform__timing_8h_a1066ad01c72dad80aaa76602d3cdce94}{platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t}} \mbox{\hyperlink{platform__timing_8h_ad1cc3e5ec1a873b34530cb04064b1b79}{platform\+\_\+yield\+C\+B\+\_\+func}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{platform__timing_8h_a1066ad01c72dad80aaa76602d3cdce94}\label{platform__timing_8h_a1066ad01c72dad80aaa76602d3cdce94}} 
+\index{platform\_timing.h@{platform\_timing.h}!platform\_yieldCB\_func\_t@{platform\_yieldCB\_func\_t}}
+\index{platform\_yieldCB\_func\_t@{platform\_yieldCB\_func\_t}!platform\_timing.h@{platform\_timing.h}}
+\doxysubsubsection{\texorpdfstring{platform\_yieldCB\_func\_t}{platform\_yieldCB\_func\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t) ()}
+
+
+
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{platform__timing_8h_aa17e6bab22444d6c05d957342a4d3c99}\label{platform__timing_8h_aa17e6bab22444d6c05d957342a4d3c99}} 
-\index{platform\_timing.h@{platform\_timing.h}!timing\_delay@{timing\_delay}}
-\index{timing\_delay@{timing\_delay}!platform\_timing.h@{platform\_timing.h}}
-\doxysubsubsection{\texorpdfstring{timing\_delay()}{timing\_delay()}}
-{\footnotesize\ttfamily void timing\+\_\+delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{delay\+\_\+ms }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{platform__timing_8h_a29ef4c7d3d9010694cd973d0208f4808}\label{platform__timing_8h_a29ef4c7d3d9010694cd973d0208f4808}} 
+\index{platform\_timing.h@{platform\_timing.h}!lDelay@{lDelay}}
+\index{lDelay@{lDelay}!platform\_timing.h@{platform\_timing.h}}
+\doxysubsubsection{\texorpdfstring{lDelay()}{lDelay()}}
+{\footnotesize\ttfamily void l\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{delay\+\_\+ms }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{platform__timing_8h_a440b5d091cb087ccc725fc774ef67e9a}\label{platform__timing_8h_a440b5d091cb087ccc725fc774ef67e9a}} 
-\index{platform\_timing.h@{platform\_timing.h}!timing\_millis@{timing\_millis}}
-\index{timing\_millis@{timing\_millis}!platform\_timing.h@{platform\_timing.h}}
-\doxysubsubsection{\texorpdfstring{timing\_millis()}{timing\_millis()}}
-{\footnotesize\ttfamily uint32\+\_\+t timing\+\_\+millis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{platform__timing_8h_a712e2c306912c63a4ea84a7c15eeffc0}\label{platform__timing_8h_a712e2c306912c63a4ea84a7c15eeffc0}} 
+\index{platform\_timing.h@{platform\_timing.h}!lMillis@{lMillis}}
+\index{lMillis@{lMillis}!platform\_timing.h@{platform\_timing.h}}
+\doxysubsubsection{\texorpdfstring{lMillis()}{lMillis()}}
+{\footnotesize\ttfamily uint32\+\_\+t l\+Millis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{platform__timing_8h_afbd609c6c5f67c87670a6ab7822c1b86}\label{platform__timing_8h_afbd609c6c5f67c87670a6ab7822c1b86}} 
-\index{platform\_timing.h@{platform\_timing.h}!timing\_yield@{timing\_yield}}
-\index{timing\_yield@{timing\_yield}!platform\_timing.h@{platform\_timing.h}}
-\doxysubsubsection{\texorpdfstring{timing\_yield()}{timing\_yield()}}
-{\footnotesize\ttfamily void timing\+\_\+yield (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{platform__timing_8h_a50e0887c68b184a6445ecda8a323eb64}\label{platform__timing_8h_a50e0887c68b184a6445ecda8a323eb64}} 
+\index{platform\_timing.h@{platform\_timing.h}!lTimerExpired@{lTimerExpired}}
+\index{lTimerExpired@{lTimerExpired}!platform\_timing.h@{platform\_timing.h}}
+\doxysubsubsection{\texorpdfstring{lTimerExpired()}{lTimerExpired()}}
+{\footnotesize\ttfamily bool l\+Timer\+Expired (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timer\+Base,  }\item[{uint32\+\_\+t}]{timer\+Timeout }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{platform__timing_8h_af6de0142ccfd98e70f3c088ae2dd84bc}\label{platform__timing_8h_af6de0142ccfd98e70f3c088ae2dd84bc}} 
+\index{platform\_timing.h@{platform\_timing.h}!lYield@{lYield}}
+\index{lYield@{lYield}!platform\_timing.h@{platform\_timing.h}}
+\doxysubsubsection{\texorpdfstring{lYield()}{lYield()}}
+{\footnotesize\ttfamily void l\+Yield (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{platform__timing_8h_ad1cc3e5ec1a873b34530cb04064b1b79}\label{platform__timing_8h_ad1cc3e5ec1a873b34530cb04064b1b79}} 
+\index{platform\_timing.h@{platform\_timing.h}!platform\_yieldCB\_func@{platform\_yieldCB\_func}}
+\index{platform\_yieldCB\_func@{platform\_yieldCB\_func}!platform\_timing.h@{platform\_timing.h}}
+\doxysubsubsection{\texorpdfstring{platform\_yieldCB\_func}{platform\_yieldCB\_func}}
+{\footnotesize\ttfamily \mbox{\hyperlink{platform__timing_8h_a1066ad01c72dad80aaa76602d3cdce94}{platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t}} platform\+\_\+yield\+C\+B\+\_\+func\hspace{0.3cm}{\ttfamily [extern]}}
 

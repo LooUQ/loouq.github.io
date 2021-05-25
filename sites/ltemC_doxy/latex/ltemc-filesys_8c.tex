@@ -1,0 +1,204 @@
+\hypertarget{ltemc-filesys_8c}{}\doxysection{src/ltemc-\/filesys.c File Reference}
+\label{ltemc-filesys_8c}\index{src/ltemc-\/filesys.c@{src/ltemc-\/filesys.c}}
+{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/filesys.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-filesys_8c_aaae11479363770847ae1fc8a8a76a25e}{F\+I\+L\+E\+\_\+\+C\+M\+D\+\_\+\+SZ}}~81
+\item 
+\#define \mbox{\hyperlink{ltemc-filesys_8c_aab5555a54f5065efd04d3c8d430e1cdb}{F\+I\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET}}~10
+\item 
+\#define \mbox{\hyperlink{ltemc-filesys_8c_ad3bc5128d1db6dc23ab8020ee584a314}{F\+I\+L\+E\+\_\+\+P\+O\+S\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET}}~12
+\begin{DoxyCompactList}\small\item\em +Q\+F\+P\+O\+S\+I\+T\+I\+ON\+: \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ltemc-filesys_8c_a5b6308dd5979090e7f7fb32af7aacc83}{F\+I\+L\+E\+\_\+\+O\+P\+E\+N\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET}}~9
+\begin{DoxyCompactList}\small\item\em +Q\+F\+O\+P\+EN\+: $<$filehandle$>$ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ltemc-filesys_8c_abf8dda46d57ee9a7ddc7e2e8900e2dc2}{F\+I\+L\+E\+\_\+\+T\+I\+M\+E\+O\+U\+Tml}}~800
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ltemc-filesys_8c_a34aaea7c31c95b3af9220079f4d9b348}{filsys\+\_\+set\+Recvr\+Func}} (\mbox{\hyperlink{ltemc-filesys_8h_a57b67beed3c715abf4a1a35fb5d56e5b}{file\+Receiver\+\_\+func\+\_\+t}} file\+Recvr\+\_\+func)
+\item 
+\mbox{\hyperlink{ltemc-filesys_8h_a42b4d8a68e23be190b7388fae0a6d09b}{file\+Info\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_adbe9253f31fdae83f5137b9c452fdaac}{filsys\+\_\+info}} ()
+\item 
+\mbox{\hyperlink{ltemc-filesys_8h_a92ef775ce58e30a0e5e1f48bbd0cfb9e}{file\+List\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a86de74ffc505b08c8f9a9c559381998a}{filsys\+\_\+list}} (const char $\ast$file\+Name)
+\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a1c4b2d6d9db9c616edd876bced85f432}{filsys\+\_\+delete}} (const char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em Delete a file from the file system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-filesys_8h_a484ac9461ccfbea1e7911f526933ee9e}{file\+Open\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a77c3f4eb22a933b3fbca8d95a9f40363}{filsys\+\_\+open}} (const char $\ast$file\+Name, \mbox{\hyperlink{ltemc-filesys_8h_ab1f8e73ad2ef8f206d19def6769b3612}{file\+Open\+Mode\+\_\+t}} open\+Mode, \mbox{\hyperlink{ltemc-filesys_8h_a57b67beed3c715abf4a1a35fb5d56e5b}{file\+Receiver\+\_\+func\+\_\+t}} file\+Recvr\+\_\+func)
+\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a8db9503967cdc111177b7bf94fd39ea3}{filsys\+\_\+read}} (uint16\+\_\+t file\+Handle, uint16\+\_\+t read\+Sz)
+\item 
+\mbox{\hyperlink{ltemc-filesys_8h_a8a7506f92c9719ea5ead6f93501be76e}{file\+Write\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a81912bf03b49be4bd2232c76c47487b1}{filsys\+\_\+write}} (uint16\+\_\+t file\+Handle, const char $\ast$write\+Data, uint16\+\_\+t write\+Sz)
+\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_adf6bcdcf2e3d6142242d37fb8524168f}{filsys\+\_\+seek}} (uint16\+\_\+t file\+Handle, uint32\+\_\+t offset, \mbox{\hyperlink{ltemc-filesys_8h_ac67a60a608a19efef54c6fc33a0390bc}{file\+Seek\+Mode\+\_\+t}} seek\+From)
+\begin{DoxyCompactList}\small\item\em Set the position of the file pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-filesys_8h_afd53939afa95dc15e207663e8f5a476e}{file\+Position\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a047bd98174c93c70c370ebd43ec91da6}{filsys\+\_\+get\+Position}} (uint16\+\_\+t file\+Handle)
+\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a382455fbd5423e59af58e5a287dc75d0}{filsys\+\_\+truncate}} (uint16\+\_\+t file\+Handle)
+\begin{DoxyCompactList}\small\item\em Truncate all the data beyond the current position of the file pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a9660070f7f914d3438c83a7aa8651687}{filsys\+\_\+close}} (uint16\+\_\+t file\+Handle)
+\begin{DoxyCompactList}\small\item\em Closes the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-filesys_8c_aaae11479363770847ae1fc8a8a76a25e}\label{ltemc-filesys_8c_aaae11479363770847ae1fc8a8a76a25e}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!FILE\_CMD\_SZ@{FILE\_CMD\_SZ}}
+\index{FILE\_CMD\_SZ@{FILE\_CMD\_SZ}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{FILE\_CMD\_SZ}{FILE\_CMD\_SZ}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+C\+M\+D\+\_\+\+SZ~81}
+
+\mbox{\Hypertarget{ltemc-filesys_8c_aab5555a54f5065efd04d3c8d430e1cdb}\label{ltemc-filesys_8c_aab5555a54f5065efd04d3c8d430e1cdb}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!FILE\_INFO\_DATAOFFSET@{FILE\_INFO\_DATAOFFSET}}
+\index{FILE\_INFO\_DATAOFFSET@{FILE\_INFO\_DATAOFFSET}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{FILE\_INFO\_DATAOFFSET}{FILE\_INFO\_DATAOFFSET}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+I\+N\+F\+O\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET~10}
+
+\mbox{\Hypertarget{ltemc-filesys_8c_a5b6308dd5979090e7f7fb32af7aacc83}\label{ltemc-filesys_8c_a5b6308dd5979090e7f7fb32af7aacc83}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!FILE\_OPEN\_DATAOFFSET@{FILE\_OPEN\_DATAOFFSET}}
+\index{FILE\_OPEN\_DATAOFFSET@{FILE\_OPEN\_DATAOFFSET}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{FILE\_OPEN\_DATAOFFSET}{FILE\_OPEN\_DATAOFFSET}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+O\+P\+E\+N\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET~9}
+
+
+
++Q\+F\+O\+P\+EN\+: $<$filehandle$>$ 
+
+\mbox{\Hypertarget{ltemc-filesys_8c_ad3bc5128d1db6dc23ab8020ee584a314}\label{ltemc-filesys_8c_ad3bc5128d1db6dc23ab8020ee584a314}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!FILE\_POS\_DATAOFFSET@{FILE\_POS\_DATAOFFSET}}
+\index{FILE\_POS\_DATAOFFSET@{FILE\_POS\_DATAOFFSET}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{FILE\_POS\_DATAOFFSET}{FILE\_POS\_DATAOFFSET}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+P\+O\+S\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET~12}
+
+
+
++Q\+F\+P\+O\+S\+I\+T\+I\+ON\+: 
+
+\mbox{\Hypertarget{ltemc-filesys_8c_abf8dda46d57ee9a7ddc7e2e8900e2dc2}\label{ltemc-filesys_8c_abf8dda46d57ee9a7ddc7e2e8900e2dc2}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!FILE\_TIMEOUTml@{FILE\_TIMEOUTml}}
+\index{FILE\_TIMEOUTml@{FILE\_TIMEOUTml}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{FILE\_TIMEOUTml}{FILE\_TIMEOUTml}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+T\+I\+M\+E\+O\+U\+Tml~800}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-filesys_8c_a9660070f7f914d3438c83a7aa8651687}\label{ltemc-filesys_8c_a9660070f7f914d3438c83a7aa8651687}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_close@{filsys\_close}}
+\index{filsys\_close@{filsys\_close}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_close()}{filsys\_close()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+close (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle }\end{DoxyParamCaption})}
+
+
+
+Closes the file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Handle} & -\/ Numeric handle for the file to close.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result\+Code=200 if successful, otherwise error code (H\+T\+TP status type). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-filesys_8c_a1c4b2d6d9db9c616edd876bced85f432}\label{ltemc-filesys_8c_a1c4b2d6d9db9c616edd876bced85f432}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_delete@{filsys\_delete}}
+\index{filsys\_delete@{filsys\_delete}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_delete()}{filsys\_delete()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+delete (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Delete a file from the file system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name\+Pattern} & -\/ \char`\"{}$\ast$\char`\"{} or filename to delete. Wildcard with filename is not allowed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result\+Code=200 if successful, otherwise error code (H\+T\+TP status type). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-filesys_8c_a047bd98174c93c70c370ebd43ec91da6}\label{ltemc-filesys_8c_a047bd98174c93c70c370ebd43ec91da6}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_getPosition@{filsys\_getPosition}}
+\index{filsys\_getPosition@{filsys\_getPosition}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_getPosition()}{filsys\_getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-filesys_8h_afd53939afa95dc15e207663e8f5a476e}{file\+Position\+Result\+\_\+t}} filsys\+\_\+get\+Position (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-filesys_8c_adbe9253f31fdae83f5137b9c452fdaac}\label{ltemc-filesys_8c_adbe9253f31fdae83f5137b9c452fdaac}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_info@{filsys\_info}}
+\index{filsys\_info@{filsys\_info}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_info()}{filsys\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-filesys_8h_a42b4d8a68e23be190b7388fae0a6d09b}{file\+Info\+Result\+\_\+t}} filsys\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-filesys_8c_a86de74ffc505b08c8f9a9c559381998a}\label{ltemc-filesys_8c_a86de74ffc505b08c8f9a9c559381998a}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_list@{filsys\_list}}
+\index{filsys\_list@{filsys\_list}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_list()}{filsys\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-filesys_8h_a92ef775ce58e30a0e5e1f48bbd0cfb9e}{file\+List\+Result\+\_\+t}} filsys\+\_\+list (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-filesys_8c_a77c3f4eb22a933b3fbca8d95a9f40363}\label{ltemc-filesys_8c_a77c3f4eb22a933b3fbca8d95a9f40363}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_open@{filsys\_open}}
+\index{filsys\_open@{filsys\_open}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_open()}{filsys\_open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-filesys_8h_a484ac9461ccfbea1e7911f526933ee9e}{file\+Open\+Result\+\_\+t}} filsys\+\_\+open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{\mbox{\hyperlink{ltemc-filesys_8h_ab1f8e73ad2ef8f206d19def6769b3612}{file\+Open\+Mode\+\_\+t}}}]{open\+Mode,  }\item[{\mbox{\hyperlink{ltemc-filesys_8h_a57b67beed3c715abf4a1a35fb5d56e5b}{file\+Receiver\+\_\+func\+\_\+t}}}]{file\+Recvr\+\_\+func }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-filesys_8c_a8db9503967cdc111177b7bf94fd39ea3}\label{ltemc-filesys_8c_a8db9503967cdc111177b7bf94fd39ea3}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_read@{filsys\_read}}
+\index{filsys\_read@{filsys\_read}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_read()}{filsys\_read()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle,  }\item[{uint16\+\_\+t}]{read\+Sz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-filesys_8c_adf6bcdcf2e3d6142242d37fb8524168f}\label{ltemc-filesys_8c_adf6bcdcf2e3d6142242d37fb8524168f}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_seek@{filsys\_seek}}
+\index{filsys\_seek@{filsys\_seek}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_seek()}{filsys\_seek()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+seek (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle,  }\item[{uint32\+\_\+t}]{offset,  }\item[{\mbox{\hyperlink{ltemc-filesys_8h_ac67a60a608a19efef54c6fc33a0390bc}{file\+Seek\+Mode\+\_\+t}}}]{seek\+From }\end{DoxyParamCaption})}
+
+
+
+Set the position of the file pointer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Handle} & -\/ Numeric handle for the file to operate with. \\
+\hline
+\mbox{\texttt{ in}}  & {\em offset} & -\/ Number of bytes to move the file pointer by. \\
+\hline
+\mbox{\texttt{ in}}  & {\em seek\+From} & -\/ The starting point for the pointer movement (positive only).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result\+Code=200 if successful, otherwise error code (H\+T\+TP status type). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-filesys_8c_a34aaea7c31c95b3af9220079f4d9b348}\label{ltemc-filesys_8c_a34aaea7c31c95b3af9220079f4d9b348}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_setRecvrFunc@{filsys\_setRecvrFunc}}
+\index{filsys\_setRecvrFunc@{filsys\_setRecvrFunc}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_setRecvrFunc()}{filsys\_setRecvrFunc()}}
+{\footnotesize\ttfamily void filsys\+\_\+set\+Recvr\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-filesys_8h_a57b67beed3c715abf4a1a35fb5d56e5b}{file\+Receiver\+\_\+func\+\_\+t}}}]{file\+Recvr\+\_\+func }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-filesys_8c_a382455fbd5423e59af58e5a287dc75d0}\label{ltemc-filesys_8c_a382455fbd5423e59af58e5a287dc75d0}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_truncate@{filsys\_truncate}}
+\index{filsys\_truncate@{filsys\_truncate}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_truncate()}{filsys\_truncate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+truncate (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle }\end{DoxyParamCaption})}
+
+
+
+Truncate all the data beyond the current position of the file pointer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Handle} & -\/ Numeric handle for the file to truncate.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result\+Code=200 if successful, otherwise error code (H\+T\+TP status type). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-filesys_8c_a81912bf03b49be4bd2232c76c47487b1}\label{ltemc-filesys_8c_a81912bf03b49be4bd2232c76c47487b1}} 
+\index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_write@{filsys\_write}}
+\index{filsys\_write@{filsys\_write}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
+\doxysubsubsection{\texorpdfstring{filsys\_write()}{filsys\_write()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-filesys_8h_a8a7506f92c9719ea5ead6f93501be76e}{file\+Write\+Result\+\_\+t}} filsys\+\_\+write (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle,  }\item[{const char $\ast$}]{write\+Data,  }\item[{uint16\+\_\+t}]{write\+Sz }\end{DoxyParamCaption})}
+

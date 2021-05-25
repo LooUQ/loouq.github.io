@@ -22,12 +22,12 @@ Struct representing the L\+T\+Em1c. The struct behind the g\+\_\+ltem1 global va
 \begin{DoxyCompactList}\small\item\em Ready state of the B\+Gx module. \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{structltem1_device__tag_a273a8b7c0260d25a374376909ce50436}{data\+Context}}
 \begin{DoxyCompactList}\small\item\em The primary A\+PN context with the network carrier for application transfers. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{structltem1_device__tag_a770e37c3ac5e43757b7f0256f6108811}{cancellation\+Request}}
-\begin{DoxyCompactList}\small\item\em For R\+T\+OS implementations, token to request cancellation of background operation. \end{DoxyCompactList}\item 
 volatile \mbox{\hyperlink{iop_8h_a1ed4c59909ec1a9a0007da89586254ff}{iop\+\_\+t}} $\ast$ \mbox{\hyperlink{structltem1_device__tag_a671fa501f31d19a6f344744e3d55de5e}{iop}}
 \begin{DoxyCompactList}\small\item\em I\+OP subsystem controls. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{actions_8h_adbd2d16df717d239d0e1059f636ea5a0}{action\+\_\+t}} $\ast$ \mbox{\hyperlink{structltem1_device__tag_ae9c34de9e895e1db92e0a2b5b4ae7551}{action}}
 \begin{DoxyCompactList}\small\item\em Action subsystem controls. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structltem1_device__tag_a770e37c3ac5e43757b7f0256f6108811}{cancellation\+Request}}
+\begin{DoxyCompactList}\small\item\em For R\+T\+OS implementations, token to request cancellation of long running task\textbackslash{}action. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}} $\ast$ \mbox{\hyperlink{structltem1_device__tag_a7abe378c9b5c047f6d5c61104df148bb}{modem\+Info}}
 \begin{DoxyCompactList}\small\item\em Data structure holding persistent information about application modem state. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{network_8h_afdeb09cbf237e761c59dcb9084f01a3a}{network\+\_\+t}} $\ast$ \mbox{\hyperlink{structltem1_device__tag_a56cc8881cfd18b793bbb458a4ee26eb4}{network}}
@@ -62,7 +62,7 @@ Action subsystem controls.
 
 
 
-For R\+T\+OS implementations, token to request cancellation of background operation. 
+For R\+T\+OS implementations, token to request cancellation of long running task\textbackslash{}action. 
 
 \mbox{\Hypertarget{structltem1_device__tag_a273a8b7c0260d25a374376909ce50436}\label{structltem1_device__tag_a273a8b7c0260d25a374376909ce50436}} 
 \index{ltem1Device\_tag@{ltem1Device\_tag}!dataContext@{dataContext}}

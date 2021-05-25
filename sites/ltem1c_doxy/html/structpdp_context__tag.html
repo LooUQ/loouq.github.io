@@ -71,69 +71,50 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Struct representing the state of an active PDP context (aka: APN or data context).  
+<p>Struct representing the state of active PDP contexts (aka: APN or data context).  
  <a href="structpdp_context__tag.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="network_8h_source.html">network.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:aef683140651b2e7853d667b30274fef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="network_8h.html#ad44f426957683a22a1f3e1952adcfaec">context_state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_context__tag.html#aef683140651b2e7853d667b30274fef7">contextState</a></td></tr>
-<tr class="memdesc:aef683140651b2e7853d667b30274fef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the context active or inactive.  <a href="structpdp_context__tag.html#aef683140651b2e7853d667b30274fef7">More...</a><br /></td></tr>
-<tr class="separator:aef683140651b2e7853d667b30274fef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6be60f241b8c6e6f65fd1724ebb87a4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1">context_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_context__tag.html#a6be60f241b8c6e6f65fd1724ebb87a4b">contextType</a></td></tr>
-<tr class="memdesc:a6be60f241b8c6e6f65fd1724ebb87a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 or IPv6.  <a href="structpdp_context__tag.html#a6be60f241b8c6e6f65fd1724ebb87a4b">More...</a><br /></td></tr>
-<tr class="separator:a6be60f241b8c6e6f65fd1724ebb87a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b4e63cd4c9baaf9d90a1ff750b485b7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_context__tag.html#a8b4e63cd4c9baaf9d90a1ff750b485b7">apnName</a> [21]</td></tr>
-<tr class="memdesc:a8b4e63cd4c9baaf9d90a1ff750b485b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The APN name for this context. This can be blank, APN naming is specific to each carrier.  <a href="structpdp_context__tag.html#a8b4e63cd4c9baaf9d90a1ff750b485b7">More...</a><br /></td></tr>
-<tr class="separator:a8b4e63cd4c9baaf9d90a1ff750b485b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56824b587d7ef835ff95c13ed36afc2d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_context__tag.html#a56824b587d7ef835ff95c13ed36afc2d">contextId</a></td></tr>
+<tr class="memdesc:a56824b587d7ef835ff95c13ed36afc2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">context ID recognized by the carrier (valid are 1 to 16)  <a href="structpdp_context__tag.html#a56824b587d7ef835ff95c13ed36afc2d">More...</a><br /></td></tr>
+<tr class="separator:a56824b587d7ef835ff95c13ed36afc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862540783f45078440a36c5a49bda82b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="network_8h.html#ac15f57a0f1baeca7fdf9d3108d5f3719">contextIpType_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_context__tag.html#a862540783f45078440a36c5a49bda82b">contextIpType</a></td></tr>
+<tr class="memdesc:a862540783f45078440a36c5a49bda82b"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 or IPv6.  <a href="structpdp_context__tag.html#a862540783f45078440a36c5a49bda82b">More...</a><br /></td></tr>
+<tr class="separator:a862540783f45078440a36c5a49bda82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad0b447cc593426dbdc96b969bec1e9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_context__tag.html#a5ad0b447cc593426dbdc96b969bec1e9">ipAddress</a> [16]</td></tr>
 <tr class="memdesc:a5ad0b447cc593426dbdc96b969bec1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IP address obtained from the carrier for this context. The IP address of the modem.  <a href="structpdp_context__tag.html#a5ad0b447cc593426dbdc96b969bec1e9">More...</a><br /></td></tr>
 <tr class="separator:a5ad0b447cc593426dbdc96b969bec1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Struct representing the state of an active PDP context (aka: APN or data context). </p>
+<div class="textblock"><p>Struct representing the state of active PDP contexts (aka: APN or data context). </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a8b4e63cd4c9baaf9d90a1ff750b485b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b4e63cd4c9baaf9d90a1ff750b485b7">&#9670;&nbsp;</a></span>apnName</h2>
+<a id="a56824b587d7ef835ff95c13ed36afc2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56824b587d7ef835ff95c13ed36afc2d">&#9670;&nbsp;</a></span>contextId</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char apnName[21]</td>
+          <td class="memname">uint8_t contextId</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The APN name for this context. This can be blank, APN naming is specific to each carrier. </p>
+<p>context ID recognized by the carrier (valid are 1 to 16) </p>
 
 </div>
 </div>
-<a id="aef683140651b2e7853d667b30274fef7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef683140651b2e7853d667b30274fef7">&#9670;&nbsp;</a></span>contextState</h2>
+<a id="a862540783f45078440a36c5a49bda82b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862540783f45078440a36c5a49bda82b">&#9670;&nbsp;</a></span>contextIpType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="network_8h.html#ad44f426957683a22a1f3e1952adcfaec">context_state_t</a> contextState</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Is the context active or inactive. </p>
-
-</div>
-</div>
-<a id="a6be60f241b8c6e6f65fd1724ebb87a4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6be60f241b8c6e6f65fd1724ebb87a4b">&#9670;&nbsp;</a></span>contextType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="network_8h.html#abc74437f14f9413f5bc01cd5523e13f1">context_type_t</a> contextType</td>
+          <td class="memname"><a class="el" href="network_8h.html#ac15f57a0f1baeca7fdf9d3108d5f3719">contextIpType_t</a> contextIpType</td>
         </tr>
       </table>
 </div><div class="memdoc">

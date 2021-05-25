@@ -1,23 +1,11 @@
 var searchData=
 [
-  ['rasppi_5fpinconfig_968',['rasppi_pinConfig',['../pin_configuration_8txt.html#aa51f6d0cbf4d9329a38b91bc3ac0fda3',1,'pinConfiguration.txt']]],
-  ['receiver_5ffunc_969',['receiver_func',['../structmqtt_subscription__tag.html#a263e4bf3b5716f6ad11dfde1072cd339',1,'mqttSubscription_tag::receiver_func()'],['../structsocket_ctrl__tag.html#a94ab9d935477e80c1ad121b414036fe1',1,'socketCtrl_tag::receiver_func()']]],
-  ['recvr_5fdisable_970',['RECVR_DISABLE',['../nxp__sc16is741a_8h.html#a622cb8926103ce9c65ee37731846a195',1,'nxp_sc16is741a.h']]],
-  ['reg_5faddr_971',['reg_addr',['../union____sc16is741a__reg__payload____.html#a34ae98613e9c7dee89171220930c243f',1,'__sc16is741a_reg_payload__']]],
-  ['reg_5faddress_972',['reg_address',['../union____sc16is741a__reg__addr__byte____.html#a779eebec483facae3559285e7bc840de',1,'__sc16is741a_reg_addr_byte__']]],
-  ['reg_5fdata_973',['reg_data',['../union____sc16is741a__reg__payload____.html#a35b74d69bd6f987cf3027c7d6ecb1aab',1,'__sc16is741a_reg_payload__']]],
-  ['reg_5fpayload_974',['reg_payload',['../union____sc16is741a__reg__payload____.html#a0915f67ea14a584b4dd2924c741f5994',1,'__sc16is741a_reg_payload__']]],
-  ['remainsz_975',['remainSz',['../structiop_tx_ctrl_block__tag.html#a053699540c69e6a7285bd3c0e51fc112',1,'iopTxCtrlBlock_tag']]],
-  ['resetpin_976',['resetPin',['../structltem1_pin_config__tag.html#af4be40c911d1544f8b0f05adc25f8eff',1,'ltem1PinConfig_tag']]],
-  ['response_977',['response',['../structaction__tag.html#a11373f02c42587a1853ad6c8be5fe10e',1,'action_tag::response()'],['../structaction_result__tag.html#a11373f02c42587a1853ad6c8be5fe10e',1,'actionResult_tag::response()']]],
-  ['resultcode_978',['resultCode',['../structaction__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad',1,'action_tag']]],
-  ['ringurcpin_979',['ringUrcPin',['../structltem1_pin_config__tag.html#a3f35d8bac8bcfe90abb5c1790fb4d9a1',1,'ltem1PinConfig_tag']]],
-  ['rnw_980',['RnW',['../union____sc16is741a__reg__addr__byte____.html#ae8ec0a10f3faf3057547ac69217c1cd1',1,'__sc16is741a_reg_addr_byte__']]],
-  ['rpi_5fbreakout_981',['RPI_BREAKOUT',['../ltem1c_8h.html#a0a6522e501ed1a0e57bb7e77b38f57ac',1,'ltem1c.h']]],
-  ['rx_5ffifo_5frst_982',['RX_FIFO_RST',['../nxp__sc16is741a_8h.html#ad9ed8898e7d20f5934d1a4a0ea3d9655',1,'nxp_sc16is741a.h']]],
-  ['rx_5ftrigger_5flvl_983',['RX_TRIGGER_LVL',['../nxp__sc16is741a_8h.html#aa3d049dd67e3454650020072880b16d2',1,'nxp_sc16is741a.h']]],
-  ['rxcmdbuf_984',['rxCmdBuf',['../structiop__tag.html#aba8a893ba549b27ead7c4ecc7a25b057',1,'iop_tag']]],
-  ['rxdatabufindx_985',['rxDataBufIndx',['../structiop__tag.html#a03f9c4d94b0bc50d9dec134a4f8f55d0',1,'iop_tag']]],
-  ['rxdatabufs_986',['rxDataBufs',['../structiop__tag.html#a8022e777adbae0d01364bed96e018a71',1,'iop_tag']]],
-  ['rxdatapeer_987',['rxDataPeer',['../structiop__tag.html#a52048c68d5750b887e72958a6983cdb2',1,'iop_tag']]]
+  ['qbg_5finitcmds_1131',['qbg_initCmds',['../quectel__bg_8c.html#a1d4f4dde31edc393e62b6278a0218d24',1,'quectel_bg.c']]],
+  ['qbgreadystate_1132',['qbgReadyState',['../structltem1_device__tag.html#a4c823cc492a5660ab1b9766726774474',1,'ltem1Device_tag']]],
+  ['qiurc_1133',['QIURC',['../cmd_01response_01examples_8txt.html#a06f73baf15c13152e346a3070019e4e1',1,'cmd response examples.txt']]],
+  ['qmtcfg_1134',['QMTCFG',['../mqtt__testing_8txt.html#a5d995e059cc842ef6b9929f3c53ab429',1,'mqtt_testing.txt']]],
+  ['qmtconn_1135',['QMTCONN',['../mqtt__testing_8txt.html#a8d7760b076333f655e4f91eee493e6ba',1,'mqtt_testing.txt']]],
+  ['qmtopen_1136',['QMTOPEN',['../mqtt__testing_8txt.html#a8daf1e2c833c22f47038b94accafed69',1,'mqtt_testing.txt']]],
+  ['qping_1137',['QPING',['../cmd_01response_01examples_8txt.html#a17843a26b8c1a1720c473d14b1ecec04',1,'cmd response examples.txt']]],
+  ['qsslcfg_1138',['QSSLCFG',['../mqtt__testing_8txt.html#acf86d232eee30518e922be32144e94f5',1,'mqtt_testing.txt']]]
 ];

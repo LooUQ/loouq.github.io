@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['util_2ec_754',['util.c',['../util_8c.html',1,'']]],
-  ['util_2eh_755',['util.h',['../util_8h.html',1,'']]]
+  ['readme_2emd_885',['README.md',['../_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../tests_2_l_t_em1c-1-platform_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../tests_2_l_t_em1c-2-components_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../tests_2_l_t_em1c-8-mqtt_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)']]]
 ];

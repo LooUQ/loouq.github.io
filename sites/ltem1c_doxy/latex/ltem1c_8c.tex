@@ -1,12 +1,6 @@
 \hypertarget{ltem1c_8c}{}\doxysection{src/ltem1c.c File Reference}
 \label{ltem1c_8c}\index{src/ltem1c.c@{src/ltem1c.c}}
 {\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}dbgprint.\+h\char`\"{}}\newline
-\doxysubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{ltem1c_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,21 +19,14 @@ void \mbox{\hyperlink{ltem1c_8c_a20c7000ff6277c3f2bf6690f872774c0}{ltem1\+\_\+do
 void \mbox{\hyperlink{ltem1c_8c_a5d715c596561f6711f3bb80957e838a4}{ltem1\+\_\+fault\+Handler}} (uint16\+\_\+t status\+Code, const char $\ast$fault\+Msg)
 \begin{DoxyCompactList}\small\item\em Function of last resort, catestrophic failure Background work task runner. To be called in application Loop() periodically. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltem1c_8c_a58498dd7f65011fe668a49a04bbc6d13}{ltem1\+\_\+register\+Application\+Fault\+Handler}} (void $\ast$custom\+Fault\+Handler)
-\begin{DoxyCompactList}\small\item\em Registers the address (void$\ast$) of your application custom fault handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Registers the address (void$\ast$) of your application custom fault handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltem1c_8c_a2afe43fa4c4c3db98c35e9eae9fda4e5}{ltem1\+\_\+set\+Yield\+Cb}} (\mbox{\hyperlink{platform__timing_8h_a1066ad01c72dad80aaa76602d3cdce94}{platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t}} yield\+Cb\+\_\+func)
+\begin{DoxyCompactList}\small\item\em Registers the address (void$\ast$) of your application yield callback handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{ltem1c_8h_af0e3c59e4d3e14ce47a3372aff4dd7fa}{ltem1\+Device\+\_\+t}} $\ast$ \mbox{\hyperlink{ltem1c_8c_ae1d900c6ccd0da637e6ddc6af05f0a65}{g\+\_\+ltem1}}
 \begin{DoxyCompactList}\small\item\em The L\+T\+Em1 \char`\"{}object\char`\"{}, since this is C99 like the instance class. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{ltem1c_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltem1c_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
-\index{ltem1c.c@{ltem1c.c}!\_DEBUG@{\_DEBUG}}
-\index{\_DEBUG@{\_DEBUG}!ltem1c.c@{ltem1c.c}}
-\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
-{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG}
-
 
 
 \doxysubsection{Function Documentation}
@@ -129,6 +116,21 @@ Registers the address (void$\ast$) of your application custom fault handler.
 
 Performs a HW reset of L\+T\+Em1 and optionally executes start sequence. 
 
+\mbox{\Hypertarget{ltem1c_8c_a2afe43fa4c4c3db98c35e9eae9fda4e5}\label{ltem1c_8c_a2afe43fa4c4c3db98c35e9eae9fda4e5}} 
+\index{ltem1c.c@{ltem1c.c}!ltem1\_setYieldCb@{ltem1\_setYieldCb}}
+\index{ltem1\_setYieldCb@{ltem1\_setYieldCb}!ltem1c.c@{ltem1c.c}}
+\doxysubsubsection{\texorpdfstring{ltem1\_setYieldCb()}{ltem1\_setYieldCb()}}
+{\footnotesize\ttfamily void ltem1\+\_\+set\+Yield\+Cb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{platform__timing_8h_a1066ad01c72dad80aaa76602d3cdce94}{platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t}}}]{yield\+Cb\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Registers the address (void$\ast$) of your application yield callback handler. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em custom\+Fault\+Handler} & -\/ Pointer to application provided fault handler. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ltem1c_8c_a61b6ff310cf112009b61853ea1175f06}\label{ltem1c_8c_a61b6ff310cf112009b61853ea1175f06}} 
 \index{ltem1c.c@{ltem1c.c}!ltem1\_start@{ltem1\_start}}
 \index{ltem1\_start@{ltem1\_start}!ltem1c.c@{ltem1c.c}}

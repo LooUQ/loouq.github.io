@@ -5,6 +5,8 @@
 \doxysubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
+struct \mbox{\hyperlink{structaction_history__tag}{action\+History\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Record of last action, N\+O\+TE\+: only set on action N\+O\+N-\/\+S\+U\+C\+C\+E\+SS. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structaction__tag}{action\+\_\+tag}}
 \begin{DoxyCompactList}\small\item\em Structure to control invocation and management of an AT command with the B\+Gx module. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structaction_result__tag}{action\+Result\+\_\+tag}}
@@ -17,10 +19,14 @@ struct \mbox{\hyperlink{structaction_result__tag}{action\+Result\+\_\+tag}}
 \#define \mbox{\hyperlink{actions_8h_a021c8a4946bbb0d831010de2925d9744}{A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+A\+Lmillis}}~100
 \item 
 \#define \mbox{\hyperlink{actions_8h_a55b5450e7d55ef7c9a13a7568c6254e6}{A\+C\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+D\+E\+F\+A\+U\+L\+Tmillis}}~500
+\item 
+\#define \mbox{\hyperlink{actions_8h_a87296e98a752bfe51d208d309fb8b664}{A\+C\+T\+I\+O\+N\+\_\+\+H\+I\+S\+T\+R\+E\+S\+P\+B\+U\+F\+\_\+\+SZ}}~240
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
+typedef struct \mbox{\hyperlink{structaction_history__tag}{action\+History\+\_\+tag}} \mbox{\hyperlink{actions_8h_af06d2e8c937f71e77a858116c3f813ef}{action\+History\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Record of last action, N\+O\+TE\+: only set on action N\+O\+N-\/\+S\+U\+C\+C\+E\+SS. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structaction__tag}{action\+\_\+tag}} \mbox{\hyperlink{actions_8h_adbd2d16df717d239d0e1059f636ea5a0}{action\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em Structure to control invocation and management of an AT command with the B\+Gx module. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structaction_result__tag}{action\+Result\+\_\+tag}} \mbox{\hyperlink{actions_8h_ae712b701323ddcdad6db94073bf45530}{action\+Result\+\_\+t}}
@@ -51,10 +57,18 @@ void \mbox{\hyperlink{actions_8h_ad900c7fe409458bdff8b72e09828b490}{action\+\_\+
 \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{actions_8h_ac72cff5eb861ea8343b92da941f21569}{action\+\_\+token\+Result\+Parser}} (const char $\ast$response, const char $\ast$landmark, char token, uint8\+\_\+t reqd\+Tokens, const char $\ast$terminator, char $\ast$$\ast$endptr)
 \begin{DoxyCompactList}\small\item\em Performs a standardized parse of command responses. This function can be wrapped to match atcmd command\+Completed\+Parse signature. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{actions_8h_a46c456c01c810e6c8561441208ecf87d}{action\+\_\+service\+Response\+Parser}} (const char $\ast$response, const char $\ast$landmark, uint8\+\_\+t result\+Indx, char $\ast$$\ast$endptr)
-\begin{DoxyCompactList}\small\item\em \mbox{[}private\mbox{]} Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+SL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+SL. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{actions_8h_a657dc5291edd9a7e48c2866aac75ea73}{action\+\_\+str\+Token}} (char $\ast$source, int delimiter, char $\ast$token, uint8\+\_\+t token\+Max)
+\begin{DoxyCompactList}\small\item\em C-\/string token grabber. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{actions_8h_a87296e98a752bfe51d208d309fb8b664}\label{actions_8h_a87296e98a752bfe51d208d309fb8b664}} 
+\index{actions.h@{actions.h}!ACTION\_HISTRESPBUF\_SZ@{ACTION\_HISTRESPBUF\_SZ}}
+\index{ACTION\_HISTRESPBUF\_SZ@{ACTION\_HISTRESPBUF\_SZ}!actions.h@{actions.h}}
+\doxysubsubsection{\texorpdfstring{ACTION\_HISTRESPBUF\_SZ}{ACTION\_HISTRESPBUF\_SZ}}
+{\footnotesize\ttfamily \#define A\+C\+T\+I\+O\+N\+\_\+\+H\+I\+S\+T\+R\+E\+S\+P\+B\+U\+F\+\_\+\+SZ~240}
+
 \mbox{\Hypertarget{actions_8h_a4d62077f56bf0d4ca29b93ff9943ab7d}\label{actions_8h_a4d62077f56bf0d4ca29b93ff9943ab7d}} 
 \index{actions.h@{actions.h}!ACTION\_RETRIES\_DEFAULT@{ACTION\_RETRIES\_DEFAULT}}
 \index{ACTION\_RETRIES\_DEFAULT@{ACTION\_RETRIES\_DEFAULT}!actions.h@{actions.h}}
@@ -85,6 +99,16 @@ void \mbox{\hyperlink{actions_8h_ad900c7fe409458bdff8b72e09828b490}{action\+\_\+
 
 
 Structure to control invocation and management of an AT command with the B\+Gx module. 
+
+\mbox{\Hypertarget{actions_8h_af06d2e8c937f71e77a858116c3f813ef}\label{actions_8h_af06d2e8c937f71e77a858116c3f813ef}} 
+\index{actions.h@{actions.h}!actionHistory\_t@{actionHistory\_t}}
+\index{actionHistory\_t@{actionHistory\_t}!actions.h@{actions.h}}
+\doxysubsubsection{\texorpdfstring{actionHistory\_t}{actionHistory\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structaction_history__tag}{action\+History\+\_\+tag}} \mbox{\hyperlink{actions_8h_af06d2e8c937f71e77a858116c3f813ef}{action\+History\+\_\+t}}}
+
+
+
+Record of last action, N\+O\+TE\+: only set on action N\+O\+N-\/\+S\+U\+C\+C\+E\+SS. 
 
 \mbox{\Hypertarget{actions_8h_ae712b701323ddcdad6db94073bf45530}\label{actions_8h_ae712b701323ddcdad6db94073bf45530}} 
 \index{actions.h@{actions.h}!actionResult\_t@{actionResult\_t}}
@@ -245,7 +269,17 @@ Performs data transfer (send) sub-\/action.
 
 
 
-\mbox{[}private\mbox{]} Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+SL. 
+Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+SL. 
+
+\mbox{\Hypertarget{actions_8h_a657dc5291edd9a7e48c2866aac75ea73}\label{actions_8h_a657dc5291edd9a7e48c2866aac75ea73}} 
+\index{actions.h@{actions.h}!action\_strToken@{action\_strToken}}
+\index{action\_strToken@{action\_strToken}!actions.h@{actions.h}}
+\doxysubsubsection{\texorpdfstring{action\_strToken()}{action\_strToken()}}
+{\footnotesize\ttfamily char$\ast$ action\+\_\+str\+Token (\begin{DoxyParamCaption}\item[{char $\ast$}]{source,  }\item[{int}]{delimiter,  }\item[{char $\ast$}]{token,  }\item[{uint8\+\_\+t}]{token\+Max }\end{DoxyParamCaption})}
+
+
+
+C-\/string token grabber. 
 
 \mbox{\Hypertarget{actions_8h_ac72cff5eb861ea8343b92da941f21569}\label{actions_8h_ac72cff5eb861ea8343b92da941f21569}} 
 \index{actions.h@{actions.h}!action\_tokenResultParser@{action\_tokenResultParser}}

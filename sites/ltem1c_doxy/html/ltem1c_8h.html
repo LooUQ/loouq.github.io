@@ -82,12 +82,13 @@ $(function() {
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="platform__debug_8h_source.html">platform/platform_debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="platform_2platform__pins_8h_source.html">platform/platform_pins.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="platform__gpio_8h_source.html">platform/platform_gpio.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="platform__timing_8h_source.html">platform/platform_timing.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="platform__spi_8h_source.html">platform/platform_spi.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="nxp__sc16is741a_8h_source.html">nxp_sc16is741a.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="quectel__bg_8h_source.html">quectel_bg.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="iop_8h_source.html">iop.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="actions_8h_source.html">actions.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mdminfo_8h_source.html">mdminfo.h</a>&quot;</code><br />
@@ -152,12 +153,16 @@ Macros</h2></td></tr>
 <tr class="separator:a612ab708e4323139d49a5c57a8807554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fda4b44fd52ad33bbafa4cef0306d5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#a0fda4b44fd52ad33bbafa4cef0306d5a">RESULT_CODE_BADREQUEST</a>&#160;&#160;&#160;400</td></tr>
 <tr class="separator:a0fda4b44fd52ad33bbafa4cef0306d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55443bad183ce4af75763c2f5af0d587"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#a55443bad183ce4af75763c2f5af0d587">RESULT_CODE_FORBIDDEN</a>&#160;&#160;&#160;403</td></tr>
+<tr class="separator:a55443bad183ce4af75763c2f5af0d587"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa2014a03f51b8c56b59f9f328b6c423"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#aaa2014a03f51b8c56b59f9f328b6c423">RESULT_CODE_NOTFOUND</a>&#160;&#160;&#160;404</td></tr>
 <tr class="separator:aaa2014a03f51b8c56b59f9f328b6c423"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac4f84b3e78cc614658c4df31cabd3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#abac4f84b3e78cc614658c4df31cabd3e">RESULT_CODE_TIMEOUT</a>&#160;&#160;&#160;408</td></tr>
 <tr class="separator:abac4f84b3e78cc614658c4df31cabd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58c08b01c1640177806215af48ebeae0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#a58c08b01c1640177806215af48ebeae0">RESULT_CODE_CONFLICT</a>&#160;&#160;&#160;409</td></tr>
 <tr class="separator:a58c08b01c1640177806215af48ebeae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a363fd981eef7c01050d773d6a2700fb0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#a363fd981eef7c01050d773d6a2700fb0">RESULT_CODE_CANCELLED</a>&#160;&#160;&#160;499</td></tr>
+<tr class="separator:a363fd981eef7c01050d773d6a2700fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd429f079f219cca0a201657ef9b9a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#aabd429f079f219cca0a201657ef9b9a1">RESULT_CODE_ERROR</a>&#160;&#160;&#160;500</td></tr>
 <tr class="separator:aabd429f079f219cca0a201657ef9b9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -211,12 +216,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a16962565e46d30d4d7b9a76f061fe15a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#a16962565e46d30d4d7b9a76f061fe15a">ltem1_faultHandler</a> (uint16_t statusCode, const char *fault) __attribute__((noreturn))</td></tr>
 <tr class="memdesc:a16962565e46d30d4d7b9a76f061fe15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function of last resort, catestrophic failure Background work task runner. To be called in application Loop() periodically.  <a href="ltem1c_8h.html#a16962565e46d30d4d7b9a76f061fe15a">More...</a><br /></td></tr>
 <tr class="separator:a16962565e46d30d4d7b9a76f061fe15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2afe43fa4c4c3db98c35e9eae9fda4e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#a2afe43fa4c4c3db98c35e9eae9fda4e5">ltem1_setYieldCb</a> (<a class="el" href="platform__timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a> yieldCb_func)</td></tr>
+<tr class="memdesc:a2afe43fa4c4c3db98c35e9eae9fda4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the address (void*) of your application yield callback handler.  <a href="ltem1c_8h.html#a2afe43fa4c4c3db98c35e9eae9fda4e5">More...</a><br /></td></tr>
+<tr class="separator:a2afe43fa4c4c3db98c35e9eae9fda4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ae1d900c6ccd0da637e6ddc6af05f0a65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltem1c_8h.html#af0e3c59e4d3e14ce47a3372aff4dd7fa">ltem1Device_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#ae1d900c6ccd0da637e6ddc6af05f0a65">g_ltem1</a></td></tr>
 <tr class="memdesc:ae1d900c6ccd0da637e6ddc6af05f0a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LTEm1 "object", since this is C99 like the instance class.  <a href="ltem1c_8h.html#ae1d900c6ccd0da637e6ddc6af05f0a65">More...</a><br /></td></tr>
 <tr class="separator:ae1d900c6ccd0da637e6ddc6af05f0a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b5fb1443bd8c12cc7a2be264a5cede"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#a65b5fb1443bd8c12cc7a2be264a5cede">g_dbgBuffer</a> [<a class="el" href="platform__debug_8h.html#a55b0e7bf15961b6e7b12903cf107f67b">DBGBUFFER_SZ</a>]</td></tr>
+<tr class="memdesc:a65b5fb1443bd8c12cc7a2be264a5cede"><td class="mdescLeft">&#160;</td><td class="mdescRight">global shared buffer for debug output  <a href="ltem1c_8h.html#a65b5fb1443bd8c12cc7a2be264a5cede">More...</a><br /></td></tr>
+<tr class="separator:a65b5fb1443bd8c12cc7a2be264a5cede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ee560c673862498d6dc516cb8e808bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="platform__gpio_8h.html#a8dcfc8ee1f002aa2c8f93b2767098f3c">ltem1PinConfig_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltem1c_8h.html#a4ee560c673862498d6dc516cb8e808bc">FEATHER_BREAKOUT</a></td></tr>
 <tr class="memdesc:a4ee560c673862498d6dc516cb8e808bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">obsolete  <a href="ltem1c_8h.html#a4ee560c673862498d6dc516cb8e808bc">More...</a><br /></td></tr>
 <tr class="separator:a4ee560c673862498d6dc516cb8e808bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -505,6 +516,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a363fd981eef7c01050d773d6a2700fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a363fd981eef7c01050d773d6a2700fb0">&#9670;&nbsp;</a></span>RESULT_CODE_CANCELLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESULT_CODE_CANCELLED&#160;&#160;&#160;499</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a58c08b01c1640177806215af48ebeae0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58c08b01c1640177806215af48ebeae0">&#9670;&nbsp;</a></span>RESULT_CODE_CONFLICT</h2>
 
@@ -541,6 +566,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define RESULT_CODE_ERRORS_BASE&#160;&#160;&#160;400</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55443bad183ce4af75763c2f5af0d587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55443bad183ce4af75763c2f5af0d587">&#9670;&nbsp;</a></span>RESULT_CODE_FORBIDDEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESULT_CODE_FORBIDDEN&#160;&#160;&#160;403</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -831,6 +870,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a2afe43fa4c4c3db98c35e9eae9fda4e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2afe43fa4c4c3db98c35e9eae9fda4e5">&#9670;&nbsp;</a></span>ltem1_setYieldCb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ltem1_setYieldCb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="platform__timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a>&#160;</td>
+          <td class="paramname"><em>yieldCb_func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers the address (void*) of your application yield callback handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">customFaultHandler</td><td>- Pointer to application provided fault handler. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a61b6ff310cf112009b61853ea1175f06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61b6ff310cf112009b61853ea1175f06">&#9670;&nbsp;</a></span>ltem1_start()</h2>
 
@@ -897,6 +962,30 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>obsolete </p>
+
+</div>
+</div>
+<a id="a65b5fb1443bd8c12cc7a2be264a5cede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b5fb1443bd8c12cc7a2be264a5cede">&#9670;&nbsp;</a></span>g_dbgBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char g_dbgBuffer[<a class="el" href="platform__debug_8h.html#a55b0e7bf15961b6e7b12903cf107f67b">DBGBUFFER_SZ</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>global shared buffer for debug output </p>
 
 </div>
 </div>

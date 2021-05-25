@@ -16,7 +16,7 @@ char \mbox{\hyperlink{structaction__tag_a8664baf8552bdb7eaee20d25a9f3afba}{cmd\+
 \begin{DoxyCompactList}\small\item\em AT command string to be passed to the B\+Gx module. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structaction__tag_a882afa92abc68d9b1fa39a42f56a8b3d}{is\+Open}}
 \begin{DoxyCompactList}\small\item\em True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation. \end{DoxyCompactList}\item 
-unsigned long \mbox{\hyperlink{structaction__tag_aa025870b78196833703150bca54e930a}{invoked\+At}}
+uint32\+\_\+t \mbox{\hyperlink{structaction__tag_a5060510445edaff8c6d26aba0141eaae}{invoked\+At}}
 \begin{DoxyCompactList}\small\item\em Tick value at the command invocation, used for timeout detection. \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{structaction__tag_adc00dec5f45402bb5c65d7451fb4d3ad}{result\+Code}}
 \begin{DoxyCompactList}\small\item\em H\+T\+ML type response code, 0 is special \char`\"{}pending\char`\"{} status, see A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+$\ast$ codes. \end{DoxyCompactList}\item 
@@ -25,7 +25,9 @@ char $\ast$ \mbox{\hyperlink{structaction__tag_a11373f02c42587a1853ad6c8be5fe10e
 uint16\+\_\+t \mbox{\hyperlink{structaction__tag_a62141174b7f53e381c1ce0ad0b47b867}{timeout\+Millis}}
 \begin{DoxyCompactList}\small\item\em Timout in milliseconds for the command, defaults to 300mS. B\+Gx documentation indicates cmds with longer timeout. \end{DoxyCompactList}\item 
 uint16\+\_\+t($\ast$ \mbox{\hyperlink{structaction__tag_a78ce7b65f47dda02b282b22bc6ef5cef}{task\+Complete\+Parser\+\_\+func}} )(const char $\ast$\mbox{\hyperlink{structaction__tag_a11373f02c42587a1853ad6c8be5fe10e}{response}}, char $\ast$$\ast$endptr)
-\begin{DoxyCompactList}\small\item\em Function to parse the response looking for completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function to parse the response looking for completion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{actions_8h_af06d2e8c937f71e77a858116c3f813ef}{action\+History\+\_\+t}} $\ast$ \mbox{\hyperlink{structaction__tag_a792d200de5c767230e258f4914c74783}{last\+Action}}
+\begin{DoxyCompactList}\small\item\em Struct containing information on last action response. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -42,11 +44,11 @@ Structure to control invocation and management of an AT command with the B\+Gx m
 
 AT command string to be passed to the B\+Gx module. 
 
-\mbox{\Hypertarget{structaction__tag_aa025870b78196833703150bca54e930a}\label{structaction__tag_aa025870b78196833703150bca54e930a}} 
+\mbox{\Hypertarget{structaction__tag_a5060510445edaff8c6d26aba0141eaae}\label{structaction__tag_a5060510445edaff8c6d26aba0141eaae}} 
 \index{action\_tag@{action\_tag}!invokedAt@{invokedAt}}
 \index{invokedAt@{invokedAt}!action\_tag@{action\_tag}}
 \doxysubsubsection{\texorpdfstring{invokedAt}{invokedAt}}
-{\footnotesize\ttfamily unsigned long invoked\+At}
+{\footnotesize\ttfamily uint32\+\_\+t invoked\+At}
 
 
 
@@ -62,6 +64,19 @@ Tick value at the command invocation, used for timeout detection.
 
 True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation. 
 
+\mbox{\Hypertarget{structaction__tag_a792d200de5c767230e258f4914c74783}\label{structaction__tag_a792d200de5c767230e258f4914c74783}} 
+\index{action\_tag@{action\_tag}!lastAction@{lastAction}}
+\index{lastAction@{lastAction}!action\_tag@{action\_tag}}
+\doxysubsubsection{\texorpdfstring{lastAction}{lastAction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{actions_8h_af06d2e8c937f71e77a858116c3f813ef}{action\+History\+\_\+t}}$\ast$ last\+Action}
+
+
+
+Struct containing information on last action response. 
+
+\begin{DoxyReturn}{Returns}
+. N\+O\+TE\+: only set on N\+O\+N-\/\+S\+U\+C\+C\+E\+SS. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structaction__tag_a11373f02c42587a1853ad6c8be5fe10e}\label{structaction__tag_a11373f02c42587a1853ad6c8be5fe10e}} 
 \index{action\_tag@{action\_tag}!response@{response}}
 \index{response@{response}!action\_tag@{action\_tag}}

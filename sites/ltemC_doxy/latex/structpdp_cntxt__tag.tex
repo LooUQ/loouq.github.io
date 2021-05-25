@@ -1,0 +1,61 @@
+\hypertarget{structpdp_cntxt__tag}{}\doxysection{pdp\+Cntxt\+\_\+tag Struct Reference}
+\label{structpdp_cntxt__tag}\index{pdpCntxt\_tag@{pdpCntxt\_tag}}
+
+
+Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data context).  
+
+
+
+
+{\ttfamily \#include $<$ltemc-\/network.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structpdp_cntxt__tag_a56824b587d7ef835ff95c13ed36afc2d}{context\+Id}}
+\begin{DoxyCompactList}\small\item\em context ID recognized by the carrier (valid are 1 to 16) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}{pdp\+Cntxt\+Ip\+Type\+\_\+t}} \mbox{\hyperlink{structpdp_cntxt__tag_a702cdbdfc301e973c784cde24a1d8c36}{ip\+Type}}
+\begin{DoxyCompactList}\small\item\em I\+Pv4 or I\+Pv6. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structpdp_cntxt__tag_a5ad0b447cc593426dbdc96b969bec1e9}{ip\+Address}} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em The IP address obtained from the carrier for this context. The IP address of the modem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data context). 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structpdp_cntxt__tag_a56824b587d7ef835ff95c13ed36afc2d}\label{structpdp_cntxt__tag_a56824b587d7ef835ff95c13ed36afc2d}} 
+\index{pdpCntxt\_tag@{pdpCntxt\_tag}!contextId@{contextId}}
+\index{contextId@{contextId}!pdpCntxt\_tag@{pdpCntxt\_tag}}
+\doxysubsubsection{\texorpdfstring{contextId}{contextId}}
+{\footnotesize\ttfamily uint8\+\_\+t context\+Id}
+
+
+
+context ID recognized by the carrier (valid are 1 to 16) 
+
+\mbox{\Hypertarget{structpdp_cntxt__tag_a5ad0b447cc593426dbdc96b969bec1e9}\label{structpdp_cntxt__tag_a5ad0b447cc593426dbdc96b969bec1e9}} 
+\index{pdpCntxt\_tag@{pdpCntxt\_tag}!ipAddress@{ipAddress}}
+\index{ipAddress@{ipAddress}!pdpCntxt\_tag@{pdpCntxt\_tag}}
+\doxysubsubsection{\texorpdfstring{ipAddress}{ipAddress}}
+{\footnotesize\ttfamily char ip\+Address\mbox{[}16\mbox{]}}
+
+
+
+The IP address obtained from the carrier for this context. The IP address of the modem. 
+
+\mbox{\Hypertarget{structpdp_cntxt__tag_a702cdbdfc301e973c784cde24a1d8c36}\label{structpdp_cntxt__tag_a702cdbdfc301e973c784cde24a1d8c36}} 
+\index{pdpCntxt\_tag@{pdpCntxt\_tag}!ipType@{ipType}}
+\index{ipType@{ipType}!pdpCntxt\_tag@{pdpCntxt\_tag}}
+\doxysubsubsection{\texorpdfstring{ipType}{ipType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}{pdp\+Cntxt\+Ip\+Type\+\_\+t}} ip\+Type}
+
+
+
+I\+Pv4 or I\+Pv6. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ltemc-network_8h}{ltemc-\/network.\+h}}\end{DoxyCompactItemize}

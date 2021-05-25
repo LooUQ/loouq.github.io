@@ -84,6 +84,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction_history__tag.html">actionHistory_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record of last action, NOTE: only set on action NON-SUCCESS.  <a href="structaction_history__tag.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaction__tag.html">action_tag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to control invocation and management of an AT command with the BGx module.  <a href="structaction__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,9 +102,14 @@ Macros</h2></td></tr>
 <tr class="separator:a021c8a4946bbb0d831010de2925d9744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55b5450e7d55ef7c9a13a7568c6254e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8h.html#a55b5450e7d55ef7c9a13a7568c6254e6">ACTION_TIMEOUT_DEFAULTmillis</a>&#160;&#160;&#160;500</td></tr>
 <tr class="separator:a55b5450e7d55ef7c9a13a7568c6254e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87296e98a752bfe51d208d309fb8b664"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8h.html#a87296e98a752bfe51d208d309fb8b664">ACTION_HISTRESPBUF_SZ</a>&#160;&#160;&#160;240</td></tr>
+<tr class="separator:a87296e98a752bfe51d208d309fb8b664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:af06d2e8c937f71e77a858116c3f813ef"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structaction_history__tag.html">actionHistory_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8h.html#af06d2e8c937f71e77a858116c3f813ef">actionHistory_t</a></td></tr>
+<tr class="memdesc:af06d2e8c937f71e77a858116c3f813ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record of last action, NOTE: only set on action NON-SUCCESS.  <a href="actions_8h.html#af06d2e8c937f71e77a858116c3f813ef">More...</a><br /></td></tr>
+<tr class="separator:af06d2e8c937f71e77a858116c3f813ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbd2d16df717d239d0e1059f636ea5a0"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structaction__tag.html">action_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8h.html#adbd2d16df717d239d0e1059f636ea5a0">action_t</a></td></tr>
 <tr class="memdesc:adbd2d16df717d239d0e1059f636ea5a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to control invocation and management of an AT command with the BGx module.  <a href="actions_8h.html#adbd2d16df717d239d0e1059f636ea5a0">More...</a><br /></td></tr>
 <tr class="separator:adbd2d16df717d239d0e1059f636ea5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,10 +153,27 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac72cff5eb861ea8343b92da941f21569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a standardized parse of command responses. This function can be wrapped to match atcmd commandCompletedParse signature.  <a href="actions_8h.html#ac72cff5eb861ea8343b92da941f21569">More...</a><br /></td></tr>
 <tr class="separator:ac72cff5eb861ea8343b92da941f21569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46c456c01c810e6c8561441208ecf87d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltem1c_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8h.html#a46c456c01c810e6c8561441208ecf87d">action_serviceResponseParser</a> (const char *response, const char *landmark, uint8_t resultIndx, char **endptr)</td></tr>
-<tr class="memdesc:a46c456c01c810e6c8561441208ecf87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">[private] Parser for open connection response, shared by UDP/TCP/SSL.  <a href="actions_8h.html#a46c456c01c810e6c8561441208ecf87d">More...</a><br /></td></tr>
+<tr class="memdesc:a46c456c01c810e6c8561441208ecf87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser for open connection response, shared by UDP/TCP/SSL.  <a href="actions_8h.html#a46c456c01c810e6c8561441208ecf87d">More...</a><br /></td></tr>
 <tr class="separator:a46c456c01c810e6c8561441208ecf87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657dc5291edd9a7e48c2866aac75ea73"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="actions_8h.html#a657dc5291edd9a7e48c2866aac75ea73">action_strToken</a> (char *source, int delimiter, char *token, uint8_t tokenMax)</td></tr>
+<tr class="memdesc:a657dc5291edd9a7e48c2866aac75ea73"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string token grabber.  <a href="actions_8h.html#a657dc5291edd9a7e48c2866aac75ea73">More...</a><br /></td></tr>
+<tr class="separator:a657dc5291edd9a7e48c2866aac75ea73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a87296e98a752bfe51d208d309fb8b664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87296e98a752bfe51d208d309fb8b664">&#9670;&nbsp;</a></span>ACTION_HISTRESPBUF_SZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_HISTRESPBUF_SZ&#160;&#160;&#160;240</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4d62077f56bf0d4ca29b93ff9943ab7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d62077f56bf0d4ca29b93ff9943ab7d">&#9670;&nbsp;</a></span>ACTION_RETRIES_DEFAULT</h2>
 
@@ -205,6 +230,22 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Structure to control invocation and management of an AT command with the BGx module. </p>
+
+</div>
+</div>
+<a id="af06d2e8c937f71e77a858116c3f813ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06d2e8c937f71e77a858116c3f813ef">&#9670;&nbsp;</a></span>actionHistory_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structaction_history__tag.html">actionHistory_tag</a> <a class="el" href="actions_8h.html#af06d2e8c937f71e77a858116c3f813ef">actionHistory_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Record of last action, NOTE: only set on action NON-SUCCESS. </p>
 
 </div>
 </div>
@@ -549,7 +590,49 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>[private] Parser for open connection response, shared by UDP/TCP/SSL. </p>
+<p>Parser for open connection response, shared by UDP/TCP/SSL. </p>
+
+</div>
+</div>
+<a id="a657dc5291edd9a7e48c2866aac75ea73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657dc5291edd9a7e48c2866aac75ea73">&#9670;&nbsp;</a></span>action_strToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* action_strToken </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delimiter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>tokenMax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C-string token grabber. </p>
 
 </div>
 </div>

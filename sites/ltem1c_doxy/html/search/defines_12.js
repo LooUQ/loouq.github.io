@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wait_5fseconds_1368',['WAIT_SECONDS',['../mqtt_8c.html#ae8e0f9e55bf5d2d770a649b78dc3f944',1,'mqtt.c']]]
+  ['token_5fbuf_5fsz_1604',['TOKEN_BUF_SZ',['../gnss_8c.html#a804ecb67b072321269af36bc17d26886',1,'TOKEN_BUF_SZ():&#160;gnss.c'],['../network_8c.html#a804ecb67b072321269af36bc17d26886',1,'TOKEN_BUF_SZ():&#160;network.c']]]
 ];

@@ -2,7 +2,7 @@
 \label{structpdp_context__tag}\index{pdpContext\_tag@{pdpContext\_tag}}
 
 
-Struct representing the state of an active P\+DP context (aka\+: A\+PN or data context).  
+Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data context).  
 
 
 
@@ -12,45 +12,33 @@ Struct representing the state of an active P\+DP context (aka\+: A\+PN or data c
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaec}{context\+\_\+state\+\_\+t}} \mbox{\hyperlink{structpdp_context__tag_aef683140651b2e7853d667b30274fef7}{context\+State}}
-\begin{DoxyCompactList}\small\item\em Is the context active or inactive. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1}{context\+\_\+type\+\_\+t}} \mbox{\hyperlink{structpdp_context__tag_a6be60f241b8c6e6f65fd1724ebb87a4b}{context\+Type}}
+uint8\+\_\+t \mbox{\hyperlink{structpdp_context__tag_a56824b587d7ef835ff95c13ed36afc2d}{context\+Id}}
+\begin{DoxyCompactList}\small\item\em context ID recognized by the carrier (valid are 1 to 16) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{network_8h_ac15f57a0f1baeca7fdf9d3108d5f3719}{context\+Ip\+Type\+\_\+t}} \mbox{\hyperlink{structpdp_context__tag_a862540783f45078440a36c5a49bda82b}{context\+Ip\+Type}}
 \begin{DoxyCompactList}\small\item\em I\+Pv4 or I\+Pv6. \end{DoxyCompactList}\item 
-char \mbox{\hyperlink{structpdp_context__tag_a8b4e63cd4c9baaf9d90a1ff750b485b7}{apn\+Name}} \mbox{[}21\mbox{]}
-\begin{DoxyCompactList}\small\item\em The A\+PN name for this context. This can be blank, A\+PN naming is specific to each carrier. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{structpdp_context__tag_a5ad0b447cc593426dbdc96b969bec1e9}{ip\+Address}} \mbox{[}16\mbox{]}
 \begin{DoxyCompactList}\small\item\em The IP address obtained from the carrier for this context. The IP address of the modem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Struct representing the state of an active P\+DP context (aka\+: A\+PN or data context). 
+Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data context). 
 
 \doxysubsection{Field Documentation}
-\mbox{\Hypertarget{structpdp_context__tag_a8b4e63cd4c9baaf9d90a1ff750b485b7}\label{structpdp_context__tag_a8b4e63cd4c9baaf9d90a1ff750b485b7}} 
-\index{pdpContext\_tag@{pdpContext\_tag}!apnName@{apnName}}
-\index{apnName@{apnName}!pdpContext\_tag@{pdpContext\_tag}}
-\doxysubsubsection{\texorpdfstring{apnName}{apnName}}
-{\footnotesize\ttfamily char apn\+Name\mbox{[}21\mbox{]}}
+\mbox{\Hypertarget{structpdp_context__tag_a56824b587d7ef835ff95c13ed36afc2d}\label{structpdp_context__tag_a56824b587d7ef835ff95c13ed36afc2d}} 
+\index{pdpContext\_tag@{pdpContext\_tag}!contextId@{contextId}}
+\index{contextId@{contextId}!pdpContext\_tag@{pdpContext\_tag}}
+\doxysubsubsection{\texorpdfstring{contextId}{contextId}}
+{\footnotesize\ttfamily uint8\+\_\+t context\+Id}
 
 
 
-The A\+PN name for this context. This can be blank, A\+PN naming is specific to each carrier. 
+context ID recognized by the carrier (valid are 1 to 16) 
 
-\mbox{\Hypertarget{structpdp_context__tag_aef683140651b2e7853d667b30274fef7}\label{structpdp_context__tag_aef683140651b2e7853d667b30274fef7}} 
-\index{pdpContext\_tag@{pdpContext\_tag}!contextState@{contextState}}
-\index{contextState@{contextState}!pdpContext\_tag@{pdpContext\_tag}}
-\doxysubsubsection{\texorpdfstring{contextState}{contextState}}
-{\footnotesize\ttfamily \mbox{\hyperlink{network_8h_ad44f426957683a22a1f3e1952adcfaec}{context\+\_\+state\+\_\+t}} context\+State}
-
-
-
-Is the context active or inactive. 
-
-\mbox{\Hypertarget{structpdp_context__tag_a6be60f241b8c6e6f65fd1724ebb87a4b}\label{structpdp_context__tag_a6be60f241b8c6e6f65fd1724ebb87a4b}} 
-\index{pdpContext\_tag@{pdpContext\_tag}!contextType@{contextType}}
-\index{contextType@{contextType}!pdpContext\_tag@{pdpContext\_tag}}
-\doxysubsubsection{\texorpdfstring{contextType}{contextType}}
-{\footnotesize\ttfamily \mbox{\hyperlink{network_8h_abc74437f14f9413f5bc01cd5523e13f1}{context\+\_\+type\+\_\+t}} context\+Type}
+\mbox{\Hypertarget{structpdp_context__tag_a862540783f45078440a36c5a49bda82b}\label{structpdp_context__tag_a862540783f45078440a36c5a49bda82b}} 
+\index{pdpContext\_tag@{pdpContext\_tag}!contextIpType@{contextIpType}}
+\index{contextIpType@{contextIpType}!pdpContext\_tag@{pdpContext\_tag}}
+\doxysubsubsection{\texorpdfstring{contextIpType}{contextIpType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{network_8h_ac15f57a0f1baeca7fdf9d3108d5f3719}{context\+Ip\+Type\+\_\+t}} context\+Ip\+Type}
 
 
 

@@ -1,0 +1,145 @@
+\hypertarget{platform__debug_8h}{}\doxysection{src/platform/platform\+\_\+debug.h File Reference}
+\label{platform__debug_8h}\index{src/platform/platform\_debug.h@{src/platform/platform\_debug.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{platform__debug_8h_a55b0e7bf15961b6e7b12903cf107f67b}{D\+B\+G\+B\+U\+F\+F\+E\+R\+\_\+\+SZ}}~120
+\item 
+\#define \mbox{\hyperlink{platform__debug_8h_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\item 
+\#define \mbox{\hyperlink{platform__debug_8h_a552f7b60b56b6e3e598e3a5c1abde315}{P\+R\+I\+N\+T\+FC}}(c\+\_\+,  f\+\_\+, ...)~;
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46a}{dbg\+Color\+\_\+tag}} \mbox{\hyperlink{platform__debug_8h_a46bfd18c3d943a75a9d23b29484f73b4}{dbg\+Color\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46a}{dbg\+Color\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa3bf65aae7b8471ee215b3b1e8e7b5fc5}{dbg\+Color\+\_\+none}} = 0, 
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aac9248c83da8eb1e47bfe6533907f0c09}{dbg\+Color\+\_\+info}} = 1, 
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aadbb81bb3aa33bf6b6ce513acce6b037d}{dbg\+Color\+\_\+warn}} = 2, 
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aad15ff649fb0c326984eb6d1a3eaa930f}{dbg\+Color\+\_\+error}} = 3, 
+\newline
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aacb616e9c74b590ec99e3df0a809ead7b}{dbg\+Color\+\_\+cyan}} = 10, 
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa568174128cd64459f7e9673198914f18}{dbg\+Color\+\_\+magenta}} = 11, 
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa11b9b374972d84c3dbaf75445c6a29e6}{dbg\+Color\+\_\+white}} = 12, 
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aab1cf730f005d4e8ff759940c167a6426}{dbg\+Color\+\_\+gray}} = 13, 
+\newline
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa9627c5fcf0986d2d149bba686904e2f1}{dbg\+Color\+\_\+blue}} = 14, 
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aaf5606f6fd9e492d83e4439cd961b7177}{dbg\+Color\+\_\+d\+Cyan}} = 20, 
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aabcd6286e723bc12d4ca51ad5c200ab87}{dbg\+Color\+\_\+d\+Magenta}} = 21, 
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aadcd84e05c15f8ec91b83f0b36d6006bd}{dbg\+Color\+\_\+green}} = 1, 
+\newline
+\mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aaf93fcbff002194ffa408859683eeee95}{dbg\+Color\+\_\+d\+Green}} = 25
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{platform__debug_8h_a505c2497a7ac1a50aa8bee14a10d2aaa}{dbg\+\_\+print}} (const char $\ast$msg,...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{platform__debug_8h_a55b0e7bf15961b6e7b12903cf107f67b}\label{platform__debug_8h_a55b0e7bf15961b6e7b12903cf107f67b}} 
+\index{platform\_debug.h@{platform\_debug.h}!DBGBUFFER\_SZ@{DBGBUFFER\_SZ}}
+\index{DBGBUFFER\_SZ@{DBGBUFFER\_SZ}!platform\_debug.h@{platform\_debug.h}}
+\doxysubsubsection{\texorpdfstring{DBGBUFFER\_SZ}{DBGBUFFER\_SZ}}
+{\footnotesize\ttfamily \#define D\+B\+G\+B\+U\+F\+F\+E\+R\+\_\+\+SZ~120}
+
+\mbox{\Hypertarget{platform__debug_8h_ab818574b6e7324559d0b09a6fc9ca1f2}\label{platform__debug_8h_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{platform\_debug.h@{platform\_debug.h}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!platform\_debug.h@{platform\_debug.h}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+\mbox{\Hypertarget{platform__debug_8h_a552f7b60b56b6e3e598e3a5c1abde315}\label{platform__debug_8h_a552f7b60b56b6e3e598e3a5c1abde315}} 
+\index{platform\_debug.h@{platform\_debug.h}!PRINTFC@{PRINTFC}}
+\index{PRINTFC@{PRINTFC}!platform\_debug.h@{platform\_debug.h}}
+\doxysubsubsection{\texorpdfstring{PRINTFC}{PRINTFC}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+FC(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{platform__debug_8h_a46bfd18c3d943a75a9d23b29484f73b4}\label{platform__debug_8h_a46bfd18c3d943a75a9d23b29484f73b4}} 
+\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_t@{dbgColor\_t}}
+\index{dbgColor\_t@{dbgColor\_t}!platform\_debug.h@{platform\_debug.h}}
+\doxysubsubsection{\texorpdfstring{dbgColor\_t}{dbgColor\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46a}{dbg\+Color\+\_\+tag}} \mbox{\hyperlink{platform__debug_8h_a46bfd18c3d943a75a9d23b29484f73b4}{dbg\+Color\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46a}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46a}} 
+\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_tag@{dbgColor\_tag}}
+\index{dbgColor\_tag@{dbgColor\_tag}!platform\_debug.h@{platform\_debug.h}}
+\doxysubsubsection{\texorpdfstring{dbgColor\_tag}{dbgColor\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46a}{dbg\+Color\+\_\+tag}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_none@{dbgColor\_none}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_none@{dbgColor\_none}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa3bf65aae7b8471ee215b3b1e8e7b5fc5}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa3bf65aae7b8471ee215b3b1e8e7b5fc5}} 
+dbg\+Color\+\_\+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_info@{dbgColor\_info}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_info@{dbgColor\_info}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aac9248c83da8eb1e47bfe6533907f0c09}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aac9248c83da8eb1e47bfe6533907f0c09}} 
+dbg\+Color\+\_\+info&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_warn@{dbgColor\_warn}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_warn@{dbgColor\_warn}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aadbb81bb3aa33bf6b6ce513acce6b037d}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aadbb81bb3aa33bf6b6ce513acce6b037d}} 
+dbg\+Color\+\_\+warn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_error@{dbgColor\_error}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_error@{dbgColor\_error}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aad15ff649fb0c326984eb6d1a3eaa930f}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aad15ff649fb0c326984eb6d1a3eaa930f}} 
+dbg\+Color\+\_\+error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_cyan@{dbgColor\_cyan}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_cyan@{dbgColor\_cyan}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aacb616e9c74b590ec99e3df0a809ead7b}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aacb616e9c74b590ec99e3df0a809ead7b}} 
+dbg\+Color\+\_\+cyan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_magenta@{dbgColor\_magenta}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_magenta@{dbgColor\_magenta}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa568174128cd64459f7e9673198914f18}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa568174128cd64459f7e9673198914f18}} 
+dbg\+Color\+\_\+magenta&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_white@{dbgColor\_white}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_white@{dbgColor\_white}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa11b9b374972d84c3dbaf75445c6a29e6}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa11b9b374972d84c3dbaf75445c6a29e6}} 
+dbg\+Color\+\_\+white&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_gray@{dbgColor\_gray}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_gray@{dbgColor\_gray}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aab1cf730f005d4e8ff759940c167a6426}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aab1cf730f005d4e8ff759940c167a6426}} 
+dbg\+Color\+\_\+gray&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_blue@{dbgColor\_blue}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_blue@{dbgColor\_blue}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa9627c5fcf0986d2d149bba686904e2f1}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aa9627c5fcf0986d2d149bba686904e2f1}} 
+dbg\+Color\+\_\+blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_dCyan@{dbgColor\_dCyan}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_dCyan@{dbgColor\_dCyan}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aaf5606f6fd9e492d83e4439cd961b7177}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aaf5606f6fd9e492d83e4439cd961b7177}} 
+dbg\+Color\+\_\+d\+Cyan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_dMagenta@{dbgColor\_dMagenta}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_dMagenta@{dbgColor\_dMagenta}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aabcd6286e723bc12d4ca51ad5c200ab87}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aabcd6286e723bc12d4ca51ad5c200ab87}} 
+dbg\+Color\+\_\+d\+Magenta&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_green@{dbgColor\_green}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_green@{dbgColor\_green}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aadcd84e05c15f8ec91b83f0b36d6006bd}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aadcd84e05c15f8ec91b83f0b36d6006bd}} 
+dbg\+Color\+\_\+green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dbgColor\_dGreen@{dbgColor\_dGreen}!platform\_debug.h@{platform\_debug.h}}\index{platform\_debug.h@{platform\_debug.h}!dbgColor\_dGreen@{dbgColor\_dGreen}}}\mbox{\Hypertarget{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aaf93fcbff002194ffa408859683eeee95}\label{platform__debug_8h_ae6e46f3d2f61fe355b4caab6a88dd46aaf93fcbff002194ffa408859683eeee95}} 
+dbg\+Color\+\_\+d\+Green&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{platform__debug_8h_a505c2497a7ac1a50aa8bee14a10d2aaa}\label{platform__debug_8h_a505c2497a7ac1a50aa8bee14a10d2aaa}} 
+\index{platform\_debug.h@{platform\_debug.h}!dbg\_print@{dbg\_print}}
+\index{dbg\_print@{dbg\_print}!platform\_debug.h@{platform\_debug.h}}
+\doxysubsubsection{\texorpdfstring{dbg\_print()}{dbg\_print()}}
+{\footnotesize\ttfamily void dbg\+\_\+print (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg,  }\item[{}]{... }\end{DoxyParamCaption})}
+

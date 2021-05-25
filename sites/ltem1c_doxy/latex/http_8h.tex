@@ -1,0 +1,97 @@
+\hypertarget{http_8h}{}\doxysection{src/http.h File Reference}
+\label{http_8h}\index{src/http.h@{src/http.h}}
+{\ttfamily \#include \char`\"{}ltem1c.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{http_8h_a8c5726554f9603fc50a78071c63a367a}{\+\_\+\+F\+I\+L\+E\+\_\+\+H\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}}) (void $\ast$file\+Data, uint16\+\_\+t data\+Sz)
+\begin{DoxyCompactList}\small\item\em typedef for the socket services data receiver function. Connects filesystem processing to the application (receive). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{http_8h_ac63d8e77c4017e433b20d58b35729bbc}{http\+\_\+set\+Recvr\+Func}} (\mbox{\hyperlink{http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}} file\+Recvr\+\_\+func)
+\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{http_8h_ae0d14f04a5b54c03a47cd82dc1a11b54}{http\+\_\+set\+Server\+Url}} (const char $\ast$file\+Name)
+\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{http_8h_afb501c4b4413888d485309215d431790}{http\+\_\+set\+Ssl\+Options}} ()
+\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{http_8h_afa6524e38503c7274efad5f3f9bbc4f8}{http\+\_\+get}} (const char $\ast$url, \mbox{\hyperlink{http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}} file\+Recvr\+\_\+func)
+\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{http_8h_ad85723949df4cbef8bec8a4e05789f58}{http\+\_\+get\+File}} (const char $\ast$url, const char $\ast$filename)
+\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{http_8h_a59bbcedcaa9accb7de0502f3a54de81a}{http\+\_\+post}} (const char $\ast$url, const char $\ast$post\+Data, uint16\+\_\+t data\+Sz)
+\item 
+\mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{http_8h_a9cc4a5f51a1cb01f2195c104eae810ec}{http\+\_\+post\+File}} (const char $\ast$url, const char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{http_8h_a8c5726554f9603fc50a78071c63a367a}\label{http_8h_a8c5726554f9603fc50a78071c63a367a}} 
+\index{http.h@{http.h}!\_FILE\_H\_@{\_FILE\_H\_}}
+\index{\_FILE\_H\_@{\_FILE\_H\_}!http.h@{http.h}}
+\doxysubsubsection{\texorpdfstring{\_FILE\_H\_}{\_FILE\_H\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+F\+I\+L\+E\+\_\+\+H\+\_\+}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}\label{http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}} 
+\index{http.h@{http.h}!httpReceiver\_func\_t@{httpReceiver\_func\_t}}
+\index{httpReceiver\_func\_t@{httpReceiver\_func\_t}!http.h@{http.h}}
+\doxysubsubsection{\texorpdfstring{httpReceiver\_func\_t}{httpReceiver\_func\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ http\+Receiver\+\_\+func\+\_\+t) (void $\ast$file\+Data, uint16\+\_\+t data\+Sz)}
+
+
+
+typedef for the socket services data receiver function. Connects filesystem processing to the application (receive). 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{http_8h_afa6524e38503c7274efad5f3f9bbc4f8}\label{http_8h_afa6524e38503c7274efad5f3f9bbc4f8}} 
+\index{http.h@{http.h}!http\_get@{http\_get}}
+\index{http\_get@{http\_get}!http.h@{http.h}}
+\doxysubsubsection{\texorpdfstring{http\_get()}{http\_get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{url,  }\item[{\mbox{\hyperlink{http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}}}]{file\+Recvr\+\_\+func }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{http_8h_ad85723949df4cbef8bec8a4e05789f58}\label{http_8h_ad85723949df4cbef8bec8a4e05789f58}} 
+\index{http.h@{http.h}!http\_getFile@{http\_getFile}}
+\index{http\_getFile@{http\_getFile}!http.h@{http.h}}
+\doxysubsubsection{\texorpdfstring{http\_getFile()}{http\_getFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+get\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{url,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{http_8h_a59bbcedcaa9accb7de0502f3a54de81a}\label{http_8h_a59bbcedcaa9accb7de0502f3a54de81a}} 
+\index{http.h@{http.h}!http\_post@{http\_post}}
+\index{http\_post@{http\_post}!http.h@{http.h}}
+\doxysubsubsection{\texorpdfstring{http\_post()}{http\_post()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+post (\begin{DoxyParamCaption}\item[{const char $\ast$}]{url,  }\item[{const char $\ast$}]{post\+Data,  }\item[{uint16\+\_\+t}]{data\+Sz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{http_8h_a9cc4a5f51a1cb01f2195c104eae810ec}\label{http_8h_a9cc4a5f51a1cb01f2195c104eae810ec}} 
+\index{http.h@{http.h}!http\_postFile@{http\_postFile}}
+\index{http\_postFile@{http\_postFile}!http.h@{http.h}}
+\doxysubsubsection{\texorpdfstring{http\_postFile()}{http\_postFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+post\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{url,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{http_8h_ac63d8e77c4017e433b20d58b35729bbc}\label{http_8h_ac63d8e77c4017e433b20d58b35729bbc}} 
+\index{http.h@{http.h}!http\_setRecvrFunc@{http\_setRecvrFunc}}
+\index{http\_setRecvrFunc@{http\_setRecvrFunc}!http.h@{http.h}}
+\doxysubsubsection{\texorpdfstring{http\_setRecvrFunc()}{http\_setRecvrFunc()}}
+{\footnotesize\ttfamily void http\+\_\+set\+Recvr\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}}}]{file\+Recvr\+\_\+func }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{http_8h_ae0d14f04a5b54c03a47cd82dc1a11b54}\label{http_8h_ae0d14f04a5b54c03a47cd82dc1a11b54}} 
+\index{http.h@{http.h}!http\_setServerUrl@{http\_setServerUrl}}
+\index{http\_setServerUrl@{http\_setServerUrl}!http.h@{http.h}}
+\doxysubsubsection{\texorpdfstring{http\_setServerUrl()}{http\_setServerUrl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+set\+Server\+Url (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{http_8h_afb501c4b4413888d485309215d431790}\label{http_8h_afb501c4b4413888d485309215d431790}} 
+\index{http.h@{http.h}!http\_setSslOptions@{http\_setSslOptions}}
+\index{http\_setSslOptions@{http\_setSslOptions}!http.h@{http.h}}
+\doxysubsubsection{\texorpdfstring{http\_setSslOptions()}{http\_setSslOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltem1c_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+set\+Ssl\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

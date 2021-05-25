@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['ltem1_5fcreate_795',['ltem1_create',['../ltem1c_8c.html#a086d495b268c2e52fd6c9d5fcd5b4aaa',1,'ltem1_create(const ltem1PinConfig_t ltem1_config, ltem1Start_t ltem1Start, ltem1Functionality_t funcLevel):&#160;ltem1c.c'],['../ltem1c_8h.html#a086d495b268c2e52fd6c9d5fcd5b4aaa',1,'ltem1_create(const ltem1PinConfig_t ltem1_config, ltem1Start_t ltem1Start, ltem1Functionality_t funcLevel):&#160;ltem1c.c']]],
-  ['ltem1_5fdestroy_796',['ltem1_destroy',['../ltem1c_8c.html#af582158b4c99662d49265210b892683a',1,'ltem1_destroy():&#160;ltem1c.c'],['../ltem1c_8h.html#af582158b4c99662d49265210b892683a',1,'ltem1_destroy():&#160;ltem1c.c']]],
-  ['ltem1_5fdowork_797',['ltem1_doWork',['../ltem1c_8c.html#a20c7000ff6277c3f2bf6690f872774c0',1,'ltem1_doWork():&#160;ltem1c.c'],['../ltem1c_8h.html#a20c7000ff6277c3f2bf6690f872774c0',1,'ltem1_doWork():&#160;ltem1c.c']]],
-  ['ltem1_5ffaulthandler_798',['ltem1_faultHandler',['../ltem1c_8c.html#a5d715c596561f6711f3bb80957e838a4',1,'ltem1_faultHandler(uint16_t statusCode, const char *faultMsg):&#160;ltem1c.c'],['../ltem1c_8h.html#a16962565e46d30d4d7b9a76f061fe15a',1,'ltem1_faultHandler(uint16_t statusCode, const char *fault) __attribute__((noreturn)):&#160;ltem1c.c']]],
-  ['ltem1_5fregisterapplicationfaulthandler_799',['ltem1_registerApplicationFaultHandler',['../ltem1c_8c.html#a58498dd7f65011fe668a49a04bbc6d13',1,'ltem1c.c']]],
-  ['ltem1_5freset_800',['ltem1_reset',['../ltem1c_8c.html#a79654e95c6a67fe444fb90646e36f200',1,'ltem1_reset():&#160;ltem1c.c'],['../ltem1c_8h.html#a79654e95c6a67fe444fb90646e36f200',1,'ltem1_reset():&#160;ltem1c.c']]],
-  ['ltem1_5fstart_801',['ltem1_start',['../ltem1c_8c.html#a61b6ff310cf112009b61853ea1175f06',1,'ltem1_start():&#160;ltem1c.c'],['../ltem1c_8h.html#a61b6ff310cf112009b61853ea1175f06',1,'ltem1_start():&#160;ltem1c.c']]],
-  ['ltem1_5fstop_802',['ltem1_stop',['../ltem1c_8c.html#a6b4d032dcddcbdcbd8e36ab760eb3da6',1,'ltem1_stop():&#160;ltem1c.c'],['../ltem1c_8h.html#a6b4d032dcddcbdcbd8e36ab760eb3da6',1,'ltem1_stop():&#160;ltem1c.c']]]
+  ['http_5fget_933',['http_get',['../http_8h.html#afa6524e38503c7274efad5f3f9bbc4f8',1,'http.h']]],
+  ['http_5fgetfile_934',['http_getFile',['../http_8h.html#ad85723949df4cbef8bec8a4e05789f58',1,'http.h']]],
+  ['http_5fpost_935',['http_post',['../http_8h.html#a59bbcedcaa9accb7de0502f3a54de81a',1,'http.h']]],
+  ['http_5fpostfile_936',['http_postFile',['../http_8h.html#a9cc4a5f51a1cb01f2195c104eae810ec',1,'http.h']]],
+  ['http_5fsetrecvrfunc_937',['http_setRecvrFunc',['../http_8h.html#ac63d8e77c4017e433b20d58b35729bbc',1,'http.h']]],
+  ['http_5fsetserverurl_938',['http_setServerUrl',['../http_8h.html#ae0d14f04a5b54c03a47cd82dc1a11b54',1,'http.h']]],
+  ['http_5fsetssloptions_939',['http_setSslOptions',['../http_8h.html#afb501c4b4413888d485309215d431790',1,'http.h']]]
 ];
