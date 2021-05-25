@@ -212,9 +212,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2a633eb17a04cfcf8638ec75fdefcff0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a2a633eb17a04cfcf8638ec75fdefcff0">mqtt_open</a> (const char *host, uint16_t port, <a class="el" href="ltemc-mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224">sslVersion_t</a> useSslVersion, <a class="el" href="ltemc-mqtt_8h.html#af6396985642256a42f60af322da5124f">mqttVersion_t</a> useMqttVersion)</td></tr>
 <tr class="memdesc:a2a633eb17a04cfcf8638ec75fdefcff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a remote MQTT server for use.  <a href="ltemc-mqtt_8h.html#a2a633eb17a04cfcf8638ec75fdefcff0">More...</a><br /></td></tr>
 <tr class="separator:a2a633eb17a04cfcf8638ec75fdefcff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54e0ad3682e84a399c90dc4046832667"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a54e0ad3682e84a399c90dc4046832667">mqtt_connect</a> (const char *clientId, const char *username, const char *password, <a class="el" href="ltemc-mqtt_8h.html#a455558a85512fdfa977572eae49314c0">mqttSession_t</a> clean)</td></tr>
-<tr class="memdesc:a54e0ad3682e84a399c90dc4046832667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect (authenticate) to a MQTT server.  <a href="ltemc-mqtt_8h.html#a54e0ad3682e84a399c90dc4046832667">More...</a><br /></td></tr>
-<tr class="separator:a54e0ad3682e84a399c90dc4046832667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac72b2188722710984f36386c7793cc7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ac72b2188722710984f36386c7793cc7c">mqtt_connect</a> (const char *clientId, const char *username, const char *password, <a class="el" href="ltemc-mqtt_8h.html#a455558a85512fdfa977572eae49314c0">mqttSession_t</a> cleanSession)</td></tr>
+<tr class="memdesc:ac72b2188722710984f36386c7793cc7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect (authenticate) to a MQTT server.  <a href="ltemc-mqtt_8h.html#ac72b2188722710984f36386c7793cc7c">More...</a><br /></td></tr>
+<tr class="separator:ac72b2188722710984f36386c7793cc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad52f5ef51a9488dda1c573e26137371a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ad52f5ef51a9488dda1c573e26137371a">mqtt_close</a> ()</td></tr>
 <tr class="memdesc:ad52f5ef51a9488dda1c573e26137371a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and close a connection to a MQTT server.  <a href="ltemc-mqtt_8h.html#ad52f5ef51a9488dda1c573e26137371a">More...</a><br /></td></tr>
 <tr class="separator:ad52f5ef51a9488dda1c573e26137371a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -739,8 +739,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a54e0ad3682e84a399c90dc4046832667"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54e0ad3682e84a399c90dc4046832667">&#9670;&nbsp;</a></span>mqtt_connect()</h2>
+<a id="ac72b2188722710984f36386c7793cc7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac72b2188722710984f36386c7793cc7c">&#9670;&nbsp;</a></span>mqtt_connect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -783,7 +783,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">clientId</td><td>[in] - The client or device identifier for the connection. </td></tr>
     <tr><td class="paramname">username</td><td>[in] - The user identifier or name for the connection to authenticate. </td></tr>
     <tr><td class="paramname">password</td><td>[in] - The secret string or phrase to authenticate the connection. </td></tr>
-    <tr><td class="paramname">sessionClean</td><td>[in] - Directs MQTT to preserve or flush messages received prior to the session start.</td></tr>
+    <tr><td class="paramname">cleanSession</td><td>[in] - Directs MQTT to preserve or flush messages received prior to the session start.</td></tr>
   </table>
   </dd>
 </dl>

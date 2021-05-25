@@ -19,8 +19,6 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-char $\ast$ \mbox{\hyperlink{ltemc-network_8c_a0072c70b4e78852288327db83ee02a4e}{grab\+Token}} (char $\ast$source, int delimiter, char $\ast$token\+Buf, uint8\+\_\+t token\+Buf\+Sz)
-\begin{DoxyCompactList}\small\item\em Scans a C-\/\+String (char array) for the next delimeted token and null terminates it. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8c_a59f08d7a2cf3e7d6685e377aff6bc57d}{ntwk\+\_\+create}} ()
 \begin{DoxyCompactList}\small\item\em Initialize the IP network contexts structure. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-network_8h_a58db2e79250f681c695c651d586fd25f}{network\+Operator\+\_\+t}} \mbox{\hyperlink{ltemc-network_8c_abdbd836a01669dcf68329ef31c73d45a}{ntwk\+\_\+await\+Operator}} (uint16\+\_\+t wait\+Duration)
@@ -28,13 +26,13 @@ void \mbox{\hyperlink{ltemc-network_8c_a59f08d7a2cf3e7d6685e377aff6bc57d}{ntwk\+
 uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8c_a3398dd81e1b122fcacdafb90c3eb33f3}{ntwk\+\_\+get\+Active\+Pdp\+Cntxt\+Cnt}} ()
 \begin{DoxyCompactList}\small\item\em Get count of A\+PN active data contexts from B\+Gx. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}} $\ast$ \mbox{\hyperlink{ltemc-network_8c_a367bc946024cf86d08b2d31e225496b7}{ntwk\+\_\+get\+Pdp\+Cntxt}} (uint8\+\_\+t cntxt\+Id)
-\begin{DoxyCompactList}\small\item\em Get P\+DP Context\textbackslash{}\+A\+PN information. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get P\+DP Context/\+A\+PN information. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8c_a3c317e9a6462c1893406d87f3db501cb}{ntwk\+\_\+activate\+Pdp\+Context}} (uint8\+\_\+t cntxt\+Id)
-\begin{DoxyCompactList}\small\item\em Activate P\+DP Context\textbackslash{}\+A\+PN. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Activate P\+DP Context/\+A\+PN. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8c_a1211e162b3e2ae3af1a9430e6254adee}{ntwk\+\_\+deactivate\+Pdp\+Context}} (uint8\+\_\+t cntxt\+Id)
 \begin{DoxyCompactList}\small\item\em Deactivate A\+PN. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8c_a44958b492843d449944cfc78d937241d}{ntwk\+\_\+reset\+Pdp\+Contexts}} ()
-\begin{DoxyCompactList}\small\item\em Reset (deactivate\textbackslash{}activate) all network A\+P\+Ns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reset (deactivate/activate) all network A\+P\+Ns. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -77,30 +75,6 @@ void \mbox{\hyperlink{ltemc-network_8c_a44958b492843d449944cfc78d937241d}{ntwk\+
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{ltemc-network_8c_a0072c70b4e78852288327db83ee02a4e}\label{ltemc-network_8c_a0072c70b4e78852288327db83ee02a4e}} 
-\index{ltemc-\/network.c@{ltemc-\/network.c}!grabToken@{grabToken}}
-\index{grabToken@{grabToken}!ltemc-\/network.c@{ltemc-\/network.c}}
-\doxysubsubsection{\texorpdfstring{grabToken()}{grabToken()}}
-{\footnotesize\ttfamily char $\ast$ grab\+Token (\begin{DoxyParamCaption}\item[{char $\ast$}]{source,  }\item[{int}]{delimiter,  }\item[{char $\ast$}]{token\+Buf,  }\item[{uint8\+\_\+t}]{token\+Buf\+Sz }\end{DoxyParamCaption})}
-
-
-
-Scans a C-\/\+String (char array) for the next delimeted token and null terminates it. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em source} & \mbox{[}in\mbox{]} -\/ Original char array to scan. \\
-\hline
-{\em delimeter} & \mbox{[}in\mbox{]} -\/ Character separating tokens (passed as integer value). \\
-\hline
-{\em token} & \mbox{[}out\mbox{]} -\/ Pointer to where token should be copied to. \\
-\hline
-{\em token\+Sz} & \mbox{[}in\mbox{]} -\/ Size of buffer to receive token.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Pointer to the location in the source string immediately following the token. 
-\end{DoxyReturn}
 \mbox{\Hypertarget{ltemc-network_8c_a3c317e9a6462c1893406d87f3db501cb}\label{ltemc-network_8c_a3c317e9a6462c1893406d87f3db501cb}} 
 \index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_activatePdpContext@{ntwk\_activatePdpContext}}
 \index{ntwk\_activatePdpContext@{ntwk\_activatePdpContext}!ltemc-\/network.c@{ltemc-\/network.c}}
@@ -109,7 +83,7 @@ Pointer to the location in the source string immediately following the token.
 
 
 
-Activate P\+DP Context\textbackslash{}\+A\+PN. 
+Activate P\+DP Context/\+A\+PN. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -180,7 +154,7 @@ Count of active data contexts (B\+Gx max is 3).
 
 
 
-Get P\+DP Context\textbackslash{}\+A\+PN information. 
+Get P\+DP Context/\+A\+PN information. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -198,6 +172,6 @@ Pointer to P\+DP context info in active context table, N\+U\+LL if not active
 
 
 
-Reset (deactivate\textbackslash{}activate) all network A\+P\+Ns. 
+Reset (deactivate/activate) all network A\+P\+Ns. 
 
-\textbackslash{}\+N\+O\+TE\+: activate and deactivate have side effects, they internally call get\+Active\+Contexts prior to return 
+N\+O\+TE\+: activate and deactivate have side effects, they internally call get\+Active\+Contexts prior to return 

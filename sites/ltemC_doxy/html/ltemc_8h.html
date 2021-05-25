@@ -99,13 +99,13 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structltem_device__tag.html">ltemDevice_tag</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct representing the LTEm1c model. The struct behind the g_ltem1 global variable with all driver controls.  <a href="structltem_device__tag.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct representing the LTEmC model. The struct behind the g_ltem1 global variable with all driver controls.  <a href="structltem_device__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a5f38bbe75173238b7cfd922a17c69b27"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structltem_device__tag.html">ltemDevice_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a></td></tr>
-<tr class="memdesc:a5f38bbe75173238b7cfd922a17c69b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct representing the LTEm1c model. The struct behind the g_ltem1 global variable with all driver controls.  <a href="ltemc_8h.html#a5f38bbe75173238b7cfd922a17c69b27">More...</a><br /></td></tr>
+<tr class="memdesc:a5f38bbe75173238b7cfd922a17c69b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct representing the LTEmC model. The struct behind the g_ltem1 global variable with all driver controls.  <a href="ltemc_8h.html#a5f38bbe75173238b7cfd922a17c69b27">More...</a><br /></td></tr>
 <tr class="separator:a5f38bbe75173238b7cfd922a17c69b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -163,7 +163,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Struct representing the LTEm1c model. The struct behind the g_ltem1 global variable with all driver controls. </p>
+<p>Struct representing the LTEmC model. The struct behind the g_ltem1 global variable with all driver controls. </p>
 <p>Most subsystems are linked to this struct with pointers to allow for better abstraction and optional subsystems </p>
 
 </div>
@@ -244,7 +244,6 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ltem_config</td><td>[in] - The LTE modem gpio pin configuration. </td></tr>
-    <tr><td class="paramname">funcLevel</td><td>[in] - Determines the LTEm1 functionality to create and start. </td></tr>
     <tr><td class="paramname">appNotifyCB</td><td>[in] - If supplied (not NULL), this function will be invoked for significant LTEm1 events. </td></tr>
   </table>
   </dd>
@@ -319,13 +318,13 @@ Variables</h2></td></tr>
           <td class="memname">void ltem_notifyApp </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>notifType</em>, </td>
+          <td class="paramname"><em>notifyType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
+          <td class="paramname"><em>notifyMsg</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -384,7 +383,7 @@ Variables</h2></td></tr>
 <p>Registers the address (void*) of your application yield callback handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">customFaultHandler</td><td>- Pointer to application provided fault handler. </td></tr>
+    <tr><td class="paramname">yieldCb_func</td><td>[in] Callback function in application code to be invoked when LTEmC is in await section. </td></tr>
   </table>
   </dd>
 </dl>
@@ -410,7 +409,7 @@ Variables</h2></td></tr>
 <p>Power on and start the modem (perform component init). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">protos</td><td>[in] - Binary-OR'd list of expected protocol services to validate inclusion and start. </td></tr>
+    <tr><td class="paramname">protocolBitMap</td><td>[in] - Binary-OR'd list of expected protocol services to validate inclusion and start. </td></tr>
   </table>
   </dd>
 </dl>

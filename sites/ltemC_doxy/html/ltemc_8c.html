@@ -111,9 +111,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5b79bd67186c40d469be1bcc5dcd412b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a5b79bd67186c40d469be1bcc5dcd412b">ltem_doWork</a> ()</td></tr>
 <tr class="memdesc:a5b79bd67186c40d469be1bcc5dcd412b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background work task runner. To be called in application Loop() periodically.  <a href="ltemc_8c.html#a5b79bd67186c40d469be1bcc5dcd412b">More...</a><br /></td></tr>
 <tr class="separator:a5b79bd67186c40d469be1bcc5dcd412b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3303e272d37c2d5a9885846eb1d76a32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a3303e272d37c2d5a9885846eb1d76a32">ltem_notifyApp</a> (uint8_t notifType, const char *msg)</td></tr>
-<tr class="memdesc:a3303e272d37c2d5a9885846eb1d76a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function of last resort, catastrophic failure Background work task runner. To be called in application Loop() periodically.  <a href="ltemc_8c.html#a3303e272d37c2d5a9885846eb1d76a32">More...</a><br /></td></tr>
-<tr class="separator:a3303e272d37c2d5a9885846eb1d76a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80df97bbc632eda7178e56368c3d0a1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a80df97bbc632eda7178e56368c3d0a1e">ltem_notifyApp</a> (uint8_t notifyType, const char *notifyMsg)</td></tr>
+<tr class="memdesc:a80df97bbc632eda7178e56368c3d0a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function of last resort, catastrophic failure Background work task runner. To be called in application Loop() periodically.  <a href="ltemc_8c.html#a80df97bbc632eda7178e56368c3d0a1e">More...</a><br /></td></tr>
+<tr class="separator:a80df97bbc632eda7178e56368c3d0a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15f0a3db0746ff6fb0563774141aec0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a15f0a3db0746ff6fb0563774141aec0b">ltem_setYieldCb</a> (<a class="el" href="lq_platform-timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a> yieldCb_func)</td></tr>
 <tr class="memdesc:a15f0a3db0746ff6fb0563774141aec0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the address (void*) of your application yield callback handler.  <a href="ltemc_8c.html#a15f0a3db0746ff6fb0563774141aec0b">More...</a><br /></td></tr>
 <tr class="separator:a15f0a3db0746ff6fb0563774141aec0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,7 +252,6 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ltem_config</td><td>[in] - The LTE modem gpio pin configuration. </td></tr>
-    <tr><td class="paramname">funcLevel</td><td>[in] - Determines the LTEm1 functionality to create and start. </td></tr>
     <tr><td class="paramname">appNotifyCB</td><td>[in] - If supplied (not NULL), this function will be invoked for significant LTEm1 events. </td></tr>
   </table>
   </dd>
@@ -317,8 +316,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3303e272d37c2d5a9885846eb1d76a32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3303e272d37c2d5a9885846eb1d76a32">&#9670;&nbsp;</a></span>ltem_notifyApp()</h2>
+<a id="a80df97bbc632eda7178e56368c3d0a1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80df97bbc632eda7178e56368c3d0a1e">&#9670;&nbsp;</a></span>ltem_notifyApp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,13 +326,13 @@ Variables</h2></td></tr>
           <td class="memname">void ltem_notifyApp </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>notifType</em>, </td>
+          <td class="paramname"><em>notifyType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
+          <td class="paramname"><em>notifyMsg</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -392,7 +391,7 @@ Variables</h2></td></tr>
 <p>Registers the address (void*) of your application yield callback handler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">customFaultHandler</td><td>- Pointer to application provided fault handler. </td></tr>
+    <tr><td class="paramname">yieldCb_func</td><td>[in] Callback function in application code to be invoked when LTEmC is in await section. </td></tr>
   </table>
   </dd>
 </dl>
@@ -418,7 +417,7 @@ Variables</h2></td></tr>
 <p>Power on and start the modem (perform component init). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">protos</td><td>[in] - Binary-OR'd list of expected protocol services to validate inclusion and start. </td></tr>
+    <tr><td class="paramname">protocolBitMap</td><td>[in] - Binary-OR'd list of expected protocol services to validate inclusion and start. </td></tr>
   </table>
   </dd>
 </dl>

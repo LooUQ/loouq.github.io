@@ -200,7 +200,7 @@ Waits for an AT command result until completed response or timeout.
 
 
 \begin{DoxyParams}{Parameters}
-{\em aut\+Close\+Action} & \mbox{[}in\mbox{]} U\+SE W\+I\+TH C\+A\+U\+T\+I\+ON -\/ On result, close the action. The caller only needs the status code.\\
+{\em auto\+Close\+Action} & \mbox{[}in\mbox{]} U\+SE W\+I\+TH C\+A\+U\+T\+I\+ON -\/ On result, close the action. The caller only needs the status code.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -436,8 +436,6 @@ Invokes a B\+Gx AT command with application specified action values.
 
 \begin{DoxyParams}{Parameters}
 {\em cmd\+Str} & \mbox{[}in\mbox{]} The command string to send to the B\+G96 module. \\
-\hline
-{\em retries} & \mbox{[}in\mbox{]} Number of retries to obtain action lock that should be attempted. 0 = no retries. \\
 \hline
 {\em timeout} & \mbox{[}in\mbox{]} Number of milliseconds the action can take. Use system default A\+C\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+Tml or your value. \\
 \hline

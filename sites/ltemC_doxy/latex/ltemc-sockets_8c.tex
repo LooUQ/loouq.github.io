@@ -24,7 +24,7 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{ltemc-sockets_8c_a429b4d6a3fb972e012b91ea9175d7338}{sckt\+\_\+create}} ()
-\begin{DoxyCompactList}\small\item\em Allocate and initialize the IP socket protocol (T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL) structure. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Allocate and initialize the IP socket protocol (T\+C\+P/\+U\+D\+P/\+S\+SL) structure. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-sockets_8c_aa177bf3c8bfc9403d4427a7c0e26d4ba}{sckt\+\_\+open}} (\mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} socket\+Id, \mbox{\hyperlink{ltemc-network_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}} protocol, const char $\ast$host, uint16\+\_\+t rmt\+Port, uint16\+\_\+t lcl\+Port, bool clean\+Session, \mbox{\hyperlink{ltemc-sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}{receiver\+\_\+func\+\_\+t}} rcvr\+\_\+func)
 \begin{DoxyCompactList}\small\item\em Open a data connection (socket) to d data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-sockets_8c_a938a6003effe7eece78f0de391e99891}{sckt\+\_\+close}} (uint8\+\_\+t socket\+Id)
@@ -38,7 +38,7 @@ bool \mbox{\hyperlink{ltemc-sockets_8c_a2ac55ec1d968fc1a90320233b7a583ca}{sckt\+
 \mbox{\hyperlink{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-sockets_8c_a7c9f32544b937ebb7f63e9499ef15e82}{sckt\+\_\+send}} (\mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} socket\+Id, const char $\ast$data, uint16\+\_\+t data\+Sz)
 \begin{DoxyCompactList}\small\item\em Send data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-sockets_8c_accd2287873108ebef20cdf22563105c4}{sckt\+\_\+do\+Work}} ()
-\begin{DoxyCompactList}\small\item\em Perform background tasks to move socket data through pipeline, deliver RX data to application and update socket\textbackslash{}\+I\+OP status values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Perform background tasks to move socket data through pipeline, deliver RX data to application and update socket/\+I\+OP status values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -135,7 +135,7 @@ Close out all T\+C\+P/\+IP sockets on a context.
 
 
 
-Allocate and initialize the IP socket protocol (T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL) structure. 
+Allocate and initialize the IP socket protocol (T\+C\+P/\+U\+D\+P/\+S\+SL) structure. 
 
 \mbox{\Hypertarget{ltemc-sockets_8c_accd2287873108ebef20cdf22563105c4}\label{ltemc-sockets_8c_accd2287873108ebef20cdf22563105c4}} 
 \index{ltemc-\/sockets.c@{ltemc-\/sockets.c}!sckt\_doWork@{sckt\_doWork}}
@@ -145,7 +145,7 @@ Allocate and initialize the IP socket protocol (T\+CP\textbackslash{}\+U\+DP\tex
 
 
 
-Perform background tasks to move socket data through pipeline, deliver RX data to application and update socket\textbackslash{}\+I\+OP status values. 
+Perform background tasks to move socket data through pipeline, deliver RX data to application and update socket/\+I\+OP status values. 
 
 \mbox{\Hypertarget{ltemc-sockets_8c_a8109884e2c8c9e61ad3ddde5d13b16ed}\label{ltemc-sockets_8c_a8109884e2c8c9e61ad3ddde5d13b16ed}} 
 \index{ltemc-\/sockets.c@{ltemc-\/sockets.c}!sckt\_flush@{sckt\_flush}}

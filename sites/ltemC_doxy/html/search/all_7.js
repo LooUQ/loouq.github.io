@@ -59,6 +59,5 @@ var searchData=
   ['gpiopinmode_5ft_253',['gpioPinMode_t',['../lq_platform-gpio_8h.html#adcda12cd23390bc6e1a6b1d22ceb28f4',1,'lqPlatform-gpio.h']]],
   ['gpiopinvalue_5ft_254',['gpioPinValue_t',['../lq_platform-gpio_8h.html#aa899c19b952904bfbe89debaf7d1733a',1,'lqPlatform-gpio.h']]],
   ['gpiovalue_5fhigh_255',['gpioValue_high',['../lq_platform-gpio_8h.html#aa899c19b952904bfbe89debaf7d1733aa45d5b6affbc95138cbd7cb820cbc3351',1,'lqPlatform-gpio.h']]],
-  ['gpiovalue_5flow_256',['gpioValue_low',['../lq_platform-gpio_8h.html#aa899c19b952904bfbe89debaf7d1733aa5720d6f5d4f3f7084487b99d737a7664',1,'lqPlatform-gpio.h']]],
-  ['grabtoken_257',['grabToken',['../ltemc-network_8c.html#a0072c70b4e78852288327db83ee02a4e',1,'ltemc-network.c']]]
+  ['gpiovalue_5flow_256',['gpioValue_low',['../lq_platform-gpio_8h.html#aa899c19b952904bfbe89debaf7d1733aa5720d6f5d4f3f7084487b99d737a7664',1,'lqPlatform-gpio.h']]]
 ];

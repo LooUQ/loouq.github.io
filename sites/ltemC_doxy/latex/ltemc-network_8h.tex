@@ -79,13 +79,13 @@ uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8h_a3398dd81e1b122fcacdafb90c3eb33f3
 void \mbox{\hyperlink{ltemc-network_8h_a3bda30e06064bcd9899972a12d766a3f}{ntwk\+\_\+config\+Pdp\+Cntxt}} (uint8\+\_\+t contxt\+Id, \mbox{\hyperlink{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}{pdp\+Cntxt\+Ip\+Type\+\_\+t}} ip\+Type, const char $\ast$user\+Id, const char $\ast$pw, \mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}} auth\+Method)
 \item 
 \mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}} $\ast$ \mbox{\hyperlink{ltemc-network_8h_ad85d2407b51d513c48d0dc2622d6d2cb}{ntwk\+\_\+get\+Pdp\+Cntxt}} (uint8\+\_\+t contxt\+Id)
-\begin{DoxyCompactList}\small\item\em Get P\+DP Context\textbackslash{}\+A\+PN information. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get P\+DP Context/\+A\+PN information. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8h_a1c89922d8c330ce6a33debe96c48e317}{ntwk\+\_\+activate\+Pdp\+Context}} (uint8\+\_\+t contxt\+Id)
-\begin{DoxyCompactList}\small\item\em Activate P\+DP Context\textbackslash{}\+A\+PN. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Activate P\+DP Context/\+A\+PN. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8h_ad3bc4e9d0b6d6f181ac180fbd91d5ce0}{ntwk\+\_\+deactivate\+Pdp\+Context}} (uint8\+\_\+t contxt\+Id)
 \begin{DoxyCompactList}\small\item\em Deactivate A\+PN. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8h_a44958b492843d449944cfc78d937241d}{ntwk\+\_\+reset\+Pdp\+Contexts}} ()
-\begin{DoxyCompactList}\small\item\em Reset (deactivate\textbackslash{}activate) all network A\+P\+Ns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reset (deactivate/activate) all network A\+P\+Ns. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -290,7 +290,7 @@ protocol\+\_\+void&No protocol, used in code to generally signal a null conditio
 
 
 
-Activate P\+DP Context\textbackslash{}\+A\+PN. 
+Activate P\+DP Context/\+A\+PN. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -367,7 +367,7 @@ Count of active data contexts (B\+Gx max is 3).
 
 
 
-Get P\+DP Context\textbackslash{}\+A\+PN information. 
+Get P\+DP Context/\+A\+PN information. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -385,6 +385,6 @@ Pointer to P\+DP context info in active context table, N\+U\+LL if not active
 
 
 
-Reset (deactivate\textbackslash{}activate) all network A\+P\+Ns. 
+Reset (deactivate/activate) all network A\+P\+Ns. 
 
-\textbackslash{}\+N\+O\+TE\+: activate and deactivate have side effects, they internally call get\+Active\+Contexts prior to return 
+N\+O\+TE\+: activate and deactivate have side effects, they internally call get\+Active\+Contexts prior to return 

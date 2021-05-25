@@ -466,7 +466,7 @@ Functions</h2></td></tr>
 <p>Waits for an AT command result until completed response or timeout. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">autCloseAction</td><td>[in] USE WITH CAUTION - On result, close the action. The caller only needs the status code.</td></tr>
+    <tr><td class="paramname">autoCloseAction</td><td>[in] USE WITH CAUTION - On result, close the action. The caller only needs the status code.</td></tr>
   </table>
   </dd>
 </dl>
@@ -993,7 +993,6 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cmdStr</td><td>[in] The command string to send to the BG96 module. </td></tr>
-    <tr><td class="paramname">retries</td><td>[in] Number of retries to obtain action lock that should be attempted. 0 = no retries. </td></tr>
     <tr><td class="paramname">timeout</td><td>[in] Number of milliseconds the action can take. Use system default ACTION_TIMEOUTml or your value. </td></tr>
     <tr><td class="paramname">taskCompleteParser</td><td>[in] Custom command response parser to signal result is complete. NULL for std parser.</td></tr>
   </table>

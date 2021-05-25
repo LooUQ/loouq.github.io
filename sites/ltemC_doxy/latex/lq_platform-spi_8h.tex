@@ -131,6 +131,14 @@ spi\+Data\+Mode\+\_\+3&\\
 
 Initialize and configure S\+PI resource. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em chip\+Sel\+Line} & \mbox{[}in\mbox{]} -\/ G\+P\+IO for CS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+PI device 
+\end{DoxyReturn}
 \mbox{\Hypertarget{lq_platform-spi_8h_a2e81266ae193ee01843d1983f4e9c070}\label{lq_platform-spi_8h_a2e81266ae193ee01843d1983f4e9c070}} 
 \index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_protectFromInterrupt@{spi\_protectFromInterrupt}}
 \index{spi\_protectFromInterrupt@{spi\_protectFromInterrupt}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
@@ -172,12 +180,14 @@ Shutdown S\+PI facility.
 Transfer a buffer to the N\+XP bridge. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em spi} & The S\+PI device for communications. \\
+\begin{DoxyParams}{Parameters}
+{\em spi} & \mbox{[}in\mbox{]} -\/ The S\+PI device for communications. \\
 \hline
-\mbox{\texttt{ in}}  & {\em reg\+Addr\+Byte} & Bridge register address specifying the I/O to perform. \\
+{\em reg\+Addr\+Byte} & \mbox{[}in\mbox{]} -\/ Bridge register address specifying the I/O to perform. \\
 \hline
- & {\em \mbox{[}in} & \\
+{\em buf} & \mbox{[}in/out\mbox{]} -\/ The character pointer to the buffer to transfer to/from. \\
+\hline
+{\em xfer\+\_\+len} & \mbox{[}in\mbox{]} -\/ The number of characters to transfer. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{lq_platform-spi_8h_a76655f833572c833b081b7f84d4e1667}\label{lq_platform-spi_8h_a76655f833572c833b081b7f84d4e1667}} 
@@ -191,12 +201,15 @@ Transfer a buffer to the N\+XP bridge.
 Transfer a byte to the N\+XP bridge. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em spi} & The S\+PI device for communications. \\
+\begin{DoxyParams}{Parameters}
+{\em spi} & \mbox{[}in\mbox{]} -\/ The S\+PI device for communications. \\
 \hline
- & {\em \mbox{[}in} & \\
+{\em data} & \mbox{[}in/out\mbox{]} -\/ The word to transfer to the N\+XP bridge.\\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 16-\/bit word received during the transfer. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{lq_platform-spi_8h_a9a6086ceffbbf588c2c92c07add96505}\label{lq_platform-spi_8h_a9a6086ceffbbf588c2c92c07add96505}} 
 \index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_transferWord@{spi\_transferWord}}
 \index{spi\_transferWord@{spi\_transferWord}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
@@ -208,9 +221,12 @@ Transfer a byte to the N\+XP bridge.
 Transfer a word (16-\/bits) to the N\+XP bridge. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em spi} & The S\+PI device for communications. \\
+\begin{DoxyParams}{Parameters}
+{\em spi} & \mbox{[}in\mbox{]} -\/ The S\+PI device for communications. \\
 \hline
- & {\em \mbox{[}in} & \\
+{\em data} & \mbox{[}in/out\mbox{]} -\/ The word to transfer to the N\+XP bridge.\\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 16-\/bit word received during the transfer. 
+\end{DoxyReturn}

@@ -102,7 +102,7 @@ void \mbox{\hyperlink{ltemc-mqtt_8h_a8051af90648cef323dd3d207f477657b}{mqtt\+\_\
 \begin{DoxyCompactList}\small\item\em Query the status of the M\+Q\+TT server state. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8h_a2a633eb17a04cfcf8638ec75fdefcff0}{mqtt\+\_\+open}} (const char $\ast$host, uint16\+\_\+t port, \mbox{\hyperlink{ltemc-mqtt_8h_af4fb66f436707c44f2e350dbc5108224}{ssl\+Version\+\_\+t}} use\+Ssl\+Version, \mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}} use\+Mqtt\+Version)
 \begin{DoxyCompactList}\small\item\em Open a remote M\+Q\+TT server for use. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8h_a54e0ad3682e84a399c90dc4046832667}{mqtt\+\_\+connect}} (const char $\ast$client\+Id, const char $\ast$username, const char $\ast$password, \mbox{\hyperlink{ltemc-mqtt_8h_a455558a85512fdfa977572eae49314c0}{mqtt\+Session\+\_\+t}} clean)
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8h_ac72b2188722710984f36386c7793cc7c}{mqtt\+\_\+connect}} (const char $\ast$client\+Id, const char $\ast$username, const char $\ast$password, \mbox{\hyperlink{ltemc-mqtt_8h_a455558a85512fdfa977572eae49314c0}{mqtt\+Session\+\_\+t}} clean\+Session)
 \begin{DoxyCompactList}\small\item\em Connect (authenticate) to a M\+Q\+TT server. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-mqtt_8h_ad52f5ef51a9488dda1c573e26137371a}{mqtt\+\_\+close}} ()
 \begin{DoxyCompactList}\small\item\em Disconnect and close a connection to a M\+Q\+TT server. \end{DoxyCompactList}\item 
@@ -491,7 +491,7 @@ Disconnect and close a connection to a M\+Q\+TT server.
 \mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The socket based identifier for the connection to close \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-mqtt_8h_a54e0ad3682e84a399c90dc4046832667}\label{ltemc-mqtt_8h_a54e0ad3682e84a399c90dc4046832667}} 
+\mbox{\Hypertarget{ltemc-mqtt_8h_ac72b2188722710984f36386c7793cc7c}\label{ltemc-mqtt_8h_ac72b2188722710984f36386c7793cc7c}} 
 \index{ltemc-\/mqtt.h@{ltemc-\/mqtt.h}!mqtt\_connect@{mqtt\_connect}}
 \index{mqtt\_connect@{mqtt\_connect}!ltemc-\/mqtt.h@{ltemc-\/mqtt.h}}
 \doxysubsubsection{\texorpdfstring{mqtt\_connect()}{mqtt\_connect()}}
@@ -509,7 +509,7 @@ Connect (authenticate) to a M\+Q\+TT server.
 \hline
 {\em password} & \mbox{[}in\mbox{]} -\/ The secret string or phrase to authenticate the connection. \\
 \hline
-{\em session\+Clean} & \mbox{[}in\mbox{]} -\/ Directs M\+Q\+TT to preserve or flush messages received prior to the session start.\\
+{\em clean\+Session} & \mbox{[}in\mbox{]} -\/ Directs M\+Q\+TT to preserve or flush messages received prior to the session start.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

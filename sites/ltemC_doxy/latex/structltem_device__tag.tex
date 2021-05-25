@@ -2,7 +2,7 @@
 \label{structltem_device__tag}\index{ltemDevice\_tag@{ltemDevice\_tag}}
 
 
-Struct representing the L\+T\+Em1c model. The struct behind the g\+\_\+ltem1 global variable with all driver controls.  
+Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls.  
 
 
 
@@ -27,13 +27,13 @@ volatile \mbox{\hyperlink{ltemc-iop_8h_a1ed4c59909ec1a9a0007da89586254ff}{iop\+\
 \mbox{\hyperlink{ltemc-atcmd_8h_a46359dab5bcffab8c23b412d093ce64e}{atcmd\+\_\+t}} $\ast$ \mbox{\hyperlink{structltem_device__tag_ad6546644e1d219674d5e26e85a14c09f}{atcmd}}
 \begin{DoxyCompactList}\small\item\em Action subsystem controls. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structltem_device__tag_a770e37c3ac5e43757b7f0256f6108811}{cancellation\+Request}}
-\begin{DoxyCompactList}\small\item\em For R\+T\+OS implementations, token to request cancellation of long running task\textbackslash{}action. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em For R\+T\+OS implementations, token to request cancellation of long running task/action. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}} $\ast$ \mbox{\hyperlink{structltem_device__tag_a7abe378c9b5c047f6d5c61104df148bb}{modem\+Info}}
 \begin{DoxyCompactList}\small\item\em Data structure holding persistent information about application modem state. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-network_8h_afdeb09cbf237e761c59dcb9084f01a3a}{network\+\_\+t}} $\ast$ \mbox{\hyperlink{structltem_device__tag_a56cc8881cfd18b793bbb458a4ee26eb4}{network}}
 \begin{DoxyCompactList}\small\item\em Data structure representing the cellular network. \end{DoxyCompactList}\item 
 void $\ast$ \mbox{\hyperlink{structltem_device__tag_ad28d7e62e2f30ddd0102c0de0021eb2b}{sockets}}
-\begin{DoxyCompactList}\small\item\em IP sockets subsystem (T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em IP sockets subsystem (T\+C\+P/\+U\+D\+P/\+S\+SL). \end{DoxyCompactList}\item 
 void($\ast$ \mbox{\hyperlink{structltem_device__tag_a6567e8c22c5559a6182d18af1ec15dca}{sckt\+Work\+\_\+func}} )()
 \begin{DoxyCompactList}\small\item\em Sockets background do work function. \end{DoxyCompactList}\item 
 void $\ast$ \mbox{\hyperlink{structltem_device__tag_adf6a0a6eb51afe4b8c72f240281aa19a}{mqtt}}
@@ -43,7 +43,7 @@ void($\ast$ \mbox{\hyperlink{structltem_device__tag_a4132e9116b530bad8922f6b606e
 
 
 \doxysubsection{Detailed Description}
-Struct representing the L\+T\+Em1c model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. 
+Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. 
 
 Most subsystems are linked to this struct with pointers to allow for better abstraction and optional subsystems 
 
@@ -76,7 +76,7 @@ Action subsystem controls.
 
 
 
-For R\+T\+OS implementations, token to request cancellation of long running task\textbackslash{}action. 
+For R\+T\+OS implementations, token to request cancellation of long running task/action. 
 
 \mbox{\Hypertarget{structltem_device__tag_a273a8b7c0260d25a374376909ce50436}\label{structltem_device__tag_a273a8b7c0260d25a374376909ce50436}} 
 \index{ltemDevice\_tag@{ltemDevice\_tag}!dataContext@{dataContext}}
@@ -176,7 +176,7 @@ Sockets background do work function.
 
 
 
-IP sockets subsystem (T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL). 
+IP sockets subsystem (T\+C\+P/\+U\+D\+P/\+S\+SL). 
 
 \mbox{\Hypertarget{structltem_device__tag_ac601bfed69a49573d0dd28b73a9f171e}\label{structltem_device__tag_ac601bfed69a49573d0dd28b73a9f171e}} 
 \index{ltemDevice\_tag@{ltemDevice\_tag}!spi@{spi}}

@@ -25,7 +25,7 @@ char $\ast$ \mbox{\hyperlink{structkey_value_dict__tag_a25f44a74cc796e9496b27d19
 \doxysubsection{Detailed Description}
 Struct exposing action\textquotesingle{}s parameters collection (names and values as c-\/strings). 
 
-N\+O\+TE\+: This struct maps key\textbackslash{}value pairs in an existing H\+T\+TP query string formated char array. The array is parsed using the lqc\+\_\+parse\+Query\+String\+Dict() function. Parsing M\+U\+T\+A\+T\+ES the original char array. The original char array must stay in scope as it contains the keys and the values. The key\+Value\+Dict struct only provides a higher level map of the data stored in the char array and a utility function lqc\+\_\+get\+Dict\+Value(key) to access the value.
+N\+O\+TE\+: This struct maps key/value pairs in an existing H\+T\+TP query string formated char array. The array is parsed using the lqc\+\_\+parse\+Query\+String\+Dict() function. Parsing M\+U\+T\+A\+T\+ES the original char array. The original char array must stay in scope as it contains the keys and the values. The key\+Value\+Dict struct only provides a higher level map of the data stored in the char array and a utility function lqc\+\_\+get\+Dict\+Value(key) to access the value.
 
 If copy (ex\+: free source) of underlying char array needed\+: memcpy(destination\+\_\+ptr, keys\mbox{[}0\mbox{]}, length) 
 

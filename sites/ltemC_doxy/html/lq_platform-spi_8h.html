@@ -240,6 +240,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize and configure SPI resource. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chipSelLine</td><td>[in] - GPIO for CS </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SPI device </dd></dl>
 
 </div>
 </div>
@@ -354,9 +361,10 @@ Functions</h2></td></tr>
 <p>Transfer a buffer to the NXP bridge. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">spi</td><td>The SPI device for communications. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">regAddrByte</td><td>Bridge register address specifying the I/O to perform. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">[in</td><td></td></tr>
+    <tr><td class="paramname">spi</td><td>[in] - The SPI device for communications. </td></tr>
+    <tr><td class="paramname">regAddrByte</td><td>[in] - Bridge register address specifying the I/O to perform. </td></tr>
+    <tr><td class="paramname">buf</td><td>[in/out] - The character pointer to the buffer to transfer to/from. </td></tr>
+    <tr><td class="paramname">xfer_len</td><td>[in] - The number of characters to transfer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -392,11 +400,12 @@ Functions</h2></td></tr>
 <p>Transfer a byte to the NXP bridge. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">spi</td><td>The SPI device for communications. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">[in</td><td></td></tr>
+    <tr><td class="paramname">spi</td><td>[in] - The SPI device for communications. </td></tr>
+    <tr><td class="paramname">data</td><td>[in/out] - The word to transfer to the NXP bridge.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A 16-bit word received during the transfer. </dd></dl>
 
 </div>
 </div>
@@ -429,11 +438,12 @@ Functions</h2></td></tr>
 <p>Transfer a word (16-bits) to the NXP bridge. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">spi</td><td>The SPI device for communications. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">[in</td><td></td></tr>
+    <tr><td class="paramname">spi</td><td>[in] - The SPI device for communications. </td></tr>
+    <tr><td class="paramname">data</td><td>[in/out] - The word to transfer to the NXP bridge.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A 16-bit word received during the transfer. </dd></dl>
 
 </div>
 </div>

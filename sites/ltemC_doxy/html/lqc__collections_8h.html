@@ -126,7 +126,7 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a64959b1832a2bf2a0bfb74caee51f108"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lqc__collections_8h.html#aa31aa11a202a7940654a43d9f75f708a">keyValueDict_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lqc__collections_8h.html#a64959b1832a2bf2a0bfb74caee51f108">lqc_createDictFromQueryString</a> (char *dictSrc)</td></tr>
-<tr class="memdesc:a64959b1832a2bf2a0bfb74caee51f108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans a C-String (char array) for the next delimeted token and null terminates it.  <a href="lqc__collections_8h.html#a64959b1832a2bf2a0bfb74caee51f108">More...</a><br /></td></tr>
+<tr class="memdesc:a64959b1832a2bf2a0bfb74caee51f108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a HTTP style query string (key and value pairs), creating a dictionary overlay for the keys and values.  <a href="lqc__collections_8h.html#a64959b1832a2bf2a0bfb74caee51f108">More...</a><br /></td></tr>
 <tr class="separator:a64959b1832a2bf2a0bfb74caee51f108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a604b38aa3942587af8e0e63fc370cb90"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lqc__collections_8h.html#a604b38aa3942587af8e0e63fc370cb90">lqc_getDictValue</a> (const char *key, <a class="el" href="lqc__collections_8h.html#aa31aa11a202a7940654a43d9f75f708a">keyValueDict_t</a> dict)</td></tr>
 <tr class="memdesc:a604b38aa3942587af8e0e63fc370cb90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans the qryProps struct for the a prop and returns the value from the underlying char array.  <a href="lqc__collections_8h.html#a604b38aa3942587af8e0e63fc370cb90">More...</a><br /></td></tr>
@@ -164,7 +164,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Struct exposing action's parameters collection (names and values as c-strings). </p>
-<p>NOTE: This struct maps key\value pairs in an existing HTTP query string formated char array. The array is parsed using the lqc_parseQueryStringDict() function. Parsing MUTATES the original char array. The original char array must stay in scope as it contains the keys and the values. The keyValueDict struct only provides a higher level map of the data stored in the char array and a utility function lqc_getDictValue(key) to access the value.</p>
+<p>NOTE: This struct maps key/value pairs in an existing HTTP query string formated char array. The array is parsed using the lqc_parseQueryStringDict() function. Parsing MUTATES the original char array. The original char array must stay in scope as it contains the keys and the values. The keyValueDict struct only provides a higher level map of the data stored in the char array and a utility function lqc_getDictValue(key) to access the value.</p>
 <p>If copy (ex: free source) of underlying char array needed: memcpy(destination_ptr, keys[0], length) </p>
 
 </div>
@@ -239,21 +239,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Scans a C-String (char array) for the next delimeted token and null terminates it. </p>
+<p>Parses a HTTP style query string (key and value pairs), creating a dictionary overlay for the keys and values. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Original char array to scan. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Original char array to scan. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Original char array to scan. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Original char array to scan.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Struct with map (pointers) to the keys and values (within the source array)</dd></dl>
-<p>Parses a HTTP style query string (key\value pairs) and creates a dictionary overlay for the keys and values.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dictSrc</td><td>- Char pointer to the c-string containing key value pairs to identify. NOTE: the source is mutated in the process, keys\values are NULL term'd.</td></tr>
+    <tr><td class="paramname">dictSrc</td><td>[in] - Char pointer to the c-string containing key value pairs to identify. NOTE: the source is mutated in the process, keys/values are NULL term'd.</td></tr>
   </table>
   </dd>
 </dl>
@@ -290,7 +279,8 @@ Functions</h2></td></tr>
 <p>Scans the qryProps struct for the a prop and returns the value from the underlying char array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">propsName</td><td>- Char pointer to the c-string containing message properties passed in topic</td></tr>
+    <tr><td class="paramname">key</td><td>[in] - Char pointer to the c-string to locate in the dictionary </td></tr>
+    <tr><td class="paramname">dict</td><td>[in] - Dictionary to be searched</td></tr>
   </table>
   </dd>
 </dl>

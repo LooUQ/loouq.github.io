@@ -173,16 +173,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a3bda30e06064bcd9899972a12d766a3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a3bda30e06064bcd9899972a12d766a3f">ntwk_configPdpCntxt</a> (uint8_t contxtId, <a class="el" href="ltemc-network_8h.html#a0086f053bcf6b99f83d0680de3b087f8">pdpCntxtIpType_t</a> ipType, const char *userId, const char *pw, <a class="el" href="ltemc-network_8h.html#a8b858b502f4f3a91124a381d4d35fdc9">pdpCntxtAuthMethods_t</a> authMethod)</td></tr>
 <tr class="separator:a3bda30e06064bcd9899972a12d766a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad85d2407b51d513c48d0dc2622d6d2cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a09b80c31caeeb52da11154ae652c16d2">pdpCntxt_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#ad85d2407b51d513c48d0dc2622d6d2cb">ntwk_getPdpCntxt</a> (uint8_t contxtId)</td></tr>
-<tr class="memdesc:ad85d2407b51d513c48d0dc2622d6d2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PDP Context\APN information.  <a href="ltemc-network_8h.html#ad85d2407b51d513c48d0dc2622d6d2cb">More...</a><br /></td></tr>
+<tr class="memdesc:ad85d2407b51d513c48d0dc2622d6d2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PDP Context/APN information.  <a href="ltemc-network_8h.html#ad85d2407b51d513c48d0dc2622d6d2cb">More...</a><br /></td></tr>
 <tr class="separator:ad85d2407b51d513c48d0dc2622d6d2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c89922d8c330ce6a33debe96c48e317"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a1c89922d8c330ce6a33debe96c48e317">ntwk_activatePdpContext</a> (uint8_t contxtId)</td></tr>
-<tr class="memdesc:a1c89922d8c330ce6a33debe96c48e317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context\APN.  <a href="ltemc-network_8h.html#a1c89922d8c330ce6a33debe96c48e317">More...</a><br /></td></tr>
+<tr class="memdesc:a1c89922d8c330ce6a33debe96c48e317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN.  <a href="ltemc-network_8h.html#a1c89922d8c330ce6a33debe96c48e317">More...</a><br /></td></tr>
 <tr class="separator:a1c89922d8c330ce6a33debe96c48e317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3bc4e9d0b6d6f181ac180fbd91d5ce0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#ad3bc4e9d0b6d6f181ac180fbd91d5ce0">ntwk_deactivatePdpContext</a> (uint8_t contxtId)</td></tr>
 <tr class="memdesc:ad3bc4e9d0b6d6f181ac180fbd91d5ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deactivate APN.  <a href="ltemc-network_8h.html#ad3bc4e9d0b6d6f181ac180fbd91d5ce0">More...</a><br /></td></tr>
 <tr class="separator:ad3bc4e9d0b6d6f181ac180fbd91d5ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44958b492843d449944cfc78d937241d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a44958b492843d449944cfc78d937241d">ntwk_resetPdpContexts</a> ()</td></tr>
-<tr class="memdesc:a44958b492843d449944cfc78d937241d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset (deactivate\activate) all network APNs.  <a href="ltemc-network_8h.html#a44958b492843d449944cfc78d937241d">More...</a><br /></td></tr>
+<tr class="memdesc:a44958b492843d449944cfc78d937241d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset (deactivate/activate) all network APNs.  <a href="ltemc-network_8h.html#a44958b492843d449944cfc78d937241d">More...</a><br /></td></tr>
 <tr class="separator:a44958b492843d449944cfc78d937241d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -463,7 +463,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Activate PDP Context\APN. </p>
+<p>Activate PDP Context/APN. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cntxtId</td><td>[in] - The APN to operate on. Typically 0 or 1 </td></tr>
@@ -627,7 +627,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get PDP Context\APN information. </p>
+<p>Get PDP Context/APN information. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cntxtId</td><td>[in] - The PDP context (APN) to retreive.</td></tr>
@@ -653,8 +653,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reset (deactivate\activate) all network APNs. </p>
-<p>\NOTE: activate and deactivate have side effects, they internally call getActiveContexts prior to return </p>
+<p>Reset (deactivate/activate) all network APNs. </p>
+<p>NOTE: activate and deactivate have side effects, they internally call getActiveContexts prior to return </p>
 
 </div>
 </div>

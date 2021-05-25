@@ -12,7 +12,7 @@
 \#define \mbox{\hyperlink{ltemc-filesys_8c_ad3bc5128d1db6dc23ab8020ee584a314}{F\+I\+L\+E\+\_\+\+P\+O\+S\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET}}~12
 \begin{DoxyCompactList}\small\item\em +Q\+F\+P\+O\+S\+I\+T\+I\+ON\+: \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{ltemc-filesys_8c_a5b6308dd5979090e7f7fb32af7aacc83}{F\+I\+L\+E\+\_\+\+O\+P\+E\+N\+\_\+\+D\+A\+T\+A\+O\+F\+F\+S\+ET}}~9
-\begin{DoxyCompactList}\small\item\em +Q\+F\+O\+P\+EN\+: $<$filehandle$>$ \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em +Q\+F\+O\+P\+EN\+: \{filehandle\} \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{ltemc-filesys_8c_abf8dda46d57ee9a7ddc7e2e8900e2dc2}{F\+I\+L\+E\+\_\+\+T\+I\+M\+E\+O\+U\+Tml}}~800
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
@@ -63,7 +63,7 @@ void \mbox{\hyperlink{ltemc-filesys_8c_a34aaea7c31c95b3af9220079f4d9b348}{filsys
 
 
 
-+Q\+F\+O\+P\+EN\+: $<$filehandle$>$ 
++Q\+F\+O\+P\+EN\+: \{filehandle\} 
 
 \mbox{\Hypertarget{ltemc-filesys_8c_ad3bc5128d1db6dc23ab8020ee584a314}\label{ltemc-filesys_8c_ad3bc5128d1db6dc23ab8020ee584a314}} 
 \index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!FILE\_POS\_DATAOFFSET@{FILE\_POS\_DATAOFFSET}}
@@ -113,8 +113,8 @@ Result\+Code=200 if successful, otherwise error code (H\+T\+TP status type).
 Delete a file from the file system. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em name\+Pattern} & -\/ \char`\"{}$\ast$\char`\"{} or filename to delete. Wildcard with filename is not allowed.\\
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & \mbox{[}in\mbox{]} -\/ \char`\"{}$\ast$\char`\"{} or filename to delete. Wildcard with filename is not allowed.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

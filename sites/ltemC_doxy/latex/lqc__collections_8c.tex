@@ -5,7 +5,7 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}{key\+Value\+Dict\+\_\+t}} \mbox{\hyperlink{lqc__collections_8c_a64959b1832a2bf2a0bfb74caee51f108}{lqc\+\_\+create\+Dict\+From\+Query\+String}} (char $\ast$dict\+Src)
-\begin{DoxyCompactList}\small\item\em Scans a C-\/\+String (char array) for the next delimeted token and null terminates it. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Parses a H\+T\+TP style query string (key and value pairs), creating a dictionary overlay for the keys and values. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{lqc__collections_8c_a604b38aa3942587af8e0e63fc370cb90}{lqc\+\_\+get\+Dict\+Value}} (const char $\ast$key, \mbox{\hyperlink{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}{key\+Value\+Dict\+\_\+t}} dict)
 \begin{DoxyCompactList}\small\item\em Scans the qry\+Props struct for the a prop and returns the value from the underlying char array. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{lqc__collections_8h_adc7bbc6b88a96174569cf32877c775d0}{lqc\+Json\+Prop\+Value\+\_\+t}} \mbox{\hyperlink{lqc__collections_8c_a783693dd55866839cf5fb99089598792}{lqc\+\_\+get\+Json\+Prop\+Value}} (const char $\ast$json\+Src, const char $\ast$prop\+Name)
@@ -21,27 +21,11 @@ char $\ast$ \mbox{\hyperlink{lqc__collections_8c_a604b38aa3942587af8e0e63fc370cb
 
 
 
-Scans a C-\/\+String (char array) for the next delimeted token and null terminates it. 
+Parses a H\+T\+TP style query string (key and value pairs), creating a dictionary overlay for the keys and values. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em source} & -\/ Original char array to scan. \\
-\hline
-\mbox{\texttt{ in}}  & {\em source} & -\/ Original char array to scan. \\
-\hline
-\mbox{\texttt{ in}}  & {\em source} & -\/ Original char array to scan. \\
-\hline
-\mbox{\texttt{ in}}  & {\em source} & -\/ Original char array to scan.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Struct with map (pointers) to the keys and values (within the source array)
-\end{DoxyReturn}
-Parses a H\+T\+TP style query string (key\textbackslash{}value pairs) and creates a dictionary overlay for the keys and values.
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em dict\+Src} & -\/ Char pointer to the c-\/string containing key value pairs to identify. N\+O\+TE\+: the source is mutated in the process, keys\textbackslash{}values are N\+U\+LL term\textquotesingle{}d.\\
+\begin{DoxyParams}{Parameters}
+{\em dict\+Src} & \mbox{[}in\mbox{]} -\/ Char pointer to the c-\/string containing key value pairs to identify. N\+O\+TE\+: the source is mutated in the process, keys/values are N\+U\+LL term\textquotesingle{}d.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -58,8 +42,10 @@ Struct with map (pointers) to the keys and values (within the source array)
 Scans the qry\+Props struct for the a prop and returns the value from the underlying char array. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em props\+Name} & -\/ Char pointer to the c-\/string containing message properties passed in topic\\
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{[}in\mbox{]} -\/ Char pointer to the c-\/string to locate in the dictionary \\
+\hline
+{\em dict} & \mbox{[}in\mbox{]} -\/ Dictionary to be searched\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

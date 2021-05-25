@@ -51,6 +51,14 @@ void \mbox{\hyperlink{arduino-spi_8cpp_ac614af75d420958206ff201e47c6c22e}{spi\+\
 
 Initialize and configure S\+PI resource. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em chip\+Sel\+Line} & \mbox{[}in\mbox{]} -\/ G\+P\+IO for CS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+PI device 
+\end{DoxyReturn}
 \mbox{\Hypertarget{arduino-spi_8cpp_a2e81266ae193ee01843d1983f4e9c070}\label{arduino-spi_8cpp_a2e81266ae193ee01843d1983f4e9c070}} 
 \index{arduino-\/spi.cpp@{arduino-\/spi.cpp}!spi\_protectFromInterrupt@{spi\_protectFromInterrupt}}
 \index{spi\_protectFromInterrupt@{spi\_protectFromInterrupt}!arduino-\/spi.cpp@{arduino-\/spi.cpp}}
@@ -92,12 +100,14 @@ Shutdown S\+PI facility.
 Transfer a buffer to the N\+XP bridge. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em spi} & The S\+PI device for communications. \\
+\begin{DoxyParams}{Parameters}
+{\em spi} & \mbox{[}in\mbox{]} -\/ The S\+PI device for communications. \\
 \hline
-\mbox{\texttt{ in}}  & {\em reg\+Addr\+Byte} & Bridge register address specifying the I/O to perform. \\
+{\em reg\+Addr\+Byte} & \mbox{[}in\mbox{]} -\/ Bridge register address specifying the I/O to perform. \\
 \hline
- & {\em \mbox{[}in} & \\
+{\em buf} & \mbox{[}in/out\mbox{]} -\/ The character pointer to the buffer to transfer to/from. \\
+\hline
+{\em xfer\+\_\+len} & \mbox{[}in\mbox{]} -\/ The number of characters to transfer. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{arduino-spi_8cpp_a43175a171206cea7014e1194b1586cb0}\label{arduino-spi_8cpp_a43175a171206cea7014e1194b1586cb0}} 
@@ -111,12 +121,15 @@ Transfer a buffer to the N\+XP bridge.
 Transfer a byte to the N\+XP bridge. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em spi} & The S\+PI device for communications. \\
+\begin{DoxyParams}{Parameters}
+{\em spi} & \mbox{[}in\mbox{]} -\/ The S\+PI device for communications. \\
 \hline
- & {\em \mbox{[}in} & \\
+{\em data} & \mbox{[}in/out\mbox{]} -\/ The word to transfer to the N\+XP bridge.\\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 16-\/bit word received during the transfer. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{arduino-spi_8cpp_a7c190d04edd889680ef260b28c468c92}\label{arduino-spi_8cpp_a7c190d04edd889680ef260b28c468c92}} 
 \index{arduino-\/spi.cpp@{arduino-\/spi.cpp}!spi\_transferWord@{spi\_transferWord}}
 \index{spi\_transferWord@{spi\_transferWord}!arduino-\/spi.cpp@{arduino-\/spi.cpp}}
@@ -128,9 +141,12 @@ Transfer a byte to the N\+XP bridge.
 Transfer a word (16-\/bits) to the N\+XP bridge. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em spi} & The S\+PI device for communications. \\
+\begin{DoxyParams}{Parameters}
+{\em spi} & \mbox{[}in\mbox{]} -\/ The S\+PI device for communications. \\
 \hline
- & {\em \mbox{[}in} & \\
+{\em data} & \mbox{[}in/out\mbox{]} -\/ The word to transfer to the N\+XP bridge.\\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 16-\/bit word received during the transfer. 
+\end{DoxyReturn}

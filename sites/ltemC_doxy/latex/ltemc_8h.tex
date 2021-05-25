@@ -20,12 +20,12 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}}
-\begin{DoxyCompactList}\small\item\em Struct representing the L\+T\+Em1c model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}} \mbox{\hyperlink{ltemc_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em Struct representing the L\+T\+Em1c model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -67,7 +67,7 @@ void \mbox{\hyperlink{ltemc_8h_a648cd8860bb8012bb1dd72b0ab477de5}{ltem\+\_\+\+\_
 
 
 
-Struct representing the L\+T\+Em1c model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. 
+Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. 
 
 Most subsystems are linked to this struct with pointers to allow for better abstraction and optional subsystems 
 
@@ -114,8 +114,6 @@ Initialize the L\+T\+Em1 modem.
 \begin{DoxyParams}{Parameters}
 {\em ltem\+\_\+config} & \mbox{[}in\mbox{]} -\/ The L\+TE modem gpio pin configuration. \\
 \hline
-{\em func\+Level} & \mbox{[}in\mbox{]} -\/ Determines the L\+T\+Em1 functionality to create and start. \\
-\hline
 {\em app\+Notify\+CB} & \mbox{[}in\mbox{]} -\/ If supplied (not N\+U\+LL), this function will be invoked for significant L\+T\+Em1 events. \\
 \hline
 \end{DoxyParams}
@@ -153,7 +151,7 @@ Performs a HW reset of L\+T\+Em1 and optionally executes start sequence.
 \index{ltemc.h@{ltemc.h}!ltem\_notifyApp@{ltem\_notifyApp}}
 \index{ltem\_notifyApp@{ltem\_notifyApp}!ltemc.h@{ltemc.h}}
 \doxysubsubsection{\texorpdfstring{ltem\_notifyApp()}{ltem\_notifyApp()}}
-{\footnotesize\ttfamily void ltem\+\_\+notify\+App (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{notif\+Type,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ltem\+\_\+notify\+App (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{notify\+Type,  }\item[{const char $\ast$}]{notify\+Msg }\end{DoxyParamCaption})}
 
 
 
@@ -187,8 +185,8 @@ Performs a HW reset of L\+T\+Em1 and optionally executes start sequence.
 Registers the address (void$\ast$) of your application yield callback handler. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em custom\+Fault\+Handler} & -\/ Pointer to application provided fault handler. \\
+\begin{DoxyParams}{Parameters}
+{\em yield\+Cb\+\_\+func} & \mbox{[}in\mbox{]} Callback function in application code to be invoked when L\+T\+EmC is in await section. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{ltemc_8h_a687ddae526d7f6e97b36b223f71583e6}\label{ltemc_8h_a687ddae526d7f6e97b36b223f71583e6}} 
@@ -203,7 +201,7 @@ Power on and start the modem (perform component init).
 
 
 \begin{DoxyParams}{Parameters}
-{\em protos} & \mbox{[}in\mbox{]} -\/ Binary-\/\+OR\textquotesingle{}d list of expected protocol services to validate inclusion and start. \\
+{\em protocol\+Bit\+Map} & \mbox{[}in\mbox{]} -\/ Binary-\/\+OR\textquotesingle{}d list of expected protocol services to validate inclusion and start. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{ltemc_8h_a5fde19665106d68b37d5d3161a9f3560}\label{ltemc_8h_a5fde19665106d68b37d5d3161a9f3560}} 

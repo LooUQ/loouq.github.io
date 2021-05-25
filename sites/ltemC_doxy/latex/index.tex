@@ -1,13 +1,13 @@
-\hypertarget{index_autotoc_md0}{}\doxysection{Circuit River -\/ L\+T\+Em1c}\label{index_autotoc_md0}
-\hypertarget{index_autotoc_md1}{}\doxysubsection{Release Status\+: v0.\+3 (release candidate)}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md0}{}\doxysection{Circuit River -\/ L\+T\+EmC}\label{index_autotoc_md0}
+\hypertarget{index_autotoc_md1}{}\doxysubsection{Release Status\+: v1.\+0.\+0 (initial production release)}\label{index_autotoc_md1}
 L\+T\+Em1 modem driver implemented in C99 for portability and a small footprint.
 
-The Loo\+UQ L\+T\+Em1c driver supports the Loo\+UQ Circuit River L\+T\+Em1 L\+TE modem. The L\+T\+Em1 is designed to allow for cost-\/effective cellular communications in embedded systems by supporting L\+TE C\+A\+T-\/\+M1 and L\+TE C\+A\+T-\/\+N\+B1 (N\+B-\/\+I\+OT) communications. The L\+T\+Em1 is certified for use on the Verizon network and a registered device for the T-\/\+Mobile (formerly Sprint) Curiosity Network. It is also fully tested and supported using Hologram S\+I\+Ms.
+The Loo\+UQ L\+T\+EmC driver supports the Loo\+UQ Circuit River L\+T\+Em1 L\+TE modem. The L\+T\+Em1 is designed to allow for cost-\/effective cellular communications in embedded systems by supporting L\+TE C\+A\+T-\/\+M1 and L\+TE C\+A\+T-\/\+N\+B1 (N\+B-\/\+I\+OT) communications. The L\+T\+Em1 is certified for use on the Verizon network. It is also fully tested and supported using Hologram S\+I\+Ms and several US carriers.
 
-{\bfseries{1st off, thanks for taking a look at the L\+T\+Em1 hardware and L\+T\+Em1c software!}}\hypertarget{index_autotoc_md2}{}\doxysubsection{Getting Started}\label{index_autotoc_md2}
-The best way to get started understanding L\+T\+Em1c and considering it for your projects {\bfseries{today}} is to look at the tests folder in the repository. This will be supplemented in the coming weeks. We are working on getting the source code documented with a more complete suite of {\itshape doxygen} markdown tags. We are also adding a couple real world example projects soon. The tests folder contains a series of progressive L\+T\+Em1c tests. Starting with simple platform I/O verification, thru M\+Q\+TT protocol support. Each test builds on a succesful previous level test. Each test can serve as a template for you to start your implementation from.
+{\bfseries{1st off, thanks for taking a look at the L\+T\+Em1 hardware and L\+T\+EmC software!}}\hypertarget{index_autotoc_md2}{}\doxysubsection{Getting Started}\label{index_autotoc_md2}
+The best way to get started understanding L\+T\+EmC and considering it for your projects {\bfseries{today}} is to look at the tests folder in the repository. This will be supplemented in the coming weeks. We are working on getting the source code documented with a more complete suite of {\itshape doxygen} markdown tags. We are also adding a couple real world example projects soon. The tests folder contains a series of progressive L\+T\+EmC tests. Starting with simple platform I/O verification, thru M\+Q\+TT protocol support. Each test builds on a succesful previous level test. Each test can serve as a template for you to start your implementation from.
 
-Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.\hypertarget{index_autotoc_md3}{}\doxysubsubsection{L\+T\+Em1c Subsystems}\label{index_autotoc_md3}
+Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.\hypertarget{index_autotoc_md3}{}\doxysubsubsection{L\+T\+Em\+C Subsystems}\label{index_autotoc_md3}
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
 \hline
@@ -18,11 +18,11 @@ Each test shows the process for initializing, starting services, and a loop exer
 \hline
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Subsystem  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Functions   }\\\cline{1-2}
 \endhead
-{\itshape action\+\_\+}  &Handles invoking AT commands to the modem\textquotesingle{}s module and handling response parsing. Supports variable command timeouts, thread safety and completion determination. Results are presented in a simple S\+T\+R\+U\+CT with a H\+T\+TP type status code, along with the detail string response   \\\cline{1-2}
+{\itshape atcmd\+\_\+}  &Handles invoking AT commands to the modem\textquotesingle{}s module and handling response parsing. Supports variable command timeouts, thread safety and completion determination. Results are presented in a simple S\+T\+R\+U\+CT with a H\+T\+TP type status code, along with the detail string response   \\\cline{1-2}
 {\itshape mdminfo\+\_\+}  &Provides several common service functions for understanding the state of the modem and the network connection   \\\cline{1-2}
 {\itshape gnss\+\_\+}  &The L\+T\+Em1 has a multi-\/constellation G\+N\+SS receiver (aka G\+PS is the US). The G\+N\+SS module provides support for accessing this functionality, like knowing exactly where your device is.   \\\cline{1-2}
 {\itshape geo\+\_\+}  &The L\+T\+Em1 supports the creation of geo-\/fence outlines and monitoring of device positioning relative to the geo-\/fence boundary. Note\+: geo\+\_\+ requires the gnss\+\_\+ module be built into your project to use these functions.   \\\cline{1-2}
-{\itshape sockets\+\_\+}  &This is the typical P\+O\+S\+IX style sockets layer. Support if T\+CP\textbackslash{}\+U\+DP\textbackslash{}\+S\+SL clients are there. {\itshape Note\+:} server mode is not currently planned, all US networks I have worked with do not support incoming connections for cellular without add-\/on services like V\+P\+Ns or other network constructs. I recommend alternatives to attempting direct connection to your device over cellular.   \\\cline{1-2}
+{\itshape sockets\+\_\+}  &This is the typical P\+O\+S\+IX style sockets layer. Support if T\+C\+P/\+U\+D\+P/\+S\+SL clients are there. {\itshape Note\+:} server mode is not currently planned, all US networks I have worked with do not support incoming connections for cellular without add-\/on services like V\+P\+Ns or other network constructs. I recommend alternatives to attempting direct connection to your device over cellular.   \\\cline{1-2}
 {\itshape mqtt\+\_\+}  &Support for M\+Q\+TT client functionality is built here. Attach, connect, subscribe, unsubscribe and publish all are supported. Limited testing so far on Q\+OS levels and advance features like clean and will. The M\+Q\+TT module supports message properties appended to the topic and has a property parser available.   \\\cline{1-2}
 {\itshape iop\+\_\+}  &Generally you won\textquotesingle{}t directly interact with the iop\+\_\+ subsystem. It performs the buffer management to/from hardware. It interfaces with the action\+\_\+, sockets\+\_\+, and mqtt\+\_\+ subsystems to perform the necessary transfers.   \\\cline{1-2}
 \end{longtabu}
@@ -30,21 +30,21 @@ Each test shows the process for initializing, starting services, and a loop exer
 
 \href{https://loouq.github.io/resources/CTA-LTEM1_DataSheet.pdf}{\texttt{ L\+T\+Em1 Modem Specifications}}
 
-\href{https://github.com/LooUQ/CircuitRiver-LTEm1c/blob/master/LTEm1-FAQ.md}{\texttt{ L\+T\+Em1/\+L\+T\+Em1c F\+AQ}}
+\href{https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/LTEm1-FAQ.md}{\texttt{ L\+T\+Em1/\+L\+T\+EmC F\+AQ}}
 
-\href{https://github.com/LooUQ/CircuitRiver-LTEm1c/blob/master/version-history.md}{\texttt{ Version History}}
+\href{https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/version-history.md}{\texttt{ Version History}}
 
-\href{https://loouq.github.io/sites/ltem1c_doxy/html/index.html}{\texttt{ L\+T\+Em1c Documentation}}
+\href{https://loouq.github.io/sites/LTEmC_doxy/html/index.html}{\texttt{ L\+T\+EmC Documentation}}
 
 \DoxyHorRuler{0}
  
 
 All of the core (blue) subsystems are functional. Extension subsystems (copper, with wide-\/borders) are optional and can be built into the application, or omitted to reduced code size. Grey boxes indicate future feature areas.\hypertarget{index_autotoc_md5}{}\doxysubsection{Future Directions}\label{index_autotoc_md5}
-If you have an opinion on any of these functions and their applicability to your product\textbackslash{}project please let Loo\+UQ know. Send your thoughts to \href{mailto:answers@loouq.com}{\texttt{ answers@loouq.\+com}}.
+If you have an opinion on any of these functions and their applicability to your product/project please let Loo\+UQ know. Send your thoughts to \href{mailto:answers@loouq.com}{\texttt{ answers@loouq.\+com}}.
 \begin{DoxyItemize}
 \item Power Management -\/ Support for P\+SM, wake options, etc.
-\item H\+T\+T\+P(\+S) -\/ Support for H\+T\+TP client in driver (not using raw T\+CP)
-\item F\+T\+P(\+S) -\/ Support for F\+TP client in driver (not using raw T\+CP)
-\item File System -\/ Support for file storage on B\+Gx via driver (B\+G96 has approx. 10MB available)
+\item H\+T\+T\+P(\+S) -\/ Support for H\+T\+TP client in driver (planned for July 2021)
+\item F\+T\+P(\+S) -\/ Support for F\+TP client in B\+Gx firmware without application F\+TP stack
+\item File System -\/ Support for file storage on B\+Gx via driver (B\+G96 has approx. 3MB available)
 \item F\+O\+TA -\/ Support for scheduled F\+O\+TA 
 \end{DoxyItemize}

@@ -94,9 +94,6 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0072c70b4e78852288327db83ee02a4e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a0072c70b4e78852288327db83ee02a4e">grabToken</a> (char *source, int delimiter, char *tokenBuf, uint8_t tokenBufSz)</td></tr>
-<tr class="memdesc:a0072c70b4e78852288327db83ee02a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans a C-String (char array) for the next delimeted token and null terminates it.  <a href="ltemc-network_8c.html#a0072c70b4e78852288327db83ee02a4e">More...</a><br /></td></tr>
-<tr class="separator:a0072c70b4e78852288327db83ee02a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a59f08d7a2cf3e7d6685e377aff6bc57d">ntwk_create</a> ()</td></tr>
 <tr class="memdesc:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the IP network contexts structure.  <a href="ltemc-network_8c.html#a59f08d7a2cf3e7d6685e377aff6bc57d">More...</a><br /></td></tr>
 <tr class="separator:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,16 +104,16 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3398dd81e1b122fcacdafb90c3eb33f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get count of APN active data contexts from BGx.  <a href="ltemc-network_8c.html#a3398dd81e1b122fcacdafb90c3eb33f3">More...</a><br /></td></tr>
 <tr class="separator:a3398dd81e1b122fcacdafb90c3eb33f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a367bc946024cf86d08b2d31e225496b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a09b80c31caeeb52da11154ae652c16d2">pdpCntxt_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a367bc946024cf86d08b2d31e225496b7">ntwk_getPdpCntxt</a> (uint8_t cntxtId)</td></tr>
-<tr class="memdesc:a367bc946024cf86d08b2d31e225496b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PDP Context\APN information.  <a href="ltemc-network_8c.html#a367bc946024cf86d08b2d31e225496b7">More...</a><br /></td></tr>
+<tr class="memdesc:a367bc946024cf86d08b2d31e225496b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PDP Context/APN information.  <a href="ltemc-network_8c.html#a367bc946024cf86d08b2d31e225496b7">More...</a><br /></td></tr>
 <tr class="separator:a367bc946024cf86d08b2d31e225496b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c317e9a6462c1893406d87f3db501cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a3c317e9a6462c1893406d87f3db501cb">ntwk_activatePdpContext</a> (uint8_t cntxtId)</td></tr>
-<tr class="memdesc:a3c317e9a6462c1893406d87f3db501cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context\APN.  <a href="ltemc-network_8c.html#a3c317e9a6462c1893406d87f3db501cb">More...</a><br /></td></tr>
+<tr class="memdesc:a3c317e9a6462c1893406d87f3db501cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN.  <a href="ltemc-network_8c.html#a3c317e9a6462c1893406d87f3db501cb">More...</a><br /></td></tr>
 <tr class="separator:a3c317e9a6462c1893406d87f3db501cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1211e162b3e2ae3af1a9430e6254adee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a1211e162b3e2ae3af1a9430e6254adee">ntwk_deactivatePdpContext</a> (uint8_t cntxtId)</td></tr>
 <tr class="memdesc:a1211e162b3e2ae3af1a9430e6254adee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deactivate APN.  <a href="ltemc-network_8c.html#a1211e162b3e2ae3af1a9430e6254adee">More...</a><br /></td></tr>
 <tr class="separator:a1211e162b3e2ae3af1a9430e6254adee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44958b492843d449944cfc78d937241d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a44958b492843d449944cfc78d937241d">ntwk_resetPdpContexts</a> ()</td></tr>
-<tr class="memdesc:a44958b492843d449944cfc78d937241d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset (deactivate\activate) all network APNs.  <a href="ltemc-network_8c.html#a44958b492843d449944cfc78d937241d">More...</a><br /></td></tr>
+<tr class="memdesc:a44958b492843d449944cfc78d937241d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset (deactivate/activate) all network APNs.  <a href="ltemc-network_8c.html#a44958b492843d449944cfc78d937241d">More...</a><br /></td></tr>
 <tr class="separator:a44958b492843d449944cfc78d937241d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -239,58 +236,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0072c70b4e78852288327db83ee02a4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0072c70b4e78852288327db83ee02a4e">&#9670;&nbsp;</a></span>grabToken()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char * grabToken </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>source</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>delimiter</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>tokenBuf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>tokenBufSz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Scans a C-String (char array) for the next delimeted token and null terminates it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">source</td><td>[in] - Original char array to scan. </td></tr>
-    <tr><td class="paramname">delimeter</td><td>[in] - Character separating tokens (passed as integer value). </td></tr>
-    <tr><td class="paramname">token</td><td>[out] - Pointer to where token should be copied to. </td></tr>
-    <tr><td class="paramname">tokenSz</td><td>[in] - Size of buffer to receive token.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the location in the source string immediately following the token. </dd></dl>
-
-</div>
-</div>
 <a id="a3c317e9a6462c1893406d87f3db501cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c317e9a6462c1893406d87f3db501cb">&#9670;&nbsp;</a></span>ntwk_activatePdpContext()</h2>
 
@@ -307,7 +252,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Activate PDP Context\APN. </p>
+<p>Activate PDP Context/APN. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cntxtId</td><td>[in] - The APN to operate on. Typically 0 or 1 </td></tr>
@@ -425,7 +370,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get PDP Context\APN information. </p>
+<p>Get PDP Context/APN information. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cntxtId</td><td>[in] - The PDP context (APN) to retreive.</td></tr>
@@ -451,8 +396,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reset (deactivate\activate) all network APNs. </p>
-<p>\NOTE: activate and deactivate have side effects, they internally call getActiveContexts prior to return </p>
+<p>Reset (deactivate/activate) all network APNs. </p>
+<p>NOTE: activate and deactivate have side effects, they internally call getActiveContexts prior to return </p>
 
 </div>
 </div>

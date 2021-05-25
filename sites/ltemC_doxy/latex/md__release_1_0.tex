@@ -12,7 +12,7 @@ Release 1.\+0 is a milestone for the L\+T\+Em1c software. The modem and the soft
 \hypertarget{md__release_1_0_autotoc_md15}{}\doxysubsection{Callbacks}\label{md__release_1_0_autotoc_md15}
 Two callback conventions have be formalized\+: yield and notification. The yield callback allows for the application to invoke watchdog keepalives whenevr the L\+T\+Em1c code passes through a wait for response block. This is optional and is specified with the {\itshape ltem1\+\_\+set\+Yield\+Cb(yield\+Cb)} method. The yield\+Cb() method takes no parameters and returns a void.
 
-The other callback is for notifying your application of significant events, such as\+: connecting, disconnecting and errors. This is compatible with the notification callback used in the L\+Q\+Cloud driver. An example callback handler is shown below. The example below shows how the device application can respond to events with local displays\textbackslash{}indicators.
+The other callback is for notifying your application of significant events, such as\+: connecting, disconnecting and errors. This is compatible with the notification callback used in the L\+Q\+Cloud driver. An example callback handler is shown below. The example below shows how the device application can respond to events with local displays/indicators.
 
 
 \begin{DoxyCode}{0}
@@ -96,7 +96,7 @@ The create code, start code and the inclusion of protocols has been separated in
 \DoxyCodeLine{ltem1\_start(pdpProtocol\_none);                      // start LTEm1 with only IOP configured, AT commands but no protocols. }
 \end{DoxyCode}
 \hypertarget{md__release_1_0_autotoc_md17}{}\doxysubsection{Debug Printing}\label{md__release_1_0_autotoc_md17}
-Debugging is of course a necessary part of our lives as developers. For those of you using Segger J-\/\+Link products I recommend the R\+TT (real time terminal) functionality the J-\/\+Link software provides. The inclusion of a small macro block makes turning on\textbackslash{}off debugging output using J-\/\+Link R\+TT a simple one line change. Loo\+UQ has a Arduino compatible fork of the Segger J-\/\+Link R\+TT source available on Git\+Hub ().
+Debugging is of course a necessary part of our lives as developers. For those of you using Segger J-\/\+Link products I recommend the R\+TT (real time terminal) functionality the J-\/\+Link software provides. The inclusion of a small macro block makes turning on/off debugging output using J-\/\+Link R\+TT a simple one line change. Loo\+UQ has a Arduino compatible fork of the Segger J-\/\+Link R\+TT source available on Git\+Hub ().
 
 
 \begin{DoxyCode}{0}
