@@ -1,0 +1,238 @@
+\hypertarget{ltemc-mqtt_8c}{}\doxysection{src/ltemc-\/mqtt.c File Reference}
+\label{ltemc-mqtt_8c}\index{src/ltemc-\/mqtt.c@{src/ltemc-\/mqtt.c}}
+{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-mqtt_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\item 
+\#define \mbox{\hyperlink{ltemc-mqtt_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\item 
+\#define \mbox{\hyperlink{ltemc-mqtt_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
+\item 
+\#define \mbox{\hyperlink{ltemc-mqtt_8c_a8b3fe77d44699d08d82b43f7948b89d6}{M\+Q\+T\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+SZ}}~81
+\item 
+\#define \mbox{\hyperlink{ltemc-mqtt_8c_a436b5ef943285e419c48b7a7d7aaf609}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+C\+M\+D\+\_\+\+SZ}}~300
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ltemc-mqtt_8c_a8051af90648cef323dd3d207f477657b}{mqtt\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Initialize M\+Q\+TT service structure and add it to L\+T\+Em1c services. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_aefdeff1177520d62588b48a41a5e8045}{mqtt\+\_\+status}} (const char $\ast$host, bool force)
+\begin{DoxyCompactList}\small\item\em Query the status of the M\+Q\+TT server state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_a2a633eb17a04cfcf8638ec75fdefcff0}{mqtt\+\_\+open}} (const char $\ast$host, uint16\+\_\+t port, \mbox{\hyperlink{ltemc-mqtt_8h_af4fb66f436707c44f2e350dbc5108224}{ssl\+Version\+\_\+t}} use\+Ssl\+Version, \mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}} use\+Mqtt\+Version)
+\begin{DoxyCompactList}\small\item\em Open a remote M\+Q\+TT server for use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-mqtt_8c_ad52f5ef51a9488dda1c573e26137371a}{mqtt\+\_\+close}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect and close a connection to a M\+Q\+TT server. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_ac72b2188722710984f36386c7793cc7c}{mqtt\+\_\+connect}} (const char $\ast$client\+Id, const char $\ast$username, const char $\ast$password, \mbox{\hyperlink{ltemc-mqtt_8h_a455558a85512fdfa977572eae49314c0}{mqtt\+Session\+\_\+t}} clean\+Session)
+\begin{DoxyCompactList}\small\item\em Connect (authenticate) to a M\+Q\+TT server. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_a4f91e63bc1ee41e58948d1feaae1b1a2}{mqtt\+\_\+subscribe}} (const char $\ast$topic, \mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}} qos, \mbox{\hyperlink{ltemc-mqtt_8h_a98539737eefd41c88388bada5c4116b4}{mqtt\+\_\+recv\+Func\+\_\+t}} recv\+\_\+func)
+\begin{DoxyCompactList}\small\item\em Subscribe to a topic on the M\+Q\+TT server. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_a438017fd271d124a86605407edd6e3a1}{mqtt\+\_\+unsubscribe}} (const char $\ast$topic)
+\begin{DoxyCompactList}\small\item\em Unsubscribe to a topic on the M\+Q\+TT server. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_ac840825f9f828ae6b756cc2f9ede3569}{mqtt\+\_\+publish}} (const char $\ast$topic, \mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}} qos, const char $\ast$message)
+\begin{DoxyCompactList}\small\item\em Publish a message to server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-mqtt_8c_a2e7d6a65ee3363eae8283f57d686a4c4}{mqtt\+\_\+do\+Work}} ()
+\begin{DoxyCompactList}\small\item\em Performs background tasks to advance M\+Q\+TT pipeline dataflows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-mqtt_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltemc-mqtt_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_a74e75242132eaabbc1c512488a135926}\label{ltemc-mqtt_8c_a74e75242132eaabbc1c512488a135926}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!MIN@{MIN}}
+\index{MIN@{MIN}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (x) \+: (y))}
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_a8b3fe77d44699d08d82b43f7948b89d6}\label{ltemc-mqtt_8c_a8b3fe77d44699d08d82b43f7948b89d6}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!MQTT\_ACTION\_CMD\_SZ@{MQTT\_ACTION\_CMD\_SZ}}
+\index{MQTT\_ACTION\_CMD\_SZ@{MQTT\_ACTION\_CMD\_SZ}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{MQTT\_ACTION\_CMD\_SZ}{MQTT\_ACTION\_CMD\_SZ}}
+{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+SZ~81}
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_a436b5ef943285e419c48b7a7d7aaf609}\label{ltemc-mqtt_8c_a436b5ef943285e419c48b7a7d7aaf609}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!MQTT\_CONNECT\_CMD\_SZ@{MQTT\_CONNECT\_CMD\_SZ}}
+\index{MQTT\_CONNECT\_CMD\_SZ@{MQTT\_CONNECT\_CMD\_SZ}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{MQTT\_CONNECT\_CMD\_SZ}{MQTT\_CONNECT\_CMD\_SZ}}
+{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+C\+M\+D\+\_\+\+SZ~300}
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-mqtt_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-mqtt_8c_ad52f5ef51a9488dda1c573e26137371a}\label{ltemc-mqtt_8c_ad52f5ef51a9488dda1c573e26137371a}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_close@{mqtt\_close}}
+\index{mqtt\_close@{mqtt\_close}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_close()}{mqtt\_close()}}
+{\footnotesize\ttfamily void mqtt\+\_\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disconnect and close a connection to a M\+Q\+TT server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The socket based identifier for the connection to close \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-mqtt_8c_ac72b2188722710984f36386c7793cc7c}\label{ltemc-mqtt_8c_ac72b2188722710984f36386c7793cc7c}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_connect@{mqtt\_connect}}
+\index{mqtt\_connect@{mqtt\_connect}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_connect()}{mqtt\_connect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+connect (\begin{DoxyParamCaption}\item[{const char $\ast$}]{client\+Id,  }\item[{const char $\ast$}]{username,  }\item[{const char $\ast$}]{password,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a455558a85512fdfa977572eae49314c0}{mqtt\+Session\+\_\+t}}}]{clean\+Session }\end{DoxyParamCaption})}
+
+
+
+Connect (authenticate) to a M\+Q\+TT server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Id} & \mbox{[}in\mbox{]} -\/ The client or device identifier for the connection. \\
+\hline
+{\em username} & \mbox{[}in\mbox{]} -\/ The user identifier or name for the connection to authenticate. \\
+\hline
+{\em password} & \mbox{[}in\mbox{]} -\/ The secret string or phrase to authenticate the connection. \\
+\hline
+{\em clean\+Session} & \mbox{[}in\mbox{]} -\/ Directs M\+Q\+TT to preserve or flush messages received prior to the session start.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A result\+Code\+\_\+t value indicating the success or type of failure, OK = 200. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mqtt_8c_a8051af90648cef323dd3d207f477657b}\label{ltemc-mqtt_8c_a8051af90648cef323dd3d207f477657b}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_create@{mqtt\_create}}
+\index{mqtt\_create@{mqtt\_create}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_create()}{mqtt\_create()}}
+{\footnotesize\ttfamily void mqtt\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize M\+Q\+TT service structure and add it to L\+T\+Em1c services. 
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_a2e7d6a65ee3363eae8283f57d686a4c4}\label{ltemc-mqtt_8c_a2e7d6a65ee3363eae8283f57d686a4c4}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_doWork@{mqtt\_doWork}}
+\index{mqtt\_doWork@{mqtt\_doWork}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_doWork()}{mqtt\_doWork()}}
+{\footnotesize\ttfamily void mqtt\+\_\+do\+Work (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs background tasks to advance M\+Q\+TT pipeline dataflows. 
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_a2a633eb17a04cfcf8638ec75fdefcff0}\label{ltemc-mqtt_8c_a2a633eb17a04cfcf8638ec75fdefcff0}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_open@{mqtt\_open}}
+\index{mqtt\_open@{mqtt\_open}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_open()}{mqtt\_open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{host,  }\item[{uint16\+\_\+t}]{port,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_af4fb66f436707c44f2e350dbc5108224}{ssl\+Version\+\_\+t}}}]{use\+Ssl\+Version,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}}}]{use\+Mqtt\+Version }\end{DoxyParamCaption})}
+
+
+
+Open a remote M\+Q\+TT server for use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & \mbox{[}in\mbox{]} The host IP address or name of the remote server. \\
+\hline
+{\em port} & \mbox{[}in\mbox{]} The IP port number to use for the communications. \\
+\hline
+{\em use\+Ssl\+Version} & \mbox{[}in\mbox{]} Specifies the version and options for use of S\+SL to protect communications. \\
+\hline
+{\em use\+Mqtt\+Version} & \mbox{[}in\mbox{]} Specifies the M\+Q\+TT protocol revision to use for communications.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A result\+Code\+\_\+t value indicating the success or type of failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mqtt_8c_ac840825f9f828ae6b756cc2f9ede3569}\label{ltemc-mqtt_8c_ac840825f9f828ae6b756cc2f9ede3569}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_publish@{mqtt\_publish}}
+\index{mqtt\_publish@{mqtt\_publish}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_publish()}{mqtt\_publish()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+publish (\begin{DoxyParamCaption}\item[{const char $\ast$}]{topic,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}}}]{qos,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+Publish a message to server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \mbox{[}in\mbox{]} -\/ Pointer to the message topic (see your server for topic formatting details). \\
+\hline
+{\em qos} & \mbox{[}in\mbox{]} -\/ The M\+Q\+TT Q\+OS to be assigned to sent message. \\
+\hline
+{\em message} & \mbox{[}in\mbox{]} -\/ Pointer to message to be sent.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A result\+Code\+\_\+t value indicating the success or type of failure (http status type code). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mqtt_8c_aefdeff1177520d62588b48a41a5e8045}\label{ltemc-mqtt_8c_aefdeff1177520d62588b48a41a5e8045}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_status@{mqtt\_status}}
+\index{mqtt\_status@{mqtt\_status}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_status()}{mqtt\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} mqtt\+\_\+status (\begin{DoxyParamCaption}\item[{const char $\ast$}]{host,  }\item[{bool}]{force }\end{DoxyParamCaption})}
+
+
+
+Query the status of the M\+Q\+TT server state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & \mbox{[}in\mbox{]} A char string to match with the currently connected server. Host is not checked if empty string passed. \\
+\hline
+{\em force} & \mbox{[}in\mbox{]} If true query B\+Gx for current state, otherwise return internal property value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A mqtt\+Status\+\_\+t value indicating the state of the M\+Q\+TT connection. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mqtt_8c_a4f91e63bc1ee41e58948d1feaae1b1a2}\label{ltemc-mqtt_8c_a4f91e63bc1ee41e58948d1feaae1b1a2}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_subscribe@{mqtt\_subscribe}}
+\index{mqtt\_subscribe@{mqtt\_subscribe}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_subscribe()}{mqtt\_subscribe()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+subscribe (\begin{DoxyParamCaption}\item[{const char $\ast$}]{topic,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}}}]{qos,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a98539737eefd41c88388bada5c4116b4}{mqtt\+\_\+recv\+Func\+\_\+t}}}]{recv\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Subscribe to a topic on the M\+Q\+TT server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \mbox{[}in\mbox{]} -\/ The messaging topic to subscribe to. \\
+\hline
+{\em qos} & \mbox{[}in\mbox{]} -\/ The M\+Q\+TT Q\+OS level for messages subscribed to. \\
+\hline
+{\em recv\+\_\+func} & \mbox{[}in\mbox{]} -\/ The receiver function in the application to receive subscribed messages on arrival.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A result\+Code\+\_\+t value indicating the success or type of failure, OK = 200. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mqtt_8c_a438017fd271d124a86605407edd6e3a1}\label{ltemc-mqtt_8c_a438017fd271d124a86605407edd6e3a1}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_unsubscribe@{mqtt\_unsubscribe}}
+\index{mqtt\_unsubscribe@{mqtt\_unsubscribe}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_unsubscribe()}{mqtt\_unsubscribe()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+unsubscribe (\begin{DoxyParamCaption}\item[{const char $\ast$}]{topic }\end{DoxyParamCaption})}
+
+
+
+Unsubscribe to a topic on the M\+Q\+TT server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \mbox{[}in\mbox{]} -\/ The messaging topic to unsubscribe from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A result\+Code\+\_\+t (http status type) value indicating the success or type of failure, OK = 200. 
+\end{DoxyReturn}

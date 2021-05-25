@@ -1,0 +1,22 @@
+{\bfseries{What module is the L\+T\+Em1 based on?}} \begin{quote}
+The Loo\+UQ L\+T\+Em1 utilizes a Quectel B\+G96 module, F\+CC ID\+: X\+M\+R201707\+B\+G96 \end{quote}
+
+
+{\bfseries{Why the B\+G96?}} \begin{quote}
+The B\+G96 has gained wide respect and acceptance by the network carriers and offers both L\+TE IoT specific protocols\+: C\+A\+T-\/\+M1 and N\+B-\/\+I\+OT and fallback to 2G where necessary. Additionally the B\+G96 has a rich feature set including S\+S\+L/\+T\+LS, M\+Q\+TT, H\+T\+T\+P(\+S), G\+N\+SS, geo-\/fencing, and even a persistant file store. Loo\+UQ has coupled the B\+G96 with an S\+PI interface for high-\/speed communications without the burden of character-\/by-\/character host interrupts. For Raspberry PI applications, the L\+T\+Em1 and B\+G96 support access via U\+SB (micro-\/\+U\+SB connector). \end{quote}
+
+
+{\bfseries{Is there software for the L\+T\+Em1?}} \begin{quote}
+Yes indeed. This repository, the L\+T\+EmC library is Loo\+UQ\textquotesingle{}s open-\/source driver written in C99 to support the L\+T\+Em1 and future Loo\+UQ L\+TE modem hardware with P\+O\+S\+IX style functionality. \end{quote}
+
+
+{\bfseries{What are the physical characteristics of the L\+T\+Em1?}} \begin{quote}
+The L\+T\+Em1 measures 40mm x 48mm and under 9mm in height. The device requires standard power source of 3.\+7 volts (Li\+Po battery). For hosts with ample surge capacity the L\+T\+Em1 can run directly from the regulated supply. For most hosts, Loo\+UQ recommends incorporating a small 3.\+7v Li\+Po for instantaneous current demands (like turn on), but also to power the L\+T\+Em1 in a power failure for a short period time, this allows alerts on the power condition to be sent out to the devices owner. Connections to the L\+TE and G\+N\+SS antennas are via standard U.\+FL/\+I\+P\+EX connectors. \end{quote}
+
+
+{\bfseries{Seems like L\+T\+Em1 has many features, but what if I don\textquotesingle{}t need all of them?}} \begin{quote}
+No Problem. The source code of the L\+T\+Em1c library allows you to not include optional L\+T\+Em1 feature subsystems and save host memory. Optional modules include\+: G\+N\+SS (aka G\+PS), Geo-\/\+Fencing (geo-\/fencing depends on G\+N\+SS), Sockets, M\+Q\+TT, H\+T\+TP, F\+TP, F\+O\+TA, and File System. The easiest way to see all the options is to look at the readme.\+md file in the respository root. There is a diagram there showing the optional subsystems. \end{quote}
+
+
+{\bfseries{How much memory does the L\+T\+Em1c code take?}} \begin{quote}
+On a S\+A\+M\+D21 system (Adafruit Feather M0) the code occupies about 40K of flash and uses approximately 10K of R\+AM. These values are based on a system built with Sockets, M\+Q\+TT, and G\+N\+SS with one external peer server. Updated information on memory footprint will be published with future updates. \end{quote}

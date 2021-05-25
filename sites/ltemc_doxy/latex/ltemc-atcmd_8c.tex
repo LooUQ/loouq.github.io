@@ -1,0 +1,447 @@
+\hypertarget{ltemc-atcmd_8c}{}\doxysection{src/ltemc-\/atcmd.c File Reference}
+\label{ltemc-atcmd_8c}\index{src/ltemc-\/atcmd.c@{src/ltemc-\/atcmd.c}}
+{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_af585999938d43e0529de1fc97d457bc8}{A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+C\+K\+R\+E\+T\+R\+I\+ES}}~3
+\begin{DoxyCompactList}\small\item\em Number of attemps to acquire action lock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_aacfc1e6ae6fb204472878d754eb53117}{A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+C\+K\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+A\+Lml}}~50
+\begin{DoxyCompactList}\small\item\em Millis to wait between action lock acquisition attempts. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_a94cc840dcfa6352171624a582482388d}{O\+K\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG}}~\char`\"{}O\+K\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_a61021f847281b56ea58bf62fa421061d}{O\+K\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+L\+E\+N\+G\+TH}}~4
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_a20116255539ab082c58248c00cbb36ba}{E\+R\+R\+O\+R\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG}}~\char`\"{}E\+R\+R\+O\+R\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_a8c49c0f4290754765420ae8ad5316539}{E\+R\+R\+O\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+O\+F\+F\+S\+ET}}~7
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_a20d2a6d95d789c924e9e74a8f7c2c991}{F\+A\+I\+L\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG}}~\char`\"{}F\+A\+I\+L\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_ace598580dddcfcf0a3143f9e41e7e0ee}{F\+A\+I\+L\+\_\+\+V\+A\+L\+U\+E\+\_\+\+O\+F\+F\+S\+ET}}~6
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_adcf9a32c660a637d958ea362ea696067}{N\+O\+C\+A\+R\+R\+I\+E\+R\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG}}~\char`\"{}NO C\+A\+R\+R\+I\+E\+R\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_aa5cfa513a4c3c7e0a4824167cbeea971}{N\+O\+C\+A\+R\+R\+I\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+O\+F\+F\+S\+ET}}~12
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_a8315e0406778f049b10b6e1542611d18}{C\+M\+E\+\_\+\+P\+R\+E\+A\+B\+LE}}~\char`\"{}+C\+ME E\+R\+R\+O\+R\+:\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ltemc-atcmd_8c_a6d21a0d0e06c4be265da23cc37011d9b}{C\+M\+E\+\_\+\+P\+R\+E\+A\+B\+L\+E\+\_\+\+SZ}}~11
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ltemc-atcmd_8c_a74edf80fef3ee4cfaebbb9607ca58a78}{atcmd\+\_\+close}} ()
+\begin{DoxyCompactList}\small\item\em Closes (completes) a B\+Gx AT command structure and frees action resource (release action lock). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-atcmd_8c_a868e0262f09a69e0cdc5ed00ff29ba76}{atcmd\+\_\+try\+Invoke}} (const char $\ast$cmd\+Str)
+\begin{DoxyCompactList}\small\item\em Invokes a B\+Gx AT command with default action values. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-atcmd_8c_af4816b1b3157b811f000bc5bdce10766}{atcmd\+\_\+try\+Invoke\+Adv}} (const char $\ast$cmd\+Str, uint16\+\_\+t timeout, uint16\+\_\+t($\ast$task\+Complete\+Parser)(const char $\ast$response, char $\ast$$\ast$endptr))
+\begin{DoxyCompactList}\small\item\em Invokes a B\+Gx AT command with application specified action values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-atcmd_8c_a83bc3ff209bb41a62e387da7beecb643}{atcmd\+\_\+send\+Raw}} (const char $\ast$data, uint16\+\_\+t data\+Sz, uint16\+\_\+t timeout\+Millis, uint16\+\_\+t($\ast$task\+Complete\+Parser\+\_\+func)(const char $\ast$response, char $\ast$$\ast$endptr))
+\begin{DoxyCompactList}\small\item\em Performs data transfer (send) sub-\/action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-atcmd_8c_aed2975d0dddc6bf06185a0a05d286283}{atcmd\+\_\+send\+Raw\+With\+E\+O\+Ts}} (const char $\ast$data, uint16\+\_\+t data\+Sz, const char $\ast$eot\+Phrase, uint16\+\_\+t timeout\+Millis, uint16\+\_\+t($\ast$task\+Complete\+Parser\+\_\+func)(const char $\ast$response, char $\ast$$\ast$endptr))
+\begin{DoxyCompactList}\small\item\em Performs data transfer (send) sub-\/action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-atcmd_8h_ab9a28dd6dc94d1c92a647f1c9557d584}{atcmd\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-atcmd_8c_a56000688f87721b80705498f5a92bdcb}{atcmd\+\_\+await\+Result}} (bool auto\+Close\+Action)
+\begin{DoxyCompactList}\small\item\em Waits for an AT command result until completed response or timeout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-atcmd_8h_ab9a28dd6dc94d1c92a647f1c9557d584}{atcmd\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-atcmd_8c_a6409bc1efcf200bf70e6371af23649d5}{atcmd\+\_\+get\+Result}} (bool close\+Action)
+\begin{DoxyCompactList}\small\item\em Gets command response and returns immediately. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-atcmd_8c_a3742317e3225c92af7b6487aee1c3f38}{atcmd\+\_\+exit\+Text\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Sends E\+SC character to ensure B\+Gx is not in text mode ($>$ prompt awaiting $^\wedge$\+Z/\+E\+SC). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-atcmd_8c_ac9151ae79098ea2379de42f180114825}{atcmd\+\_\+exit\+Data\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Sends +++ sequence to transition B\+Gx out of data mode to command mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-atcmd_8c_a2405bff7bc676f90ee17535c796afe44}{atcmd\+\_\+default\+Result\+Parser}} (const char $\ast$response, const char $\ast$preamble, bool preamble\+Reqd, uint8\+\_\+t gap\+Reqd, const char $\ast$terminator, char $\ast$$\ast$endptr)
+\begin{DoxyCompactList}\small\item\em Performs a standardized parse of command responses. This function can be wrapped to match atcmd command\+Completed\+Parse signature. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-atcmd_8c_ad2cda78525644fabae5de68a876bad4a}{atcmd\+\_\+token\+Result\+Parser}} (const char $\ast$response, const char $\ast$preamble, char delim, uint8\+\_\+t reqd\+Tokens, const char $\ast$terminator, char $\ast$$\ast$endptr)
+\begin{DoxyCompactList}\small\item\em Performs a standardized parse of command responses. This function can be wrapped to match atcmd command\+Completed\+Parse signature. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-atcmd_8c_a9a916570d5a50d33bff2bcc3d642c295}{atcmd\+\_\+ok\+Result\+Parser}} (const char $\ast$response, char $\ast$$\ast$endptr)
+\begin{DoxyCompactList}\small\item\em Validate the response ends in a B\+Gxx OK value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-atcmd_8c_ab2b72be8d92edbbb633af14eac35d39b}{atcmd\+\_\+service\+Response\+Parser}} (const char $\ast$response, const char $\ast$preamble, uint8\+\_\+t result\+Indx, char $\ast$$\ast$endptr)
+\begin{DoxyCompactList}\small\item\em Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+S\+L/\+M\+Q\+TT. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{ltemc-atcmd_8c_a99badffb679e0d7b90c042dc93e57771}{atcmd\+\_\+str\+Token}} (char $\ast$source, int delimiter, char $\ast$token, uint8\+\_\+t token\+Max)
+\begin{DoxyCompactList}\small\item\em C-\/string token grabber. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-atcmd_8c_a966265080bf43726bccb503cfb4103cc}{atcmd\+\_\+\+\_\+acquire\+Lock}} (const char $\ast$cmd\+Str, uint8\+\_\+t retries)
+\begin{DoxyCompactList}\small\item\em Attempts to get exclusive access to Q\+BG module command interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltemc-atcmd_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_af585999938d43e0529de1fc97d457bc8}\label{ltemc-atcmd_8c_af585999938d43e0529de1fc97d457bc8}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!ACTION\_LOCKRETRIES@{ACTION\_LOCKRETRIES}}
+\index{ACTION\_LOCKRETRIES@{ACTION\_LOCKRETRIES}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{ACTION\_LOCKRETRIES}{ACTION\_LOCKRETRIES}}
+{\footnotesize\ttfamily \#define A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+C\+K\+R\+E\+T\+R\+I\+ES~3}
+
+
+
+Number of attemps to acquire action lock. 
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_aacfc1e6ae6fb204472878d754eb53117}\label{ltemc-atcmd_8c_aacfc1e6ae6fb204472878d754eb53117}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!ACTION\_LOCKRETRY\_INTERVALml@{ACTION\_LOCKRETRY\_INTERVALml}}
+\index{ACTION\_LOCKRETRY\_INTERVALml@{ACTION\_LOCKRETRY\_INTERVALml}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{ACTION\_LOCKRETRY\_INTERVALml}{ACTION\_LOCKRETRY\_INTERVALml}}
+{\footnotesize\ttfamily \#define A\+C\+T\+I\+O\+N\+\_\+\+L\+O\+C\+K\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+A\+Lml~50}
+
+
+
+Millis to wait between action lock acquisition attempts. 
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a8315e0406778f049b10b6e1542611d18}\label{ltemc-atcmd_8c_a8315e0406778f049b10b6e1542611d18}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!CME\_PREABLE@{CME\_PREABLE}}
+\index{CME\_PREABLE@{CME\_PREABLE}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{CME\_PREABLE}{CME\_PREABLE}}
+{\footnotesize\ttfamily \#define C\+M\+E\+\_\+\+P\+R\+E\+A\+B\+LE~\char`\"{}+C\+ME E\+R\+R\+O\+R\+:\char`\"{}}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a6d21a0d0e06c4be265da23cc37011d9b}\label{ltemc-atcmd_8c_a6d21a0d0e06c4be265da23cc37011d9b}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!CME\_PREABLE\_SZ@{CME\_PREABLE\_SZ}}
+\index{CME\_PREABLE\_SZ@{CME\_PREABLE\_SZ}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{CME\_PREABLE\_SZ}{CME\_PREABLE\_SZ}}
+{\footnotesize\ttfamily \#define C\+M\+E\+\_\+\+P\+R\+E\+A\+B\+L\+E\+\_\+\+SZ~11}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a20116255539ab082c58248c00cbb36ba}\label{ltemc-atcmd_8c_a20116255539ab082c58248c00cbb36ba}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!ERROR\_COMPLETED\_STRING@{ERROR\_COMPLETED\_STRING}}
+\index{ERROR\_COMPLETED\_STRING@{ERROR\_COMPLETED\_STRING}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{ERROR\_COMPLETED\_STRING}{ERROR\_COMPLETED\_STRING}}
+{\footnotesize\ttfamily \#define E\+R\+R\+O\+R\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}E\+R\+R\+O\+R\textbackslash{}r\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a8c49c0f4290754765420ae8ad5316539}\label{ltemc-atcmd_8c_a8c49c0f4290754765420ae8ad5316539}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!ERROR\_VALUE\_OFFSET@{ERROR\_VALUE\_OFFSET}}
+\index{ERROR\_VALUE\_OFFSET@{ERROR\_VALUE\_OFFSET}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{ERROR\_VALUE\_OFFSET}{ERROR\_VALUE\_OFFSET}}
+{\footnotesize\ttfamily \#define E\+R\+R\+O\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+O\+F\+F\+S\+ET~7}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a20d2a6d95d789c924e9e74a8f7c2c991}\label{ltemc-atcmd_8c_a20d2a6d95d789c924e9e74a8f7c2c991}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!FAIL\_COMPLETED\_STRING@{FAIL\_COMPLETED\_STRING}}
+\index{FAIL\_COMPLETED\_STRING@{FAIL\_COMPLETED\_STRING}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{FAIL\_COMPLETED\_STRING}{FAIL\_COMPLETED\_STRING}}
+{\footnotesize\ttfamily \#define F\+A\+I\+L\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}F\+A\+I\+L\textbackslash{}r\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_ace598580dddcfcf0a3143f9e41e7e0ee}\label{ltemc-atcmd_8c_ace598580dddcfcf0a3143f9e41e7e0ee}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!FAIL\_VALUE\_OFFSET@{FAIL\_VALUE\_OFFSET}}
+\index{FAIL\_VALUE\_OFFSET@{FAIL\_VALUE\_OFFSET}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{FAIL\_VALUE\_OFFSET}{FAIL\_VALUE\_OFFSET}}
+{\footnotesize\ttfamily \#define F\+A\+I\+L\+\_\+\+V\+A\+L\+U\+E\+\_\+\+O\+F\+F\+S\+ET~6}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a74e75242132eaabbc1c512488a135926}\label{ltemc-atcmd_8c_a74e75242132eaabbc1c512488a135926}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!MIN@{MIN}}
+\index{MIN@{MIN}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (x) \+: (y))}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_adcf9a32c660a637d958ea362ea696067}\label{ltemc-atcmd_8c_adcf9a32c660a637d958ea362ea696067}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!NOCARRIER\_COMPLETED\_STRING@{NOCARRIER\_COMPLETED\_STRING}}
+\index{NOCARRIER\_COMPLETED\_STRING@{NOCARRIER\_COMPLETED\_STRING}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{NOCARRIER\_COMPLETED\_STRING}{NOCARRIER\_COMPLETED\_STRING}}
+{\footnotesize\ttfamily \#define N\+O\+C\+A\+R\+R\+I\+E\+R\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}NO C\+A\+R\+R\+I\+E\+R\textbackslash{}r\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_aa5cfa513a4c3c7e0a4824167cbeea971}\label{ltemc-atcmd_8c_aa5cfa513a4c3c7e0a4824167cbeea971}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!NOCARRIER\_VALUE\_OFFSET@{NOCARRIER\_VALUE\_OFFSET}}
+\index{NOCARRIER\_VALUE\_OFFSET@{NOCARRIER\_VALUE\_OFFSET}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{NOCARRIER\_VALUE\_OFFSET}{NOCARRIER\_VALUE\_OFFSET}}
+{\footnotesize\ttfamily \#define N\+O\+C\+A\+R\+R\+I\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+O\+F\+F\+S\+ET~12}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a61021f847281b56ea58bf62fa421061d}\label{ltemc-atcmd_8c_a61021f847281b56ea58bf62fa421061d}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!OK\_COMPLETED\_LENGTH@{OK\_COMPLETED\_LENGTH}}
+\index{OK\_COMPLETED\_LENGTH@{OK\_COMPLETED\_LENGTH}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{OK\_COMPLETED\_LENGTH}{OK\_COMPLETED\_LENGTH}}
+{\footnotesize\ttfamily \#define O\+K\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+L\+E\+N\+G\+TH~4}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a94cc840dcfa6352171624a582482388d}\label{ltemc-atcmd_8c_a94cc840dcfa6352171624a582482388d}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!OK\_COMPLETED\_STRING@{OK\_COMPLETED\_STRING}}
+\index{OK\_COMPLETED\_STRING@{OK\_COMPLETED\_STRING}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{OK\_COMPLETED\_STRING}{OK\_COMPLETED\_STRING}}
+{\footnotesize\ttfamily \#define O\+K\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}O\+K\textbackslash{}r\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-atcmd_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a966265080bf43726bccb503cfb4103cc}\label{ltemc-atcmd_8c_a966265080bf43726bccb503cfb4103cc}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_\_acquireLock@{atcmd\_\_acquireLock}}
+\index{atcmd\_\_acquireLock@{atcmd\_\_acquireLock}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_\_acquireLock()}{atcmd\_\_acquireLock()}}
+{\footnotesize\ttfamily bool atcmd\+\_\+\+\_\+acquire\+Lock (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd\+Str,  }\item[{uint8\+\_\+t}]{retries }\end{DoxyParamCaption})}
+
+
+
+Attempts to get exclusive access to Q\+BG module command interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+Str} & \mbox{[}in\mbox{]} -\/ The AT command text. \\
+\hline
+{\em retries} & \mbox{[}in\mbox{]} -\/ Number of retries to be attempted, while obtaining lock. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a56000688f87721b80705498f5a92bdcb}\label{ltemc-atcmd_8c_a56000688f87721b80705498f5a92bdcb}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_awaitResult@{atcmd\_awaitResult}}
+\index{atcmd\_awaitResult@{atcmd\_awaitResult}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_awaitResult()}{atcmd\_awaitResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-atcmd_8h_ab9a28dd6dc94d1c92a647f1c9557d584}{atcmd\+Result\+\_\+t}} atcmd\+\_\+await\+Result (\begin{DoxyParamCaption}\item[{bool}]{auto\+Close\+Action }\end{DoxyParamCaption})}
+
+
+
+Waits for an AT command result until completed response or timeout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em auto\+Close\+Action} & \mbox{[}in\mbox{]} U\+SE W\+I\+TH C\+A\+U\+T\+I\+ON -\/ On result, close the action. The caller only needs the status code.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Action result. W\+A\+R\+N\+I\+NG -\/ the action\+Result.\+response contents are undetermined after close. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a74edf80fef3ee4cfaebbb9607ca58a78}\label{ltemc-atcmd_8c_a74edf80fef3ee4cfaebbb9607ca58a78}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_close@{atcmd\_close}}
+\index{atcmd\_close@{atcmd\_close}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_close()}{atcmd\_close()}}
+{\footnotesize\ttfamily void atcmd\+\_\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Closes (completes) a B\+Gx AT command structure and frees action resource (release action lock). 
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a2405bff7bc676f90ee17535c796afe44}\label{ltemc-atcmd_8c_a2405bff7bc676f90ee17535c796afe44}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_defaultResultParser@{atcmd\_defaultResultParser}}
+\index{atcmd\_defaultResultParser@{atcmd\_defaultResultParser}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_defaultResultParser()}{atcmd\_defaultResultParser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} atcmd\+\_\+default\+Result\+Parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{response,  }\item[{const char $\ast$}]{preamble,  }\item[{bool}]{preamble\+Reqd,  }\item[{uint8\+\_\+t}]{gap\+Reqd,  }\item[{const char $\ast$}]{terminator,  }\item[{char $\ast$$\ast$}]{endptr }\end{DoxyParamCaption})}
+
+
+
+Performs a standardized parse of command responses. This function can be wrapped to match atcmd command\+Completed\+Parse signature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & \mbox{[}in\mbox{]} -\/ The string returned from the get\+Result function. \\
+\hline
+{\em preamble} & \mbox{[}in\mbox{]} -\/ The string to look for to signal start of response match. \\
+\hline
+{\em preamble\+Reqd} & \mbox{[}in\mbox{]} -\/ The preamble string is required, set to false to search for only gap and terminator \\
+\hline
+{\em gap\+Reqd} & \mbox{[}in\mbox{]} -\/ The minimum char count between preamble (or start) and terminator (0 is valid). \\
+\hline
+{\em terminator} & \mbox{[}in\mbox{]} -\/ The string to signal the end of the command response. \\
+\hline
+{\em endptr} & \mbox{[}out\mbox{]} -\/ Char pointer to the next char in response after parser match\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+T\+TP style result code, 0 if parser incomplete (need more response). OK = 200. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-atcmd_8c_ac9151ae79098ea2379de42f180114825}\label{ltemc-atcmd_8c_ac9151ae79098ea2379de42f180114825}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_exitDataMode@{atcmd\_exitDataMode}}
+\index{atcmd\_exitDataMode@{atcmd\_exitDataMode}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_exitDataMode()}{atcmd\_exitDataMode()}}
+{\footnotesize\ttfamily void atcmd\+\_\+exit\+Data\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sends +++ sequence to transition B\+Gx out of data mode to command mode. 
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a3742317e3225c92af7b6487aee1c3f38}\label{ltemc-atcmd_8c_a3742317e3225c92af7b6487aee1c3f38}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_exitTextMode@{atcmd\_exitTextMode}}
+\index{atcmd\_exitTextMode@{atcmd\_exitTextMode}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_exitTextMode()}{atcmd\_exitTextMode()}}
+{\footnotesize\ttfamily void atcmd\+\_\+exit\+Text\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sends E\+SC character to ensure B\+Gx is not in text mode ($>$ prompt awaiting $^\wedge$\+Z/\+E\+SC). 
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_a6409bc1efcf200bf70e6371af23649d5}\label{ltemc-atcmd_8c_a6409bc1efcf200bf70e6371af23649d5}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_getResult@{atcmd\_getResult}}
+\index{atcmd\_getResult@{atcmd\_getResult}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_getResult()}{atcmd\_getResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-atcmd_8h_ab9a28dd6dc94d1c92a647f1c9557d584}{atcmd\+Result\+\_\+t}} atcmd\+\_\+get\+Result (\begin{DoxyParamCaption}\item[{bool}]{close\+Action }\end{DoxyParamCaption})}
+
+
+
+Gets command response and returns immediately. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em close\+Action} & \mbox{[}in\mbox{]} -\/ U\+SE W\+I\+TH C\+A\+U\+T\+I\+ON -\/ On result, close the action. The caller only needs the status code.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Action result. W\+A\+R\+N\+I\+NG -\/ the action\+Result.\+response contents are undetermined after close. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a9a916570d5a50d33bff2bcc3d642c295}\label{ltemc-atcmd_8c_a9a916570d5a50d33bff2bcc3d642c295}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_okResultParser@{atcmd\_okResultParser}}
+\index{atcmd\_okResultParser@{atcmd\_okResultParser}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_okResultParser()}{atcmd\_okResultParser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} atcmd\+\_\+ok\+Result\+Parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{response,  }\item[{char $\ast$$\ast$}]{endptr }\end{DoxyParamCaption})}
+
+
+
+Validate the response ends in a B\+Gxx OK value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & \mbox{[}in\mbox{]} -\/ Pointer to the command response received from the B\+Gx. \\
+\hline
+{\em endptr} & \mbox{[}out\mbox{]} -\/ Char pointer to the next char in response after parser match\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool If the response string ends in a valid OK sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a83bc3ff209bb41a62e387da7beecb643}\label{ltemc-atcmd_8c_a83bc3ff209bb41a62e387da7beecb643}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_sendRaw@{atcmd\_sendRaw}}
+\index{atcmd\_sendRaw@{atcmd\_sendRaw}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_sendRaw()}{atcmd\_sendRaw()}}
+{\footnotesize\ttfamily void atcmd\+\_\+send\+Raw (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{uint16\+\_\+t}]{data\+Sz,  }\item[{uint16\+\_\+t}]{timeout\+Millis,  }\item[{uint16\+\_\+t($\ast$)(const char $\ast$response, char $\ast$$\ast$endptr)}]{task\+Complete\+Parser\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Performs data transfer (send) sub-\/action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \mbox{[}in\mbox{]} -\/ Pointer to the block of binary data to send. \\
+\hline
+{\em data\+Sz} & \mbox{[}in\mbox{]} -\/ The size of the data block. \\
+\hline
+{\em timeout\+Millis} & \mbox{[}in\mbox{]} -\/ Timeout period (in millisecs) for send to complete. \\
+\hline
+{\em task\+Complete\+Parser\+\_\+func} & \mbox{[}in\mbox{]} -\/ Function pointer to parser looking for task completion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-atcmd_8c_aed2975d0dddc6bf06185a0a05d286283}\label{ltemc-atcmd_8c_aed2975d0dddc6bf06185a0a05d286283}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_sendRawWithEOTs@{atcmd\_sendRawWithEOTs}}
+\index{atcmd\_sendRawWithEOTs@{atcmd\_sendRawWithEOTs}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_sendRawWithEOTs()}{atcmd\_sendRawWithEOTs()}}
+{\footnotesize\ttfamily void atcmd\+\_\+send\+Raw\+With\+E\+O\+Ts (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{uint16\+\_\+t}]{data\+Sz,  }\item[{const char $\ast$}]{eot\+Phrase,  }\item[{uint16\+\_\+t}]{timeout\+Millis,  }\item[{uint16\+\_\+t($\ast$)(const char $\ast$response, char $\ast$$\ast$endptr)}]{task\+Complete\+Parser\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Performs data transfer (send) sub-\/action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \mbox{[}in\mbox{]} -\/ Pointer to the block of binary data to send. \\
+\hline
+{\em data\+Sz} & \mbox{[}in\mbox{]} -\/ The size of the data block. \\
+\hline
+{\em eot\+Phrase} & \mbox{[}in\mbox{]} -\/ Char string that is sent a the end-\/of-\/transmission. \\
+\hline
+{\em timeout\+Millis} & \mbox{[}in\mbox{]} -\/ Timeout period (in millisecs) for send to complete. \\
+\hline
+{\em task\+Complete\+Parser\+\_\+func} & \mbox{[}in\mbox{]} -\/ Function pointer to parser looking for task completion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-atcmd_8c_ab2b72be8d92edbbb633af14eac35d39b}\label{ltemc-atcmd_8c_ab2b72be8d92edbbb633af14eac35d39b}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_serviceResponseParser@{atcmd\_serviceResponseParser}}
+\index{atcmd\_serviceResponseParser@{atcmd\_serviceResponseParser}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_serviceResponseParser()}{atcmd\_serviceResponseParser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} atcmd\+\_\+service\+Response\+Parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{response,  }\item[{const char $\ast$}]{preamble,  }\item[{uint8\+\_\+t}]{result\+Indx,  }\item[{char $\ast$$\ast$}]{endptr }\end{DoxyParamCaption})}
+
+
+
+Parser for open connection response, shared by U\+D\+P/\+T\+C\+P/\+S\+S\+L/\+M\+Q\+TT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & \mbox{[}in\mbox{]} -\/ Pointer to the command response received from the B\+Gx. \\
+\hline
+{\em preamble} & \mbox{[}in\mbox{]} -\/ Pointer to a landmark phrase to look for in the response \\
+\hline
+{\em result\+Indx} & \mbox{[}in\mbox{]} -\/ Zero based index after landmark of numeric fields to find result \\
+\hline
+{\em endptr} & \mbox{[}out\mbox{]} -\/ Pointer to character in response following parser match \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a99badffb679e0d7b90c042dc93e57771}\label{ltemc-atcmd_8c_a99badffb679e0d7b90c042dc93e57771}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_strToken@{atcmd\_strToken}}
+\index{atcmd\_strToken@{atcmd\_strToken}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_strToken()}{atcmd\_strToken()}}
+{\footnotesize\ttfamily char$\ast$ atcmd\+\_\+str\+Token (\begin{DoxyParamCaption}\item[{char $\ast$}]{source,  }\item[{int}]{delimiter,  }\item[{char $\ast$}]{token,  }\item[{uint8\+\_\+t}]{token\+Max }\end{DoxyParamCaption})}
+
+
+
+C-\/string token grabber. 
+
+\mbox{\Hypertarget{ltemc-atcmd_8c_ad2cda78525644fabae5de68a876bad4a}\label{ltemc-atcmd_8c_ad2cda78525644fabae5de68a876bad4a}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_tokenResultParser@{atcmd\_tokenResultParser}}
+\index{atcmd\_tokenResultParser@{atcmd\_tokenResultParser}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_tokenResultParser()}{atcmd\_tokenResultParser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} atcmd\+\_\+token\+Result\+Parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{response,  }\item[{const char $\ast$}]{preamble,  }\item[{char}]{delim,  }\item[{uint8\+\_\+t}]{reqd\+Tokens,  }\item[{const char $\ast$}]{terminator,  }\item[{char $\ast$$\ast$}]{endptr }\end{DoxyParamCaption})}
+
+
+
+Performs a standardized parse of command responses. This function can be wrapped to match atcmd command\+Completed\+Parse signature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & \mbox{[}in\mbox{]} -\/ The string returned from the get\+Result function. \\
+\hline
+{\em preamble} & \mbox{[}in\mbox{]} -\/ The string to look for to signal response matches command (scans from end backwards). \\
+\hline
+{\em delim} & \mbox{[}in\mbox{]} -\/ The token delimeter char. \\
+\hline
+{\em reqd\+Tokens} & \mbox{[}in\mbox{]} -\/ The minimum number of tokens expected. \\
+\hline
+{\em terminator} & \mbox{[}in\mbox{]} -\/ Text to look for indicating the sucessful end of command response. \\
+\hline
+{\em endptr} & \mbox{[}out\mbox{]} -\/ Char pointer to the next char in response after parser match\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the response meets the conditions in the preamble and token count required. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a868e0262f09a69e0cdc5ed00ff29ba76}\label{ltemc-atcmd_8c_a868e0262f09a69e0cdc5ed00ff29ba76}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_tryInvoke@{atcmd\_tryInvoke}}
+\index{atcmd\_tryInvoke@{atcmd\_tryInvoke}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_tryInvoke()}{atcmd\_tryInvoke()}}
+{\footnotesize\ttfamily bool atcmd\+\_\+try\+Invoke (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd\+Str }\end{DoxyParamCaption})}
+
+
+
+Invokes a B\+Gx AT command with default action values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+Str} & \mbox{[}in\mbox{]} The command string to send to the B\+G96 module.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if action was invoked, false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-atcmd_8c_af4816b1b3157b811f000bc5bdce10766}\label{ltemc-atcmd_8c_af4816b1b3157b811f000bc5bdce10766}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_tryInvokeAdv@{atcmd\_tryInvokeAdv}}
+\index{atcmd\_tryInvokeAdv@{atcmd\_tryInvokeAdv}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_tryInvokeAdv()}{atcmd\_tryInvokeAdv()}}
+{\footnotesize\ttfamily bool atcmd\+\_\+try\+Invoke\+Adv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd\+Str,  }\item[{uint16\+\_\+t}]{timeout,  }\item[{uint16\+\_\+t($\ast$)(const char $\ast$response, char $\ast$$\ast$endptr)}]{task\+Complete\+Parser }\end{DoxyParamCaption})}
+
+
+
+Invokes a B\+Gx AT command with application specified action values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+Str} & \mbox{[}in\mbox{]} The command string to send to the B\+G96 module. \\
+\hline
+{\em timeout} & \mbox{[}in\mbox{]} Number of milliseconds the action can take. Use system default A\+C\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+Tml or your value. \\
+\hline
+{\em task\+Complete\+Parser} & \mbox{[}in\mbox{]} Custom command response parser to signal result is complete. N\+U\+LL for std parser.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if action was invoked, false if not 
+\end{DoxyReturn}

@@ -1,0 +1,190 @@
+\hypertarget{lqc__collections_8h}{}\doxysection{tests/\+L\+T\+Em\+C-\/8-\/mqtt/lqc\+\_\+collections.h File Reference}
+\label{lqc__collections_8h}\index{tests/LTEmC-\/8-\/mqtt/lqc\_collections.h@{tests/LTEmC-\/8-\/mqtt/lqc\_collections.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structkey_value_dict__tag}{key\+Value\+Dict\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct exposing action\textquotesingle{}s parameters collection (names and values as c-\/strings). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlqc_json_prop_value__tag}{lqc\+Json\+Prop\+Value\+\_\+tag}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lqc__collections_8h_af61d39f119a9ef86e21f1c0267c33b4a}{K\+E\+Y\+V\+A\+L\+U\+E\+\_\+\+D\+I\+C\+T\+\_\+\+SZ}}~15
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structkey_value_dict__tag}{key\+Value\+Dict\+\_\+tag}} \mbox{\hyperlink{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}{key\+Value\+Dict\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct exposing action\textquotesingle{}s parameters collection (names and values as c-\/strings). \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593}{lqc\+Json\+Prop\+Type\+\_\+tag}} \mbox{\hyperlink{lqc__collections_8h_a3375d8e1f920e1c55796c8e6bd5f48e0}{lqc\+Json\+Prop\+Type\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structlqc_json_prop_value__tag}{lqc\+Json\+Prop\+Value\+\_\+tag}} \mbox{\hyperlink{lqc__collections_8h_adc7bbc6b88a96174569cf32877c775d0}{lqc\+Json\+Prop\+Value\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593}{lqc\+Json\+Prop\+Type\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593af55c469235258fd9c51171b2eb5e9c5f}{lqc\+Json\+Prop\+Type\+\_\+not\+Found}} = 0, 
+\mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593af3278740bd2e85fe348e15b7e34b793c}{lqc\+Json\+Prop\+Type\+\_\+object}} = 1, 
+\mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593acdd2664efbe2fa765b501392ec79faa0}{lqc\+Json\+Prop\+Type\+\_\+array}} = 2, 
+\mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593a37c77f55d7f4130c7ef1dd223772d97c}{lqc\+Json\+Prop\+Type\+\_\+text}} = 3, 
+\newline
+\mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593aaa2add85f78f158e01f22514e9842269}{lqc\+Json\+Prop\+Type\+\_\+bool}} = 4, 
+\mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593a87d661210ca2b7779000230c2d2496fe}{lqc\+Json\+Prop\+Type\+\_\+int}} = 5, 
+\mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593a2940a5bc97e06d51788569c88277911e}{lqc\+Json\+Prop\+Type\+\_\+float}} = 6, 
+\mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593ae309f709a3fa3432411034ab7d4f528c}{lqc\+Json\+Prop\+Type\+\_\+null}} = 9
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}{key\+Value\+Dict\+\_\+t}} \mbox{\hyperlink{lqc__collections_8h_a64959b1832a2bf2a0bfb74caee51f108}{lqc\+\_\+create\+Dict\+From\+Query\+String}} (char $\ast$dict\+Src)
+\begin{DoxyCompactList}\small\item\em Parses a H\+T\+TP style query string (key and value pairs), creating a dictionary overlay for the keys and values. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{lqc__collections_8h_a604b38aa3942587af8e0e63fc370cb90}{lqc\+\_\+get\+Dict\+Value}} (const char $\ast$key, \mbox{\hyperlink{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}{key\+Value\+Dict\+\_\+t}} dict)
+\begin{DoxyCompactList}\small\item\em Scans the qry\+Props struct for the a prop and returns the value from the underlying char array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lqc__collections_8h_adc7bbc6b88a96174569cf32877c775d0}{lqc\+Json\+Prop\+Value\+\_\+t}} \mbox{\hyperlink{lqc__collections_8h_a783693dd55866839cf5fb99089598792}{lqc\+\_\+get\+Json\+Prop\+Value}} (const char $\ast$json\+Src, const char $\ast$prop\+Name)
+\begin{DoxyCompactList}\small\item\em Scans a J\+S\+ON formatted C-\/\+String (char array) for a property, once found a descriptive struct is populated with info to allow for property value consumption. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lqc__collections_8h_af61d39f119a9ef86e21f1c0267c33b4a}\label{lqc__collections_8h_af61d39f119a9ef86e21f1c0267c33b4a}} 
+\index{lqc\_collections.h@{lqc\_collections.h}!KEYVALUE\_DICT\_SZ@{KEYVALUE\_DICT\_SZ}}
+\index{KEYVALUE\_DICT\_SZ@{KEYVALUE\_DICT\_SZ}!lqc\_collections.h@{lqc\_collections.h}}
+\doxysubsubsection{\texorpdfstring{KEYVALUE\_DICT\_SZ}{KEYVALUE\_DICT\_SZ}}
+{\footnotesize\ttfamily \#define K\+E\+Y\+V\+A\+L\+U\+E\+\_\+\+D\+I\+C\+T\+\_\+\+SZ~15}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}\label{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}} 
+\index{lqc\_collections.h@{lqc\_collections.h}!keyValueDict\_t@{keyValueDict\_t}}
+\index{keyValueDict\_t@{keyValueDict\_t}!lqc\_collections.h@{lqc\_collections.h}}
+\doxysubsubsection{\texorpdfstring{keyValueDict\_t}{keyValueDict\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structkey_value_dict__tag}{key\+Value\+Dict\+\_\+tag}} \mbox{\hyperlink{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}{key\+Value\+Dict\+\_\+t}}}
+
+
+
+Struct exposing action\textquotesingle{}s parameters collection (names and values as c-\/strings). 
+
+N\+O\+TE\+: This struct maps key/value pairs in an existing H\+T\+TP query string formated char array. The array is parsed using the lqc\+\_\+parse\+Query\+String\+Dict() function. Parsing M\+U\+T\+A\+T\+ES the original char array. The original char array must stay in scope as it contains the keys and the values. The key\+Value\+Dict struct only provides a higher level map of the data stored in the char array and a utility function lqc\+\_\+get\+Dict\+Value(key) to access the value.
+
+If copy (ex\+: free source) of underlying char array needed\+: memcpy(destination\+\_\+ptr, keys\mbox{[}0\mbox{]}, length) \mbox{\Hypertarget{lqc__collections_8h_a3375d8e1f920e1c55796c8e6bd5f48e0}\label{lqc__collections_8h_a3375d8e1f920e1c55796c8e6bd5f48e0}} 
+\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_t@{lqcJsonPropType\_t}}
+\index{lqcJsonPropType\_t@{lqcJsonPropType\_t}!lqc\_collections.h@{lqc\_collections.h}}
+\doxysubsubsection{\texorpdfstring{lqcJsonPropType\_t}{lqcJsonPropType\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593}{lqc\+Json\+Prop\+Type\+\_\+tag}} \mbox{\hyperlink{lqc__collections_8h_a3375d8e1f920e1c55796c8e6bd5f48e0}{lqc\+Json\+Prop\+Type\+\_\+t}}}
+
+\mbox{\Hypertarget{lqc__collections_8h_adc7bbc6b88a96174569cf32877c775d0}\label{lqc__collections_8h_adc7bbc6b88a96174569cf32877c775d0}} 
+\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropValue\_t@{lqcJsonPropValue\_t}}
+\index{lqcJsonPropValue\_t@{lqcJsonPropValue\_t}!lqc\_collections.h@{lqc\_collections.h}}
+\doxysubsubsection{\texorpdfstring{lqcJsonPropValue\_t}{lqcJsonPropValue\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structlqc_json_prop_value__tag}{lqc\+Json\+Prop\+Value\+\_\+tag}} \mbox{\hyperlink{lqc__collections_8h_adc7bbc6b88a96174569cf32877c775d0}{lqc\+Json\+Prop\+Value\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{lqc__collections_8h_a597dc7879a97a602e068b48044409593}\label{lqc__collections_8h_a597dc7879a97a602e068b48044409593}} 
+\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_tag@{lqcJsonPropType\_tag}}
+\index{lqcJsonPropType\_tag@{lqcJsonPropType\_tag}!lqc\_collections.h@{lqc\_collections.h}}
+\doxysubsubsection{\texorpdfstring{lqcJsonPropType\_tag}{lqcJsonPropType\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{lqc__collections_8h_a597dc7879a97a602e068b48044409593}{lqc\+Json\+Prop\+Type\+\_\+tag}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lqcJsonPropType\_notFound@{lqcJsonPropType\_notFound}!lqc\_collections.h@{lqc\_collections.h}}\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_notFound@{lqcJsonPropType\_notFound}}}\mbox{\Hypertarget{lqc__collections_8h_a597dc7879a97a602e068b48044409593af55c469235258fd9c51171b2eb5e9c5f}\label{lqc__collections_8h_a597dc7879a97a602e068b48044409593af55c469235258fd9c51171b2eb5e9c5f}} 
+lqc\+Json\+Prop\+Type\+\_\+not\+Found&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lqcJsonPropType\_object@{lqcJsonPropType\_object}!lqc\_collections.h@{lqc\_collections.h}}\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_object@{lqcJsonPropType\_object}}}\mbox{\Hypertarget{lqc__collections_8h_a597dc7879a97a602e068b48044409593af3278740bd2e85fe348e15b7e34b793c}\label{lqc__collections_8h_a597dc7879a97a602e068b48044409593af3278740bd2e85fe348e15b7e34b793c}} 
+lqc\+Json\+Prop\+Type\+\_\+object&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lqcJsonPropType\_array@{lqcJsonPropType\_array}!lqc\_collections.h@{lqc\_collections.h}}\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_array@{lqcJsonPropType\_array}}}\mbox{\Hypertarget{lqc__collections_8h_a597dc7879a97a602e068b48044409593acdd2664efbe2fa765b501392ec79faa0}\label{lqc__collections_8h_a597dc7879a97a602e068b48044409593acdd2664efbe2fa765b501392ec79faa0}} 
+lqc\+Json\+Prop\+Type\+\_\+array&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lqcJsonPropType\_text@{lqcJsonPropType\_text}!lqc\_collections.h@{lqc\_collections.h}}\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_text@{lqcJsonPropType\_text}}}\mbox{\Hypertarget{lqc__collections_8h_a597dc7879a97a602e068b48044409593a37c77f55d7f4130c7ef1dd223772d97c}\label{lqc__collections_8h_a597dc7879a97a602e068b48044409593a37c77f55d7f4130c7ef1dd223772d97c}} 
+lqc\+Json\+Prop\+Type\+\_\+text&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lqcJsonPropType\_bool@{lqcJsonPropType\_bool}!lqc\_collections.h@{lqc\_collections.h}}\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_bool@{lqcJsonPropType\_bool}}}\mbox{\Hypertarget{lqc__collections_8h_a597dc7879a97a602e068b48044409593aaa2add85f78f158e01f22514e9842269}\label{lqc__collections_8h_a597dc7879a97a602e068b48044409593aaa2add85f78f158e01f22514e9842269}} 
+lqc\+Json\+Prop\+Type\+\_\+bool&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lqcJsonPropType\_int@{lqcJsonPropType\_int}!lqc\_collections.h@{lqc\_collections.h}}\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_int@{lqcJsonPropType\_int}}}\mbox{\Hypertarget{lqc__collections_8h_a597dc7879a97a602e068b48044409593a87d661210ca2b7779000230c2d2496fe}\label{lqc__collections_8h_a597dc7879a97a602e068b48044409593a87d661210ca2b7779000230c2d2496fe}} 
+lqc\+Json\+Prop\+Type\+\_\+int&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lqcJsonPropType\_float@{lqcJsonPropType\_float}!lqc\_collections.h@{lqc\_collections.h}}\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_float@{lqcJsonPropType\_float}}}\mbox{\Hypertarget{lqc__collections_8h_a597dc7879a97a602e068b48044409593a2940a5bc97e06d51788569c88277911e}\label{lqc__collections_8h_a597dc7879a97a602e068b48044409593a2940a5bc97e06d51788569c88277911e}} 
+lqc\+Json\+Prop\+Type\+\_\+float&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lqcJsonPropType\_null@{lqcJsonPropType\_null}!lqc\_collections.h@{lqc\_collections.h}}\index{lqc\_collections.h@{lqc\_collections.h}!lqcJsonPropType\_null@{lqcJsonPropType\_null}}}\mbox{\Hypertarget{lqc__collections_8h_a597dc7879a97a602e068b48044409593ae309f709a3fa3432411034ab7d4f528c}\label{lqc__collections_8h_a597dc7879a97a602e068b48044409593ae309f709a3fa3432411034ab7d4f528c}} 
+lqc\+Json\+Prop\+Type\+\_\+null&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lqc__collections_8h_a64959b1832a2bf2a0bfb74caee51f108}\label{lqc__collections_8h_a64959b1832a2bf2a0bfb74caee51f108}} 
+\index{lqc\_collections.h@{lqc\_collections.h}!lqc\_createDictFromQueryString@{lqc\_createDictFromQueryString}}
+\index{lqc\_createDictFromQueryString@{lqc\_createDictFromQueryString}!lqc\_collections.h@{lqc\_collections.h}}
+\doxysubsubsection{\texorpdfstring{lqc\_createDictFromQueryString()}{lqc\_createDictFromQueryString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}{key\+Value\+Dict\+\_\+t}} lqc\+\_\+create\+Dict\+From\+Query\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{dict\+Src }\end{DoxyParamCaption})}
+
+
+
+Parses a H\+T\+TP style query string (key and value pairs), creating a dictionary overlay for the keys and values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dict\+Src} & \mbox{[}in\mbox{]} -\/ Char pointer to the c-\/string containing key value pairs to identify. N\+O\+TE\+: the source is mutated in the process, keys/values are N\+U\+LL term\textquotesingle{}d.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct with map (pointers) to the keys and values (within the source array) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lqc__collections_8h_a604b38aa3942587af8e0e63fc370cb90}\label{lqc__collections_8h_a604b38aa3942587af8e0e63fc370cb90}} 
+\index{lqc\_collections.h@{lqc\_collections.h}!lqc\_getDictValue@{lqc\_getDictValue}}
+\index{lqc\_getDictValue@{lqc\_getDictValue}!lqc\_collections.h@{lqc\_collections.h}}
+\doxysubsubsection{\texorpdfstring{lqc\_getDictValue()}{lqc\_getDictValue()}}
+{\footnotesize\ttfamily char$\ast$ lqc\+\_\+get\+Dict\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{key,  }\item[{\mbox{\hyperlink{lqc__collections_8h_aa31aa11a202a7940654a43d9f75f708a}{key\+Value\+Dict\+\_\+t}}}]{dict }\end{DoxyParamCaption})}
+
+
+
+Scans the qry\+Props struct for the a prop and returns the value from the underlying char array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{[}in\mbox{]} -\/ Char pointer to the c-\/string to locate in the dictionary \\
+\hline
+{\em dict} & \mbox{[}in\mbox{]} -\/ Dictionary to be searched\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct with pointer arrays to the properties (name/value) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lqc__collections_8h_a783693dd55866839cf5fb99089598792}\label{lqc__collections_8h_a783693dd55866839cf5fb99089598792}} 
+\index{lqc\_collections.h@{lqc\_collections.h}!lqc\_getJsonPropValue@{lqc\_getJsonPropValue}}
+\index{lqc\_getJsonPropValue@{lqc\_getJsonPropValue}!lqc\_collections.h@{lqc\_collections.h}}
+\doxysubsubsection{\texorpdfstring{lqc\_getJsonPropValue()}{lqc\_getJsonPropValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lqc__collections_8h_adc7bbc6b88a96174569cf32877c775d0}{lqc\+Json\+Prop\+Value\+\_\+t}} lqc\+\_\+get\+Json\+Prop\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{json\+Src,  }\item[{const char $\ast$}]{prop\+Name }\end{DoxyParamCaption})}
+
+
+
+Scans a J\+S\+ON formatted C-\/\+String (char array) for a property, once found a descriptive struct is populated with info to allow for property value consumption. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em json\+Src} & -\/ Char array containing the J\+S\+ON document. \\
+\hline
+\mbox{\texttt{ in}}  & {\em prop\+Name} & -\/ The name of the property you are searching for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct with a pointer to property value, a property type (enum) and the len of property value. 
+\end{DoxyReturn}

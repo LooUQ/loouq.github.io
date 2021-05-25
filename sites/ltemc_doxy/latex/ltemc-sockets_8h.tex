@@ -1,0 +1,251 @@
+\hypertarget{ltemc-sockets_8h}{}\doxysection{src/ltemc-\/sockets.h File Reference}
+\label{ltemc-sockets_8h}\index{src/ltemc-\/sockets.h@{src/ltemc-\/sockets.h}}
+{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsocket_ctrl__tag}{socket\+Ctrl\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct representing the state of a T\+C\+P/\+U\+D\+P/\+S\+SL socket connection. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsockets__tag}{sockets\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct representing the sockets service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-sockets_8h_aa4bd064da03e2e71627c660f9a7fcbbb}{S\+O\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT}}~6
+\item 
+\#define \mbox{\hyperlink{ltemc-sockets_8h_a62339be9edf850874f36823c3a5cb3d0}{S\+O\+C\+K\+E\+T\+\_\+\+C\+L\+O\+S\+ED}}~255
+\item 
+\#define \mbox{\hyperlink{ltemc-sockets_8h_abaa4cd965771235934c5d931cfe5af29}{S\+O\+C\+K\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+P\+R\+E\+V\+O\+P\+EN}}~563
+\item 
+\#define \mbox{\hyperlink{ltemc-sockets_8h_a6699e2722f83b61c38637e0820ab75df}{S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+N\+D\+\_\+\+R\+E\+T\+R\+I\+ES}}~3
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}}
+\item 
+typedef uint16\+\_\+t \mbox{\hyperlink{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{ltemc-sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}{receiver\+\_\+func\+\_\+t}}) (\mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} sckt\+Id, void $\ast$data, uint16\+\_\+t data\+Sz)
+\begin{DoxyCompactList}\small\item\em typedef for the socket services data receiver function. Connects sockets to the applicatoin (receive). \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structsocket_ctrl__tag}{socket\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-sockets_8h_a74d98e23a65a8898f1e87ff7ba81bdd9}{socket\+Ctrl\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct representing the state of a T\+C\+P/\+U\+D\+P/\+S\+SL socket connection. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structsockets__tag}{sockets\+\_\+tag}} \mbox{\hyperlink{ltemc-sockets_8h_abd223f94326322187e5076b43235dca3}{sockets\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct representing the sockets service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ltemc-sockets_8h_a429b4d6a3fb972e012b91ea9175d7338}{sckt\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em Allocate and initialize the IP socket protocol (T\+C\+P/\+U\+D\+P/\+S\+SL) structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-sockets_8h_aa177bf3c8bfc9403d4427a7c0e26d4ba}{sckt\+\_\+open}} (\mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} socket\+Id, \mbox{\hyperlink{ltemc-network_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}} protocol, const char $\ast$host, uint16\+\_\+t rmt\+Port, uint16\+\_\+t lcl\+Port, bool clean\+Session, \mbox{\hyperlink{ltemc-sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}{receiver\+\_\+func\+\_\+t}} rcvr\+\_\+func)
+\begin{DoxyCompactList}\small\item\em Open a data connection (socket) to d data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-sockets_8h_a938a6003effe7eece78f0de391e99891}{sckt\+\_\+close}} (uint8\+\_\+t socket\+Id)
+\begin{DoxyCompactList}\small\item\em Close an established (open) connection socket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-sockets_8h_a8109884e2c8c9e61ad3ddde5d13b16ed}{sckt\+\_\+flush}} (uint8\+\_\+t socket\+Id)
+\begin{DoxyCompactList}\small\item\em Reset open socket connection. This function drains the connection\textquotesingle{}s data pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-sockets_8h_a1a7730f332e79c71e823ecb26859cec0}{sckt\+\_\+close\+All}} (uint8\+\_\+t contxt\+Id)
+\begin{DoxyCompactList}\small\item\em Close out all T\+C\+P/\+IP sockets on a context. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-sockets_8h_a2ac55ec1d968fc1a90320233b7a583ca}{sckt\+\_\+get\+State}} (uint8\+\_\+t socket\+Id)
+\item 
+\mbox{\hyperlink{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-sockets_8h_a7c9f32544b937ebb7f63e9499ef15e82}{sckt\+\_\+send}} (\mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} socket\+Id, const char $\ast$data, uint16\+\_\+t data\+Sz)
+\begin{DoxyCompactList}\small\item\em Send data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-sockets_8h_accd2287873108ebef20cdf22563105c4}{sckt\+\_\+do\+Work}} ()
+\begin{DoxyCompactList}\small\item\em Perform background tasks to move socket data through pipeline, deliver RX data to application and update socket/\+I\+OP status values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-sockets_8h_a62339be9edf850874f36823c3a5cb3d0}\label{ltemc-sockets_8h_a62339be9edf850874f36823c3a5cb3d0}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!SOCKET\_CLOSED@{SOCKET\_CLOSED}}
+\index{SOCKET\_CLOSED@{SOCKET\_CLOSED}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{SOCKET\_CLOSED}{SOCKET\_CLOSED}}
+{\footnotesize\ttfamily \#define S\+O\+C\+K\+E\+T\+\_\+\+C\+L\+O\+S\+ED~255}
+
+\mbox{\Hypertarget{ltemc-sockets_8h_aa4bd064da03e2e71627c660f9a7fcbbb}\label{ltemc-sockets_8h_aa4bd064da03e2e71627c660f9a7fcbbb}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!SOCKET\_COUNT@{SOCKET\_COUNT}}
+\index{SOCKET\_COUNT@{SOCKET\_COUNT}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{SOCKET\_COUNT}{SOCKET\_COUNT}}
+{\footnotesize\ttfamily \#define S\+O\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT~6}
+
+\mbox{\Hypertarget{ltemc-sockets_8h_abaa4cd965771235934c5d931cfe5af29}\label{ltemc-sockets_8h_abaa4cd965771235934c5d931cfe5af29}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!SOCKET\_RESULT\_PREVOPEN@{SOCKET\_RESULT\_PREVOPEN}}
+\index{SOCKET\_RESULT\_PREVOPEN@{SOCKET\_RESULT\_PREVOPEN}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{SOCKET\_RESULT\_PREVOPEN}{SOCKET\_RESULT\_PREVOPEN}}
+{\footnotesize\ttfamily \#define S\+O\+C\+K\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+P\+R\+E\+V\+O\+P\+EN~563}
+
+\mbox{\Hypertarget{ltemc-sockets_8h_a6699e2722f83b61c38637e0820ab75df}\label{ltemc-sockets_8h_a6699e2722f83b61c38637e0820ab75df}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!SOCKET\_SEND\_RETRIES@{SOCKET\_SEND\_RETRIES}}
+\index{SOCKET\_SEND\_RETRIES@{SOCKET\_SEND\_RETRIES}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{SOCKET\_SEND\_RETRIES}{SOCKET\_SEND\_RETRIES}}
+{\footnotesize\ttfamily \#define S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+N\+D\+\_\+\+R\+E\+T\+R\+I\+ES~3}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ltemc-sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}\label{ltemc-sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!receiver\_func\_t@{receiver\_func\_t}}
+\index{receiver\_func\_t@{receiver\_func\_t}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{receiver\_func\_t}{receiver\_func\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ receiver\+\_\+func\+\_\+t) (\mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}} sckt\+Id, void $\ast$data, uint16\+\_\+t data\+Sz)}
+
+
+
+typedef for the socket services data receiver function. Connects sockets to the applicatoin (receive). 
+
+\mbox{\Hypertarget{ltemc-sockets_8h_a74d98e23a65a8898f1e87ff7ba81bdd9}\label{ltemc-sockets_8h_a74d98e23a65a8898f1e87ff7ba81bdd9}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!socketCtrl\_t@{socketCtrl\_t}}
+\index{socketCtrl\_t@{socketCtrl\_t}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{socketCtrl\_t}{socketCtrl\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structsocket_ctrl__tag}{socket\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-sockets_8h_a74d98e23a65a8898f1e87ff7ba81bdd9}{socket\+Ctrl\+\_\+t}}}
+
+
+
+Struct representing the state of a T\+C\+P/\+U\+D\+P/\+S\+SL socket connection. 
+
+\mbox{\Hypertarget{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}\label{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!socketId\_t@{socketId\_t}}
+\index{socketId\_t@{socketId\_t}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{socketId\_t}{socketId\_t}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}}}
+
+\mbox{\Hypertarget{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}\label{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!socketResult\_t@{socketResult\_t}}
+\index{socketResult\_t@{socketResult\_t}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{socketResult\_t}{socketResult\_t}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \mbox{\hyperlink{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}}}
+
+\mbox{\Hypertarget{ltemc-sockets_8h_abd223f94326322187e5076b43235dca3}\label{ltemc-sockets_8h_abd223f94326322187e5076b43235dca3}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!sockets\_t@{sockets\_t}}
+\index{sockets\_t@{sockets\_t}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{sockets\_t}{sockets\_t}}
+{\footnotesize\ttfamily typedef volatile struct \mbox{\hyperlink{structsockets__tag}{sockets\+\_\+tag}} \mbox{\hyperlink{ltemc-sockets_8h_abd223f94326322187e5076b43235dca3}{sockets\+\_\+t}}}
+
+
+
+Struct representing the sockets service. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-sockets_8h_a938a6003effe7eece78f0de391e99891}\label{ltemc-sockets_8h_a938a6003effe7eece78f0de391e99891}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!sckt\_close@{sckt\_close}}
+\index{sckt\_close@{sckt\_close}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{sckt\_close()}{sckt\_close()}}
+{\footnotesize\ttfamily void sckt\+\_\+close (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{socket\+Id }\end{DoxyParamCaption})}
+
+
+
+Close an established (open) connection socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket\+Id} & \mbox{[}in\mbox{]} -\/ The socket ID or number for the connection to close. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-sockets_8h_a1a7730f332e79c71e823ecb26859cec0}\label{ltemc-sockets_8h_a1a7730f332e79c71e823ecb26859cec0}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!sckt\_closeAll@{sckt\_closeAll}}
+\index{sckt\_closeAll@{sckt\_closeAll}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{sckt\_closeAll()}{sckt\_closeAll()}}
+{\footnotesize\ttfamily void sckt\+\_\+close\+All (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{contxt\+Id }\end{DoxyParamCaption})}
+
+
+
+Close out all T\+C\+P/\+IP sockets on a context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contxt\+Id} & \mbox{[}in\mbox{]} -\/ The carrier P\+DP context hosting the sockets to close. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-sockets_8h_a429b4d6a3fb972e012b91ea9175d7338}\label{ltemc-sockets_8h_a429b4d6a3fb972e012b91ea9175d7338}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!sckt\_create@{sckt\_create}}
+\index{sckt\_create@{sckt\_create}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{sckt\_create()}{sckt\_create()}}
+{\footnotesize\ttfamily void sckt\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allocate and initialize the IP socket protocol (T\+C\+P/\+U\+D\+P/\+S\+SL) structure. 
+
+\mbox{\Hypertarget{ltemc-sockets_8h_accd2287873108ebef20cdf22563105c4}\label{ltemc-sockets_8h_accd2287873108ebef20cdf22563105c4}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!sckt\_doWork@{sckt\_doWork}}
+\index{sckt\_doWork@{sckt\_doWork}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{sckt\_doWork()}{sckt\_doWork()}}
+{\footnotesize\ttfamily void sckt\+\_\+do\+Work (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform background tasks to move socket data through pipeline, deliver RX data to application and update socket/\+I\+OP status values. 
+
+\mbox{\Hypertarget{ltemc-sockets_8h_a8109884e2c8c9e61ad3ddde5d13b16ed}\label{ltemc-sockets_8h_a8109884e2c8c9e61ad3ddde5d13b16ed}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!sckt\_flush@{sckt\_flush}}
+\index{sckt\_flush@{sckt\_flush}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{sckt\_flush()}{sckt\_flush()}}
+{\footnotesize\ttfamily bool sckt\+\_\+flush (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{socket\+Id }\end{DoxyParamCaption})}
+
+
+
+Reset open socket connection. This function drains the connection\textquotesingle{}s data pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket\+Id} & \mbox{[}in\mbox{]} -\/ The connection socket to reset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if flush socket data initiated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-sockets_8h_a2ac55ec1d968fc1a90320233b7a583ca}\label{ltemc-sockets_8h_a2ac55ec1d968fc1a90320233b7a583ca}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!sckt\_getState@{sckt\_getState}}
+\index{sckt\_getState@{sckt\_getState}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{sckt\_getState()}{sckt\_getState()}}
+{\footnotesize\ttfamily bool sckt\+\_\+get\+State (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{socket\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-sockets_8h_aa177bf3c8bfc9403d4427a7c0e26d4ba}\label{ltemc-sockets_8h_aa177bf3c8bfc9403d4427a7c0e26d4ba}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!sckt\_open@{sckt\_open}}
+\index{sckt\_open@{sckt\_open}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{sckt\_open()}{sckt\_open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} sckt\+\_\+open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}}}]{socket\+Id,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}}}]{protocol,  }\item[{const char $\ast$}]{host,  }\item[{uint16\+\_\+t}]{rmt\+Port,  }\item[{uint16\+\_\+t}]{lcl\+Port,  }\item[{bool}]{clean\+Session,  }\item[{\mbox{\hyperlink{ltemc-sockets_8h_a31421c2c2ed9b8c0ac84f91d0c6027e5}{receiver\+\_\+func\+\_\+t}}}]{rcvr\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Open a data connection (socket) to d data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket\+Id} & \mbox{[}in\mbox{]} -\/ The ID or number specifying the socket connect to open. \\
+\hline
+{\em protocol} & \mbox{[}in\mbox{]} -\/ The IP protocol to use for the connection (T\+C\+P/\+U\+D\+P/\+T\+CP L\+I\+S\+T\+E\+N\+E\+R/\+U\+DP S\+E\+R\+V\+I\+C\+E/\+S\+SL). \\
+\hline
+{\em host} & \mbox{[}in\mbox{]} -\/ The IP address (string) or domain name of the remote host to communicate with. \\
+\hline
+{\em rmt\+Port} & \mbox{[}in\mbox{]} -\/ The port number at the remote host. \\
+\hline
+{\em lcl\+Port} & \mbox{[}in\mbox{]} -\/ The port number on this side of the conversation, set to 0 to auto-\/assign. \\
+\hline
+{\em clean\+Session} & \mbox{[}in\mbox{]} -\/ If the port is found already open, T\+R\+UE\+: flushes any previous data from the socket session. \\
+\hline
+{\em rcvr\+\_\+func} & \mbox{[}in\mbox{]} -\/ The callback function in your application to be notified of received data ready.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+socket result code similar to http status code, OK = 200 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-sockets_8h_a7c9f32544b937ebb7f63e9499ef15e82}\label{ltemc-sockets_8h_a7c9f32544b937ebb7f63e9499ef15e82}} 
+\index{ltemc-\/sockets.h@{ltemc-\/sockets.h}!sckt\_send@{sckt\_send}}
+\index{sckt\_send@{sckt\_send}!ltemc-\/sockets.h@{ltemc-\/sockets.h}}
+\doxysubsubsection{\texorpdfstring{sckt\_send()}{sckt\_send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-sockets_8h_ab7cf20e66a2d8ef88c5befa4f4bf8276}{socket\+Result\+\_\+t}} sckt\+\_\+send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-sockets_8h_aeb1420e8be8247110f490e2fc48881b7}{socket\+Id\+\_\+t}}}]{socket\+Id,  }\item[{const char $\ast$}]{data,  }\item[{uint16\+\_\+t}]{data\+Sz }\end{DoxyParamCaption})}
+
+
+
+Send data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket\+Id} & \mbox{[}in\mbox{]} -\/ The connection socket returned from open. \\
+\hline
+{\em data} & \mbox{[}in\mbox{]} -\/ A character pointer containing the data to send. \\
+\hline
+{\em data\+Sz} & \mbox{[}in\mbox{]} -\/ The size of the buffer ($<$ 1501 bytes). \\
+\hline
+\end{DoxyParams}

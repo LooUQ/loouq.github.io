@@ -1,0 +1,83 @@
+\hypertarget{md_version-history_autotoc_md23}{}\doxysubsubsection{Major or breaking changes will be called out with section explaining the change and the release header will be decorated with either $<$em$>$\+Major$<$/em$>$ or $<$em$>$\+Breaking$<$/em$>$}\label{md_version-history_autotoc_md23}
+\hypertarget{md_version-history_autotoc_md24}{}\doxysection{v1.\+0.\+0 -\/ M\+A\+J\+O\+R R\+E\+L\+E\+A\+SE}\label{md_version-history_autotoc_md24}
+\hypertarget{md_version-history_autotoc_md25}{}\doxysubsection{Version 1.\+0.\+0 is a major release with several breaking changes. This release is the 1st version fully vetted in commercial projects and sets the stage for future multiple Loo\+U\+Q L\+T\+E modem models.}\label{md_version-history_autotoc_md25}
+You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics on the major changes and how to adapt your application code.
+\begin{DoxyItemize}
+\item Project rename\+: L\+T\+Em1c to L\+T\+EmC, as this project will be adding support for future Loo\+UQ L\+TE modems in Q3-\/2021
+\item New instantiation (create) and startup process
+\item Support for optional protocol inclusions
+\item Support for future shared code support of different modem models (modules)
+\item Improved support for Segger R\+TT debug output
+\item Filename and .h file adjustments and cleanup
+\item Misc fixes
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md26}{}\doxysection{v0.\+5.\+0 -\/ Fixes and Network P\+D\+P context handling (\+Dec 28, 2020)}\label{md_version-history_autotoc_md26}
+
+\begin{DoxyItemize}
+\item Fixed M\+Q\+TT not trapping publish errors
+\item Fixed A\+C\+T\+I\+ON parsing on multistep actions with custom response parser (affected M\+Q\+TT publish)
+\item Changed N\+E\+T\+W\+O\+RK module P\+DP context handling
+\begin{DoxyItemize}
+\item Changed internal active P\+DP table organization
+\item Change (\+\_\+ntwk) function signatures to better match behaviors
+\item Added reset to deactivate/activate all presently active P\+DP contexts
+\end{DoxyItemize}
+\item Change I\+OP P\+DP deactivated detect logic to match internal implementation in N\+E\+T\+W\+O\+RK module
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md27}{}\doxysection{0.\+4.\+2 (\+Dec 15, 2020)}\label{md_version-history_autotoc_md27}
+
+\begin{DoxyItemize}
+\item Updated I\+SR for intermittent missed event when receiving M\+Q\+TT publish
+\item Reformatted tests/\+L\+T\+Em1c-\/8-\/mqtt.\+ino for readability and test setup with Azure Io\+T\+Hub
+\item Removed utils.\+c from L\+T\+Em1c library
+\item Functionality is now part of LQ Cloud but can be used independently as lqc\+\_\+collections (.h.c)
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md28}{}\doxysection{v0.\+4.\+2 -\/ Misc (\+Dec-\/15-\/2020)}\label{md_version-history_autotoc_md28}
+
+\begin{DoxyItemize}
+\item Updated I\+SR for intermittent missed event when receiving M\+Q\+TT publish
+\item Reformatted tests/\+L\+T\+Em1c-\/8-\/mqtt.\+ino for readability and test setup with Azure Io\+T\+Hub
+\item Removed utils.\+c from L\+T\+Em1c library
+\item Functionality is now part of LQ Cloud but can be used independently as lqc\+\_\+collections (.h.c)
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md29}{}\doxysection{v0.\+4.\+1 -\/ Misc (\+Nov 28, 2020)}\label{md_version-history_autotoc_md29}
+
+\begin{DoxyItemize}
+\item Remove dependency on J\+Link R\+TT
+\item Fixed parse issue in G\+N\+SS get\+Location()
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md30}{}\doxysection{v0.\+3 -\/ I\+O\+P Redesign (\+Oct 6, 2020)}\label{md_version-history_autotoc_md30}
+Overhaul of the I\+OP buffering system.
+\begin{DoxyItemize}
+\item Simplified receive buffer management and eliminated copies from receive pipeline
+\begin{DoxyItemize}
+\item Small copy $<$60 chars remains (required) for M\+Q\+TT receives
+\end{DoxyItemize}
+\item Reduce code in I\+SR path, push processing to do\+Work() background path
+\item Finishing M\+Q\+TT support
+\begin{DoxyItemize}
+\item Publish to topic
+\item Subscribe/unsubscribe to topics
+\item Support for C2D (cloud-\/to-\/device) topic based properties
+\item Receiver events per subscription (subscriptions can share a receiver function or have distinct receiver functions)
+\end{DoxyItemize}
+\item Multiple fixes
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md31}{}\doxysection{v0.\+2 -\/ Fixes and Enhancements (\+Jun 25, 2020)}\label{md_version-history_autotoc_md31}
+
+\begin{DoxyItemize}
+\item T\+C\+P/\+U\+DP large packets (60 $<$ packets $<$=1460 bytes), M\+Q\+T\+T(s) functional, Geo-\/\+Fence support
+\item Improved performance in interrupt servicing
+\item Some memory optimizations
+\item Background tasks alignment for R\+T\+OS and Arduino Scheduler compatibility
+\item Added Geo-\/\+Fence support
+\item F\+O\+TA partial support for D\+F\+O\+TA via H\+T\+T\+PS (file system F\+O\+TA is a roadmap feature )
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md32}{}\doxysection{v0.\+1 -\/ Initial publish}\label{md_version-history_autotoc_md32}
+First release of a functional L\+T\+Em1 driver. Supported sockets (T\+C\+P/\+U\+D\+P/\+S\+SL) and limited M\+Q\+TT.
+\begin{DoxyItemize}
+\item Pure C99
+\item Hardware/platform abstraction. Tested on S\+A\+M\+D21 and Arduino foundation but adaptable to R\+T\+OS
+\item Abstraction of AT commands workflow, simple methods allow for invoke and await pattern
+\item Minimal copy design
+\item Network (cellular) connectivity, G\+N\+SS, and AT command support
+\item Initial T\+C\+P/\+U\+DP send/recv (very small packets)
+\item G\+N\+SS (G\+PS) support
+\item Tests (VS Code Arduino) for above
+\item Central I\+OP (input/output processor) to handle B\+Gx communications and buffer management
+\item Implements T\+C\+P/\+U\+D\+P/\+S\+SL clients using a Sockets pattern with receiver events
+\item Started M\+Q\+TT support 
+\end{DoxyItemize}

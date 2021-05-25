@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['scktwork_5ffunc_1231',['scktWork_func',['../structltem_device__tag.html#a6567e8c22c5559a6182d18af1ec15dca',1,'ltemDevice_tag']]],
+  ['set_5fbreak_1232',['SET_BREAK',['../ltemc-nxp-sc16is_8h.html#ac3357c425911be2f9872eb2e9f21b6f4',1,'ltemc-nxp-sc16is.h']]],
+  ['set_5fparity_1233',['SET_PARITY',['../ltemc-nxp-sc16is_8h.html#aa3f45d8a6aad7a70af07cd07b967cc9a',1,'ltemc-nxp-sc16is.h']]],
+  ['size_1234',['size',['../structfile_upload_result__tag.html#ab2c6b258f02add8fdf4cfc7c371dd772',1,'fileUploadResult_tag::size()'],['../structfile_download_result__tag.html#ab2c6b258f02add8fdf4cfc7c371dd772',1,'fileDownloadResult_tag::size()']]],
+  ['socketctrls_1235',['socketCtrls',['../structsockets__tag.html#a15a0e372117a93e4010810705807c9fd',1,'sockets_tag']]],
+  ['socketid_1236',['socketId',['../structsocket_ctrl__tag.html#aa67a15da6991635f5e111a8130c45bb4',1,'socketCtrl_tag']]],
+  ['sockets_1237',['sockets',['../structltem_device__tag.html#ad28d7e62e2f30ddd0102c0de0021eb2b',1,'ltemDevice_tag']]],
+  ['special_5fchar_5fdetect_1238',['SPECIAL_CHAR_DETECT',['../ltemc-nxp-sc16is_8h.html#aebaa51f996b1dc77d37ee5fb66b5d731',1,'ltemc-nxp-sc16is.h']]],
+  ['speedkm_1239',['speedkm',['../structgnss_location__tag.html#ab23b7f27e268c4f053742bd655b8127f',1,'gnssLocation_tag']]],
+  ['speedkn_1240',['speedkn',['../structgnss_location__tag.html#aa55935babd00748a6657bd683cf4a9ee',1,'gnssLocation_tag']]],
+  ['spi_1241',['spi',['../structltem_device__tag.html#ac601bfed69a49573d0dd28b73a9f171e',1,'ltemDevice_tag']]],
+  ['spicspin_1242',['spiCsPin',['../structltem_pin_config__tag.html#ac682adb9987d45a6e34640c076531055',1,'ltemPinConfig_tag']]],
+  ['sslsocket_1243',['sslSocket',['../structpeer_type_map__tag.html#a668a8685ad4528f7e4b846ba58593950',1,'peerTypeMap_tag']]],
+  ['state_1244',['state',['../structmqtt__tag.html#a22b01753d409aacca5b5fc4f6027b694',1,'mqtt_tag']]],
+  ['statuscode_1245',['statusCode',['../structatcmd_history__tag.html#aebfca2e66f7adfe0d876ca72b1080052',1,'atcmdHistory_tag::statusCode()'],['../structatcmd_result__tag.html#aebfca2e66f7adfe0d876ca72b1080052',1,'atcmdResult_tag::statusCode()'],['../structgnss_location__tag.html#ade31e7fd99344e8c35f2c373af659551',1,'gnssLocation_tag::statusCode()']]],
+  ['statuspin_1246',['statusPin',['../structltem_pin_config__tag.html#ab828feab0523b696ab148038e2a34f91',1,'ltemPinConfig_tag']]],
+  ['stop_1247',['STOP',['../ltemc-nxp-sc16is_8h.html#abcf8205c9a5a0e895c25312d99e5c9a5',1,'ltemc-nxp-sc16is.h']]],
+  ['subscriptions_1248',['subscriptions',['../structmqtt__tag.html#aa4be52e58b888608de6f795fbc3be555',1,'mqtt_tag']]],
+  ['swflow_5fctrl_1249',['SWFLOW_CTRL',['../ltemc-nxp-sc16is_8h.html#aeb79d1fca83b69a707efc8c3878e3897',1,'ltemc-nxp-sc16is.h']]]
+];

@@ -1,0 +1,58 @@
+\hypertarget{arduino-gpio_8cpp}{}\doxysection{src/platform/arduino-\/gpio.cpp File Reference}
+\label{arduino-gpio_8cpp}\index{src/platform/arduino-\/gpio.cpp@{src/platform/arduino-\/gpio.cpp}}
+{\ttfamily \#include \char`\"{}lq\+Platform-\/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{arduino-gpio_8cpp_a662fb34c1d7e68e8ad49df905a34679f}{gpio\+\_\+open\+Pin}} (uint8\+\_\+t p\+Num, \mbox{\hyperlink{lq_platform-gpio_8h_adcda12cd23390bc6e1a6b1d22ceb28f4}{gpio\+Pin\+Mode\+\_\+t}} p\+Mode)
+\item 
+void \mbox{\hyperlink{arduino-gpio_8cpp_a9e6177f6c47806390a9161bbd9885eef}{gpio\+\_\+close\+Pin}} (uint8\+\_\+t p\+Num)
+\item 
+\mbox{\hyperlink{lq_platform-gpio_8h_aa899c19b952904bfbe89debaf7d1733a}{gpio\+Pin\+Value\+\_\+t}} \mbox{\hyperlink{arduino-gpio_8cpp_ab09aea64b30e27e6628289fdb42f0e29}{gpio\+\_\+read\+Pin}} (uint8\+\_\+t p\+Num)
+\item 
+void \mbox{\hyperlink{arduino-gpio_8cpp_a38fadf663b1e4bd5489855dad7771e04}{gpio\+\_\+write\+Pin}} (uint8\+\_\+t p\+Num, \mbox{\hyperlink{lq_platform-gpio_8h_aa899c19b952904bfbe89debaf7d1733a}{gpio\+Pin\+Value\+\_\+t}} val)
+\item 
+void \mbox{\hyperlink{arduino-gpio_8cpp_ad40f9fb053e1d6ac6bf7b239d169b7f1}{gpio\+\_\+attach\+Isr}} (uint8\+\_\+t pin\+Num, bool enabled, \mbox{\hyperlink{lq_platform-gpio_8h_a44deb91e3c2203670f250799bf3c22a9}{gpio\+Irq\+Trigger\+\_\+t}} trigger\+On, \mbox{\hyperlink{lq_platform-gpio_8h_a28749c3b8ef8d52af199ace9e0d64dc6}{platform\+Gpio\+Pin\+Irq\+Callback}} isr\+Callback)
+\item 
+void \mbox{\hyperlink{arduino-gpio_8cpp_a4b7d9127ea1406418fe9b3a3c4b28008}{gpio\+\_\+detach\+Isr}} (uint8\+\_\+t pin\+Num)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{arduino-gpio_8cpp_ad40f9fb053e1d6ac6bf7b239d169b7f1}\label{arduino-gpio_8cpp_ad40f9fb053e1d6ac6bf7b239d169b7f1}} 
+\index{arduino-\/gpio.cpp@{arduino-\/gpio.cpp}!gpio\_attachIsr@{gpio\_attachIsr}}
+\index{gpio\_attachIsr@{gpio\_attachIsr}!arduino-\/gpio.cpp@{arduino-\/gpio.cpp}}
+\doxysubsubsection{\texorpdfstring{gpio\_attachIsr()}{gpio\_attachIsr()}}
+{\footnotesize\ttfamily void gpio\+\_\+attach\+Isr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin\+Num,  }\item[{bool}]{enabled,  }\item[{\mbox{\hyperlink{lq_platform-gpio_8h_a44deb91e3c2203670f250799bf3c22a9}{gpio\+Irq\+Trigger\+\_\+t}}}]{trigger\+On,  }\item[{\mbox{\hyperlink{lq_platform-gpio_8h_a28749c3b8ef8d52af199ace9e0d64dc6}{platform\+Gpio\+Pin\+Irq\+Callback}}}]{isr\+Callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{arduino-gpio_8cpp_a9e6177f6c47806390a9161bbd9885eef}\label{arduino-gpio_8cpp_a9e6177f6c47806390a9161bbd9885eef}} 
+\index{arduino-\/gpio.cpp@{arduino-\/gpio.cpp}!gpio\_closePin@{gpio\_closePin}}
+\index{gpio\_closePin@{gpio\_closePin}!arduino-\/gpio.cpp@{arduino-\/gpio.cpp}}
+\doxysubsubsection{\texorpdfstring{gpio\_closePin()}{gpio\_closePin()}}
+{\footnotesize\ttfamily void gpio\+\_\+close\+Pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p\+Num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{arduino-gpio_8cpp_a4b7d9127ea1406418fe9b3a3c4b28008}\label{arduino-gpio_8cpp_a4b7d9127ea1406418fe9b3a3c4b28008}} 
+\index{arduino-\/gpio.cpp@{arduino-\/gpio.cpp}!gpio\_detachIsr@{gpio\_detachIsr}}
+\index{gpio\_detachIsr@{gpio\_detachIsr}!arduino-\/gpio.cpp@{arduino-\/gpio.cpp}}
+\doxysubsubsection{\texorpdfstring{gpio\_detachIsr()}{gpio\_detachIsr()}}
+{\footnotesize\ttfamily void gpio\+\_\+detach\+Isr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin\+Num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{arduino-gpio_8cpp_a662fb34c1d7e68e8ad49df905a34679f}\label{arduino-gpio_8cpp_a662fb34c1d7e68e8ad49df905a34679f}} 
+\index{arduino-\/gpio.cpp@{arduino-\/gpio.cpp}!gpio\_openPin@{gpio\_openPin}}
+\index{gpio\_openPin@{gpio\_openPin}!arduino-\/gpio.cpp@{arduino-\/gpio.cpp}}
+\doxysubsubsection{\texorpdfstring{gpio\_openPin()}{gpio\_openPin()}}
+{\footnotesize\ttfamily void gpio\+\_\+open\+Pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p\+Num,  }\item[{\mbox{\hyperlink{lq_platform-gpio_8h_adcda12cd23390bc6e1a6b1d22ceb28f4}{gpio\+Pin\+Mode\+\_\+t}}}]{p\+Mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{arduino-gpio_8cpp_ab09aea64b30e27e6628289fdb42f0e29}\label{arduino-gpio_8cpp_ab09aea64b30e27e6628289fdb42f0e29}} 
+\index{arduino-\/gpio.cpp@{arduino-\/gpio.cpp}!gpio\_readPin@{gpio\_readPin}}
+\index{gpio\_readPin@{gpio\_readPin}!arduino-\/gpio.cpp@{arduino-\/gpio.cpp}}
+\doxysubsubsection{\texorpdfstring{gpio\_readPin()}{gpio\_readPin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lq_platform-gpio_8h_aa899c19b952904bfbe89debaf7d1733a}{gpio\+Pin\+Value\+\_\+t}} gpio\+\_\+read\+Pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p\+Num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{arduino-gpio_8cpp_a38fadf663b1e4bd5489855dad7771e04}\label{arduino-gpio_8cpp_a38fadf663b1e4bd5489855dad7771e04}} 
+\index{arduino-\/gpio.cpp@{arduino-\/gpio.cpp}!gpio\_writePin@{gpio\_writePin}}
+\index{gpio\_writePin@{gpio\_writePin}!arduino-\/gpio.cpp@{arduino-\/gpio.cpp}}
+\doxysubsubsection{\texorpdfstring{gpio\_writePin()}{gpio\_writePin()}}
+{\footnotesize\ttfamily void gpio\+\_\+write\+Pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p\+Num,  }\item[{\mbox{\hyperlink{lq_platform-gpio_8h_aa899c19b952904bfbe89debaf7d1733a}{gpio\+Pin\+Value\+\_\+t}}}]{val }\end{DoxyParamCaption})}
+
