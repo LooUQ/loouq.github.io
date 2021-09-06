@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LTEmC: Release_1_0</title>
+<title>LTEmC: LTEmC Release 1.0</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,12 +65,11 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release_1_0 </div>  </div>
+<div class="title">LTEmC Release 1.0 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Release 1.0</p>
-<p>Release 1.0 is a milestone for the LTEm1c software. The modem and the software have been used in 2 commercial projects and have evolved to support ideas presented in those projects.</p>
-<h1><a class="anchor" id="autotoc_md13"></a>
+<div class="textblock"><p>Release 1.0 is a milestone for the LTEm1c software. The modem and the software have been used in 2 commercial projects and have evolved to support ideas presented in those projects.</p>
+<h1><a class="anchor" id="autotoc_md24"></a>
 New\Changed Functionality</h1>
 <ul>
 <li>Application callbacks for yield and notifications</li>
@@ -79,9 +78,9 @@ New\Changed Functionality</h1>
 <li>Cleaner support for optional debug printing to J-Link RTT or platform serial port</li>
 <li>And of course... FIXES</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md25"></a>
 Details</h1>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 Callbacks</h2>
 <p>Two callback conventions have be formalized: yield and notification. The yield callback allows for the application to invoke watchdog keepalives whenevr the LTEm1c code passes through a wait for response block. This is optional and is specified with the <em>ltem1_setYieldCb(yieldCb)</em> method. The yieldCb() method takes no parameters and returns a void.</p>
 <p>The other callback is for notifying your application of significant events, such as: connecting, disconnecting and errors. This is compatible with the notification callback used in the LQCloud driver. An example callback handler is shown below. The example below shows how the device application can respond to events with local displays/indicators.</p>
@@ -154,16 +153,28 @@ Callbacks</h2>
 <div class="line">        while (true) {}                                                 // should never get here</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md16"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
 New Setup and Start, Protocol Inclusion</h2>
-<p>The create code, start code and the inclusion of protocols has been separated into distinct methods. The new approach is to create the required features, then issue a ltem1_start() call.</p>
-<div class="fragment"><div class="line">ltem1_create(ltem1_pinConfig, appNotifyCB);         // otherwise reference your application notification callback</div>
-<div class="line">//ltem1_create(ltem1_pinConfig, NULL);              // if application doesn&#39;t implement a notification callback, provide NULL</div>
-<div class="line">ltem1_start(pdpProtocol_none);                      // start LTEm1 with only IOP configured, AT commands but no protocols. </div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
+<p>In your application's setup routine the functions to create/initialize the LTEm1 and to start the modem has been separated into distinct methods. The new approach is to create the required features, then issue a ltem1_start() call.</p>
+<div class="fragment"><div class="line">ltem1_create(ltem1_pinConfig, appNotifyCB);</div>
+<div class="line">sckt_create();</div>
+<div class="line">ltem1_start(pdpProtocol_sockets);</div>
+</div><!-- fragment --><p>The application notification callback is optional and can be disabled with <b>ltem1_create(ltem1_pinConfig, NULL);</b></p>
+<p>Optional Protocols are are bit flags that are binary or'd together. Available options are:</p><ul>
+<li>pdpProtocol_none // access to only network carrier status functionality</li>
+<li>pdpProtocol_sockets // TCP/UDP/SSL/TLS POSIX style sockets</li>
+<li>pdpProtocol_mqtt // MQTT message queueing</li>
+</ul>
+<p>To use both sockets and MQTT you would initialize the LTEm1 with... </p><div class="fragment"><div class="line">ltem1_create(ltem1_pinConfig, appNotifyCB);</div>
+<div class="line">sckt_create();</div>
+<div class="line">mqtt_create();</div>
+<div class="line">ltem1_start(pdpProtocol_sockets | pdpProtocol_mqtt);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md28"></a>
 Debug Printing</h2>
-<p>Debugging is of course a necessary part of our lives as developers. For those of you using Segger J-Link products I recommend the RTT (real time terminal) functionality the J-Link software provides. The inclusion of a small macro block makes turning on/off debugging output using J-Link RTT a simple one line change. LooUQ has a Arduino compatible fork of the Segger J-Link RTT source available on GitHub ().</p>
-<div class="fragment"><div class="line">#define _DEBUG 0                        // set to non-zero value for PRINTF debugging output, </div>
+<p>Debugging is of course a necessary part of our lives as developers. For those of you using Segger J-Link products I recommend the RTT (real time terminal) functionality the J-Link software provides. The inclusion of a small macro block makes turning on/off debugging output using J-Link RTT a simple one line change. LooUQ has a Arduino compatible fork of the Segger J-Link RTT source available on GitHub (<a href="https://github.com/LooUQ/JLinkRTT">https://github.com/LooUQ/JLinkRTT</a>).</p>
+<h3><a class="anchor" id="autotoc_md29"></a>
+_DEBUG Value = 2 for J-LINK RTT and RTT Viewer</h3>
+<div class="fragment"><div class="line">#define _DEBUG 2                        // set to non-zero value for PRINTF debugging output, </div>
 <div class="line">// debugging output options             // LTEm1c will satisfy PRINTF references with empty definition if not already resolved</div>
 <div class="line">#if defined(_DEBUG) &amp;&amp; _DEBUG &gt; 0</div>
 <div class="line">    asm(&quot;.global _printf_float&quot;);       // forces build to link in float support for printf</div>

@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['socketctrl_5ft_1336',['socketCtrl_t',['../ltemc-sockets_8h.html#a74d98e23a65a8898f1e87ff7ba81bdd9',1,'ltemc-sockets.h']]],
-  ['socketid_5ft_1337',['socketId_t',['../ltemc-sockets_8h.html#aeb1420e8be8247110f490e2fc48881b7',1,'ltemc-sockets.h']]],
-  ['socketresult_5ft_1338',['socketResult_t',['../ltemc-sockets_8h.html#ab7cf20e66a2d8ef88c5befa4f4bf8276',1,'ltemc-sockets.h']]],
-  ['sockets_5ft_1339',['sockets_t',['../ltemc-sockets_8h.html#abd223f94326322187e5076b43235dca3',1,'ltemc-sockets.h']]],
-  ['spiconfig_5ft_1340',['spiConfig_t',['../lq_platform-spi_8h.html#a544993c1366bae29dcf938a4a78244af',1,'lqPlatform-spi.h']]],
-  ['spidevice_5ft_1341',['spiDevice_t',['../lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8',1,'lqPlatform-spi.h']]],
-  ['sslversion_5ft_1342',['sslVersion_t',['../ltemc-mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224',1,'ltemc-mqtt.h']]]
+  ['ro8_1362',['ro8',['../ltemc-nxp-sc16is_8h.html#a2d85ebc0a8cb851cbfd125d4d7613833',1,'ltemc-nxp-sc16is.h']]],
+  ['rw8_1363',['rw8',['../ltemc-nxp-sc16is_8h.html#a3a3190f88e82e5b73c014a753594afc9',1,'ltemc-nxp-sc16is.h']]],
+  ['rxbufferpage_5ft_1364',['rxBufferPage_t',['../ltemc-streams_8h.html#a9202441b7d2384f046941dda98b77403',1,'ltemc-streams.h']]],
+  ['rxcorebufferctrl_5ft_1365',['rxCoreBufferCtrl_t',['../ltemc-streams_8h.html#a37c2c70d8dc8028852a4345574c5104a',1,'ltemc-streams.h']]],
+  ['rxdatabufferctrl_5ft_1366',['rxDataBufferCtrl_t',['../ltemc-streams_8h.html#a40071528946947c15514d22d34620931',1,'ltemc-streams.h']]]
 ];

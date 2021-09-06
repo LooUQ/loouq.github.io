@@ -1,0 +1,49 @@
+\hypertarget{ltemc-tls_8c}{}\doxysection{src/ltemc-\/tls.c File Reference}
+\label{ltemc-tls_8c}\index{src/ltemc-\/tls.c@{src/ltemc-\/tls.c}}
+{\ttfamily \#include $<$lq-\/types.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/tls.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/atcmd.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-tls_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\item 
+\#define \mbox{\hyperlink{ltemc-tls_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{ltemc-tls_8c_adcd487453be994fb6f966686e32e779f}{tls\+\_\+configure}} (\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} context, \mbox{\hyperlink{ltemc-tls_8h_a61182e3801e1f66177d95fa416341dc2}{tls\+Version\+\_\+t}} version, \mbox{\hyperlink{ltemc-tls_8h_ac3c7657f825cb66b386b539e2f037b92}{tls\+Cipher\+\_\+t}} cipher\+Suite, \mbox{\hyperlink{ltemc-tls_8h_a82cad7746d9446cc276666b5de2af9aa}{tls\+Cert\+Expiration\+\_\+t}} cert\+Expiration\+Check, \mbox{\hyperlink{ltemc-tls_8h_ae881c2df83ac48f033b492b442067906}{tls\+Security\+Level\+\_\+t}} security\+Level)
+\item 
+\mbox{\hyperlink{ltemc-tls_8h_a7748d21587494b057d7569aeb3be5001}{tls\+Options\+\_\+t}} \mbox{\hyperlink{ltemc-tls_8c_a4490ba303fcbd014287407019b1ea699}{tls\+Get\+Options}} (\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} context)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-tls_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltemc-tls_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltemc-\/tls.c@{ltemc-\/tls.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltemc-\/tls.c@{ltemc-\/tls.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+
+\mbox{\Hypertarget{ltemc-tls_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-tls_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/tls.c@{ltemc-\/tls.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/tls.c@{ltemc-\/tls.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-tls_8c_adcd487453be994fb6f966686e32e779f}\label{ltemc-tls_8c_adcd487453be994fb6f966686e32e779f}} 
+\index{ltemc-\/tls.c@{ltemc-\/tls.c}!tls\_configure@{tls\_configure}}
+\index{tls\_configure@{tls\_configure}!ltemc-\/tls.c@{ltemc-\/tls.c}}
+\doxysubsubsection{\texorpdfstring{tls\_configure()}{tls\_configure()}}
+{\footnotesize\ttfamily bool tls\+\_\+configure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}]{context,  }\item[{\mbox{\hyperlink{ltemc-tls_8h_a61182e3801e1f66177d95fa416341dc2}{tls\+Version\+\_\+t}}}]{version,  }\item[{\mbox{\hyperlink{ltemc-tls_8h_ac3c7657f825cb66b386b539e2f037b92}{tls\+Cipher\+\_\+t}}}]{cipher\+Suite,  }\item[{\mbox{\hyperlink{ltemc-tls_8h_a82cad7746d9446cc276666b5de2af9aa}{tls\+Cert\+Expiration\+\_\+t}}}]{cert\+Expiration\+Check,  }\item[{\mbox{\hyperlink{ltemc-tls_8h_ae881c2df83ac48f033b492b442067906}{tls\+Security\+Level\+\_\+t}}}]{security\+Level }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-tls_8c_a4490ba303fcbd014287407019b1ea699}\label{ltemc-tls_8c_a4490ba303fcbd014287407019b1ea699}} 
+\index{ltemc-\/tls.c@{ltemc-\/tls.c}!tlsGetOptions@{tlsGetOptions}}
+\index{tlsGetOptions@{tlsGetOptions}!ltemc-\/tls.c@{ltemc-\/tls.c}}
+\doxysubsubsection{\texorpdfstring{tlsGetOptions()}{tlsGetOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-tls_8h_a7748d21587494b057d7569aeb3be5001}{tls\+Options\+\_\+t}} tls\+Get\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}]{context }\end{DoxyParamCaption})}
+

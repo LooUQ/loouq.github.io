@@ -70,12 +70,13 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ltemc-mdminfo.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ltemc_8h_source.html">ltemc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ltemc-internal_8h_source.html">ltemc-internal.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -94,7 +95,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a72503fcbcdb4da00355449068a51013a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-mdminfo_8h.html#a4d98cb161d7f9ecce35606aa98f98fd3">modemInfo_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mdminfo_8c.html#a72503fcbcdb4da00355449068a51013a">mdminfo_ltem</a> ()</td></tr>
+<tr class="memitem:a72503fcbcdb4da00355449068a51013a"><td class="memItemLeft" align="right" valign="top">modemInfo_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mdminfo_8c.html#a72503fcbcdb4da00355449068a51013a">mdminfo_ltem</a> ()</td></tr>
 <tr class="memdesc:a72503fcbcdb4da00355449068a51013a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the LTEm1 static device identification/provisioning information.  <a href="ltemc-mdminfo_8c.html#a72503fcbcdb4da00355449068a51013a">More...</a><br /></td></tr>
 <tr class="separator:a72503fcbcdb4da00355449068a51013a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d9b7f567f1ad5f5393d1bd84b461fa0"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mdminfo_8c.html#a1d9b7f567f1ad5f5393d1bd84b461fa0">mdminfo_rssi</a> ()</td></tr>
@@ -103,6 +104,12 @@ Functions</h2></td></tr>
 <tr class="memitem:af770a3d7781daf66572cb4c05695b3a7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mdminfo_8c.html#af770a3d7781daf66572cb4c05695b3a7">mdminfo_rssiBars</a> (uint8_t numberOfBars)</td></tr>
 <tr class="memdesc:af770a3d7781daf66572cb4c05695b3a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the RSSI value as a calculate bar count for visualizations. Like on a smartphone.  <a href="ltemc-mdminfo_8c.html#af770a3d7781daf66572cb4c05695b3a7">More...</a><br /></td></tr>
 <tr class="separator:af770a3d7781daf66572cb4c05695b3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a5f9b6913ff818fbc74934a69849fb48b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mdminfo_8c.html#a5f9b6913ff818fbc74934a69849fb48b">g_ltem</a></td></tr>
+<tr class="memdesc:a5f9b6913ff818fbc74934a69849fb48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LTEm "object".  <a href="ltemc-mdminfo_8c.html#a5f9b6913ff818fbc74934a69849fb48b">More...</a><br /></td></tr>
+<tr class="separator:a5f9b6913ff818fbc74934a69849fb48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a152fc5203b90b1cff03b7b78579b8f52"></a>
@@ -217,7 +224,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ltemc-mdminfo_8h.html#a4d98cb161d7f9ecce35606aa98f98fd3">modemInfo_t</a> mdminfo_ltem </td>
+          <td class="memname">modemInfo_t mdminfo_ltem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -274,6 +281,31 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of bars to indicate based on the current RSSI and your scale. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a5f9b6913ff818fbc74934a69849fb48b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9b6913ff818fbc74934a69849fb48b">&#9670;&nbsp;</a></span>g_ltem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a> g_ltem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The LTEm "object". </p>
 
 </div>
 </div>

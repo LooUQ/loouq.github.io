@@ -70,13 +70,15 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ltemc-quectel-bg.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ltemc_8h_source.html">ltemc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ltemc-quectel-bg_8h_source.html">ltemc-quectel-bg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ltemc-internal_8h_source.html">ltemc-internal.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -84,14 +86,56 @@ Macros</h2></td></tr>
 <tr class="separator:a152fc5203b90b1cff03b7b78579b8f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab818574b6e7324559d0b09a6fc9ca1f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#ab818574b6e7324559d0b09a6fc9ca1f2">PRINTF</a>(c_,  f_, ...)&#160;&#160;&#160;;</td></tr>
 <tr class="separator:ab818574b6e7324559d0b09a6fc9ca1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbf0923e7059933b31dda38d751cb01a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#afbf0923e7059933b31dda38d751cb01a">BG96_INIT_COMMAND_COUNT</a>&#160;&#160;&#160;1</td></tr>
-<tr class="separator:afbf0923e7059933b31dda38d751cb01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca">atcmd__useDefaultTimeout</a> = 0, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78">atcmd__useDefaultOKCompletionParser</a> = 0, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd">atcmd__setLockModeManual</a> = 0, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3">atcmd__setLockModeAuto</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753">ATCMD__defaultTimeoutMS</a> = 800, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d">ATCMD__parserPendingResult</a> = 0xFFFF, 
+<a class="el" href="ltemc-http_8c.html#a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed">http__LTEM_defaultTimeoutBGxSec</a> = 60, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060">IOP__txBufferSize</a> = 1800, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8">IOP__rxCoreBufferSize</a> = 192, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7">IOP__uartFIFOBufferSz</a> = 64, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4">IOP__uartFIFO_fillMS</a> = 6, 
+<a class="el" href="ltemc-mqtt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2">resultCode__parserPending</a> = 0xFFFF, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-network_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991">NTWK__pdpContextCnt</a> = 3, 
+<a class="el" href="ltemc-network_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83">NTWK__operatorNameSz</a> = 20, 
+<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98">nxp__lsr_DataInReceiver</a> = 0x01U, 
+<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5">nxp__lsr_THR_empty</a> = 0x02U, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb">nxp__lsr_FIFO_dataError</a> = 0x80U, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1">BGX__initCommandCnt</a> = 1, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d">BGX__initCommandAttempts</a> = 2, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d">BGX__powerOnDelay</a> = 500, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb">BGX__powerOffDelay</a> = 1500, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf">BGX__resetDelay</a> = 300, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c">BGX__baudRate</a> = 115200, 
+<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc">sckt__resultCode_previouslyOpen</a> = 563, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06">sckt__defaultOpenTimeoutMS</a> = 60000, 
+<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050">SCKT__IRD_requestMaxSz</a> = 1500
+<br />
+ }</td></tr>
+<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acb7ce91ebb048c2a8e9255fed32d4564"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#acb7ce91ebb048c2a8e9255fed32d4564">qbg_powerOn</a> ()</td></tr>
-<tr class="memdesc:acb7ce91ebb048c2a8e9255fed32d4564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power on the BGx module.  <a href="ltemc-quectel-bg_8c.html#acb7ce91ebb048c2a8e9255fed32d4564">More...</a><br /></td></tr>
-<tr class="separator:acb7ce91ebb048c2a8e9255fed32d4564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931465ba717e93a2fc27aec299a5977f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#a931465ba717e93a2fc27aec299a5977f">S_issueStartCommand</a> (const char *cmdStr)</td></tr>
+<tr class="separator:a931465ba717e93a2fc27aec299a5977f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb09a74d94dbf4d3e6b6cae45196aaff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#adb09a74d94dbf4d3e6b6cae45196aaff">qbg_isPowerOn</a> ()</td></tr>
+<tr class="memdesc:adb09a74d94dbf4d3e6b6cae45196aaff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for BGx power status.  <a href="ltemc-quectel-bg_8c.html#adb09a74d94dbf4d3e6b6cae45196aaff">More...</a><br /></td></tr>
+<tr class="separator:adb09a74d94dbf4d3e6b6cae45196aaff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38f43891616b10e764a40f62dd67d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#af38f43891616b10e764a40f62dd67d99">qbg_powerOn</a> ()</td></tr>
+<tr class="memdesc:af38f43891616b10e764a40f62dd67d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power on the BGx module.  <a href="ltemc-quectel-bg_8c.html#af38f43891616b10e764a40f62dd67d99">More...</a><br /></td></tr>
+<tr class="separator:af38f43891616b10e764a40f62dd67d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25333f44c61fbf3627065cbd31375a1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#a25333f44c61fbf3627065cbd31375a1e">qbg_powerOff</a> ()</td></tr>
 <tr class="memdesc:a25333f44c61fbf3627065cbd31375a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Powers off the BGx module.  <a href="ltemc-quectel-bg_8c.html#a25333f44c61fbf3627065cbd31375a1e">More...</a><br /></td></tr>
 <tr class="separator:a25333f44c61fbf3627065cbd31375a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,6 +159,9 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a1d4f4dde31edc393e62b6278a0218d24"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#a1d4f4dde31edc393e62b6278a0218d24">qbg_initCmds</a> []</td></tr>
 <tr class="separator:a1d4f4dde31edc393e62b6278a0218d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9b6913ff818fbc74934a69849fb48b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#a5f9b6913ff818fbc74934a69849fb48b">g_ltem</a></td></tr>
+<tr class="memdesc:a5f9b6913ff818fbc74934a69849fb48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LTEm "object".  <a href="ltemc-quectel-bg_8c.html#a5f9b6913ff818fbc74934a69849fb48b">More...</a><br /></td></tr>
+<tr class="separator:a5f9b6913ff818fbc74934a69849fb48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a152fc5203b90b1cff03b7b78579b8f52"></a>
@@ -125,20 +172,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define _DEBUG&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afbf0923e7059933b31dda38d751cb01a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbf0923e7059933b31dda38d751cb01a">&#9670;&nbsp;</a></span>BG96_INIT_COMMAND_COUNT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define BG96_INIT_COMMAND_COUNT&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -179,7 +212,71 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca"></a>atcmd__useDefaultTimeout&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78"></a>atcmd__useDefaultOKCompletionParser&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd"></a>atcmd__setLockModeManual&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3"></a>atcmd__setLockModeAuto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753"></a>ATCMD__defaultTimeoutMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d"></a>ATCMD__parserPendingResult&#160;</td><td class="fielddoc"><p>private declaration; value returned from response parsers indicating a pattern match has not yet been detected </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed"></a>http__LTEM_defaultTimeoutBGxSec&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060"></a>IOP__txBufferSize&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8"></a>IOP__rxCoreBufferSize&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7"></a>IOP__uartFIFOBufferSz&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4"></a>IOP__uartFIFO_fillMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2"></a>resultCode__parserPending&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991"></a>NTWK__pdpContextCnt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83"></a>NTWK__operatorNameSz&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98"></a>nxp__lsr_DataInReceiver&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5"></a>nxp__lsr_THR_empty&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb"></a>nxp__lsr_FIFO_dataError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1"></a>BGX__initCommandCnt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d"></a>BGX__initCommandAttempts&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d"></a>BGX__powerOnDelay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb"></a>BGX__powerOffDelay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf"></a>BGX__resetDelay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c"></a>BGX__baudRate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc"></a>sckt__resultCode_previouslyOpen&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06"></a>sckt__defaultOpenTimeoutMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050"></a>SCKT__IRD_requestMaxSz&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="adb09a74d94dbf4d3e6b6cae45196aaff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb09a74d94dbf4d3e6b6cae45196aaff">&#9670;&nbsp;</a></span>qbg_isPowerOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool qbg_isPowerOn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for BGx power status. </p>
+<dl class="section return"><dt>Returns</dt><dd>BGx power state </dd></dl>
+
+</div>
+</div>
 <a id="a25333f44c61fbf3627065cbd31375a1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25333f44c61fbf3627065cbd31375a1e">&#9670;&nbsp;</a></span>qbg_powerOff()</h2>
 
@@ -199,14 +296,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acb7ce91ebb048c2a8e9255fed32d4564"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb7ce91ebb048c2a8e9255fed32d4564">&#9670;&nbsp;</a></span>qbg_powerOn()</h2>
+<a id="af38f43891616b10e764a40f62dd67d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af38f43891616b10e764a40f62dd67d99">&#9670;&nbsp;</a></span>qbg_powerOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool qbg_powerOn </td>
+          <td class="memname">void qbg_powerOn </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -317,7 +414,49 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a931465ba717e93a2fc27aec299a5977f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931465ba717e93a2fc27aec299a5977f">&#9670;&nbsp;</a></span>S_issueStartCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool S_issueStartCommand </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cmdStr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a5f9b6913ff818fbc74934a69849fb48b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9b6913ff818fbc74934a69849fb48b">&#9670;&nbsp;</a></span>g_ltem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a> g_ltem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The LTEm "object". </p>
+
+</div>
+</div>
 <a id="a1d4f4dde31edc393e62b6278a0218d24"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d4f4dde31edc393e62b6278a0218d24">&#9670;&nbsp;</a></span>qbg_initCmds</h2>
 

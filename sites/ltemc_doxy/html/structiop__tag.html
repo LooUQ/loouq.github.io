@@ -84,102 +84,163 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a22a4b57e21b265f031022af67841c26f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a22a4b57e21b265f031022af67841c26f">txPend</a></td></tr>
 <tr class="memdesc:a22a4b57e21b265f031022af67841c26f"><td class="mdescLeft">&#160;</td><td class="mdescRight">outstanding TX char pending  <a href="structiop__tag.html#a22a4b57e21b265f031022af67841c26f">More...</a><br /></td></tr>
 <tr class="separator:a22a4b57e21b265f031022af67841c26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba8a893ba549b27ead7c4ecc7a25b057"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">iopBuffer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#aba8a893ba549b27ead7c4ecc7a25b057">rxCmdBuf</a></td></tr>
-<tr class="memdesc:aba8a893ba549b27ead7c4ecc7a25b057"><td class="mdescLeft">&#160;</td><td class="mdescRight">command receive buffer, this is the default RX buffer  <a href="structiop__tag.html#aba8a893ba549b27ead7c4ecc7a25b057">More...</a><br /></td></tr>
-<tr class="separator:aba8a893ba549b27ead7c4ecc7a25b057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52048c68d5750b887e72958a6983cdb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-iop_8h.html#afcf2c451d40c6d56cb76f1e79132ed92">iopDataPeer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a52048c68d5750b887e72958a6983cdb2">rxDataPeer</a></td></tr>
-<tr class="memdesc:a52048c68d5750b887e72958a6983cdb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">protocol data source: if no peer, IOP is in command mode  <a href="structiop__tag.html#a52048c68d5750b887e72958a6983cdb2">More...</a><br /></td></tr>
-<tr class="separator:a52048c68d5750b887e72958a6983cdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03f9c4d94b0bc50d9dec134a4f8f55d0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a03f9c4d94b0bc50d9dec134a4f8f55d0">rxDataBufIndx</a></td></tr>
-<tr class="memdesc:a03f9c4d94b0bc50d9dec134a4f8f55d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">data goes into this slot rxDataBufs  <a href="structiop__tag.html#a03f9c4d94b0bc50d9dec134a4f8f55d0">More...</a><br /></td></tr>
-<tr class="separator:a03f9c4d94b0bc50d9dec134a4f8f55d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8022e777adbae0d01364bed96e018a71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">iopBuffer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a8022e777adbae0d01364bed96e018a71">rxDataBufs</a> [<a class="el" href="ltemc-iop_8h.html#a334b237ed433f40d502f5f17ff4a688c">IOP_RX_DATABUFFERS_MAX</a>]</td></tr>
-<tr class="memdesc:a8022e777adbae0d01364bed96e018a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">the data buffers (smart buffer structs)  <a href="structiop__tag.html#a8022e777adbae0d01364bed96e018a71">More...</a><br /></td></tr>
-<tr class="separator:a8022e777adbae0d01364bed96e018a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6a02b1e34b41656319f5197e5a60439"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-iop_8h.html#a860bd27bc7a3b9593ff71a49def3caef">peerTypeMap_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#ae6a02b1e34b41656319f5197e5a60439">peerTypeMap</a></td></tr>
-<tr class="memdesc:ae6a02b1e34b41656319f5197e5a60439"><td class="mdescLeft">&#160;</td><td class="mdescRight">map (struct) of possible IOP peers (data sources), used to optimise ISR string scanning  <a href="structiop__tag.html#ae6a02b1e34b41656319f5197e5a60439">More...</a><br /></td></tr>
-<tr class="separator:ae6a02b1e34b41656319f5197e5a60439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4827cd28d7a4be33fa663a4b2b0e2ccb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-streams_8h.html#a37c2c70d8dc8028852a4345574c5104a">rxCoreBufferCtrl_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a4827cd28d7a4be33fa663a4b2b0e2ccb">rxCBuffer</a></td></tr>
+<tr class="memdesc:a4827cd28d7a4be33fa663a4b2b0e2ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">URC and command response receive buffer, this is the default RX buffer.  <a href="structiop__tag.html#a4827cd28d7a4be33fa663a4b2b0e2ccb">More...</a><br /></td></tr>
+<tr class="separator:a4827cd28d7a4be33fa663a4b2b0e2ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceb5e03a83a4fadf749e094ee70b603b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-streams_8h.html#a8ad6b0a37ec9bbaf450e4aa95e7984dc">iopStreamCtrl_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#aceb5e03a83a4fadf749e094ee70b603b">streamPeers</a> [<a class="el" href="ltemc-streams_8h.html#a67400f5b10b3dbea6ed09f26d44917c3a7b1e06a3f0b4504ede6a057e651025f5">streamPeer_cnt</a>]</td></tr>
+<tr class="memdesc:aceb5e03a83a4fadf749e094ee70b603b"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of iopStream ctrl pointers, cast to a specific stream type: protocol or file stream  <a href="structiop__tag.html#aceb5e03a83a4fadf749e094ee70b603b">More...</a><br /></td></tr>
+<tr class="separator:aceb5e03a83a4fadf749e094ee70b603b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6335ffc4dd4d3bc7b9788fd595f85ea8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-streams_8h.html#a8ad6b0a37ec9bbaf450e4aa95e7984dc">iopStreamCtrl_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a6335ffc4dd4d3bc7b9788fd595f85ea8">rxStreamCtrl</a></td></tr>
+<tr class="memdesc:a6335ffc4dd4d3bc7b9788fd595f85ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">stream data source, if not null  <a href="structiop__tag.html#a6335ffc4dd4d3bc7b9788fd595f85ea8">More...</a><br /></td></tr>
+<tr class="separator:a6335ffc4dd4d3bc7b9788fd595f85ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310d1973152a94bcc1d700e23fa82b8e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a310d1973152a94bcc1d700e23fa82b8e">txSendStartTck</a></td></tr>
+<tr class="memdesc:a310d1973152a94bcc1d700e23fa82b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">tick count when TX send started, used for response timeout detection  <a href="structiop__tag.html#a310d1973152a94bcc1d700e23fa82b8e">More...</a><br /></td></tr>
+<tr class="separator:a310d1973152a94bcc1d700e23fa82b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a463de859a03e29b723f6d736c0295a1b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a463de859a03e29b723f6d736c0295a1b">rxLastRecvTck</a></td></tr>
+<tr class="memdesc:a463de859a03e29b723f6d736c0295a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive timeout detection: performed at tick count  <a href="structiop__tag.html#a463de859a03e29b723f6d736c0295a1b">More...</a><br /></td></tr>
+<tr class="separator:a463de859a03e29b723f6d736c0295a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48a20b886c2b2d0ffc91524fe52896d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#ae48a20b886c2b2d0ffc91524fe52896d">rxLastRecvChkLvl</a></td></tr>
+<tr class="memdesc:ae48a20b886c2b2d0ffc91524fe52896d"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive timeout detection: fill level at check  <a href="structiop__tag.html#ae48a20b886c2b2d0ffc91524fe52896d">More...</a><br /></td></tr>
+<tr class="separator:ae48a20b886c2b2d0ffc91524fe52896d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60317576660accd5312f1c3941ce5984"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a60317576660accd5312f1c3941ce5984">scktMap</a></td></tr>
+<tr class="memdesc:a60317576660accd5312f1c3941ce5984"><td class="mdescLeft">&#160;</td><td class="mdescRight">bitmap indicating open sockets (TCP/UDP/SSL), bit position is the dataContext (IOP event detect shortcut)  <a href="structiop__tag.html#a60317576660accd5312f1c3941ce5984">More...</a><br /></td></tr>
+<tr class="separator:a60317576660accd5312f1c3941ce5984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d01a62eb718b3391164c48d4528984"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#ad2d01a62eb718b3391164c48d4528984">scktLstWrk</a></td></tr>
+<tr class="memdesc:ad2d01a62eb718b3391164c48d4528984"><td class="mdescLeft">&#160;</td><td class="mdescRight">bit mask of last sckt do work IRD inquiry (fairness)  <a href="structiop__tag.html#ad2d01a62eb718b3391164c48d4528984">More...</a><br /></td></tr>
+<tr class="separator:ad2d01a62eb718b3391164c48d4528984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9dd0d3efe722656a56b79fba9c8923c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#af9dd0d3efe722656a56b79fba9c8923c">mqttMap</a></td></tr>
+<tr class="memdesc:af9dd0d3efe722656a56b79fba9c8923c"><td class="mdescLeft">&#160;</td><td class="mdescRight">bitmap indicating open mqtt(s) connections, bit position is the dataContext (IOP event detect shortcut)  <a href="structiop__tag.html#af9dd0d3efe722656a56b79fba9c8923c">More...</a><br /></td></tr>
+<tr class="separator:af9dd0d3efe722656a56b79fba9c8923c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1. </p>
+<p>Each of the protocols (sockets, MQTT, HTTP) have unique behaviors: sockets receive asynchronous alerts but the data receive process is fully synchronous, HTTP is synchronous on receive tied to page read, MQTT is fully asynchronous with msg event receive signaling and data transfer taking place async behind the scenes initiated on interrupt. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="ae6a02b1e34b41656319f5197e5a60439"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6a02b1e34b41656319f5197e5a60439">&#9670;&nbsp;</a></span>peerTypeMap</h2>
+<a id="af9dd0d3efe722656a56b79fba9c8923c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9dd0d3efe722656a56b79fba9c8923c">&#9670;&nbsp;</a></span>mqttMap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ltemc-iop_8h.html#a860bd27bc7a3b9593ff71a49def3caef">peerTypeMap_t</a> peerTypeMap</td>
+          <td class="memname">uint8_t mqttMap</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>map (struct) of possible IOP peers (data sources), used to optimise ISR string scanning </p>
+<p>bitmap indicating open mqtt(s) connections, bit position is the dataContext (IOP event detect shortcut) </p>
 
 </div>
 </div>
-<a id="aba8a893ba549b27ead7c4ecc7a25b057"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba8a893ba549b27ead7c4ecc7a25b057">&#9670;&nbsp;</a></span>rxCmdBuf</h2>
+<a id="a4827cd28d7a4be33fa663a4b2b0e2ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4827cd28d7a4be33fa663a4b2b0e2ccb">&#9670;&nbsp;</a></span>rxCBuffer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ltemc-iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">iopBuffer_t</a>* rxCmdBuf</td>
+          <td class="memname"><a class="el" href="ltemc-streams_8h.html#a37c2c70d8dc8028852a4345574c5104a">rxCoreBufferCtrl_t</a>* rxCBuffer</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>command receive buffer, this is the default RX buffer </p>
+<p>URC and command response receive buffer, this is the default RX buffer. </p>
 
 </div>
 </div>
-<a id="a03f9c4d94b0bc50d9dec134a4f8f55d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03f9c4d94b0bc50d9dec134a4f8f55d0">&#9670;&nbsp;</a></span>rxDataBufIndx</h2>
+<a id="ae48a20b886c2b2d0ffc91524fe52896d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48a20b886c2b2d0ffc91524fe52896d">&#9670;&nbsp;</a></span>rxLastRecvChkLvl</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t rxDataBufIndx</td>
+          <td class="memname">uint16_t rxLastRecvChkLvl</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>data goes into this slot rxDataBufs </p>
+<p>receive timeout detection: fill level at check </p>
 
 </div>
 </div>
-<a id="a8022e777adbae0d01364bed96e018a71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8022e777adbae0d01364bed96e018a71">&#9670;&nbsp;</a></span>rxDataBufs</h2>
+<a id="a463de859a03e29b723f6d736c0295a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a463de859a03e29b723f6d736c0295a1b">&#9670;&nbsp;</a></span>rxLastRecvTck</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ltemc-iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">iopBuffer_t</a>* rxDataBufs[<a class="el" href="ltemc-iop_8h.html#a334b237ed433f40d502f5f17ff4a688c">IOP_RX_DATABUFFERS_MAX</a>]</td>
+          <td class="memname">uint32_t rxLastRecvTck</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>the data buffers (smart buffer structs) </p>
+<p>receive timeout detection: performed at tick count </p>
 
 </div>
 </div>
-<a id="a52048c68d5750b887e72958a6983cdb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52048c68d5750b887e72958a6983cdb2">&#9670;&nbsp;</a></span>rxDataPeer</h2>
+<a id="a6335ffc4dd4d3bc7b9788fd595f85ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6335ffc4dd4d3bc7b9788fd595f85ea8">&#9670;&nbsp;</a></span>rxStreamCtrl</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ltemc-iop_8h.html#afcf2c451d40c6d56cb76f1e79132ed92">iopDataPeer_t</a> rxDataPeer</td>
+          <td class="memname"><a class="el" href="ltemc-streams_8h.html#a8ad6b0a37ec9bbaf450e4aa95e7984dc">iopStreamCtrl_t</a> rxStreamCtrl</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>protocol data source: if no peer, IOP is in command mode </p>
+<p>stream data source, if not null </p>
+
+</div>
+</div>
+<a id="ad2d01a62eb718b3391164c48d4528984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d01a62eb718b3391164c48d4528984">&#9670;&nbsp;</a></span>scktLstWrk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t scktLstWrk</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bit mask of last sckt do work IRD inquiry (fairness) </p>
+
+</div>
+</div>
+<a id="a60317576660accd5312f1c3941ce5984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60317576660accd5312f1c3941ce5984">&#9670;&nbsp;</a></span>scktMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t scktMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bitmap indicating open sockets (TCP/UDP/SSL), bit position is the dataContext (IOP event detect shortcut) </p>
+
+</div>
+</div>
+<a id="aceb5e03a83a4fadf749e094ee70b603b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceb5e03a83a4fadf749e094ee70b603b">&#9670;&nbsp;</a></span>streamPeers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ltemc-streams_8h.html#a8ad6b0a37ec9bbaf450e4aa95e7984dc">iopStreamCtrl_t</a> streamPeers[<a class="el" href="ltemc-streams_8h.html#a67400f5b10b3dbea6ed09f26d44917c3a7b1e06a3f0b4504ede6a057e651025f5">streamPeer_cnt</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>array of iopStream ctrl pointers, cast to a specific stream type: protocol or file stream </p>
 
 </div>
 </div>
@@ -212,6 +273,22 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>outstanding TX char pending </p>
+
+</div>
+</div>
+<a id="a310d1973152a94bcc1d700e23fa82b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310d1973152a94bcc1d700e23fa82b8e">&#9670;&nbsp;</a></span>txSendStartTck</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t txSendStartTck</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tick count when TX send started, used for response timeout detection </p>
 
 </div>
 </div>

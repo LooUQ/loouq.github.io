@@ -96,10 +96,6 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa03c77c42802793abb72d18888699ec3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#aa03c77c42802793abb72d18888699ec3">BGX_PDPCONTEXT_COUNT</a>&#160;&#160;&#160;3</td></tr>
-<tr class="separator:aa03c77c42802793abb72d18888699ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc12cbbf63bd95b21fba604df2ba5203"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#abc12cbbf63bd95b21fba604df2ba5203">NTWK_DEFAULT_CONTEXT</a>&#160;&#160;&#160;255</td></tr>
-<tr class="separator:abc12cbbf63bd95b21fba604df2ba5203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf515f44acdf402c33ea1e6c73db595b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#abf515f44acdf402c33ea1e6c73db595b">NTWKOPERATOR_OPERNAME_SZ</a>&#160;&#160;&#160;29</td></tr>
 <tr class="separator:abf515f44acdf402c33ea1e6c73db595b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8898d0f9834fb724fb39721ad75a4400"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a8898d0f9834fb724fb39721ad75a4400">NTWKOPERATOR_NTWKMODE_SZ</a>&#160;&#160;&#160;11</td></tr>
@@ -111,11 +107,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a988399cca5c04587b2bb6e93cad4a06a"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6c">protocol_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a988399cca5c04587b2bb6e93cad4a06a">protocol_t</a></td></tr>
-<tr class="memdesc:a988399cca5c04587b2bb6e93cad4a06a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of protocols available on the modem.  <a href="ltemc-network_8h.html#a988399cca5c04587b2bb6e93cad4a06a">More...</a><br /></td></tr>
-<tr class="separator:a988399cca5c04587b2bb6e93cad4a06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0086f053bcf6b99f83d0680de3b087f8"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cc">pdpCntxtIpType_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a0086f053bcf6b99f83d0680de3b087f8">pdpCntxtIpType_t</a></td></tr>
-<tr class="memdesc:a0086f053bcf6b99f83d0680de3b087f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the two common APN contexts provided by network carriers.  <a href="ltemc-network_8h.html#a0086f053bcf6b99f83d0680de3b087f8">More...</a><br /></td></tr>
+<tr class="memdesc:a0086f053bcf6b99f83d0680de3b087f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the two available PDP contexts for BGx provided by network carriers.  <a href="ltemc-network_8h.html#a0086f053bcf6b99f83d0680de3b087f8">More...</a><br /></td></tr>
 <tr class="separator:a0086f053bcf6b99f83d0680de3b087f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b858b502f4f3a91124a381d4d35fdc9"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-network_8h.html#a75359f333c3d195cffe786d2025294c7">pdpCntxtAuthMethods_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a8b858b502f4f3a91124a381d4d35fdc9">pdpCntxtAuthMethods_t</a></td></tr>
 <tr class="separator:a8b858b502f4f3a91124a381d4d35fdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,26 +124,46 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a3f393a98760199ca61cd643f317eee6c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6c">protocol_tag</a> { <br />
-&#160;&#160;<a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6ca030558b5b57bba711bfed356ca009906">protocol_tcp</a> = 0x00, 
-<a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6ca5bd4b9120131858ad72573514e250933">protocol_udp</a> = 0x01, 
-<a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6caf0061dc3c11d93f1068cc42a76ba0d91">protocol_ssl</a> = 0x02, 
-<a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6ca93c8764bc52c13671d9fda6b68d3ac3e">protocol_AnyIP</a> = 0x02, 
+<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca">atcmd__useDefaultTimeout</a> = 0, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78">atcmd__useDefaultOKCompletionParser</a> = 0, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd">atcmd__setLockModeManual</a> = 0, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3">atcmd__setLockModeAuto</a> = 1, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6ca93aa4f4446d8b8dc99a238d59f16798b">protocol_http</a> = 0x20, 
-<a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6ca0cd71b9324de746eb65609585436b6e3">protocol_https</a> = 0x21, 
-<a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6ca1410bc7ff4e5f24154b9776a2850ab2d">protocol_mqtt</a> = 0x30, 
-<a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6ca7e729fed4553c316849a81625e5b3451">protocol_mqtts</a> = 0x31, 
+&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753">ATCMD__defaultTimeoutMS</a> = 800, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d">ATCMD__parserPendingResult</a> = 0xFFFF, 
+<a class="el" href="ltemc-http_8c.html#a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed">http__LTEM_defaultTimeoutBGxSec</a> = 60, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060">IOP__txBufferSize</a> = 1800, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6cab8d57aa0639ca27248fd5223f1c47d44">protocol_void</a> = 0xFF
+&#160;&#160;<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8">IOP__rxCoreBufferSize</a> = 192, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7">IOP__uartFIFOBufferSz</a> = 64, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4">IOP__uartFIFO_fillMS</a> = 6, 
+<a class="el" href="ltemc-mqtt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2">resultCode__parserPending</a> = 0xFFFF, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-network_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991">NTWK__pdpContextCnt</a> = 3, 
+<a class="el" href="ltemc-network_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83">NTWK__operatorNameSz</a> = 20, 
+<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98">nxp__lsr_DataInReceiver</a> = 0x01U, 
+<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5">nxp__lsr_THR_empty</a> = 0x02U, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb">nxp__lsr_FIFO_dataError</a> = 0x80U, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1">BGX__initCommandCnt</a> = 1, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d">BGX__initCommandAttempts</a> = 2, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d">BGX__powerOnDelay</a> = 500, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb">BGX__powerOffDelay</a> = 1500, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf">BGX__resetDelay</a> = 300, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c">BGX__baudRate</a> = 115200, 
+<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc">sckt__resultCode_previouslyOpen</a> = 563, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06">sckt__defaultOpenTimeoutMS</a> = 60000, 
+<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050">SCKT__IRD_requestMaxSz</a> = 1500
 <br />
  }</td></tr>
-<tr class="memdesc:a3f393a98760199ca61cd643f317eee6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of protocols available on the modem.  <a href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6c">More...</a><br /></td></tr>
-<tr class="separator:a3f393a98760199ca61cd643f317eee6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa55a4d211043314594fd0ca9150767cc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cc">pdpCntxtIpType_tag</a> { <a class="el" href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cca00d39362795bf25c1e9e986de55fc686">pdpCntxtIpType_IPV4</a> = 1, 
 <a class="el" href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cca6abc753b936555b9a2e6ce3cd1fb2c09">pdpCntxtIpType_IPV6</a> = 2
  }</td></tr>
-<tr class="memdesc:aa55a4d211043314594fd0ca9150767cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the two common APN contexts provided by network carriers.  <a href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cc">More...</a><br /></td></tr>
+<tr class="memdesc:aa55a4d211043314594fd0ca9150767cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the two available PDP contexts for BGx provided by network carriers.  <a href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cc">More...</a><br /></td></tr>
 <tr class="separator:aa55a4d211043314594fd0ca9150767cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75359f333c3d195cffe786d2025294c7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a75359f333c3d195cffe786d2025294c7">pdpCntxtAuthMethods_tag</a> { <a class="el" href="ltemc-network_8h.html#a75359f333c3d195cffe786d2025294c7a7beba2b95c8d806b9ce64963a1683801">pdpCntxtAuthMethods_none</a> = 0, 
 <a class="el" href="ltemc-network_8h.html#a75359f333c3d195cffe786d2025294c7af7eff736f6b4605e690dc656760c772a">pdpCntxtAuthMethods_pap</a> = 1, 
@@ -164,9 +177,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a59f08d7a2cf3e7d6685e377aff6bc57d">ntwk_create</a> ()</td></tr>
 <tr class="memdesc:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the IP network contexts structure.  <a href="ltemc-network_8h.html#a59f08d7a2cf3e7d6685e377aff6bc57d">More...</a><br /></td></tr>
 <tr class="separator:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdbd836a01669dcf68329ef31c73d45a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a58db2e79250f681c695c651d586fd25f">networkOperator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#abdbd836a01669dcf68329ef31c73d45a">ntwk_awaitOperator</a> (uint16_t waitDuration)</td></tr>
-<tr class="memdesc:abdbd836a01669dcf68329ef31c73d45a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a network operator name and network mode. Can be cancelled in threaded env via g_ltem-&gt;cancellationRequest.  <a href="ltemc-network_8h.html#abdbd836a01669dcf68329ef31c73d45a">More...</a><br /></td></tr>
-<tr class="separator:abdbd836a01669dcf68329ef31c73d45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada224a6a88782263e4a9cf65c3678d7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a58db2e79250f681c695c651d586fd25f">networkOperator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#ada224a6a88782263e4a9cf65c3678d7e">ntwk_awaitOperator</a> (uint16_t waitDurSeconds)</td></tr>
+<tr class="memdesc:ada224a6a88782263e4a9cf65c3678d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a network operator name and network mode. Can be cancelled in threaded env via g_ltem-&gt;cancellationRequest.  <a href="ltemc-network_8h.html#ada224a6a88782263e4a9cf65c3678d7e">More...</a><br /></td></tr>
+<tr class="separator:ada224a6a88782263e4a9cf65c3678d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3398dd81e1b122fcacdafb90c3eb33f3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a3398dd81e1b122fcacdafb90c3eb33f3">ntwk_getActivePdpCntxtCnt</a> ()</td></tr>
 <tr class="memdesc:a3398dd81e1b122fcacdafb90c3eb33f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get count of APN active data contexts from BGx.  <a href="ltemc-network_8h.html#a3398dd81e1b122fcacdafb90c3eb33f3">More...</a><br /></td></tr>
 <tr class="separator:a3398dd81e1b122fcacdafb90c3eb33f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,9 +188,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad85d2407b51d513c48d0dc2622d6d2cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a09b80c31caeeb52da11154ae652c16d2">pdpCntxt_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#ad85d2407b51d513c48d0dc2622d6d2cb">ntwk_getPdpCntxt</a> (uint8_t contxtId)</td></tr>
 <tr class="memdesc:ad85d2407b51d513c48d0dc2622d6d2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PDP Context/APN information.  <a href="ltemc-network_8h.html#ad85d2407b51d513c48d0dc2622d6d2cb">More...</a><br /></td></tr>
 <tr class="separator:ad85d2407b51d513c48d0dc2622d6d2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c89922d8c330ce6a33debe96c48e317"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a1c89922d8c330ce6a33debe96c48e317">ntwk_activatePdpContext</a> (uint8_t contxtId)</td></tr>
-<tr class="memdesc:a1c89922d8c330ce6a33debe96c48e317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN.  <a href="ltemc-network_8h.html#a1c89922d8c330ce6a33debe96c48e317">More...</a><br /></td></tr>
-<tr class="separator:a1c89922d8c330ce6a33debe96c48e317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae16dc0bfd169ac72135a4bab0109f64f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#ae16dc0bfd169ac72135a4bab0109f64f">ntwk_activatePdpContext</a> (uint8_t contxtId)</td></tr>
+<tr class="memdesc:ae16dc0bfd169ac72135a4bab0109f64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN.  <a href="ltemc-network_8h.html#ae16dc0bfd169ac72135a4bab0109f64f">More...</a><br /></td></tr>
+<tr class="separator:ae16dc0bfd169ac72135a4bab0109f64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3bc4e9d0b6d6f181ac180fbd91d5ce0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#ad3bc4e9d0b6d6f181ac180fbd91d5ce0">ntwk_deactivatePdpContext</a> (uint8_t contxtId)</td></tr>
 <tr class="memdesc:ad3bc4e9d0b6d6f181ac180fbd91d5ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deactivate APN.  <a href="ltemc-network_8h.html#ad3bc4e9d0b6d6f181ac180fbd91d5ce0">More...</a><br /></td></tr>
 <tr class="separator:ad3bc4e9d0b6d6f181ac180fbd91d5ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,34 +199,6 @@ Functions</h2></td></tr>
 <tr class="separator:a44958b492843d449944cfc78d937241d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aa03c77c42802793abb72d18888699ec3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa03c77c42802793abb72d18888699ec3">&#9670;&nbsp;</a></span>BGX_PDPCONTEXT_COUNT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define BGX_PDPCONTEXT_COUNT&#160;&#160;&#160;3</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abc12cbbf63bd95b21fba604df2ba5203"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc12cbbf63bd95b21fba604df2ba5203">&#9670;&nbsp;</a></span>NTWK_DEFAULT_CONTEXT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NTWK_DEFAULT_CONTEXT&#160;&#160;&#160;255</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8898d0f9834fb724fb39721ad75a4400"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8898d0f9834fb724fb39721ad75a4400">&#9670;&nbsp;</a></span>NTWKOPERATOR_NTWKMODE_SZ</h2>
 
@@ -345,28 +330,54 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enum of the two common APN contexts provided by network carriers. </p>
+<p>Enum of the two available PDP contexts for BGx provided by network carriers. </p>
 
 </div>
 </div>
-<a id="a988399cca5c04587b2bb6e93cad4a06a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a988399cca5c04587b2bb6e93cad4a06a">&#9670;&nbsp;</a></span>protocol_t</h2>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef enum <a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6c">protocol_tag</a> <a class="el" href="ltemc-network_8h.html#a988399cca5c04587b2bb6e93cad4a06a">protocol_t</a></td>
+          <td class="memname">anonymous enum</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Enum of protocols available on the modem. </p>
-<p>Note: all of the protocols are clients, while the BGx line of modules support server mode the network carriers generally don't </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca"></a>atcmd__useDefaultTimeout&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78"></a>atcmd__useDefaultOKCompletionParser&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd"></a>atcmd__setLockModeManual&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3"></a>atcmd__setLockModeAuto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753"></a>ATCMD__defaultTimeoutMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d"></a>ATCMD__parserPendingResult&#160;</td><td class="fielddoc"><p>private declaration; value returned from response parsers indicating a pattern match has not yet been detected </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed"></a>http__LTEM_defaultTimeoutBGxSec&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060"></a>IOP__txBufferSize&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8"></a>IOP__rxCoreBufferSize&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7"></a>IOP__uartFIFOBufferSz&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4"></a>IOP__uartFIFO_fillMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2"></a>resultCode__parserPending&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991"></a>NTWK__pdpContextCnt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83"></a>NTWK__operatorNameSz&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98"></a>nxp__lsr_DataInReceiver&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5"></a>nxp__lsr_THR_empty&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb"></a>nxp__lsr_FIFO_dataError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1"></a>BGX__initCommandCnt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d"></a>BGX__initCommandAttempts&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d"></a>BGX__powerOnDelay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb"></a>BGX__powerOffDelay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf"></a>BGX__resetDelay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c"></a>BGX__baudRate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc"></a>sckt__resultCode_previouslyOpen&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06"></a>sckt__defaultOpenTimeoutMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050"></a>SCKT__IRD_requestMaxSz&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a75359f333c3d195cffe786d2025294c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75359f333c3d195cffe786d2025294c7">&#9670;&nbsp;</a></span>pdpCntxtAuthMethods_tag</h2>
 
@@ -399,7 +410,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enum of the two common APN contexts provided by network carriers. </p>
+<p>Enum of the two available PDP contexts for BGx provided by network carriers. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa55a4d211043314594fd0ca9150767cca00d39362795bf25c1e9e986de55fc686"></a>pdpCntxtIpType_IPV4&#160;</td><td class="fielddoc"><p>IP v4, 32-bit address (ex: 192.168.37.52) </p>
 </td></tr>
@@ -409,52 +420,15 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3f393a98760199ca61cd643f317eee6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f393a98760199ca61cd643f317eee6c">&#9670;&nbsp;</a></span>protocol_tag</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="ltemc-network_8h.html#a3f393a98760199ca61cd643f317eee6c">protocol_tag</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enum of protocols available on the modem. </p>
-<p>Note: all of the protocols are clients, while the BGx line of modules support server mode the network carriers generally don't </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3f393a98760199ca61cd643f317eee6ca030558b5b57bba711bfed356ca009906"></a>protocol_tcp&#160;</td><td class="fielddoc"><p>TCP client. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a3f393a98760199ca61cd643f317eee6ca5bd4b9120131858ad72573514e250933"></a>protocol_udp&#160;</td><td class="fielddoc"><p>UDP client. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a3f393a98760199ca61cd643f317eee6caf0061dc3c11d93f1068cc42a76ba0d91"></a>protocol_ssl&#160;</td><td class="fielddoc"><p>SSL client. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a3f393a98760199ca61cd643f317eee6ca93c8764bc52c13671d9fda6b68d3ac3e"></a>protocol_AnyIP&#160;</td><td class="fielddoc"><p>special value that includes any of the above IP basic transport protocols. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a3f393a98760199ca61cd643f317eee6ca93aa4f4446d8b8dc99a238d59f16798b"></a>protocol_http&#160;</td><td class="fielddoc"><p>HTTP client. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a3f393a98760199ca61cd643f317eee6ca0cd71b9324de746eb65609585436b6e3"></a>protocol_https&#160;</td><td class="fielddoc"><p>HTTPS client, HTTP over SSL. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a3f393a98760199ca61cd643f317eee6ca1410bc7ff4e5f24154b9776a2850ab2d"></a>protocol_mqtt&#160;</td><td class="fielddoc"><p>MQTT messaging client. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a3f393a98760199ca61cd643f317eee6ca7e729fed4553c316849a81625e5b3451"></a>protocol_mqtts&#160;</td><td class="fielddoc"><p>MQTT over SSL. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a3f393a98760199ca61cd643f317eee6cab8d57aa0639ca27248fd5223f1c47d44"></a>protocol_void&#160;</td><td class="fielddoc"><p>No protocol, used in code to generally signal a null condition. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a1c89922d8c330ce6a33debe96c48e317"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c89922d8c330ce6a33debe96c48e317">&#9670;&nbsp;</a></span>ntwk_activatePdpContext()</h2>
+<a id="ae16dc0bfd169ac72135a4bab0109f64f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae16dc0bfd169ac72135a4bab0109f64f">&#9670;&nbsp;</a></span>ntwk_activatePdpContext()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ntwk_activatePdpContext </td>
+          <td class="memname">bool ntwk_activatePdpContext </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>cntxtId</em></td><td>)</td>
@@ -473,8 +447,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abdbd836a01669dcf68329ef31c73d45a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdbd836a01669dcf68329ef31c73d45a">&#9670;&nbsp;</a></span>ntwk_awaitOperator()</h2>
+<a id="ada224a6a88782263e4a9cf65c3678d7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada224a6a88782263e4a9cf65c3678d7e">&#9670;&nbsp;</a></span>ntwk_awaitOperator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -483,7 +457,7 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="ltemc-network_8h.html#a58db2e79250f681c695c651d586fd25f">networkOperator_t</a> ntwk_awaitOperator </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>waitDuration</em></td><td>)</td>
+          <td class="paramname"><em>waitDurSeconds</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -492,7 +466,7 @@ Functions</h2></td></tr>
 <p>Wait for a network operator name and network mode. Can be cancelled in threaded env via g_ltem-&gt;cancellationRequest. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">waitDuration</td><td>[in] Number of seconds to wait for a network. Supply 0 for no wait.</td></tr>
+    <tr><td class="paramname">waitDurSeconds</td><td>[in] Number of seconds to wait for a network. Supply 0 for no wait.</td></tr>
   </table>
   </dd>
 </dl>

@@ -1,0 +1,179 @@
+\hypertarget{structmqtt_ctrl__tag}{}\doxysection{mqtt\+Ctrl\+\_\+tag Struct Reference}
+\label{structmqtt_ctrl__tag}\index{mqttCtrl\_tag@{mqttCtrl\_tag}}
+
+
+Struct representing the state of a M\+Q\+TT stream service.  
+
+
+
+
+{\ttfamily \#include $<$ltemc-\/mqtt.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structmqtt_ctrl__tag_a0bbe3acc8af66c269be9842e1ba3b4e8}{ctrl\+Magic}}
+\begin{DoxyCompactList}\small\item\em magic flag to validate incoming requests \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} \mbox{\hyperlink{structmqtt_ctrl__tag_a0d521bc1dcfb2a34dc497b7ee2232d4a}{data\+Cntxt}}
+\begin{DoxyCompactList}\small\item\em Data context where this control operates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}} \mbox{\hyperlink{structmqtt_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}{protocol}}
+\begin{DoxyCompactList}\small\item\em Control\textquotesingle{}s protocol \+: U\+D\+P/\+T\+C\+P/\+S\+SL, M\+Q\+TT, H\+T\+TP, etc. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structmqtt_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}{use\+Tls}}
+\begin{DoxyCompactList}\small\item\em flag indicating S\+S\+L/\+T\+LS applied to stream \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} \mbox{\hyperlink{structmqtt_ctrl__tag_abf49f0c9fac1ef9ac027dc3af5fece67}{recv\+Buf\+Ctrl}}
+\begin{DoxyCompactList}\small\item\em RX smart buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-mqtt_8h_a511663720bdcd80c97bef4b2804b4196}{mqtt\+Recv\+Func\+\_\+t}} \mbox{\hyperlink{structmqtt_ctrl__tag_a9744de27edaf4964cd655295d440ac72}{data\+Recv\+CB}}
+\begin{DoxyCompactList}\small\item\em callback to application, signals data ready \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}} \mbox{\hyperlink{structmqtt_ctrl__tag_a7cc883f1190d5ffd2723690df6cc3eca}{use\+Mqtt\+Version}}
+\item 
+\mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} \mbox{\hyperlink{structmqtt_ctrl__tag_a22b01753d409aacca5b5fc4f6027b694}{state}}
+\begin{DoxyCompactList}\small\item\em Current state of the M\+Q\+TT protocol services on device. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structmqtt_ctrl__tag_a2acf66d2c12f7b04f90ed704f5ac215c}{msg\+Id}}
+\begin{DoxyCompactList}\small\item\em M\+Q\+TT message ID for Q\+OS, automatically incremented, rolls at max value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-mqtt_8h_a9683ebf7923850cf58dd12e94cb75b7c}{mqtt\+Topic\+Sub\+\_\+t}} \mbox{\hyperlink{structmqtt_ctrl__tag_a2210e94cb737763eb48b265a07bfa2d2}{topic\+Subs}} \mbox{[}\mbox{\hyperlink{ltemc-mqtt_8h_a5f8ab8a44e690c2450ffcf33de4996d9a23690939f9dfb36c24c079e3174d29aa}{mqtt\+\_\+\+\_\+topic\+\_\+subscription\+Cnt}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of M\+Q\+TT topic subscriptions. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structmqtt_ctrl__tag_a1adbeaaadf1660241c2cd901a96232bb}{do\+Work\+Last\+Tck}}
+\begin{DoxyCompactList}\small\item\em last check for U\+R\+C/data\+Pending \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structmqtt_ctrl__tag_aa98ea8bc77f07a149ecafa27b29beb97}{do\+Work\+Timeout}}
+\begin{DoxyCompactList}\small\item\em set at init for do\+Work A\+S\+S\+E\+RT, if timeout reached chance for a data overflow on socket \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structmqtt_ctrl__tag_abcf9ea0863419239251f200c1df819fd}{last\+Buffer\+Reqd}}
+\begin{DoxyCompactList}\small\item\em last receive buffer required size, provides feedback to developer to minimize buffer sizing ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct representing the state of a M\+Q\+TT stream service. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a0bbe3acc8af66c269be9842e1ba3b4e8}\label{structmqtt_ctrl__tag_a0bbe3acc8af66c269be9842e1ba3b4e8}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!ctrlMagic@{ctrlMagic}}
+\index{ctrlMagic@{ctrlMagic}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{ctrlMagic}{ctrlMagic}}
+{\footnotesize\ttfamily uint8\+\_\+t ctrl\+Magic}
+
+
+
+magic flag to validate incoming requests 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a0d521bc1dcfb2a34dc497b7ee2232d4a}\label{structmqtt_ctrl__tag_a0d521bc1dcfb2a34dc497b7ee2232d4a}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!dataCntxt@{dataCntxt}}
+\index{dataCntxt@{dataCntxt}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{dataCntxt}{dataCntxt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt}
+
+
+
+Data context where this control operates. 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a9744de27edaf4964cd655295d440ac72}\label{structmqtt_ctrl__tag_a9744de27edaf4964cd655295d440ac72}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!dataRecvCB@{dataRecvCB}}
+\index{dataRecvCB@{dataRecvCB}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{dataRecvCB}{dataRecvCB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-mqtt_8h_a511663720bdcd80c97bef4b2804b4196}{mqtt\+Recv\+Func\+\_\+t}} data\+Recv\+CB}
+
+
+
+callback to application, signals data ready 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a1adbeaaadf1660241c2cd901a96232bb}\label{structmqtt_ctrl__tag_a1adbeaaadf1660241c2cd901a96232bb}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!doWorkLastTck@{doWorkLastTck}}
+\index{doWorkLastTck@{doWorkLastTck}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{doWorkLastTck}{doWorkLastTck}}
+{\footnotesize\ttfamily uint32\+\_\+t do\+Work\+Last\+Tck}
+
+
+
+last check for U\+R\+C/data\+Pending 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_aa98ea8bc77f07a149ecafa27b29beb97}\label{structmqtt_ctrl__tag_aa98ea8bc77f07a149ecafa27b29beb97}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!doWorkTimeout@{doWorkTimeout}}
+\index{doWorkTimeout@{doWorkTimeout}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{doWorkTimeout}{doWorkTimeout}}
+{\footnotesize\ttfamily uint32\+\_\+t do\+Work\+Timeout}
+
+
+
+set at init for do\+Work A\+S\+S\+E\+RT, if timeout reached chance for a data overflow on socket 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_abcf9ea0863419239251f200c1df819fd}\label{structmqtt_ctrl__tag_abcf9ea0863419239251f200c1df819fd}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!lastBufferReqd@{lastBufferReqd}}
+\index{lastBufferReqd@{lastBufferReqd}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{lastBufferReqd}{lastBufferReqd}}
+{\footnotesize\ttfamily uint16\+\_\+t last\+Buffer\+Reqd}
+
+
+
+last receive buffer required size, provides feedback to developer to minimize buffer sizing ~\newline
+ 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a2acf66d2c12f7b04f90ed704f5ac215c}\label{structmqtt_ctrl__tag_a2acf66d2c12f7b04f90ed704f5ac215c}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!msgId@{msgId}}
+\index{msgId@{msgId}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{msgId}{msgId}}
+{\footnotesize\ttfamily uint16\+\_\+t msg\+Id}
+
+
+
+M\+Q\+TT message ID for Q\+OS, automatically incremented, rolls at max value. 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}\label{structmqtt_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!protocol@{protocol}}
+\index{protocol@{protocol}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{protocol}{protocol}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}} protocol}
+
+
+
+Control\textquotesingle{}s protocol \+: U\+D\+P/\+T\+C\+P/\+S\+SL, M\+Q\+TT, H\+T\+TP, etc. 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_abf49f0c9fac1ef9ac027dc3af5fece67}\label{structmqtt_ctrl__tag_abf49f0c9fac1ef9ac027dc3af5fece67}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!recvBufCtrl@{recvBufCtrl}}
+\index{recvBufCtrl@{recvBufCtrl}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{recvBufCtrl}{recvBufCtrl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} recv\+Buf\+Ctrl}
+
+
+
+RX smart buffer. 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a22b01753d409aacca5b5fc4f6027b694}\label{structmqtt_ctrl__tag_a22b01753d409aacca5b5fc4f6027b694}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!state@{state}}
+\index{state@{state}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} state}
+
+
+
+Current state of the M\+Q\+TT protocol services on device. 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a2210e94cb737763eb48b265a07bfa2d2}\label{structmqtt_ctrl__tag_a2210e94cb737763eb48b265a07bfa2d2}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!topicSubs@{topicSubs}}
+\index{topicSubs@{topicSubs}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{topicSubs}{topicSubs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-mqtt_8h_a9683ebf7923850cf58dd12e94cb75b7c}{mqtt\+Topic\+Sub\+\_\+t}} topic\+Subs\mbox{[}\mbox{\hyperlink{ltemc-mqtt_8h_a5f8ab8a44e690c2450ffcf33de4996d9a23690939f9dfb36c24c079e3174d29aa}{mqtt\+\_\+\+\_\+topic\+\_\+subscription\+Cnt}}\mbox{]}}
+
+
+
+Array of M\+Q\+TT topic subscriptions. 
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a7cc883f1190d5ffd2723690df6cc3eca}\label{structmqtt_ctrl__tag_a7cc883f1190d5ffd2723690df6cc3eca}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!useMqttVersion@{useMqttVersion}}
+\index{useMqttVersion@{useMqttVersion}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{useMqttVersion}{useMqttVersion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}} use\+Mqtt\+Version}
+
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}\label{structmqtt_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}} 
+\index{mqttCtrl\_tag@{mqttCtrl\_tag}!useTls@{useTls}}
+\index{useTls@{useTls}!mqttCtrl\_tag@{mqttCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{useTls}{useTls}}
+{\footnotesize\ttfamily bool use\+Tls}
+
+
+
+flag indicating S\+S\+L/\+T\+LS applied to stream 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ltemc-mqtt_8h}{ltemc-\/mqtt.\+h}}\end{DoxyCompactItemize}

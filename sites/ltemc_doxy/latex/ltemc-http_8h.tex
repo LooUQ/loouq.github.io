@@ -1,83 +1,350 @@
 \hypertarget{ltemc-http_8h}{}\doxysection{src/ltemc-\/http.h File Reference}
 \label{ltemc-http_8h}\index{src/ltemc-\/http.h@{src/ltemc-\/http.h}}
-{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lq-\/types.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/streams.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/internal.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+tag}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef void($\ast$ \mbox{\hyperlink{ltemc-http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}}) (void $\ast$file\+Data, uint16\+\_\+t data\+Sz)
-\begin{DoxyCompactList}\small\item\em typedef for the socket services data receiver function. Connects filesystem processing to the application (receive). \end{DoxyCompactList}\end{DoxyCompactItemize}
+typedef void($\ast$ \mbox{\hyperlink{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}{http\+Recv\+Func\+\_\+t}}) (\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt, uint16\+\_\+t http\+Rslt, char $\ast$data, uint16\+\_\+t data\+Sz)
+\begin{DoxyCompactList}\small\item\em Callback function for data received event. Notifies application that new data is available and needs serviced. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4}{http\+Header\+Map\+\_\+tag}} \mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em If using custom headers, bit-\/map indicating what headers to create for default custom header collection. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}{http\+State\+\_\+tag}} \mbox{\hyperlink{ltemc-http_8h_aa03ddb83b8bb9dfbd81633b86cf3f5d1}{http\+State\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dc}{http\+\_\+\+\_\+constants}} \{ \mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcac9527ee275ea08a885f60cbc653b14c2}{http\+\_\+\+\_\+no\+Response\+Headers}} = 0, 
+\mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dca295bbca70e6bb810df036c87f00dde61}{http\+\_\+\+\_\+return\+Response\+Headers}} = 1, 
+\mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcad10ab1ed8138f0bd0bf3f6e749cc8b57}{http\+\_\+\+\_\+use\+Default\+Timeout}} = 0, 
+\mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcab5a3f3a7b1573f2e5bed7dd16098b096}{http\+\_\+\+\_\+url\+Host\+Sz}} = 128
+ \}
+\item 
+enum \mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4}{http\+Header\+Map\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4acb7c9b87d7c18de1f294f5b5953a18bc}{http\+Header\+Map\+\_\+accept}} = 0x0001, 
+\mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a8a49f69f96e352ac6a5a076f26e129e8}{http\+Header\+Map\+\_\+user\+Agent}} = 0x0002, 
+\mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a8ba24ab106ef0d0b83866fb99e8be62a}{http\+Header\+Map\+\_\+connection}} = 0x0004, 
+\mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a550739a6dd7b7b631b4332d9a12cfccd}{http\+Header\+Map\+\_\+content\+Type}} = 0x0008, 
+\newline
+\mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a6e7258c74abbedf0d878506e068be232}{http\+Header\+Map\+\_\+content\+Lenght}} = 0x0010, 
+\mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a2df1c1ae260315a4190a50881f29b20d}{http\+Header\+Map\+\_\+all}} = 0x\+F\+F\+FF
+ \}
+\begin{DoxyCompactList}\small\item\em If using custom headers, bit-\/map indicating what headers to create for default custom header collection. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}{http\+State\+\_\+tag}} \{ \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a3b0ecebeaddfdcf385644d8c0bc4b160}{http\+State\+\_\+idle}} = 0, 
+\mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3aefa952842e34c8d7cb93e481c436fa3a}{http\+State\+\_\+request\+Complete}}, 
+\mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a76a642a88929ee2f945b6c08e42bd354}{http\+State\+\_\+reading\+Data}}, 
+\mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a37903004520df798c973b4bc633f7462}{http\+State\+\_\+closing}}
+ \}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{ltemc-http_8h_ac63d8e77c4017e433b20d58b35729bbc}{http\+\_\+set\+Recvr\+Func}} (\mbox{\hyperlink{ltemc-http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}} file\+Recvr\+\_\+func)
+void \mbox{\hyperlink{ltemc-http_8h_a4d6b9933d020080a3c211fd32a9e1df0}{http\+\_\+init\+Control}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt, const char $\ast$url\+Host, char $\ast$recv\+Buf, uint16\+\_\+t recv\+Buf\+Sz, \mbox{\hyperlink{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}{http\+Recv\+Func\+\_\+t}} recv\+Callback)
+\begin{DoxyCompactList}\small\item\em Create a H\+T\+T\+P(s) control structure to manage web communications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}{http\+\_\+enable\+Custom\+Hdrs}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, char $\ast$hdr\+Buffer, uint16\+\_\+t hdr\+Buffer\+Sz)
+\begin{DoxyCompactList}\small\item\em Registers custom headers (char) buffer with H\+T\+TP control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-http_8h_ab533613578b3b75d760abd9a058c446b}{http\+\_\+add\+Default\+Hdrs}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, \mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}} header\+Map)
+\begin{DoxyCompactList}\small\item\em Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-http_8h_a92b18393cbc41e7f0d95958949bf33a1}{http\+\_\+add\+Basic\+Auth\+Hdr}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$user, const char $\ast$pw)
+\begin{DoxyCompactList}\small\item\em Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_afa4288aa4cda4fd9791592ce93b737fc}{http\+\_\+get}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$relative\+Url, bool return\+Response\+Hdrs, uint8\+\_\+t timeout\+Sec)
+\begin{DoxyCompactList}\small\item\em Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_a7796d179f44f07b0d0c6170830a0337e}{http\+\_\+post}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$relative\+Url, bool return\+Response\+Hdrs, const char $\ast$post\+Data, uint16\+\_\+t data\+Sz, uint8\+\_\+t timeout\+Sec)
+\begin{DoxyCompactList}\small\item\em Performs a H\+T\+TP P\+O\+ST page web request. \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_a9259a6152e50da53e8f64dbb68b203bd}{http\+\_\+read\+Page}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, uint16\+\_\+t timeout\+Sec)
 \item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-http_8h_ae0d14f04a5b54c03a47cd82dc1a11b54}{http\+\_\+set\+Server\+Url}} (const char $\ast$file\+Name)
-\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-http_8h_afb501c4b4413888d485309215d431790}{http\+\_\+set\+Ssl\+Options}} ()
-\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-http_8h_afa6524e38503c7274efad5f3f9bbc4f8}{http\+\_\+get}} (const char $\ast$url, \mbox{\hyperlink{ltemc-http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}} file\+Recvr\+\_\+func)
-\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-http_8h_ad85723949df4cbef8bec8a4e05789f58}{http\+\_\+get\+File}} (const char $\ast$url, const char $\ast$filename)
-\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-http_8h_a59bbcedcaa9accb7de0502f3a54de81a}{http\+\_\+post}} (const char $\ast$url, const char $\ast$post\+Data, uint16\+\_\+t data\+Sz)
-\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-http_8h_a9cc4a5f51a1cb01f2195c104eae810ec}{http\+\_\+post\+File}} (const char $\ast$url, const char $\ast$filename)
+void \mbox{\hyperlink{ltemc-http_8h_adc3e553b77a6341664862d7b8a9c0060}{http\+\_\+cancel\+Page}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{ltemc-http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}\label{ltemc-http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}} 
-\index{ltemc-\/http.h@{ltemc-\/http.h}!httpReceiver\_func\_t@{httpReceiver\_func\_t}}
-\index{httpReceiver\_func\_t@{httpReceiver\_func\_t}!ltemc-\/http.h@{ltemc-\/http.h}}
-\doxysubsubsection{\texorpdfstring{httpReceiver\_func\_t}{httpReceiver\_func\_t}}
-{\footnotesize\ttfamily typedef void($\ast$ http\+Receiver\+\_\+func\+\_\+t) (void $\ast$file\+Data, uint16\+\_\+t data\+Sz)}
+\mbox{\Hypertarget{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}\label{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!httpCtrl\_t@{httpCtrl\_t}}
+\index{httpCtrl\_t@{httpCtrl\_t}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{httpCtrl\_t}{httpCtrl\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}}}
+
+\mbox{\Hypertarget{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}\label{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!httpHeaderMap\_t@{httpHeaderMap\_t}}
+\index{httpHeaderMap\_t@{httpHeaderMap\_t}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{httpHeaderMap\_t}{httpHeaderMap\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4}{http\+Header\+Map\+\_\+tag}} \mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}}}
 
 
 
-typedef for the socket services data receiver function. Connects filesystem processing to the application (receive). 
+If using custom headers, bit-\/map indicating what headers to create for default custom header collection. 
 
+\mbox{\Hypertarget{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}\label{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!httpRecvFunc\_t@{httpRecvFunc\_t}}
+\index{httpRecvFunc\_t@{httpRecvFunc\_t}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{httpRecvFunc\_t}{httpRecvFunc\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ http\+Recv\+Func\+\_\+t) (\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt, uint16\+\_\+t http\+Rslt, char $\ast$data, uint16\+\_\+t data\+Sz)}
+
+
+
+Callback function for data received event. Notifies application that new data is available and needs serviced. 
+
+The $\ast$data and data\+Sz values are for convenience, since the application supplied the buffer to L\+T\+EmC.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Cntxt} & \mbox{[}in\mbox{]} Data peer (data context or filesys) \\
+\hline
+{\em http\+Rslt} & \mbox{[}in\mbox{]} H\+T\+TP status code found in the page result headers \\
+\hline
+{\em data} & \mbox{[}in\mbox{]} Pointer to received data buffer \\
+\hline
+{\em data\+Sz} & \mbox{[}in\mbox{]} The number of bytes available \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-http_8h_aa03ddb83b8bb9dfbd81633b86cf3f5d1}\label{ltemc-http_8h_aa03ddb83b8bb9dfbd81633b86cf3f5d1}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_t@{httpState\_t}}
+\index{httpState\_t@{httpState\_t}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{httpState\_t}{httpState\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}{http\+State\+\_\+tag}} \mbox{\hyperlink{ltemc-http_8h_aa03ddb83b8bb9dfbd81633b86cf3f5d1}{http\+State\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dc}\label{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dc}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_\_constants@{http\_\_constants}}
+\index{http\_\_constants@{http\_\_constants}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{http\_\_constants}{http\_\_constants}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dc}{http\+\_\+\+\_\+constants}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_noResponseHeaders@{http\_\_noResponseHeaders}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_\_noResponseHeaders@{http\_\_noResponseHeaders}}}\mbox{\Hypertarget{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcac9527ee275ea08a885f60cbc653b14c2}\label{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcac9527ee275ea08a885f60cbc653b14c2}} 
+http\+\_\+\+\_\+no\+Response\+Headers&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_returnResponseHeaders@{http\_\_returnResponseHeaders}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_\_returnResponseHeaders@{http\_\_returnResponseHeaders}}}\mbox{\Hypertarget{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dca295bbca70e6bb810df036c87f00dde61}\label{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dca295bbca70e6bb810df036c87f00dde61}} 
+http\+\_\+\+\_\+return\+Response\+Headers&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_useDefaultTimeout@{http\_\_useDefaultTimeout}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_\_useDefaultTimeout@{http\_\_useDefaultTimeout}}}\mbox{\Hypertarget{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcad10ab1ed8138f0bd0bf3f6e749cc8b57}\label{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcad10ab1ed8138f0bd0bf3f6e749cc8b57}} 
+http\+\_\+\+\_\+use\+Default\+Timeout&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_urlHostSz@{http\_\_urlHostSz}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_\_urlHostSz@{http\_\_urlHostSz}}}\mbox{\Hypertarget{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcab5a3f3a7b1573f2e5bed7dd16098b096}\label{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcab5a3f3a7b1573f2e5bed7dd16098b096}} 
+http\+\_\+\+\_\+url\+Host\+Sz&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4}\label{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!httpHeaderMap\_tag@{httpHeaderMap\_tag}}
+\index{httpHeaderMap\_tag@{httpHeaderMap\_tag}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{httpHeaderMap\_tag}{httpHeaderMap\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4}{http\+Header\+Map\+\_\+tag}}}
+
+
+
+If using custom headers, bit-\/map indicating what headers to create for default custom header collection. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpHeaderMap\_accept@{httpHeaderMap\_accept}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpHeaderMap\_accept@{httpHeaderMap\_accept}}}\mbox{\Hypertarget{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4acb7c9b87d7c18de1f294f5b5953a18bc}\label{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4acb7c9b87d7c18de1f294f5b5953a18bc}} 
+http\+Header\+Map\+\_\+accept&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpHeaderMap\_userAgent@{httpHeaderMap\_userAgent}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpHeaderMap\_userAgent@{httpHeaderMap\_userAgent}}}\mbox{\Hypertarget{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a8a49f69f96e352ac6a5a076f26e129e8}\label{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a8a49f69f96e352ac6a5a076f26e129e8}} 
+http\+Header\+Map\+\_\+user\+Agent&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpHeaderMap\_connection@{httpHeaderMap\_connection}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpHeaderMap\_connection@{httpHeaderMap\_connection}}}\mbox{\Hypertarget{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a8ba24ab106ef0d0b83866fb99e8be62a}\label{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a8ba24ab106ef0d0b83866fb99e8be62a}} 
+http\+Header\+Map\+\_\+connection&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpHeaderMap\_contentType@{httpHeaderMap\_contentType}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpHeaderMap\_contentType@{httpHeaderMap\_contentType}}}\mbox{\Hypertarget{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a550739a6dd7b7b631b4332d9a12cfccd}\label{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a550739a6dd7b7b631b4332d9a12cfccd}} 
+http\+Header\+Map\+\_\+content\+Type&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpHeaderMap\_contentLenght@{httpHeaderMap\_contentLenght}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpHeaderMap\_contentLenght@{httpHeaderMap\_contentLenght}}}\mbox{\Hypertarget{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a6e7258c74abbedf0d878506e068be232}\label{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a6e7258c74abbedf0d878506e068be232}} 
+http\+Header\+Map\+\_\+content\+Lenght&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpHeaderMap\_all@{httpHeaderMap\_all}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpHeaderMap\_all@{httpHeaderMap\_all}}}\mbox{\Hypertarget{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a2df1c1ae260315a4190a50881f29b20d}\label{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4a2df1c1ae260315a4190a50881f29b20d}} 
+http\+Header\+Map\+\_\+all&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_tag@{httpState\_tag}}
+\index{httpState\_tag@{httpState\_tag}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{httpState\_tag}{httpState\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}{http\+State\+\_\+tag}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpState\_idle@{httpState\_idle}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_idle@{httpState\_idle}}}\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a3b0ecebeaddfdcf385644d8c0bc4b160}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a3b0ecebeaddfdcf385644d8c0bc4b160}} 
+http\+State\+\_\+idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpState\_requestComplete@{httpState\_requestComplete}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_requestComplete@{httpState\_requestComplete}}}\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3aefa952842e34c8d7cb93e481c436fa3a}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3aefa952842e34c8d7cb93e481c436fa3a}} 
+http\+State\+\_\+request\+Complete&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpState\_readingData@{httpState\_readingData}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_readingData@{httpState\_readingData}}}\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a76a642a88929ee2f945b6c08e42bd354}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a76a642a88929ee2f945b6c08e42bd354}} 
+http\+State\+\_\+reading\+Data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpState\_closing@{httpState\_closing}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_closing@{httpState\_closing}}}\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a37903004520df798c973b4bc633f7462}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a37903004520df798c973b4bc633f7462}} 
+http\+State\+\_\+closing&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{ltemc-http_8h_afa6524e38503c7274efad5f3f9bbc4f8}\label{ltemc-http_8h_afa6524e38503c7274efad5f3f9bbc4f8}} 
+\mbox{\Hypertarget{ltemc-http_8h_a92b18393cbc41e7f0d95958949bf33a1}\label{ltemc-http_8h_a92b18393cbc41e7f0d95958949bf33a1}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_addBasicAuthHdr@{http\_addBasicAuthHdr}}
+\index{http\_addBasicAuthHdr@{http\_addBasicAuthHdr}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{http\_addBasicAuthHdr()}{http\_addBasicAuthHdr()}}
+{\footnotesize\ttfamily void http\+\_\+add\+Basic\+Auth\+Hdr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http,  }\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pw }\end{DoxyParamCaption})}
+
+
+
+Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em user} & \mbox{[}in\mbox{]} -\/ User name. \\
+\hline
+{\em pw} & \mbox{[}in\mbox{]} -\/ Password/secret for header. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-http_8h_ab533613578b3b75d760abd9a058c446b}\label{ltemc-http_8h_ab533613578b3b75d760abd9a058c446b}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_addDefaultHdrs@{http\_addDefaultHdrs}}
+\index{http\_addDefaultHdrs@{http\_addDefaultHdrs}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{http\_addDefaultHdrs()}{http\_addDefaultHdrs()}}
+{\footnotesize\ttfamily void http\+\_\+add\+Default\+Hdrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}}}]{header\+Map }\end{DoxyParamCaption})}
+
+
+
+Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em header\+Map} & \mbox{[}in\mbox{]} -\/ Bitmap for which standard headers to use. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-http_8h_adc3e553b77a6341664862d7b8a9c0060}\label{ltemc-http_8h_adc3e553b77a6341664862d7b8a9c0060}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_cancelPage@{http\_cancelPage}}
+\index{http\_cancelPage@{http\_cancelPage}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{http\_cancelPage()}{http\_cancelPage()}}
+{\footnotesize\ttfamily void http\+\_\+cancel\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}\label{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_enableCustomHdrs@{http\_enableCustomHdrs}}
+\index{http\_enableCustomHdrs@{http\_enableCustomHdrs}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{http\_enableCustomHdrs()}{http\_enableCustomHdrs()}}
+{\footnotesize\ttfamily void http\+\_\+enable\+Custom\+Hdrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{char $\ast$}]{header\+Buf,  }\item[{uint16\+\_\+t}]{header\+Buf\+Sz }\end{DoxyParamCaption})}
+
+
+
+Registers custom headers (char) buffer with H\+T\+TP control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em header\+Buf} & \mbox{[}in\mbox{]} -\/ pointer to header buffer created by application \\
+\hline
+{\em header\+Buf\+Sz} & \mbox{[}in\mbox{]} -\/ size of the header buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-http_8h_afa4288aa4cda4fd9791592ce93b737fc}\label{ltemc-http_8h_afa4288aa4cda4fd9791592ce93b737fc}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_get@{http\_get}}
 \index{http\_get@{http\_get}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_get()}{http\_get()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{url,  }\item[{\mbox{\hyperlink{ltemc-http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}}}]{file\+Recvr\+\_\+func }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{relative\+Url,  }\item[{bool}]{return\+Response\+Hdrs,  }\item[{uint8\+\_\+t}]{timeout\+Sec }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ltemc-http_8h_ad85723949df4cbef8bec8a4e05789f58}\label{ltemc-http_8h_ad85723949df4cbef8bec8a4e05789f58}} 
-\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_getFile@{http\_getFile}}
-\index{http\_getFile@{http\_getFile}!ltemc-\/http.h@{ltemc-\/http.h}}
-\doxysubsubsection{\texorpdfstring{http\_getFile()}{http\_getFile()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+get\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{url,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ltemc-http_8h_a59bbcedcaa9accb7de0502f3a54de81a}\label{ltemc-http_8h_a59bbcedcaa9accb7de0502f3a54de81a}} 
+
+Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em relative\+Url} & \mbox{[}in\mbox{]} -\/ The U\+RL to G\+ET (starts with \textbackslash{} and doesn\textquotesingle{}t include the host part) \\
+\hline
+{\em return\+Response\+Hdrs} & \mbox{[}in\mbox{]} -\/ Set to true for page result to include response headers at the start of the page \\
+\hline
+{\em timeout\+Sec} & \mbox{[}in\mbox{]} -\/ Timeout for entire G\+ET request cycle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if G\+ET request sent successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-http_8h_a4d6b9933d020080a3c211fd32a9e1df0}\label{ltemc-http_8h_a4d6b9933d020080a3c211fd32a9e1df0}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_initControl@{http\_initControl}}
+\index{http\_initControl@{http\_initControl}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{http\_initControl()}{http\_initControl()}}
+{\footnotesize\ttfamily void http\+\_\+init\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}]{data\+Cntxt,  }\item[{const char $\ast$}]{url\+Host,  }\item[{char $\ast$}]{recv\+Buf,  }\item[{uint16\+\_\+t}]{recv\+Buf\+Sz,  }\item[{\mbox{\hyperlink{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}{http\+Recv\+Func\+\_\+t}}}]{recv\+Callback }\end{DoxyParamCaption})}
+
+
+
+Create a H\+T\+T\+P(s) control structure to manage web communications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} H\+T\+TP control structure pointer, struct defines parameters of communications with web server. \\
+\hline
+{\em data\+Cntxt} & \mbox{[}in\mbox{]} The data context (0-\/5) to use for this communications. \\
+\hline
+{\em url\+Host} & \mbox{[}in\mbox{]} The host portion of the web server U\+RL. \\
+\hline
+{\em recv\+Buf} & \mbox{[}in\mbox{]} Pointer to application provided char buffer. \\
+\hline
+{\em recv\+Buf\+Sz} & \mbox{[}in\mbox{]} Size of the receive buffer. \\
+\hline
+{\em recv\+Callback} & \mbox{[}in\mbox{]} Callback function to receive incoming page data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if action was invoked, false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-http_8h_a7796d179f44f07b0d0c6170830a0337e}\label{ltemc-http_8h_a7796d179f44f07b0d0c6170830a0337e}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_post@{http\_post}}
 \index{http\_post@{http\_post}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_post()}{http\_post()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+post (\begin{DoxyParamCaption}\item[{const char $\ast$}]{url,  }\item[{const char $\ast$}]{post\+Data,  }\item[{uint16\+\_\+t}]{data\+Sz }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{relative\+Url,  }\item[{bool}]{return\+Response\+Hdrs,  }\item[{const char $\ast$}]{post\+Data,  }\item[{uint16\+\_\+t}]{post\+Data\+Sz,  }\item[{uint8\+\_\+t}]{timeout\+Sec }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ltemc-http_8h_a9cc4a5f51a1cb01f2195c104eae810ec}\label{ltemc-http_8h_a9cc4a5f51a1cb01f2195c104eae810ec}} 
-\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_postFile@{http\_postFile}}
-\index{http\_postFile@{http\_postFile}!ltemc-\/http.h@{ltemc-\/http.h}}
-\doxysubsubsection{\texorpdfstring{http\_postFile()}{http\_postFile()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+post\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{url,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ltemc-http_8h_ac63d8e77c4017e433b20d58b35729bbc}\label{ltemc-http_8h_ac63d8e77c4017e433b20d58b35729bbc}} 
-\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_setRecvrFunc@{http\_setRecvrFunc}}
-\index{http\_setRecvrFunc@{http\_setRecvrFunc}!ltemc-\/http.h@{ltemc-\/http.h}}
-\doxysubsubsection{\texorpdfstring{http\_setRecvrFunc()}{http\_setRecvrFunc()}}
-{\footnotesize\ttfamily void http\+\_\+set\+Recvr\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a0ecfe0c72a70bf2f9e12b7411595f5c5}{http\+Receiver\+\_\+func\+\_\+t}}}]{file\+Recvr\+\_\+func }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{ltemc-http_8h_ae0d14f04a5b54c03a47cd82dc1a11b54}\label{ltemc-http_8h_ae0d14f04a5b54c03a47cd82dc1a11b54}} 
-\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_setServerUrl@{http\_setServerUrl}}
-\index{http\_setServerUrl@{http\_setServerUrl}!ltemc-\/http.h@{ltemc-\/http.h}}
-\doxysubsubsection{\texorpdfstring{http\_setServerUrl()}{http\_setServerUrl()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+set\+Server\+Url (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+Performs a H\+T\+TP P\+O\+ST page web request. 
 
-\mbox{\Hypertarget{ltemc-http_8h_afb501c4b4413888d485309215d431790}\label{ltemc-http_8h_afb501c4b4413888d485309215d431790}} 
-\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_setSslOptions@{http\_setSslOptions}}
-\index{http\_setSslOptions@{http\_setSslOptions}!ltemc-\/http.h@{ltemc-\/http.h}}
-\doxysubsubsection{\texorpdfstring{http\_setSslOptions()}{http\_setSslOptions()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} http\+\_\+set\+Ssl\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em relative\+Url} & \mbox{[}in\mbox{]} -\/ U\+RL, relative to the host. If none, can be provided as \char`\"{}\char`\"{} or \char`\"{}/\char`\"{} () \\
+\hline
+{\em return\+Response\+Hdrs} & \mbox{[}in\mbox{]} -\/ if requested (true) the page response stream will prefix the page data \\
+\hline
+{\em post\+Data} & \mbox{[}in\mbox{]} -\/ Pointer to char buffer with P\+O\+ST content \\
+\hline
+{\em post\+Data\+Sz} & \mbox{[}in\mbox{]} -\/ Size of the P\+O\+ST content reference by $\ast$post\+Data \\
+\hline
+{\em timeout\+Sec} & \mbox{[}in\mbox{]} -\/ the number of seconds to wait (blocking) for a page response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if P\+O\+ST request completed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-http_8h_a9259a6152e50da53e8f64dbb68b203bd}\label{ltemc-http_8h_a9259a6152e50da53e8f64dbb68b203bd}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!http\_readPage@{http\_readPage}}
+\index{http\_readPage@{http\_readPage}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{http\_readPage()}{http\_readPage()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+read\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{uint16\+\_\+t}]{timeout\+Sec }\end{DoxyParamCaption})}
 

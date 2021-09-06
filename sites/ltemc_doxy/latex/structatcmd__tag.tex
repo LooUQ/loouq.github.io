@@ -12,21 +12,25 @@ Structure to control invocation and management of an AT command with the B\+Gx m
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-char \mbox{\hyperlink{structatcmd__tag_a8664baf8552bdb7eaee20d25a9f3afba}{cmd\+Str}} \mbox{[}\mbox{\hyperlink{ltemc-iop_8h_ace6954db00eab481db6e35ed4491dd0a}{I\+O\+P\+\_\+\+T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+SZ}}\mbox{]}
+char \mbox{\hyperlink{structatcmd__tag_af07b48436c03fc28b9a57f6f64b82bd5}{cmd\+Str}} \mbox{[}\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}}\mbox{]}
 \begin{DoxyCompactList}\small\item\em AT command string to be passed to the B\+Gx module. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{structatcmd__tag_a882afa92abc68d9b1fa39a42f56a8b3d}{is\+Open}}
+uint32\+\_\+t \mbox{\hyperlink{structatcmd__tag_ac5fe4d4ad6a0194a80fb1d08aea1383f}{timeout\+MS}}
+\begin{DoxyCompactList}\small\item\em Timout in milliseconds for the command, defaults to 300mS. B\+Gx documentation indicates cmds with longer timeout. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structatcmd__tag_a5c69c52917ebde0247df730ac97d94aa}{auto\+Lock}}
+\begin{DoxyCompactList}\small\item\em next invoke should acquire lock (true), or reuse lock (false) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structatcmd__tag_a19772b5f09be5cf1b45db25c6710173e}{is\+Open\+Locked}}
 \begin{DoxyCompactList}\small\item\em True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structatcmd__tag_a5060510445edaff8c6d26aba0141eaae}{invoked\+At}}
 \begin{DoxyCompactList}\small\item\em Tick value at the command invocation, used for timeout detection. \end{DoxyCompactList}\item 
-uint16\+\_\+t \mbox{\hyperlink{structatcmd__tag_adc00dec5f45402bb5c65d7451fb4d3ad}{result\+Code}}
-\begin{DoxyCompactList}\small\item\em H\+T\+ML type response code, 0 is special \char`\"{}pending\char`\"{} status, see A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+$\ast$ codes. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{structatcmd__tag_a11373f02c42587a1853ad6c8be5fe10e}{response}}
-\begin{DoxyCompactList}\small\item\em The response to the command received from the B\+Gx. \end{DoxyCompactList}\item 
-uint16\+\_\+t \mbox{\hyperlink{structatcmd__tag_a62141174b7f53e381c1ce0ad0b47b867}{timeout\+Millis}}
-\begin{DoxyCompactList}\small\item\em Timout in milliseconds for the command, defaults to 300mS. B\+Gx documentation indicates cmds with longer timeout. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-atcmd_8h_a202f5479dd8fdc8ba91965f37ae2187a}{atcmd\+History\+\_\+t}} $\ast$ \mbox{\hyperlink{structatcmd__tag_a2149ed86f06d847f2d16b7e1b1e6f2f9}{last\+Action\+Error}}
-\begin{DoxyCompactList}\small\item\em Struct containing information on last action response. \end{DoxyCompactList}\item 
-uint16\+\_\+t($\ast$ \mbox{\hyperlink{structatcmd__tag_a78ce7b65f47dda02b282b22bc6ef5cef}{task\+Complete\+Parser\+\_\+func}} )(const char $\ast$\mbox{\hyperlink{structatcmd__tag_a11373f02c42587a1853ad6c8be5fe10e}{response}}, char $\ast$$\ast$endptr)
+\begin{DoxyCompactList}\small\item\em The response to the command received from the B\+Gx. Points into I\+OP core buffer. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structatcmd__tag_a9e1dc8719ae56d7ce5897f8766947a4e}{response\+Tail}}
+\begin{DoxyCompactList}\small\item\em Pointer to the unparsed section of the response, beyond complete parser\textquotesingle{}s match. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structatcmd__tag_a6f6e63d5193d08274eda0a0564b4d9d6}{exec\+Duration}}
+\begin{DoxyCompactList}\small\item\em duration of command\textquotesingle{}s execution in milliseconds \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{structatcmd__tag_a9af25a633872f85ee648a31a158bb649}{result\+Code}}
+\item 
+uint16\+\_\+t($\ast$ \mbox{\hyperlink{structatcmd__tag_a6a6fccd21132f9c6ea59bc5dbf0e90c0}{complete\+Parser\+\_\+func}} )(const char $\ast$\mbox{\hyperlink{structatcmd__tag_a11373f02c42587a1853ad6c8be5fe10e}{response}}, char $\ast$$\ast$endptr)
 \begin{DoxyCompactList}\small\item\em Function to parse the response looking for completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -34,15 +38,45 @@ uint16\+\_\+t($\ast$ \mbox{\hyperlink{structatcmd__tag_a78ce7b65f47dda02b282b22b
 Structure to control invocation and management of an AT command with the B\+Gx module. 
 
 \doxysubsection{Field Documentation}
-\mbox{\Hypertarget{structatcmd__tag_a8664baf8552bdb7eaee20d25a9f3afba}\label{structatcmd__tag_a8664baf8552bdb7eaee20d25a9f3afba}} 
+\mbox{\Hypertarget{structatcmd__tag_a5c69c52917ebde0247df730ac97d94aa}\label{structatcmd__tag_a5c69c52917ebde0247df730ac97d94aa}} 
+\index{atcmd\_tag@{atcmd\_tag}!autoLock@{autoLock}}
+\index{autoLock@{autoLock}!atcmd\_tag@{atcmd\_tag}}
+\doxysubsubsection{\texorpdfstring{autoLock}{autoLock}}
+{\footnotesize\ttfamily bool auto\+Lock}
+
+
+
+next invoke should acquire lock (true), or reuse lock (false) 
+
+\mbox{\Hypertarget{structatcmd__tag_af07b48436c03fc28b9a57f6f64b82bd5}\label{structatcmd__tag_af07b48436c03fc28b9a57f6f64b82bd5}} 
 \index{atcmd\_tag@{atcmd\_tag}!cmdStr@{cmdStr}}
 \index{cmdStr@{cmdStr}!atcmd\_tag@{atcmd\_tag}}
 \doxysubsubsection{\texorpdfstring{cmdStr}{cmdStr}}
-{\footnotesize\ttfamily char cmd\+Str\mbox{[}\mbox{\hyperlink{ltemc-iop_8h_ace6954db00eab481db6e35ed4491dd0a}{I\+O\+P\+\_\+\+T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+SZ}}\mbox{]}}
+{\footnotesize\ttfamily char cmd\+Str\mbox{[}\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}}\mbox{]}}
 
 
 
 AT command string to be passed to the B\+Gx module. 
+
+\mbox{\Hypertarget{structatcmd__tag_a6a6fccd21132f9c6ea59bc5dbf0e90c0}\label{structatcmd__tag_a6a6fccd21132f9c6ea59bc5dbf0e90c0}} 
+\index{atcmd\_tag@{atcmd\_tag}!completeParser\_func@{completeParser\_func}}
+\index{completeParser\_func@{completeParser\_func}!atcmd\_tag@{atcmd\_tag}}
+\doxysubsubsection{\texorpdfstring{completeParser\_func}{completeParser\_func}}
+{\footnotesize\ttfamily uint16\+\_\+t($\ast$ complete\+Parser\+\_\+func) (const char $\ast$\mbox{\hyperlink{structatcmd__tag_a11373f02c42587a1853ad6c8be5fe10e}{response}}, char $\ast$$\ast$endptr)}
+
+
+
+Function to parse the response looking for completion. 
+
+\mbox{\Hypertarget{structatcmd__tag_a6f6e63d5193d08274eda0a0564b4d9d6}\label{structatcmd__tag_a6f6e63d5193d08274eda0a0564b4d9d6}} 
+\index{atcmd\_tag@{atcmd\_tag}!execDuration@{execDuration}}
+\index{execDuration@{execDuration}!atcmd\_tag@{atcmd\_tag}}
+\doxysubsubsection{\texorpdfstring{execDuration}{execDuration}}
+{\footnotesize\ttfamily uint32\+\_\+t exec\+Duration}
+
+
+
+duration of command\textquotesingle{}s execution in milliseconds 
 
 \mbox{\Hypertarget{structatcmd__tag_a5060510445edaff8c6d26aba0141eaae}\label{structatcmd__tag_a5060510445edaff8c6d26aba0141eaae}} 
 \index{atcmd\_tag@{atcmd\_tag}!invokedAt@{invokedAt}}
@@ -54,29 +88,16 @@ AT command string to be passed to the B\+Gx module.
 
 Tick value at the command invocation, used for timeout detection. 
 
-\mbox{\Hypertarget{structatcmd__tag_a882afa92abc68d9b1fa39a42f56a8b3d}\label{structatcmd__tag_a882afa92abc68d9b1fa39a42f56a8b3d}} 
-\index{atcmd\_tag@{atcmd\_tag}!isOpen@{isOpen}}
-\index{isOpen@{isOpen}!atcmd\_tag@{atcmd\_tag}}
-\doxysubsubsection{\texorpdfstring{isOpen}{isOpen}}
-{\footnotesize\ttfamily bool is\+Open}
+\mbox{\Hypertarget{structatcmd__tag_a19772b5f09be5cf1b45db25c6710173e}\label{structatcmd__tag_a19772b5f09be5cf1b45db25c6710173e}} 
+\index{atcmd\_tag@{atcmd\_tag}!isOpenLocked@{isOpenLocked}}
+\index{isOpenLocked@{isOpenLocked}!atcmd\_tag@{atcmd\_tag}}
+\doxysubsubsection{\texorpdfstring{isOpenLocked}{isOpenLocked}}
+{\footnotesize\ttfamily bool is\+Open\+Locked}
 
 
 
 True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation. 
 
-\mbox{\Hypertarget{structatcmd__tag_a2149ed86f06d847f2d16b7e1b1e6f2f9}\label{structatcmd__tag_a2149ed86f06d847f2d16b7e1b1e6f2f9}} 
-\index{atcmd\_tag@{atcmd\_tag}!lastActionError@{lastActionError}}
-\index{lastActionError@{lastActionError}!atcmd\_tag@{atcmd\_tag}}
-\doxysubsubsection{\texorpdfstring{lastActionError}{lastActionError}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-atcmd_8h_a202f5479dd8fdc8ba91965f37ae2187a}{atcmd\+History\+\_\+t}}$\ast$ last\+Action\+Error}
-
-
-
-Struct containing information on last action response. 
-
-\begin{DoxyReturn}{Returns}
-. N\+O\+TE\+: only set on N\+O\+N-\/\+S\+U\+C\+C\+E\+SS. 
-\end{DoxyReturn}
 \mbox{\Hypertarget{structatcmd__tag_a11373f02c42587a1853ad6c8be5fe10e}\label{structatcmd__tag_a11373f02c42587a1853ad6c8be5fe10e}} 
 \index{atcmd\_tag@{atcmd\_tag}!response@{response}}
 \index{response@{response}!atcmd\_tag@{atcmd\_tag}}
@@ -85,33 +106,29 @@ Struct containing information on last action response.
 
 
 
-The response to the command received from the B\+Gx. 
+The response to the command received from the B\+Gx. Points into I\+OP core buffer. 
 
-\mbox{\Hypertarget{structatcmd__tag_adc00dec5f45402bb5c65d7451fb4d3ad}\label{structatcmd__tag_adc00dec5f45402bb5c65d7451fb4d3ad}} 
+\mbox{\Hypertarget{structatcmd__tag_a9e1dc8719ae56d7ce5897f8766947a4e}\label{structatcmd__tag_a9e1dc8719ae56d7ce5897f8766947a4e}} 
+\index{atcmd\_tag@{atcmd\_tag}!responseTail@{responseTail}}
+\index{responseTail@{responseTail}!atcmd\_tag@{atcmd\_tag}}
+\doxysubsubsection{\texorpdfstring{responseTail}{responseTail}}
+{\footnotesize\ttfamily char$\ast$ response\+Tail}
+
+
+
+Pointer to the unparsed section of the response, beyond complete parser\textquotesingle{}s match. 
+
+\mbox{\Hypertarget{structatcmd__tag_a9af25a633872f85ee648a31a158bb649}\label{structatcmd__tag_a9af25a633872f85ee648a31a158bb649}} 
 \index{atcmd\_tag@{atcmd\_tag}!resultCode@{resultCode}}
 \index{resultCode@{resultCode}!atcmd\_tag@{atcmd\_tag}}
 \doxysubsubsection{\texorpdfstring{resultCode}{resultCode}}
-{\footnotesize\ttfamily uint16\+\_\+t result\+Code}
+{\footnotesize\ttfamily result\+Code\+\_\+t result\+Code}
 
-
-
-H\+T\+ML type response code, 0 is special \char`\"{}pending\char`\"{} status, see A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+$\ast$ codes. 
-
-\mbox{\Hypertarget{structatcmd__tag_a78ce7b65f47dda02b282b22bc6ef5cef}\label{structatcmd__tag_a78ce7b65f47dda02b282b22bc6ef5cef}} 
-\index{atcmd\_tag@{atcmd\_tag}!taskCompleteParser\_func@{taskCompleteParser\_func}}
-\index{taskCompleteParser\_func@{taskCompleteParser\_func}!atcmd\_tag@{atcmd\_tag}}
-\doxysubsubsection{\texorpdfstring{taskCompleteParser\_func}{taskCompleteParser\_func}}
-{\footnotesize\ttfamily uint16\+\_\+t($\ast$ task\+Complete\+Parser\+\_\+func) (const char $\ast$\mbox{\hyperlink{structatcmd__tag_a11373f02c42587a1853ad6c8be5fe10e}{response}}, char $\ast$$\ast$endptr)}
-
-
-
-Function to parse the response looking for completion. 
-
-\mbox{\Hypertarget{structatcmd__tag_a62141174b7f53e381c1ce0ad0b47b867}\label{structatcmd__tag_a62141174b7f53e381c1ce0ad0b47b867}} 
-\index{atcmd\_tag@{atcmd\_tag}!timeoutMillis@{timeoutMillis}}
-\index{timeoutMillis@{timeoutMillis}!atcmd\_tag@{atcmd\_tag}}
-\doxysubsubsection{\texorpdfstring{timeoutMillis}{timeoutMillis}}
-{\footnotesize\ttfamily uint16\+\_\+t timeout\+Millis}
+\mbox{\Hypertarget{structatcmd__tag_ac5fe4d4ad6a0194a80fb1d08aea1383f}\label{structatcmd__tag_ac5fe4d4ad6a0194a80fb1d08aea1383f}} 
+\index{atcmd\_tag@{atcmd\_tag}!timeoutMS@{timeoutMS}}
+\index{timeoutMS@{timeoutMS}!atcmd\_tag@{atcmd\_tag}}
+\doxysubsubsection{\texorpdfstring{timeoutMS}{timeoutMS}}
+{\footnotesize\ttfamily uint32\+\_\+t timeout\+MS}
 
 
 

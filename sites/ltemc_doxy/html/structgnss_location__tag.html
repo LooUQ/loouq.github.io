@@ -87,24 +87,24 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a5c655e2b8eff4c0c4d3a3a6daa8b7d4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-gnss_8h.html#a7fb5f996ad0280dea37f6c01720ec081">gnss_latlon_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a5c655e2b8eff4c0c4d3a3a6daa8b7d4f">lon</a></td></tr>
 <tr class="memdesc:a5c655e2b8eff4c0c4d3a3a6daa8b7d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Longitude value as a struct <a class="el" href="structgnss__latlon__tag.html" title="Struct containing both the location value (latitude or longitude) and a char indicating direction (ch...">gnss_latlon_tag</a> (Quoted from GPGGA sentence).  <a href="structgnss_location__tag.html#a5c655e2b8eff4c0c4d3a3a6daa8b7d4f">More...</a><br /></td></tr>
 <tr class="separator:a5c655e2b8eff4c0c4d3a3a6daa8b7d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c3e6d0a80cec3520fd65b477f420415"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a8c3e6d0a80cec3520fd65b477f420415">hdop</a></td></tr>
-<tr class="memdesc:a8c3e6d0a80cec3520fd65b477f420415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal precision: 0.5-99.9 (Quoted from GPGGA sentence).  <a href="structgnss_location__tag.html#a8c3e6d0a80cec3520fd65b477f420415">More...</a><br /></td></tr>
-<tr class="separator:a8c3e6d0a80cec3520fd65b477f420415"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e13a4b4ae0cefdac2a413284239caa6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a0e13a4b4ae0cefdac2a413284239caa6">altitude</a></td></tr>
-<tr class="memdesc:a0e13a4b4ae0cefdac2a413284239caa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The altitude of the antenna away from the sea level (unit: m), accurate to one decimal place (Quoted from GPGGA sentence).  <a href="structgnss_location__tag.html#a0e13a4b4ae0cefdac2a413284239caa6">More...</a><br /></td></tr>
-<tr class="separator:a0e13a4b4ae0cefdac2a413284239caa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ede759392ed439219bdbac4c8ede827"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a7ede759392ed439219bdbac4c8ede827">hdop</a></td></tr>
+<tr class="memdesc:a7ede759392ed439219bdbac4c8ede827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal precision: 0.5-99.9 (Quoted from GPGGA sentence).  <a href="structgnss_location__tag.html#a7ede759392ed439219bdbac4c8ede827">More...</a><br /></td></tr>
+<tr class="separator:a7ede759392ed439219bdbac4c8ede827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b13d276aee0d9fd646c8fa3647e869b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#a2b13d276aee0d9fd646c8fa3647e869b">altitude</a></td></tr>
+<tr class="memdesc:a2b13d276aee0d9fd646c8fa3647e869b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The altitude of the antenna away from the sea level (unit: m), accurate to one decimal place (Quoted from GPGGA sentence).  <a href="structgnss_location__tag.html#a2b13d276aee0d9fd646c8fa3647e869b">More...</a><br /></td></tr>
+<tr class="separator:a2b13d276aee0d9fd646c8fa3647e869b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa04398e6b3b3d95a5cdca3b2d816062d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#aa04398e6b3b3d95a5cdca3b2d816062d">fixType</a></td></tr>
 <tr class="memdesc:aa04398e6b3b3d95a5cdca3b2d816062d"><td class="mdescLeft">&#160;</td><td class="mdescRight">GNSS positioning mode (Quoted from GNGSA/GPGSA sentence). Values: 2=2D positioning. 3=3D positioning.  <a href="structgnss_location__tag.html#aa04398e6b3b3d95a5cdca3b2d816062d">More...</a><br /></td></tr>
 <tr class="separator:aa04398e6b3b3d95a5cdca3b2d816062d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6894c88aabf335922736a63b2b87b97"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#ac6894c88aabf335922736a63b2b87b97">course</a></td></tr>
-<tr class="memdesc:ac6894c88aabf335922736a63b2b87b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Course Over Ground based on true north. Format: ddd.mm (Quoted from GPVTG sentence). Values: ddd=000-359 (degree), mm 00-59 (minute).  <a href="structgnss_location__tag.html#ac6894c88aabf335922736a63b2b87b97">More...</a><br /></td></tr>
-<tr class="separator:ac6894c88aabf335922736a63b2b87b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab23b7f27e268c4f053742bd655b8127f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#ab23b7f27e268c4f053742bd655b8127f">speedkm</a></td></tr>
-<tr class="memdesc:ab23b7f27e268c4f053742bd655b8127f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed over ground (metric). Format: xxxx.x; unit: Km/h; accurate to one decimal place (Quoted from GPVTG sentence).  <a href="structgnss_location__tag.html#ab23b7f27e268c4f053742bd655b8127f">More...</a><br /></td></tr>
-<tr class="separator:ab23b7f27e268c4f053742bd655b8127f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa55935babd00748a6657bd683cf4a9ee"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#aa55935babd00748a6657bd683cf4a9ee">speedkn</a></td></tr>
-<tr class="memdesc:aa55935babd00748a6657bd683cf4a9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed over ground (nautical). Format: xxxx.x; unit: Knots/h; accurate to one decimal place (Quoted from GPVTG sentence).  <a href="structgnss_location__tag.html#aa55935babd00748a6657bd683cf4a9ee">More...</a><br /></td></tr>
-<tr class="separator:aa55935babd00748a6657bd683cf4a9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa2fde7e3fad7df8f5755347603d17b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#acaa2fde7e3fad7df8f5755347603d17b">course</a></td></tr>
+<tr class="memdesc:acaa2fde7e3fad7df8f5755347603d17b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Course Over Ground based on true north. Format: ddd.mm (Quoted from GPVTG sentence). Values: ddd=000-359 (degree), mm 00-59 (minute).  <a href="structgnss_location__tag.html#acaa2fde7e3fad7df8f5755347603d17b">More...</a><br /></td></tr>
+<tr class="separator:acaa2fde7e3fad7df8f5755347603d17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0962fef9bfddefc9440afc8f6ef33d1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#ae0962fef9bfddefc9440afc8f6ef33d1">speedkm</a></td></tr>
+<tr class="memdesc:ae0962fef9bfddefc9440afc8f6ef33d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed over ground (metric). Format: xxxx.x; unit: Km/h; accurate to one decimal place (Quoted from GPVTG sentence).  <a href="structgnss_location__tag.html#ae0962fef9bfddefc9440afc8f6ef33d1">More...</a><br /></td></tr>
+<tr class="separator:ae0962fef9bfddefc9440afc8f6ef33d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1de6861ea631ed59dd15f99a59ca500"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#aa1de6861ea631ed59dd15f99a59ca500">speedkn</a></td></tr>
+<tr class="memdesc:aa1de6861ea631ed59dd15f99a59ca500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed over ground (nautical). Format: xxxx.x; unit: Knots/h; accurate to one decimal place (Quoted from GPVTG sentence).  <a href="structgnss_location__tag.html#aa1de6861ea631ed59dd15f99a59ca500">More...</a><br /></td></tr>
+<tr class="separator:aa1de6861ea631ed59dd15f99a59ca500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad217ba16d0b42c0e3c986247572e9ec8"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgnss_location__tag.html#ad217ba16d0b42c0e3c986247572e9ec8">date</a> [7]</td></tr>
 <tr class="memdesc:ad217ba16d0b42c0e3c986247572e9ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTC time when fixing position. Format: ddmmyy (Quoted from GPRMC sentence).  <a href="structgnss_location__tag.html#ad217ba16d0b42c0e3c986247572e9ec8">More...</a><br /></td></tr>
 <tr class="separator:ad217ba16d0b42c0e3c986247572e9ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,14 +118,14 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Struct containing a GNSS location fix. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a0e13a4b4ae0cefdac2a413284239caa6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e13a4b4ae0cefdac2a413284239caa6">&#9670;&nbsp;</a></span>altitude</h2>
+<a id="a2b13d276aee0d9fd646c8fa3647e869b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b13d276aee0d9fd646c8fa3647e869b">&#9670;&nbsp;</a></span>altitude</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float altitude</td>
+          <td class="memname">double altitude</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -134,14 +134,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="ac6894c88aabf335922736a63b2b87b97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6894c88aabf335922736a63b2b87b97">&#9670;&nbsp;</a></span>course</h2>
+<a id="acaa2fde7e3fad7df8f5755347603d17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa2fde7e3fad7df8f5755347603d17b">&#9670;&nbsp;</a></span>course</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float course</td>
+          <td class="memname">double course</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -182,14 +182,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a8c3e6d0a80cec3520fd65b477f420415"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c3e6d0a80cec3520fd65b477f420415">&#9670;&nbsp;</a></span>hdop</h2>
+<a id="a7ede759392ed439219bdbac4c8ede827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ede759392ed439219bdbac4c8ede827">&#9670;&nbsp;</a></span>hdop</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float hdop</td>
+          <td class="memname">double hdop</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -246,14 +246,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="ab23b7f27e268c4f053742bd655b8127f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab23b7f27e268c4f053742bd655b8127f">&#9670;&nbsp;</a></span>speedkm</h2>
+<a id="ae0962fef9bfddefc9440afc8f6ef33d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0962fef9bfddefc9440afc8f6ef33d1">&#9670;&nbsp;</a></span>speedkm</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float speedkm</td>
+          <td class="memname">double speedkm</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -262,14 +262,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="aa55935babd00748a6657bd683cf4a9ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa55935babd00748a6657bd683cf4a9ee">&#9670;&nbsp;</a></span>speedkn</h2>
+<a id="aa1de6861ea631ed59dd15f99a59ca500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1de6861ea631ed59dd15f99a59ca500">&#9670;&nbsp;</a></span>speedkn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float speedkn</td>
+          <td class="memname">double speedkn</td>
         </tr>
       </table>
 </div><div class="memdoc">

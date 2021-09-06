@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['dbgbuffer_5fsz_1576',['DBGBUFFER_SZ',['../lq_platform-debug_8h.html#a55b0e7bf15961b6e7b12903cf107f67b',1,'lqPlatform-debug.h']]],
-  ['def_5fsc16is741a_5freg_1577',['DEF_SC16IS741A_REG',['../ltemc-nxp-sc16is_8h.html#a4246003429d5e164a0103c72f9056cfb',1,'ltemc-nxp-sc16is.h']]],
-  ['dflt_5fatbufsz_1578',['DFLT_ATBUFSZ',['../lq_types_8h.html#ab705d194e0d12e4d88b2bd98481cb7c2',1,'lqTypes.h']]]
+  ['error_5fcompleted_5fstring_1681',['ERROR_COMPLETED_STRING',['../ltemc-atcmd_8c.html#a20116255539ab082c58248c00cbb36ba',1,'ltemc-atcmd.c']]],
+  ['error_5fvalue_5foffset_1682',['ERROR_VALUE_OFFSET',['../ltemc-atcmd_8c.html#a8c49c0f4290754765420ae8ad5316539',1,'ltemc-atcmd.c']]]
 ];

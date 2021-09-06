@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['fileinfotype_5ftag_1343',['fileInfoType_tag',['../ltemc-filesys_8h.html#ae20570260b3b64943a1671ca5743babb',1,'ltemc-filesys.h']]],
-  ['fileopenmode_5ftag_1344',['fileOpenMode_tag',['../ltemc-filesys_8h.html#a41a840b01fb65fac36c0af25773abef5',1,'ltemc-filesys.h']]],
-  ['fileseekmode_5ftag_1345',['fileSeekMode_tag',['../ltemc-filesys_8h.html#acf19fd7a8126c5eb957e79b2b63abcda',1,'ltemc-filesys.h']]]
+  ['datacontext_5ftag_1377',['dataContext_tag',['../ltemc-streams_8h.html#a89f084c8f5c0492e7d190c59e1d27acc',1,'ltemc-streams.h']]],
+  ['datastreamtype_5ftag_1378',['dataStreamType_tag',['../ltemc-streams_8h.html#a2f10706327fdc6e38aa80fee01a43712',1,'ltemc-streams.h']]]
 ];

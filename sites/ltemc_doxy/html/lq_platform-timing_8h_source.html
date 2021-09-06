@@ -123,28 +123,41 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;uint32_t <a class="code" href="lq_platform-timing_8h.html#a712e2c306912c63a4ea84a7c15eeffc0">lMillis</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lq_platform-timing_8h.html#af6de0142ccfd98e70f3c088ae2dd84bc">lYield</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// platform implementation should support task switching here</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lq_platform-timing_8h.html#a29ef4c7d3d9010694cd973d0208f4808">lDelay</a>(uint32_t delay_ms);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="lq_platform-timing_8h.html#a50e0887c68b184a6445ecda8a323eb64">lTimerExpired</a>(uint32_t timerBase, uint32_t timerTimeout);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/* transition to new names </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// uint32_t lMillis();</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// void lYield();</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// // platform implementation should support task switching here</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// void lDelay(uint32_t delay_ms);</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// bool lTimerExpired(uint32_t timerBase, uint32_t timerTimeout);</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* !__PLATFORM_TIMING_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;uint32_t <a class="code" href="lq_platform-timing_8h.html#ac5c3440f9f84c9684834e32d0dff3686">pMillis</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lq_platform-timing_8h.html#a2201598e8023fa15327fc09276651fd6">pYield</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// platform implementation should support task switching here</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> <a class="code" href="lq_platform-timing_8h.html#a09d4f4331b45d84d5d8efa3b3d311c13">pDelay</a>(uint32_t delay_ms);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="lq_platform-timing_8h.html#a247eb7f222f3bc9077e1cc36b3c75532">pElapsed</a>(uint32_t timerBase, uint32_t timerTimeout);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif // __cplusplus</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* !__PLATFORM_TIMING_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="alq_platform-timing_8h_html_af6de0142ccfd98e70f3c088ae2dd84bc"><div class="ttname"><a href="lq_platform-timing_8h.html#af6de0142ccfd98e70f3c088ae2dd84bc">lYield</a></div><div class="ttdeci">void lYield()</div><div class="ttdef"><b>Definition:</b> arduino-timing.cpp:21</div></div>
+<div class="ttc" id="alq_platform-timing_8h_html_a2201598e8023fa15327fc09276651fd6"><div class="ttname"><a href="lq_platform-timing_8h.html#a2201598e8023fa15327fc09276651fd6">pYield</a></div><div class="ttdeci">void pYield()</div><div class="ttdef"><b>Definition:</b> arduino-timing.cpp:54</div></div>
+<div class="ttc" id="alq_platform-timing_8h_html_a247eb7f222f3bc9077e1cc36b3c75532"><div class="ttname"><a href="lq_platform-timing_8h.html#a247eb7f222f3bc9077e1cc36b3c75532">pElapsed</a></div><div class="ttdeci">bool pElapsed(uint32_t timerBase, uint32_t timerTimeout)</div><div class="ttdef"><b>Definition:</b> arduino-timing.cpp:73</div></div>
+<div class="ttc" id="alq_platform-timing_8h_html_ac5c3440f9f84c9684834e32d0dff3686"><div class="ttname"><a href="lq_platform-timing_8h.html#ac5c3440f9f84c9684834e32d0dff3686">pMillis</a></div><div class="ttdeci">uint32_t pMillis()</div><div class="ttdef"><b>Definition:</b> arduino-timing.cpp:48</div></div>
 <div class="ttc" id="alq_platform-timing_8h_html_a1066ad01c72dad80aaa76602d3cdce94"><div class="ttname"><a href="lq_platform-timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a></div><div class="ttdeci">void(* platform_yieldCB_func_t)()</div><div class="ttdef"><b>Definition:</b> lqPlatform-timing.h:32</div></div>
 <div class="ttc" id="alq_platform-timing_8h_html_ad1cc3e5ec1a873b34530cb04064b1b79"><div class="ttname"><a href="lq_platform-timing_8h.html#ad1cc3e5ec1a873b34530cb04064b1b79">platform_yieldCB_func</a></div><div class="ttdeci">platform_yieldCB_func_t platform_yieldCB_func</div><div class="ttdef"><b>Definition:</b> arduino-timing.cpp:13</div></div>
-<div class="ttc" id="alq_platform-timing_8h_html_a50e0887c68b184a6445ecda8a323eb64"><div class="ttname"><a href="lq_platform-timing_8h.html#a50e0887c68b184a6445ecda8a323eb64">lTimerExpired</a></div><div class="ttdeci">bool lTimerExpired(uint32_t timerBase, uint32_t timerTimeout)</div><div class="ttdef"><b>Definition:</b> arduino-timing.cpp:34</div></div>
-<div class="ttc" id="alq_platform-timing_8h_html_a29ef4c7d3d9010694cd973d0208f4808"><div class="ttname"><a href="lq_platform-timing_8h.html#a29ef4c7d3d9010694cd973d0208f4808">lDelay</a></div><div class="ttdeci">void lDelay(uint32_t delay_ms)</div><div class="ttdef"><b>Definition:</b> arduino-timing.cpp:29</div></div>
-<div class="ttc" id="alq_platform-timing_8h_html_a712e2c306912c63a4ea84a7c15eeffc0"><div class="ttname"><a href="lq_platform-timing_8h.html#a712e2c306912c63a4ea84a7c15eeffc0">lMillis</a></div><div class="ttdeci">uint32_t lMillis()</div><div class="ttdef"><b>Definition:</b> arduino-timing.cpp:16</div></div>
+<div class="ttc" id="alq_platform-timing_8h_html_a09d4f4331b45d84d5d8efa3b3d311c13"><div class="ttname"><a href="lq_platform-timing_8h.html#a09d4f4331b45d84d5d8efa3b3d311c13">pDelay</a></div><div class="ttdeci">void pDelay(uint32_t delay_ms)</div><div class="ttdef"><b>Definition:</b> arduino-timing.cpp:62</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

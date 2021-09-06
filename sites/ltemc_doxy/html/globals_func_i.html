@@ -67,40 +67,51 @@ $(function() {
 &#160;
 
 <h3><a id="index_i"></a>- i -</h3><ul>
-<li>iop_awaitAppReady()
-: <a class="el" href="ltemc-iop_8c.html#a1baf3b1228e8a750422d97cef2d336a8">ltemc-iop.c</a>
-, <a class="el" href="ltemc-iop_8h.html#a1baf3b1228e8a750422d97cef2d336a8">ltemc-iop.h</a>
+<li>IOP_awaitAppReady()
+: <a class="el" href="ltemc-iop_8c.html#a9b915345fc60a5413c07164fd1c2630d">ltemc-iop.c</a>
+, <a class="el" href="ltemc-iop_8h.html#a9b915345fc60a5413c07164fd1c2630d">ltemc-iop.h</a>
 </li>
-<li>iop_create()
-: <a class="el" href="ltemc-iop_8h.html#ab947681241346e1704709a480292f8d8">ltemc-iop.h</a>
-, <a class="el" href="ltemc-iop_8c.html#ab947681241346e1704709a480292f8d8">ltemc-iop.c</a>
+<li>IOP_create()
+: <a class="el" href="ltemc-iop_8h.html#a014586177c48478e7636c076ad9ecd7c">ltemc-iop.h</a>
+, <a class="el" href="ltemc-iop_8c.html#a014586177c48478e7636c076ad9ecd7c">ltemc-iop.c</a>
 </li>
-<li>iop_registerProtocol()
-: <a class="el" href="ltemc-iop_8c.html#ac0c9cd30e69275d43a3cc01da127db57">ltemc-iop.c</a>
-, <a class="el" href="ltemc-iop_8h.html#ac0c9cd30e69275d43a3cc01da127db57">ltemc-iop.h</a>
+<li>IOP_detectRxIdle()
+: <a class="el" href="ltemc-iop_8c.html#ab717ef72de91b80e7b31d33bf6a9dad2">ltemc-iop.c</a>
+, <a class="el" href="ltemc-iop_8h.html#ab717ef72de91b80e7b31d33bf6a9dad2">ltemc-iop.h</a>
 </li>
-<li>iop_resetCmdBuffer()
-: <a class="el" href="ltemc-iop_8h.html#aad96d9d4df9ebc33c08464531f757fb1">ltemc-iop.h</a>
-, <a class="el" href="ltemc-iop_8c.html#aad96d9d4df9ebc33c08464531f757fb1">ltemc-iop.c</a>
+<li>IOP_initRxBufferCtrl()
+: <a class="el" href="ltemc-iop_8h.html#a9ef55e6a25ce8ff909dbf7046bd39cba">ltemc-iop.h</a>
+, <a class="el" href="ltemc-iop_8c.html#a9ef55e6a25ce8ff909dbf7046bd39cba">ltemc-iop.c</a>
 </li>
-<li>iop_resetDataBuffer()
-: <a class="el" href="ltemc-iop_8c.html#a9db71023d7554c3ae473ab010d2f1acf">ltemc-iop.c</a>
+<li>IOP_registerStream()
+: <a class="el" href="ltemc-iop_8c.html#ab8fd0c82d50c72c29bccc37f9fd72dbd">ltemc-iop.c</a>
+, <a class="el" href="ltemc-iop_8h.html#a9b6d8c57ec4bab28cd1c446ae03e7c60">ltemc-iop.h</a>
 </li>
-<li>iop_rxParseImmediate()
-: <a class="el" href="ltemc-iop_8c.html#a499e14029136c4eb243a5458b6bac682">ltemc-iop.c</a>
-, <a class="el" href="ltemc-iop_8h.html#a499e14029136c4eb243a5458b6bac682">ltemc-iop.h</a>
+<li>IOP_resetCoreRxBuffer()
+: <a class="el" href="ltemc-iop_8c.html#ad726cfd88029a9eff03f4595c24ea81c">ltemc-iop.c</a>
+, <a class="el" href="ltemc-iop_8h.html#ad726cfd88029a9eff03f4595c24ea81c">ltemc-iop.h</a>
 </li>
-<li>iop_start()
-: <a class="el" href="ltemc-iop_8h.html#adc850da968c0996c7645ef06e277708f">ltemc-iop.h</a>
-, <a class="el" href="ltemc-iop_8c.html#adc850da968c0996c7645ef06e277708f">ltemc-iop.c</a>
+<li>IOP_resetRxDataBufferPage()
+: <a class="el" href="ltemc-iop_8c.html#af44a81a156fc9eac12f73dbffa01a893">ltemc-iop.c</a>
+, <a class="el" href="ltemc-iop_8h.html#af44a81a156fc9eac12f73dbffa01a893">ltemc-iop.h</a>
 </li>
-<li>iop_txDataPromptParser()
-: <a class="el" href="ltemc-iop_8c.html#a666094e51c449560d25b82867a708ca9">ltemc-iop.c</a>
-, <a class="el" href="ltemc-iop_8h.html#a666094e51c449560d25b82867a708ca9">ltemc-iop.h</a>
+<li>IOP_rxParseForEvents()
+: <a class="el" href="ltemc-internal_8h.html#abd9165ff5515e6b01488a054b0f8cd2e">ltemc-internal.h</a>
 </li>
-<li>iop_txSend()
-: <a class="el" href="ltemc-iop_8h.html#aa30098ddd513173d5c6ac1cd07f492b9">ltemc-iop.h</a>
-, <a class="el" href="ltemc-iop_8c.html#aa30098ddd513173d5c6ac1cd07f492b9">ltemc-iop.c</a>
+<li>IOP_rxParseForUrcEvents()
+: <a class="el" href="ltemc-iop_8c.html#a9f0be39a6399b95fc875ab368d935e21">ltemc-iop.c</a>
+</li>
+<li>IOP_sendTx()
+: <a class="el" href="ltemc-iop_8c.html#af109051869f4374c5ff6ff0e4dbe4a90">ltemc-iop.c</a>
+, <a class="el" href="ltemc-iop_8h.html#af109051869f4374c5ff6ff0e4dbe4a90">ltemc-iop.h</a>
+</li>
+<li>IOP_start()
+: <a class="el" href="ltemc-iop_8h.html#a433190280a770fb33dbcceb681d0b146">ltemc-iop.h</a>
+, <a class="el" href="ltemc-iop_8c.html#a433190280a770fb33dbcceb681d0b146">ltemc-iop.c</a>
+</li>
+<li>IOP_swapRxBufferPage()
+: <a class="el" href="ltemc-iop_8h.html#a32b0db6aab0ed6f5f4f81a8fe4ad4783">ltemc-iop.h</a>
+, <a class="el" href="ltemc-iop_8c.html#aa2f0fc700d14f4734f6dd8405a973ae3">ltemc-iop.c</a>
 </li>
 </ul>
 </div><!-- contents -->

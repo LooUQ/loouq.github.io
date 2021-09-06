@@ -18,17 +18,17 @@ char \mbox{\hyperlink{structgnss_location__tag_a6ae8d28098d79f0dcb73395e7d2698df
 \begin{DoxyCompactList}\small\item\em Latitude value as a struct \mbox{\hyperlink{structgnss__latlon__tag}{gnss\+\_\+latlon\+\_\+tag}} (Quoted from G\+P\+G\+GA sentence). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-gnss_8h_a7fb5f996ad0280dea37f6c01720ec081}{gnss\+\_\+latlon\+\_\+t}} \mbox{\hyperlink{structgnss_location__tag_a5c655e2b8eff4c0c4d3a3a6daa8b7d4f}{lon}}
 \begin{DoxyCompactList}\small\item\em Longitude value as a struct \mbox{\hyperlink{structgnss__latlon__tag}{gnss\+\_\+latlon\+\_\+tag}} (Quoted from G\+P\+G\+GA sentence). \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{structgnss_location__tag_a8c3e6d0a80cec3520fd65b477f420415}{hdop}}
+double \mbox{\hyperlink{structgnss_location__tag_a7ede759392ed439219bdbac4c8ede827}{hdop}}
 \begin{DoxyCompactList}\small\item\em Horizontal precision\+: 0.\+5-\/99.\+9 (Quoted from G\+P\+G\+GA sentence). \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{structgnss_location__tag_a0e13a4b4ae0cefdac2a413284239caa6}{altitude}}
+double \mbox{\hyperlink{structgnss_location__tag_a2b13d276aee0d9fd646c8fa3647e869b}{altitude}}
 \begin{DoxyCompactList}\small\item\em The altitude of the antenna away from the sea level (unit\+: m), accurate to one decimal place (Quoted from G\+P\+G\+GA sentence). \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{structgnss_location__tag_aa04398e6b3b3d95a5cdca3b2d816062d}{fix\+Type}}
 \begin{DoxyCompactList}\small\item\em G\+N\+SS positioning mode (Quoted from G\+N\+G\+S\+A/\+G\+P\+G\+SA sentence). Values\+: 2=2D positioning. 3=3D positioning. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{structgnss_location__tag_ac6894c88aabf335922736a63b2b87b97}{course}}
+double \mbox{\hyperlink{structgnss_location__tag_acaa2fde7e3fad7df8f5755347603d17b}{course}}
 \begin{DoxyCompactList}\small\item\em Course Over Ground based on true north. Format\+: ddd.\+mm (Quoted from G\+P\+V\+TG sentence). Values\+: ddd=000-\/359 (degree), mm 00-\/59 (minute). \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{structgnss_location__tag_ab23b7f27e268c4f053742bd655b8127f}{speedkm}}
+double \mbox{\hyperlink{structgnss_location__tag_ae0962fef9bfddefc9440afc8f6ef33d1}{speedkm}}
 \begin{DoxyCompactList}\small\item\em Speed over ground (metric). Format\+: xxxx.\+x; unit\+: Km/h; accurate to one decimal place (Quoted from G\+P\+V\+TG sentence). \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{structgnss_location__tag_aa55935babd00748a6657bd683cf4a9ee}{speedkn}}
+double \mbox{\hyperlink{structgnss_location__tag_aa1de6861ea631ed59dd15f99a59ca500}{speedkn}}
 \begin{DoxyCompactList}\small\item\em Speed over ground (nautical). Format\+: xxxx.\+x; unit\+: Knots/h; accurate to one decimal place (Quoted from G\+P\+V\+TG sentence). \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{structgnss_location__tag_ad217ba16d0b42c0e3c986247572e9ec8}{date}} \mbox{[}7\mbox{]}
 \begin{DoxyCompactList}\small\item\em U\+TC time when fixing position. Format\+: ddmmyy (Quoted from G\+P\+R\+MC sentence). \end{DoxyCompactList}\item 
@@ -42,21 +42,21 @@ uint16\+\_\+t \mbox{\hyperlink{structgnss_location__tag_ade31e7fd99344e8c35f2c37
 Struct containing a G\+N\+SS location fix. 
 
 \doxysubsection{Field Documentation}
-\mbox{\Hypertarget{structgnss_location__tag_a0e13a4b4ae0cefdac2a413284239caa6}\label{structgnss_location__tag_a0e13a4b4ae0cefdac2a413284239caa6}} 
+\mbox{\Hypertarget{structgnss_location__tag_a2b13d276aee0d9fd646c8fa3647e869b}\label{structgnss_location__tag_a2b13d276aee0d9fd646c8fa3647e869b}} 
 \index{gnssLocation\_tag@{gnssLocation\_tag}!altitude@{altitude}}
 \index{altitude@{altitude}!gnssLocation\_tag@{gnssLocation\_tag}}
 \doxysubsubsection{\texorpdfstring{altitude}{altitude}}
-{\footnotesize\ttfamily float altitude}
+{\footnotesize\ttfamily double altitude}
 
 
 
 The altitude of the antenna away from the sea level (unit\+: m), accurate to one decimal place (Quoted from G\+P\+G\+GA sentence). 
 
-\mbox{\Hypertarget{structgnss_location__tag_ac6894c88aabf335922736a63b2b87b97}\label{structgnss_location__tag_ac6894c88aabf335922736a63b2b87b97}} 
+\mbox{\Hypertarget{structgnss_location__tag_acaa2fde7e3fad7df8f5755347603d17b}\label{structgnss_location__tag_acaa2fde7e3fad7df8f5755347603d17b}} 
 \index{gnssLocation\_tag@{gnssLocation\_tag}!course@{course}}
 \index{course@{course}!gnssLocation\_tag@{gnssLocation\_tag}}
 \doxysubsubsection{\texorpdfstring{course}{course}}
-{\footnotesize\ttfamily float course}
+{\footnotesize\ttfamily double course}
 
 
 
@@ -82,11 +82,11 @@ U\+TC time when fixing position. Format\+: ddmmyy (Quoted from G\+P\+R\+MC sente
 
 G\+N\+SS positioning mode (Quoted from G\+N\+G\+S\+A/\+G\+P\+G\+SA sentence). Values\+: 2=2D positioning. 3=3D positioning. 
 
-\mbox{\Hypertarget{structgnss_location__tag_a8c3e6d0a80cec3520fd65b477f420415}\label{structgnss_location__tag_a8c3e6d0a80cec3520fd65b477f420415}} 
+\mbox{\Hypertarget{structgnss_location__tag_a7ede759392ed439219bdbac4c8ede827}\label{structgnss_location__tag_a7ede759392ed439219bdbac4c8ede827}} 
 \index{gnssLocation\_tag@{gnssLocation\_tag}!hdop@{hdop}}
 \index{hdop@{hdop}!gnssLocation\_tag@{gnssLocation\_tag}}
 \doxysubsubsection{\texorpdfstring{hdop}{hdop}}
-{\footnotesize\ttfamily float hdop}
+{\footnotesize\ttfamily double hdop}
 
 
 
@@ -122,21 +122,21 @@ Longitude value as a struct \mbox{\hyperlink{structgnss__latlon__tag}{gnss\+\_\+
 
 Number of satellites, from 00 (The first 0 should be retained) to 12 (Quoted from G\+P\+G\+GA sentence). 
 
-\mbox{\Hypertarget{structgnss_location__tag_ab23b7f27e268c4f053742bd655b8127f}\label{structgnss_location__tag_ab23b7f27e268c4f053742bd655b8127f}} 
+\mbox{\Hypertarget{structgnss_location__tag_ae0962fef9bfddefc9440afc8f6ef33d1}\label{structgnss_location__tag_ae0962fef9bfddefc9440afc8f6ef33d1}} 
 \index{gnssLocation\_tag@{gnssLocation\_tag}!speedkm@{speedkm}}
 \index{speedkm@{speedkm}!gnssLocation\_tag@{gnssLocation\_tag}}
 \doxysubsubsection{\texorpdfstring{speedkm}{speedkm}}
-{\footnotesize\ttfamily float speedkm}
+{\footnotesize\ttfamily double speedkm}
 
 
 
 Speed over ground (metric). Format\+: xxxx.\+x; unit\+: Km/h; accurate to one decimal place (Quoted from G\+P\+V\+TG sentence). 
 
-\mbox{\Hypertarget{structgnss_location__tag_aa55935babd00748a6657bd683cf4a9ee}\label{structgnss_location__tag_aa55935babd00748a6657bd683cf4a9ee}} 
+\mbox{\Hypertarget{structgnss_location__tag_aa1de6861ea631ed59dd15f99a59ca500}\label{structgnss_location__tag_aa1de6861ea631ed59dd15f99a59ca500}} 
 \index{gnssLocation\_tag@{gnssLocation\_tag}!speedkn@{speedkn}}
 \index{speedkn@{speedkn}!gnssLocation\_tag@{gnssLocation\_tag}}
 \doxysubsubsection{\texorpdfstring{speedkn}{speedkn}}
-{\footnotesize\ttfamily float speedkn}
+{\footnotesize\ttfamily double speedkn}
 
 
 

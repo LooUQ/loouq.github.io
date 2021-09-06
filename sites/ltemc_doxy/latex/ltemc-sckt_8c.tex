@@ -1,0 +1,377 @@
+\hypertarget{ltemc-sckt_8c}{}\doxysection{src/ltemc-\/sckt.c File Reference}
+\label{ltemc-sckt_8c}\index{src/ltemc-\/sckt.c@{src/ltemc-\/sckt.c}}
+{\ttfamily \#include \char`\"{}ltemc-\/sckt.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-sckt_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\item 
+\#define \mbox{\hyperlink{ltemc-sckt_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)
+\item 
+\#define \mbox{\hyperlink{ltemc-sckt_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
+\item 
+\#define \mbox{\hyperlink{ltemc-sckt_8c_aacc3ee1a7f283f8ef65cea31f4436a95}{M\+AX}}(x,  y)~(((x) $<$ (y)) ? (y) \+: (x))
+\item 
+\#define \mbox{\hyperlink{ltemc-sckt_8c_a48b1663a06062f775262a363ce4c9e6d}{A\+S\+C\+I\+I\+\_\+s\+S\+E\+N\+D\+OK}}~\char`\"{}S\+E\+ND O\+K\textbackslash{}r\textbackslash{}n\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}{atcmd\+\_\+\+\_\+use\+Default\+Timeout}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}{atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto}} = 1, 
+\newline
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}{A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}{A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}{http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec}} = 60, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}{I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size}} = 1800, 
+\newline
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}} = 192, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS}} = 6, 
+\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
+\newline
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 3, 
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}{N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz}} = 20, 
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}{nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver}} = 0x01U, 
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
+\newline
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}{nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error}} = 0x80U, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}{B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt}} = 1, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}{B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts}} = 2, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
+\newline
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}{B\+G\+X\+\_\+\+\_\+power\+Off\+Delay}} = 1500, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}{B\+G\+X\+\_\+\+\_\+reset\+Delay}} = 300, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}{B\+G\+X\+\_\+\+\_\+baud\+Rate}} = 115200, 
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
+\newline
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}{sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS}} = 60000, 
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}{S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz}} = 1500
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ltemc-sckt_8c_ac68f0d27646376ea3fea3cb99c1fd55e}{S\+\_\+sckt\+Do\+Work}} ()
+\begin{DoxyCompactList}\small\item\em Perform background tasks to move socket data through pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-sckt_8c_ae5918aefbd83f6bb801b371e4a440db4}{sckt\+\_\+init\+Control}} (\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$sckt\+Ctrl, \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt, \mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}} protocol, uint8\+\_\+t $\ast$recv\+Buf, uint16\+\_\+t recv\+Buf\+Sz, \mbox{\hyperlink{ltemc-sckt_8h_a05996456489b8c1bebd81cd0ba6db25a}{sckt\+Recv\+Func\+\_\+t}} recv\+Callback)
+\begin{DoxyCompactList}\small\item\em Create a socket data control(T\+C\+P/\+U\+D\+P/\+S\+SL). \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-sckt_8c_a8dcfe98ab51dcca925c16ee0f9f79375}{sckt\+\_\+open}} (\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$sckt, const char $\ast$host, uint16\+\_\+t rmt\+Port, uint16\+\_\+t lcl\+Port, bool clean\+Session)
+\begin{DoxyCompactList}\small\item\em Open a data connection (socket) to d data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-sckt_8c_a655595f0eaf4c982760af83e215d1e6b}{sckt\+\_\+close}} (\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$sckt\+Ctrl)
+\begin{DoxyCompactList}\small\item\em Close an established (open) connection socket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-sckt_8c_a7094cfa29eae6fd7652726e3b12eeec7}{sckt\+\_\+flush}} (\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$sckt\+Ctrl)
+\begin{DoxyCompactList}\small\item\em Reset open socket connection. This function drains the connection\textquotesingle{}s data pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-sckt_8c_a0ecf5858721fd2d827b9a962658b48c8}{sckt\+\_\+close\+All}} ()
+\begin{DoxyCompactList}\small\item\em Close out all T\+C\+P/\+IP sockets on a context. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-sckt_8c_acc24a55f3d87d157530b4e696f927e33}{sckt\+\_\+get\+State}} (\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$sckt)
+\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-sckt_8c_a9cdb1f0ba73e0a4b5bbb62b631432f4e}{sckt\+\_\+send}} (\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$sckt\+Ctrl, const char $\ast$data, uint16\+\_\+t data\+Sz)
+\begin{DoxyCompactList}\small\item\em Send data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} \mbox{\hyperlink{ltemc-sckt_8c_a5f9b6913ff818fbc74934a69849fb48b}{g\+\_\+ltem}}
+\begin{DoxyCompactList}\small\item\em The L\+T\+Em \char`\"{}object\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-sckt_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltemc-sckt_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+
+\mbox{\Hypertarget{ltemc-sckt_8c_a48b1663a06062f775262a363ce4c9e6d}\label{ltemc-sckt_8c_a48b1663a06062f775262a363ce4c9e6d}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!ASCII\_sSENDOK@{ASCII\_sSENDOK}}
+\index{ASCII\_sSENDOK@{ASCII\_sSENDOK}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{ASCII\_sSENDOK}{ASCII\_sSENDOK}}
+{\footnotesize\ttfamily \#define A\+S\+C\+I\+I\+\_\+s\+S\+E\+N\+D\+OK~\char`\"{}S\+E\+ND O\+K\textbackslash{}r\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{ltemc-sckt_8c_aacc3ee1a7f283f8ef65cea31f4436a95}\label{ltemc-sckt_8c_aacc3ee1a7f283f8ef65cea31f4436a95}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!MAX@{MAX}}
+\index{MAX@{MAX}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \#define M\+AX(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (y) \+: (x))}
+
+\mbox{\Hypertarget{ltemc-sckt_8c_a74e75242132eaabbc1c512488a135926}\label{ltemc-sckt_8c_a74e75242132eaabbc1c512488a135926}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!MIN@{MIN}}
+\index{MIN@{MIN}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (x) \+: (y))}
+
+\mbox{\Hypertarget{ltemc-sckt_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-sckt_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55b}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}} 
+atcmd\+\_\+\+\_\+use\+Default\+Timeout&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}} 
+atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_setLockModeManual@{atcmd\_\_setLockModeManual}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!atcmd\_\_setLockModeManual@{atcmd\_\_setLockModeManual}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}} 
+atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_setLockModeAuto@{atcmd\_\_setLockModeAuto}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!atcmd\_\_setLockModeAuto@{atcmd\_\_setLockModeAuto}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}} 
+atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}} 
+A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}} 
+A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result&private declaration; value returned from response parsers indicating a pattern match has not yet been detected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}} 
+http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_txBufferSize@{IOP\_\_txBufferSize}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!IOP\_\_txBufferSize@{IOP\_\_txBufferSize}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}} 
+I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_rxCoreBufferSize@{IOP\_\_rxCoreBufferSize}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!IOP\_\_rxCoreBufferSize@{IOP\_\_rxCoreBufferSize}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}} 
+I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{resultCode\_\_parserPending@{resultCode\_\_parserPending}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!resultCode\_\_parserPending@{resultCode\_\_parserPending}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}} 
+result\+Code\+\_\+\+\_\+parser\+Pending&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NTWK\_\_pdpContextCnt@{NTWK\_\_pdpContextCnt}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!NTWK\_\_pdpContextCnt@{NTWK\_\_pdpContextCnt}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}} 
+N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NTWK\_\_operatorNameSz@{NTWK\_\_operatorNameSz}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!NTWK\_\_operatorNameSz@{NTWK\_\_operatorNameSz}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}} 
+N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_DataInReceiver@{nxp\_\_lsr\_DataInReceiver}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!nxp\_\_lsr\_DataInReceiver@{nxp\_\_lsr\_DataInReceiver}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_THR\_empty@{nxp\_\_lsr\_THR\_empty}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!nxp\_\_lsr\_THR\_empty@{nxp\_\_lsr\_THR\_empty}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_FIFO\_dataError@{nxp\_\_lsr\_FIFO\_dataError}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!nxp\_\_lsr\_FIFO\_dataError@{nxp\_\_lsr\_FIFO\_dataError}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_initCommandCnt@{BGX\_\_initCommandCnt}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!BGX\_\_initCommandCnt@{BGX\_\_initCommandCnt}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}} 
+B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_initCommandAttempts@{BGX\_\_initCommandAttempts}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!BGX\_\_initCommandAttempts@{BGX\_\_initCommandAttempts}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}} 
+B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_powerOnDelay@{BGX\_\_powerOnDelay}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!BGX\_\_powerOnDelay@{BGX\_\_powerOnDelay}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}} 
+B\+G\+X\+\_\+\+\_\+power\+On\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_powerOffDelay@{BGX\_\_powerOffDelay}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!BGX\_\_powerOffDelay@{BGX\_\_powerOffDelay}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}} 
+B\+G\+X\+\_\+\+\_\+power\+Off\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_resetDelay@{BGX\_\_resetDelay}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!BGX\_\_resetDelay@{BGX\_\_resetDelay}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}} 
+B\+G\+X\+\_\+\+\_\+reset\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_baudRate@{BGX\_\_baudRate}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!BGX\_\_baudRate@{BGX\_\_baudRate}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}} 
+B\+G\+X\+\_\+\+\_\+baud\+Rate&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sckt\_\_resultCode\_previouslyOpen@{sckt\_\_resultCode\_previouslyOpen}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!sckt\_\_resultCode\_previouslyOpen@{sckt\_\_resultCode\_previouslyOpen}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}} 
+sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sckt\_\_defaultOpenTimeoutMS@{sckt\_\_defaultOpenTimeoutMS}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!sckt\_\_defaultOpenTimeoutMS@{sckt\_\_defaultOpenTimeoutMS}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}} 
+sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCKT\_\_IRD\_requestMaxSz@{SCKT\_\_IRD\_requestMaxSz}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!SCKT\_\_IRD\_requestMaxSz@{SCKT\_\_IRD\_requestMaxSz}}}\mbox{\Hypertarget{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}\label{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}} 
+S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-sckt_8c_ac68f0d27646376ea3fea3cb99c1fd55e}\label{ltemc-sckt_8c_ac68f0d27646376ea3fea3cb99c1fd55e}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!S\_scktDoWork@{S\_scktDoWork}}
+\index{S\_scktDoWork@{S\_scktDoWork}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{S\_scktDoWork()}{S\_scktDoWork()}}
+{\footnotesize\ttfamily void S\+\_\+sckt\+Do\+Work (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform background tasks to move socket data through pipeline. 
+
+1) check for existing I\+RD flow and proccess 2) deliver received data to application 3) if no I\+RD flow underway, check for other sockets that have data\+Pending \mbox{\Hypertarget{ltemc-sckt_8c_a655595f0eaf4c982760af83e215d1e6b}\label{ltemc-sckt_8c_a655595f0eaf4c982760af83e215d1e6b}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!sckt\_close@{sckt\_close}}
+\index{sckt\_close@{sckt\_close}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_close()}{sckt\_close()}}
+{\footnotesize\ttfamily void sckt\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$}]{sckt\+Ctrl }\end{DoxyParamCaption})}
+
+
+
+Close an established (open) connection socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sckt\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to socket control struct governing the sending socket\textquotesingle{}s operation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-sckt_8c_a0ecf5858721fd2d827b9a962658b48c8}\label{ltemc-sckt_8c_a0ecf5858721fd2d827b9a962658b48c8}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!sckt\_closeAll@{sckt\_closeAll}}
+\index{sckt\_closeAll@{sckt\_closeAll}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_closeAll()}{sckt\_closeAll()}}
+{\footnotesize\ttfamily void sckt\+\_\+close\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close out all T\+C\+P/\+IP sockets on a context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contxt\+Id} & \mbox{[}in\mbox{]} -\/ The carrier P\+DP context hosting the sockets to close. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-sckt_8c_a7094cfa29eae6fd7652726e3b12eeec7}\label{ltemc-sckt_8c_a7094cfa29eae6fd7652726e3b12eeec7}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!sckt\_flush@{sckt\_flush}}
+\index{sckt\_flush@{sckt\_flush}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_flush()}{sckt\_flush()}}
+{\footnotesize\ttfamily bool sckt\+\_\+flush (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$}]{sckt\+Ctrl }\end{DoxyParamCaption})}
+
+
+
+Reset open socket connection. This function drains the connection\textquotesingle{}s data pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sckt\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to socket control struct governing the sending socket\textquotesingle{}s operation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if flush socket data initiated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-sckt_8c_acc24a55f3d87d157530b4e696f927e33}\label{ltemc-sckt_8c_acc24a55f3d87d157530b4e696f927e33}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!sckt\_getState@{sckt\_getState}}
+\index{sckt\_getState@{sckt\_getState}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_getState()}{sckt\_getState()}}
+{\footnotesize\ttfamily bool sckt\+\_\+get\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$}]{sckt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-sckt_8c_ae5918aefbd83f6bb801b371e4a440db4}\label{ltemc-sckt_8c_ae5918aefbd83f6bb801b371e4a440db4}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!sckt\_initControl@{sckt\_initControl}}
+\index{sckt\_initControl@{sckt\_initControl}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_initControl()}{sckt\_initControl()}}
+{\footnotesize\ttfamily void sckt\+\_\+init\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$}]{sckt\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}]{data\+Cntxt,  }\item[{\mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}}}]{protocol,  }\item[{uint8\+\_\+t $\ast$}]{recv\+Buf,  }\item[{uint16\+\_\+t}]{recv\+Buf\+Sz,  }\item[{\mbox{\hyperlink{ltemc-sckt_8h_a05996456489b8c1bebd81cd0ba6db25a}{sckt\+Recv\+Func\+\_\+t}}}]{recv\+Callback }\end{DoxyParamCaption})}
+
+
+
+Create a socket data control(T\+C\+P/\+U\+D\+P/\+S\+SL). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sckt\+Ctrl} & \mbox{[}in/out\mbox{]} Pointer to socket control structure \\
+\hline
+{\em data\+Cntxt} & \mbox{[}in\mbox{]} -\/ Data context (0-\/5) to host socket. \\
+\hline
+{\em protocol} & \mbox{[}in\mbox{]} -\/ The IP protocol to use for the connection (T\+C\+P/\+U\+D\+P/\+S\+SL clients). \\
+\hline
+{\em recv\+Buf} & \mbox{[}in\mbox{]} -\/ Pointer to application created receive buffer \\
+\hline
+{\em recv\+Buf\+Sz} & \mbox{[}in\mbox{]} -\/ Size of allocated receive buffer \\
+\hline
+{\em recv\+Callback} & \mbox{[}in\mbox{]} -\/ The callback function in your application to be notified of received data ready.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+socket result code similar to http status code, OK = 200 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-sckt_8c_a8dcfe98ab51dcca925c16ee0f9f79375}\label{ltemc-sckt_8c_a8dcfe98ab51dcca925c16ee0f9f79375}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!sckt\_open@{sckt\_open}}
+\index{sckt\_open@{sckt\_open}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_open()}{sckt\_open()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t sckt\+\_\+open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$}]{sckt,  }\item[{const char $\ast$}]{host,  }\item[{uint16\+\_\+t}]{rmt\+Port,  }\item[{uint16\+\_\+t}]{lcl\+Port,  }\item[{bool}]{clean\+Session }\end{DoxyParamCaption})}
+
+
+
+Open a data connection (socket) to d data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sckt} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for the socket. \\
+\hline
+{\em host} & \mbox{[}in\mbox{]} -\/ The IP address (string) or domain name of the remote host to communicate with. \\
+\hline
+{\em rmt\+Port} & \mbox{[}in\mbox{]} -\/ The port number at the remote host. \\
+\hline
+{\em lcl\+Port} & \mbox{[}in\mbox{]} -\/ The port number on this side of the conversation, set to 0 to auto-\/assign. \\
+\hline
+{\em clean\+Session} & \mbox{[}in\mbox{]} -\/ If the port is found already open, T\+R\+UE\+: flushes any previous data from the socket session.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result code similar to http status code, OK = 200 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-sckt_8c_a9cdb1f0ba73e0a4b5bbb62b631432f4e}\label{ltemc-sckt_8c_a9cdb1f0ba73e0a4b5bbb62b631432f4e}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!sckt\_send@{sckt\_send}}
+\index{sckt\_send@{sckt\_send}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{sckt\_send()}{sckt\_send()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t sckt\+\_\+send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{sckt\+Ctrl\+\_\+t}} $\ast$}]{sckt\+Ctrl,  }\item[{const char $\ast$}]{data,  }\item[{uint16\+\_\+t}]{data\+Sz }\end{DoxyParamCaption})}
+
+
+
+Send data to an established endpoint via protocol used to open socket (T\+C\+P/\+U\+D\+P/\+T\+CP I\+N\+C\+O\+M\+I\+NG). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sckt\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to socket control struct governing the sending socket\textquotesingle{}s operation. \\
+\hline
+{\em data} & \mbox{[}in\mbox{]} -\/ A character pointer containing the data to send. \\
+\hline
+{\em data\+Sz} & \mbox{[}in\mbox{]} -\/ The size of the buffer ($<$ 1501 bytes). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ltemc-sckt_8c_a5f9b6913ff818fbc74934a69849fb48b}\label{ltemc-sckt_8c_a5f9b6913ff818fbc74934a69849fb48b}} 
+\index{ltemc-\/sckt.c@{ltemc-\/sckt.c}!g\_ltem@{g\_ltem}}
+\index{g\_ltem@{g\_ltem}!ltemc-\/sckt.c@{ltemc-\/sckt.c}}
+\doxysubsubsection{\texorpdfstring{g\_ltem}{g\_ltem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} g\+\_\+ltem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+The L\+T\+Em \char`\"{}object\char`\"{}. 
+

@@ -1,0 +1,55 @@
+Release 2.\+0
+
+Loo\+UQ is ready for tomorrow with the release of L\+T\+EmC version 2. Version 2 started in early June as version 1.\+1, intending to add H\+T\+TP support and the ability to dynamically load/unload protocols. To accomplish these goals it became apparent these objectives, there were some structural changes required. As these started being tackled, it took on a life of its own and numerous previously indentified issues got folded in to create the L\+T\+EmC that would stand up to the demands of the next several years; including additional protocols, support for 2 new modem models planned for the next 6 months, and new hardware features.
+
+The primary goal of the version 2.\+0 release is to enable the above future roadmap with little or no change to the exposed public A\+PI. Loo\+UQ has accomplished this by reversing several dependencies and giving the application ownership of the data buffers and encapsulation of the protocol controls (sockets, M\+Q\+TT, H\+T\+TP, etc.).
+
+Previous versions of L\+T\+EmC allocated all buffers and protocol controls (structs). This resulted in memory bload, as the worse-\/case assumtions lead to larger buffers and multiple storage locations for protocol controls. This approach has been replaced with application defined (owned) data receive buffers and protocol controls.
+\begin{DoxyItemize}
+\item At a minimum, to implement a protocol, your application will need to create a receive buffer (rx\+Buffer) and a protocol control. L\+T\+EmC only references these via pointers.
+\begin{DoxyItemize}
+\item These can be local variables, if short lived.
+\item They can be dynamic and created by malloc().
+\item Or, they can be global variables.
+\end{DoxyItemize}
+\item Protocol instances can share a rx\+Buffer. {\itshape Theoretically it is possible for different protocols to share a buffer but this has not been tested.}
+\item Each protocol has an \+\_\+init\+Control() function to initialize your protocol instance control.
+\item There are 6 protocol \char`\"{}slots\char`\"{} defined in an enum as data\+Context\+\_\+0 through data\+Context\+\_\+5 the a protocol instance can be assigned to.
+\item In version 2.\+1, with support added for the B\+Gx file system, there is a special slot stream\+Peer\+\_\+6.
+\item Use of the \mbox{\hyperlink{ltemc_8c_a5b79bd67186c40d469be1bcc5dcd412b}{ltem\+\_\+do\+Work()}} function in the application\textquotesingle{}s main loop() is only required if your application utilizes protocols with asynchronous receive events. Sockets and M\+Q\+TT both have asynchronous receive behavior; H\+T\+T\+P(\+S) receives are fully synchronous with page funtions.
+\end{DoxyItemize}\hypertarget{md__release_2_0_autotoc_md30}{}\doxysubsection{Example Code Setup}\label{md__release_2_0_autotoc_md30}
+\`{}\`{}\`{} // L\+T\+Em variables mqtt\+Ctrl\+\_\+t mqtt\+Ctrl; // M\+Q\+TT control, data to manage M\+Q\+TT connection to server uint8\+\_\+t receive\+Buffer\mbox{[}640\mbox{]}; // Data buffer where received information is returned (can be local, global, or dynamic... your call)
+
+char mqtt\+Topic\mbox{[}200\mbox{]}; // application buffer to craft TX M\+Q\+TT topic char mqtt\+Message\mbox{[}200\mbox{]}; // application buffer to craft TX M\+Q\+TT publish content (body) result\+Code\+\_\+t result;
+
+\begin{DoxyVerb}void setup() 
+{
+    /* define a global ltemc instance, then initialize and start communications */
+    ltem_create(ltem_pinConfig, appNotifyCB);
+    ltem_start();
+
+    /* setup SSL\TLS if your application requires it MQTT over TLS or HTTPS, then initialize your protocol(s) */
+    tls_configure(dataContext_5, tlsVersion_tls12, tlsCipher_default, tlsCertExpiration_default, tlsSecurityLevel_default);
+    mqtt_initControl(&mqttCtrl, dataContext_5, mqtt__useTls, mqttVersion_311, receiveBuffer, sizeof(receiveBuffer), mqttRecvCB);
+
+    /* do whatever your protocol needs to start host communications, here it is open, connect, and subscribe to topics */
+    rslt = mqtt_open(&mqttCtrl, MQTT_IOTHUB, MQTT_PORT);
+    rslt = mqtt_connect(&mqttCtrl, MQTT_IOTHUB_DEVICEID, MQTT_IOTHUB_USERID, MQTT_IOTHUB_SASTOKEN, mqttSession_cleanStart);
+    rslt = mqtt_subscribe(&mqttCtrl, MQTT_IOTHUB_C2D_TOPIC, mqttQos_1);
+}
+
+void loop()
+{
+    /* compose your MQTT message into a topic and message */
+    snprintf(mqttTopic, 200, MQTT_MSG_BODY_TEMPLATE, loopCnt, windspeed);
+    snprintf(mqttMessage, 200, "MQTT message for loop=%d", loopCnt);
+    mqtt_publish(&mqttCtrl, mqttTopic, mqttQos_1, mqttMessage);
+
+    /* MQTT support asychronous background message receives,
+     * ltem_doWork() marshals the received data back to your application via the receive callback  */
+    ltem_doWork();
+}
+\end{DoxyVerb}
+
+
+To fully understand how to setup each of the currently supported protocols (Sockets, M\+Q\+TT, and H\+T\+TP), review the associated \char`\"{}test\char`\"{} I\+NO file. Each of these have numerous comments on the protocol\textquotesingle{}s setup and can serve as a blueprint for your application if running under the Arduino framework. If you have questions, please reach out by messaging \href{mailto:answers@loouq.com}{\texttt{ answers@loouq.\+com}}. 

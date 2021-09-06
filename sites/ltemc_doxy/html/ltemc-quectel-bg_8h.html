@@ -84,14 +84,6 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a3c14a928bc2e1a61b0041ab143c88d0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#a3c14a928bc2e1a61b0041ab143c88d0a">QBG_POWERON_DELAY</a>&#160;&#160;&#160;500U</td></tr>
-<tr class="separator:a3c14a928bc2e1a61b0041ab143c88d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af04903b942c995163094146939b19eb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#af04903b942c995163094146939b19eb9">QBG_POWEROFF_DELAY</a>&#160;&#160;&#160;1500U</td></tr>
-<tr class="separator:af04903b942c995163094146939b19eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d1469abbfb4b8b0eace4b74f04a47ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#a1d1469abbfb4b8b0eace4b74f04a47ce">QBG_RESET_DELAY</a>&#160;&#160;&#160;300U</td></tr>
-<tr class="separator:a1d1469abbfb4b8b0eace4b74f04a47ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd2f8a5991e5c3732514e87e7af1b19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#a4dd2f8a5991e5c3732514e87e7af1b19">QBG_BAUDRATE_DEFAULT</a>&#160;&#160;&#160;115200U</td></tr>
-<tr class="separator:a4dd2f8a5991e5c3732514e87e7af1b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa91c2902158b6070e5bd7e3a42601454"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#aa91c2902158b6070e5bd7e3a42601454">QBG_RATSEQ_AUTO</a>&#160;&#160;&#160;&quot;00&quot;</td></tr>
 <tr class="separator:aa91c2902158b6070e5bd7e3a42601454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59cdc867b350fc82f198ada00c2b3085"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#a59cdc867b350fc82f198ada00c2b3085">QBG_RATSEQ_GSM</a>&#160;&#160;&#160;&quot;01&quot;</td></tr>
@@ -133,9 +125,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aff79bc5f56d845c2f16aae7e967bb39e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#aff79bc5f56d845c2f16aae7e967bb39e">qbg_start</a> ()</td></tr>
 <tr class="memdesc:aff79bc5f56d845c2f16aae7e967bb39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the BGx module.  <a href="ltemc-quectel-bg_8h.html#aff79bc5f56d845c2f16aae7e967bb39e">More...</a><br /></td></tr>
 <tr class="separator:aff79bc5f56d845c2f16aae7e967bb39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb7ce91ebb048c2a8e9255fed32d4564"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#acb7ce91ebb048c2a8e9255fed32d4564">qbg_powerOn</a> ()</td></tr>
-<tr class="memdesc:acb7ce91ebb048c2a8e9255fed32d4564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power on the BGx module.  <a href="ltemc-quectel-bg_8h.html#acb7ce91ebb048c2a8e9255fed32d4564">More...</a><br /></td></tr>
-<tr class="separator:acb7ce91ebb048c2a8e9255fed32d4564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb09a74d94dbf4d3e6b6cae45196aaff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#adb09a74d94dbf4d3e6b6cae45196aaff">qbg_isPowerOn</a> ()</td></tr>
+<tr class="memdesc:adb09a74d94dbf4d3e6b6cae45196aaff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for BGx power status.  <a href="ltemc-quectel-bg_8h.html#adb09a74d94dbf4d3e6b6cae45196aaff">More...</a><br /></td></tr>
+<tr class="separator:adb09a74d94dbf4d3e6b6cae45196aaff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38f43891616b10e764a40f62dd67d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#af38f43891616b10e764a40f62dd67d99">qbg_powerOn</a> ()</td></tr>
+<tr class="memdesc:af38f43891616b10e764a40f62dd67d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power on the BGx module.  <a href="ltemc-quectel-bg_8h.html#af38f43891616b10e764a40f62dd67d99">More...</a><br /></td></tr>
+<tr class="separator:af38f43891616b10e764a40f62dd67d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25333f44c61fbf3627065cbd31375a1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8h.html#a25333f44c61fbf3627065cbd31375a1e">qbg_powerOff</a> ()</td></tr>
 <tr class="memdesc:a25333f44c61fbf3627065cbd31375a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Powers off the BGx module.  <a href="ltemc-quectel-bg_8h.html#a25333f44c61fbf3627065cbd31375a1e">More...</a><br /></td></tr>
 <tr class="separator:a25333f44c61fbf3627065cbd31375a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,48 +148,6 @@ Functions</h2></td></tr>
 <tr class="separator:acbc1ca7e44fafdcebb214e74547761de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a4dd2f8a5991e5c3732514e87e7af1b19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dd2f8a5991e5c3732514e87e7af1b19">&#9670;&nbsp;</a></span>QBG_BAUDRATE_DEFAULT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define QBG_BAUDRATE_DEFAULT&#160;&#160;&#160;115200U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af04903b942c995163094146939b19eb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af04903b942c995163094146939b19eb9">&#9670;&nbsp;</a></span>QBG_POWEROFF_DELAY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define QBG_POWEROFF_DELAY&#160;&#160;&#160;1500U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3c14a928bc2e1a61b0041ab143c88d0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c14a928bc2e1a61b0041ab143c88d0a">&#9670;&nbsp;</a></span>QBG_POWERON_DELAY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define QBG_POWERON_DELAY&#160;&#160;&#160;500U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aa91c2902158b6070e5bd7e3a42601454"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa91c2902158b6070e5bd7e3a42601454">&#9670;&nbsp;</a></span>QBG_RATSEQ_AUTO</h2>
 
@@ -245,20 +198,6 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define QBG_RATSEQ_NBIOT&#160;&#160;&#160;&quot;03&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1d1469abbfb4b8b0eace4b74f04a47ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d1469abbfb4b8b0eace4b74f04a47ce">&#9670;&nbsp;</a></span>QBG_RESET_DELAY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define QBG_RESET_DELAY&#160;&#160;&#160;300U</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -356,6 +295,26 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="adb09a74d94dbf4d3e6b6cae45196aaff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb09a74d94dbf4d3e6b6cae45196aaff">&#9670;&nbsp;</a></span>qbg_isPowerOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool qbg_isPowerOn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for BGx power status. </p>
+<dl class="section return"><dt>Returns</dt><dd>BGx power state </dd></dl>
+
+</div>
+</div>
 <a id="a25333f44c61fbf3627065cbd31375a1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25333f44c61fbf3627065cbd31375a1e">&#9670;&nbsp;</a></span>qbg_powerOff()</h2>
 
@@ -375,14 +334,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acb7ce91ebb048c2a8e9255fed32d4564"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb7ce91ebb048c2a8e9255fed32d4564">&#9670;&nbsp;</a></span>qbg_powerOn()</h2>
+<a id="af38f43891616b10e764a40f62dd67d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af38f43891616b10e764a40f62dd67d99">&#9670;&nbsp;</a></span>qbg_powerOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool qbg_powerOn </td>
+          <td class="memname">void qbg_powerOn </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

@@ -1,6 +1,6 @@
 \hypertarget{ltemc-filesys_8c}{}\doxysection{src/ltemc-\/filesys.c File Reference}
 \label{ltemc-filesys_8c}\index{src/ltemc-\/filesys.c@{src/ltemc-\/filesys.c}}
-{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/internal.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/filesys.\+h\char`\"{}}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
@@ -24,21 +24,21 @@ void \mbox{\hyperlink{ltemc-filesys_8c_a34aaea7c31c95b3af9220079f4d9b348}{filsys
 \item 
 \mbox{\hyperlink{ltemc-filesys_8h_a92ef775ce58e30a0e5e1f48bbd0cfb9e}{file\+List\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a86de74ffc505b08c8f9a9c559381998a}{filsys\+\_\+list}} (const char $\ast$file\+Name)
 \item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a1c4b2d6d9db9c616edd876bced85f432}{filsys\+\_\+delete}} (const char $\ast$file\+Name)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-filesys_8c_a1c4b2d6d9db9c616edd876bced85f432}{filsys\+\_\+delete}} (const char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Delete a file from the file system. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-filesys_8h_a484ac9461ccfbea1e7911f526933ee9e}{file\+Open\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a77c3f4eb22a933b3fbca8d95a9f40363}{filsys\+\_\+open}} (const char $\ast$file\+Name, \mbox{\hyperlink{ltemc-filesys_8h_ab1f8e73ad2ef8f206d19def6769b3612}{file\+Open\+Mode\+\_\+t}} open\+Mode, \mbox{\hyperlink{ltemc-filesys_8h_a57b67beed3c715abf4a1a35fb5d56e5b}{file\+Receiver\+\_\+func\+\_\+t}} file\+Recvr\+\_\+func)
 \item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a8db9503967cdc111177b7bf94fd39ea3}{filsys\+\_\+read}} (uint16\+\_\+t file\+Handle, uint16\+\_\+t read\+Sz)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-filesys_8c_a8db9503967cdc111177b7bf94fd39ea3}{filsys\+\_\+read}} (uint16\+\_\+t file\+Handle, uint16\+\_\+t read\+Sz)
 \item 
 \mbox{\hyperlink{ltemc-filesys_8h_a8a7506f92c9719ea5ead6f93501be76e}{file\+Write\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a81912bf03b49be4bd2232c76c47487b1}{filsys\+\_\+write}} (uint16\+\_\+t file\+Handle, const char $\ast$write\+Data, uint16\+\_\+t write\+Sz)
 \item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_adf6bcdcf2e3d6142242d37fb8524168f}{filsys\+\_\+seek}} (uint16\+\_\+t file\+Handle, uint32\+\_\+t offset, \mbox{\hyperlink{ltemc-filesys_8h_ac67a60a608a19efef54c6fc33a0390bc}{file\+Seek\+Mode\+\_\+t}} seek\+From)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-filesys_8c_adf6bcdcf2e3d6142242d37fb8524168f}{filsys\+\_\+seek}} (uint16\+\_\+t file\+Handle, uint32\+\_\+t offset, \mbox{\hyperlink{ltemc-filesys_8h_ac67a60a608a19efef54c6fc33a0390bc}{file\+Seek\+Mode\+\_\+t}} seek\+From)
 \begin{DoxyCompactList}\small\item\em Set the position of the file pointer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-filesys_8h_afd53939afa95dc15e207663e8f5a476e}{file\+Position\+Result\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a047bd98174c93c70c370ebd43ec91da6}{filsys\+\_\+get\+Position}} (uint16\+\_\+t file\+Handle)
 \item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a382455fbd5423e59af58e5a287dc75d0}{filsys\+\_\+truncate}} (uint16\+\_\+t file\+Handle)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-filesys_8c_a382455fbd5423e59af58e5a287dc75d0}{filsys\+\_\+truncate}} (uint16\+\_\+t file\+Handle)
 \begin{DoxyCompactList}\small\item\em Truncate all the data beyond the current position of the file pointer. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-filesys_8c_a9660070f7f914d3438c83a7aa8651687}{filsys\+\_\+close}} (uint16\+\_\+t file\+Handle)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-filesys_8c_a9660070f7f914d3438c83a7aa8651687}{filsys\+\_\+close}} (uint16\+\_\+t file\+Handle)
 \begin{DoxyCompactList}\small\item\em Closes the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -88,7 +88,7 @@ void \mbox{\hyperlink{ltemc-filesys_8c_a34aaea7c31c95b3af9220079f4d9b348}{filsys
 \index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_close@{filsys\_close}}
 \index{filsys\_close@{filsys\_close}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
 \doxysubsubsection{\texorpdfstring{filsys\_close()}{filsys\_close()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+close (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t filsys\+\_\+close (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle }\end{DoxyParamCaption})}
 
 
 
@@ -106,7 +106,7 @@ Result\+Code=200 if successful, otherwise error code (H\+T\+TP status type).
 \index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_delete@{filsys\_delete}}
 \index{filsys\_delete@{filsys\_delete}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
 \doxysubsubsection{\texorpdfstring{filsys\_delete()}{filsys\_delete()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+delete (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t filsys\+\_\+delete (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
 
 
 
@@ -148,13 +148,13 @@ Result\+Code=200 if successful, otherwise error code (H\+T\+TP status type).
 \index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_read@{filsys\_read}}
 \index{filsys\_read@{filsys\_read}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
 \doxysubsubsection{\texorpdfstring{filsys\_read()}{filsys\_read()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle,  }\item[{uint16\+\_\+t}]{read\+Sz }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t filsys\+\_\+read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle,  }\item[{uint16\+\_\+t}]{read\+Sz }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{ltemc-filesys_8c_adf6bcdcf2e3d6142242d37fb8524168f}\label{ltemc-filesys_8c_adf6bcdcf2e3d6142242d37fb8524168f}} 
 \index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_seek@{filsys\_seek}}
 \index{filsys\_seek@{filsys\_seek}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
 \doxysubsubsection{\texorpdfstring{filsys\_seek()}{filsys\_seek()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+seek (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle,  }\item[{uint32\+\_\+t}]{offset,  }\item[{\mbox{\hyperlink{ltemc-filesys_8h_ac67a60a608a19efef54c6fc33a0390bc}{file\+Seek\+Mode\+\_\+t}}}]{seek\+From }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t filsys\+\_\+seek (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle,  }\item[{uint32\+\_\+t}]{offset,  }\item[{\mbox{\hyperlink{ltemc-filesys_8h_ac67a60a608a19efef54c6fc33a0390bc}{file\+Seek\+Mode\+\_\+t}}}]{seek\+From }\end{DoxyParamCaption})}
 
 
 
@@ -182,7 +182,7 @@ Result\+Code=200 if successful, otherwise error code (H\+T\+TP status type).
 \index{ltemc-\/filesys.c@{ltemc-\/filesys.c}!filsys\_truncate@{filsys\_truncate}}
 \index{filsys\_truncate@{filsys\_truncate}!ltemc-\/filesys.c@{ltemc-\/filesys.c}}
 \doxysubsubsection{\texorpdfstring{filsys\_truncate()}{filsys\_truncate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} filsys\+\_\+truncate (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t filsys\+\_\+truncate (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{file\+Handle }\end{DoxyParamCaption})}
 
 
 

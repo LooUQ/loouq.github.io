@@ -1,0 +1,85 @@
+\hypertarget{structbase_ctrl__tag}{}\doxysection{base\+Ctrl\+\_\+tag Struct Reference}
+\label{structbase_ctrl__tag}\index{baseCtrl\_tag@{baseCtrl\_tag}}
+
+
+Abstract base struct containing common properties required of a stream control.  
+
+
+
+
+{\ttfamily \#include $<$ltemc-\/streams.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structbase_ctrl__tag_a0bbe3acc8af66c269be9842e1ba3b4e8}{ctrl\+Magic}}
+\begin{DoxyCompactList}\small\item\em magic flag to validate incoming requests \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} \mbox{\hyperlink{structbase_ctrl__tag_a0d521bc1dcfb2a34dc497b7ee2232d4a}{data\+Cntxt}}
+\begin{DoxyCompactList}\small\item\em Data context where this control operates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}} \mbox{\hyperlink{structbase_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}{protocol}}
+\begin{DoxyCompactList}\small\item\em Socket\textquotesingle{}s protocol \+: U\+D\+P/\+T\+C\+P/\+S\+SL. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structbase_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}{use\+Tls}}
+\begin{DoxyCompactList}\small\item\em flag indicating S\+S\+L/\+T\+LS applied to stream \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} \mbox{\hyperlink{structbase_ctrl__tag_abf49f0c9fac1ef9ac027dc3af5fece67}{recv\+Buf\+Ctrl}}
+\begin{DoxyCompactList}\small\item\em RX smart buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base struct containing common properties required of a stream control. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structbase_ctrl__tag_a0bbe3acc8af66c269be9842e1ba3b4e8}\label{structbase_ctrl__tag_a0bbe3acc8af66c269be9842e1ba3b4e8}} 
+\index{baseCtrl\_tag@{baseCtrl\_tag}!ctrlMagic@{ctrlMagic}}
+\index{ctrlMagic@{ctrlMagic}!baseCtrl\_tag@{baseCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{ctrlMagic}{ctrlMagic}}
+{\footnotesize\ttfamily uint8\+\_\+t ctrl\+Magic}
+
+
+
+magic flag to validate incoming requests 
+
+\mbox{\Hypertarget{structbase_ctrl__tag_a0d521bc1dcfb2a34dc497b7ee2232d4a}\label{structbase_ctrl__tag_a0d521bc1dcfb2a34dc497b7ee2232d4a}} 
+\index{baseCtrl\_tag@{baseCtrl\_tag}!dataCntxt@{dataCntxt}}
+\index{dataCntxt@{dataCntxt}!baseCtrl\_tag@{baseCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{dataCntxt}{dataCntxt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt}
+
+
+
+Data context where this control operates. 
+
+\mbox{\Hypertarget{structbase_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}\label{structbase_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}} 
+\index{baseCtrl\_tag@{baseCtrl\_tag}!protocol@{protocol}}
+\index{protocol@{protocol}!baseCtrl\_tag@{baseCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{protocol}{protocol}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}} protocol}
+
+
+
+Socket\textquotesingle{}s protocol \+: U\+D\+P/\+T\+C\+P/\+S\+SL. 
+
+\mbox{\Hypertarget{structbase_ctrl__tag_abf49f0c9fac1ef9ac027dc3af5fece67}\label{structbase_ctrl__tag_abf49f0c9fac1ef9ac027dc3af5fece67}} 
+\index{baseCtrl\_tag@{baseCtrl\_tag}!recvBufCtrl@{recvBufCtrl}}
+\index{recvBufCtrl@{recvBufCtrl}!baseCtrl\_tag@{baseCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{recvBufCtrl}{recvBufCtrl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} recv\+Buf\+Ctrl}
+
+
+
+RX smart buffer. 
+
+\mbox{\Hypertarget{structbase_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}\label{structbase_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}} 
+\index{baseCtrl\_tag@{baseCtrl\_tag}!useTls@{useTls}}
+\index{useTls@{useTls}!baseCtrl\_tag@{baseCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{useTls}{useTls}}
+{\footnotesize\ttfamily bool use\+Tls}
+
+
+
+flag indicating S\+S\+L/\+T\+LS applied to stream 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ltemc-streams_8h}{ltemc-\/streams.\+h}}\end{DoxyCompactItemize}

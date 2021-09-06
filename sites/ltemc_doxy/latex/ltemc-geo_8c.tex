@@ -6,6 +6,10 @@
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
+\#define \mbox{\hyperlink{ltemc-geo_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\item 
+\#define \mbox{\hyperlink{ltemc-geo_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)
+\item 
 \#define \mbox{\hyperlink{ltemc-geo_8c_a2031980b63739295cb00370c562502ea}{C\+O\+O\+R\+D\+\_\+\+SZ}}~12
 \item 
 \#define \mbox{\hyperlink{ltemc-geo_8c_a51090b50fa48de2553c9416a8b5420b3}{C\+O\+O\+R\+D\+\_\+P}}~6
@@ -15,15 +19,21 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-geo_8c_ab40b4d51ec69f12443a2bd9df603ed06}{geo\+\_\+add}} (uint8\+\_\+t geo\+Id, \mbox{\hyperlink{ltemc-geo_8h_a1743f274e7855cad904c6e0a0b210376}{geo\+\_\+mode\+\_\+t}} mode, \mbox{\hyperlink{ltemc-geo_8h_a23e31431e27c10909c781b91e0de739b}{geo\+\_\+shape\+\_\+t}} shape, double lat1, double lon1, double lat2, double lon2, double lat3, double lon3, double lat4, double lon4)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-geo_8c_ab40b4d51ec69f12443a2bd9df603ed06}{geo\+\_\+add}} (uint8\+\_\+t geo\+Id, \mbox{\hyperlink{ltemc-geo_8h_a1743f274e7855cad904c6e0a0b210376}{geo\+\_\+mode\+\_\+t}} mode, \mbox{\hyperlink{ltemc-geo_8h_a23e31431e27c10909c781b91e0de739b}{geo\+\_\+shape\+\_\+t}} shape, double lat1, double lon1, double lat2, double lon2, double lat3, double lon3, double lat4, double lon4)
 \begin{DoxyCompactList}\small\item\em Create a geo-\/fence for future position evaluations. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-geo_8c_a50b412fb34f2e90987d810d8a6601a79}{geo\+\_\+delete}} (uint8\+\_\+t geo\+Id)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-geo_8c_a50b412fb34f2e90987d810d8a6601a79}{geo\+\_\+delete}} (uint8\+\_\+t geo\+Id)
 \begin{DoxyCompactList}\small\item\em Delete a geo-\/fence for future position evaluations. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-geo_8h_a2727f688337b2cffaf142a99943ace58}{geo\+\_\+position\+\_\+t}} \mbox{\hyperlink{ltemc-geo_8c_abb26509c6fb36299e469e74f2edb4d07}{geo\+\_\+query}} (uint8\+\_\+t geo\+Id)
 \begin{DoxyCompactList}\small\item\em Determine the current location relation to a geo-\/fence, aka are you inside or outside the fence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-geo_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltemc-geo_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltemc-\/geo.c@{ltemc-\/geo.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltemc-\/geo.c@{ltemc-\/geo.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+
 \mbox{\Hypertarget{ltemc-geo_8c_ac6735b407366cd00edf1c139d051a0c3}\label{ltemc-geo_8c_ac6735b407366cd00edf1c139d051a0c3}} 
 \index{ltemc-\/geo.c@{ltemc-\/geo.c}!CMDSZ@{CMDSZ}}
 \index{CMDSZ@{CMDSZ}!ltemc-\/geo.c@{ltemc-\/geo.c}}
@@ -42,6 +52,12 @@
 \doxysubsubsection{\texorpdfstring{COORD\_SZ}{COORD\_SZ}}
 {\footnotesize\ttfamily \#define C\+O\+O\+R\+D\+\_\+\+SZ~12}
 
+\mbox{\Hypertarget{ltemc-geo_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-geo_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/geo.c@{ltemc-\/geo.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/geo.c@{ltemc-\/geo.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Function Documentation}
@@ -49,7 +65,7 @@
 \index{ltemc-\/geo.c@{ltemc-\/geo.c}!geo\_add@{geo\_add}}
 \index{geo\_add@{geo\_add}!ltemc-\/geo.c@{ltemc-\/geo.c}}
 \doxysubsubsection{\texorpdfstring{geo\_add()}{geo\_add()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} geo\+\_\+add (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{geo\+Id,  }\item[{\mbox{\hyperlink{ltemc-geo_8h_a1743f274e7855cad904c6e0a0b210376}{geo\+\_\+mode\+\_\+t}}}]{mode,  }\item[{\mbox{\hyperlink{ltemc-geo_8h_a23e31431e27c10909c781b91e0de739b}{geo\+\_\+shape\+\_\+t}}}]{shape,  }\item[{double}]{lat1,  }\item[{double}]{lon1,  }\item[{double}]{lat2,  }\item[{double}]{lon2,  }\item[{double}]{lat3,  }\item[{double}]{lon3,  }\item[{double}]{lat4,  }\item[{double}]{lon4 }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t geo\+\_\+add (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{geo\+Id,  }\item[{\mbox{\hyperlink{ltemc-geo_8h_a1743f274e7855cad904c6e0a0b210376}{geo\+\_\+mode\+\_\+t}}}]{mode,  }\item[{\mbox{\hyperlink{ltemc-geo_8h_a23e31431e27c10909c781b91e0de739b}{geo\+\_\+shape\+\_\+t}}}]{shape,  }\item[{double}]{lat1,  }\item[{double}]{lon1,  }\item[{double}]{lat2,  }\item[{double}]{lon2,  }\item[{double}]{lat3,  }\item[{double}]{lon3,  }\item[{double}]{lat4,  }\item[{double}]{lon4 }\end{DoxyParamCaption})}
 
 
 
@@ -59,7 +75,7 @@ Create a geo-\/fence for future position evaluations.
 \index{ltemc-\/geo.c@{ltemc-\/geo.c}!geo\_delete@{geo\_delete}}
 \index{geo\_delete@{geo\_delete}!ltemc-\/geo.c@{ltemc-\/geo.c}}
 \doxysubsubsection{\texorpdfstring{geo\_delete()}{geo\_delete()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} geo\+\_\+delete (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{geo\+Id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t geo\+\_\+delete (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{geo\+Id }\end{DoxyParamCaption})}
 
 
 

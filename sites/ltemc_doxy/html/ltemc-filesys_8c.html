@@ -75,7 +75,7 @@ $(function() {
 <div class="title">ltemc-filesys.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ltemc_8h_source.html">ltemc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ltemc-internal_8h_source.html">ltemc-internal.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ltemc-filesys_8h_source.html">ltemc-filesys.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -101,24 +101,24 @@ Functions</h2></td></tr>
 <tr class="separator:adbe9253f31fdae83f5137b9c452fdaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86de74ffc505b08c8f9a9c559381998a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-filesys_8h.html#a92ef775ce58e30a0e5e1f48bbd0cfb9e">fileListResult_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a86de74ffc505b08c8f9a9c559381998a">filsys_list</a> (const char *fileName)</td></tr>
 <tr class="separator:a86de74ffc505b08c8f9a9c559381998a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c4b2d6d9db9c616edd876bced85f432"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a1c4b2d6d9db9c616edd876bced85f432">filsys_delete</a> (const char *fileName)</td></tr>
+<tr class="memitem:a1c4b2d6d9db9c616edd876bced85f432"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a1c4b2d6d9db9c616edd876bced85f432">filsys_delete</a> (const char *fileName)</td></tr>
 <tr class="memdesc:a1c4b2d6d9db9c616edd876bced85f432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a file from the file system.  <a href="ltemc-filesys_8c.html#a1c4b2d6d9db9c616edd876bced85f432">More...</a><br /></td></tr>
 <tr class="separator:a1c4b2d6d9db9c616edd876bced85f432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c3f4eb22a933b3fbca8d95a9f40363"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-filesys_8h.html#a484ac9461ccfbea1e7911f526933ee9e">fileOpenResult_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a77c3f4eb22a933b3fbca8d95a9f40363">filsys_open</a> (const char *fileName, <a class="el" href="ltemc-filesys_8h.html#ab1f8e73ad2ef8f206d19def6769b3612">fileOpenMode_t</a> openMode, <a class="el" href="ltemc-filesys_8h.html#a57b67beed3c715abf4a1a35fb5d56e5b">fileReceiver_func_t</a> fileRecvr_func)</td></tr>
 <tr class="separator:a77c3f4eb22a933b3fbca8d95a9f40363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8db9503967cdc111177b7bf94fd39ea3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a8db9503967cdc111177b7bf94fd39ea3">filsys_read</a> (uint16_t fileHandle, uint16_t readSz)</td></tr>
+<tr class="memitem:a8db9503967cdc111177b7bf94fd39ea3"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a8db9503967cdc111177b7bf94fd39ea3">filsys_read</a> (uint16_t fileHandle, uint16_t readSz)</td></tr>
 <tr class="separator:a8db9503967cdc111177b7bf94fd39ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81912bf03b49be4bd2232c76c47487b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-filesys_8h.html#a8a7506f92c9719ea5ead6f93501be76e">fileWriteResult_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a81912bf03b49be4bd2232c76c47487b1">filsys_write</a> (uint16_t fileHandle, const char *writeData, uint16_t writeSz)</td></tr>
 <tr class="separator:a81912bf03b49be4bd2232c76c47487b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf6bcdcf2e3d6142242d37fb8524168f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#adf6bcdcf2e3d6142242d37fb8524168f">filsys_seek</a> (uint16_t fileHandle, uint32_t offset, <a class="el" href="ltemc-filesys_8h.html#ac67a60a608a19efef54c6fc33a0390bc">fileSeekMode_t</a> seekFrom)</td></tr>
+<tr class="memitem:adf6bcdcf2e3d6142242d37fb8524168f"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#adf6bcdcf2e3d6142242d37fb8524168f">filsys_seek</a> (uint16_t fileHandle, uint32_t offset, <a class="el" href="ltemc-filesys_8h.html#ac67a60a608a19efef54c6fc33a0390bc">fileSeekMode_t</a> seekFrom)</td></tr>
 <tr class="memdesc:adf6bcdcf2e3d6142242d37fb8524168f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the file pointer.  <a href="ltemc-filesys_8c.html#adf6bcdcf2e3d6142242d37fb8524168f">More...</a><br /></td></tr>
 <tr class="separator:adf6bcdcf2e3d6142242d37fb8524168f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a047bd98174c93c70c370ebd43ec91da6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-filesys_8h.html#afd53939afa95dc15e207663e8f5a476e">filePositionResult_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a047bd98174c93c70c370ebd43ec91da6">filsys_getPosition</a> (uint16_t fileHandle)</td></tr>
 <tr class="separator:a047bd98174c93c70c370ebd43ec91da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a382455fbd5423e59af58e5a287dc75d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a382455fbd5423e59af58e5a287dc75d0">filsys_truncate</a> (uint16_t fileHandle)</td></tr>
+<tr class="memitem:a382455fbd5423e59af58e5a287dc75d0"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a382455fbd5423e59af58e5a287dc75d0">filsys_truncate</a> (uint16_t fileHandle)</td></tr>
 <tr class="memdesc:a382455fbd5423e59af58e5a287dc75d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncate all the data beyond the current position of the file pointer.  <a href="ltemc-filesys_8c.html#a382455fbd5423e59af58e5a287dc75d0">More...</a><br /></td></tr>
 <tr class="separator:a382455fbd5423e59af58e5a287dc75d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9660070f7f914d3438c83a7aa8651687"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a9660070f7f914d3438c83a7aa8651687">filsys_close</a> (uint16_t fileHandle)</td></tr>
+<tr class="memitem:a9660070f7f914d3438c83a7aa8651687"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-filesys_8c.html#a9660070f7f914d3438c83a7aa8651687">filsys_close</a> (uint16_t fileHandle)</td></tr>
 <tr class="memdesc:a9660070f7f914d3438c83a7aa8651687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the file.  <a href="ltemc-filesys_8c.html#a9660070f7f914d3438c83a7aa8651687">More...</a><br /></td></tr>
 <tr class="separator:a9660070f7f914d3438c83a7aa8651687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -205,7 +205,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> filsys_close </td>
+          <td class="memname">resultCode_t filsys_close </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>fileHandle</em></td><td>)</td>
@@ -232,7 +232,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> filsys_delete </td>
+          <td class="memname">resultCode_t filsys_delete </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
@@ -346,7 +346,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> filsys_read </td>
+          <td class="memname">resultCode_t filsys_read </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>fileHandle</em>, </td>
@@ -374,7 +374,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> filsys_seek </td>
+          <td class="memname">resultCode_t filsys_seek </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>fileHandle</em>, </td>
@@ -437,7 +437,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> filsys_truncate </td>
+          <td class="memname">resultCode_t filsys_truncate </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>fileHandle</em></td><td>)</td>

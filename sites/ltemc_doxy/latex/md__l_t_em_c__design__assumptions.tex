@@ -1,0 +1,54 @@
+\hypertarget{md__l_t_em_c__design__assumptions_autotoc_md8}{}\doxysection{Code Conventions}\label{md__l_t_em_c__design__assumptions_autotoc_md8}
+
+\begin{DoxyItemize}
+\item The L\+T\+EmC driver is split into numerous files. Some expose interfaces for public (A\+PI) consumption, some are intended for only internal use.
+\item Intended scope or visibility is indicated with function prefixes
+\begin{DoxyItemize}
+\item \{module\+\_\+name\}\+\_\+ prefix indicates a public function intended for consumption by the device application.
+\item S\+\_\+ is a static local function scoped to the current compilation unit
+\item \{M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+ME\}\+\_\+ prefix indicates internal to L\+T\+EmC and not intended for application use. {\itshape These are being rounded up for a future move to the \mbox{\hyperlink{ltemc-internal_8h}{ltemc-\/internal.\+h}} header.}
+\end{DoxyItemize}
+\item Source files attempt to use pragma regions to keep major blocks identifiable.
+\begin{DoxyItemize}
+\item Regions in all files (wip) are\+: \char`\"{}\+L\+T\+Em Internal Functions\char`\"{}, \char`\"{}\+Public Functions\char`\"{}, \char`\"{}\+Static Function Definitions\char`\"{}
+\end{DoxyItemize}
+\item {\bfseries{Code cleanup to adhere to these conventions is a focus for the version 2.\+1 release in July 2021}}
+\end{DoxyItemize}\hypertarget{md__l_t_em_c__design__assumptions_autotoc_md9}{}\doxysection{Debug Defines}\label{md__l_t_em_c__design__assumptions_autotoc_md9}
+Loo\+UQ uses the Segger J-\/\+Link as a core part of our toolkit. Beyond breakpoints and flashing memory, the J-\/\+Link software provides a facility for high-\/speed terminal streams to a viewer on your development computer. The R\+TT, or real-\/time terminal, facility makes it relatively straight forward to report out debugging information. The P\+R\+I\+N\+TF and D\+B\+G\+C\+O\+L\+O\+R\+\_\+ macros are designed to take advantage of the R\+TT facility. Additionally, the R\+TT viewer can display debugging information in color, the output color is specified with the D\+B\+G\+C\+O\+L\+O\+R\+\_\+ macros. The P\+R\+I\+N\+TF macros can fall-\/back to using the much slower serial capabilities of the Arduino platform.
+
+Segger R\+TT Facility\+: \href{https://wiki.segger.com/UM08001_J-Link_/_J-Trace_User_Guide}{\texttt{ https\+://wiki.\+segger.\+com/\+U\+M08001\+\_\+\+J-\/\+Link\+\_\+/\+\_\+\+J-\/\+Trace\+\_\+\+User\+\_\+\+Guide}}\hypertarget{md__l_t_em_c__design__assumptions_autotoc_md10}{}\doxysection{Using A\+S\+S\+E\+R\+T\+S and Notification Callbacks}\label{md__l_t_em_c__design__assumptions_autotoc_md10}
+The L\+T\+EmC software was designed to be a subsystem within your application.\hypertarget{md__l_t_em_c__design__assumptions_autotoc_md11}{}\doxysubsection{A\+S\+S\+E\+R\+TS}\label{md__l_t_em_c__design__assumptions_autotoc_md11}
+A\+S\+S\+E\+R\+Ts are macro constructs that signal a serious, and likely unrecoverable condition. They should stay in production code to prevent \char`\"{}weird\char`\"{} errors downstream of the problem. A\+S\+S\+E\+R\+TS use the \mbox{\hyperlink{ltemc_8c_a80df97bbc632eda7178e56368c3d0a1e}{ltem\+\_\+notify\+App()}} function if it is registered at application start. A\+S\+S\+E\+R\+Ts can also, optionally write a lq\+Diagnostics\+\_\+t information block with information about the file, line and conditions of the failed A\+S\+S\+E\+RT. To fully disable A\+S\+S\+E\+R\+Ts, you will need to define the N\+O\+\_\+\+A\+S\+S\+E\+R\+TS macro in your make workflow or in the lq-\/assert.\+h header file (part of Loo\+U\+Q-\/\+Common library).
+
+The lq\+Diagnostics\+\_\+t information block can be configured to survive a device reset (provided power stays on to memory). This allows for collection and reporting of this information remotely on reset. For information on how to accomplish this see the article on {\itshape lq\+Diagnostics} available on \href{https://answers.loouq.com}{\texttt{ https\+://answers.\+loouq.\+com}}. For a working example, the L\+Q\+Cloud client automatically reports this information for a system or watchdog reset; there is a working example in examples/\+L\+Q\+Cloud\+Test in the L\+Q\+Cloud Client repository on Git\+Hub.\hypertarget{md__l_t_em_c__design__assumptions_autotoc_md12}{}\doxysubsection{W\+A\+R\+N\+I\+NG}\label{md__l_t_em_c__design__assumptions_autotoc_md12}
+W\+A\+R\+N\+I\+N\+Gs are macro constructs that are intended for use during development. They won\textquotesingle{}t break code if accidently left on in production but they will occupy code space. In the few spots where these are implemented they are there to check for non-\/optimal parameters in a function call. Example\+: a buffer size that will create unused, but allocate memory.\hypertarget{md__l_t_em_c__design__assumptions_autotoc_md13}{}\doxysubsection{ltem\+\_\+notify\+App()}\label{md__l_t_em_c__design__assumptions_autotoc_md13}
+The {\bfseries{\mbox{\hyperlink{ltemc_8h_a80df97bbc632eda7178e56368c3d0a1e}{ltem\+\_\+notify\+App(uint8\+\_\+t notify\+Type, const char $\ast$notify\+Msg)}}}} function is an optional facility, but S\+T\+R\+O\+N\+G\+LY recommended, to allow the L\+T\+EmC driver to signal to the application both recoverable and non-\/recoverable events. A\+S\+S\+E\+R\+TS will use this facility if provided with
+
+The \mbox{\hyperlink{ltemc_8c_a80df97bbc632eda7178e56368c3d0a1e}{ltem\+\_\+notify\+App()}} callback function you provide can perform various important tasks, such as\+:
+\begin{DoxyItemize}
+\item Retries for recoverable failures in hardware, network or protocol application areas. Example; power cycle modem for hardware type notification and restart the communication stack.
+\item Local display or indications of important conditions (examples\+: write messages to an O\+L\+ED display, or set the color of a Neo\+Pixel).
+\item Logging to flash or a S\+D-\/\+Card of events
+\end{DoxyItemize}\hypertarget{md__l_t_em_c__design__assumptions_autotoc_md14}{}\doxysection{Extensibility Points}\label{md__l_t_em_c__design__assumptions_autotoc_md14}
+L\+T\+EmC is extensible. Loo\+UQ believes that the major use cases are covered, but there are hundreds of AT commands on the B\+Gx family. The guide to extensibility is below\+:
+\begin{DoxyItemize}
+\item {\bfseries{atcmd}} is the primary extension A\+PI. This module handles the IO and command completion for you, with minimal assistance (see completion parsers below).
+\item It is recommended that you avoid changes to the modules below, as these have dependencies across the L\+T\+EmC software.
+\begin{DoxyItemize}
+\item {\bfseries{nxp-\/sc16is}}
+\item {\bfseries{quectel-\/bg}}
+\item {\bfseries{iop}}
+\end{DoxyItemize}
+\item If you are porting L\+T\+EmC to non-\/\+Arduino like hardware, you will need to supply the A\+PI specified in the \mbox{\hyperlink{lq-platform_8h}{lq-\/platform.\+h}} header. If you need help or some directions, please post a question on the answers.\+loouq.\+com site.
+\end{DoxyItemize}\hypertarget{md__l_t_em_c__design__assumptions_autotoc_md15}{}\doxysection{I\+O\+P -\/ The I/\+O Processor}\label{md__l_t_em_c__design__assumptions_autotoc_md15}
+I\+OP performs the duties of direct communications with the L\+T\+Em device. This is via the N\+XP U\+A\+R\+T/\+S\+PI bridge to the B\+Gx module.
+
+
+\begin{DoxyItemize}
+\item I\+OP uses two types of receive (RX) buffers\+:
+\begin{DoxyItemize}
+\item A single core buffer that is used for AT command responses A\+ND to receive async network messages
+\item One or more (one per protocol control) RX data buffers to receive incoming payload data. Note\+: that the {\itshape data} RX buffer is split into 2 pages to allow for simultaneous (like) filling and emptying.
+\end{DoxyItemize}
+\item I\+OP assumes that the current buffer page, indicated by the {\itshape {\bfseries{buffer-\/$>$iop\+Pg}}} is valid and empty at the start of an I\+SR (interrupt event). If the page has not yet been completely emptied that is a buffer overflow and data loss will acure. 
+\end{DoxyItemize}

@@ -78,47 +78,100 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a8664baf8552bdb7eaee20d25a9f3afba"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a8664baf8552bdb7eaee20d25a9f3afba">cmdStr</a> [<a class="el" href="ltemc-iop_8h.html#ace6954db00eab481db6e35ed4491dd0a">IOP_TX_BUFFER_SZ</a>]</td></tr>
-<tr class="memdesc:a8664baf8552bdb7eaee20d25a9f3afba"><td class="mdescLeft">&#160;</td><td class="mdescRight">AT command string to be passed to the BGx module.  <a href="structatcmd__tag.html#a8664baf8552bdb7eaee20d25a9f3afba">More...</a><br /></td></tr>
-<tr class="separator:a8664baf8552bdb7eaee20d25a9f3afba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">isOpen</a></td></tr>
-<tr class="memdesc:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation.  <a href="structatcmd__tag.html#a882afa92abc68d9b1fa39a42f56a8b3d">More...</a><br /></td></tr>
-<tr class="separator:a882afa92abc68d9b1fa39a42f56a8b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07b48436c03fc28b9a57f6f64b82bd5"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#af07b48436c03fc28b9a57f6f64b82bd5">cmdStr</a> [<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8">IOP__rxCoreBufferSize</a>]</td></tr>
+<tr class="memdesc:af07b48436c03fc28b9a57f6f64b82bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">AT command string to be passed to the BGx module.  <a href="structatcmd__tag.html#af07b48436c03fc28b9a57f6f64b82bd5">More...</a><br /></td></tr>
+<tr class="separator:af07b48436c03fc28b9a57f6f64b82bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5fe4d4ad6a0194a80fb1d08aea1383f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#ac5fe4d4ad6a0194a80fb1d08aea1383f">timeoutMS</a></td></tr>
+<tr class="memdesc:ac5fe4d4ad6a0194a80fb1d08aea1383f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timout in milliseconds for the command, defaults to 300mS. BGx documentation indicates cmds with longer timeout.  <a href="structatcmd__tag.html#ac5fe4d4ad6a0194a80fb1d08aea1383f">More...</a><br /></td></tr>
+<tr class="separator:ac5fe4d4ad6a0194a80fb1d08aea1383f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c69c52917ebde0247df730ac97d94aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a5c69c52917ebde0247df730ac97d94aa">autoLock</a></td></tr>
+<tr class="memdesc:a5c69c52917ebde0247df730ac97d94aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">next invoke should acquire lock (true), or reuse lock (false)  <a href="structatcmd__tag.html#a5c69c52917ebde0247df730ac97d94aa">More...</a><br /></td></tr>
+<tr class="separator:a5c69c52917ebde0247df730ac97d94aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19772b5f09be5cf1b45db25c6710173e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a19772b5f09be5cf1b45db25c6710173e">isOpenLocked</a></td></tr>
+<tr class="memdesc:a19772b5f09be5cf1b45db25c6710173e"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation.  <a href="structatcmd__tag.html#a19772b5f09be5cf1b45db25c6710173e">More...</a><br /></td></tr>
+<tr class="separator:a19772b5f09be5cf1b45db25c6710173e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5060510445edaff8c6d26aba0141eaae"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a5060510445edaff8c6d26aba0141eaae">invokedAt</a></td></tr>
 <tr class="memdesc:a5060510445edaff8c6d26aba0141eaae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tick value at the command invocation, used for timeout detection.  <a href="structatcmd__tag.html#a5060510445edaff8c6d26aba0141eaae">More...</a><br /></td></tr>
 <tr class="separator:a5060510445edaff8c6d26aba0141eaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">resultCode</a></td></tr>
-<tr class="memdesc:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTML type response code, 0 is special "pending" status, see ACTION_RESULT_* codes.  <a href="structatcmd__tag.html#adc00dec5f45402bb5c65d7451fb4d3ad">More...</a><br /></td></tr>
-<tr class="separator:adc00dec5f45402bb5c65d7451fb4d3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11373f02c42587a1853ad6c8be5fe10e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a></td></tr>
-<tr class="memdesc:a11373f02c42587a1853ad6c8be5fe10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The response to the command received from the BGx.  <a href="structatcmd__tag.html#a11373f02c42587a1853ad6c8be5fe10e">More...</a><br /></td></tr>
+<tr class="memdesc:a11373f02c42587a1853ad6c8be5fe10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The response to the command received from the BGx. Points into IOP core buffer.  <a href="structatcmd__tag.html#a11373f02c42587a1853ad6c8be5fe10e">More...</a><br /></td></tr>
 <tr class="separator:a11373f02c42587a1853ad6c8be5fe10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62141174b7f53e381c1ce0ad0b47b867"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a62141174b7f53e381c1ce0ad0b47b867">timeoutMillis</a></td></tr>
-<tr class="memdesc:a62141174b7f53e381c1ce0ad0b47b867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timout in milliseconds for the command, defaults to 300mS. BGx documentation indicates cmds with longer timeout.  <a href="structatcmd__tag.html#a62141174b7f53e381c1ce0ad0b47b867">More...</a><br /></td></tr>
-<tr class="separator:a62141174b7f53e381c1ce0ad0b47b867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2149ed86f06d847f2d16b7e1b1e6f2f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-atcmd_8h.html#a202f5479dd8fdc8ba91965f37ae2187a">atcmdHistory_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a2149ed86f06d847f2d16b7e1b1e6f2f9">lastActionError</a></td></tr>
-<tr class="memdesc:a2149ed86f06d847f2d16b7e1b1e6f2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct containing information on last action response.  <a href="structatcmd__tag.html#a2149ed86f06d847f2d16b7e1b1e6f2f9">More...</a><br /></td></tr>
-<tr class="separator:a2149ed86f06d847f2d16b7e1b1e6f2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="memItemLeft" align="right" valign="top">uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">taskCompleteParser_func</a> )(const char *<a class="el" href="structatcmd__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>, char **endptr)</td></tr>
-<tr class="memdesc:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to parse the response looking for completion.  <a href="structatcmd__tag.html#a78ce7b65f47dda02b282b22bc6ef5cef">More...</a><br /></td></tr>
-<tr class="separator:a78ce7b65f47dda02b282b22bc6ef5cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1dc8719ae56d7ce5897f8766947a4e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a9e1dc8719ae56d7ce5897f8766947a4e">responseTail</a></td></tr>
+<tr class="memdesc:a9e1dc8719ae56d7ce5897f8766947a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the unparsed section of the response, beyond complete parser's match.  <a href="structatcmd__tag.html#a9e1dc8719ae56d7ce5897f8766947a4e">More...</a><br /></td></tr>
+<tr class="separator:a9e1dc8719ae56d7ce5897f8766947a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6e63d5193d08274eda0a0564b4d9d6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a6f6e63d5193d08274eda0a0564b4d9d6">execDuration</a></td></tr>
+<tr class="memdesc:a6f6e63d5193d08274eda0a0564b4d9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">duration of command's execution in milliseconds  <a href="structatcmd__tag.html#a6f6e63d5193d08274eda0a0564b4d9d6">More...</a><br /></td></tr>
+<tr class="separator:a6f6e63d5193d08274eda0a0564b4d9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9af25a633872f85ee648a31a158bb649"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a9af25a633872f85ee648a31a158bb649">resultCode</a></td></tr>
+<tr class="separator:a9af25a633872f85ee648a31a158bb649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6fccd21132f9c6ea59bc5dbf0e90c0"><td class="memItemLeft" align="right" valign="top">uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a6a6fccd21132f9c6ea59bc5dbf0e90c0">completeParser_func</a> )(const char *<a class="el" href="structatcmd__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>, char **endptr)</td></tr>
+<tr class="memdesc:a6a6fccd21132f9c6ea59bc5dbf0e90c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to parse the response looking for completion.  <a href="structatcmd__tag.html#a6a6fccd21132f9c6ea59bc5dbf0e90c0">More...</a><br /></td></tr>
+<tr class="separator:a6a6fccd21132f9c6ea59bc5dbf0e90c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure to control invocation and management of an AT command with the BGx module. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a8664baf8552bdb7eaee20d25a9f3afba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8664baf8552bdb7eaee20d25a9f3afba">&#9670;&nbsp;</a></span>cmdStr</h2>
+<a id="a5c69c52917ebde0247df730ac97d94aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c69c52917ebde0247df730ac97d94aa">&#9670;&nbsp;</a></span>autoLock</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char cmdStr[<a class="el" href="ltemc-iop_8h.html#ace6954db00eab481db6e35ed4491dd0a">IOP_TX_BUFFER_SZ</a>]</td>
+          <td class="memname">bool autoLock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>next invoke should acquire lock (true), or reuse lock (false) </p>
+
+</div>
+</div>
+<a id="af07b48436c03fc28b9a57f6f64b82bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07b48436c03fc28b9a57f6f64b82bd5">&#9670;&nbsp;</a></span>cmdStr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char cmdStr[<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8">IOP__rxCoreBufferSize</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>AT command string to be passed to the BGx module. </p>
+
+</div>
+</div>
+<a id="a6a6fccd21132f9c6ea59bc5dbf0e90c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6fccd21132f9c6ea59bc5dbf0e90c0">&#9670;&nbsp;</a></span>completeParser_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t(* completeParser_func) (const char *<a class="el" href="structatcmd__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>, char **endptr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to parse the response looking for completion. </p>
+
+</div>
+</div>
+<a id="a6f6e63d5193d08274eda0a0564b4d9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6e63d5193d08274eda0a0564b4d9d6">&#9670;&nbsp;</a></span>execDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t execDuration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>duration of command's execution in milliseconds </p>
 
 </div>
 </div>
@@ -138,36 +191,19 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a882afa92abc68d9b1fa39a42f56a8b3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a882afa92abc68d9b1fa39a42f56a8b3d">&#9670;&nbsp;</a></span>isOpen</h2>
+<a id="a19772b5f09be5cf1b45db25c6710173e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19772b5f09be5cf1b45db25c6710173e">&#9670;&nbsp;</a></span>isOpenLocked</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool isOpen</td>
+          <td class="memname">bool isOpenLocked</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation. </p>
-
-</div>
-</div>
-<a id="a2149ed86f06d847f2d16b7e1b1e6f2f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2149ed86f06d847f2d16b7e1b1e6f2f9">&#9670;&nbsp;</a></span>lastActionError</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="ltemc-atcmd_8h.html#a202f5479dd8fdc8ba91965f37ae2187a">atcmdHistory_t</a>* lastActionError</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Struct containing information on last action response. </p>
-<dl class="section return"><dt>Returns</dt><dd>. NOTE: only set on NON-SUCCESS. </dd></dl>
 
 </div>
 </div>
@@ -183,50 +219,48 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The response to the command received from the BGx. </p>
+<p>The response to the command received from the BGx. Points into IOP core buffer. </p>
 
 </div>
 </div>
-<a id="adc00dec5f45402bb5c65d7451fb4d3ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc00dec5f45402bb5c65d7451fb4d3ad">&#9670;&nbsp;</a></span>resultCode</h2>
+<a id="a9e1dc8719ae56d7ce5897f8766947a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e1dc8719ae56d7ce5897f8766947a4e">&#9670;&nbsp;</a></span>responseTail</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t resultCode</td>
+          <td class="memname">char* responseTail</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>HTML type response code, 0 is special "pending" status, see ACTION_RESULT_* codes. </p>
+<p>Pointer to the unparsed section of the response, beyond complete parser's match. </p>
 
 </div>
 </div>
-<a id="a78ce7b65f47dda02b282b22bc6ef5cef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78ce7b65f47dda02b282b22bc6ef5cef">&#9670;&nbsp;</a></span>taskCompleteParser_func</h2>
+<a id="a9af25a633872f85ee648a31a158bb649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9af25a633872f85ee648a31a158bb649">&#9670;&nbsp;</a></span>resultCode</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t(* taskCompleteParser_func) (const char *<a class="el" href="structatcmd__tag.html#a11373f02c42587a1853ad6c8be5fe10e">response</a>, char **endptr)</td>
+          <td class="memname">resultCode_t resultCode</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function to parse the response looking for completion. </p>
-
 </div>
 </div>
-<a id="a62141174b7f53e381c1ce0ad0b47b867"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62141174b7f53e381c1ce0ad0b47b867">&#9670;&nbsp;</a></span>timeoutMillis</h2>
+<a id="ac5fe4d4ad6a0194a80fb1d08aea1383f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5fe4d4ad6a0194a80fb1d08aea1383f">&#9670;&nbsp;</a></span>timeoutMS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t timeoutMillis</td>
+          <td class="memname">uint32_t timeoutMS</td>
         </tr>
       </table>
 </div><div class="memdoc">

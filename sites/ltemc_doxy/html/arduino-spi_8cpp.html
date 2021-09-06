@@ -76,8 +76,9 @@ $(function() {
 <div class="title">arduino-spi.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="lq_platform-spi_8h_source.html">lqPlatform-spi.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
 <code>#include &lt;SPI.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lq_platform-spi_8h_source.html">lqPlatform-spi.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -91,27 +92,27 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5e629af9e158854d6d41a0dba7ecc75a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#a5e629af9e158854d6d41a0dba7ecc75a">spi_create</a> (uint8_t chipSelLine)</td></tr>
-<tr class="memdesc:a5e629af9e158854d6d41a0dba7ecc75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize and configure SPI resource.  <a href="arduino-spi_8cpp.html#a5e629af9e158854d6d41a0dba7ecc75a">More...</a><br /></td></tr>
-<tr class="separator:a5e629af9e158854d6d41a0dba7ecc75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45c8d9705d1bc13c7ec70802a093d6fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#a45c8d9705d1bc13c7ec70802a093d6fd">spi_start</a> (<a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *spi)</td></tr>
-<tr class="memdesc:a45c8d9705d1bc13c7ec70802a093d6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start SPI facility.  <a href="arduino-spi_8cpp.html#a45c8d9705d1bc13c7ec70802a093d6fd">More...</a><br /></td></tr>
-<tr class="separator:a45c8d9705d1bc13c7ec70802a093d6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac43205ab2b3a372d691038846af215e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#ac43205ab2b3a372d691038846af215e1">spi_stop</a> (<a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *spi)</td></tr>
-<tr class="memdesc:ac43205ab2b3a372d691038846af215e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown SPI facility.  <a href="arduino-spi_8cpp.html#ac43205ab2b3a372d691038846af215e1">More...</a><br /></td></tr>
-<tr class="separator:ac43205ab2b3a372d691038846af215e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e81266ae193ee01843d1983f4e9c070"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#a2e81266ae193ee01843d1983f4e9c070">spi_protectFromInterrupt</a> (<a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *spi, int8_t irqNumber)</td></tr>
-<tr class="memdesc:a2e81266ae193ee01843d1983f4e9c070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uninitialize and deallocate memory from the SPI resource.  <a href="arduino-spi_8cpp.html#a2e81266ae193ee01843d1983f4e9c070">More...</a><br /></td></tr>
-<tr class="separator:a2e81266ae193ee01843d1983f4e9c070"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43175a171206cea7014e1194b1586cb0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#a43175a171206cea7014e1194b1586cb0">spi_transferByte</a> (<a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *spi, uint8_t data)</td></tr>
-<tr class="memdesc:a43175a171206cea7014e1194b1586cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer a byte to the NXP bridge.  <a href="arduino-spi_8cpp.html#a43175a171206cea7014e1194b1586cb0">More...</a><br /></td></tr>
-<tr class="separator:a43175a171206cea7014e1194b1586cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c190d04edd889680ef260b28c468c92"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#a7c190d04edd889680ef260b28c468c92">spi_transferWord</a> (<a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *spi, uint16_t data)</td></tr>
-<tr class="memdesc:a7c190d04edd889680ef260b28c468c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer a word (16-bits) to the NXP bridge.  <a href="arduino-spi_8cpp.html#a7c190d04edd889680ef260b28c468c92">More...</a><br /></td></tr>
-<tr class="separator:a7c190d04edd889680ef260b28c468c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac614af75d420958206ff201e47c6c22e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#ac614af75d420958206ff201e47c6c22e">spi_transferBuffer</a> (<a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *spi, uint8_t regAddrByte, void *buf, size_t xfer_len)</td></tr>
-<tr class="memdesc:ac614af75d420958206ff201e47c6c22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer a buffer to the NXP bridge.  <a href="arduino-spi_8cpp.html#ac614af75d420958206ff201e47c6c22e">More...</a><br /></td></tr>
-<tr class="separator:ac614af75d420958206ff201e47c6c22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8850c224d078301551423b549256f2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#aee8850c224d078301551423b549256f2">spi_create</a> (uint8_t chipSelLine)</td></tr>
+<tr class="memdesc:aee8850c224d078301551423b549256f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize and configure SPI resource.  <a href="arduino-spi_8cpp.html#aee8850c224d078301551423b549256f2">More...</a><br /></td></tr>
+<tr class="separator:aee8850c224d078301551423b549256f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af13bba8dc61b765c9c87bf71854af7e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#af13bba8dc61b765c9c87bf71854af7e6">spi_start</a> (void *spi)</td></tr>
+<tr class="memdesc:af13bba8dc61b765c9c87bf71854af7e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start SPI facility.  <a href="arduino-spi_8cpp.html#af13bba8dc61b765c9c87bf71854af7e6">More...</a><br /></td></tr>
+<tr class="separator:af13bba8dc61b765c9c87bf71854af7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add9525c59f9ca04352a57672dd3b3367"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#add9525c59f9ca04352a57672dd3b3367">spi_stop</a> (void *spi)</td></tr>
+<tr class="memdesc:add9525c59f9ca04352a57672dd3b3367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown SPI facility.  <a href="arduino-spi_8cpp.html#add9525c59f9ca04352a57672dd3b3367">More...</a><br /></td></tr>
+<tr class="separator:add9525c59f9ca04352a57672dd3b3367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30b7a448d1cb625b9d41a85c7899910"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#ae30b7a448d1cb625b9d41a85c7899910">spi_protectFromInterrupt</a> (void *spi, int8_t irqNumber)</td></tr>
+<tr class="memdesc:ae30b7a448d1cb625b9d41a85c7899910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uninitialize and deallocate memory from the SPI resource.  <a href="arduino-spi_8cpp.html#ae30b7a448d1cb625b9d41a85c7899910">More...</a><br /></td></tr>
+<tr class="separator:ae30b7a448d1cb625b9d41a85c7899910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a71d14a5bf818d23ff2702c2ebde824"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#a4a71d14a5bf818d23ff2702c2ebde824">spi_transferByte</a> (void *spi, uint8_t data)</td></tr>
+<tr class="memdesc:a4a71d14a5bf818d23ff2702c2ebde824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer a byte to the NXP bridge.  <a href="arduino-spi_8cpp.html#a4a71d14a5bf818d23ff2702c2ebde824">More...</a><br /></td></tr>
+<tr class="separator:a4a71d14a5bf818d23ff2702c2ebde824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e3076af93e001c33257b3d9a43023e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#ae6e3076af93e001c33257b3d9a43023e">spi_transferWord</a> (void *spi, uint16_t data)</td></tr>
+<tr class="memdesc:ae6e3076af93e001c33257b3d9a43023e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer a word (16-bits) to the NXP bridge.  <a href="arduino-spi_8cpp.html#ae6e3076af93e001c33257b3d9a43023e">More...</a><br /></td></tr>
+<tr class="separator:ae6e3076af93e001c33257b3d9a43023e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd0b73afd1ec8d0bcf5b1fa3c6399de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino-spi_8cpp.html#a4cd0b73afd1ec8d0bcf5b1fa3c6399de">spi_transferBuffer</a> (void *spi, uint8_t regAddrByte, void *buf, size_t xfer_len)</td></tr>
+<tr class="memdesc:a4cd0b73afd1ec8d0bcf5b1fa3c6399de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer a buffer to the NXP bridge.  <a href="arduino-spi_8cpp.html#a4cd0b73afd1ec8d0bcf5b1fa3c6399de">More...</a><br /></td></tr>
+<tr class="separator:a4cd0b73afd1ec8d0bcf5b1fa3c6399de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a2b498e0cb682c72dfbf72401428f28fd"></a>
@@ -129,14 +130,14 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5e629af9e158854d6d41a0dba7ecc75a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e629af9e158854d6d41a0dba7ecc75a">&#9670;&nbsp;</a></span>spi_create()</h2>
+<a id="aee8850c224d078301551423b549256f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8850c224d078301551423b549256f2">&#9670;&nbsp;</a></span>spi_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a>* spi_create </td>
+          <td class="memname">void* spi_create </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>chipSelLine</em></td><td>)</td>
@@ -156,8 +157,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2e81266ae193ee01843d1983f4e9c070"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e81266ae193ee01843d1983f4e9c070">&#9670;&nbsp;</a></span>spi_protectFromInterrupt()</h2>
+<a id="ae30b7a448d1cb625b9d41a85c7899910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30b7a448d1cb625b9d41a85c7899910">&#9670;&nbsp;</a></span>spi_protectFromInterrupt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +166,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void spi_protectFromInterrupt </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>spi</em>, </td>
         </tr>
         <tr>
@@ -186,8 +187,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a45c8d9705d1bc13c7ec70802a093d6fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45c8d9705d1bc13c7ec70802a093d6fd">&#9670;&nbsp;</a></span>spi_start()</h2>
+<a id="af13bba8dc61b765c9c87bf71854af7e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af13bba8dc61b765c9c87bf71854af7e6">&#9670;&nbsp;</a></span>spi_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,7 +196,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void spi_start </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>spi</em></td><td>)</td>
           <td></td>
         </tr>
@@ -206,8 +207,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac43205ab2b3a372d691038846af215e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac43205ab2b3a372d691038846af215e1">&#9670;&nbsp;</a></span>spi_stop()</h2>
+<a id="add9525c59f9ca04352a57672dd3b3367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add9525c59f9ca04352a57672dd3b3367">&#9670;&nbsp;</a></span>spi_stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +216,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void spi_stop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>spi</em></td><td>)</td>
           <td></td>
         </tr>
@@ -226,8 +227,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac614af75d420958206ff201e47c6c22e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac614af75d420958206ff201e47c6c22e">&#9670;&nbsp;</a></span>spi_transferBuffer()</h2>
+<a id="a4cd0b73afd1ec8d0bcf5b1fa3c6399de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd0b73afd1ec8d0bcf5b1fa3c6399de">&#9670;&nbsp;</a></span>spi_transferBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,7 +236,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void spi_transferBuffer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>spi</em>, </td>
         </tr>
         <tr>
@@ -277,8 +278,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a43175a171206cea7014e1194b1586cb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43175a171206cea7014e1194b1586cb0">&#9670;&nbsp;</a></span>spi_transferByte()</h2>
+<a id="a4a71d14a5bf818d23ff2702c2ebde824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a71d14a5bf818d23ff2702c2ebde824">&#9670;&nbsp;</a></span>spi_transferByte()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +287,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint8_t spi_transferByte </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>spi</em>, </td>
         </tr>
         <tr>
@@ -315,8 +316,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7c190d04edd889680ef260b28c468c92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c190d04edd889680ef260b28c468c92">&#9670;&nbsp;</a></span>spi_transferWord()</h2>
+<a id="ae6e3076af93e001c33257b3d9a43023e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e3076af93e001c33257b3d9a43023e">&#9670;&nbsp;</a></span>spi_transferWord()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,7 +325,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint16_t spi_transferWord </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="lq_platform-spi_8h.html#a664213cc5a053dc9f3e47fd3a71226e8">spiDevice_t</a> *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>spi</em>, </td>
         </tr>
         <tr>

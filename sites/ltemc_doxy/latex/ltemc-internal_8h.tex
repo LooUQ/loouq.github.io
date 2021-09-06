@@ -1,0 +1,84 @@
+\hypertarget{ltemc-internal_8h}{}\doxysection{src/ltemc-\/internal.h File Reference}
+\label{ltemc-internal_8h}\index{src/ltemc-\/internal.h@{src/ltemc-\/internal.h}}
+{\ttfamily \#include $<$lq-\/types.\+h$>$}\newline
+{\ttfamily \#include $<$lq-\/diagnostics.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/filecodes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lq-\/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/nxp-\/sc16is.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/quectel-\/bg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/iop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/atcmd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/mdminfo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/network.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/streams.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}} \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ltemc-internal_8h_a6c467232deb0591f402f1b9221d547e2}{L\+T\+E\+M\+\_\+init\+Io}} ()
+\item 
+void \mbox{\hyperlink{ltemc-internal_8h_a4bb70d1da6f59e7f434d50e6d1e9e03d}{L\+T\+E\+M\+\_\+register\+Do\+Worker}} (\mbox{\hyperlink{ltemc-streams_8h_a2d28d046017a16303974cf83b3d08c0b}{module\+Do\+Work\+Func\+\_\+t}} $\ast$do\+Worker)
+\item 
+void \mbox{\hyperlink{ltemc-internal_8h_abd9165ff5515e6b01488a054b0f8cd2e}{I\+O\+P\+\_\+rx\+Parse\+For\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} \mbox{\hyperlink{ltemc-internal_8h_a5f9b6913ff818fbc74934a69849fb48b}{g\+\_\+ltem}}
+\begin{DoxyCompactList}\small\item\em The L\+T\+Em \char`\"{}object\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}\label{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}} 
+\index{ltemc-\/internal.h@{ltemc-\/internal.h}!ltemDevice\_t@{ltemDevice\_t}}
+\index{ltemDevice\_t@{ltemDevice\_t}!ltemc-\/internal.h@{ltemc-\/internal.h}}
+\doxysubsubsection{\texorpdfstring{ltemDevice\_t}{ltemDevice\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}} \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}}}
+
+
+
+Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. 
+
+Most subsystems are linked to this struct with pointers to allow for better abstraction and optional subsystems 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-internal_8h_abd9165ff5515e6b01488a054b0f8cd2e}\label{ltemc-internal_8h_abd9165ff5515e6b01488a054b0f8cd2e}} 
+\index{ltemc-\/internal.h@{ltemc-\/internal.h}!IOP\_rxParseForEvents@{IOP\_rxParseForEvents}}
+\index{IOP\_rxParseForEvents@{IOP\_rxParseForEvents}!ltemc-\/internal.h@{ltemc-\/internal.h}}
+\doxysubsubsection{\texorpdfstring{IOP\_rxParseForEvents()}{IOP\_rxParseForEvents()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+rx\+Parse\+For\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-internal_8h_a6c467232deb0591f402f1b9221d547e2}\label{ltemc-internal_8h_a6c467232deb0591f402f1b9221d547e2}} 
+\index{ltemc-\/internal.h@{ltemc-\/internal.h}!LTEM\_initIo@{LTEM\_initIo}}
+\index{LTEM\_initIo@{LTEM\_initIo}!ltemc-\/internal.h@{ltemc-\/internal.h}}
+\doxysubsubsection{\texorpdfstring{LTEM\_initIo()}{LTEM\_initIo()}}
+{\footnotesize\ttfamily void L\+T\+E\+M\+\_\+init\+Io (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-internal_8h_a4bb70d1da6f59e7f434d50e6d1e9e03d}\label{ltemc-internal_8h_a4bb70d1da6f59e7f434d50e6d1e9e03d}} 
+\index{ltemc-\/internal.h@{ltemc-\/internal.h}!LTEM\_registerDoWorker@{LTEM\_registerDoWorker}}
+\index{LTEM\_registerDoWorker@{LTEM\_registerDoWorker}!ltemc-\/internal.h@{ltemc-\/internal.h}}
+\doxysubsubsection{\texorpdfstring{LTEM\_registerDoWorker()}{LTEM\_registerDoWorker()}}
+{\footnotesize\ttfamily void L\+T\+E\+M\+\_\+register\+Do\+Worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_a2d28d046017a16303974cf83b3d08c0b}{module\+Do\+Work\+Func\+\_\+t}} $\ast$}]{do\+Worker }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ltemc-internal_8h_a5f9b6913ff818fbc74934a69849fb48b}\label{ltemc-internal_8h_a5f9b6913ff818fbc74934a69849fb48b}} 
+\index{ltemc-\/internal.h@{ltemc-\/internal.h}!g\_ltem@{g\_ltem}}
+\index{g\_ltem@{g\_ltem}!ltemc-\/internal.h@{ltemc-\/internal.h}}
+\doxysubsubsection{\texorpdfstring{g\_ltem}{g\_ltem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} g\+\_\+ltem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+The L\+T\+Em \char`\"{}object\char`\"{}. 
+

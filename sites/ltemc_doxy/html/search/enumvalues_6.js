@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['qbg_5fnw_5fiot_5fmode_5fm1_1491',['qbg_nw_iot_mode_m1',['../ltemc-quectel-bg_8h.html#a2191ec3f5a5386782fe35c35116bd17fa9925c3857d89a5e9073b4ffef915a561',1,'ltemc-quectel-bg.h']]],
-  ['qbg_5fnw_5fiot_5fmode_5fm1nb1_1492',['qbg_nw_iot_mode_m1nb1',['../ltemc-quectel-bg_8h.html#a2191ec3f5a5386782fe35c35116bd17fa9ec8555596d3f782c76ee46ed928b278',1,'ltemc-quectel-bg.h']]],
-  ['qbg_5fnw_5fiot_5fmode_5fnb1_1493',['qbg_nw_iot_mode_nb1',['../ltemc-quectel-bg_8h.html#a2191ec3f5a5386782fe35c35116bd17fac3f4a26bd26b6dd1fa6724929d00dbb8',1,'ltemc-quectel-bg.h']]],
-  ['qbg_5fnw_5fscan_5fmode_5fauto_1494',['qbg_nw_scan_mode_auto',['../ltemc-quectel-bg_8h.html#aa1a289b110c85590df8e3c8628820432a494904fd8160bb2b1bc5a462b2ebe68d',1,'ltemc-quectel-bg.h']]],
-  ['qbg_5fnw_5fscan_5fmode_5fgsmonly_1495',['qbg_nw_scan_mode_gsmonly',['../ltemc-quectel-bg_8h.html#aa1a289b110c85590df8e3c8628820432a451a5aa0ed800c9d08302b5249d8b2dd',1,'ltemc-quectel-bg.h']]],
-  ['qbg_5fnw_5fscan_5fmode_5flteonly_1496',['qbg_nw_scan_mode_lteonly',['../ltemc-quectel-bg_8h.html#aa1a289b110c85590df8e3c8628820432a573b73decba7990830452044da0bf2ef',1,'ltemc-quectel-bg.h']]],
-  ['qbg_5freadystate_5fappready_1497',['qbg_readyState_appReady',['../ltemc-quectel-bg_8h.html#a029afb5b9d9f256347f037bcb091b860a2f8b72f80346ddb0c45e0321f3d52f1b',1,'ltemc-quectel-bg.h']]],
-  ['qbg_5freadystate_5fpoweroff_1498',['qbg_readyState_powerOff',['../ltemc-quectel-bg_8h.html#a029afb5b9d9f256347f037bcb091b860ab278e3d768b1801d2dba9bc18e712a5f',1,'ltemc-quectel-bg.h']]],
-  ['qbg_5freadystate_5fpoweron_1499',['qbg_readyState_powerOn',['../ltemc-quectel-bg_8h.html#a029afb5b9d9f256347f037bcb091b860ab1d36f587350dfc189347fbbf3894a2c',1,'ltemc-quectel-bg.h']]]
+  ['iop_5f_5frxcorebuffersize_1492',['IOP__rxCoreBufferSize',['../ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8',1,'ltemc-iop.h']]],
+  ['iop_5f_5ftxbuffersize_1493',['IOP__txBufferSize',['../ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060',1,'ltemc-iop.h']]],
+  ['iop_5f_5fuartfifo_5ffillms_1494',['IOP__uartFIFO_fillMS',['../ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4',1,'ltemc-iop.h']]],
+  ['iop_5f_5fuartfifobuffersz_1495',['IOP__uartFIFOBufferSz',['../ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7',1,'ltemc-iop.h']]],
+  ['irq_5f1_5frcvr_5fstatus_5ferror_1496',['IRQ_1_RCVR_STATUS_ERROR',['../ltemc-nxp-sc16is_8h.html#a8ead74b40710969b1449284ab45105eea05e372e92787251ae623dcd195dfc126',1,'ltemc-nxp-sc16is.h']]],
+  ['irq_5f2_5frcvr_5frhr_1497',['IRQ_2_RCVR_RHR',['../ltemc-nxp-sc16is_8h.html#a8ead74b40710969b1449284ab45105eea151d5245b9ee151b6b03930e2c16c6cc',1,'ltemc-nxp-sc16is.h']]],
+  ['irq_5f2_5frcvr_5ftimeout_1498',['IRQ_2_RCVR_TIMEOUT',['../ltemc-nxp-sc16is_8h.html#a8ead74b40710969b1449284ab45105eea9b07d7963f1025113b7587de37cae7e5',1,'ltemc-nxp-sc16is.h']]],
+  ['irq_5f3_5fxmit_5fthr_1499',['IRQ_3_XMIT_THR',['../ltemc-nxp-sc16is_8h.html#a8ead74b40710969b1449284ab45105eea715139237399718aef577c132b172fa3',1,'ltemc-nxp-sc16is.h']]],
+  ['irq_5f4_5fmodem_1500',['IRQ_4_MODEM',['../ltemc-nxp-sc16is_8h.html#a8ead74b40710969b1449284ab45105eeaa4d48c95243053a41429d1f5e9ff22f3',1,'ltemc-nxp-sc16is.h']]],
+  ['irq_5f6_5fxoff_1501',['IRQ_6_XOFF',['../ltemc-nxp-sc16is_8h.html#a8ead74b40710969b1449284ab45105eea310db71e960f668b2377556a57eea86b',1,'ltemc-nxp-sc16is.h']]],
+  ['irq_5f7_5fctsrts_1502',['IRQ_7_CTSRTS',['../ltemc-nxp-sc16is_8h.html#a8ead74b40710969b1449284ab45105eea1598a2cda85314daf45a066342021ca3',1,'ltemc-nxp-sc16is.h']]]
 ];

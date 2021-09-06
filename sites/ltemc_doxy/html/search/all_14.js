@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ufsr_841',['ufsr',['../structlq_app_diagnostic__tag.html#a02284c400755b947f01924bd3be58c2d',1,'lqAppDiagnostic_tag']]],
-  ['utc_842',['utc',['../structgnss_location__tag.html#a6ae8d28098d79f0dcb73395e7d2698df',1,'gnssLocation_tag']]],
-  ['uxplor_5fpinconfig_843',['uxplor_pinConfig',['../pin_configuration_8txt.html#adc6d3c6bde51d2afabbd304d874c0f53',1,'pinConfiguration.txt']]]
+  ['val_858',['val',['../structgnss__latlon__tag.html#a3c8bc0bb4f045bfe78d1196cb786792c',1,'gnss_latlon_tag']]],
+  ['version_859',['version',['../structtls_options__tag.html#a8c0dca5a3eecad714c570c7b1a5abfdd',1,'tlsOptions_tag']]],
+  ['version_2dhistory_2emd_860',['version-history.md',['../version-history_8md.html',1,'']]]
 ];

@@ -1,0 +1,360 @@
+\hypertarget{ltemc-http_8c}{}\doxysection{src/ltemc-\/http.c File Reference}
+\label{ltemc-http_8c}\index{src/ltemc-\/http.c@{src/ltemc-\/http.c}}
+{\ttfamily \#include \char`\"{}ltemc-\/http.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/internal.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ltemc-http_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\item 
+\#define \mbox{\hyperlink{ltemc-http_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}{atcmd\+\_\+\+\_\+use\+Default\+Timeout}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}{atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto}} = 1, 
+\newline
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}{A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}{A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}{http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec}} = 60, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}{I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size}} = 1800, 
+\newline
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}} = 192, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS}} = 6, 
+\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
+\newline
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 3, 
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}{N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz}} = 20, 
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}{nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver}} = 0x01U, 
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
+\newline
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}{nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error}} = 0x80U, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}{B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt}} = 1, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}{B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts}} = 2, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
+\newline
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}{B\+G\+X\+\_\+\+\_\+power\+Off\+Delay}} = 1500, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}{B\+G\+X\+\_\+\+\_\+reset\+Delay}} = 300, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}{B\+G\+X\+\_\+\+\_\+baud\+Rate}} = 115200, 
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
+\newline
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}{sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS}} = 60000, 
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}{S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz}} = 1500
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ltemc-http_8c_a4d6b9933d020080a3c211fd32a9e1df0}{http\+\_\+init\+Control}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt, const char $\ast$url\+Host, char $\ast$recv\+Buf, uint16\+\_\+t recv\+Buf\+Sz, \mbox{\hyperlink{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}{http\+Recv\+Func\+\_\+t}} recv\+Callback)
+\begin{DoxyCompactList}\small\item\em Create a H\+T\+T\+P(s) control structure to manage web communications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-http_8c_a1b52256d58e1cda2059bec8ad897a8ff}{http\+\_\+enable\+Custom\+Hdrs}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, char $\ast$header\+Buf, uint16\+\_\+t header\+Buf\+Sz)
+\begin{DoxyCompactList}\small\item\em Registers custom headers (char) buffer with H\+T\+TP control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-http_8c_ab533613578b3b75d760abd9a058c446b}{http\+\_\+add\+Default\+Hdrs}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, \mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}} header\+Map)
+\begin{DoxyCompactList}\small\item\em Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-http_8c_acbc88b6c789280f7df70c2995d524030}{http\+\_\+add\+Basic\+Auth\+Hdr}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http, const char $\ast$user, const char $\ast$pw)
+\begin{DoxyCompactList}\small\item\em Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8c_afa4288aa4cda4fd9791592ce93b737fc}{http\+\_\+get}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$relative\+Url, bool return\+Response\+Hdrs, uint8\+\_\+t timeout\+Sec)
+\begin{DoxyCompactList}\small\item\em Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8c_a126e44b3643594384ba9ba84074b6f49}{http\+\_\+post}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$relative\+Url, bool return\+Response\+Hdrs, const char $\ast$post\+Data, uint16\+\_\+t post\+Data\+Sz, uint8\+\_\+t timeout\+Sec)
+\begin{DoxyCompactList}\small\item\em Performs a H\+T\+TP P\+O\+ST page web request. \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8c_a9259a6152e50da53e8f64dbb68b203bd}{http\+\_\+read\+Page}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, uint16\+\_\+t timeout\+Sec)
+\item 
+void \mbox{\hyperlink{ltemc-http_8c_adc3e553b77a6341664862d7b8a9c0060}{http\+\_\+cancel\+Page}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} \mbox{\hyperlink{ltemc-http_8c_a5f9b6913ff818fbc74934a69849fb48b}{g\+\_\+ltem}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ltemc-http_8c_a152fc5203b90b1cff03b7b78579b8f52}\label{ltemc-http_8c_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!\_DEBUG@{\_DEBUG}}
+\index{\_DEBUG@{\_DEBUG}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+
+\mbox{\Hypertarget{ltemc-http_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-http_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55b}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}} 
+atcmd\+\_\+\+\_\+use\+Default\+Timeout&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}} 
+atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_setLockModeManual@{atcmd\_\_setLockModeManual}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!atcmd\_\_setLockModeManual@{atcmd\_\_setLockModeManual}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}} 
+atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_setLockModeAuto@{atcmd\_\_setLockModeAuto}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!atcmd\_\_setLockModeAuto@{atcmd\_\_setLockModeAuto}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}} 
+atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}} 
+A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}} 
+A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result&private declaration; value returned from response parsers indicating a pattern match has not yet been detected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}} 
+http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_txBufferSize@{IOP\_\_txBufferSize}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!IOP\_\_txBufferSize@{IOP\_\_txBufferSize}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}} 
+I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_rxCoreBufferSize@{IOP\_\_rxCoreBufferSize}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!IOP\_\_rxCoreBufferSize@{IOP\_\_rxCoreBufferSize}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}} 
+I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{resultCode\_\_parserPending@{resultCode\_\_parserPending}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!resultCode\_\_parserPending@{resultCode\_\_parserPending}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}} 
+result\+Code\+\_\+\+\_\+parser\+Pending&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NTWK\_\_pdpContextCnt@{NTWK\_\_pdpContextCnt}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!NTWK\_\_pdpContextCnt@{NTWK\_\_pdpContextCnt}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}} 
+N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NTWK\_\_operatorNameSz@{NTWK\_\_operatorNameSz}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!NTWK\_\_operatorNameSz@{NTWK\_\_operatorNameSz}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}} 
+N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_DataInReceiver@{nxp\_\_lsr\_DataInReceiver}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!nxp\_\_lsr\_DataInReceiver@{nxp\_\_lsr\_DataInReceiver}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_THR\_empty@{nxp\_\_lsr\_THR\_empty}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!nxp\_\_lsr\_THR\_empty@{nxp\_\_lsr\_THR\_empty}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_FIFO\_dataError@{nxp\_\_lsr\_FIFO\_dataError}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!nxp\_\_lsr\_FIFO\_dataError@{nxp\_\_lsr\_FIFO\_dataError}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_initCommandCnt@{BGX\_\_initCommandCnt}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!BGX\_\_initCommandCnt@{BGX\_\_initCommandCnt}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}} 
+B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_initCommandAttempts@{BGX\_\_initCommandAttempts}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!BGX\_\_initCommandAttempts@{BGX\_\_initCommandAttempts}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}} 
+B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_powerOnDelay@{BGX\_\_powerOnDelay}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!BGX\_\_powerOnDelay@{BGX\_\_powerOnDelay}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}} 
+B\+G\+X\+\_\+\+\_\+power\+On\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_powerOffDelay@{BGX\_\_powerOffDelay}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!BGX\_\_powerOffDelay@{BGX\_\_powerOffDelay}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}} 
+B\+G\+X\+\_\+\+\_\+power\+Off\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_resetDelay@{BGX\_\_resetDelay}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!BGX\_\_resetDelay@{BGX\_\_resetDelay}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}} 
+B\+G\+X\+\_\+\+\_\+reset\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_baudRate@{BGX\_\_baudRate}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!BGX\_\_baudRate@{BGX\_\_baudRate}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}} 
+B\+G\+X\+\_\+\+\_\+baud\+Rate&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sckt\_\_resultCode\_previouslyOpen@{sckt\_\_resultCode\_previouslyOpen}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!sckt\_\_resultCode\_previouslyOpen@{sckt\_\_resultCode\_previouslyOpen}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}} 
+sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sckt\_\_defaultOpenTimeoutMS@{sckt\_\_defaultOpenTimeoutMS}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!sckt\_\_defaultOpenTimeoutMS@{sckt\_\_defaultOpenTimeoutMS}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}} 
+sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCKT\_\_IRD\_requestMaxSz@{SCKT\_\_IRD\_requestMaxSz}!ltemc-\/http.c@{ltemc-\/http.c}}\index{ltemc-\/http.c@{ltemc-\/http.c}!SCKT\_\_IRD\_requestMaxSz@{SCKT\_\_IRD\_requestMaxSz}}}\mbox{\Hypertarget{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}\label{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}} 
+S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-http_8c_acbc88b6c789280f7df70c2995d524030}\label{ltemc-http_8c_acbc88b6c789280f7df70c2995d524030}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!http\_addBasicAuthHdr@{http\_addBasicAuthHdr}}
+\index{http\_addBasicAuthHdr@{http\_addBasicAuthHdr}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{http\_addBasicAuthHdr()}{http\_addBasicAuthHdr()}}
+{\footnotesize\ttfamily void http\+\_\+add\+Basic\+Auth\+Hdr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http,  }\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pw }\end{DoxyParamCaption})}
+
+
+
+Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em user} & \mbox{[}in\mbox{]} -\/ User name. \\
+\hline
+{\em pw} & \mbox{[}in\mbox{]} -\/ Password/secret for header. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-http_8c_ab533613578b3b75d760abd9a058c446b}\label{ltemc-http_8c_ab533613578b3b75d760abd9a058c446b}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!http\_addDefaultHdrs@{http\_addDefaultHdrs}}
+\index{http\_addDefaultHdrs@{http\_addDefaultHdrs}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{http\_addDefaultHdrs()}{http\_addDefaultHdrs()}}
+{\footnotesize\ttfamily void http\+\_\+add\+Default\+Hdrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}}}]{header\+Map }\end{DoxyParamCaption})}
+
+
+
+Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em header\+Map} & \mbox{[}in\mbox{]} -\/ Bitmap for which standard headers to use. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-http_8c_adc3e553b77a6341664862d7b8a9c0060}\label{ltemc-http_8c_adc3e553b77a6341664862d7b8a9c0060}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!http\_cancelPage@{http\_cancelPage}}
+\index{http\_cancelPage@{http\_cancelPage}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{http\_cancelPage()}{http\_cancelPage()}}
+{\footnotesize\ttfamily void http\+\_\+cancel\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-http_8c_a1b52256d58e1cda2059bec8ad897a8ff}\label{ltemc-http_8c_a1b52256d58e1cda2059bec8ad897a8ff}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!http\_enableCustomHdrs@{http\_enableCustomHdrs}}
+\index{http\_enableCustomHdrs@{http\_enableCustomHdrs}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{http\_enableCustomHdrs()}{http\_enableCustomHdrs()}}
+{\footnotesize\ttfamily void http\+\_\+enable\+Custom\+Hdrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{char $\ast$}]{header\+Buf,  }\item[{uint16\+\_\+t}]{header\+Buf\+Sz }\end{DoxyParamCaption})}
+
+
+
+Registers custom headers (char) buffer with H\+T\+TP control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em header\+Buf} & \mbox{[}in\mbox{]} -\/ pointer to header buffer created by application \\
+\hline
+{\em header\+Buf\+Sz} & \mbox{[}in\mbox{]} -\/ size of the header buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-http_8c_afa4288aa4cda4fd9791592ce93b737fc}\label{ltemc-http_8c_afa4288aa4cda4fd9791592ce93b737fc}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!http\_get@{http\_get}}
+\index{http\_get@{http\_get}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{http\_get()}{http\_get()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{relative\+Url,  }\item[{bool}]{return\+Response\+Hdrs,  }\item[{uint8\+\_\+t}]{timeout\+Sec }\end{DoxyParamCaption})}
+
+
+
+Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em relative\+Url} & \mbox{[}in\mbox{]} -\/ The U\+RL to G\+ET (starts with \textbackslash{} and doesn\textquotesingle{}t include the host part) \\
+\hline
+{\em return\+Response\+Hdrs} & \mbox{[}in\mbox{]} -\/ Set to true for page result to include response headers at the start of the page \\
+\hline
+{\em timeout\+Sec} & \mbox{[}in\mbox{]} -\/ Timeout for entire G\+ET request cycle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if G\+ET request sent successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-http_8c_a4d6b9933d020080a3c211fd32a9e1df0}\label{ltemc-http_8c_a4d6b9933d020080a3c211fd32a9e1df0}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!http\_initControl@{http\_initControl}}
+\index{http\_initControl@{http\_initControl}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{http\_initControl()}{http\_initControl()}}
+{\footnotesize\ttfamily void http\+\_\+init\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}]{data\+Cntxt,  }\item[{const char $\ast$}]{url\+Host,  }\item[{char $\ast$}]{recv\+Buf,  }\item[{uint16\+\_\+t}]{recv\+Buf\+Sz,  }\item[{\mbox{\hyperlink{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}{http\+Recv\+Func\+\_\+t}}}]{recv\+Callback }\end{DoxyParamCaption})}
+
+
+
+Create a H\+T\+T\+P(s) control structure to manage web communications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} H\+T\+TP control structure pointer, struct defines parameters of communications with web server. \\
+\hline
+{\em data\+Cntxt} & \mbox{[}in\mbox{]} The data context (0-\/5) to use for this communications. \\
+\hline
+{\em url\+Host} & \mbox{[}in\mbox{]} The host portion of the web server U\+RL. \\
+\hline
+{\em recv\+Buf} & \mbox{[}in\mbox{]} Pointer to application provided char buffer. \\
+\hline
+{\em recv\+Buf\+Sz} & \mbox{[}in\mbox{]} Size of the receive buffer. \\
+\hline
+{\em recv\+Callback} & \mbox{[}in\mbox{]} Callback function to receive incoming page data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if action was invoked, false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-http_8c_a126e44b3643594384ba9ba84074b6f49}\label{ltemc-http_8c_a126e44b3643594384ba9ba84074b6f49}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!http\_post@{http\_post}}
+\index{http\_post@{http\_post}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{http\_post()}{http\_post()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{relative\+Url,  }\item[{bool}]{return\+Response\+Hdrs,  }\item[{const char $\ast$}]{post\+Data,  }\item[{uint16\+\_\+t}]{post\+Data\+Sz,  }\item[{uint8\+\_\+t}]{timeout\+Sec }\end{DoxyParamCaption})}
+
+
+
+Performs a H\+T\+TP P\+O\+ST page web request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em relative\+Url} & \mbox{[}in\mbox{]} -\/ U\+RL, relative to the host. If none, can be provided as \char`\"{}\char`\"{} or \char`\"{}/\char`\"{} () \\
+\hline
+{\em return\+Response\+Hdrs} & \mbox{[}in\mbox{]} -\/ if requested (true) the page response stream will prefix the page data \\
+\hline
+{\em post\+Data} & \mbox{[}in\mbox{]} -\/ Pointer to char buffer with P\+O\+ST content \\
+\hline
+{\em post\+Data\+Sz} & \mbox{[}in\mbox{]} -\/ Size of the P\+O\+ST content reference by $\ast$post\+Data \\
+\hline
+{\em timeout\+Sec} & \mbox{[}in\mbox{]} -\/ the number of seconds to wait (blocking) for a page response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if P\+O\+ST request completed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-http_8c_a9259a6152e50da53e8f64dbb68b203bd}\label{ltemc-http_8c_a9259a6152e50da53e8f64dbb68b203bd}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!http\_readPage@{http\_readPage}}
+\index{http\_readPage@{http\_readPage}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{http\_readPage()}{http\_readPage()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+read\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{uint16\+\_\+t}]{timeout\+Sec }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ltemc-http_8c_a5f9b6913ff818fbc74934a69849fb48b}\label{ltemc-http_8c_a5f9b6913ff818fbc74934a69849fb48b}} 
+\index{ltemc-\/http.c@{ltemc-\/http.c}!g\_ltem@{g\_ltem}}
+\index{g\_ltem@{g\_ltem}!ltemc-\/http.c@{ltemc-\/http.c}}
+\doxysubsubsection{\texorpdfstring{g\_ltem}{g\_ltem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} g\+\_\+ltem\hspace{0.3cm}{\ttfamily [extern]}}
+

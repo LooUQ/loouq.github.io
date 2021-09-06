@@ -69,74 +69,250 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ltemc-http.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ltemc_8h_source.html">ltemc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;lq-types.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ltemc-streams_8h_source.html">ltemc-streams.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ltemc-internal_8h_source.html">ltemc-internal.h</a>&quot;</code><br />
 </div>
 <p><a href="ltemc-http_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhttp_ctrl__tag.html">httpCtrl_tag</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a0ecfe0c72a70bf2f9e12b7411595f5c5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a0ecfe0c72a70bf2f9e12b7411595f5c5">httpReceiver_func_t</a>) (void *fileData, uint16_t dataSz)</td></tr>
-<tr class="memdesc:a0ecfe0c72a70bf2f9e12b7411595f5c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">typedef for the socket services data receiver function. Connects filesystem processing to the application (receive).  <a href="ltemc-http_8h.html#a0ecfe0c72a70bf2f9e12b7411595f5c5">More...</a><br /></td></tr>
-<tr class="separator:a0ecfe0c72a70bf2f9e12b7411595f5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70761bf42af348ac2511bcf4a4a31c4a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a70761bf42af348ac2511bcf4a4a31c4a">httpRecvFunc_t</a>) (<a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a> dataCntxt, uint16_t httpRslt, char *data, uint16_t dataSz)</td></tr>
+<tr class="memdesc:a70761bf42af348ac2511bcf4a4a31c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for data received event. Notifies application that new data is available and needs serviced.  <a href="ltemc-http_8h.html#a70761bf42af348ac2511bcf4a4a31c4a">More...</a><br /></td></tr>
+<tr class="separator:a70761bf42af348ac2511bcf4a4a31c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a857a48248e4895b0d7315937d53693"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4">httpHeaderMap_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a8a857a48248e4895b0d7315937d53693">httpHeaderMap_t</a></td></tr>
+<tr class="memdesc:a8a857a48248e4895b0d7315937d53693"><td class="mdescLeft">&#160;</td><td class="mdescRight">If using custom headers, bit-map indicating what headers to create for default custom header collection.  <a href="ltemc-http_8h.html#a8a857a48248e4895b0d7315937d53693">More...</a><br /></td></tr>
+<tr class="separator:a8a857a48248e4895b0d7315937d53693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03ddb83b8bb9dfbd81633b86cf3f5d1"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-http_8h.html#a2ef3ea123ff1e791895fd5048100a4d3">httpState_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#aa03ddb83b8bb9dfbd81633b86cf3f5d1">httpState_t</a></td></tr>
+<tr class="separator:aa03ddb83b8bb9dfbd81633b86cf3f5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248527fb20f1c2f77c80603a6b295733"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structhttp_ctrl__tag.html">httpCtrl_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a></td></tr>
+<tr class="separator:a248527fb20f1c2f77c80603a6b295733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a7393c11c4fd09ee34b3763324ed600dc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a7393c11c4fd09ee34b3763324ed600dc">http__constants</a> { <a class="el" href="ltemc-http_8h.html#a7393c11c4fd09ee34b3763324ed600dcac9527ee275ea08a885f60cbc653b14c2">http__noResponseHeaders</a> = 0, 
+<a class="el" href="ltemc-http_8h.html#a7393c11c4fd09ee34b3763324ed600dca295bbca70e6bb810df036c87f00dde61">http__returnResponseHeaders</a> = 1, 
+<a class="el" href="ltemc-http_8h.html#a7393c11c4fd09ee34b3763324ed600dcad10ab1ed8138f0bd0bf3f6e749cc8b57">http__useDefaultTimeout</a> = 0, 
+<a class="el" href="ltemc-http_8h.html#a7393c11c4fd09ee34b3763324ed600dcab5a3f3a7b1573f2e5bed7dd16098b096">http__urlHostSz</a> = 128
+ }</td></tr>
+<tr class="separator:a7393c11c4fd09ee34b3763324ed600dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59622bad04892ad2954ef83e5d8b12e4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4">httpHeaderMap_tag</a> { <br />
+&#160;&#160;<a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4acb7c9b87d7c18de1f294f5b5953a18bc">httpHeaderMap_accept</a> = 0x0001, 
+<a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4a8a49f69f96e352ac6a5a076f26e129e8">httpHeaderMap_userAgent</a> = 0x0002, 
+<a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4a8ba24ab106ef0d0b83866fb99e8be62a">httpHeaderMap_connection</a> = 0x0004, 
+<a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4a550739a6dd7b7b631b4332d9a12cfccd">httpHeaderMap_contentType</a> = 0x0008, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4a6e7258c74abbedf0d878506e068be232">httpHeaderMap_contentLenght</a> = 0x0010, 
+<a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4a2df1c1ae260315a4190a50881f29b20d">httpHeaderMap_all</a> = 0xFFFF
+<br />
+ }</td></tr>
+<tr class="memdesc:a59622bad04892ad2954ef83e5d8b12e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">If using custom headers, bit-map indicating what headers to create for default custom header collection.  <a href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4">More...</a><br /></td></tr>
+<tr class="separator:a59622bad04892ad2954ef83e5d8b12e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef3ea123ff1e791895fd5048100a4d3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a2ef3ea123ff1e791895fd5048100a4d3">httpState_tag</a> { <a class="el" href="ltemc-http_8h.html#a2ef3ea123ff1e791895fd5048100a4d3a3b0ecebeaddfdcf385644d8c0bc4b160">httpState_idle</a> = 0, 
+<a class="el" href="ltemc-http_8h.html#a2ef3ea123ff1e791895fd5048100a4d3aefa952842e34c8d7cb93e481c436fa3a">httpState_requestComplete</a>, 
+<a class="el" href="ltemc-http_8h.html#a2ef3ea123ff1e791895fd5048100a4d3a76a642a88929ee2f945b6c08e42bd354">httpState_readingData</a>, 
+<a class="el" href="ltemc-http_8h.html#a2ef3ea123ff1e791895fd5048100a4d3a37903004520df798c973b4bc633f7462">httpState_closing</a>
+ }</td></tr>
+<tr class="separator:a2ef3ea123ff1e791895fd5048100a4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac63d8e77c4017e433b20d58b35729bbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#ac63d8e77c4017e433b20d58b35729bbc">http_setRecvrFunc</a> (<a class="el" href="ltemc-http_8h.html#a0ecfe0c72a70bf2f9e12b7411595f5c5">httpReceiver_func_t</a> fileRecvr_func)</td></tr>
-<tr class="separator:ac63d8e77c4017e433b20d58b35729bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0d14f04a5b54c03a47cd82dc1a11b54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#ae0d14f04a5b54c03a47cd82dc1a11b54">http_setServerUrl</a> (const char *fileName)</td></tr>
-<tr class="separator:ae0d14f04a5b54c03a47cd82dc1a11b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb501c4b4413888d485309215d431790"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#afb501c4b4413888d485309215d431790">http_setSslOptions</a> ()</td></tr>
-<tr class="separator:afb501c4b4413888d485309215d431790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa6524e38503c7274efad5f3f9bbc4f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#afa6524e38503c7274efad5f3f9bbc4f8">http_get</a> (const char *url, <a class="el" href="ltemc-http_8h.html#a0ecfe0c72a70bf2f9e12b7411595f5c5">httpReceiver_func_t</a> fileRecvr_func)</td></tr>
-<tr class="separator:afa6524e38503c7274efad5f3f9bbc4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad85723949df4cbef8bec8a4e05789f58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#ad85723949df4cbef8bec8a4e05789f58">http_getFile</a> (const char *url, const char *filename)</td></tr>
-<tr class="separator:ad85723949df4cbef8bec8a4e05789f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59bbcedcaa9accb7de0502f3a54de81a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a59bbcedcaa9accb7de0502f3a54de81a">http_post</a> (const char *url, const char *postData, uint16_t dataSz)</td></tr>
-<tr class="separator:a59bbcedcaa9accb7de0502f3a54de81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cc4a5f51a1cb01f2195c104eae810ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a9cc4a5f51a1cb01f2195c104eae810ec">http_postFile</a> (const char *url, const char *filename)</td></tr>
-<tr class="separator:a9cc4a5f51a1cb01f2195c104eae810ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d6b9933d020080a3c211fd32a9e1df0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a4d6b9933d020080a3c211fd32a9e1df0">http_initControl</a> (<a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *httpCtrl, <a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a> dataCntxt, const char *urlHost, char *recvBuf, uint16_t recvBufSz, <a class="el" href="ltemc-http_8h.html#a70761bf42af348ac2511bcf4a4a31c4a">httpRecvFunc_t</a> recvCallback)</td></tr>
+<tr class="memdesc:a4d6b9933d020080a3c211fd32a9e1df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a HTTP(s) control structure to manage web communications.  <a href="ltemc-http_8h.html#a4d6b9933d020080a3c211fd32a9e1df0">More...</a><br /></td></tr>
+<tr class="separator:a4d6b9933d020080a3c211fd32a9e1df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a418a32bb67ae5ae1ab2e02c00863ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a3a418a32bb67ae5ae1ab2e02c00863ec">http_enableCustomHdrs</a> (<a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *httpCtrl, char *hdrBuffer, uint16_t hdrBufferSz)</td></tr>
+<tr class="memdesc:a3a418a32bb67ae5ae1ab2e02c00863ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers custom headers (char) buffer with HTTP control.  <a href="ltemc-http_8h.html#a3a418a32bb67ae5ae1ab2e02c00863ec">More...</a><br /></td></tr>
+<tr class="separator:a3a418a32bb67ae5ae1ab2e02c00863ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab533613578b3b75d760abd9a058c446b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#ab533613578b3b75d760abd9a058c446b">http_addDefaultHdrs</a> (<a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *httpCtrl, <a class="el" href="ltemc-http_8h.html#a8a857a48248e4895b0d7315937d53693">httpHeaderMap_t</a> headerMap)</td></tr>
+<tr class="memdesc:ab533613578b3b75d760abd9a058c446b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration.  <a href="ltemc-http_8h.html#ab533613578b3b75d760abd9a058c446b">More...</a><br /></td></tr>
+<tr class="separator:ab533613578b3b75d760abd9a058c446b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b18393cbc41e7f0d95958949bf33a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a92b18393cbc41e7f0d95958949bf33a1">http_addBasicAuthHdr</a> (<a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *httpCtrl, const char *user, const char *pw)</td></tr>
+<tr class="memdesc:a92b18393cbc41e7f0d95958949bf33a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration.  <a href="ltemc-http_8h.html#a92b18393cbc41e7f0d95958949bf33a1">More...</a><br /></td></tr>
+<tr class="separator:a92b18393cbc41e7f0d95958949bf33a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4288aa4cda4fd9791592ce93b737fc"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#afa4288aa4cda4fd9791592ce93b737fc">http_get</a> (<a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *httpCtrl, const char *relativeUrl, bool returnResponseHdrs, uint8_t timeoutSec)</td></tr>
+<tr class="memdesc:afa4288aa4cda4fd9791592ce93b737fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration.  <a href="ltemc-http_8h.html#afa4288aa4cda4fd9791592ce93b737fc">More...</a><br /></td></tr>
+<tr class="separator:afa4288aa4cda4fd9791592ce93b737fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7796d179f44f07b0d0c6170830a0337e"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a7796d179f44f07b0d0c6170830a0337e">http_post</a> (<a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *httpCtrl, const char *relativeUrl, bool returnResponseHdrs, const char *postData, uint16_t dataSz, uint8_t timeoutSec)</td></tr>
+<tr class="memdesc:a7796d179f44f07b0d0c6170830a0337e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a HTTP POST page web request.  <a href="ltemc-http_8h.html#a7796d179f44f07b0d0c6170830a0337e">More...</a><br /></td></tr>
+<tr class="separator:a7796d179f44f07b0d0c6170830a0337e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9259a6152e50da53e8f64dbb68b203bd"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#a9259a6152e50da53e8f64dbb68b203bd">http_readPage</a> (<a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *httpCtrl, uint16_t timeoutSec)</td></tr>
+<tr class="separator:a9259a6152e50da53e8f64dbb68b203bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc3e553b77a6341664862d7b8a9c0060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-http_8h.html#adc3e553b77a6341664862d7b8a9c0060">http_cancelPage</a> (<a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *httpCtrl)</td></tr>
+<tr class="separator:adc3e553b77a6341664862d7b8a9c0060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a0ecfe0c72a70bf2f9e12b7411595f5c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ecfe0c72a70bf2f9e12b7411595f5c5">&#9670;&nbsp;</a></span>httpReceiver_func_t</h2>
+<a id="a248527fb20f1c2f77c80603a6b295733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a248527fb20f1c2f77c80603a6b295733">&#9670;&nbsp;</a></span>httpCtrl_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* httpReceiver_func_t) (void *fileData, uint16_t dataSz)</td>
+          <td class="memname">typedef struct <a class="el" href="structhttp_ctrl__tag.html">httpCtrl_tag</a> <a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>typedef for the socket services data receiver function. Connects filesystem processing to the application (receive). </p>
+</div>
+</div>
+<a id="a8a857a48248e4895b0d7315937d53693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a857a48248e4895b0d7315937d53693">&#9670;&nbsp;</a></span>httpHeaderMap_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4">httpHeaderMap_tag</a> <a class="el" href="ltemc-http_8h.html#a8a857a48248e4895b0d7315937d53693">httpHeaderMap_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If using custom headers, bit-map indicating what headers to create for default custom header collection. </p>
+
+</div>
+</div>
+<a id="a70761bf42af348ac2511bcf4a4a31c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70761bf42af348ac2511bcf4a4a31c4a">&#9670;&nbsp;</a></span>httpRecvFunc_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* httpRecvFunc_t) (<a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a> dataCntxt, uint16_t httpRslt, char *data, uint16_t dataSz)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback function for data received event. Notifies application that new data is available and needs serviced. </p>
+<p>The *data and dataSz values are for convenience, since the application supplied the buffer to LTEmC.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataCntxt</td><td>[in] Data peer (data context or filesys) </td></tr>
+    <tr><td class="paramname">httpRslt</td><td>[in] HTTP status code found in the page result headers </td></tr>
+    <tr><td class="paramname">data</td><td>[in] Pointer to received data buffer </td></tr>
+    <tr><td class="paramname">dataSz</td><td>[in] The number of bytes available </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa03ddb83b8bb9dfbd81633b86cf3f5d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa03ddb83b8bb9dfbd81633b86cf3f5d1">&#9670;&nbsp;</a></span>httpState_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="ltemc-http_8h.html#a2ef3ea123ff1e791895fd5048100a4d3">httpState_tag</a> <a class="el" href="ltemc-http_8h.html#aa03ddb83b8bb9dfbd81633b86cf3f5d1">httpState_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a7393c11c4fd09ee34b3763324ed600dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7393c11c4fd09ee34b3763324ed600dc">&#9670;&nbsp;</a></span>http__constants</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ltemc-http_8h.html#a7393c11c4fd09ee34b3763324ed600dc">http__constants</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7393c11c4fd09ee34b3763324ed600dcac9527ee275ea08a885f60cbc653b14c2"></a>http__noResponseHeaders&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7393c11c4fd09ee34b3763324ed600dca295bbca70e6bb810df036c87f00dde61"></a>http__returnResponseHeaders&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7393c11c4fd09ee34b3763324ed600dcad10ab1ed8138f0bd0bf3f6e749cc8b57"></a>http__useDefaultTimeout&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7393c11c4fd09ee34b3763324ed600dcab5a3f3a7b1573f2e5bed7dd16098b096"></a>http__urlHostSz&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a59622bad04892ad2954ef83e5d8b12e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59622bad04892ad2954ef83e5d8b12e4">&#9670;&nbsp;</a></span>httpHeaderMap_tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ltemc-http_8h.html#a59622bad04892ad2954ef83e5d8b12e4">httpHeaderMap_tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If using custom headers, bit-map indicating what headers to create for default custom header collection. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a59622bad04892ad2954ef83e5d8b12e4acb7c9b87d7c18de1f294f5b5953a18bc"></a>httpHeaderMap_accept&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59622bad04892ad2954ef83e5d8b12e4a8a49f69f96e352ac6a5a076f26e129e8"></a>httpHeaderMap_userAgent&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59622bad04892ad2954ef83e5d8b12e4a8ba24ab106ef0d0b83866fb99e8be62a"></a>httpHeaderMap_connection&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59622bad04892ad2954ef83e5d8b12e4a550739a6dd7b7b631b4332d9a12cfccd"></a>httpHeaderMap_contentType&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59622bad04892ad2954ef83e5d8b12e4a6e7258c74abbedf0d878506e068be232"></a>httpHeaderMap_contentLenght&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59622bad04892ad2954ef83e5d8b12e4a2df1c1ae260315a4190a50881f29b20d"></a>httpHeaderMap_all&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a2ef3ea123ff1e791895fd5048100a4d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef3ea123ff1e791895fd5048100a4d3">&#9670;&nbsp;</a></span>httpState_tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ltemc-http_8h.html#a2ef3ea123ff1e791895fd5048100a4d3">httpState_tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2ef3ea123ff1e791895fd5048100a4d3a3b0ecebeaddfdcf385644d8c0bc4b160"></a>httpState_idle&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ef3ea123ff1e791895fd5048100a4d3aefa952842e34c8d7cb93e481c436fa3a"></a>httpState_requestComplete&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ef3ea123ff1e791895fd5048100a4d3a76a642a88929ee2f945b6c08e42bd354"></a>httpState_readingData&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ef3ea123ff1e791895fd5048100a4d3a37903004520df798c973b4bc633f7462"></a>httpState_closing&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="afa6524e38503c7274efad5f3f9bbc4f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa6524e38503c7274efad5f3f9bbc4f8">&#9670;&nbsp;</a></span>http_get()</h2>
+<a id="a92b18393cbc41e7f0d95958949bf33a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b18393cbc41e7f0d95958949bf33a1">&#9670;&nbsp;</a></span>http_addBasicAuthHdr()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> http_get </td>
+          <td class="memname">void http_addBasicAuthHdr </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>http</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a0ecfe0c72a70bf2f9e12b7411595f5c5">httpReceiver_func_t</a>&#160;</td>
-          <td class="paramname"><em>fileRecvr_func</em>&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pw</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -146,25 +322,35 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">http</td><td>[in] - Pointer to the control block for HTTP communications. </td></tr>
+    <tr><td class="paramname">user</td><td>[in] - User name. </td></tr>
+    <tr><td class="paramname">pw</td><td>[in] - Password/secret for header. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="ad85723949df4cbef8bec8a4e05789f58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad85723949df4cbef8bec8a4e05789f58">&#9670;&nbsp;</a></span>http_getFile()</h2>
+<a id="ab533613578b3b75d760abd9a058c446b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab533613578b3b75d760abd9a058c446b">&#9670;&nbsp;</a></span>http_addDefaultHdrs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> http_getFile </td>
+          <td class="memname">void http_addDefaultHdrs </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>httpCtrl</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a8a857a48248e4895b0d7315937d53693">httpHeaderMap_t</a>&#160;</td>
+          <td class="paramname"><em>headerMap</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -174,19 +360,220 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">httpCtrl</td><td>[in] - Pointer to the control block for HTTP communications. </td></tr>
+    <tr><td class="paramname">headerMap</td><td>[in] - Bitmap for which standard headers to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a59bbcedcaa9accb7de0502f3a54de81a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59bbcedcaa9accb7de0502f3a54de81a">&#9670;&nbsp;</a></span>http_post()</h2>
+<a id="adc3e553b77a6341664862d7b8a9c0060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc3e553b77a6341664862d7b8a9c0060">&#9670;&nbsp;</a></span>http_cancelPage()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> http_post </td>
+          <td class="memname">void http_cancelPage </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>httpCtrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a418a32bb67ae5ae1ab2e02c00863ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a418a32bb67ae5ae1ab2e02c00863ec">&#9670;&nbsp;</a></span>http_enableCustomHdrs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void http_enableCustomHdrs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>httpCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>headerBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>headerBufSz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers custom headers (char) buffer with HTTP control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">httpCtrl</td><td>[in] - Pointer to the control block for HTTP communications. </td></tr>
+    <tr><td class="paramname">headerBuf</td><td>[in] - pointer to header buffer created by application </td></tr>
+    <tr><td class="paramname">headerBufSz</td><td>[in] - size of the header buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afa4288aa4cda4fd9791592ce93b737fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa4288aa4cda4fd9791592ce93b737fc">&#9670;&nbsp;</a></span>http_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">resultCode_t http_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>httpCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
+          <td class="paramname"><em>relativeUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>returnResponseHdrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>timeoutSec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">httpCtrl</td><td>[in] - Pointer to the control block for HTTP communications. </td></tr>
+    <tr><td class="paramname">relativeUrl</td><td>[in] - The URL to GET (starts with \ and doesn't include the host part) </td></tr>
+    <tr><td class="paramname">returnResponseHdrs</td><td>[in] - Set to true for page result to include response headers at the start of the page </td></tr>
+    <tr><td class="paramname">timeoutSec</td><td>[in] - Timeout for entire GET request cycle</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if GET request sent successfully </dd></dl>
+
+</div>
+</div>
+<a id="a4d6b9933d020080a3c211fd32a9e1df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d6b9933d020080a3c211fd32a9e1df0">&#9670;&nbsp;</a></span>http_initControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void http_initControl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>httpCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a>&#160;</td>
+          <td class="paramname"><em>dataCntxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>urlHost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>recvBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recvBufSz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a70761bf42af348ac2511bcf4a4a31c4a">httpRecvFunc_t</a>&#160;</td>
+          <td class="paramname"><em>recvCallback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a HTTP(s) control structure to manage web communications. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">httpCtrl</td><td>[in] HTTP control structure pointer, struct defines parameters of communications with web server. </td></tr>
+    <tr><td class="paramname">dataCntxt</td><td>[in] The data context (0-5) to use for this communications. </td></tr>
+    <tr><td class="paramname">urlHost</td><td>[in] The host portion of the web server URL. </td></tr>
+    <tr><td class="paramname">recvBuf</td><td>[in] Pointer to application provided char buffer. </td></tr>
+    <tr><td class="paramname">recvBufSz</td><td>[in] Size of the receive buffer. </td></tr>
+    <tr><td class="paramname">recvCallback</td><td>[in] Callback function to receive incoming page data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if action was invoked, false if not </dd></dl>
+
+</div>
+</div>
+<a id="a7796d179f44f07b0d0c6170830a0337e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7796d179f44f07b0d0c6170830a0337e">&#9670;&nbsp;</a></span>http_post()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">resultCode_t http_post </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>httpCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>relativeUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>returnResponseHdrs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -198,35 +585,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>dataSz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9cc4a5f51a1cb01f2195c104eae810ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cc4a5f51a1cb01f2195c104eae810ec">&#9670;&nbsp;</a></span>http_postFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> http_postFile </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
+          <td class="paramname"><em>postDataSz</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em>&#160;</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>timeoutSec</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -236,55 +601,44 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Performs a HTTP POST page web request. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">httpCtrl</td><td>[in] - Pointer to the control block for HTTP communications. </td></tr>
+    <tr><td class="paramname">relativeUrl</td><td>[in] - URL, relative to the host. If none, can be provided as "" or "/" () </td></tr>
+    <tr><td class="paramname">returnResponseHdrs</td><td>[in] - if requested (true) the page response stream will prefix the page data </td></tr>
+    <tr><td class="paramname">postData</td><td>[in] - Pointer to char buffer with POST content </td></tr>
+    <tr><td class="paramname">postDataSz</td><td>[in] - Size of the POST content reference by *postData </td></tr>
+    <tr><td class="paramname">timeoutSec</td><td>[in] - the number of seconds to wait (blocking) for a page response</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if POST request completed </dd></dl>
+
 </div>
 </div>
-<a id="ac63d8e77c4017e433b20d58b35729bbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac63d8e77c4017e433b20d58b35729bbc">&#9670;&nbsp;</a></span>http_setRecvrFunc()</h2>
+<a id="a9259a6152e50da53e8f64dbb68b203bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9259a6152e50da53e8f64dbb68b203bd">&#9670;&nbsp;</a></span>http_readPage()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void http_setRecvrFunc </td>
+          <td class="memname">resultCode_t http_readPage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a0ecfe0c72a70bf2f9e12b7411595f5c5">httpReceiver_func_t</a>&#160;</td>
-          <td class="paramname"><em>fileRecvr_func</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-http_8h.html#a248527fb20f1c2f77c80603a6b295733">httpCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>httpCtrl</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae0d14f04a5b54c03a47cd82dc1a11b54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0d14f04a5b54c03a47cd82dc1a11b54">&#9670;&nbsp;</a></span>http_setServerUrl()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> http_setServerUrl </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>timeoutSec</em>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afb501c4b4413888d485309215d431790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb501c4b4413888d485309215d431790">&#9670;&nbsp;</a></span>http_setSslOptions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> http_setSslOptions </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

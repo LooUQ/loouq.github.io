@@ -1,0 +1,109 @@
+\hypertarget{structrx_core_buffer_ctrl__tag}{}\doxysection{rx\+Core\+Buffer\+Ctrl\+\_\+tag Struct Reference}
+\label{structrx_core_buffer_ctrl__tag}\index{rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}}
+
+
+Struct for a single page I\+OP smart buffer. Used by commands (AT cmd) and for capturing B\+Gx async events.  
+
+
+
+
+{\ttfamily \#include $<$ltemc-\/streams.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structrx_core_buffer_ctrl__tag_af076ed3307ccc419f46ed857bb321a2f}{\+\_\+buffer}}
+\begin{DoxyCompactList}\small\item\em data buffer, does not change while used. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structrx_core_buffer_ctrl__tag_a15bd355361a9897a7cef09fb3b35c73e}{\+\_\+buffer\+End}}
+\begin{DoxyCompactList}\small\item\em end of physical buffer \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structrx_core_buffer_ctrl__tag_adb0506d3ac5adfd1a4d2a52f4055a1fa}{\+\_\+buffer\+Sz}}
+\begin{DoxyCompactList}\small\item\em effective buffer size (after split) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structrx_core_buffer_ctrl__tag_a82f1a5332f3b0b47ec11dfc8e61bf8b8}{\+\_\+overflow}}
+\begin{DoxyCompactList}\small\item\em set in I\+SR if overflow detected; do\+Work() moves to \+\_\+prev\+Overflow, notifies application, then clears \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structrx_core_buffer_ctrl__tag_a1d574830314033345fbbdc871af29b7d}{tail}}
+\begin{DoxyCompactList}\small\item\em consumer out pointer \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structrx_core_buffer_ctrl__tag_a873ff4f063e5db6eabcc2e96671c9591}{head}}
+\begin{DoxyCompactList}\small\item\em data in pointer \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structrx_core_buffer_ctrl__tag_aabb0d62ee491eba71516b8a7137ae4c7}{prev\+Head}}
+\begin{DoxyCompactList}\small\item\em if the last chunk is copied or consumed immediately used to restore head \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct for a single page I\+OP smart buffer. Used by commands (AT cmd) and for capturing B\+Gx async events. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structrx_core_buffer_ctrl__tag_af076ed3307ccc419f46ed857bb321a2f}\label{structrx_core_buffer_ctrl__tag_af076ed3307ccc419f46ed857bb321a2f}} 
+\index{rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}!\_buffer@{\_buffer}}
+\index{\_buffer@{\_buffer}!rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_buffer}{\_buffer}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+buffer}
+
+
+
+data buffer, does not change while used. 
+
+\mbox{\Hypertarget{structrx_core_buffer_ctrl__tag_a15bd355361a9897a7cef09fb3b35c73e}\label{structrx_core_buffer_ctrl__tag_a15bd355361a9897a7cef09fb3b35c73e}} 
+\index{rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}!\_bufferEnd@{\_bufferEnd}}
+\index{\_bufferEnd@{\_bufferEnd}!rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_bufferEnd}{\_bufferEnd}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+buffer\+End}
+
+
+
+end of physical buffer 
+
+\mbox{\Hypertarget{structrx_core_buffer_ctrl__tag_adb0506d3ac5adfd1a4d2a52f4055a1fa}\label{structrx_core_buffer_ctrl__tag_adb0506d3ac5adfd1a4d2a52f4055a1fa}} 
+\index{rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}!\_bufferSz@{\_bufferSz}}
+\index{\_bufferSz@{\_bufferSz}!rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_bufferSz}{\_bufferSz}}
+{\footnotesize\ttfamily uint16\+\_\+t \+\_\+buffer\+Sz}
+
+
+
+effective buffer size (after split) 
+
+\mbox{\Hypertarget{structrx_core_buffer_ctrl__tag_a82f1a5332f3b0b47ec11dfc8e61bf8b8}\label{structrx_core_buffer_ctrl__tag_a82f1a5332f3b0b47ec11dfc8e61bf8b8}} 
+\index{rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}!\_overflow@{\_overflow}}
+\index{\_overflow@{\_overflow}!rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_overflow}{\_overflow}}
+{\footnotesize\ttfamily bool \+\_\+overflow}
+
+
+
+set in I\+SR if overflow detected; do\+Work() moves to \+\_\+prev\+Overflow, notifies application, then clears 
+
+\mbox{\Hypertarget{structrx_core_buffer_ctrl__tag_a873ff4f063e5db6eabcc2e96671c9591}\label{structrx_core_buffer_ctrl__tag_a873ff4f063e5db6eabcc2e96671c9591}} 
+\index{rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}!head@{head}}
+\index{head@{head}!rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily char$\ast$ head}
+
+
+
+data in pointer 
+
+\mbox{\Hypertarget{structrx_core_buffer_ctrl__tag_aabb0d62ee491eba71516b8a7137ae4c7}\label{structrx_core_buffer_ctrl__tag_aabb0d62ee491eba71516b8a7137ae4c7}} 
+\index{rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}!prevHead@{prevHead}}
+\index{prevHead@{prevHead}!rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{prevHead}{prevHead}}
+{\footnotesize\ttfamily char$\ast$ prev\+Head}
+
+
+
+if the last chunk is copied or consumed immediately used to restore head 
+
+\mbox{\Hypertarget{structrx_core_buffer_ctrl__tag_a1d574830314033345fbbdc871af29b7d}\label{structrx_core_buffer_ctrl__tag_a1d574830314033345fbbdc871af29b7d}} 
+\index{rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}!tail@{tail}}
+\index{tail@{tail}!rxCoreBufferCtrl\_tag@{rxCoreBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily char$\ast$ tail}
+
+
+
+consumer out pointer 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ltemc-streams_8h}{ltemc-\/streams.\+h}}\end{DoxyCompactItemize}

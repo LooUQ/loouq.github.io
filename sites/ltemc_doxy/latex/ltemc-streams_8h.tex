@@ -1,0 +1,382 @@
+\hypertarget{ltemc-streams_8h}{}\doxysection{src/ltemc-\/streams.h File Reference}
+\label{ltemc-streams_8h}\index{src/ltemc-\/streams.h@{src/ltemc-\/streams.h}}
+{\ttfamily \#include $<$lq-\/types.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrx_buffer_page__tag}{rx\+Buffer\+Page\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Receive buffer page. Component struct for the rx\+Data\+Buffer\+Ctrl\+\_\+t. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrx_data_buffer_ctrl__tag}{rx\+Data\+Buffer\+Ctrl\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct for a I\+OP smart buffer. Contains the char buffer and controls to marshall data between I\+OP and consumer (cmd,sockets,mqtt,etc.). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrx_core_buffer_ctrl__tag}{rx\+Core\+Buffer\+Ctrl\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct for a single page I\+OP smart buffer. Used by commands (AT cmd) and for capturing B\+Gx async events. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtx_buffer_ctrl__tag}{tx\+Buffer\+Ctrl\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct for a I\+OP transmit (TX) buffer control block. Tracks progress of chunk sends to L\+T\+Em1. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbase_ctrl__tag}{base\+Ctrl\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Abstract base struct containing common properties required of a stream control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712}{data\+Stream\+Type\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_ad8b0a7e17303d350fe98e8804b95c562}{data\+Stream\+Type\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Enum of data stream peer types. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6c}{protocol\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enum of protocols available on the modem (bit-\/mask). \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acc}{data\+Context\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enum of the available data contexts for B\+Gx (only S\+S\+L/\+T\+LS capable contexts are supported). \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3}{stream\+Peer\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a950612d73b3a439198b37f3125babc25}{stream\+Peer\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enum of data stream peers\+: network data contexts or the B\+Gx file system. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structrx_buffer_page__tag}{rx\+Buffer\+Page\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a9202441b7d2384f046941dda98b77403}{rx\+Buffer\+Page\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Receive buffer page. Component struct for the rx\+Data\+Buffer\+Ctrl\+\_\+t. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structrx_data_buffer_ctrl__tag}{rx\+Data\+Buffer\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct for a I\+OP smart buffer. Contains the char buffer and controls to marshall data between I\+OP and consumer (cmd,sockets,mqtt,etc.). \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structrx_core_buffer_ctrl__tag}{rx\+Core\+Buffer\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a37c2c70d8dc8028852a4345574c5104a}{rx\+Core\+Buffer\+Ctrl\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct for a single page I\+OP smart buffer. Used by commands (AT cmd) and for capturing B\+Gx async events. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structtx_buffer_ctrl__tag}{tx\+Buffer\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_afbcc9cfcd62a2e3e049e765f641fa9de}{tx\+Buffer\+Ctrl\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct for a I\+OP transmit (TX) buffer control block. Tracks progress of chunk sends to L\+T\+Em1. \end{DoxyCompactList}\item 
+typedef void($\ast$ \mbox{\hyperlink{ltemc-streams_8h_a2d28d046017a16303974cf83b3d08c0b}{module\+Do\+Work\+Func\+\_\+t}}) ()
+\begin{DoxyCompactList}\small\item\em Background work function signature. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structbase_ctrl__tag}{base\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_ae2c83639bafc54c9118d6a4fd05998be}{base\+Ctrl\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Abstract base struct containing common properties required of a stream control. \end{DoxyCompactList}\item 
+typedef void $\ast$ \mbox{\hyperlink{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}{iop\+Stream\+Ctrl\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ltemc-streams_8h_a172f379ee1371fdf9c09579bbc3f779a}{streams\+\_\+\+\_\+constants}} \{ \mbox{\hyperlink{ltemc-streams_8h_a172f379ee1371fdf9c09579bbc3f779aafd194f565c73a4908b0fcbb064b65788}{streams\+\_\+\+\_\+ctrl\+Magic}} = 0x5c
+ \}
+\item 
+enum \mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712}{data\+Stream\+Type\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712af0946b4ffcfe39505e4f368dd2f7a01c}{data\+Stream\+\_\+none}} = 0, 
+\mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a06c8d797f9fe273dec9c997da4912a5e}{data\+Stream\+\_\+sckt}} = 2, 
+\mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a97580f585c15bfb3b530017dbd8ee3a4}{data\+Stream\+\_\+mqtt}} = 3, 
+\mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a5129fe0069c88109bf69e38533234e98}{data\+Stream\+\_\+http}} = 4, 
+\newline
+\mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a8ccd4f5de43c908b0dcb3cdb68fab2e9}{data\+Stream\+\_\+file}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of data stream peer types. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6c}{protocol\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca030558b5b57bba711bfed356ca009906}{protocol\+\_\+tcp}} = 0x00, 
+\mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca5bd4b9120131858ad72573514e250933}{protocol\+\_\+udp}} = 0x01, 
+\mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6caf0061dc3c11d93f1068cc42a76ba0d91}{protocol\+\_\+ssl}} = 0x02, 
+\mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca0b0d28354465a1fffe65f71d706b6995}{protocol\+\_\+socket}} = 0x03, 
+\newline
+\mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca1410bc7ff4e5f24154b9776a2850ab2d}{protocol\+\_\+mqtt}} = 0x10, 
+\mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca93aa4f4446d8b8dc99a238d59f16798b}{protocol\+\_\+http}} = 0x11, 
+\mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6cab8d57aa0639ca27248fd5223f1c47d44}{protocol\+\_\+void}} = 0x\+FF
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of protocols available on the modem (bit-\/mask). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acc}{data\+Context\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca73f2c7952731958c2f90e75e1142881b}{data\+Context\+\_\+0}} = 0, 
+\mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27accaf6b0062ca655dc354ec29abbae020197}{data\+Context\+\_\+1}} = 1, 
+\mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca13163c23df8e74c6caa39a723b579cb1}{data\+Context\+\_\+2}} = 2, 
+\mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27accae8cae11bd812910f5a92dc42a1d24ba8}{data\+Context\+\_\+3}} = 3, 
+\newline
+\mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca4b701ddb939723e6d0306f885c809ce5}{data\+Context\+\_\+4}} = 4, 
+\mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca3e1709aaa7ac405d7d164f22650350b3}{data\+Context\+\_\+5}} = 5, 
+\mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca5ae11cfaf235af9cdd6812f6d2cfd551}{data\+Context\+\_\+cnt}} = 6
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of the available data contexts for B\+Gx (only S\+S\+L/\+T\+LS capable contexts are supported). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3}{stream\+Peer\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a1394716629f174713f2e5cb05ea2aee2}{stream\+Peer\+\_\+data\+Cntxt0}} = 0, 
+\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3abe534d3eddc20fa80615f0d7e95545a5}{stream\+Peer\+\_\+data\+Cntxt1}} = 1, 
+\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3afa912e27c6b47182dfb76c15c997b5dc}{stream\+Peer\+\_\+data\+Cntxt2}} = 2, 
+\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a4baa1de50eebbed0594cbbe13e462388}{stream\+Peer\+\_\+data\+Cntxt3}} = 3, 
+\newline
+\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3ab1a7c12a0994301decacc536d81e78dd}{stream\+Peer\+\_\+data\+Cntxt4}} = 4, 
+\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a9c08ae98b21c5e0fe417101029676e27}{stream\+Peer\+\_\+data\+Cntxt5}} = 5, 
+\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a0a048027541ba1546b16b90d2ef9370d}{stream\+Peer\+\_\+file}} = 6, 
+\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a7b1e06a3f0b4504ede6a057e651025f5}{stream\+Peer\+\_\+cnt}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of data stream peers\+: network data contexts or the B\+Gx file system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ltemc-streams_8h_ae2c83639bafc54c9118d6a4fd05998be}\label{ltemc-streams_8h_ae2c83639bafc54c9118d6a4fd05998be}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!baseCtrl\_t@{baseCtrl\_t}}
+\index{baseCtrl\_t@{baseCtrl\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{baseCtrl\_t}{baseCtrl\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structbase_ctrl__tag}{base\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_ae2c83639bafc54c9118d6a4fd05998be}{base\+Ctrl\+\_\+t}}}
+
+
+
+Abstract base struct containing common properties required of a stream control. 
+
+\mbox{\Hypertarget{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}\label{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataContext\_t@{dataContext\_t}}
+\index{dataContext\_t@{dataContext\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{dataContext\_t}{dataContext\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acc}{data\+Context\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}
+
+
+
+Enum of the available data contexts for B\+Gx (only S\+S\+L/\+T\+LS capable contexts are supported). 
+
+\mbox{\Hypertarget{ltemc-streams_8h_ad8b0a7e17303d350fe98e8804b95c562}\label{ltemc-streams_8h_ad8b0a7e17303d350fe98e8804b95c562}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataStreamType\_tag@{dataStreamType\_tag}}
+\index{dataStreamType\_tag@{dataStreamType\_tag}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{dataStreamType\_tag}{dataStreamType\_tag}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712}{data\+Stream\+Type\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712}{data\+Stream\+Type\+\_\+tag}}}
+
+
+
+Enum of data stream peer types. 
+
+\mbox{\Hypertarget{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}\label{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!iopStreamCtrl\_t@{iopStreamCtrl\_t}}
+\index{iopStreamCtrl\_t@{iopStreamCtrl\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{iopStreamCtrl\_t}{iopStreamCtrl\_t}}
+{\footnotesize\ttfamily typedef void$\ast$ \mbox{\hyperlink{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}{iop\+Stream\+Ctrl\+\_\+t}}}
+
+this is cast into the specific stream control. Example\+: sckt\+Ctrl\+\_\+t {\itshape sckt = (sckt\+Ctrl\+\_\+t})((iop\+\_\+t$\ast$)g\+\_\+ltem.\+iop)-\/$>$stream\+Peers\mbox{[}((iop\+\_\+t$\ast$)g\+\_\+ltem.\+iop)-\/$>$rx\+Stream\+Peer\mbox{]}; \mbox{\Hypertarget{ltemc-streams_8h_a2d28d046017a16303974cf83b3d08c0b}\label{ltemc-streams_8h_a2d28d046017a16303974cf83b3d08c0b}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!moduleDoWorkFunc\_t@{moduleDoWorkFunc\_t}}
+\index{moduleDoWorkFunc\_t@{moduleDoWorkFunc\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{moduleDoWorkFunc\_t}{moduleDoWorkFunc\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ module\+Do\+Work\+Func\+\_\+t) ()}
+
+
+
+Background work function signature. 
+
+Most subsystems are linked to this struct with pointers to allow for better abstraction and optional subsystems \mbox{\Hypertarget{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}\label{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!protocol\_t@{protocol\_t}}
+\index{protocol\_t@{protocol\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{protocol\_t}{protocol\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6c}{protocol\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}}}
+
+
+
+Enum of protocols available on the modem (bit-\/mask). 
+
+Note\+: All of the protocols are C\+L\+I\+E\+N\+TS, while the B\+Gx line of modules support server mode the network carriers generally don\textquotesingle{}t \mbox{\Hypertarget{ltemc-streams_8h_a9202441b7d2384f046941dda98b77403}\label{ltemc-streams_8h_a9202441b7d2384f046941dda98b77403}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!rxBufferPage\_t@{rxBufferPage\_t}}
+\index{rxBufferPage\_t@{rxBufferPage\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{rxBufferPage\_t}{rxBufferPage\_t}}
+{\footnotesize\ttfamily typedef volatile struct \mbox{\hyperlink{structrx_buffer_page__tag}{rx\+Buffer\+Page\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a9202441b7d2384f046941dda98b77403}{rx\+Buffer\+Page\+\_\+t}}}
+
+
+
+Receive buffer page. Component struct for the rx\+Data\+Buffer\+Ctrl\+\_\+t. 
+
+\mbox{\Hypertarget{ltemc-streams_8h_a37c2c70d8dc8028852a4345574c5104a}\label{ltemc-streams_8h_a37c2c70d8dc8028852a4345574c5104a}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!rxCoreBufferCtrl\_t@{rxCoreBufferCtrl\_t}}
+\index{rxCoreBufferCtrl\_t@{rxCoreBufferCtrl\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{rxCoreBufferCtrl\_t}{rxCoreBufferCtrl\_t}}
+{\footnotesize\ttfamily typedef volatile struct \mbox{\hyperlink{structrx_core_buffer_ctrl__tag}{rx\+Core\+Buffer\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a37c2c70d8dc8028852a4345574c5104a}{rx\+Core\+Buffer\+Ctrl\+\_\+t}}}
+
+
+
+Struct for a single page I\+OP smart buffer. Used by commands (AT cmd) and for capturing B\+Gx async events. 
+
+\mbox{\Hypertarget{ltemc-streams_8h_a40071528946947c15514d22d34620931}\label{ltemc-streams_8h_a40071528946947c15514d22d34620931}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!rxDataBufferCtrl\_t@{rxDataBufferCtrl\_t}}
+\index{rxDataBufferCtrl\_t@{rxDataBufferCtrl\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{rxDataBufferCtrl\_t}{rxDataBufferCtrl\_t}}
+{\footnotesize\ttfamily typedef volatile struct \mbox{\hyperlink{structrx_data_buffer_ctrl__tag}{rx\+Data\+Buffer\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}}}
+
+
+
+Struct for a I\+OP smart buffer. Contains the char buffer and controls to marshall data between I\+OP and consumer (cmd,sockets,mqtt,etc.). 
+
+buffer\+Sync is a semphore to signal buffer page role swap underway. I\+SR will sync with this upon entering the RX critical section
+
+
+\begin{DoxyItemize}
+\item Receive consumers (do\+Work functions) wanting to swap RX buffer pages will set buffer\+Sync
+\item This will force I\+SR to check iop\+Pg and \+\_\+next\+Iop\+Pg and complete swap if necessary
+\item Once buffer page swap is done, buffer\+Sync will be reset
+\item If interrupt fires I\+SR will check buffer\+Sync prior to servicing a RX event
+\end{DoxyItemize}
+
+\+\_\+do\+Work() \mbox{[}consumer\mbox{]} uses \mbox{\hyperlink{ltemc-iop_8h_a32b0db6aab0ed6f5f4f81a8fe4ad4783}{I\+O\+P\+\_\+swap\+Rx\+Buffer\+Page(rx\+Data\+Buffer\+Ctrl\+\_\+t $\ast$buf\+Ptr)}}, I\+SR uses I\+O\+P\+\_\+isr\+Check\+Buffer\+Sync()
+
+N\+O\+TE\+: the completion test methods both consider the whole buffer for RX complete, but split buffers are returned to the application as each is filled or the entire RX is completed. \mbox{\Hypertarget{ltemc-streams_8h_a950612d73b3a439198b37f3125babc25}\label{ltemc-streams_8h_a950612d73b3a439198b37f3125babc25}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_t@{streamPeer\_t}}
+\index{streamPeer\_t@{streamPeer\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{streamPeer\_t}{streamPeer\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3}{stream\+Peer\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_a950612d73b3a439198b37f3125babc25}{stream\+Peer\+\_\+t}}}
+
+
+
+Enum of data stream peers\+: network data contexts or the B\+Gx file system. 
+
+Only data contexts that coincide with S\+SL contexts are supported. \mbox{\Hypertarget{ltemc-streams_8h_afbcc9cfcd62a2e3e049e765f641fa9de}\label{ltemc-streams_8h_afbcc9cfcd62a2e3e049e765f641fa9de}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!txBufferCtrl\_t@{txBufferCtrl\_t}}
+\index{txBufferCtrl\_t@{txBufferCtrl\_t}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{txBufferCtrl\_t}{txBufferCtrl\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structtx_buffer_ctrl__tag}{tx\+Buffer\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-streams_8h_afbcc9cfcd62a2e3e049e765f641fa9de}{tx\+Buffer\+Ctrl\+\_\+t}}}
+
+
+
+Struct for a I\+OP transmit (TX) buffer control block. Tracks progress of chunk sends to L\+T\+Em1. 
+
+L\+T\+Em1 S\+PI bridge works with chunks of $\sim$64 bytes (actual transfers are usually 58 -\/ 62 bytes). I\+OP abstracts S\+PI chunks from senders. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acc}\label{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acc}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataContext\_tag@{dataContext\_tag}}
+\index{dataContext\_tag@{dataContext\_tag}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{dataContext\_tag}{dataContext\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acc}{data\+Context\+\_\+tag}}}
+
+
+
+Enum of the available data contexts for B\+Gx (only S\+S\+L/\+T\+LS capable contexts are supported). 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataContext\_0@{dataContext\_0}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataContext\_0@{dataContext\_0}}}\mbox{\Hypertarget{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca73f2c7952731958c2f90e75e1142881b}\label{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca73f2c7952731958c2f90e75e1142881b}} 
+data\+Context\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataContext\_1@{dataContext\_1}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataContext\_1@{dataContext\_1}}}\mbox{\Hypertarget{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27accaf6b0062ca655dc354ec29abbae020197}\label{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27accaf6b0062ca655dc354ec29abbae020197}} 
+data\+Context\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataContext\_2@{dataContext\_2}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataContext\_2@{dataContext\_2}}}\mbox{\Hypertarget{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca13163c23df8e74c6caa39a723b579cb1}\label{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca13163c23df8e74c6caa39a723b579cb1}} 
+data\+Context\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataContext\_3@{dataContext\_3}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataContext\_3@{dataContext\_3}}}\mbox{\Hypertarget{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27accae8cae11bd812910f5a92dc42a1d24ba8}\label{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27accae8cae11bd812910f5a92dc42a1d24ba8}} 
+data\+Context\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataContext\_4@{dataContext\_4}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataContext\_4@{dataContext\_4}}}\mbox{\Hypertarget{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca4b701ddb939723e6d0306f885c809ce5}\label{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca4b701ddb939723e6d0306f885c809ce5}} 
+data\+Context\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataContext\_5@{dataContext\_5}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataContext\_5@{dataContext\_5}}}\mbox{\Hypertarget{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca3e1709aaa7ac405d7d164f22650350b3}\label{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca3e1709aaa7ac405d7d164f22650350b3}} 
+data\+Context\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataContext\_cnt@{dataContext\_cnt}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataContext\_cnt@{dataContext\_cnt}}}\mbox{\Hypertarget{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca5ae11cfaf235af9cdd6812f6d2cfd551}\label{ltemc-streams_8h_a89f084c8f5c0492e7d190c59e1d27acca5ae11cfaf235af9cdd6812f6d2cfd551}} 
+data\+Context\+\_\+cnt&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712}\label{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataStreamType\_tag@{dataStreamType\_tag}}
+\index{dataStreamType\_tag@{dataStreamType\_tag}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{dataStreamType\_tag}{dataStreamType\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712}{data\+Stream\+Type\+\_\+tag}}}
+
+
+
+Enum of data stream peer types. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataStream\_none@{dataStream\_none}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataStream\_none@{dataStream\_none}}}\mbox{\Hypertarget{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712af0946b4ffcfe39505e4f368dd2f7a01c}\label{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712af0946b4ffcfe39505e4f368dd2f7a01c}} 
+data\+Stream\+\_\+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataStream\_sckt@{dataStream\_sckt}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataStream\_sckt@{dataStream\_sckt}}}\mbox{\Hypertarget{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a06c8d797f9fe273dec9c997da4912a5e}\label{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a06c8d797f9fe273dec9c997da4912a5e}} 
+data\+Stream\+\_\+sckt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataStream\_mqtt@{dataStream\_mqtt}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataStream\_mqtt@{dataStream\_mqtt}}}\mbox{\Hypertarget{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a97580f585c15bfb3b530017dbd8ee3a4}\label{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a97580f585c15bfb3b530017dbd8ee3a4}} 
+data\+Stream\+\_\+mqtt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataStream\_http@{dataStream\_http}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataStream\_http@{dataStream\_http}}}\mbox{\Hypertarget{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a5129fe0069c88109bf69e38533234e98}\label{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a5129fe0069c88109bf69e38533234e98}} 
+data\+Stream\+\_\+http&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dataStream\_file@{dataStream\_file}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!dataStream\_file@{dataStream\_file}}}\mbox{\Hypertarget{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a8ccd4f5de43c908b0dcb3cdb68fab2e9}\label{ltemc-streams_8h_a2f10706327fdc6e38aa80fee01a43712a8ccd4f5de43c908b0dcb3cdb68fab2e9}} 
+data\+Stream\+\_\+file&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6c}\label{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6c}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!protocol\_tag@{protocol\_tag}}
+\index{protocol\_tag@{protocol\_tag}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{protocol\_tag}{protocol\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6c}{protocol\+\_\+tag}}}
+
+
+
+Enum of protocols available on the modem (bit-\/mask). 
+
+Note\+: All of the protocols are C\+L\+I\+E\+N\+TS, while the B\+Gx line of modules support server mode the network carriers generally don\textquotesingle{}t \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_tcp@{protocol\_tcp}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!protocol\_tcp@{protocol\_tcp}}}\mbox{\Hypertarget{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca030558b5b57bba711bfed356ca009906}\label{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca030558b5b57bba711bfed356ca009906}} 
+protocol\+\_\+tcp&T\+CP client. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_udp@{protocol\_udp}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!protocol\_udp@{protocol\_udp}}}\mbox{\Hypertarget{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca5bd4b9120131858ad72573514e250933}\label{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca5bd4b9120131858ad72573514e250933}} 
+protocol\+\_\+udp&U\+DP client. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_ssl@{protocol\_ssl}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!protocol\_ssl@{protocol\_ssl}}}\mbox{\Hypertarget{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6caf0061dc3c11d93f1068cc42a76ba0d91}\label{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6caf0061dc3c11d93f1068cc42a76ba0d91}} 
+protocol\+\_\+ssl&S\+SL client. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_socket@{protocol\_socket}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!protocol\_socket@{protocol\_socket}}}\mbox{\Hypertarget{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca0b0d28354465a1fffe65f71d706b6995}\label{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca0b0d28354465a1fffe65f71d706b6995}} 
+protocol\+\_\+socket&special test value, $<$ compare includes any of the above IP socket protocols \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_mqtt@{protocol\_mqtt}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!protocol\_mqtt@{protocol\_mqtt}}}\mbox{\Hypertarget{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca1410bc7ff4e5f24154b9776a2850ab2d}\label{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca1410bc7ff4e5f24154b9776a2850ab2d}} 
+protocol\+\_\+mqtt&M\+Q\+TT messaging client. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_http@{protocol\_http}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!protocol\_http@{protocol\_http}}}\mbox{\Hypertarget{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca93aa4f4446d8b8dc99a238d59f16798b}\label{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6ca93aa4f4446d8b8dc99a238d59f16798b}} 
+protocol\+\_\+http&H\+T\+TP client. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{protocol\_void@{protocol\_void}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!protocol\_void@{protocol\_void}}}\mbox{\Hypertarget{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6cab8d57aa0639ca27248fd5223f1c47d44}\label{ltemc-streams_8h_a3f393a98760199ca61cd643f317eee6cab8d57aa0639ca27248fd5223f1c47d44}} 
+protocol\+\_\+void&No protocol, used in code to generally signal a null condition. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3}\label{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_tag@{streamPeer\_tag}}
+\index{streamPeer\_tag@{streamPeer\_tag}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{streamPeer\_tag}{streamPeer\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3}{stream\+Peer\+\_\+tag}}}
+
+
+
+Enum of data stream peers\+: network data contexts or the B\+Gx file system. 
+
+Only data contexts that coincide with S\+SL contexts are supported. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{streamPeer\_dataCntxt0@{streamPeer\_dataCntxt0}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_dataCntxt0@{streamPeer\_dataCntxt0}}}\mbox{\Hypertarget{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a1394716629f174713f2e5cb05ea2aee2}\label{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a1394716629f174713f2e5cb05ea2aee2}} 
+stream\+Peer\+\_\+data\+Cntxt0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{streamPeer\_dataCntxt1@{streamPeer\_dataCntxt1}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_dataCntxt1@{streamPeer\_dataCntxt1}}}\mbox{\Hypertarget{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3abe534d3eddc20fa80615f0d7e95545a5}\label{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3abe534d3eddc20fa80615f0d7e95545a5}} 
+stream\+Peer\+\_\+data\+Cntxt1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{streamPeer\_dataCntxt2@{streamPeer\_dataCntxt2}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_dataCntxt2@{streamPeer\_dataCntxt2}}}\mbox{\Hypertarget{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3afa912e27c6b47182dfb76c15c997b5dc}\label{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3afa912e27c6b47182dfb76c15c997b5dc}} 
+stream\+Peer\+\_\+data\+Cntxt2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{streamPeer\_dataCntxt3@{streamPeer\_dataCntxt3}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_dataCntxt3@{streamPeer\_dataCntxt3}}}\mbox{\Hypertarget{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a4baa1de50eebbed0594cbbe13e462388}\label{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a4baa1de50eebbed0594cbbe13e462388}} 
+stream\+Peer\+\_\+data\+Cntxt3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{streamPeer\_dataCntxt4@{streamPeer\_dataCntxt4}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_dataCntxt4@{streamPeer\_dataCntxt4}}}\mbox{\Hypertarget{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3ab1a7c12a0994301decacc536d81e78dd}\label{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3ab1a7c12a0994301decacc536d81e78dd}} 
+stream\+Peer\+\_\+data\+Cntxt4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{streamPeer\_dataCntxt5@{streamPeer\_dataCntxt5}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_dataCntxt5@{streamPeer\_dataCntxt5}}}\mbox{\Hypertarget{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a9c08ae98b21c5e0fe417101029676e27}\label{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a9c08ae98b21c5e0fe417101029676e27}} 
+stream\+Peer\+\_\+data\+Cntxt5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{streamPeer\_file@{streamPeer\_file}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_file@{streamPeer\_file}}}\mbox{\Hypertarget{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a0a048027541ba1546b16b90d2ef9370d}\label{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a0a048027541ba1546b16b90d2ef9370d}} 
+stream\+Peer\+\_\+file&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{streamPeer\_cnt@{streamPeer\_cnt}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streamPeer\_cnt@{streamPeer\_cnt}}}\mbox{\Hypertarget{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a7b1e06a3f0b4504ede6a057e651025f5}\label{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a7b1e06a3f0b4504ede6a057e651025f5}} 
+stream\+Peer\+\_\+cnt&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-streams_8h_a172f379ee1371fdf9c09579bbc3f779a}\label{ltemc-streams_8h_a172f379ee1371fdf9c09579bbc3f779a}} 
+\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streams\_\_constants@{streams\_\_constants}}
+\index{streams\_\_constants@{streams\_\_constants}!ltemc-\/streams.h@{ltemc-\/streams.h}}
+\doxysubsubsection{\texorpdfstring{streams\_\_constants}{streams\_\_constants}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-streams_8h_a172f379ee1371fdf9c09579bbc3f779a}{streams\+\_\+\+\_\+constants}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{streams\_\_ctrlMagic@{streams\_\_ctrlMagic}!ltemc-\/streams.h@{ltemc-\/streams.h}}\index{ltemc-\/streams.h@{ltemc-\/streams.h}!streams\_\_ctrlMagic@{streams\_\_ctrlMagic}}}\mbox{\Hypertarget{ltemc-streams_8h_a172f379ee1371fdf9c09579bbc3f779aafd194f565c73a4908b0fcbb064b65788}\label{ltemc-streams_8h_a172f379ee1371fdf9c09579bbc3f779aafd194f565c73a4908b0fcbb064b65788}} 
+streams\+\_\+\+\_\+ctrl\+Magic&\\
+\hline
+
+\end{DoxyEnumFields}

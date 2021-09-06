@@ -1,0 +1,147 @@
+\hypertarget{structrx_data_buffer_ctrl__tag}{}\doxysection{rx\+Data\+Buffer\+Ctrl\+\_\+tag Struct Reference}
+\label{structrx_data_buffer_ctrl__tag}\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+
+
+Struct for a I\+OP smart buffer. Contains the char buffer and controls to marshall data between I\+OP and consumer (cmd,sockets,mqtt,etc.).  
+
+
+
+
+{\ttfamily \#include $<$ltemc-\/streams.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structrx_data_buffer_ctrl__tag_af076ed3307ccc419f46ed857bb321a2f}{\+\_\+buffer}}
+\begin{DoxyCompactList}\small\item\em data buffer, does not change while used. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structrx_data_buffer_ctrl__tag_a15bd355361a9897a7cef09fb3b35c73e}{\+\_\+buffer\+End}}
+\begin{DoxyCompactList}\small\item\em end of physical buffer \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structrx_data_buffer_ctrl__tag_adb0506d3ac5adfd1a4d2a52f4055a1fa}{\+\_\+buffer\+Sz}}
+\begin{DoxyCompactList}\small\item\em effective buffer size (after split) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structrx_data_buffer_ctrl__tag_ae37093ce8b14a37b1bbd50ddacd9752c}{\+\_\+page\+Sz}}
+\begin{DoxyCompactList}\small\item\em the size of split size \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structrx_data_buffer_ctrl__tag_a82f1a5332f3b0b47ec11dfc8e61bf8b8}{\+\_\+overflow}}
+\begin{DoxyCompactList}\small\item\em set in I\+SR if overflow detected \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structrx_data_buffer_ctrl__tag_aa01ae11e9124f912923ebac5b1b514ca}{buffer\+Sync}}
+\begin{DoxyCompactList}\small\item\em set when page swap is underway \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structrx_data_buffer_ctrl__tag_ae7bb448d66860f10c0c3f1cff412975c}{\+\_\+next\+Iop\+Pg}}
+\begin{DoxyCompactList}\small\item\em intended resulting iop\+Pg value \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structrx_data_buffer_ctrl__tag_aa3bd398e99d47cdd39895c3671b5ece2}{iop\+Pg}}
+\begin{DoxyCompactList}\small\item\em when in split mode, which buffer page is assigned to I\+OP for filling \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_a9202441b7d2384f046941dda98b77403}{rx\+Buffer\+Page\+\_\+t}} \mbox{\hyperlink{structrx_data_buffer_ctrl__tag_ac19cabf61058bbb0f81641c8d12741b5}{pages}} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em buffer page to support interwoven fill/empty operations \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct for a I\+OP smart buffer. Contains the char buffer and controls to marshall data between I\+OP and consumer (cmd,sockets,mqtt,etc.). 
+
+buffer\+Sync is a semphore to signal buffer page role swap underway. I\+SR will sync with this upon entering the RX critical section
+
+
+\begin{DoxyItemize}
+\item Receive consumers (do\+Work functions) wanting to swap RX buffer pages will set buffer\+Sync
+\item This will force I\+SR to check iop\+Pg and \+\_\+next\+Iop\+Pg and complete swap if necessary
+\item Once buffer page swap is done, buffer\+Sync will be reset
+\item If interrupt fires I\+SR will check buffer\+Sync prior to servicing a RX event
+\end{DoxyItemize}
+
+\+\_\+do\+Work() \mbox{[}consumer\mbox{]} uses \mbox{\hyperlink{ltemc-iop_8h_a32b0db6aab0ed6f5f4f81a8fe4ad4783}{I\+O\+P\+\_\+swap\+Rx\+Buffer\+Page(rx\+Data\+Buffer\+Ctrl\+\_\+t $\ast$buf\+Ptr)}}, I\+SR uses I\+O\+P\+\_\+isr\+Check\+Buffer\+Sync()
+
+N\+O\+TE\+: the completion test methods both consider the whole buffer for RX complete, but split buffers are returned to the application as each is filled or the entire RX is completed. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structrx_data_buffer_ctrl__tag_af076ed3307ccc419f46ed857bb321a2f}\label{structrx_data_buffer_ctrl__tag_af076ed3307ccc419f46ed857bb321a2f}} 
+\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}!\_buffer@{\_buffer}}
+\index{\_buffer@{\_buffer}!rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_buffer}{\_buffer}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+buffer}
+
+
+
+data buffer, does not change while used. 
+
+\mbox{\Hypertarget{structrx_data_buffer_ctrl__tag_a15bd355361a9897a7cef09fb3b35c73e}\label{structrx_data_buffer_ctrl__tag_a15bd355361a9897a7cef09fb3b35c73e}} 
+\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}!\_bufferEnd@{\_bufferEnd}}
+\index{\_bufferEnd@{\_bufferEnd}!rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_bufferEnd}{\_bufferEnd}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+buffer\+End}
+
+
+
+end of physical buffer 
+
+\mbox{\Hypertarget{structrx_data_buffer_ctrl__tag_adb0506d3ac5adfd1a4d2a52f4055a1fa}\label{structrx_data_buffer_ctrl__tag_adb0506d3ac5adfd1a4d2a52f4055a1fa}} 
+\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}!\_bufferSz@{\_bufferSz}}
+\index{\_bufferSz@{\_bufferSz}!rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_bufferSz}{\_bufferSz}}
+{\footnotesize\ttfamily uint16\+\_\+t \+\_\+buffer\+Sz}
+
+
+
+effective buffer size (after split) 
+
+\mbox{\Hypertarget{structrx_data_buffer_ctrl__tag_ae7bb448d66860f10c0c3f1cff412975c}\label{structrx_data_buffer_ctrl__tag_ae7bb448d66860f10c0c3f1cff412975c}} 
+\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}!\_nextIopPg@{\_nextIopPg}}
+\index{\_nextIopPg@{\_nextIopPg}!rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_nextIopPg}{\_nextIopPg}}
+{\footnotesize\ttfamily uint8\+\_\+t \+\_\+next\+Iop\+Pg}
+
+
+
+intended resulting iop\+Pg value 
+
+\mbox{\Hypertarget{structrx_data_buffer_ctrl__tag_a82f1a5332f3b0b47ec11dfc8e61bf8b8}\label{structrx_data_buffer_ctrl__tag_a82f1a5332f3b0b47ec11dfc8e61bf8b8}} 
+\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}!\_overflow@{\_overflow}}
+\index{\_overflow@{\_overflow}!rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_overflow}{\_overflow}}
+{\footnotesize\ttfamily bool \+\_\+overflow}
+
+
+
+set in I\+SR if overflow detected 
+
+\mbox{\Hypertarget{structrx_data_buffer_ctrl__tag_ae37093ce8b14a37b1bbd50ddacd9752c}\label{structrx_data_buffer_ctrl__tag_ae37093ce8b14a37b1bbd50ddacd9752c}} 
+\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}!\_pageSz@{\_pageSz}}
+\index{\_pageSz@{\_pageSz}!rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{\_pageSz}{\_pageSz}}
+{\footnotesize\ttfamily uint16\+\_\+t \+\_\+page\+Sz}
+
+
+
+the size of split size 
+
+\mbox{\Hypertarget{structrx_data_buffer_ctrl__tag_aa01ae11e9124f912923ebac5b1b514ca}\label{structrx_data_buffer_ctrl__tag_aa01ae11e9124f912923ebac5b1b514ca}} 
+\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}!bufferSync@{bufferSync}}
+\index{bufferSync@{bufferSync}!rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{bufferSync}{bufferSync}}
+{\footnotesize\ttfamily bool buffer\+Sync}
+
+
+
+set when page swap is underway 
+
+\mbox{\Hypertarget{structrx_data_buffer_ctrl__tag_aa3bd398e99d47cdd39895c3671b5ece2}\label{structrx_data_buffer_ctrl__tag_aa3bd398e99d47cdd39895c3671b5ece2}} 
+\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}!iopPg@{iopPg}}
+\index{iopPg@{iopPg}!rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{iopPg}{iopPg}}
+{\footnotesize\ttfamily uint8\+\_\+t iop\+Pg}
+
+
+
+when in split mode, which buffer page is assigned to I\+OP for filling 
+
+\mbox{\Hypertarget{structrx_data_buffer_ctrl__tag_ac19cabf61058bbb0f81641c8d12741b5}\label{structrx_data_buffer_ctrl__tag_ac19cabf61058bbb0f81641c8d12741b5}} 
+\index{rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}!pages@{pages}}
+\index{pages@{pages}!rxDataBufferCtrl\_tag@{rxDataBufferCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{pages}{pages}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a9202441b7d2384f046941dda98b77403}{rx\+Buffer\+Page\+\_\+t}} pages\mbox{[}2\mbox{]}}
+
+
+
+buffer page to support interwoven fill/empty operations 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ltemc-streams_8h}{ltemc-\/streams.\+h}}\end{DoxyCompactItemize}

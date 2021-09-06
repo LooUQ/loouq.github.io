@@ -70,70 +70,82 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ltemc-nxp-sc16is.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ltemc_8h_source.html">ltemc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ltemc-nxp-sc16is_8h_source.html">ltemc-nxp-sc16is.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ltemc-internal_8h_source.html">ltemc-internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lq-platform_8h_source.html">lq-platform.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a152fc5203b90b1cff03b7b78579b8f52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a152fc5203b90b1cff03b7b78579b8f52">_DEBUG</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a152fc5203b90b1cff03b7b78579b8f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab818574b6e7324559d0b09a6fc9ca1f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#ab818574b6e7324559d0b09a6fc9ca1f2">PRINTF</a>(c_,  f_, ...)&#160;&#160;&#160;;</td></tr>
+<tr class="memitem:ab818574b6e7324559d0b09a6fc9ca1f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#ab818574b6e7324559d0b09a6fc9ca1f2">PRINTF</a>(c_,  f_, ...)</td></tr>
 <tr class="separator:ab818574b6e7324559d0b09a6fc9ca1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac68c9cc3a2aa93d4a25933c31d0e6196"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#ac68c9cc3a2aa93d4a25933c31d0e6196">REG_MODIFY</a>(REG_NAME,  MODIFY_ACTION)</td></tr>
 <tr class="separator:ac68c9cc3a2aa93d4a25933c31d0e6196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a339030a67178d85b1abe985185314175"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a339030a67178d85b1abe985185314175">BAUDCLOCK_DIVISOR_DLL</a>&#160;&#160;&#160;0x04U</td></tr>
-<tr class="separator:a339030a67178d85b1abe985185314175"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba290521903e109f6f78c778b5960d86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#aba290521903e109f6f78c778b5960d86">BAUDCLOCK_DIVISOR_DLH</a>&#160;&#160;&#160;0x00U</td></tr>
-<tr class="separator:aba290521903e109f6f78c778b5960d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0be76e6f18cb3bd7fc9d3c77360a232"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#af0be76e6f18cb3bd7fc9d3c77360a232">SC16IS741A_LCR_UART_FRAMING</a>&#160;&#160;&#160;0x03U</td></tr>
-<tr class="separator:af0be76e6f18cb3bd7fc9d3c77360a232"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53d21a33b3a78035e5795c98a92d3d74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a53d21a33b3a78035e5795c98a92d3d74">SC16IS741A_TLR_TRIGGER_LEVELS</a>&#160;&#160;&#160;0x22U</td></tr>
-<tr class="separator:a53d21a33b3a78035e5795c98a92d3d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a486051436d3775e7379ca391ed627c6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a486051436d3775e7379ca391ed627c6c">FCR_REGISTER_VALUE_BASIC_MODE</a>&#160;&#160;&#160;0xB7U</td></tr>
-<tr class="separator:a486051436d3775e7379ca391ed627c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e010f72b2d3455dfa86b525f7411f84"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a0e010f72b2d3455dfa86b525f7411f84">FCR_REGISTER_VALUE_IOP_FIFO_ENABLE</a>&#160;&#160;&#160;0xB1U</td></tr>
-<tr class="separator:a0e010f72b2d3455dfa86b525f7411f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4433407807d17fa6b8954751a0f414a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#af4433407807d17fa6b8954751a0f414a">FCR_REGISTER_VALUE_IOP_RX_FLUSH</a>&#160;&#160;&#160;0x02U</td></tr>
-<tr class="separator:af4433407807d17fa6b8954751a0f414a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a432c24a31ec63a7e3199f065dae63273"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a432c24a31ec63a7e3199f065dae63273">FCR_REGISTER_VALUE_IOP_TX_FLUSH</a>&#160;&#160;&#160;0x04U</td></tr>
-<tr class="separator:a432c24a31ec63a7e3199f065dae63273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac47e2c5c65fa42351fda4c4ab80ef1f9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9">SC16IS741A__constants</a> { <br />
+&#160;&#160;<a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9af4c8149db58336784f110886e9b58a25">SC16IS741A__BAUDCLOCK_DIVISOR_DLL</a> = 0x04U, 
+<a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9a30629031800f2d06a5c546055a486603">SC16IS741A__BAUDCLOCK_DIVISOR_DLH</a> = 0x00U, 
+<a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9ac77e46533e779fffcdc170ec2a889042">SC16IS741A__SC16IS741A_LCR_UART_FRAMING</a> = 0x03U, 
+<a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9ac925bb52b2616468630527fee97a5e65">SC16IS741A__SC16IS741A_TLR_TRIGGER_LEVELS</a> = 0x22U, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9a8d13b0d953c27a970ba5ef9d54b39277">SC16IS741A__FCR_REGISTER_VALUE_BASIC_MODE</a> = 0xB7U, 
+<a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9a59af6b94061dd7a44fcc4171ba55e71e">SC16IS741A__FCR_REGISTER_VALUE_IOP_FIFO_ENABLE</a> = 0xB1U, 
+<a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9aac64af2a11448467949718790476375c">SC16IS741A__FCR_REGISTER_VALUE_IOP_RX_FLUSH</a> = 0x02U, 
+<a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9acb340950277da60b1f35a6a8b8b5e153">SC16IS741A__FCR_REGISTER_VALUE_IOP_TX_FLUSH</a> = 0x04U
+<br />
+ }</td></tr>
+<tr class="separator:ac47e2c5c65fa42351fda4c4ab80ef1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab2d61af08e17da328a46f5b393d93261"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#ab2d61af08e17da328a46f5b393d93261">sc16is741a_start</a> ()</td></tr>
-<tr class="memdesc:ab2d61af08e17da328a46f5b393d93261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure NXP bridge HW in basic mode (no IRQ, no level triggering).  <a href="ltemc-nxp-sc16is_8c.html#ab2d61af08e17da328a46f5b393d93261">More...</a><br /></td></tr>
-<tr class="separator:ab2d61af08e17da328a46f5b393d93261"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4837de522a032c36b4288a4a0d2933d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#ae4837de522a032c36b4288a4a0d2933d">sc16is741a_enableIrqMode</a> ()</td></tr>
-<tr class="memdesc:ae4837de522a032c36b4288a4a0d2933d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable IRQ servicing for communications between SC16IS741 and BG96.  <a href="ltemc-nxp-sc16is_8c.html#ae4837de522a032c36b4288a4a0d2933d">More...</a><br /></td></tr>
-<tr class="separator:ae4837de522a032c36b4288a4a0d2933d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a0838bd285ea8f82a5414aa392adc2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#ac6a0838bd285ea8f82a5414aa392adc2">sc16is741a_chkCommReady</a> ()</td></tr>
-<tr class="memdesc:ac6a0838bd285ea8f82a5414aa392adc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform simple write/read using SC16IS741A scratchpad register. Used to test SPI communications.  <a href="ltemc-nxp-sc16is_8c.html#ac6a0838bd285ea8f82a5414aa392adc2">More...</a><br /></td></tr>
-<tr class="separator:ac6a0838bd285ea8f82a5414aa392adc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b7c49cde4b06a3f288024abbbe7489b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a7b7c49cde4b06a3f288024abbbe7489b">sc16is741a_readReg</a> (uint8_t reg_addr)</td></tr>
-<tr class="memdesc:a7b7c49cde4b06a3f288024abbbe7489b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from a SC16IS741A bridge register.  <a href="ltemc-nxp-sc16is_8c.html#a7b7c49cde4b06a3f288024abbbe7489b">More...</a><br /></td></tr>
-<tr class="separator:a7b7c49cde4b06a3f288024abbbe7489b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aad0bdf1532bb94f82db70cd77c32e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a2aad0bdf1532bb94f82db70cd77c32e4">sc16is741a_writeReg</a> (uint8_t reg_addr, uint8_t reg_data)</td></tr>
-<tr class="memdesc:a2aad0bdf1532bb94f82db70cd77c32e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to a SC16IS741A bridge register.  <a href="ltemc-nxp-sc16is_8c.html#a2aad0bdf1532bb94f82db70cd77c32e4">More...</a><br /></td></tr>
-<tr class="separator:a2aad0bdf1532bb94f82db70cd77c32e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afca17cb0ad758e2a4c251495abb3aa2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#afca17cb0ad758e2a4c251495abb3aa2a">sc16is741a_read</a> (void *dest, uint8_t dest_len)</td></tr>
-<tr class="memdesc:afca17cb0ad758e2a4c251495abb3aa2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads through the SC16IS741A bridge (its RX FIFO).  <a href="ltemc-nxp-sc16is_8c.html#afca17cb0ad758e2a4c251495abb3aa2a">More...</a><br /></td></tr>
-<tr class="separator:afca17cb0ad758e2a4c251495abb3aa2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa291a938807dc1c2e2cd29992485900e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#aa291a938807dc1c2e2cd29992485900e">sc16is741a_write</a> (const void *src, uint8_t src_len)</td></tr>
-<tr class="memdesc:aa291a938807dc1c2e2cd29992485900e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write through the SC16IS741A bridge.  <a href="ltemc-nxp-sc16is_8c.html#aa291a938807dc1c2e2cd29992485900e">More...</a><br /></td></tr>
-<tr class="separator:aa291a938807dc1c2e2cd29992485900e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa542d0420b5e03c371a80bd5017f800b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#aa542d0420b5e03c371a80bd5017f800b">sc16is741a_resetFifo</a> (<a class="el" href="ltemc-nxp-sc16is_8h.html#a9d7d71f02c224486d3794fbb833a0b3c">resetFifo_action_t</a> resetAction)</td></tr>
-<tr class="memdesc:aa542d0420b5e03c371a80bd5017f800b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform reset on bridge FIFO.  <a href="ltemc-nxp-sc16is_8c.html#aa542d0420b5e03c371a80bd5017f800b">More...</a><br /></td></tr>
-<tr class="separator:aa542d0420b5e03c371a80bd5017f800b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9db945c1fa2df0414a09f42766477ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#ab9db945c1fa2df0414a09f42766477ef">sc16is741a_flushRxFifo</a> ()</td></tr>
-<tr class="memdesc:ab9db945c1fa2df0414a09f42766477ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush contents of RX FIFO.  <a href="ltemc-nxp-sc16is_8c.html#ab9db945c1fa2df0414a09f42766477ef">More...</a><br /></td></tr>
-<tr class="separator:ab9db945c1fa2df0414a09f42766477ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefbd4d0e153fb8b46f61afbd08f1bff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#aefbd4d0e153fb8b46f61afbd08f1bff2">displayFifoStatus</a> (const char *dispMsg)</td></tr>
-<tr class="memdesc:aefbd4d0e153fb8b46f61afbd08f1bff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug: Show FIFO buffers fill level.  <a href="ltemc-nxp-sc16is_8c.html#aefbd4d0e153fb8b46f61afbd08f1bff2">More...</a><br /></td></tr>
-<tr class="separator:aefbd4d0e153fb8b46f61afbd08f1bff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b0e8d90c87a0320be630e248734c5e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a4b0e8d90c87a0320be630e248734c5e1">S_displayFifoStatus</a> (const char *dispMsg)</td></tr>
+<tr class="separator:a4b0e8d90c87a0320be630e248734c5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2f5ed438a779b0cc4a3a0a2c7ad926"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#aac2f5ed438a779b0cc4a3a0a2c7ad926">SC16IS741A_start</a> ()</td></tr>
+<tr class="memdesc:aac2f5ed438a779b0cc4a3a0a2c7ad926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure NXP bridge HW in basic mode (no IRQ, no level triggering).  <a href="ltemc-nxp-sc16is_8c.html#aac2f5ed438a779b0cc4a3a0a2c7ad926">More...</a><br /></td></tr>
+<tr class="separator:aac2f5ed438a779b0cc4a3a0a2c7ad926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c472ee6a29db5d4ff85aba6033ba47e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a3c472ee6a29db5d4ff85aba6033ba47e">SC16IS741A_enableIrqMode</a> ()</td></tr>
+<tr class="memdesc:a3c472ee6a29db5d4ff85aba6033ba47e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable IRQ servicing for communications between SC16IS741 and BG96.  <a href="ltemc-nxp-sc16is_8c.html#a3c472ee6a29db5d4ff85aba6033ba47e">More...</a><br /></td></tr>
+<tr class="separator:a3c472ee6a29db5d4ff85aba6033ba47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8762ed5ecd9c417e20e05d12c2073f40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a8762ed5ecd9c417e20e05d12c2073f40">SC16IS741A_chkCommReady</a> ()</td></tr>
+<tr class="memdesc:a8762ed5ecd9c417e20e05d12c2073f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform simple write/read using SC16IS741A scratchpad register. Used to test SPI communications.  <a href="ltemc-nxp-sc16is_8c.html#a8762ed5ecd9c417e20e05d12c2073f40">More...</a><br /></td></tr>
+<tr class="separator:a8762ed5ecd9c417e20e05d12c2073f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd444a928b2c10a2d7432622e145310a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#abd444a928b2c10a2d7432622e145310a">SC16IS741A_readReg</a> (uint8_t reg_addr)</td></tr>
+<tr class="memdesc:abd444a928b2c10a2d7432622e145310a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from a SC16IS741A bridge register.  <a href="ltemc-nxp-sc16is_8c.html#abd444a928b2c10a2d7432622e145310a">More...</a><br /></td></tr>
+<tr class="separator:abd444a928b2c10a2d7432622e145310a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2261a68e318066042cace5b09eb876"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a7c2261a68e318066042cace5b09eb876">SC16IS741A_writeReg</a> (uint8_t reg_addr, uint8_t reg_data)</td></tr>
+<tr class="memdesc:a7c2261a68e318066042cace5b09eb876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to a SC16IS741A bridge register.  <a href="ltemc-nxp-sc16is_8c.html#a7c2261a68e318066042cace5b09eb876">More...</a><br /></td></tr>
+<tr class="separator:a7c2261a68e318066042cace5b09eb876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf9a80a558feca77148bcedeaaff2f21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#acf9a80a558feca77148bcedeaaff2f21">SC16IS741A_read</a> (void *dest, uint8_t dest_len)</td></tr>
+<tr class="memdesc:acf9a80a558feca77148bcedeaaff2f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads through the SC16IS741A bridge (its RX FIFO).  <a href="ltemc-nxp-sc16is_8c.html#acf9a80a558feca77148bcedeaaff2f21">More...</a><br /></td></tr>
+<tr class="separator:acf9a80a558feca77148bcedeaaff2f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a627b5d8f7ef26219f7ebd5fd8747711b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a627b5d8f7ef26219f7ebd5fd8747711b">SC16IS741A_write</a> (const void *src, uint8_t src_len)</td></tr>
+<tr class="memdesc:a627b5d8f7ef26219f7ebd5fd8747711b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write through the SC16IS741A bridge.  <a href="ltemc-nxp-sc16is_8c.html#a627b5d8f7ef26219f7ebd5fd8747711b">More...</a><br /></td></tr>
+<tr class="separator:a627b5d8f7ef26219f7ebd5fd8747711b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae3c5122f14df70824f7034acd57952"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#aeae3c5122f14df70824f7034acd57952">SC16IS741A_resetFifo</a> (<a class="el" href="ltemc-nxp-sc16is_8h.html#a9d7d71f02c224486d3794fbb833a0b3c">resetFifo_action_t</a> resetAction)</td></tr>
+<tr class="memdesc:aeae3c5122f14df70824f7034acd57952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform reset on bridge FIFO.  <a href="ltemc-nxp-sc16is_8c.html#aeae3c5122f14df70824f7034acd57952">More...</a><br /></td></tr>
+<tr class="separator:aeae3c5122f14df70824f7034acd57952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02548f8cb36c16d10f00507db9a07dc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a02548f8cb36c16d10f00507db9a07dc7">SC16IS741A_flushRxFifo</a> ()</td></tr>
+<tr class="memdesc:a02548f8cb36c16d10f00507db9a07dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush contents of RX FIFO.  <a href="ltemc-nxp-sc16is_8c.html#a02548f8cb36c16d10f00507db9a07dc7">More...</a><br /></td></tr>
+<tr class="separator:a02548f8cb36c16d10f00507db9a07dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d45bac3061d86bbab2a470cb9a3d39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a81d45bac3061d86bbab2a470cb9a3d39">SC16IS741A__displayFifoStatus</a> (const char *dispMsg)</td></tr>
+<tr class="memdesc:a81d45bac3061d86bbab2a470cb9a3d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug: Show FIFO buffers fill level.  <a href="ltemc-nxp-sc16is_8c.html#a81d45bac3061d86bbab2a470cb9a3d39">More...</a><br /></td></tr>
+<tr class="separator:a81d45bac3061d86bbab2a470cb9a3d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a5f9b6913ff818fbc74934a69849fb48b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-nxp-sc16is_8c.html#a5f9b6913ff818fbc74934a69849fb48b">g_ltem</a></td></tr>
+<tr class="memdesc:a5f9b6913ff818fbc74934a69849fb48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LTEm "object".  <a href="ltemc-nxp-sc16is_8c.html#a5f9b6913ff818fbc74934a69849fb48b">More...</a><br /></td></tr>
+<tr class="separator:a5f9b6913ff818fbc74934a69849fb48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a152fc5203b90b1cff03b7b78579b8f52"></a>
@@ -144,90 +156,6 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define _DEBUG&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aba290521903e109f6f78c778b5960d86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba290521903e109f6f78c778b5960d86">&#9670;&nbsp;</a></span>BAUDCLOCK_DIVISOR_DLH</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define BAUDCLOCK_DIVISOR_DLH&#160;&#160;&#160;0x00U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a339030a67178d85b1abe985185314175"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a339030a67178d85b1abe985185314175">&#9670;&nbsp;</a></span>BAUDCLOCK_DIVISOR_DLL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define BAUDCLOCK_DIVISOR_DLL&#160;&#160;&#160;0x04U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a486051436d3775e7379ca391ed627c6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486051436d3775e7379ca391ed627c6c">&#9670;&nbsp;</a></span>FCR_REGISTER_VALUE_BASIC_MODE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FCR_REGISTER_VALUE_BASIC_MODE&#160;&#160;&#160;0xB7U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0e010f72b2d3455dfa86b525f7411f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e010f72b2d3455dfa86b525f7411f84">&#9670;&nbsp;</a></span>FCR_REGISTER_VALUE_IOP_FIFO_ENABLE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FCR_REGISTER_VALUE_IOP_FIFO_ENABLE&#160;&#160;&#160;0xB1U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af4433407807d17fa6b8954751a0f414a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4433407807d17fa6b8954751a0f414a">&#9670;&nbsp;</a></span>FCR_REGISTER_VALUE_IOP_RX_FLUSH</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FCR_REGISTER_VALUE_IOP_RX_FLUSH&#160;&#160;&#160;0x02U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a432c24a31ec63a7e3199f065dae63273"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a432c24a31ec63a7e3199f065dae63273">&#9670;&nbsp;</a></span>FCR_REGISTER_VALUE_IOP_TX_FLUSH</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FCR_REGISTER_VALUE_IOP_TX_FLUSH&#160;&#160;&#160;0x04U</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -261,7 +189,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;;</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -293,50 +221,65 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">REG_NAME REG_NAME##_reg = {0}; \</div>
-<div class="line">REG_NAME##_reg.reg = <a class="code" href="ltemc-nxp-sc16is_8c.html#a7b7c49cde4b06a3f288024abbbe7489b">sc16is741a_readReg</a>(REG_NAME##_ADDR); <a class="code" href="ltemc-nxp-sc16is_8c.html#a2aad0bdf1532bb94f82db70cd77c32e4">\</a></div>
-<div class="line"><a class="code" href="ltemc-nxp-sc16is_8c.html#a2aad0bdf1532bb94f82db70cd77c32e4">MODIFY_ACTION \</a></div>
-<div class="line"><a class="code" href="ltemc-nxp-sc16is_8c.html#a2aad0bdf1532bb94f82db70cd77c32e4">sc16is741a_writeReg</a>(REG_NAME##_ADDR, REG_NAME##_reg.reg);</div>
+<b>Value:</b><div class="fragment"><div class="line">REG_NAME REG_NAME##_reg = {0};                              \</div>
+<div class="line">REG_NAME##_reg.reg = <a class="code" href="ltemc-nxp-sc16is_8c.html#abd444a928b2c10a2d7432622e145310a">SC16IS741A_readReg</a>(REG_NAME##_ADDR);   <a class="code" href="ltemc-nxp-sc16is_8c.html#a7c2261a68e318066042cace5b09eb876">\</a></div>
+<div class="line"><a class="code" href="ltemc-nxp-sc16is_8c.html#a7c2261a68e318066042cace5b09eb876">MODIFY_ACTION                                               \</a></div>
+<div class="line"><a class="code" href="ltemc-nxp-sc16is_8c.html#a7c2261a68e318066042cace5b09eb876">SC16IS741A_writeReg</a>(REG_NAME##_ADDR, REG_NAME##_reg.reg);</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="af0be76e6f18cb3bd7fc9d3c77360a232"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0be76e6f18cb3bd7fc9d3c77360a232">&#9670;&nbsp;</a></span>SC16IS741A_LCR_UART_FRAMING</h2>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ac47e2c5c65fa42351fda4c4ab80ef1f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47e2c5c65fa42351fda4c4ab80ef1f9">&#9670;&nbsp;</a></span>SC16IS741A__constants</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SC16IS741A_LCR_UART_FRAMING&#160;&#160;&#160;0x03U</td>
+          <td class="memname">enum <a class="el" href="ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9">SC16IS741A__constants</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a53d21a33b3a78035e5795c98a92d3d74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53d21a33b3a78035e5795c98a92d3d74">&#9670;&nbsp;</a></span>SC16IS741A_TLR_TRIGGER_LEVELS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SC16IS741A_TLR_TRIGGER_LEVELS&#160;&#160;&#160;0x22U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac47e2c5c65fa42351fda4c4ab80ef1f9af4c8149db58336784f110886e9b58a25"></a>SC16IS741A__BAUDCLOCK_DIVISOR_DLL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac47e2c5c65fa42351fda4c4ab80ef1f9a30629031800f2d06a5c546055a486603"></a>SC16IS741A__BAUDCLOCK_DIVISOR_DLH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac47e2c5c65fa42351fda4c4ab80ef1f9ac77e46533e779fffcdc170ec2a889042"></a>SC16IS741A__SC16IS741A_LCR_UART_FRAMING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac47e2c5c65fa42351fda4c4ab80ef1f9ac925bb52b2616468630527fee97a5e65"></a>SC16IS741A__SC16IS741A_TLR_TRIGGER_LEVELS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac47e2c5c65fa42351fda4c4ab80ef1f9a8d13b0d953c27a970ba5ef9d54b39277"></a>SC16IS741A__FCR_REGISTER_VALUE_BASIC_MODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac47e2c5c65fa42351fda4c4ab80ef1f9a59af6b94061dd7a44fcc4171ba55e71e"></a>SC16IS741A__FCR_REGISTER_VALUE_IOP_FIFO_ENABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac47e2c5c65fa42351fda4c4ab80ef1f9aac64af2a11448467949718790476375c"></a>SC16IS741A__FCR_REGISTER_VALUE_IOP_RX_FLUSH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac47e2c5c65fa42351fda4c4ab80ef1f9acb340950277da60b1f35a6a8b8b5e153"></a>SC16IS741A__FCR_REGISTER_VALUE_IOP_TX_FLUSH&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aefbd4d0e153fb8b46f61afbd08f1bff2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefbd4d0e153fb8b46f61afbd08f1bff2">&#9670;&nbsp;</a></span>displayFifoStatus()</h2>
+<a id="a4b0e8d90c87a0320be630e248734c5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0e8d90c87a0320be630e248734c5e1">&#9670;&nbsp;</a></span>S_displayFifoStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void displayFifoStatus </td>
+          <td class="memname">void S_displayFifoStatus </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dispMsg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81d45bac3061d86bbab2a470cb9a3d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d45bac3061d86bbab2a470cb9a3d39">&#9670;&nbsp;</a></span>SC16IS741A__displayFifoStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SC16IS741A__displayFifoStatus </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>dispMsg</em></td><td>)</td>
@@ -349,14 +292,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac6a0838bd285ea8f82a5414aa392adc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6a0838bd285ea8f82a5414aa392adc2">&#9670;&nbsp;</a></span>sc16is741a_chkCommReady()</h2>
+<a id="a8762ed5ecd9c417e20e05d12c2073f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8762ed5ecd9c417e20e05d12c2073f40">&#9670;&nbsp;</a></span>SC16IS741A_chkCommReady()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool sc16is741a_chkCommReady </td>
+          <td class="memname">bool SC16IS741A_chkCommReady </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -368,14 +311,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae4837de522a032c36b4288a4a0d2933d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4837de522a032c36b4288a4a0d2933d">&#9670;&nbsp;</a></span>sc16is741a_enableIrqMode()</h2>
+<a id="a3c472ee6a29db5d4ff85aba6033ba47e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c472ee6a29db5d4ff85aba6033ba47e">&#9670;&nbsp;</a></span>SC16IS741A_enableIrqMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sc16is741a_enableIrqMode </td>
+          <td class="memname">void SC16IS741A_enableIrqMode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -387,14 +330,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab9db945c1fa2df0414a09f42766477ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9db945c1fa2df0414a09f42766477ef">&#9670;&nbsp;</a></span>sc16is741a_flushRxFifo()</h2>
+<a id="a02548f8cb36c16d10f00507db9a07dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02548f8cb36c16d10f00507db9a07dc7">&#9670;&nbsp;</a></span>SC16IS741A_flushRxFifo()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sc16is741a_flushRxFifo </td>
+          <td class="memname">void SC16IS741A_flushRxFifo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -406,14 +349,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afca17cb0ad758e2a4c251495abb3aa2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afca17cb0ad758e2a4c251495abb3aa2a">&#9670;&nbsp;</a></span>sc16is741a_read()</h2>
+<a id="acf9a80a558feca77148bcedeaaff2f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf9a80a558feca77148bcedeaaff2f21">&#9670;&nbsp;</a></span>SC16IS741A_read()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sc16is741a_read </td>
+          <td class="memname">void SC16IS741A_read </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>dest</em>, </td>
@@ -443,14 +386,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b7c49cde4b06a3f288024abbbe7489b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b7c49cde4b06a3f288024abbbe7489b">&#9670;&nbsp;</a></span>sc16is741a_readReg()</h2>
+<a id="abd444a928b2c10a2d7432622e145310a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd444a928b2c10a2d7432622e145310a">&#9670;&nbsp;</a></span>SC16IS741A_readReg()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t sc16is741a_readReg </td>
+          <td class="memname">uint8_t SC16IS741A_readReg </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>reg_addr</em></td><td>)</td>
@@ -470,14 +413,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa542d0420b5e03c371a80bd5017f800b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa542d0420b5e03c371a80bd5017f800b">&#9670;&nbsp;</a></span>sc16is741a_resetFifo()</h2>
+<a id="aeae3c5122f14df70824f7034acd57952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae3c5122f14df70824f7034acd57952">&#9670;&nbsp;</a></span>SC16IS741A_resetFifo()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sc16is741a_resetFifo </td>
+          <td class="memname">void SC16IS741A_resetFifo </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ltemc-nxp-sc16is_8h.html#a9d7d71f02c224486d3794fbb833a0b3c">resetFifo_action_t</a>&#160;</td>
           <td class="paramname"><em>resetAction</em></td><td>)</td>
@@ -496,14 +439,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab2d61af08e17da328a46f5b393d93261"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2d61af08e17da328a46f5b393d93261">&#9670;&nbsp;</a></span>sc16is741a_start()</h2>
+<a id="aac2f5ed438a779b0cc4a3a0a2c7ad926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac2f5ed438a779b0cc4a3a0a2c7ad926">&#9670;&nbsp;</a></span>SC16IS741A_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sc16is741a_start </td>
+          <td class="memname">void SC16IS741A_start </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -515,14 +458,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa291a938807dc1c2e2cd29992485900e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa291a938807dc1c2e2cd29992485900e">&#9670;&nbsp;</a></span>sc16is741a_write()</h2>
+<a id="a627b5d8f7ef26219f7ebd5fd8747711b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a627b5d8f7ef26219f7ebd5fd8747711b">&#9670;&nbsp;</a></span>SC16IS741A_write()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sc16is741a_write </td>
+          <td class="memname">void SC16IS741A_write </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>src</em>, </td>
@@ -552,14 +495,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2aad0bdf1532bb94f82db70cd77c32e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2aad0bdf1532bb94f82db70cd77c32e4">&#9670;&nbsp;</a></span>sc16is741a_writeReg()</h2>
+<a id="a7c2261a68e318066042cace5b09eb876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2261a68e318066042cace5b09eb876">&#9670;&nbsp;</a></span>SC16IS741A_writeReg()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sc16is741a_writeReg </td>
+          <td class="memname">void SC16IS741A_writeReg </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>reg_addr</em>, </td>
@@ -589,9 +532,34 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a5f9b6913ff818fbc74934a69849fb48b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9b6913ff818fbc74934a69849fb48b">&#9670;&nbsp;</a></span>g_ltem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a> g_ltem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The LTEm "object". </p>
+
+</div>
+</div>
 </div><!-- contents -->
-<div class="ttc" id="altemc-nxp-sc16is_8c_html_a7b7c49cde4b06a3f288024abbbe7489b"><div class="ttname"><a href="ltemc-nxp-sc16is_8c.html#a7b7c49cde4b06a3f288024abbbe7489b">sc16is741a_readReg</a></div><div class="ttdeci">uint8_t sc16is741a_readReg(uint8_t reg_addr)</div><div class="ttdoc">Read from a SC16IS741A bridge register.</div><div class="ttdef"><b>Definition:</b> ltemc-nxp-sc16is.c:164</div></div>
-<div class="ttc" id="altemc-nxp-sc16is_8c_html_a2aad0bdf1532bb94f82db70cd77c32e4"><div class="ttname"><a href="ltemc-nxp-sc16is_8c.html#a2aad0bdf1532bb94f82db70cd77c32e4">sc16is741a_writeReg</a></div><div class="ttdeci">void sc16is741a_writeReg(uint8_t reg_addr, uint8_t reg_data)</div><div class="ttdoc">Write to a SC16IS741A bridge register.</div><div class="ttdef"><b>Definition:</b> ltemc-nxp-sc16is.c:182</div></div>
+<div class="ttc" id="altemc-nxp-sc16is_8c_html_a7c2261a68e318066042cace5b09eb876"><div class="ttname"><a href="ltemc-nxp-sc16is_8c.html#a7c2261a68e318066042cace5b09eb876">SC16IS741A_writeReg</a></div><div class="ttdeci">void SC16IS741A_writeReg(uint8_t reg_addr, uint8_t reg_data)</div><div class="ttdoc">Write to a SC16IS741A bridge register.</div><div class="ttdef"><b>Definition:</b> ltemc-nxp-sc16is.c:212</div></div>
+<div class="ttc" id="altemc-nxp-sc16is_8c_html_abd444a928b2c10a2d7432622e145310a"><div class="ttname"><a href="ltemc-nxp-sc16is_8c.html#abd444a928b2c10a2d7432622e145310a">SC16IS741A_readReg</a></div><div class="ttdeci">uint8_t SC16IS741A_readReg(uint8_t reg_addr)</div><div class="ttdoc">Read from a SC16IS741A bridge register.</div><div class="ttdef"><b>Definition:</b> ltemc-nxp-sc16is.c:195</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

@@ -76,7 +76,7 @@ $(function() {
 <div class="title">ltemc.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ltemc_8h_source.html">ltemc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ltemc-internal_8h_source.html">ltemc-internal.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -87,12 +87,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a62bd97eb5a7b9657f83f521f0eaacc76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a62bd97eb5a7b9657f83f521f0eaacc76">ltem_create</a> (const <a class="el" href="lq_platform-gpio_8h.html#a179aa93a99cd81e3a0f037bd9f07d70e">ltemPinConfig_t</a> ltem_config, <a class="el" href="lq_types_8h.html#ae4ff1e8ff40f958855bf5ec2c1f19915">appNotify_func</a> appNotifyCB)</td></tr>
-<tr class="memdesc:a62bd97eb5a7b9657f83f521f0eaacc76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the LTEm1 modem.  <a href="ltemc_8c.html#a62bd97eb5a7b9657f83f521f0eaacc76">More...</a><br /></td></tr>
-<tr class="separator:a62bd97eb5a7b9657f83f521f0eaacc76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a687ddae526d7f6e97b36b223f71583e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a687ddae526d7f6e97b36b223f71583e6">ltem_start</a> (uint16_t protocolBitMap)</td></tr>
-<tr class="memdesc:a687ddae526d7f6e97b36b223f71583e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power on and start the modem (perform component init).  <a href="ltemc_8c.html#a687ddae526d7f6e97b36b223f71583e6">More...</a><br /></td></tr>
-<tr class="separator:a687ddae526d7f6e97b36b223f71583e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906672420bc5750a95a4ffd6857dd30f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a906672420bc5750a95a4ffd6857dd30f">ltem_create</a> (const <a class="el" href="lq_platform-gpio_8h.html#a179aa93a99cd81e3a0f037bd9f07d70e">ltemPinConfig_t</a> ltem_config, appNotifyFunc_t appNotifyCB)</td></tr>
+<tr class="memdesc:a906672420bc5750a95a4ffd6857dd30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the LTEm1 modem.  <a href="ltemc_8c.html#a906672420bc5750a95a4ffd6857dd30f">More...</a><br /></td></tr>
+<tr class="separator:a906672420bc5750a95a4ffd6857dd30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca549beee5abfb00b29c677d37e6d777"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#aca549beee5abfb00b29c677d37e6d777">ltem_start</a> ()</td></tr>
+<tr class="memdesc:aca549beee5abfb00b29c677d37e6d777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power on and start the modem (perform component init).  <a href="ltemc_8c.html#aca549beee5abfb00b29c677d37e6d777">More...</a><br /></td></tr>
+<tr class="separator:aca549beee5abfb00b29c677d37e6d777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0238192a8a5f8f8fde7e934c0aa01ab3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a0238192a8a5f8f8fde7e934c0aa01ab3">ltem_reset</a> ()</td></tr>
 <tr class="memdesc:a0238192a8a5f8f8fde7e934c0aa01ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a HW reset of LTEm1 and optionally executes start sequence.  <a href="ltemc_8c.html#a0238192a8a5f8f8fde7e934c0aa01ab3">More...</a><br /></td></tr>
 <tr class="separator:a0238192a8a5f8f8fde7e934c0aa01ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,7 +103,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa92d5ab484a2fdaff02c5601b12eb9e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a HW reset of LTEm1 and optionally executes start sequence.  <a href="ltemc_8c.html#aa92d5ab484a2fdaff02c5601b12eb9e2">More...</a><br /></td></tr>
 <tr class="separator:aa92d5ab484a2fdaff02c5601b12eb9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fde19665106d68b37d5d3161a9f3560"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a5fde19665106d68b37d5d3161a9f3560">ltem_stop</a> ()</td></tr>
-<tr class="memdesc:a5fde19665106d68b37d5d3161a9f3560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Powers off the modem without destroying memory objects. Modem device will require <a class="el" href="ltemc_8c.html#a687ddae526d7f6e97b36b223f71583e6" title="Power on and start the modem (perform component init).">ltem_start()</a> to reinit HW.  <a href="ltemc_8c.html#a5fde19665106d68b37d5d3161a9f3560">More...</a><br /></td></tr>
+<tr class="memdesc:a5fde19665106d68b37d5d3161a9f3560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Powers off the modem without destroying memory objects. Modem device will require <a class="el" href="ltemc_8c.html#aca549beee5abfb00b29c677d37e6d777" title="Power on and start the modem (perform component init).">ltem_start()</a> to reinit HW.  <a href="ltemc_8c.html#a5fde19665106d68b37d5d3161a9f3560">More...</a><br /></td></tr>
 <tr class="separator:a5fde19665106d68b37d5d3161a9f3560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc4fe577a31799623ad85245e64dfea5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#adc4fe577a31799623ad85245e64dfea5">ltem_destroy</a> ()</td></tr>
 <tr class="memdesc:adc4fe577a31799623ad85245e64dfea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uninitialize the LTE modem.  <a href="ltemc_8c.html#adc4fe577a31799623ad85245e64dfea5">More...</a><br /></td></tr>
@@ -117,15 +117,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a15f0a3db0746ff6fb0563774141aec0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a15f0a3db0746ff6fb0563774141aec0b">ltem_setYieldCb</a> (<a class="el" href="lq_platform-timing_8h.html#a1066ad01c72dad80aaa76602d3cdce94">platform_yieldCB_func_t</a> yieldCb_func)</td></tr>
 <tr class="memdesc:a15f0a3db0746ff6fb0563774141aec0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the address (void*) of your application yield callback handler.  <a href="ltemc_8c.html#a15f0a3db0746ff6fb0563774141aec0b">More...</a><br /></td></tr>
 <tr class="separator:a15f0a3db0746ff6fb0563774141aec0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a648cd8860bb8012bb1dd72b0ab477de5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a648cd8860bb8012bb1dd72b0ab477de5">ltem__initIo</a> ()</td></tr>
-<tr class="memdesc:a648cd8860bb8012bb1dd72b0ab477de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the modems IO.  <a href="ltemc_8c.html#a648cd8860bb8012bb1dd72b0ab477de5">More...</a><br /></td></tr>
-<tr class="separator:a648cd8860bb8012bb1dd72b0ab477de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bb70d1da6f59e7f434d50e6d1e9e03d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a4bb70d1da6f59e7f434d50e6d1e9e03d">LTEM_registerDoWorker</a> (<a class="el" href="ltemc-streams_8h.html#a2d28d046017a16303974cf83b3d08c0b">moduleDoWorkFunc_t</a> *doWorker)</td></tr>
+<tr class="separator:a4bb70d1da6f59e7f434d50e6d1e9e03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a515e371e42363c8dfb9cad322511bb16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a515e371e42363c8dfb9cad322511bb16">g_ltem</a></td></tr>
-<tr class="memdesc:a515e371e42363c8dfb9cad322511bb16"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LTEm "object". Since this is C99, like the instance object.  <a href="ltemc_8c.html#a515e371e42363c8dfb9cad322511bb16">More...</a><br /></td></tr>
-<tr class="separator:a515e371e42363c8dfb9cad322511bb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9b6913ff818fbc74934a69849fb48b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a5f9b6913ff818fbc74934a69849fb48b">g_ltem</a></td></tr>
+<tr class="memdesc:a5f9b6913ff818fbc74934a69849fb48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LTEm "object".  <a href="ltemc_8c.html#a5f9b6913ff818fbc74934a69849fb48b">More...</a><br /></td></tr>
+<tr class="separator:a5f9b6913ff818fbc74934a69849fb48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a152fc5203b90b1cff03b7b78579b8f52"></a>
@@ -177,31 +176,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a648cd8860bb8012bb1dd72b0ab477de5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a648cd8860bb8012bb1dd72b0ab477de5">&#9670;&nbsp;</a></span>ltem__initIo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ltem__initIo </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialize the modems IO. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">modem</td><td>The LTE modem. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a38b219b10645a48d462e8cb69e0f576a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38b219b10645a48d462e8cb69e0f576a">&#9670;&nbsp;</a></span>ltem_chkHwReady()</h2>
 
@@ -222,8 +196,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a62bd97eb5a7b9657f83f521f0eaacc76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62bd97eb5a7b9657f83f521f0eaacc76">&#9670;&nbsp;</a></span>ltem_create()</h2>
+<a id="a906672420bc5750a95a4ffd6857dd30f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a906672420bc5750a95a4ffd6857dd30f">&#9670;&nbsp;</a></span>ltem_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,7 +211,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="lq_types_8h.html#ae4ff1e8ff40f958855bf5ec2c1f19915">appNotify_func</a>&#160;</td>
+          <td class="paramtype">appNotifyFunc_t&#160;</td>
           <td class="paramname"><em>appNotifyCB</em>&#160;</td>
         </tr>
         <tr>
@@ -353,6 +327,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a4bb70d1da6f59e7f434d50e6d1e9e03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bb70d1da6f59e7f434d50e6d1e9e03d">&#9670;&nbsp;</a></span>LTEM_registerDoWorker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LTEM_registerDoWorker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-streams_8h.html#a2d28d046017a16303974cf83b3d08c0b">moduleDoWorkFunc_t</a> *&#160;</td>
+          <td class="paramname"><em>doWorker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0238192a8a5f8f8fde7e934c0aa01ab3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0238192a8a5f8f8fde7e934c0aa01ab3">&#9670;&nbsp;</a></span>ltem_reset()</h2>
 
@@ -398,8 +390,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a687ddae526d7f6e97b36b223f71583e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a687ddae526d7f6e97b36b223f71583e6">&#9670;&nbsp;</a></span>ltem_start()</h2>
+<a id="aca549beee5abfb00b29c677d37e6d777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca549beee5abfb00b29c677d37e6d777">&#9670;&nbsp;</a></span>ltem_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,8 +399,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void ltem_start </td>
           <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>protocolBitMap</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -439,24 +430,24 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Powers off the modem without destroying memory objects. Modem device will require <a class="el" href="ltemc_8c.html#a687ddae526d7f6e97b36b223f71583e6" title="Power on and start the modem (perform component init).">ltem_start()</a> to reinit HW. </p>
+<p>Powers off the modem without destroying memory objects. Modem device will require <a class="el" href="ltemc_8c.html#aca549beee5abfb00b29c677d37e6d777" title="Power on and start the modem (perform component init).">ltem_start()</a> to reinit HW. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a515e371e42363c8dfb9cad322511bb16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a515e371e42363c8dfb9cad322511bb16">&#9670;&nbsp;</a></span>g_ltem</h2>
+<a id="a5f9b6913ff818fbc74934a69849fb48b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9b6913ff818fbc74934a69849fb48b">&#9670;&nbsp;</a></span>g_ltem</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ltemc_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a>* g_ltem</td>
+          <td class="memname"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a> g_ltem</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The LTEm "object". Since this is C99, like the instance object. </p>
+<p>The LTEm "object". </p>
 
 </div>
 </div>

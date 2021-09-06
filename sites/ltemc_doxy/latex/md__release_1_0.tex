@@ -1,6 +1,4 @@
-Release 1.\+0
-
-Release 1.\+0 is a milestone for the L\+T\+Em1c software. The modem and the software have been used in 2 commercial projects and have evolved to support ideas presented in those projects.\hypertarget{md__release_1_0_autotoc_md13}{}\doxysection{New\textbackslash{}\+Changed Functionality}\label{md__release_1_0_autotoc_md13}
+Release 1.\+0 is a milestone for the L\+T\+Em1c software. The modem and the software have been used in 2 commercial projects and have evolved to support ideas presented in those projects.\hypertarget{md__release_1_0_autotoc_md24}{}\doxysection{New\textbackslash{}\+Changed Functionality}\label{md__release_1_0_autotoc_md24}
 
 \begin{DoxyItemize}
 \item Application callbacks for yield and notifications
@@ -8,8 +6,8 @@ Release 1.\+0 is a milestone for the L\+T\+Em1c software. The modem and the soft
 \item Separate create() and start()
 \item Cleaner support for optional debug printing to J-\/\+Link R\+TT or platform serial port
 \item And of course... F\+I\+X\+ES
-\end{DoxyItemize}\hypertarget{md__release_1_0_autotoc_md14}{}\doxysection{Details}\label{md__release_1_0_autotoc_md14}
-\hypertarget{md__release_1_0_autotoc_md15}{}\doxysubsection{Callbacks}\label{md__release_1_0_autotoc_md15}
+\end{DoxyItemize}\hypertarget{md__release_1_0_autotoc_md25}{}\doxysection{Details}\label{md__release_1_0_autotoc_md25}
+\hypertarget{md__release_1_0_autotoc_md26}{}\doxysubsection{Callbacks}\label{md__release_1_0_autotoc_md26}
 Two callback conventions have be formalized\+: yield and notification. The yield callback allows for the application to invoke watchdog keepalives whenevr the L\+T\+Em1c code passes through a wait for response block. This is optional and is specified with the {\itshape ltem1\+\_\+set\+Yield\+Cb(yield\+Cb)} method. The yield\+Cb() method takes no parameters and returns a void.
 
 The other callback is for notifying your application of significant events, such as\+: connecting, disconnecting and errors. This is compatible with the notification callback used in the L\+Q\+Cloud driver. An example callback handler is shown below. The example below shows how the device application can respond to events with local displays/indicators.
@@ -86,21 +84,38 @@ The other callback is for notifying your application of significant events, such
 \DoxyCodeLine{    \}}
 \DoxyCodeLine{\}}
 \end{DoxyCode}
-\hypertarget{md__release_1_0_autotoc_md16}{}\doxysubsection{New Setup and Start, Protocol Inclusion}\label{md__release_1_0_autotoc_md16}
-The create code, start code and the inclusion of protocols has been separated into distinct methods. The new approach is to create the required features, then issue a ltem1\+\_\+start() call.
+\hypertarget{md__release_1_0_autotoc_md27}{}\doxysubsection{New Setup and Start, Protocol Inclusion}\label{md__release_1_0_autotoc_md27}
+In your application\textquotesingle{}s setup routine the functions to create/initialize the L\+T\+Em1 and to start the modem has been separated into distinct methods. The new approach is to create the required features, then issue a ltem1\+\_\+start() call.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{ltem1\_create(ltem1\_pinConfig, appNotifyCB);         // otherwise reference your application notification callback}
-\DoxyCodeLine{//ltem1\_create(ltem1\_pinConfig, NULL);              // if application doesn't implement a notification callback, provide NULL}
-\DoxyCodeLine{ltem1\_start(pdpProtocol\_none);                      // start LTEm1 with only IOP configured, AT commands but no protocols. }
+\DoxyCodeLine{ltem1\_create(ltem1\_pinConfig, appNotifyCB);}
+\DoxyCodeLine{sckt\_create();}
+\DoxyCodeLine{ltem1\_start(pdpProtocol\_sockets);}
 \end{DoxyCode}
-\hypertarget{md__release_1_0_autotoc_md17}{}\doxysubsection{Debug Printing}\label{md__release_1_0_autotoc_md17}
-Debugging is of course a necessary part of our lives as developers. For those of you using Segger J-\/\+Link products I recommend the R\+TT (real time terminal) functionality the J-\/\+Link software provides. The inclusion of a small macro block makes turning on/off debugging output using J-\/\+Link R\+TT a simple one line change. Loo\+UQ has a Arduino compatible fork of the Segger J-\/\+Link R\+TT source available on Git\+Hub ().
 
+
+The application notification callback is optional and can be disabled with {\bfseries{ltem1\+\_\+create(ltem1\+\_\+pin\+Config, N\+U\+L\+L);}}
+
+Optional Protocols are are bit flags that are binary or\textquotesingle{}d together. Available options are\+:
+\begin{DoxyItemize}
+\item pdp\+Protocol\+\_\+none // access to only network carrier status functionality
+\item pdp\+Protocol\+\_\+sockets // T\+C\+P/\+U\+D\+P/\+S\+S\+L/\+T\+LS P\+O\+S\+IX style sockets
+\item pdp\+Protocol\+\_\+mqtt // M\+Q\+TT message queueing
+\end{DoxyItemize}
+
+To use both sockets and M\+Q\+TT you would initialize the L\+T\+Em1 with... 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ltem1\_create(ltem1\_pinConfig, appNotifyCB);}
+\DoxyCodeLine{sckt\_create();}
+\DoxyCodeLine{mqtt\_create();}
+\DoxyCodeLine{ltem1\_start(pdpProtocol\_sockets | pdpProtocol\_mqtt);}
+\end{DoxyCode}
+\hypertarget{md__release_1_0_autotoc_md28}{}\doxysubsection{Debug Printing}\label{md__release_1_0_autotoc_md28}
+Debugging is of course a necessary part of our lives as developers. For those of you using Segger J-\/\+Link products I recommend the R\+TT (real time terminal) functionality the J-\/\+Link software provides. The inclusion of a small macro block makes turning on/off debugging output using J-\/\+Link R\+TT a simple one line change. Loo\+UQ has a Arduino compatible fork of the Segger J-\/\+Link R\+TT source available on Git\+Hub (\href{https://github.com/LooUQ/JLinkRTT}{\texttt{ https\+://github.\+com/\+Loo\+U\+Q/\+J\+Link\+R\+TT}}).\hypertarget{md__release_1_0_autotoc_md29}{}\doxysubsubsection{\+\_\+\+D\+E\+B\+U\+G Value = 2 for J-\/\+L\+I\+N\+K R\+T\+T and R\+T\+T Viewer}\label{md__release_1_0_autotoc_md29}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\#define \_DEBUG 0                        // set to non-\/zero value for PRINTF debugging output, }
+\DoxyCodeLine{\#define \_DEBUG 2                        // set to non-\/zero value for PRINTF debugging output, }
 \DoxyCodeLine{// debugging output options             // LTEm1c will satisfy PRINTF references with empty definition if not already resolved}
 \DoxyCodeLine{\#if defined(\_DEBUG) \&\& \_DEBUG > 0}
 \DoxyCodeLine{    asm("{}.global \_printf\_float"{});       // forces build to link in float support for printf}

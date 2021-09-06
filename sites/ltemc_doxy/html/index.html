@@ -71,14 +71,14 @@ $(function() {
 <div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
 Circuit River - LTEmC</h1>
 <h2><a class="anchor" id="autotoc_md1"></a>
-Release Status: v1.0.0 (initial production release)</h2>
+Release Status: v2.0.0</h2>
 <p>LTEm1 modem driver implemented in C99 for portability and a small footprint.</p>
 <p>The LooUQ LTEmC driver supports the LooUQ Circuit River LTEm1 LTE modem. The LTEm1 is designed to allow for cost-effective cellular communications in embedded systems by supporting LTE CAT-M1 and LTE CAT-NB1 (NB-IOT) communications. The LTEm1 is certified for use on the Verizon network. It is also fully tested and supported using Hologram SIMs and several US carriers.</p>
-<p><b>1st off, thanks for taking a look at the LTEm1 hardware and LTEmC software!</b></p>
+<p><b>First off, thanks for taking a look at the LTEm1 hardware and LTEmC software!</b></p>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Getting Started</h2>
-<p>The best way to get started understanding LTEmC and considering it for your projects <b>today</b> is to look at the tests folder in the repository. This will be supplemented in the coming weeks. We are working on getting the source code documented with a more complete suite of <em>doxygen</em> markdown tags. We are also adding a couple real world example projects soon. The tests folder contains a series of progressive LTEmC tests. Starting with simple platform I/O verification, thru MQTT protocol support. Each test builds on a succesful previous level test. Each test can serve as a template for you to start your implementation from.</p>
-<p>Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.</p>
+<p>The best way to get started understanding LTEmC and considering it for your projects <em>today</em> is to look at the tests folder in the repository. This collection of test/examples will continue to grow in future releases and new use cases are demonstrated. The tests folder contains a series of progressive LTEm1c tests. Starting with simple platform I/O verification through to application protocol support (sockets, MQTT, HTTP), each test builds upon a succesful previous level test. While called <b>tests</b>, these projects they serve as <b>examples of how to do specific use cases</b>. These are your best source for scaffold code to start your LTEm project.</p>
+<p><b>Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.</b></p>
 <h3><a class="anchor" id="autotoc_md3"></a>
 LTEmC Subsystems</h3>
 <table class="markdownTable">
@@ -97,6 +97,8 @@ LTEmC Subsystems</h3>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><em>mqtt_</em>  </td><td class="markdownTableBodyNone">Support for MQTT client functionality is built here. Attach, connect, subscribe, unsubscribe and publish all are supported. Limited testing so far on QOS levels and advance features like clean and will. The MQTT module supports message properties appended to the topic and has a property parser available.   </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><em>http_</em>  </td><td class="markdownTableBodyNone">Support for HTTP client functionality is found here. Perform HTTP GET or POST actions with standard or custom request headers.   </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><em>iop_</em>  </td><td class="markdownTableBodyNone">Generally you won't directly interact with the iop_ subsystem. It performs the buffer management to/from hardware. It interfaces with the action_, sockets_, and mqtt_ subsystems to perform the necessary transfers.   </td></tr>
 </table>
 <p><a href="https://loouq.github.io/resources/CTA-LTEM1_DataSheet.pdf">LTEm1 Modem Specifications</a></p>

@@ -1,6 +1,6 @@
 \hypertarget{ltemc-mdminfo_8c}{}\doxysection{src/ltemc-\/mdminfo.c File Reference}
 \label{ltemc-mdminfo_8c}\index{src/ltemc-\/mdminfo.c@{src/ltemc-\/mdminfo.c}}
-{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/internal.\+h\char`\"{}}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,12 +19,17 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{ltemc-mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}} \mbox{\hyperlink{ltemc-mdminfo_8c_a72503fcbcdb4da00355449068a51013a}{mdminfo\+\_\+ltem}} ()
+modem\+Info\+\_\+t \mbox{\hyperlink{ltemc-mdminfo_8c_a72503fcbcdb4da00355449068a51013a}{mdminfo\+\_\+ltem}} ()
 \begin{DoxyCompactList}\small\item\em Get the L\+T\+Em1 static device identification/provisioning information. \end{DoxyCompactList}\item 
 int16\+\_\+t \mbox{\hyperlink{ltemc-mdminfo_8c_a1d9b7f567f1ad5f5393d1bd84b461fa0}{mdminfo\+\_\+rssi}} ()
 \begin{DoxyCompactList}\small\item\em Get the static device provisioning information about the L\+T\+Em1. \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{ltemc-mdminfo_8c_af770a3d7781daf66572cb4c05695b3a7}{mdminfo\+\_\+rssi\+Bars}} (uint8\+\_\+t number\+Of\+Bars)
 \begin{DoxyCompactList}\small\item\em Get the R\+S\+SI value as a calculate bar count for visualizations. Like on a smartphone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} \mbox{\hyperlink{ltemc-mdminfo_8c_a5f9b6913ff818fbc74934a69849fb48b}{g\+\_\+ltem}}
+\begin{DoxyCompactList}\small\item\em The L\+T\+Em \char`\"{}object\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -71,7 +76,7 @@ uint8\+\_\+t \mbox{\hyperlink{ltemc-mdminfo_8c_af770a3d7781daf66572cb4c05695b3a7
 \index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!mdminfo\_ltem@{mdminfo\_ltem}}
 \index{mdminfo\_ltem@{mdminfo\_ltem}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
 \doxysubsubsection{\texorpdfstring{mdminfo\_ltem()}{mdminfo\_ltem()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-mdminfo_8h_a4d98cb161d7f9ecce35606aa98f98fd3}{modem\+Info\+\_\+t}} mdminfo\+\_\+ltem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily modem\+Info\+\_\+t mdminfo\+\_\+ltem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -111,3 +116,16 @@ Get the R\+S\+SI value as a calculate bar count for visualizations. Like on a sm
 \begin{DoxyReturn}{Returns}
 The number of bars to indicate based on the current R\+S\+SI and your scale. 
 \end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ltemc-mdminfo_8c_a5f9b6913ff818fbc74934a69849fb48b}\label{ltemc-mdminfo_8c_a5f9b6913ff818fbc74934a69849fb48b}} 
+\index{ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}!g\_ltem@{g\_ltem}}
+\index{g\_ltem@{g\_ltem}!ltemc-\/mdminfo.c@{ltemc-\/mdminfo.c}}
+\doxysubsubsection{\texorpdfstring{g\_ltem}{g\_ltem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} g\+\_\+ltem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+The L\+T\+Em \char`\"{}object\char`\"{}. 
+

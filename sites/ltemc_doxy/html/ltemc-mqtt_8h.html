@@ -70,7 +70,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -78,61 +77,24 @@ $(function() {
 <div class="title">ltemc-mqtt.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ltemc_8h_source.html">ltemc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ltemc-internal_8h_source.html">ltemc-internal.h</a>&quot;</code><br />
 </div>
 <p><a href="ltemc-mqtt_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_subscription__tag.html">mqttSubscription_tag</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing a MQTT topic subscription.  <a href="structmqtt_subscription__tag.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_topic_sub__tag.html">mqttTopicSub_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing a MQTT topic subscription.  <a href="structmqtt_topic_sub__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt__tag.html">mqtt_tag</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing the MQTT service.  <a href="structmqtt__tag.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmqtt_ctrl__tag.html">mqttCtrl_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct representing the state of a MQTT stream service.  <a href="structmqtt_ctrl__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ae8370b235c0ba262d7151bc3d09dd7e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ae8370b235c0ba262d7151bc3d09dd7e7">MQTT_PUBLISH_TIMEOUT</a>&#160;&#160;&#160;2500</td></tr>
-<tr class="separator:ae8370b235c0ba262d7151bc3d09dd7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af332af7952098c5718bd868beffda05e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#af332af7952098c5718bd868beffda05e">MQTT_MESSAGE_SZ</a>&#160;&#160;&#160;1548</td></tr>
-<tr class="memdesc:af332af7952098c5718bd868beffda05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGx max publish size.  <a href="ltemc-mqtt_8h.html#af332af7952098c5718bd868beffda05e">More...</a><br /></td></tr>
-<tr class="separator:af332af7952098c5718bd868beffda05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af68a65c5636c86921e996addc5ad965c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#af68a65c5636c86921e996addc5ad965c">MQTT_TOPIC_OFFSET_MAX</a>&#160;&#160;&#160;24</td></tr>
-<tr class="memdesc:af68a65c5636c86921e996addc5ad965c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of BGx preamble chars to get to topic.  <a href="ltemc-mqtt_8h.html#af68a65c5636c86921e996addc5ad965c">More...</a><br /></td></tr>
-<tr class="separator:af68a65c5636c86921e996addc5ad965c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a0a7c82262c99f6e8dac90fc98c991"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a92a0a7c82262c99f6e8dac90fc98c991">MQTT_TOPIC_NAME_SZ</a>&#160;&#160;&#160;90</td></tr>
-<tr class="memdesc:a92a0a7c82262c99f6e8dac90fc98c991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Azure IoTHub typically 50-70 chars.  <a href="ltemc-mqtt_8h.html#a92a0a7c82262c99f6e8dac90fc98c991">More...</a><br /></td></tr>
-<tr class="separator:a92a0a7c82262c99f6e8dac90fc98c991"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9965ae488cbe9f8f628a1cfeb0de4f29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a9965ae488cbe9f8f628a1cfeb0de4f29">MQTT_TOPIC_PROPS_SZ</a>&#160;&#160;&#160;320</td></tr>
-<tr class="memdesc:a9965ae488cbe9f8f628a1cfeb0de4f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">typically 250-300 bytes  <a href="ltemc-mqtt_8h.html#a9965ae488cbe9f8f628a1cfeb0de4f29">More...</a><br /></td></tr>
-<tr class="separator:a9965ae488cbe9f8f628a1cfeb0de4f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad82c4327ab339e4dc6c906ba49029460"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ad82c4327ab339e4dc6c906ba49029460">MQTT_TOPIC_SZ</a>&#160;&#160;&#160;(<a class="el" href="ltemc-mqtt_8h.html#a92a0a7c82262c99f6e8dac90fc98c991">MQTT_TOPIC_NAME_SZ</a> + <a class="el" href="ltemc-mqtt_8h.html#a9965ae488cbe9f8f628a1cfeb0de4f29">MQTT_TOPIC_PROPS_SZ</a>)</td></tr>
-<tr class="memdesc:ad82c4327ab339e4dc6c906ba49029460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total topic size (name+props) for buffer sizing.  <a href="ltemc-mqtt_8h.html#ad82c4327ab339e4dc6c906ba49029460">More...</a><br /></td></tr>
-<tr class="separator:ad82c4327ab339e4dc6c906ba49029460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d0f8bb625dcbeb8f3ffd84318d22ae1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a3d0f8bb625dcbeb8f3ffd84318d22ae1">MQTT_TOPIC_PUBCMD_OVRHD_SZ</a>&#160;&#160;&#160;27</td></tr>
-<tr class="memdesc:a3d0f8bb625dcbeb8f3ffd84318d22ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">when publishing, number of extra chars in outgoing buffer added to AT cmd  <a href="ltemc-mqtt_8h.html#a3d0f8bb625dcbeb8f3ffd84318d22ae1">More...</a><br /></td></tr>
-<tr class="separator:a3d0f8bb625dcbeb8f3ffd84318d22ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20b81ae06be41bff3b9c8a1640379416"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a20b81ae06be41bff3b9c8a1640379416">MQTT_TOPIC_PUBBUF_SZ</a>&#160;&#160;&#160;(<a class="el" href="ltemc-mqtt_8h.html#a92a0a7c82262c99f6e8dac90fc98c991">MQTT_TOPIC_NAME_SZ</a> + <a class="el" href="ltemc-mqtt_8h.html#a9965ae488cbe9f8f628a1cfeb0de4f29">MQTT_TOPIC_PROPS_SZ</a> + <a class="el" href="ltemc-mqtt_8h.html#a3d0f8bb625dcbeb8f3ffd84318d22ae1">MQTT_TOPIC_PUBCMD_OVRHD_SZ</a>)</td></tr>
-<tr class="separator:a20b81ae06be41bff3b9c8a1640379416"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d503fbf4b1c060dca196dd00b7c48db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a1d503fbf4b1c060dca196dd00b7c48db">MQTT_TOPIC_MAXCNT</a>&#160;&#160;&#160;2</td></tr>
-<tr class="memdesc:a1d503fbf4b1c060dca196dd00b7c48db"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of slots for MQTT service subscriptions (reduce for mem conservation)  <a href="ltemc-mqtt_8h.html#a1d503fbf4b1c060dca196dd00b7c48db">More...</a><br /></td></tr>
-<tr class="separator:a1d503fbf4b1c060dca196dd00b7c48db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39f3ff2dfec33cbcba1a4d7bfde97716"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a39f3ff2dfec33cbcba1a4d7bfde97716">MQTT_SOCKET_ID</a>&#160;&#160;&#160;5</td></tr>
-<tr class="memdesc:a39f3ff2dfec33cbcba1a4d7bfde97716"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTT assigned BGx socket (this is behind-the-scenes and not readily visible)  <a href="ltemc-mqtt_8h.html#a39f3ff2dfec33cbcba1a4d7bfde97716">More...</a><br /></td></tr>
-<tr class="separator:a39f3ff2dfec33cbcba1a4d7bfde97716"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdb74e5c43e94d95825d04eecd10ac00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#acdb74e5c43e94d95825d04eecd10ac00">MQTT_PROPERTIES_CNT</a>&#160;&#160;&#160;12</td></tr>
-<tr class="memdesc:acdb74e5c43e94d95825d04eecd10ac00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Azure IoTHub 3-sysProps, 3-props, plus your application.  <a href="ltemc-mqtt_8h.html#acdb74e5c43e94d95825d04eecd10ac00">More...</a><br /></td></tr>
-<tr class="separator:acdb74e5c43e94d95825d04eecd10ac00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ac778976d0ddfac2c6ee9d150a8b7d846"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2">mqttResult_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ac778976d0ddfac2c6ee9d150a8b7d846">mqttResult_t</a></td></tr>
 <tr class="memdesc:ac778976d0ddfac2c6ee9d150a8b7d846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emum describing the results of a MQTT publish.  <a href="ltemc-mqtt_8h.html#ac778976d0ddfac2c6ee9d150a8b7d846">More...</a><br /></td></tr>
 <tr class="separator:ac778976d0ddfac2c6ee9d150a8b7d846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4fb66f436707c44f2e350dbc5108224"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58">sslVersion_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224">sslVersion_t</a></td></tr>
-<tr class="memdesc:af4fb66f436707c44f2e350dbc5108224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of available SSL version options for an SSL connection.  <a href="ltemc-mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224">More...</a><br /></td></tr>
-<tr class="separator:af4fb66f436707c44f2e350dbc5108224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6396985642256a42f60af322da5124f"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767">mqttVersion_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#af6396985642256a42f60af322da5124f">mqttVersion_t</a></td></tr>
 <tr class="memdesc:af6396985642256a42f60af322da5124f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of available MQTT protocol version options.  <a href="ltemc-mqtt_8h.html#af6396985642256a42f60af322da5124f">More...</a><br /></td></tr>
 <tr class="separator:af6396985642256a42f60af322da5124f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,38 +107,42 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a148a3f73f6a3ee40ff17182f67586932"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39">mqttStatus_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a></td></tr>
 <tr class="memdesc:a148a3f73f6a3ee40ff17182f67586932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emum describing current state of the MQTT protocol service.  <a href="ltemc-mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">More...</a><br /></td></tr>
 <tr class="separator:a148a3f73f6a3ee40ff17182f67586932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98539737eefd41c88388bada5c4116b4"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a98539737eefd41c88388bada5c4116b4">mqtt_recvFunc_t</a>) (char *topic, char *props, char *message)</td></tr>
-<tr class="memdesc:a98539737eefd41c88388bada5c4116b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">typedef of MQTT subscription receiver function (required signature).  <a href="ltemc-mqtt_8h.html#a98539737eefd41c88388bada5c4116b4">More...</a><br /></td></tr>
-<tr class="separator:a98539737eefd41c88388bada5c4116b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46dc892f05acfdb27f05881e54cd1122"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmqtt_subscription__tag.html">mqttSubscription_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a46dc892f05acfdb27f05881e54cd1122">mqttSubscription_t</a></td></tr>
-<tr class="memdesc:a46dc892f05acfdb27f05881e54cd1122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing a MQTT topic subscription.  <a href="ltemc-mqtt_8h.html#a46dc892f05acfdb27f05881e54cd1122">More...</a><br /></td></tr>
-<tr class="separator:a46dc892f05acfdb27f05881e54cd1122"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1744988046ae8938df0f8369d90f2d42"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmqtt__tag.html">mqtt_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a1744988046ae8938df0f8369d90f2d42">mqtt_t</a></td></tr>
-<tr class="memdesc:a1744988046ae8938df0f8369d90f2d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing the MQTT service.  <a href="ltemc-mqtt_8h.html#a1744988046ae8938df0f8369d90f2d42">More...</a><br /></td></tr>
-<tr class="separator:a1744988046ae8938df0f8369d90f2d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac24bdcc3ec46f9d10d72a4c7b6386171"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ltemc-mqtt_8h.html#a1744988046ae8938df0f8369d90f2d42">mqtt_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ac24bdcc3ec46f9d10d72a4c7b6386171">mqttPtr_t</a></td></tr>
-<tr class="separator:ac24bdcc3ec46f9d10d72a4c7b6386171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9683ebf7923850cf58dd12e94cb75b7c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmqtt_topic_sub__tag.html">mqttTopicSub_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a9683ebf7923850cf58dd12e94cb75b7c">mqttTopicSub_t</a></td></tr>
+<tr class="memdesc:a9683ebf7923850cf58dd12e94cb75b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct describing a MQTT topic subscription.  <a href="ltemc-mqtt_8h.html#a9683ebf7923850cf58dd12e94cb75b7c">More...</a><br /></td></tr>
+<tr class="separator:a9683ebf7923850cf58dd12e94cb75b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511663720bdcd80c97bef4b2804b4196"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a511663720bdcd80c97bef4b2804b4196">mqttRecvFunc_t</a>) (<a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a> dataCntxt, uint16_t msgId, const char *topic, char *topicProps, char *message, uint16_t messageSz)</td></tr>
+<tr class="memdesc:a511663720bdcd80c97bef4b2804b4196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for data received event. Notifies application that new data is available and needs serviced.  <a href="ltemc-mqtt_8h.html#a511663720bdcd80c97bef4b2804b4196">More...</a><br /></td></tr>
+<tr class="separator:a511663720bdcd80c97bef4b2804b4196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876dd6d72ad65cf52ec8fb8ed35fbe91"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmqtt_ctrl__tag.html">mqttCtrl_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a></td></tr>
+<tr class="memdesc:a876dd6d72ad65cf52ec8fb8ed35fbe91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct representing the state of a MQTT stream service.  <a href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">More...</a><br /></td></tr>
+<tr class="separator:a876dd6d72ad65cf52ec8fb8ed35fbe91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a5f8ab8a44e690c2450ffcf33de4996d9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9">mqtt__constants</a> { <br />
+&#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9adef4420a549b6c7d8cbcaab6adf4ca36">mqtt__useTls</a> = 1, 
+<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9a74e68e623aff2383f6c984668aa6f5f8">mqtt__notUsingTls</a> = 0, 
+<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9a5078e995915477a3c52f1488b17151c7">mqtt__publishTimeout</a> = 2500, 
+<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9a86df207d8a98675092354f35a0652e62">mqtt__messageSz</a> = 1548, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9aa35a796f8068910132b2693351551641">mqtt__topic_offset</a> = 24, 
+<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9a226945a59bf39c157684e24364a776f4">mqtt__topic_nameSz</a> = 90, 
+<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9a9a0211f9a1b218c91ffdc3b3cde2b69f">mqtt__topic_propsSz</a> = 320, 
+<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9aa216b85f0c6b0281a3ef72aef69e73a0">mqtt__topic_publishCmdOvrhdSz</a> = 27, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9a23690939f9dfb36c24c079e3174d29aa">mqtt__topic_subscriptionCnt</a> = 2, 
+<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9a5d44cf89b289cb90cbda856b05418fd5">mqtt__topic_bufferSz</a> = (mqtt__topic_nameSz + mqtt__topic_propsSz), 
+<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9aa48ce2b2c6feed85e4d70c63734d38b6">mqtt__topic_publishCmdSz</a> = (mqtt__topic_bufferSz + mqtt__topic_publishCmdOvrhdSz), 
+<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9aa017ee3b5e3c0afb3fb1d4754732a20c">mqtt__propertiesCnt</a> = 12
+<br />
+ }</td></tr>
+<tr class="separator:a5f8ab8a44e690c2450ffcf33de4996d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb87ffe09946888ae33f48618357ebd2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2">mqttResult_tag</a> { <a class="el" href="ltemc-mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2a975935ea6219ab31f1927235b69095fb">mqttResult_success</a> = 0, 
 <a class="el" href="ltemc-mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2aedc68fc3c221d4a32102685a1bf9197a">mqttResult_retransmission</a> = 1, 
 <a class="el" href="ltemc-mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2a7767af10058c9e03b912b38547decf10">mqttResult_failed</a> = 2
  }</td></tr>
 <tr class="memdesc:aeb87ffe09946888ae33f48618357ebd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emum describing the results of a MQTT publish.  <a href="ltemc-mqtt_8h.html#aeb87ffe09946888ae33f48618357ebd2">More...</a><br /></td></tr>
 <tr class="separator:aeb87ffe09946888ae33f48618357ebd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fe217ea8607b0396e3e2d4d8b174f58"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58">sslVersion_tag</a> { <br />
-&#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58abcccf511229deffad374c6007a33a0c0">sslVersion_none</a> = 255, 
-<a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58aac126f250ef89e0f6048962e80253c58">sslVersion_ssl30</a> = 0, 
-<a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58a43f40ef1b72850f596689dff84d1ff35">sslVersion_tls10</a> = 1, 
-<a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58acf7df3dd78ef7ef23a7f287eea404d26">sslVersion_tls11</a> = 2, 
-<br />
-&#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58a87fda49f4e59a4f7d8c2271d00acb9c3">sslVersion_tls12</a> = 3, 
-<a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58a4969b38ac7bda01a8ae065887a06c0e9">sslVersion_any</a> = 4
-<br />
- }</td></tr>
-<tr class="memdesc:a4fe217ea8607b0396e3e2d4d8b174f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of available SSL version options for an SSL connection.  <a href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58">More...</a><br /></td></tr>
-<tr class="separator:a4fe217ea8607b0396e3e2d4d8b174f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ade03ddc4349123bb244da87f1b767"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767">mqttVersion_tag</a> { <a class="el" href="ltemc-mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767a6ebff9cc916721b89a6bfcef4998f9f7">mqttVersion_3</a> = 3, 
 <a class="el" href="ltemc-mqtt_8h.html#ad1ade03ddc4349123bb244da87f1b767acba79b73a8bc8355937cb8ace9e9994d">mqttVersion_311</a> = 4
  }</td></tr>
@@ -194,261 +160,63 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:aff6fa5bd5d79dc17b987e00b771579c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum specifying behavior for messages pre-session establishment (session starts with connect, not open).  <a href="ltemc-mqtt_8h.html#aff6fa5bd5d79dc17b987e00b771579c2">More...</a><br /></td></tr>
 <tr class="separator:aff6fa5bd5d79dc17b987e00b771579c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51686657313aedeaa79d74869e1d9d39"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39">mqttStatus_tag</a> { <a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39ada8342e02f0afb8fb3a997a7eb4ea6ca">mqttStatus_closed</a> = 0, 
+<tr class="memitem:a51686657313aedeaa79d74869e1d9d39"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39">mqttStatus_tag</a> { <br />
+&#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39ada8342e02f0afb8fb3a997a7eb4ea6ca">mqttStatus_closed</a> = 0, 
 <a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a56db1975479de9626cfae7946a30ea27">mqttStatus_open</a> = 1, 
-<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39af001d69f757d9c37adc01227d2dae517">mqttStatus_connected</a> = 2
+<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39af001d69f757d9c37adc01227d2dae517">mqttStatus_connected</a> = 2, 
+<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a95a5df6e5e1e1dce593d397cc15cdecf">mqttStatus_pending</a> = 200, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a6690b30f5249891d1188212d0cd23778">mqttStatus_invalidHost</a> = 201
+<br />
  }</td></tr>
 <tr class="memdesc:a51686657313aedeaa79d74869e1d9d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emum describing current state of the MQTT protocol service.  <a href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39">More...</a><br /></td></tr>
 <tr class="separator:a51686657313aedeaa79d74869e1d9d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8051af90648cef323dd3d207f477657b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a8051af90648cef323dd3d207f477657b">mqtt_create</a> ()</td></tr>
-<tr class="memdesc:a8051af90648cef323dd3d207f477657b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize MQTT service structure and add it to LTEm1c services.  <a href="ltemc-mqtt_8h.html#a8051af90648cef323dd3d207f477657b">More...</a><br /></td></tr>
-<tr class="separator:a8051af90648cef323dd3d207f477657b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefdeff1177520d62588b48a41a5e8045"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#aefdeff1177520d62588b48a41a5e8045">mqtt_status</a> (const char *host, bool force)</td></tr>
-<tr class="memdesc:aefdeff1177520d62588b48a41a5e8045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query the status of the MQTT server state.  <a href="ltemc-mqtt_8h.html#aefdeff1177520d62588b48a41a5e8045">More...</a><br /></td></tr>
-<tr class="separator:aefdeff1177520d62588b48a41a5e8045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a633eb17a04cfcf8638ec75fdefcff0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a2a633eb17a04cfcf8638ec75fdefcff0">mqtt_open</a> (const char *host, uint16_t port, <a class="el" href="ltemc-mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224">sslVersion_t</a> useSslVersion, <a class="el" href="ltemc-mqtt_8h.html#af6396985642256a42f60af322da5124f">mqttVersion_t</a> useMqttVersion)</td></tr>
-<tr class="memdesc:a2a633eb17a04cfcf8638ec75fdefcff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a remote MQTT server for use.  <a href="ltemc-mqtt_8h.html#a2a633eb17a04cfcf8638ec75fdefcff0">More...</a><br /></td></tr>
-<tr class="separator:a2a633eb17a04cfcf8638ec75fdefcff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac72b2188722710984f36386c7793cc7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ac72b2188722710984f36386c7793cc7c">mqtt_connect</a> (const char *clientId, const char *username, const char *password, <a class="el" href="ltemc-mqtt_8h.html#a455558a85512fdfa977572eae49314c0">mqttSession_t</a> cleanSession)</td></tr>
-<tr class="memdesc:ac72b2188722710984f36386c7793cc7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect (authenticate) to a MQTT server.  <a href="ltemc-mqtt_8h.html#ac72b2188722710984f36386c7793cc7c">More...</a><br /></td></tr>
-<tr class="separator:ac72b2188722710984f36386c7793cc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad52f5ef51a9488dda1c573e26137371a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ad52f5ef51a9488dda1c573e26137371a">mqtt_close</a> ()</td></tr>
-<tr class="memdesc:ad52f5ef51a9488dda1c573e26137371a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and close a connection to a MQTT server.  <a href="ltemc-mqtt_8h.html#ad52f5ef51a9488dda1c573e26137371a">More...</a><br /></td></tr>
-<tr class="separator:ad52f5ef51a9488dda1c573e26137371a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11e082d519c3ba83112e45d1a86a085e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a11e082d519c3ba83112e45d1a86a085e">mqtt_subscribe</a> (const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos, <a class="el" href="ltemc-mqtt_8h.html#a98539737eefd41c88388bada5c4116b4">mqtt_recvFunc_t</a> rcvr_func)</td></tr>
-<tr class="memdesc:a11e082d519c3ba83112e45d1a86a085e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a topic on the MQTT server.  <a href="ltemc-mqtt_8h.html#a11e082d519c3ba83112e45d1a86a085e">More...</a><br /></td></tr>
-<tr class="separator:a11e082d519c3ba83112e45d1a86a085e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a438017fd271d124a86605407edd6e3a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a438017fd271d124a86605407edd6e3a1">mqtt_unsubscribe</a> (const char *topic)</td></tr>
-<tr class="memdesc:a438017fd271d124a86605407edd6e3a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe to a topic on the MQTT server.  <a href="ltemc-mqtt_8h.html#a438017fd271d124a86605407edd6e3a1">More...</a><br /></td></tr>
-<tr class="separator:a438017fd271d124a86605407edd6e3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac840825f9f828ae6b756cc2f9ede3569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ac840825f9f828ae6b756cc2f9ede3569">mqtt_publish</a> (const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos, const char *message)</td></tr>
-<tr class="memdesc:ac840825f9f828ae6b756cc2f9ede3569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish a message to server.  <a href="ltemc-mqtt_8h.html#ac840825f9f828ae6b756cc2f9ede3569">More...</a><br /></td></tr>
-<tr class="separator:ac840825f9f828ae6b756cc2f9ede3569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e7d6a65ee3363eae8283f57d686a4c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a2e7d6a65ee3363eae8283f57d686a4c4">mqtt_doWork</a> ()</td></tr>
-<tr class="memdesc:a2e7d6a65ee3363eae8283f57d686a4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs background tasks to advance MQTT pipeline dataflows.  <a href="ltemc-mqtt_8h.html#a2e7d6a65ee3363eae8283f57d686a4c4">More...</a><br /></td></tr>
-<tr class="separator:a2e7d6a65ee3363eae8283f57d686a4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55c5ff1c379910b467c77294aa7460f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#aa55c5ff1c379910b467c77294aa7460f">mqtt_initControl</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, <a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a> dataCntxt, bool useTls, <a class="el" href="ltemc-mqtt_8h.html#af6396985642256a42f60af322da5124f">mqttVersion_t</a> useMqttVersion, uint8_t *recvBuf, uint16_t recvBufSz, <a class="el" href="ltemc-mqtt_8h.html#a511663720bdcd80c97bef4b2804b4196">mqttRecvFunc_t</a> recvCallback)</td></tr>
+<tr class="memdesc:aa55c5ff1c379910b467c77294aa7460f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query the status of the MQTT server state.  <a href="ltemc-mqtt_8h.html#aa55c5ff1c379910b467c77294aa7460f">More...</a><br /></td></tr>
+<tr class="separator:aa55c5ff1c379910b467c77294aa7460f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc88867fece34baa7b992d3ab60d4aa"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#accc88867fece34baa7b992d3ab60d4aa">mqtt_open</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *host, uint16_t port)</td></tr>
+<tr class="memdesc:accc88867fece34baa7b992d3ab60d4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a remote MQTT server for use.  <a href="ltemc-mqtt_8h.html#accc88867fece34baa7b992d3ab60d4aa">More...</a><br /></td></tr>
+<tr class="separator:accc88867fece34baa7b992d3ab60d4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10d9f4c2b26ec478eeee8056081d021"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#aa10d9f4c2b26ec478eeee8056081d021">mqtt_connect</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *clientId, const char *username, const char *password, <a class="el" href="ltemc-mqtt_8h.html#a455558a85512fdfa977572eae49314c0">mqttSession_t</a> cleanSession)</td></tr>
+<tr class="memdesc:aa10d9f4c2b26ec478eeee8056081d021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect (authenticate) to a MQTT server.  <a href="ltemc-mqtt_8h.html#aa10d9f4c2b26ec478eeee8056081d021">More...</a><br /></td></tr>
+<tr class="separator:aa10d9f4c2b26ec478eeee8056081d021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb874ed8fe83efb81a6e206a00059ad0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#afb874ed8fe83efb81a6e206a00059ad0">mqtt_close</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
+<tr class="memdesc:afb874ed8fe83efb81a6e206a00059ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and close a connection to a MQTT server.  <a href="ltemc-mqtt_8h.html#afb874ed8fe83efb81a6e206a00059ad0">More...</a><br /></td></tr>
+<tr class="separator:afb874ed8fe83efb81a6e206a00059ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc8032ed4b4fd1d27f14183965a439b5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#adc8032ed4b4fd1d27f14183965a439b5">mqtt_subscribe</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos)</td></tr>
+<tr class="memdesc:adc8032ed4b4fd1d27f14183965a439b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a topic on the MQTT server.  <a href="ltemc-mqtt_8h.html#adc8032ed4b4fd1d27f14183965a439b5">More...</a><br /></td></tr>
+<tr class="separator:adc8032ed4b4fd1d27f14183965a439b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4052b98fe0795af64f4fe611ed007302"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a4052b98fe0795af64f4fe611ed007302">mqtt_unsubscribe</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic)</td></tr>
+<tr class="memdesc:a4052b98fe0795af64f4fe611ed007302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe to a topic on the MQTT server.  <a href="ltemc-mqtt_8h.html#a4052b98fe0795af64f4fe611ed007302">More...</a><br /></td></tr>
+<tr class="separator:a4052b98fe0795af64f4fe611ed007302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90563e785d692af76fbb8b0999ef22d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#aa90563e785d692af76fbb8b0999ef22d">mqtt_getStatus</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *host)</td></tr>
+<tr class="memdesc:aa90563e785d692af76fbb8b0999ef22d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query the status of the MQTT server state.  <a href="ltemc-mqtt_8h.html#aa90563e785d692af76fbb8b0999ef22d">More...</a><br /></td></tr>
+<tr class="separator:aa90563e785d692af76fbb8b0999ef22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b686fdb5fb861c9d6283fd7ca1a83da"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a2b686fdb5fb861c9d6283fd7ca1a83da">mqtt_getMsgId</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
+<tr class="separator:a2b686fdb5fb861c9d6283fd7ca1a83da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab008a6b06b403798a785036d5bf06629"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ab008a6b06b403798a785036d5bf06629">mqtt_publish</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos, const char *message)</td></tr>
+<tr class="memdesc:ab008a6b06b403798a785036d5bf06629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish a message to server.  <a href="ltemc-mqtt_8h.html#ab008a6b06b403798a785036d5bf06629">More...</a><br /></td></tr>
+<tr class="separator:ab008a6b06b403798a785036d5bf06629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3615ae26f711acc2c3caca74260fb7a8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a3615ae26f711acc2c3caca74260fb7a8">mqtt_getLastBufferReqd</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
+<tr class="separator:a3615ae26f711acc2c3caca74260fb7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="af332af7952098c5718bd868beffda05e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af332af7952098c5718bd868beffda05e">&#9670;&nbsp;</a></span>MQTT_MESSAGE_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_MESSAGE_SZ&#160;&#160;&#160;1548</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>BGx max publish size. </p>
-
-</div>
-</div>
-<a id="acdb74e5c43e94d95825d04eecd10ac00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdb74e5c43e94d95825d04eecd10ac00">&#9670;&nbsp;</a></span>MQTT_PROPERTIES_CNT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_PROPERTIES_CNT&#160;&#160;&#160;12</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Azure IoTHub 3-sysProps, 3-props, plus your application. </p>
-
-</div>
-</div>
-<a id="ae8370b235c0ba262d7151bc3d09dd7e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8370b235c0ba262d7151bc3d09dd7e7">&#9670;&nbsp;</a></span>MQTT_PUBLISH_TIMEOUT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_PUBLISH_TIMEOUT&#160;&#160;&#160;2500</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>in millis, BGx documentation says 15s but in practice this is typically 550ms - 750ms, excessively long timeout creates situation where a msg timeout, causes a subsequent msg timeout </p>
-
-</div>
-</div>
-<a id="a39f3ff2dfec33cbcba1a4d7bfde97716"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39f3ff2dfec33cbcba1a4d7bfde97716">&#9670;&nbsp;</a></span>MQTT_SOCKET_ID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_SOCKET_ID&#160;&#160;&#160;5</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>MQTT assigned BGx socket (this is behind-the-scenes and not readily visible) </p>
-
-</div>
-</div>
-<a id="a1d503fbf4b1c060dca196dd00b7c48db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d503fbf4b1c060dca196dd00b7c48db">&#9670;&nbsp;</a></span>MQTT_TOPIC_MAXCNT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_TOPIC_MAXCNT&#160;&#160;&#160;2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>number of slots for MQTT service subscriptions (reduce for mem conservation) </p>
-
-</div>
-</div>
-<a id="a92a0a7c82262c99f6e8dac90fc98c991"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92a0a7c82262c99f6e8dac90fc98c991">&#9670;&nbsp;</a></span>MQTT_TOPIC_NAME_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_TOPIC_NAME_SZ&#160;&#160;&#160;90</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Azure IoTHub typically 50-70 chars. </p>
-
-</div>
-</div>
-<a id="af68a65c5636c86921e996addc5ad965c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af68a65c5636c86921e996addc5ad965c">&#9670;&nbsp;</a></span>MQTT_TOPIC_OFFSET_MAX</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_TOPIC_OFFSET_MAX&#160;&#160;&#160;24</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Number of BGx preamble chars to get to topic. </p>
-
-</div>
-</div>
-<a id="a9965ae488cbe9f8f628a1cfeb0de4f29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9965ae488cbe9f8f628a1cfeb0de4f29">&#9670;&nbsp;</a></span>MQTT_TOPIC_PROPS_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_TOPIC_PROPS_SZ&#160;&#160;&#160;320</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>typically 250-300 bytes </p>
-
-</div>
-</div>
-<a id="a20b81ae06be41bff3b9c8a1640379416"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20b81ae06be41bff3b9c8a1640379416">&#9670;&nbsp;</a></span>MQTT_TOPIC_PUBBUF_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_TOPIC_PUBBUF_SZ&#160;&#160;&#160;(<a class="el" href="ltemc-mqtt_8h.html#a92a0a7c82262c99f6e8dac90fc98c991">MQTT_TOPIC_NAME_SZ</a> + <a class="el" href="ltemc-mqtt_8h.html#a9965ae488cbe9f8f628a1cfeb0de4f29">MQTT_TOPIC_PROPS_SZ</a> + <a class="el" href="ltemc-mqtt_8h.html#a3d0f8bb625dcbeb8f3ffd84318d22ae1">MQTT_TOPIC_PUBCMD_OVRHD_SZ</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3d0f8bb625dcbeb8f3ffd84318d22ae1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d0f8bb625dcbeb8f3ffd84318d22ae1">&#9670;&nbsp;</a></span>MQTT_TOPIC_PUBCMD_OVRHD_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_TOPIC_PUBCMD_OVRHD_SZ&#160;&#160;&#160;27</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>when publishing, number of extra chars in outgoing buffer added to AT cmd </p>
-
-</div>
-</div>
-<a id="ad82c4327ab339e4dc6c906ba49029460"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad82c4327ab339e4dc6c906ba49029460">&#9670;&nbsp;</a></span>MQTT_TOPIC_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MQTT_TOPIC_SZ&#160;&#160;&#160;(<a class="el" href="ltemc-mqtt_8h.html#a92a0a7c82262c99f6e8dac90fc98c991">MQTT_TOPIC_NAME_SZ</a> + <a class="el" href="ltemc-mqtt_8h.html#a9965ae488cbe9f8f628a1cfeb0de4f29">MQTT_TOPIC_PROPS_SZ</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Total topic size (name+props) for buffer sizing. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a98539737eefd41c88388bada5c4116b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98539737eefd41c88388bada5c4116b4">&#9670;&nbsp;</a></span>mqtt_recvFunc_t</h2>
+<a id="a876dd6d72ad65cf52ec8fb8ed35fbe91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876dd6d72ad65cf52ec8fb8ed35fbe91">&#9670;&nbsp;</a></span>mqttCtrl_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* mqtt_recvFunc_t) (char *topic, char *props, char *message)</td>
+          <td class="memname">typedef struct <a class="el" href="structmqtt_ctrl__tag.html">mqttCtrl_tag</a> <a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>typedef of MQTT subscription receiver function (required signature). </p>
-
-</div>
-</div>
-<a id="a1744988046ae8938df0f8369d90f2d42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1744988046ae8938df0f8369d90f2d42">&#9670;&nbsp;</a></span>mqtt_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structmqtt__tag.html">mqtt_tag</a> <a class="el" href="ltemc-mqtt_8h.html#a1744988046ae8938df0f8369d90f2d42">mqtt_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Struct describing the MQTT service. </p>
-
-</div>
-</div>
-<a id="ac24bdcc3ec46f9d10d72a4c7b6386171"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac24bdcc3ec46f9d10d72a4c7b6386171">&#9670;&nbsp;</a></span>mqttPtr_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="ltemc-mqtt_8h.html#a1744988046ae8938df0f8369d90f2d42">mqtt_t</a>* <a class="el" href="ltemc-mqtt_8h.html#ac24bdcc3ec46f9d10d72a4c7b6386171">mqttPtr_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Struct representing the state of a MQTT stream service. </p>
 
 </div>
 </div>
@@ -465,6 +233,32 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enum specifying the MQTT QOS for a publish and subscribed topics. </p>
+
+</div>
+</div>
+<a id="a511663720bdcd80c97bef4b2804b4196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511663720bdcd80c97bef4b2804b4196">&#9670;&nbsp;</a></span>mqttRecvFunc_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* mqttRecvFunc_t) (<a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a> dataCntxt, uint16_t msgId, const char *topic, char *topicProps, char *message, uint16_t messageSz)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback function for data received event. Notifies application that new data is available and needs serviced. </p>
+<p>The *data and dataSz values are for convenience, since the application supplied the buffer to LTEmC.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">peerId</td><td>[in] Data peer (data context or filesys) </td></tr>
+    <tr><td class="paramname">handle</td><td>[in] Subordinate data ID to give application information about received data </td></tr>
+    <tr><td class="paramname">data</td><td>[in] Pointer to received data buffer </td></tr>
+    <tr><td class="paramname">dataSz</td><td>[in] The number of bytes available </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -516,14 +310,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a46dc892f05acfdb27f05881e54cd1122"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46dc892f05acfdb27f05881e54cd1122">&#9670;&nbsp;</a></span>mqttSubscription_t</h2>
+<a id="a9683ebf7923850cf58dd12e94cb75b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9683ebf7923850cf58dd12e94cb75b7c">&#9670;&nbsp;</a></span>mqttTopicSub_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structmqtt_subscription__tag.html">mqttSubscription_tag</a> <a class="el" href="ltemc-mqtt_8h.html#a46dc892f05acfdb27f05881e54cd1122">mqttSubscription_t</a></td>
+          <td class="memname">typedef struct <a class="el" href="structmqtt_topic_sub__tag.html">mqttTopicSub_tag</a> <a class="el" href="ltemc-mqtt_8h.html#a9683ebf7923850cf58dd12e94cb75b7c">mqttTopicSub_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -548,23 +342,42 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af4fb66f436707c44f2e350dbc5108224"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4fb66f436707c44f2e350dbc5108224">&#9670;&nbsp;</a></span>sslVersion_t</h2>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a5f8ab8a44e690c2450ffcf33de4996d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8ab8a44e690c2450ffcf33de4996d9">&#9670;&nbsp;</a></span>mqtt__constants</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef enum <a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58">sslVersion_tag</a> <a class="el" href="ltemc-mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224">sslVersion_t</a></td>
+          <td class="memname">enum <a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9">mqtt__constants</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Enum of available SSL version options for an SSL connection. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9adef4420a549b6c7d8cbcaab6adf4ca36"></a>mqtt__useTls&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9a74e68e623aff2383f6c984668aa6f5f8"></a>mqtt__notUsingTls&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9a5078e995915477a3c52f1488b17151c7"></a>mqtt__publishTimeout&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9a86df207d8a98675092354f35a0652e62"></a>mqtt__messageSz&#160;</td><td class="fielddoc"><p>Maximum message size for BGx family (BG96, BG95, BG77) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9aa35a796f8068910132b2693351551641"></a>mqtt__topic_offset&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9a226945a59bf39c157684e24364a776f4"></a>mqtt__topic_nameSz&#160;</td><td class="fielddoc"><p>Azure IoTHub typically 50-70 chars. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9a9a0211f9a1b218c91ffdc3b3cde2b69f"></a>mqtt__topic_propsSz&#160;</td><td class="fielddoc"><p>typically 250-300 bytes </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9aa216b85f0c6b0281a3ef72aef69e73a0"></a>mqtt__topic_publishCmdOvrhdSz&#160;</td><td class="fielddoc"><p>when publishing, number of extra chars in outgoing buffer added to AT cmd </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9a23690939f9dfb36c24c079e3174d29aa"></a>mqtt__topic_subscriptionCnt&#160;</td><td class="fielddoc"><p>number of slots for MQTT service subscriptions (reduce for mem conservation) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9a5d44cf89b289cb90cbda856b05418fd5"></a>mqtt__topic_bufferSz&#160;</td><td class="fielddoc"><p>Total topic size (name+props) for buffer sizing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9aa48ce2b2c6feed85e4d70c63734d38b6"></a>mqtt__topic_publishCmdSz&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5f8ab8a44e690c2450ffcf33de4996d9aa017ee3b5e3c0afb3fb1d4754732a20c"></a>mqtt__propertiesCnt&#160;</td><td class="fielddoc"><p>Azure IoTHub 3-sysProps, 3-props, plus your application. </p>
+</td></tr>
+</table>
 
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a550b228936d6a66ce971cdc331a53fd1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a550b228936d6a66ce971cdc331a53fd1">&#9670;&nbsp;</a></span>mqttQos_tag</h2>
 
@@ -657,6 +470,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39af001d69f757d9c37adc01227d2dae517"></a>mqttStatus_connected&#160;</td><td class="fielddoc"><p>MQTT is connected, in session with server. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a95a5df6e5e1e1dce593d397cc15cdecf"></a>mqttStatus_pending&#160;</td><td class="fielddoc"><p>MQTT is attempting connect (BGx MQTT problem area that needs to be detected, reset BGx if stays here). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a6690b30f5249891d1188212d0cd23778"></a>mqttStatus_invalidHost&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -683,39 +499,9 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4fe217ea8607b0396e3e2d4d8b174f58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fe217ea8607b0396e3e2d4d8b174f58">&#9670;&nbsp;</a></span>sslVersion_tag</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="ltemc-mqtt_8h.html#a4fe217ea8607b0396e3e2d4d8b174f58">sslVersion_tag</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enum of available SSL version options for an SSL connection. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58abcccf511229deffad374c6007a33a0c0"></a>sslVersion_none&#160;</td><td class="fielddoc"><p>Not set. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58aac126f250ef89e0f6048962e80253c58"></a>sslVersion_ssl30&#160;</td><td class="fielddoc"><p>Require SSL v3.0. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58a43f40ef1b72850f596689dff84d1ff35"></a>sslVersion_tls10&#160;</td><td class="fielddoc"><p>Require TLS v1.0. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58acf7df3dd78ef7ef23a7f287eea404d26"></a>sslVersion_tls11&#160;</td><td class="fielddoc"><p>Require TLS v1.1. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58a87fda49f4e59a4f7d8c2271d00acb9c3"></a>sslVersion_tls12&#160;</td><td class="fielddoc"><p>Require TLS v1.2. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4fe217ea8607b0396e3e2d4d8b174f58a4969b38ac7bda01a8ae065887a06c0e9"></a>sslVersion_any&#160;</td><td class="fielddoc"><p>Any SSL/TLS version is acceptable. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ad52f5ef51a9488dda1c573e26137371a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad52f5ef51a9488dda1c573e26137371a">&#9670;&nbsp;</a></span>mqtt_close()</h2>
+<a id="afb874ed8fe83efb81a6e206a00059ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb874ed8fe83efb81a6e206a00059ad0">&#9670;&nbsp;</a></span>mqtt_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -723,7 +509,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void mqtt_close </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -732,22 +519,28 @@ Functions</h2></td></tr>
 <p>Disconnect and close a connection to a MQTT server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">socketId</td><td>- The socket based identifier for the connection to close </td></tr>
+    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ac72b2188722710984f36386c7793cc7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac72b2188722710984f36386c7793cc7c">&#9670;&nbsp;</a></span>mqtt_connect()</h2>
+<a id="aa10d9f4c2b26ec478eeee8056081d021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa10d9f4c2b26ec478eeee8056081d021">&#9670;&nbsp;</a></span>mqtt_connect()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> mqtt_connect </td>
+          <td class="memname">resultCode_t mqtt_connect </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>clientId</em>, </td>
         </tr>
@@ -780,6 +573,7 @@ Functions</h2></td></tr>
 <p>Connect (authenticate) to a MQTT server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
     <tr><td class="paramname">clientId</td><td>[in] - The client or device identifier for the connection. </td></tr>
     <tr><td class="paramname">username</td><td>[in] - The user identifier or name for the connection to authenticate. </td></tr>
     <tr><td class="paramname">password</td><td>[in] - The secret string or phrase to authenticate the connection. </td></tr>
@@ -791,53 +585,168 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8051af90648cef323dd3d207f477657b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8051af90648cef323dd3d207f477657b">&#9670;&nbsp;</a></span>mqtt_create()</h2>
+<a id="a3615ae26f711acc2c3caca74260fb7a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3615ae26f711acc2c3caca74260fb7a8">&#9670;&nbsp;</a></span>mqtt_getLastBufferReqd()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void mqtt_create </td>
+          <td class="memname">uint16_t mqtt_getLastBufferReqd </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initialize MQTT service structure and add it to LTEm1c services. </p>
-
 </div>
 </div>
-<a id="a2e7d6a65ee3363eae8283f57d686a4c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e7d6a65ee3363eae8283f57d686a4c4">&#9670;&nbsp;</a></span>mqtt_doWork()</h2>
+<a id="a2b686fdb5fb861c9d6283fd7ca1a83da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b686fdb5fb861c9d6283fd7ca1a83da">&#9670;&nbsp;</a></span>mqtt_getMsgId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void mqtt_doWork </td>
+          <td class="memname">uint16_t mqtt_getMsgId </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Performs background tasks to advance MQTT pipeline dataflows. </p>
-
 </div>
 </div>
-<a id="a2a633eb17a04cfcf8638ec75fdefcff0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a633eb17a04cfcf8638ec75fdefcff0">&#9670;&nbsp;</a></span>mqtt_open()</h2>
+<a id="aa90563e785d692af76fbb8b0999ef22d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa90563e785d692af76fbb8b0999ef22d">&#9670;&nbsp;</a></span>mqtt_getStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> mqtt_open </td>
+          <td class="memname"><a class="el" href="ltemc-mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a> mqtt_getStatus </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>host</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Query the status of the MQTT server state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
+    <tr><td class="paramname">host</td><td>[in] A char string to match with the currently connected server. Host is not checked if empty string passed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A mqttStatus_t value indicating the state of the MQTT connection. </dd></dl>
+
+</div>
+</div>
+<a id="aa55c5ff1c379910b467c77294aa7460f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa55c5ff1c379910b467c77294aa7460f">&#9670;&nbsp;</a></span>mqtt_initControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mqtt_initControl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a>&#160;</td>
+          <td class="paramname"><em>dataCntxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useTls</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#af6396985642256a42f60af322da5124f">mqttVersion_t</a>&#160;</td>
+          <td class="paramname"><em>useMqttVersion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>recvBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recvBufSz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a511663720bdcd80c97bef4b2804b4196">mqttRecvFunc_t</a>&#160;</td>
+          <td class="paramname"><em>recvCallback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Query the status of the MQTT server state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT control structure governing communications. </td></tr>
+    <tr><td class="paramname">dataCntxt</td><td>[in] Data context to host this protocol stream. </td></tr>
+    <tr><td class="paramname">useTls</td><td>[in] Specifies if a SSL/TLS configuration has been applied to data context to protect communications. </td></tr>
+    <tr><td class="paramname">useMqttVersion</td><td>[in] Specifies the MQTT protocol revision to use for communications.</td></tr>
+    <tr><td class="paramname">recvBuf</td><td>[in] Pointer to application provided receive data buffer. </td></tr>
+    <tr><td class="paramname">recvBufSz</td><td>[in] Size of provided data buffer. </td></tr>
+    <tr><td class="paramname">recvCallback</td><td>[in] Callback function to be invoked when received data is ready.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A mqtt object to govern operations for this protocol stream value indicating the state of the MQTT connection. </dd></dl>
+
+</div>
+</div>
+<a id="accc88867fece34baa7b992d3ab60d4aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc88867fece34baa7b992d3ab60d4aa">&#9670;&nbsp;</a></span>mqtt_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">resultCode_t mqtt_open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>host</em>, </td>
         </tr>
@@ -845,19 +754,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#af4fb66f436707c44f2e350dbc5108224">sslVersion_t</a>&#160;</td>
-          <td class="paramname"><em>useSslVersion</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#af6396985642256a42f60af322da5124f">mqttVersion_t</a>&#160;</td>
-          <td class="paramname"><em>useMqttVersion</em>&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -870,10 +767,9 @@ Functions</h2></td></tr>
 <p>Open a remote MQTT server for use. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">mqttCtrl</td><td>[in] MQTT type stream control to operate on. </td></tr>
     <tr><td class="paramname">host</td><td>[in] The host IP address or name of the remote server. </td></tr>
-    <tr><td class="paramname">port</td><td>[in] The IP port number to use for the communications. </td></tr>
-    <tr><td class="paramname">useSslVersion</td><td>[in] Specifies the version and options for use of SSL to protect communications. </td></tr>
-    <tr><td class="paramname">useMqttVersion</td><td>[in] Specifies the MQTT protocol revision to use for communications.</td></tr>
+    <tr><td class="paramname">port</td><td>[in] The IP port number to use for the communications.</td></tr>
   </table>
   </dd>
 </dl>
@@ -881,15 +777,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac840825f9f828ae6b756cc2f9ede3569"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac840825f9f828ae6b756cc2f9ede3569">&#9670;&nbsp;</a></span>mqtt_publish()</h2>
+<a id="ab008a6b06b403798a785036d5bf06629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab008a6b06b403798a785036d5bf06629">&#9670;&nbsp;</a></span>mqtt_publish()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> mqtt_publish </td>
+          <td class="memname">resultCode_t mqtt_publish </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>topic</em>, </td>
         </tr>
@@ -916,6 +818,7 @@ Functions</h2></td></tr>
 <p>Publish a message to server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
     <tr><td class="paramname">topic</td><td>[in] - Pointer to the message topic (see your server for topic formatting details). </td></tr>
     <tr><td class="paramname">qos</td><td>[in] - The MQTT QOS to be assigned to sent message. </td></tr>
     <tr><td class="paramname">message</td><td>[in] - Pointer to message to be sent.</td></tr>
@@ -926,53 +829,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aefdeff1177520d62588b48a41a5e8045"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefdeff1177520d62588b48a41a5e8045">&#9670;&nbsp;</a></span>mqtt_status()</h2>
+<a id="adc8032ed4b4fd1d27f14183965a439b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc8032ed4b4fd1d27f14183965a439b5">&#9670;&nbsp;</a></span>mqtt_subscribe()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ltemc-mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a> mqtt_status </td>
+          <td class="memname">uint8_t mqtt_subscribe </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>host</em>, </td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>force</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Query the status of the MQTT server state. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">host</td><td>[in] A char string to match with the currently connected server. Host is not checked if empty string passed. </td></tr>
-    <tr><td class="paramname">force</td><td>[in] If true query BGx for current state, otherwise return internal property value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A mqttStatus_t value indicating the state of the MQTT connection. </dd></dl>
-
-</div>
-</div>
-<a id="a11e082d519c3ba83112e45d1a86a085e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11e082d519c3ba83112e45d1a86a085e">&#9670;&nbsp;</a></span>mqtt_subscribe()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> mqtt_subscribe </td>
-          <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>topic</em>, </td>
         </tr>
@@ -980,13 +851,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a>&#160;</td>
-          <td class="paramname"><em>qos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a98539737eefd41c88388bada5c4116b4">mqtt_recvFunc_t</a>&#160;</td>
-          <td class="paramname"><em>recv_func</em>&#160;</td>
+          <td class="paramname"><em>qos</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -999,28 +864,38 @@ Functions</h2></td></tr>
 <p>Subscribe to a topic on the MQTT server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
     <tr><td class="paramname">topic</td><td>[in] - The messaging topic to subscribe to. </td></tr>
-    <tr><td class="paramname">qos</td><td>[in] - The MQTT QOS level for messages subscribed to. </td></tr>
-    <tr><td class="paramname">recv_func</td><td>[in] - The receiver function in the application to receive subscribed messages on arrival.</td></tr>
+    <tr><td class="paramname">qos</td><td>[in] - The MQTT QOS level for messages subscribed to.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A resultCode_t value indicating the success or type of failure, OK = 200. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The topic index handle. 0xFF indicates the topic subscription was unsuccessful </dd></dl>
 
 </div>
 </div>
-<a id="a438017fd271d124a86605407edd6e3a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a438017fd271d124a86605407edd6e3a1">&#9670;&nbsp;</a></span>mqtt_unsubscribe()</h2>
+<a id="a4052b98fe0795af64f4fe611ed007302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4052b98fe0795af64f4fe611ed007302">&#9670;&nbsp;</a></span>mqtt_unsubscribe()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> mqtt_unsubscribe </td>
+          <td class="memname">resultCode_t mqtt_unsubscribe </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>topic</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>topic</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1028,6 +903,7 @@ Functions</h2></td></tr>
 <p>Unsubscribe to a topic on the MQTT server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
     <tr><td class="paramname">topic</td><td>[in] - The messaging topic to unsubscribe from.</td></tr>
   </table>
   </dd>

@@ -5,14 +5,6 @@
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{ltemc-quectel-bg_8h_a3c14a928bc2e1a61b0041ab143c88d0a}{Q\+B\+G\+\_\+\+P\+O\+W\+E\+R\+O\+N\+\_\+\+D\+E\+L\+AY}}~500U
-\item 
-\#define \mbox{\hyperlink{ltemc-quectel-bg_8h_af04903b942c995163094146939b19eb9}{Q\+B\+G\+\_\+\+P\+O\+W\+E\+R\+O\+F\+F\+\_\+\+D\+E\+L\+AY}}~1500U
-\item 
-\#define \mbox{\hyperlink{ltemc-quectel-bg_8h_a1d1469abbfb4b8b0eace4b74f04a47ce}{Q\+B\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+D\+E\+L\+AY}}~300U
-\item 
-\#define \mbox{\hyperlink{ltemc-quectel-bg_8h_a4dd2f8a5991e5c3732514e87e7af1b19}{Q\+B\+G\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+D\+E\+F\+A\+U\+LT}}~115200U
-\item 
 \#define \mbox{\hyperlink{ltemc-quectel-bg_8h_aa91c2902158b6070e5bd7e3a42601454}{Q\+B\+G\+\_\+\+R\+A\+T\+S\+E\+Q\+\_\+\+A\+U\+TO}}~\char`\"{}00\char`\"{}
 \item 
 \#define \mbox{\hyperlink{ltemc-quectel-bg_8h_a59cdc867b350fc82f198ada00c2b3085}{Q\+B\+G\+\_\+\+R\+A\+T\+S\+E\+Q\+\_\+\+G\+SM}}~\char`\"{}01\char`\"{}
@@ -49,7 +41,9 @@ enum \mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}{qbg
 \item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8h_aff79bc5f56d845c2f16aae7e967bb39e}{qbg\+\_\+start}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the B\+Gx module. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-quectel-bg_8h_acb7ce91ebb048c2a8e9255fed32d4564}{qbg\+\_\+power\+On}} ()
+bool \mbox{\hyperlink{ltemc-quectel-bg_8h_adb09a74d94dbf4d3e6b6cae45196aaff}{qbg\+\_\+is\+Power\+On}} ()
+\begin{DoxyCompactList}\small\item\em Check for B\+Gx power status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-quectel-bg_8h_af38f43891616b10e764a40f62dd67d99}{qbg\+\_\+power\+On}} ()
 \begin{DoxyCompactList}\small\item\em Power on the B\+Gx module. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8h_a25333f44c61fbf3627065cbd31375a1e}{qbg\+\_\+power\+Off}} ()
 \begin{DoxyCompactList}\small\item\em Powers off the B\+Gx module. \end{DoxyCompactList}\item 
@@ -64,24 +58,6 @@ void \mbox{\hyperlink{ltemc-quectel-bg_8h_acbc1ca7e44fafdcebb214e74547761de}{qbg
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_a4dd2f8a5991e5c3732514e87e7af1b19}\label{ltemc-quectel-bg_8h_a4dd2f8a5991e5c3732514e87e7af1b19}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!QBG\_BAUDRATE\_DEFAULT@{QBG\_BAUDRATE\_DEFAULT}}
-\index{QBG\_BAUDRATE\_DEFAULT@{QBG\_BAUDRATE\_DEFAULT}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{QBG\_BAUDRATE\_DEFAULT}{QBG\_BAUDRATE\_DEFAULT}}
-{\footnotesize\ttfamily \#define Q\+B\+G\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+D\+E\+F\+A\+U\+LT~115200U}
-
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_af04903b942c995163094146939b19eb9}\label{ltemc-quectel-bg_8h_af04903b942c995163094146939b19eb9}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!QBG\_POWEROFF\_DELAY@{QBG\_POWEROFF\_DELAY}}
-\index{QBG\_POWEROFF\_DELAY@{QBG\_POWEROFF\_DELAY}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{QBG\_POWEROFF\_DELAY}{QBG\_POWEROFF\_DELAY}}
-{\footnotesize\ttfamily \#define Q\+B\+G\+\_\+\+P\+O\+W\+E\+R\+O\+F\+F\+\_\+\+D\+E\+L\+AY~1500U}
-
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_a3c14a928bc2e1a61b0041ab143c88d0a}\label{ltemc-quectel-bg_8h_a3c14a928bc2e1a61b0041ab143c88d0a}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!QBG\_POWERON\_DELAY@{QBG\_POWERON\_DELAY}}
-\index{QBG\_POWERON\_DELAY@{QBG\_POWERON\_DELAY}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{QBG\_POWERON\_DELAY}{QBG\_POWERON\_DELAY}}
-{\footnotesize\ttfamily \#define Q\+B\+G\+\_\+\+P\+O\+W\+E\+R\+O\+N\+\_\+\+D\+E\+L\+AY~500U}
-
 \mbox{\Hypertarget{ltemc-quectel-bg_8h_aa91c2902158b6070e5bd7e3a42601454}\label{ltemc-quectel-bg_8h_aa91c2902158b6070e5bd7e3a42601454}} 
 \index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!QBG\_RATSEQ\_AUTO@{QBG\_RATSEQ\_AUTO}}
 \index{QBG\_RATSEQ\_AUTO@{QBG\_RATSEQ\_AUTO}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
@@ -105,12 +81,6 @@ void \mbox{\hyperlink{ltemc-quectel-bg_8h_acbc1ca7e44fafdcebb214e74547761de}{qbg
 \index{QBG\_RATSEQ\_NBIOT@{QBG\_RATSEQ\_NBIOT}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
 \doxysubsubsection{\texorpdfstring{QBG\_RATSEQ\_NBIOT}{QBG\_RATSEQ\_NBIOT}}
 {\footnotesize\ttfamily \#define Q\+B\+G\+\_\+\+R\+A\+T\+S\+E\+Q\+\_\+\+N\+B\+I\+OT~\char`\"{}03\char`\"{}}
-
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_a1d1469abbfb4b8b0eace4b74f04a47ce}\label{ltemc-quectel-bg_8h_a1d1469abbfb4b8b0eace4b74f04a47ce}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!QBG\_RESET\_DELAY@{QBG\_RESET\_DELAY}}
-\index{QBG\_RESET\_DELAY@{QBG\_RESET\_DELAY}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{QBG\_RESET\_DELAY}{QBG\_RESET\_DELAY}}
-{\footnotesize\ttfamily \#define Q\+B\+G\+\_\+\+R\+E\+S\+E\+T\+\_\+\+D\+E\+L\+AY~300U}
 
 
 
@@ -203,6 +173,19 @@ qbg\+\_\+ready\+State\+\_\+app\+Ready&B\+Gx is powered ON and ready for applicat
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-quectel-bg_8h_adb09a74d94dbf4d3e6b6cae45196aaff}\label{ltemc-quectel-bg_8h_adb09a74d94dbf4d3e6b6cae45196aaff}} 
+\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_isPowerOn@{qbg\_isPowerOn}}
+\index{qbg\_isPowerOn@{qbg\_isPowerOn}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
+\doxysubsubsection{\texorpdfstring{qbg\_isPowerOn()}{qbg\_isPowerOn()}}
+{\footnotesize\ttfamily bool qbg\+\_\+is\+Power\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check for B\+Gx power status. 
+
+\begin{DoxyReturn}{Returns}
+B\+Gx power state 
+\end{DoxyReturn}
 \mbox{\Hypertarget{ltemc-quectel-bg_8h_a25333f44c61fbf3627065cbd31375a1e}\label{ltemc-quectel-bg_8h_a25333f44c61fbf3627065cbd31375a1e}} 
 \index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_powerOff@{qbg\_powerOff}}
 \index{qbg\_powerOff@{qbg\_powerOff}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
@@ -213,11 +196,11 @@ qbg\+\_\+ready\+State\+\_\+app\+Ready&B\+Gx is powered ON and ready for applicat
 
 Powers off the B\+Gx module. 
 
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_acb7ce91ebb048c2a8e9255fed32d4564}\label{ltemc-quectel-bg_8h_acb7ce91ebb048c2a8e9255fed32d4564}} 
+\mbox{\Hypertarget{ltemc-quectel-bg_8h_af38f43891616b10e764a40f62dd67d99}\label{ltemc-quectel-bg_8h_af38f43891616b10e764a40f62dd67d99}} 
 \index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_powerOn@{qbg\_powerOn}}
 \index{qbg\_powerOn@{qbg\_powerOn}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
 \doxysubsubsection{\texorpdfstring{qbg\_powerOn()}{qbg\_powerOn()}}
-{\footnotesize\ttfamily bool qbg\+\_\+power\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void qbg\+\_\+power\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 

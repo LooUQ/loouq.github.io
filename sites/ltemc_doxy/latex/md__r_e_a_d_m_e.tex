@@ -1,4 +1,5 @@
-Loo\+UQ Circuit River L\+T\+Em1 modem driver implemented in C99 for portability and a small footprint.\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\#\# Early Adopter}\label{md__r_e_a_d_m_e_autotoc_md8}
+Loo\+UQ Circuit River L\+T\+Em1 modem driver implemented in C99 for portability and a small footprint.
+
 The Loo\+UQ L\+T\+Em1c driver supports the Loo\+UQ Circuit River L\+T\+Em1 L\+TE modem. The L\+T\+Em1 is designed to allow for cost-\/effective cellular communications in embedded systems by supporting L\+TE C\+A\+T-\/\+M1 and L\+TE C\+A\+T-\/\+N\+B1 (N\+B-\/\+I\+OT) communications. The L\+T\+Em1 is certified for use on the Verizon network and a registered device for the T-\/\+Mobile (formerly Sprint) Curiosity Network. It is also fully tested and supported using Hologram S\+I\+Ms.
 
 \href{https://answers.loouq.com/en/support/solutions/articles/43000605438-ltem1-cellular-modem-starting-at-the-beginning}{\texttt{ L\+T\+Em1 Getting Started Guide}}
@@ -14,12 +15,19 @@ The Loo\+UQ L\+T\+Em1c driver supports the Loo\+UQ Circuit River L\+T\+Em1 L\+TE
 \DoxyHorRuler{0}
   
 
-All of the core (blue) subsystems are functional. Extension subsystems (copper, with wide-\/borders) are optional and can be built into the application, or omitted to reduced code size. Grey boxes indicate future feature areas.\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{Getting Started}\label{md__r_e_a_d_m_e_autotoc_md10}
-{\itshape 1st off, thanks for taking a look at the L\+T\+Em1 hardware and L\+T\+EmC software!}
+All of the core (blue) subsystems are functional. Extension subsystems (copper, with wide-\/borders) are optional and can be built into the application, or omitted to reduced code size. Grey boxes indicate future feature areas.\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysection{Latest Release\+: v2.\+0}\label{md__r_e_a_d_m_e_autotoc_md18}
+Added support for H\+T\+T\+P(\+S) and rearchitected data buffering putting the application in control.\hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysection{Next Planned Release\+: v2.\+1 (\+Oct 2021)}\label{md__r_e_a_d_m_e_autotoc_md19}
 
-The best way to get started understanding L\+T\+EmC and considering it for your projects {\itshape today} is to look at the tests folder in the repository. This will be supplemented in future releases. Working on getting doxygen documentation available soon and some real world example projects. The tests folder contains a series of progressive L\+T\+Em1c tests. Starting with simple platform I/O verification, thru M\+Q\+TT protocol support. Each test builds on a succesful previous level test.
+\begin{DoxyItemize}
+\item File system support on B\+Gx
+\item Support for L\+T\+Em2 (B\+G95) and L\+T\+Em3F (B\+G77)
+\item Initial support for B\+Gx advanced power management
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysection{Getting Started}\label{md__r_e_a_d_m_e_autotoc_md20}
+{\itshape First off, thanks for taking a look at the Loo\+UQ L\+T\+Em1 hardware and L\+T\+EmC software!}
 
-Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{L\+T\+Em\+C Subsystems}\label{md__r_e_a_d_m_e_autotoc_md11}
+The best way to get started understanding L\+T\+EmC and considering it for your projects {\itshape today} is to look at the tests folder in the repository. This collection of test/examples will continue to grow in future releases and new use cases are demonstrated. The tests folder contains a series of progressive L\+T\+Em1c tests. Starting with simple platform I/O verification through to application protocol support (sockets, M\+Q\+TT, H\+T\+TP), each test builds upon a succesful previous level test. While called {\bfseries{tests}}, these projects they serve as {\bfseries{examples of how to do specific use cases}}. These are your best source for scaffold code to start your L\+T\+Em project.
+
+{\bfseries{Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.}}\hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysubsubsection{L\+T\+Em\+C Subsystems}\label{md__r_e_a_d_m_e_autotoc_md21}
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
 \hline
@@ -36,9 +44,10 @@ Each test shows the process for initializing, starting services, and a loop exer
 {\itshape geo\+\_\+}  &The L\+T\+Em1 supports the creation of geo-\/fence outlines and monitoring of device positioning relative to the geo-\/fence boundary. Note\+: geo\+\_\+ requires the gnss\+\_\+ module be built into your project to use these functions.   \\\cline{1-2}
 {\itshape sockets\+\_\+}  &This is the typical P\+O\+S\+IX style sockets layer. Support if T\+C\+P/\+U\+D\+P/\+S\+SL clients are there. {\itshape Note\+:} server mode is not currently planned, all US networks I have worked with do not support incoming connections for cellular without add-\/on services like V\+P\+Ns or other network constructs. I recommend alternatives to attempting direct connection to your device over cellular.   \\\cline{1-2}
 {\itshape mqtt\+\_\+}  &Support for M\+Q\+TT client functionality is built here. Attach, connect, subscribe, unsubscribe and publish all are supported. Limited testing so far on Q\+OS levels and advance features like clean and will. The M\+Q\+TT module supports message properties appended to the topic and has a property parser available.   \\\cline{1-2}
+{\itshape http\+\_\+}  &Support for H\+T\+TP client functionality is found here. Perform H\+T\+TP G\+ET or P\+O\+ST actions with standard or custom request headers.   \\\cline{1-2}
 {\itshape iop\+\_\+}  &Generally you won\textquotesingle{}t directly interact with the iop\+\_\+ subsystem. It performs the buffer management to/from hardware. It interfaces with the action\+\_\+, sockets\+\_\+, and mqtt\+\_\+ subsystems to perform the necessary transfers.   \\\cline{1-2}
 \end{longtabu}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysection{Future Directions}\label{md__r_e_a_d_m_e_autotoc_md12}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{Future Directions}\label{md__r_e_a_d_m_e_autotoc_md22}
 If you have an opinion on any of these functions and their applicability to your product/project please let Loo\+UQ know. Send your thoughts to \href{mailto:answers@loouq.com}{\texttt{ answers@loouq.\+com}}.
 \begin{DoxyItemize}
 \item Power Management -\/ Support for P\+SM, wake options, etc.

@@ -70,7 +70,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -78,444 +77,167 @@ $(function() {
 <div class="title">ltemc-iop.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="ltemc_8h_source.html">ltemc.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ltemc-cbuf_8h_source.html">ltemc-cbuf.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ltemc-cbuf_8h_source.html">ltemc-cbuf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ltemc-streams_8h_source.html">ltemc-streams.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ltemc-nxp-sc16is_8h_source.html">ltemc-nxp-sc16is.h</a>&quot;</code><br />
 </div>
 <p><a href="ltemc-iop_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpeer_type_map__tag.html">peerTypeMap_tag</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_buffer__tag.html">iopBuffer_tag</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for a IOP smart buffer. Contains the char buffer and controls to marshall data between IOP and consumer (cmd,sockets,mqtt,etc.).  <a href="structiop_buffer__tag.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop_tx_ctrl_block__tag.html">iopTxCtrlBlock_tag</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for a IOP transmit (TX) buffer control block. Tracks progress of chunk sends to LTEm1.  <a href="structiop_tx_ctrl_block__tag.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html">iop_tag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1.  <a href="structiop__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a52c4dfa110fbbbf2f1652081f30d8f28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a52c4dfa110fbbbf2f1652081f30d8f28">CBUF_SZ</a>&#160;&#160;&#160;1749</td></tr>
-<tr class="separator:a52c4dfa110fbbbf2f1652081f30d8f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93a3ecb46bd8fc500a8cae6246feaafd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a93a3ecb46bd8fc500a8cae6246feaafd">IOP_SOCKET_COUNT</a>&#160;&#160;&#160;6</td></tr>
-<tr class="separator:a93a3ecb46bd8fc500a8cae6246feaafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30efac70cf1cf02f19153c3ae45867c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a30efac70cf1cf02f19153c3ae45867c5">IOP_ERROR</a>&#160;&#160;&#160;-1</td></tr>
-<tr class="separator:a30efac70cf1cf02f19153c3ae45867c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9c303b6b4ee8eb4e8acca4a9371d454"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#ad9c303b6b4ee8eb4e8acca4a9371d454">IOP</a>&#160;&#160;&#160;RX_IRD_OVRHD_SZ 21</td></tr>
-<tr class="separator:ad9c303b6b4ee8eb4e8acca4a9371d454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9c303b6b4ee8eb4e8acca4a9371d454"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#ad9c303b6b4ee8eb4e8acca4a9371d454">IOP</a>&#160;&#160;&#160;RX_IRD_TRAILER_SZ 8</td></tr>
-<tr class="separator:ad9c303b6b4ee8eb4e8acca4a9371d454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6954db00eab481db6e35ed4491dd0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#ace6954db00eab481db6e35ed4491dd0a">IOP_TX_BUFFER_SZ</a>&#160;&#160;&#160;1460</td></tr>
-<tr class="separator:ace6954db00eab481db6e35ed4491dd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf545a0f852e097475f2cc5c4ee72e24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#aaf545a0f852e097475f2cc5c4ee72e24">IOP_URC_STATEMSG_SZ</a>&#160;&#160;&#160;80</td></tr>
-<tr class="separator:aaf545a0f852e097475f2cc5c4ee72e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71976f20405cd9820bc30dd80357723a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a71976f20405cd9820bc30dd80357723a">IOP_RXCTRLBLK_ISOCCUPIED</a>(INDX)&#160;&#160;&#160;(g_ltem1-&gt;iop-&gt;rxCtrlBlks[INDX].process != iopProcess_void)</td></tr>
-<tr class="separator:a71976f20405cd9820bc30dd80357723a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a334b237ed433f40d502f5f17ff4a688c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a334b237ed433f40d502f5f17ff4a688c">IOP_RX_DATABUFFERS_MAX</a>&#160;&#160;&#160;3</td></tr>
-<tr class="separator:a334b237ed433f40d502f5f17ff4a688c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39b03c8b40e04b711141f7d032acfc85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a39b03c8b40e04b711141f7d032acfc85">IOP_RX_CMDBUF_SZ</a>&#160;&#160;&#160;256</td></tr>
-<tr class="separator:a39b03c8b40e04b711141f7d032acfc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9203ecfcc8e3da9a9cf779cbd432b16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#af9203ecfcc8e3da9a9cf779cbd432b16">IOP_RX_DATABUF_SZ</a>&#160;&#160;&#160;2048</td></tr>
-<tr class="separator:af9203ecfcc8e3da9a9cf779cbd432b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e6d0bcdf2b4e74734877fb018fa95d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a5e6d0bcdf2b4e74734877fb018fa95d9">IOP_NO_BUFFER</a>&#160;&#160;&#160;255</td></tr>
-<tr class="separator:a5e6d0bcdf2b4e74734877fb018fa95d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a479a0406c7cc7f1029752e7569bd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#ac5a479a0406c7cc7f1029752e7569bd4">IOP_TX_ACTIVE</a>()&#160;&#160;&#160;g_ltem1-&gt;iop-&gt;txCtrl-&gt;remainSz &gt; 0</td></tr>
-<tr class="separator:ac5a479a0406c7cc7f1029752e7569bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:afcf2c451d40c6d56cb76f1e79132ed92"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656e">iopDataPeer_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#afcf2c451d40c6d56cb76f1e79132ed92">iopDataPeer_t</a></td></tr>
-<tr class="separator:afcf2c451d40c6d56cb76f1e79132ed92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a860bd27bc7a3b9593ff71a49def3caef"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structpeer_type_map__tag.html">peerTypeMap_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a860bd27bc7a3b9593ff71a49def3caef">peerTypeMap_t</a></td></tr>
-<tr class="separator:a860bd27bc7a3b9593ff71a49def3caef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f5794d6ebb16471baa9b404dbac155d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structiop_buffer__tag.html">iopBuffer_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">iopBuffer_t</a></td></tr>
-<tr class="memdesc:a1f5794d6ebb16471baa9b404dbac155d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for a IOP smart buffer. Contains the char buffer and controls to marshall data between IOP and consumer (cmd,sockets,mqtt,etc.).  <a href="ltemc-iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">More...</a><br /></td></tr>
-<tr class="separator:a1f5794d6ebb16471baa9b404dbac155d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f6966fc7b13bc2b2c81c3e1e543da31"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structiop_tx_ctrl_block__tag.html">iopTxCtrlBlock_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a5f6966fc7b13bc2b2c81c3e1e543da31">iopTxCtrlBlock_t</a></td></tr>
-<tr class="memdesc:a5f6966fc7b13bc2b2c81c3e1e543da31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for a IOP transmit (TX) buffer control block. Tracks progress of chunk sends to LTEm1.  <a href="ltemc-iop_8h.html#a5f6966fc7b13bc2b2c81c3e1e543da31">More...</a><br /></td></tr>
-<tr class="separator:a5f6966fc7b13bc2b2c81c3e1e543da31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ed4c59909ec1a9a0007da89586254ff"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structiop__tag.html">iop_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a1ed4c59909ec1a9a0007da89586254ff">iop_t</a></td></tr>
-<tr class="memdesc:a1ed4c59909ec1a9a0007da89586254ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1.  <a href="ltemc-iop_8h.html#a1ed4c59909ec1a9a0007da89586254ff">More...</a><br /></td></tr>
-<tr class="separator:a1ed4c59909ec1a9a0007da89586254ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b8dd7aebb9535022e07263f7d14d638"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ltemc-iop_8h.html#a1ed4c59909ec1a9a0007da89586254ff">iop_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a7b8dd7aebb9535022e07263f7d14d638">iopPtr_t</a></td></tr>
-<tr class="separator:a7b8dd7aebb9535022e07263f7d14d638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a71d0ff773154d7fb17d9a6589b3f0"><td class="memItemLeft" align="right" valign="top">typedef volatile struct <a class="el" href="structiop__tag.html">iop_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a85a71d0ff773154d7fb17d9a6589b3f0">iop_t</a></td></tr>
+<tr class="memdesc:a85a71d0ff773154d7fb17d9a6589b3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1.  <a href="ltemc-iop_8h.html#a85a71d0ff773154d7fb17d9a6589b3f0">More...</a><br /></td></tr>
+<tr class="separator:a85a71d0ff773154d7fb17d9a6589b3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:adf9145cad45509030860224eec6e656e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656e">iopDataPeer_tag</a> { <br />
-&#160;&#160;<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656ea4baee9f67f6b2a6f3cf7d1646fee0cf1">iopDataPeer_SOCKET_0</a> = 0, 
-<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656ea5215355e65932cb140ee6da7283d62c2">iopDataPeer_SOCKET_1</a> = 1, 
-<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656eadf4912726aa095f6e8547f1ad394e7e0">iopDataPeer_SOCKET_2</a> = 2, 
-<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656eace52d1add9763e6d79ade3f8097590b1">iopDataPeer_SOCKET_3</a> = 3, 
+<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca">atcmd__useDefaultTimeout</a> = 0, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78">atcmd__useDefaultOKCompletionParser</a> = 0, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd">atcmd__setLockModeManual</a> = 0, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3">atcmd__setLockModeAuto</a> = 1, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656eaac04707401c0e76d89260afdf9354fc9">iopDataPeer_SOCKET_4</a> = 4, 
-<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656ea776a399b0c8ceeb1060de95793ba0a8e">iopDataPeer_SOCKET_5</a> = 5, 
-<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656ea569dba41c8c0eedd11b936ffbc6db75c">iopDataPeer_MQTT</a> = 6, 
-<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656eaf338dc8cbba7091712f67d6bce931724">iopDataPeer_HTTP</a> = 7, 
+&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753">ATCMD__defaultTimeoutMS</a> = 800, 
+<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d">ATCMD__parserPendingResult</a> = 0xFFFF, 
+<a class="el" href="ltemc-http_8c.html#a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed">http__LTEM_defaultTimeoutBGxSec</a> = 60, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060">IOP__txBufferSize</a> = 1800, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656ea8596edbbf897fb781cda8f74f67de7d9">iopDataPeer_FTP</a> = 8, 
-<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656ea622ccca9c398e5137c14df4b90c4a19f">iopDataPeer__SOCKET</a> = 0, 
-<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656ea3b5de20430db04e520c86ef9f19622d2">iopDataPeer__SOCKET_CNT</a> = 6, 
-<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656ea359abcc7b7d7d9476d5a5782425427db">iopDataPeer__TABLESZ</a> = iopDataPeer_FTP + 1, 
+&#160;&#160;<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8">IOP__rxCoreBufferSize</a> = 192, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7">IOP__uartFIFOBufferSz</a> = 64, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4">IOP__uartFIFO_fillMS</a> = 6, 
+<a class="el" href="ltemc-mqtt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2">resultCode__parserPending</a> = 0xFFFF, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656ea32ccb166a99f174cad04596c1abea193">iopDataPeer__NONE</a> = 255
+&#160;&#160;<a class="el" href="ltemc-network_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991">NTWK__pdpContextCnt</a> = 3, 
+<a class="el" href="ltemc-network_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83">NTWK__operatorNameSz</a> = 20, 
+<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98">nxp__lsr_DataInReceiver</a> = 0x01U, 
+<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5">nxp__lsr_THR_empty</a> = 0x02U, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb">nxp__lsr_FIFO_dataError</a> = 0x80U, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1">BGX__initCommandCnt</a> = 1, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d">BGX__initCommandAttempts</a> = 2, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d">BGX__powerOnDelay</a> = 500, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb">BGX__powerOffDelay</a> = 1500, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf">BGX__resetDelay</a> = 300, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c">BGX__baudRate</a> = 115200, 
+<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc">sckt__resultCode_previouslyOpen</a> = 563, 
+<br />
+&#160;&#160;<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06">sckt__defaultOpenTimeoutMS</a> = 60000, 
+<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050">SCKT__IRD_requestMaxSz</a> = 1500
 <br />
  }</td></tr>
-<tr class="separator:adf9145cad45509030860224eec6e656e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab947681241346e1704709a480292f8d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#ab947681241346e1704709a480292f8d8">iop_create</a> ()</td></tr>
-<tr class="memdesc:ab947681241346e1704709a480292f8d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the Input/Output Process subsystem.  <a href="ltemc-iop_8h.html#ab947681241346e1704709a480292f8d8">More...</a><br /></td></tr>
-<tr class="separator:ab947681241346e1704709a480292f8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0c9cd30e69275d43a3cc01da127db57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#ac0c9cd30e69275d43a3cc01da127db57">iop_registerProtocol</a> (<a class="el" href="lq_types_8h.html#ab5ff856ea8c926d4ede227d87a58629d">ltemOptnModule_t</a> proto, void *protoPtr)</td></tr>
-<tr class="separator:ac0c9cd30e69275d43a3cc01da127db57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc850da968c0996c7645ef06e277708f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#adc850da968c0996c7645ef06e277708f">iop_start</a> ()</td></tr>
-<tr class="memdesc:adc850da968c0996c7645ef06e277708f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete initialization and start running iop processes.  <a href="ltemc-iop_8h.html#adc850da968c0996c7645ef06e277708f">More...</a><br /></td></tr>
-<tr class="separator:adc850da968c0996c7645ef06e277708f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1baf3b1228e8a750422d97cef2d336a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a1baf3b1228e8a750422d97cef2d336a8">iop_awaitAppReady</a> ()</td></tr>
-<tr class="memdesc:a1baf3b1228e8a750422d97cef2d336a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify LTEm1 is ready for driver operations.  <a href="ltemc-iop_8h.html#a1baf3b1228e8a750422d97cef2d336a8">More...</a><br /></td></tr>
-<tr class="separator:a1baf3b1228e8a750422d97cef2d336a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa30098ddd513173d5c6ac1cd07f492b9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#aa30098ddd513173d5c6ac1cd07f492b9">iop_txSend</a> (const char *sendData, uint16_t sendSz, bool sendReady)</td></tr>
-<tr class="memdesc:aa30098ddd513173d5c6ac1cd07f492b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start a (raw) send operation.  <a href="ltemc-iop_8h.html#aa30098ddd513173d5c6ac1cd07f492b9">More...</a><br /></td></tr>
-<tr class="separator:aa30098ddd513173d5c6ac1cd07f492b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a499e14029136c4eb243a5458b6bac682"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a499e14029136c4eb243a5458b6bac682">iop_rxParseImmediate</a> ()</td></tr>
-<tr class="memdesc:a499e14029136c4eb243a5458b6bac682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse recv'd data (in command RX buffer) for async event preambles that need to be handled immediately.  <a href="ltemc-iop_8h.html#a499e14029136c4eb243a5458b6bac682">More...</a><br /></td></tr>
-<tr class="separator:a499e14029136c4eb243a5458b6bac682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad96d9d4df9ebc33c08464531f757fb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#aad96d9d4df9ebc33c08464531f757fb1">iop_resetCmdBuffer</a> ()</td></tr>
-<tr class="memdesc:aad96d9d4df9ebc33c08464531f757fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear receive command response buffer.  <a href="ltemc-iop_8h.html#aad96d9d4df9ebc33c08464531f757fb1">More...</a><br /></td></tr>
-<tr class="separator:aad96d9d4df9ebc33c08464531f757fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a666094e51c449560d25b82867a708ca9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a666094e51c449560d25b82867a708ca9">iop_txDataPromptParser</a> (const char *response, char **endptr)</td></tr>
-<tr class="memdesc:a666094e51c449560d25b82867a708ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response parser looking for "&gt;" prompt to send data to network and then initiates the send.  <a href="ltemc-iop_8h.html#a666094e51c449560d25b82867a708ca9">More...</a><br /></td></tr>
-<tr class="separator:a666094e51c449560d25b82867a708ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014586177c48478e7636c076ad9ecd7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a014586177c48478e7636c076ad9ecd7c">IOP_create</a> ()</td></tr>
+<tr class="memdesc:a014586177c48478e7636c076ad9ecd7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the Input/Output Process subsystem.  <a href="ltemc-iop_8h.html#a014586177c48478e7636c076ad9ecd7c">More...</a><br /></td></tr>
+<tr class="separator:a014586177c48478e7636c076ad9ecd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a433190280a770fb33dbcceb681d0b146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a433190280a770fb33dbcceb681d0b146">IOP_start</a> ()</td></tr>
+<tr class="memdesc:a433190280a770fb33dbcceb681d0b146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete initialization and start running iop processes.  <a href="ltemc-iop_8h.html#a433190280a770fb33dbcceb681d0b146">More...</a><br /></td></tr>
+<tr class="separator:a433190280a770fb33dbcceb681d0b146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b915345fc60a5413c07164fd1c2630d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a9b915345fc60a5413c07164fd1c2630d">IOP_awaitAppReady</a> ()</td></tr>
+<tr class="memdesc:a9b915345fc60a5413c07164fd1c2630d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify LTEm1 is ready for driver operations.  <a href="ltemc-iop_8h.html#a9b915345fc60a5413c07164fd1c2630d">More...</a><br /></td></tr>
+<tr class="separator:a9b915345fc60a5413c07164fd1c2630d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad726cfd88029a9eff03f4595c24ea81c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#ad726cfd88029a9eff03f4595c24ea81c">IOP_resetCoreRxBuffer</a> ()</td></tr>
+<tr class="memdesc:ad726cfd88029a9eff03f4595c24ea81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear receive COMMAND/CORE response buffer.  <a href="ltemc-iop_8h.html#ad726cfd88029a9eff03f4595c24ea81c">More...</a><br /></td></tr>
+<tr class="separator:ad726cfd88029a9eff03f4595c24ea81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef55e6a25ce8ff909dbf7046bd39cba"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a9ef55e6a25ce8ff909dbf7046bd39cba">IOP_initRxBufferCtrl</a> (<a class="el" href="ltemc-streams_8h.html#a40071528946947c15514d22d34620931">rxDataBufferCtrl_t</a> *bufCtrl, uint8_t *rxBuf, uint16_t rxBufSz)</td></tr>
+<tr class="memdesc:a9ef55e6a25ce8ff909dbf7046bd39cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a RX buffer control.  <a href="ltemc-iop_8h.html#a9ef55e6a25ce8ff909dbf7046bd39cba">More...</a><br /></td></tr>
+<tr class="separator:a9ef55e6a25ce8ff909dbf7046bd39cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b0db6aab0ed6f5f4f81a8fe4ad4783"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a32b0db6aab0ed6f5f4f81a8fe4ad4783">IOP_swapRxBufferPage</a> (<a class="el" href="ltemc-streams_8h.html#a40071528946947c15514d22d34620931">rxDataBufferCtrl_t</a> *bufPtr)</td></tr>
+<tr class="memdesc:a32b0db6aab0ed6f5f4f81a8fe4ad4783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Syncs RX consumers with ISR for buffer swap.  <a href="ltemc-iop_8h.html#a32b0db6aab0ed6f5f4f81a8fe4ad4783">More...</a><br /></td></tr>
+<tr class="separator:a32b0db6aab0ed6f5f4f81a8fe4ad4783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44a81a156fc9eac12f73dbffa01a893"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#af44a81a156fc9eac12f73dbffa01a893">IOP_resetRxDataBufferPage</a> (<a class="el" href="ltemc-streams_8h.html#a40071528946947c15514d22d34620931">rxDataBufferCtrl_t</a> *bufPtr, uint8_t page)</td></tr>
+<tr class="memdesc:af44a81a156fc9eac12f73dbffa01a893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset a receive buffer for reuse.  <a href="ltemc-iop_8h.html#af44a81a156fc9eac12f73dbffa01a893">More...</a><br /></td></tr>
+<tr class="separator:af44a81a156fc9eac12f73dbffa01a893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6d8c57ec4bab28cd1c446ae03e7c60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#a9b6d8c57ec4bab28cd1c446ae03e7c60">IOP_registerStream</a> (<a class="el" href="ltemc-streams_8h.html#a950612d73b3a439198b37f3125babc25">streamPeer_t</a> stream, <a class="el" href="ltemc-streams_8h.html#a8ad6b0a37ec9bbaf450e4aa95e7984dc">iopStreamCtrl_t</a> *streamCtrl)</td></tr>
+<tr class="memdesc:a9b6d8c57ec4bab28cd1c446ae03e7c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">register a stream peer with IOP to control communications. Typically performed by protocol open.  <a href="ltemc-iop_8h.html#a9b6d8c57ec4bab28cd1c446ae03e7c60">More...</a><br /></td></tr>
+<tr class="separator:a9b6d8c57ec4bab28cd1c446ae03e7c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af109051869f4374c5ff6ff0e4dbe4a90"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#af109051869f4374c5ff6ff0e4dbe4a90">IOP_sendTx</a> (const char *sendData, uint16_t sendSz, bool sendImmediate)</td></tr>
+<tr class="memdesc:af109051869f4374c5ff6ff0e4dbe4a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start a (raw) send operation.  <a href="ltemc-iop_8h.html#af109051869f4374c5ff6ff0e4dbe4a90">More...</a><br /></td></tr>
+<tr class="separator:af109051869f4374c5ff6ff0e4dbe4a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab717ef72de91b80e7b31d33bf6a9dad2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-iop_8h.html#ab717ef72de91b80e7b31d33bf6a9dad2">IOP_detectRxIdle</a> ()</td></tr>
+<tr class="memdesc:ab717ef72de91b80e7b31d33bf6a9dad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for RX idle (no incoming receives from NXP in 2.5 buffer times).  <a href="ltemc-iop_8h.html#ab717ef72de91b80e7b31d33bf6a9dad2">More...</a><br /></td></tr>
+<tr class="separator:ab717ef72de91b80e7b31d33bf6a9dad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a52c4dfa110fbbbf2f1652081f30d8f28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52c4dfa110fbbbf2f1652081f30d8f28">&#9670;&nbsp;</a></span>CBUF_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CBUF_SZ&#160;&#160;&#160;1749</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad9c303b6b4ee8eb4e8acca4a9371d454"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9c303b6b4ee8eb4e8acca4a9371d454">&#9670;&nbsp;</a></span>IOP <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP&#160;&#160;&#160;RX_IRD_OVRHD_SZ 21</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad9c303b6b4ee8eb4e8acca4a9371d454"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9c303b6b4ee8eb4e8acca4a9371d454">&#9670;&nbsp;</a></span>IOP <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP&#160;&#160;&#160;RX_IRD_TRAILER_SZ 8</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a30efac70cf1cf02f19153c3ae45867c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30efac70cf1cf02f19153c3ae45867c5">&#9670;&nbsp;</a></span>IOP_ERROR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_ERROR&#160;&#160;&#160;-1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5e6d0bcdf2b4e74734877fb018fa95d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e6d0bcdf2b4e74734877fb018fa95d9">&#9670;&nbsp;</a></span>IOP_NO_BUFFER</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_NO_BUFFER&#160;&#160;&#160;255</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a39b03c8b40e04b711141f7d032acfc85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39b03c8b40e04b711141f7d032acfc85">&#9670;&nbsp;</a></span>IOP_RX_CMDBUF_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_RX_CMDBUF_SZ&#160;&#160;&#160;256</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af9203ecfcc8e3da9a9cf779cbd432b16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9203ecfcc8e3da9a9cf779cbd432b16">&#9670;&nbsp;</a></span>IOP_RX_DATABUF_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_RX_DATABUF_SZ&#160;&#160;&#160;2048</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a334b237ed433f40d502f5f17ff4a688c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a334b237ed433f40d502f5f17ff4a688c">&#9670;&nbsp;</a></span>IOP_RX_DATABUFFERS_MAX</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_RX_DATABUFFERS_MAX&#160;&#160;&#160;3</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a71976f20405cd9820bc30dd80357723a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71976f20405cd9820bc30dd80357723a">&#9670;&nbsp;</a></span>IOP_RXCTRLBLK_ISOCCUPIED</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_RXCTRLBLK_ISOCCUPIED</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">INDX</td><td>)</td>
-          <td>&#160;&#160;&#160;(g_ltem1-&gt;iop-&gt;rxCtrlBlks[INDX].process != iopProcess_void)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a93a3ecb46bd8fc500a8cae6246feaafd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93a3ecb46bd8fc500a8cae6246feaafd">&#9670;&nbsp;</a></span>IOP_SOCKET_COUNT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_SOCKET_COUNT&#160;&#160;&#160;6</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac5a479a0406c7cc7f1029752e7569bd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5a479a0406c7cc7f1029752e7569bd4">&#9670;&nbsp;</a></span>IOP_TX_ACTIVE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_TX_ACTIVE</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;g_ltem1-&gt;iop-&gt;txCtrl-&gt;remainSz &gt; 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ace6954db00eab481db6e35ed4491dd0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace6954db00eab481db6e35ed4491dd0a">&#9670;&nbsp;</a></span>IOP_TX_BUFFER_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_TX_BUFFER_SZ&#160;&#160;&#160;1460</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aaf545a0f852e097475f2cc5c4ee72e24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf545a0f852e097475f2cc5c4ee72e24">&#9670;&nbsp;</a></span>IOP_URC_STATEMSG_SZ</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define IOP_URC_STATEMSG_SZ&#160;&#160;&#160;80</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a1ed4c59909ec1a9a0007da89586254ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ed4c59909ec1a9a0007da89586254ff">&#9670;&nbsp;</a></span>iop_t</h2>
+<a id="a85a71d0ff773154d7fb17d9a6589b3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a71d0ff773154d7fb17d9a6589b3f0">&#9670;&nbsp;</a></span>iop_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structiop__tag.html">iop_tag</a> <a class="el" href="ltemc-iop_8h.html#a1ed4c59909ec1a9a0007da89586254ff">iop_t</a></td>
+          <td class="memname">typedef volatile struct <a class="el" href="structiop__tag.html">iop_tag</a> <a class="el" href="ltemc-iop_8h.html#a85a71d0ff773154d7fb17d9a6589b3f0">iop_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1. </p>
-
-</div>
-</div>
-<a id="a1f5794d6ebb16471baa9b404dbac155d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f5794d6ebb16471baa9b404dbac155d">&#9670;&nbsp;</a></span>iopBuffer_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structiop_buffer__tag.html">iopBuffer_tag</a> <a class="el" href="ltemc-iop_8h.html#a1f5794d6ebb16471baa9b404dbac155d">iopBuffer_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Struct for a IOP smart buffer. Contains the char buffer and controls to marshall data between IOP and consumer (cmd,sockets,mqtt,etc.). </p>
-<p>Head and tail reference incoming (head) and outgoing (tail). IOP loads head, consumers (commands,sockets,mqtt,etc.) read from tail. </p>
-
-</div>
-</div>
-<a id="afcf2c451d40c6d56cb76f1e79132ed92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcf2c451d40c6d56cb76f1e79132ed92">&#9670;&nbsp;</a></span>iopDataPeer_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef enum <a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656e">iopDataPeer_tag</a> <a class="el" href="ltemc-iop_8h.html#afcf2c451d40c6d56cb76f1e79132ed92">iopDataPeer_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7b8dd7aebb9535022e07263f7d14d638"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b8dd7aebb9535022e07263f7d14d638">&#9670;&nbsp;</a></span>iopPtr_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="ltemc-iop_8h.html#a1ed4c59909ec1a9a0007da89586254ff">iop_t</a>* <a class="el" href="ltemc-iop_8h.html#a7b8dd7aebb9535022e07263f7d14d638">iopPtr_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5f6966fc7b13bc2b2c81c3e1e543da31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f6966fc7b13bc2b2c81c3e1e543da31">&#9670;&nbsp;</a></span>iopTxCtrlBlock_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structiop_tx_ctrl_block__tag.html">iopTxCtrlBlock_tag</a> <a class="el" href="ltemc-iop_8h.html#a5f6966fc7b13bc2b2c81c3e1e543da31">iopTxCtrlBlock_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Struct for a IOP transmit (TX) buffer control block. Tracks progress of chunk sends to LTEm1. </p>
-<p>LTEm1 SPI bridge works with chunks of ~64 bytes (actual transfers are usually 58 - 62 bytes). IOP abstracts SPI chunks from senders. </p>
-
-</div>
-</div>
-<a id="a860bd27bc7a3b9593ff71a49def3caef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a860bd27bc7a3b9593ff71a49def3caef">&#9670;&nbsp;</a></span>peerTypeMap_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structpeer_type_map__tag.html">peerTypeMap_tag</a> <a class="el" href="ltemc-iop_8h.html#a860bd27bc7a3b9593ff71a49def3caef">peerTypeMap_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Each of the protocols (sockets, MQTT, HTTP) have unique behaviors: sockets receive asynchronous alerts but the data receive process is fully synchronous, HTTP is synchronous on receive tied to page read, MQTT is fully asynchronous with msg event receive signaling and data transfer taking place async behind the scenes initiated on interrupt. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="adf9145cad45509030860224eec6e656e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf9145cad45509030860224eec6e656e">&#9670;&nbsp;</a></span>iopDataPeer_tag</h2>
+<a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="ltemc-iop_8h.html#adf9145cad45509030860224eec6e656e">iopDataPeer_tag</a></td>
+          <td class="memname">anonymous enum</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656ea4baee9f67f6b2a6f3cf7d1646fee0cf1"></a>iopDataPeer_SOCKET_0&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656ea5215355e65932cb140ee6da7283d62c2"></a>iopDataPeer_SOCKET_1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656eadf4912726aa095f6e8547f1ad394e7e0"></a>iopDataPeer_SOCKET_2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656eace52d1add9763e6d79ade3f8097590b1"></a>iopDataPeer_SOCKET_3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656eaac04707401c0e76d89260afdf9354fc9"></a>iopDataPeer_SOCKET_4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656ea776a399b0c8ceeb1060de95793ba0a8e"></a>iopDataPeer_SOCKET_5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656ea569dba41c8c0eedd11b936ffbc6db75c"></a>iopDataPeer_MQTT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656eaf338dc8cbba7091712f67d6bce931724"></a>iopDataPeer_HTTP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656ea8596edbbf897fb781cda8f74f67de7d9"></a>iopDataPeer_FTP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656ea622ccca9c398e5137c14df4b90c4a19f"></a>iopDataPeer__SOCKET&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656ea3b5de20430db04e520c86ef9f19622d2"></a>iopDataPeer__SOCKET_CNT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656ea359abcc7b7d7d9476d5a5782425427db"></a>iopDataPeer__TABLESZ&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf9145cad45509030860224eec6e656ea32ccb166a99f174cad04596c1abea193"></a>iopDataPeer__NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca"></a>atcmd__useDefaultTimeout&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78"></a>atcmd__useDefaultOKCompletionParser&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd"></a>atcmd__setLockModeManual&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3"></a>atcmd__setLockModeAuto&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753"></a>ATCMD__defaultTimeoutMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d"></a>ATCMD__parserPendingResult&#160;</td><td class="fielddoc"><p>private declaration; value returned from response parsers indicating a pattern match has not yet been detected </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed"></a>http__LTEM_defaultTimeoutBGxSec&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060"></a>IOP__txBufferSize&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8"></a>IOP__rxCoreBufferSize&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7"></a>IOP__uartFIFOBufferSz&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4"></a>IOP__uartFIFO_fillMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2"></a>resultCode__parserPending&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991"></a>NTWK__pdpContextCnt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83"></a>NTWK__operatorNameSz&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98"></a>nxp__lsr_DataInReceiver&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5"></a>nxp__lsr_THR_empty&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb"></a>nxp__lsr_FIFO_dataError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1"></a>BGX__initCommandCnt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d"></a>BGX__initCommandAttempts&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d"></a>BGX__powerOnDelay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb"></a>BGX__powerOffDelay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf"></a>BGX__resetDelay&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c"></a>BGX__baudRate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc"></a>sckt__resultCode_previouslyOpen&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06"></a>sckt__defaultOpenTimeoutMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050"></a>SCKT__IRD_requestMaxSz&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a1baf3b1228e8a750422d97cef2d336a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1baf3b1228e8a750422d97cef2d336a8">&#9670;&nbsp;</a></span>iop_awaitAppReady()</h2>
+<a id="a9b915345fc60a5413c07164fd1c2630d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b915345fc60a5413c07164fd1c2630d">&#9670;&nbsp;</a></span>IOP_awaitAppReady()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iop_awaitAppReady </td>
+          <td class="memname">void IOP_awaitAppReady </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -527,14 +249,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab947681241346e1704709a480292f8d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab947681241346e1704709a480292f8d8">&#9670;&nbsp;</a></span>iop_create()</h2>
+<a id="a014586177c48478e7636c076ad9ecd7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a014586177c48478e7636c076ad9ecd7c">&#9670;&nbsp;</a></span>IOP_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iop_create </td>
+          <td class="memname">void IOP_create </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -546,23 +268,49 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac0c9cd30e69275d43a3cc01da127db57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0c9cd30e69275d43a3cc01da127db57">&#9670;&nbsp;</a></span>iop_registerProtocol()</h2>
+<a id="ab717ef72de91b80e7b31d33bf6a9dad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab717ef72de91b80e7b31d33bf6a9dad2">&#9670;&nbsp;</a></span>IOP_detectRxIdle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iop_registerProtocol </td>
+          <td class="memname">bool IOP_detectRxIdle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="lq_types_8h.html#ab5ff856ea8c926d4ede227d87a58629d">ltemOptnModule_t</a>&#160;</td>
-          <td class="paramname"><em>proto</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for RX idle (no incoming receives from NXP in 2.5 buffer times). </p>
+<dl class="section return"><dt>Returns</dt><dd>True </dd></dl>
+
+</div>
+</div>
+<a id="a9ef55e6a25ce8ff909dbf7046bd39cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef55e6a25ce8ff909dbf7046bd39cba">&#9670;&nbsp;</a></span>IOP_initRxBufferCtrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t IOP_initRxBufferCtrl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-streams_8h.html#a40071528946947c15514d22d34620931">rxDataBufferCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>bufCtrl</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>protoPtr</em>&#160;</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rxBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>rxBufSz</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -572,111 +320,112 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="aad96d9d4df9ebc33c08464531f757fb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad96d9d4df9ebc33c08464531f757fb1">&#9670;&nbsp;</a></span>iop_resetCmdBuffer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void iop_resetCmdBuffer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clear receive command response buffer. </p>
-
-</div>
-</div>
-<a id="a499e14029136c4eb243a5458b6bac682"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a499e14029136c4eb243a5458b6bac682">&#9670;&nbsp;</a></span>iop_rxParseImmediate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void iop_rxParseImmediate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parse recv'd data (in command RX buffer) for async event preambles that need to be handled immediately. </p>
-
-</div>
-</div>
-<a id="adc850da968c0996c7645ef06e277708f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc850da968c0996c7645ef06e277708f">&#9670;&nbsp;</a></span>iop_start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void iop_start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Complete initialization and start running iop processes. </p>
-
-</div>
-</div>
-<a id="a666094e51c449560d25b82867a708ca9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a666094e51c449560d25b82867a708ca9">&#9670;&nbsp;</a></span>iop_txDataPromptParser()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="lq_types_8h.html#a700eddbbbf80623f66eb7ae253ecd887">resultCode_t</a> iop_txDataPromptParser </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>response</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>endptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Response parser looking for "&gt;" prompt to send data to network and then initiates the send. </p>
+<p>Initializes a RX buffer control. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">response</td><td>[in] The character string received from BGx (so far, may not be complete). </td></tr>
-    <tr><td class="paramname">endptr</td><td>[out] Pointer to char immediately following match, nullptr for error.</td></tr>
+    <tr><td class="paramname">bufCtrl</td><td>[in] Pointer to RX data buffer control structure to initialize. </td></tr>
+    <tr><td class="paramname">rxBuf</td><td>[in] Pointer to raw byte buffer to integrate into RxBufferCtrl. </td></tr>
+    <tr><td class="paramname">rxBufSz</td><td>[in] The size of the rxBuf passed in. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Result code enum value (http status code) </dd></dl>
 
 </div>
 </div>
-<a id="aa30098ddd513173d5c6ac1cd07f492b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa30098ddd513173d5c6ac1cd07f492b9">&#9670;&nbsp;</a></span>iop_txSend()</h2>
+<a id="a9b6d8c57ec4bab28cd1c446ae03e7c60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6d8c57ec4bab28cd1c446ae03e7c60">&#9670;&nbsp;</a></span>IOP_registerStream()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t iop_txSend </td>
+          <td class="memname">void IOP_registerStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-streams_8h.html#a950612d73b3a439198b37f3125babc25">streamPeer_t</a>&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-streams_8h.html#a8ad6b0a37ec9bbaf450e4aa95e7984dc">iopStreamCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>streamCtrl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>register a stream peer with IOP to control communications. Typically performed by protocol open. </p>
+
+</div>
+</div>
+<a id="ad726cfd88029a9eff03f4595c24ea81c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad726cfd88029a9eff03f4595c24ea81c">&#9670;&nbsp;</a></span>IOP_resetCoreRxBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IOP_resetCoreRxBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear receive COMMAND/CORE response buffer. </p>
+
+</div>
+</div>
+<a id="af44a81a156fc9eac12f73dbffa01a893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af44a81a156fc9eac12f73dbffa01a893">&#9670;&nbsp;</a></span>IOP_resetRxDataBufferPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IOP_resetRxDataBufferPage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-streams_8h.html#a40071528946947c15514d22d34620931">rxDataBufferCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>bufPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>page</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset a receive buffer for reuse. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bufPtr</td><td>[in] Pointer to the buffer struct. </td></tr>
+    <tr><td class="paramname">page</td><td>[in] Index to buffer page to be reset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af109051869f4374c5ff6ff0e4dbe4a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af109051869f4374c5ff6ff0e4dbe4a90">&#9670;&nbsp;</a></span>IOP_sendTx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t IOP_sendTx </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>sendData</em>, </td>
@@ -691,7 +440,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>sendReady</em>&#160;</td>
+          <td class="paramname"><em>sendImmediate</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -706,11 +455,57 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">sendData</td><td>[in] - Pointer to char data to send out, input buffer can be discarded following call. </td></tr>
     <tr><td class="paramname">sendSz</td><td>[in] - The number of characters to send. </td></tr>
-    <tr><td class="paramname">sendReady</td><td>[in] - If true, queue sendData then initiate the actual send process. If false continue queueing and wait to send.</td></tr>
+    <tr><td class="paramname">sendImmediate</td><td>[in] - If true: queue sendData then initiate the actual send process. If false: continue queueing and wait to send.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of characters queued for sending. </dd></dl>
+
+</div>
+</div>
+<a id="a433190280a770fb33dbcceb681d0b146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a433190280a770fb33dbcceb681d0b146">&#9670;&nbsp;</a></span>IOP_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IOP_start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Complete initialization and start running iop processes. </p>
+
+</div>
+</div>
+<a id="a32b0db6aab0ed6f5f4f81a8fe4ad4783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b0db6aab0ed6f5f4f81a8fe4ad4783">&#9670;&nbsp;</a></span>IOP_swapRxBufferPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IOP_swapRxBufferPage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-streams_8h.html#a40071528946947c15514d22d34620931">rxDataBufferCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>bufCtrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Syncs RX consumers with ISR for buffer swap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bufCtrl</td><td>[in] RX data buffer to sync.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if overflow detected: buffer being assigned to IOP for filling is not empty </dd></dl>
 
 </div>
 </div>

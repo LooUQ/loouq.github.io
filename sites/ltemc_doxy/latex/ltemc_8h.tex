@@ -1,42 +1,25 @@
 \hypertarget{ltemc_8h}{}\doxysection{src/ltemc.h File Reference}
 \label{ltemc_8h}\index{src/ltemc.h@{src/ltemc.h}}
-{\ttfamily \#include $<$stdint.\+h$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include $<$stdbool.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}lq\+Types.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}lq\+Platform.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ltemc-\/nxp-\/sc16is.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lq-\/types.\+h$>$}\newline
+{\ttfamily \#include $<$lq-\/diagnostics.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/filecodes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lq-\/platform.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/quectel-\/bg.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/iop.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/atcmd.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/mdminfo.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/network.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ltemc-\/sockets.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ltemc-\/mqtt.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ltemc-\/gnss.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ltemc-\/geo.\+h\char`\"{}}\newline
-{\ttfamily \#include $<$ltemc-\/filesys.\+h$>$}\newline
-\doxysubsection*{Data Structures}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}}
-\begin{DoxyCompactList}\small\item\em Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}} \mbox{\hyperlink{ltemc_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{ltemc_8h_a62bd97eb5a7b9657f83f521f0eaacc76}{ltem\+\_\+create}} (const \mbox{\hyperlink{lq_platform-gpio_8h_a179aa93a99cd81e3a0f037bd9f07d70e}{ltem\+Pin\+Config\+\_\+t}} ltem\+\_\+config, \mbox{\hyperlink{lq_types_8h_ae4ff1e8ff40f958855bf5ec2c1f19915}{app\+Notify\+\_\+func}} app\+Notify\+CB)
+void \mbox{\hyperlink{ltemc_8h_a906672420bc5750a95a4ffd6857dd30f}{ltem\+\_\+create}} (const \mbox{\hyperlink{lq_platform-gpio_8h_a179aa93a99cd81e3a0f037bd9f07d70e}{ltem\+Pin\+Config\+\_\+t}} ltem\+\_\+config, app\+Notify\+Func\+\_\+t app\+Notify\+CB)
 \begin{DoxyCompactList}\small\item\em Initialize the L\+T\+Em1 modem. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc_8h_adc4fe577a31799623ad85245e64dfea5}{ltem\+\_\+destroy}} ()
 \begin{DoxyCompactList}\small\item\em Uninitialize the L\+TE modem. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc_8h_a687ddae526d7f6e97b36b223f71583e6}{ltem\+\_\+start}} (uint16\+\_\+t protocol\+Bit\+Map)
+void \mbox{\hyperlink{ltemc_8h_aca549beee5abfb00b29c677d37e6d777}{ltem\+\_\+start}} ()
 \begin{DoxyCompactList}\small\item\em Power on and start the modem (perform component init). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc_8h_a5fde19665106d68b37d5d3161a9f3560}{ltem\+\_\+stop}} ()
-\begin{DoxyCompactList}\small\item\em Powers off the modem without destroying memory objects. Modem device will require \mbox{\hyperlink{ltemc_8c_a687ddae526d7f6e97b36b223f71583e6}{ltem\+\_\+start()}} to reinit HW. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Powers off the modem without destroying memory objects. Modem device will require \mbox{\hyperlink{ltemc_8c_aca549beee5abfb00b29c677d37e6d777}{ltem\+\_\+start()}} to reinit HW. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc_8h_a0238192a8a5f8f8fde7e934c0aa01ab3}{ltem\+\_\+reset}} ()
 \begin{DoxyCompactList}\small\item\em Performs a HW reset of L\+T\+Em1 and optionally executes start sequence. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{ltemc_8h_a38b219b10645a48d462e8cb69e0f576a}{ltem\+\_\+chk\+Hw\+Ready}} ()
@@ -47,46 +30,13 @@ void \mbox{\hyperlink{ltemc_8h_a5b79bd67186c40d469be1bcc5dcd412b}{ltem\+\_\+do\+
 \begin{DoxyCompactList}\small\item\em Background work task runner. To be called in application Loop() periodically. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc_8h_a80df97bbc632eda7178e56368c3d0a1e}{ltem\+\_\+notify\+App}} (uint8\+\_\+t notify\+Type, const char $\ast$notify\+Msg)
 \begin{DoxyCompactList}\small\item\em Function of last resort, catastrophic failure Background work task runner. To be called in application Loop() periodically. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc_8h_a15f0a3db0746ff6fb0563774141aec0b}{ltem\+\_\+set\+Yield\+Cb}} (\mbox{\hyperlink{lq_platform-timing_8h_a1066ad01c72dad80aaa76602d3cdce94}{platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t}} yield\+Cb\+\_\+func)
-\begin{DoxyCompactList}\small\item\em Registers the address (void$\ast$) of your application yield callback handler. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc_8h_a648cd8860bb8012bb1dd72b0ab477de5}{ltem\+\_\+\+\_\+init\+Io}} ()
-\begin{DoxyCompactList}\small\item\em Initialize the modems IO. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
-\begin{DoxyCompactItemize}
+void \mbox{\hyperlink{ltemc_8h_acb88c5c49e58e7d23fdcdee3cdf7368f}{ltem\+\_\+notify\+Assert}} (uint16\+\_\+t fault\+Code) \+\_\+\+\_\+attribute\+\_\+\+\_\+((noreturn))
 \item 
-\mbox{\hyperlink{ltemc_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} $\ast$ \mbox{\hyperlink{ltemc_8h_a515e371e42363c8dfb9cad322511bb16}{g\+\_\+ltem}}
-\begin{DoxyCompactList}\small\item\em The L\+T\+Em \char`\"{}object\char`\"{}. Since this is C99, like the instance object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{ltemc_8h_a15f0a3db0746ff6fb0563774141aec0b}{ltem\+\_\+set\+Yield\+Cb}} (\mbox{\hyperlink{lq_platform-timing_8h_a1066ad01c72dad80aaa76602d3cdce94}{platform\+\_\+yield\+C\+B\+\_\+func\+\_\+t}} yield\+Cb\+\_\+func)
+\begin{DoxyCompactList}\small\item\em Registers the address (void$\ast$) of your application yield callback handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-
-\doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{ltemc_8h_a5f38bbe75173238b7cfd922a17c69b27}\label{ltemc_8h_a5f38bbe75173238b7cfd922a17c69b27}} 
-\index{ltemc.h@{ltemc.h}!ltemDevice\_t@{ltemDevice\_t}}
-\index{ltemDevice\_t@{ltemDevice\_t}!ltemc.h@{ltemc.h}}
-\doxysubsubsection{\texorpdfstring{ltemDevice\_t}{ltemDevice\_t}}
-{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}} \mbox{\hyperlink{ltemc_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}}}
-
-
-
-Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. 
-
-Most subsystems are linked to this struct with pointers to allow for better abstraction and optional subsystems 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{ltemc_8h_a648cd8860bb8012bb1dd72b0ab477de5}\label{ltemc_8h_a648cd8860bb8012bb1dd72b0ab477de5}} 
-\index{ltemc.h@{ltemc.h}!ltem\_\_initIo@{ltem\_\_initIo}}
-\index{ltem\_\_initIo@{ltem\_\_initIo}!ltemc.h@{ltemc.h}}
-\doxysubsubsection{\texorpdfstring{ltem\_\_initIo()}{ltem\_\_initIo()}}
-{\footnotesize\ttfamily void ltem\+\_\+\+\_\+init\+Io (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Initialize the modems IO. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em modem} & The L\+TE modem. \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{ltemc_8h_a38b219b10645a48d462e8cb69e0f576a}\label{ltemc_8h_a38b219b10645a48d462e8cb69e0f576a}} 
 \index{ltemc.h@{ltemc.h}!ltem\_chkHwReady@{ltem\_chkHwReady}}
 \index{ltem\_chkHwReady@{ltem\_chkHwReady}!ltemc.h@{ltemc.h}}
@@ -100,11 +50,11 @@ Check the B\+Gx for hardware ready (status pin).
 \begin{DoxyReturn}{Returns}
 True is status H\+I\+GH, hardware ready. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc_8h_a62bd97eb5a7b9657f83f521f0eaacc76}\label{ltemc_8h_a62bd97eb5a7b9657f83f521f0eaacc76}} 
+\mbox{\Hypertarget{ltemc_8h_a906672420bc5750a95a4ffd6857dd30f}\label{ltemc_8h_a906672420bc5750a95a4ffd6857dd30f}} 
 \index{ltemc.h@{ltemc.h}!ltem\_create@{ltem\_create}}
 \index{ltem\_create@{ltem\_create}!ltemc.h@{ltemc.h}}
 \doxysubsubsection{\texorpdfstring{ltem\_create()}{ltem\_create()}}
-{\footnotesize\ttfamily void ltem\+\_\+create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{lq_platform-gpio_8h_a179aa93a99cd81e3a0f037bd9f07d70e}{ltem\+Pin\+Config\+\_\+t}}}]{ltem\+\_\+config,  }\item[{\mbox{\hyperlink{lq_types_8h_ae4ff1e8ff40f958855bf5ec2c1f19915}{app\+Notify\+\_\+func}}}]{app\+Notify\+CB }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ltem\+\_\+create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{lq_platform-gpio_8h_a179aa93a99cd81e3a0f037bd9f07d70e}{ltem\+Pin\+Config\+\_\+t}}}]{ltem\+\_\+config,  }\item[{app\+Notify\+Func\+\_\+t}]{app\+Notify\+CB }\end{DoxyParamCaption})}
 
 
 
@@ -164,6 +114,12 @@ Function of last resort, catastrophic failure Background work task runner. To be
 {\em notify\+Msg} & \mbox{[}in\mbox{]} -\/ Message from origination about the issue being reported. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{ltemc_8h_acb88c5c49e58e7d23fdcdee3cdf7368f}\label{ltemc_8h_acb88c5c49e58e7d23fdcdee3cdf7368f}} 
+\index{ltemc.h@{ltemc.h}!ltem\_notifyAssert@{ltem\_notifyAssert}}
+\index{ltem\_notifyAssert@{ltem\_notifyAssert}!ltemc.h@{ltemc.h}}
+\doxysubsubsection{\texorpdfstring{ltem\_notifyAssert()}{ltem\_notifyAssert()}}
+{\footnotesize\ttfamily void ltem\+\_\+notify\+Assert (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{fault\+Code }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{ltemc_8h_a0238192a8a5f8f8fde7e934c0aa01ab3}\label{ltemc_8h_a0238192a8a5f8f8fde7e934c0aa01ab3}} 
 \index{ltemc.h@{ltemc.h}!ltem\_reset@{ltem\_reset}}
 \index{ltem\_reset@{ltem\_reset}!ltemc.h@{ltemc.h}}
@@ -189,11 +145,11 @@ Registers the address (void$\ast$) of your application yield callback handler.
 {\em yield\+Cb\+\_\+func} & \mbox{[}in\mbox{]} Callback function in application code to be invoked when L\+T\+EmC is in await section. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc_8h_a687ddae526d7f6e97b36b223f71583e6}\label{ltemc_8h_a687ddae526d7f6e97b36b223f71583e6}} 
+\mbox{\Hypertarget{ltemc_8h_aca549beee5abfb00b29c677d37e6d777}\label{ltemc_8h_aca549beee5abfb00b29c677d37e6d777}} 
 \index{ltemc.h@{ltemc.h}!ltem\_start@{ltem\_start}}
 \index{ltem\_start@{ltem\_start}!ltemc.h@{ltemc.h}}
 \doxysubsubsection{\texorpdfstring{ltem\_start()}{ltem\_start()}}
-{\footnotesize\ttfamily void ltem\+\_\+start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{protocol\+Bit\+Map }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ltem\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -212,18 +168,5 @@ Power on and start the modem (perform component init).
 
 
 
-Powers off the modem without destroying memory objects. Modem device will require \mbox{\hyperlink{ltemc_8c_a687ddae526d7f6e97b36b223f71583e6}{ltem\+\_\+start()}} to reinit HW. 
-
-
-
-\doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{ltemc_8h_a515e371e42363c8dfb9cad322511bb16}\label{ltemc_8h_a515e371e42363c8dfb9cad322511bb16}} 
-\index{ltemc.h@{ltemc.h}!g\_ltem@{g\_ltem}}
-\index{g\_ltem@{g\_ltem}!ltemc.h@{ltemc.h}}
-\doxysubsubsection{\texorpdfstring{g\_ltem}{g\_ltem}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}}$\ast$ g\+\_\+ltem\hspace{0.3cm}{\ttfamily [extern]}}
-
-
-
-The L\+T\+Em \char`\"{}object\char`\"{}. Since this is C99, like the instance object. 
+Powers off the modem without destroying memory objects. Modem device will require \mbox{\hyperlink{ltemc_8c_aca549beee5abfb00b29c677d37e6d777}{ltem\+\_\+start()}} to reinit HW. 
 

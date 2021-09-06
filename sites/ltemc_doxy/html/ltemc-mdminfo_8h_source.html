@@ -109,18 +109,18 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// #include &lt;stddef.h&gt;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// #include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="ltemc-mdminfo_8h.html#afdd47f2e64bfe1c3efd8df695a225738">   38</a></span>&#160;<span class="preprocessor">#define MDMINFO_IMEI_SZ = 16</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="ltemc-mdminfo_8h.html#acdc8a423237b4912557c65828385de97">   39</a></span>&#160;<span class="preprocessor">#define MDMINFO_ICCID_SZ = 21</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="ltemc-mdminfo_8h.html#a09b9a0eae54d0009c31edff92d3e2dc9">   40</a></span>&#160;<span class="preprocessor">#define MDMINFO_FWVER_SZ = 41</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="ltemc-mdminfo_8h.html#ae48fa359712eb0417e075234d283fa71">   41</a></span>&#160;<span class="preprocessor">#define MDMINFO_MFGINFO_SZ 41</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define MDMINFO_IMEI_SZ = 16</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define MDMINFO_ICCID_SZ = 21</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define MDMINFO_FWVER_SZ = 41</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define MDMINFO_MFGINFO_SZ 41</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structmodem_info__tag.html">   46</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structmodem_info__tag.html">modemInfo_tag</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>modemInfo_tag</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structmodem_info__tag.html#a88a26351acdc52f2ca61a6c864197a2f">   48</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structmodem_info__tag.html#a88a26351acdc52f2ca61a6c864197a2f">imei</a>[16];          </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structmodem_info__tag.html#a082e37d774043b84d66195ed2aa27e14">   49</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structmodem_info__tag.html#a082e37d774043b84d66195ed2aa27e14">iccid</a> [21];        </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structmodem_info__tag.html#aff7bf84d9f4b6c1de87298af4bfa36b8">   50</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structmodem_info__tag.html#aff7bf84d9f4b6c1de87298af4bfa36b8">mfgmodel</a> [21];     </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structmodem_info__tag.html#a3134892526155e9ea5a230985e2856c0">   51</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structmodem_info__tag.html#a3134892526155e9ea5a230985e2856c0">fwver</a> [41];        </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="ltemc-mdminfo_8h.html#a4d98cb161d7f9ecce35606aa98f98fd3">   52</a></span>&#160;} <a class="code" href="ltemc-mdminfo_8h.html#a4d98cb161d7f9ecce35606aa98f98fd3">modemInfo_t</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">char</span> imei[16];          </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">char</span> iccid [21];        </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">char</span> mfgmodel [21];     </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">char</span> fwver [41];        </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;} modemInfo_t;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -128,9 +128,9 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<a class="code" href="structmodem_info__tag.html">modemInfo_t</a> <a class="code" href="ltemc-mdminfo_8h.html#a72503fcbcdb4da00355449068a51013a">mdminfo_ltem</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;int16_t <a class="code" href="ltemc-mdminfo_8h.html#a1d9b7f567f1ad5f5393d1bd84b461fa0">mdminfo_rssi</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;uint8_t <a class="code" href="ltemc-mdminfo_8h.html#af770a3d7781daf66572cb4c05695b3a7">mdminfo_rssiBars</a>(uint8_t numberOfBars);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;modemInfo_t <a class="code" href="ltemc-mdminfo_8c.html#a72503fcbcdb4da00355449068a51013a">mdminfo_ltem</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;int16_t <a class="code" href="ltemc-mdminfo_8c.html#a1d9b7f567f1ad5f5393d1bd84b461fa0">mdminfo_rssi</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;uint8_t <a class="code" href="ltemc-mdminfo_8c.html#af770a3d7781daf66572cb4c05695b3a7">mdminfo_rssiBars</a>(uint8_t numberOfBars);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -139,16 +139,10 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif  </span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructmodem_info__tag_html_aff7bf84d9f4b6c1de87298af4bfa36b8"><div class="ttname"><a href="structmodem_info__tag.html#aff7bf84d9f4b6c1de87298af4bfa36b8">modemInfo_tag::mfgmodel</a></div><div class="ttdeci">char mfgmodel[21]</div><div class="ttdoc">The Quectel model number of the BGx device.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.h:50</div></div>
-<div class="ttc" id="altemc-mdminfo_8h_html_a4d98cb161d7f9ecce35606aa98f98fd3"><div class="ttname"><a href="ltemc-mdminfo_8h.html#a4d98cb161d7f9ecce35606aa98f98fd3">modemInfo_t</a></div><div class="ttdeci">struct modemInfo_tag modemInfo_t</div><div class="ttdoc">Struct holding information about the physical BGx module.</div></div>
-<div class="ttc" id="altemc-mdminfo_8h_html_a1d9b7f567f1ad5f5393d1bd84b461fa0"><div class="ttname"><a href="ltemc-mdminfo_8h.html#a1d9b7f567f1ad5f5393d1bd84b461fa0">mdminfo_rssi</a></div><div class="ttdeci">int16_t mdminfo_rssi()</div><div class="ttdoc">Get the static device provisioning information about the LTEm1.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.c:140</div></div>
-<div class="ttc" id="altemc-mdminfo_8h_html_a72503fcbcdb4da00355449068a51013a"><div class="ttname"><a href="ltemc-mdminfo_8h.html#a72503fcbcdb4da00355449068a51013a">mdminfo_ltem</a></div><div class="ttdeci">modemInfo_t mdminfo_ltem()</div><div class="ttdoc">Get the LTEm1 static device identification/provisioning information.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.c:65</div></div>
-<div class="ttc" id="astructmodem_info__tag_html_a3134892526155e9ea5a230985e2856c0"><div class="ttname"><a href="structmodem_info__tag.html#a3134892526155e9ea5a230985e2856c0">modemInfo_tag::fwver</a></div><div class="ttdeci">char fwver[41]</div><div class="ttdoc">Firmware version of the BGx device.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.h:51</div></div>
+<div class="ttc" id="altemc-mdminfo_8c_html_a1d9b7f567f1ad5f5393d1bd84b461fa0"><div class="ttname"><a href="ltemc-mdminfo_8c.html#a1d9b7f567f1ad5f5393d1bd84b461fa0">mdminfo_rssi</a></div><div class="ttdeci">int16_t mdminfo_rssi()</div><div class="ttdoc">Get the static device provisioning information about the LTEm1.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.c:135</div></div>
+<div class="ttc" id="altemc-mdminfo_8c_html_a72503fcbcdb4da00355449068a51013a"><div class="ttname"><a href="ltemc-mdminfo_8c.html#a72503fcbcdb4da00355449068a51013a">mdminfo_ltem</a></div><div class="ttdeci">modemInfo_t mdminfo_ltem()</div><div class="ttdoc">Get the LTEm1 static device identification/provisioning information.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.c:68</div></div>
 <div class="ttc" id="altemc_8h_html"><div class="ttname"><a href="ltemc_8h.html">ltemc.h</a></div></div>
-<div class="ttc" id="astructmodem_info__tag_html_a88a26351acdc52f2ca61a6c864197a2f"><div class="ttname"><a href="structmodem_info__tag.html#a88a26351acdc52f2ca61a6c864197a2f">modemInfo_tag::imei</a></div><div class="ttdeci">char imei[16]</div><div class="ttdoc">IMEI (15 digits) International Mobile Equipment Identity, set in the BGx itself at manufacture.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.h:48</div></div>
-<div class="ttc" id="astructmodem_info__tag_html_a082e37d774043b84d66195ed2aa27e14"><div class="ttname"><a href="structmodem_info__tag.html#a082e37d774043b84d66195ed2aa27e14">modemInfo_tag::iccid</a></div><div class="ttdeci">char iccid[21]</div><div class="ttdoc">ICCID (20 digits) Integrated Circuit Card ID. Set in the SIM card at manufacture.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.h:49</div></div>
-<div class="ttc" id="altemc-mdminfo_8h_html_af770a3d7781daf66572cb4c05695b3a7"><div class="ttname"><a href="ltemc-mdminfo_8h.html#af770a3d7781daf66572cb4c05695b3a7">mdminfo_rssiBars</a></div><div class="ttdeci">uint8_t mdminfo_rssiBars(uint8_t numberOfBars)</div><div class="ttdoc">Get the RSSI value as a calculate bar count for visualizations. Like on a smartphone.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.c:168</div></div>
-<div class="ttc" id="astructmodem_info__tag_html"><div class="ttname"><a href="structmodem_info__tag.html">modemInfo_tag</a></div><div class="ttdoc">Struct holding information about the physical BGx module.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.h:47</div></div>
+<div class="ttc" id="altemc-mdminfo_8c_html_af770a3d7781daf66572cb4c05695b3a7"><div class="ttname"><a href="ltemc-mdminfo_8c.html#af770a3d7781daf66572cb4c05695b3a7">mdminfo_rssiBars</a></div><div class="ttdeci">uint8_t mdminfo_rssiBars(uint8_t numberOfBars)</div><div class="ttdoc">Get the RSSI value as a calculate bar count for visualizations. Like on a smartphone.</div><div class="ttdef"><b>Definition:</b> ltemc-mdminfo.c:163</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

@@ -1,6 +1,10 @@
 \hypertarget{ltemc-iop_8c}{}\doxysection{src/ltemc-\/iop.c File Reference}
 \label{ltemc-iop_8c}\index{src/ltemc-\/iop.c@{src/ltemc-\/iop.c}}
-{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/iop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/nxp-\/sc16is.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/internal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/sckt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/mqtt.\+h\char`\"{}}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -8,33 +12,44 @@
 \item 
 \#define \mbox{\hyperlink{ltemc-iop_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
 \item 
+\#define \mbox{\hyperlink{ltemc-iop_8c_abf43a3af3a4735d3f139e0ac8b2eac9c}{Q\+B\+G\+\_\+\+A\+P\+P\+R\+E\+A\+D\+Y\+\_\+\+M\+I\+L\+L\+I\+S\+M\+AX}}~5000
+\item 
 \#define \mbox{\hyperlink{ltemc-iop_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
 \item 
 \#define \mbox{\hyperlink{ltemc-iop_8c_a7d19c8e4b85d2ff5dc1267321330fe4d}{I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+A\+D\+V\+I\+N\+D\+EX}}(I\+N\+DX)~I\+N\+DX = (++I\+N\+DX == I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+C\+O\+U\+NT) ? 0 \+: I\+N\+DX
-\item 
-\#define \mbox{\hyperlink{ltemc-iop_8c_abf43a3af3a4735d3f139e0ac8b2eac9c}{Q\+B\+G\+\_\+\+A\+P\+P\+R\+E\+A\+D\+Y\+\_\+\+M\+I\+L\+L\+I\+S\+M\+AX}}~5000
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{ltemc-iop_8c_ab947681241346e1704709a480292f8d8}{iop\+\_\+create}} ()
+void \mbox{\hyperlink{ltemc-iop_8c_a014586177c48478e7636c076ad9ecd7c}{I\+O\+P\+\_\+create}} ()
 \begin{DoxyCompactList}\small\item\em Initialize the Input/\+Output Process subsystem. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-iop_8c_ac0c9cd30e69275d43a3cc01da127db57}{iop\+\_\+register\+Protocol}} (\mbox{\hyperlink{lq_types_8h_ab5ff856ea8c926d4ede227d87a58629d}{ltem\+Optn\+Module\+\_\+t}} proto, void $\ast$proto\+Ptr)
-\item 
-void \mbox{\hyperlink{ltemc-iop_8c_adc850da968c0996c7645ef06e277708f}{iop\+\_\+start}} ()
+void \mbox{\hyperlink{ltemc-iop_8c_ab8fd0c82d50c72c29bccc37f9fd72dbd}{I\+O\+P\+\_\+register\+Stream}} (\mbox{\hyperlink{ltemc-streams_8h_a950612d73b3a439198b37f3125babc25}{stream\+Peer\+\_\+t}} stream\+Indx, \mbox{\hyperlink{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}{iop\+Stream\+Ctrl\+\_\+t}} $\ast$stream\+Ctrl)
+\begin{DoxyCompactList}\small\item\em register a stream peer with I\+OP to control communications. Typically performed by protocol open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-iop_8c_a433190280a770fb33dbcceb681d0b146}{I\+O\+P\+\_\+start}} ()
 \begin{DoxyCompactList}\small\item\em Complete initialization and start running iop processes. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-iop_8c_a1baf3b1228e8a750422d97cef2d336a8}{iop\+\_\+await\+App\+Ready}} ()
+void \mbox{\hyperlink{ltemc-iop_8c_a9b915345fc60a5413c07164fd1c2630d}{I\+O\+P\+\_\+await\+App\+Ready}} ()
 \begin{DoxyCompactList}\small\item\em Verify L\+T\+Em1 is ready for driver operations. \end{DoxyCompactList}\item 
-uint16\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_aa30098ddd513173d5c6ac1cd07f492b9}{iop\+\_\+tx\+Send}} (const char $\ast$send\+Data, uint16\+\_\+t send\+Sz, bool send\+Ready)
+uint16\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_af109051869f4374c5ff6ff0e4dbe4a90}{I\+O\+P\+\_\+send\+Tx}} (const char $\ast$send\+Data, uint16\+\_\+t send\+Sz, bool send\+Immediate)
 \begin{DoxyCompactList}\small\item\em Start a (raw) send operation. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-iop_8c_aad96d9d4df9ebc33c08464531f757fb1}{iop\+\_\+reset\+Cmd\+Buffer}} ()
-\begin{DoxyCompactList}\small\item\em Clear receive command response buffer. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-iop_8c_a9db71023d7554c3ae473ab010d2f1acf}{iop\+\_\+reset\+Data\+Buffer}} (uint8\+\_\+t buf\+Indx)
-\begin{DoxyCompactList}\small\item\em Clear receive command response buffer. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-iop_8c_a666094e51c449560d25b82867a708ca9}{iop\+\_\+tx\+Data\+Prompt\+Parser}} (const char $\ast$response, char $\ast$$\ast$endptr)
-\begin{DoxyCompactList}\small\item\em Response parser looking for \char`\"{}$>$\char`\"{} prompt to send data to network and then initiates the send. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-iop_8c_a499e14029136c4eb243a5458b6bac682}{iop\+\_\+rx\+Parse\+Immediate}} ()
+bool \mbox{\hyperlink{ltemc-iop_8c_ab717ef72de91b80e7b31d33bf6a9dad2}{I\+O\+P\+\_\+detect\+Rx\+Idle}} ()
+\begin{DoxyCompactList}\small\item\em Check for RX idle (no incoming receives from N\+XP in 2.\+5 buffer times). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-iop_8c_ad726cfd88029a9eff03f4595c24ea81c}{I\+O\+P\+\_\+reset\+Core\+Rx\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Clear receive C\+O\+M\+M\+A\+N\+D/\+C\+O\+RE response buffer. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_a9ef55e6a25ce8ff909dbf7046bd39cba}{I\+O\+P\+\_\+init\+Rx\+Buffer\+Ctrl}} (\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$buf\+Ctrl, uint8\+\_\+t $\ast$rx\+Buf, uint16\+\_\+t rx\+Buf\+Sz)
+\begin{DoxyCompactList}\small\item\em Initializes a RX buffer control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-iop_8c_aa2f0fc700d14f4734f6dd8405a973ae3}{I\+O\+P\+\_\+swap\+Rx\+Buffer\+Page}} (\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$buf\+Ctrl)
+\begin{DoxyCompactList}\small\item\em Syncs RX consumers with I\+SR for buffer swap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-iop_8c_af44a81a156fc9eac12f73dbffa01a893}{I\+O\+P\+\_\+reset\+Rx\+Data\+Buffer\+Page}} (\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$buf\+Ptr, uint8\+\_\+t page)
+\begin{DoxyCompactList}\small\item\em Reset a receive buffer for reuse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-iop_8c_a9f0be39a6399b95fc875ab368d935e21}{I\+O\+P\+\_\+rx\+Parse\+For\+Urc\+Events}} ()
 \begin{DoxyCompactList}\small\item\em Parse recv\textquotesingle{}d data (in command RX buffer) for async event preambles that need to be handled immediately. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} \mbox{\hyperlink{ltemc-iop_8c_a5f9b6913ff818fbc74934a69849fb48b}{g\+\_\+ltem}}
+\begin{DoxyCompactList}\small\item\em The L\+T\+Em \char`\"{}object\char`\"{}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_a7b00d49600e4c14d2894e89b89e2a70d}{dbg\+\_\+urc\+In\+Cmd\+Lock}} = 0
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -71,102 +86,110 @@ void \mbox{\hyperlink{ltemc-iop_8c_a499e14029136c4eb243a5458b6bac682}{iop\+\_\+r
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{ltemc-iop_8c_a1baf3b1228e8a750422d97cef2d336a8}\label{ltemc-iop_8c_a1baf3b1228e8a750422d97cef2d336a8}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!iop\_awaitAppReady@{iop\_awaitAppReady}}
-\index{iop\_awaitAppReady@{iop\_awaitAppReady}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{iop\_awaitAppReady()}{iop\_awaitAppReady()}}
-{\footnotesize\ttfamily void iop\+\_\+await\+App\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-iop_8c_a9b915345fc60a5413c07164fd1c2630d}\label{ltemc-iop_8c_a9b915345fc60a5413c07164fd1c2630d}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_awaitAppReady@{IOP\_awaitAppReady}}
+\index{IOP\_awaitAppReady@{IOP\_awaitAppReady}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_awaitAppReady()}{IOP\_awaitAppReady()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+await\+App\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Verify L\+T\+Em1 is ready for driver operations. 
 
-\mbox{\Hypertarget{ltemc-iop_8c_ab947681241346e1704709a480292f8d8}\label{ltemc-iop_8c_ab947681241346e1704709a480292f8d8}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!iop\_create@{iop\_create}}
-\index{iop\_create@{iop\_create}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{iop\_create()}{iop\_create()}}
-{\footnotesize\ttfamily void iop\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-iop_8c_a014586177c48478e7636c076ad9ecd7c}\label{ltemc-iop_8c_a014586177c48478e7636c076ad9ecd7c}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_create@{IOP\_create}}
+\index{IOP\_create@{IOP\_create}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_create()}{IOP\_create()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Initialize the Input/\+Output Process subsystem. 
 
-\mbox{\Hypertarget{ltemc-iop_8c_ac0c9cd30e69275d43a3cc01da127db57}\label{ltemc-iop_8c_ac0c9cd30e69275d43a3cc01da127db57}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!iop\_registerProtocol@{iop\_registerProtocol}}
-\index{iop\_registerProtocol@{iop\_registerProtocol}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{iop\_registerProtocol()}{iop\_registerProtocol()}}
-{\footnotesize\ttfamily void iop\+\_\+register\+Protocol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lq_types_8h_ab5ff856ea8c926d4ede227d87a58629d}{ltem\+Optn\+Module\+\_\+t}}}]{proto,  }\item[{void $\ast$}]{proto\+Ptr }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{ltemc-iop_8c_aad96d9d4df9ebc33c08464531f757fb1}\label{ltemc-iop_8c_aad96d9d4df9ebc33c08464531f757fb1}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!iop\_resetCmdBuffer@{iop\_resetCmdBuffer}}
-\index{iop\_resetCmdBuffer@{iop\_resetCmdBuffer}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{iop\_resetCmdBuffer()}{iop\_resetCmdBuffer()}}
-{\footnotesize\ttfamily void iop\+\_\+reset\+Cmd\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-iop_8c_ab717ef72de91b80e7b31d33bf6a9dad2}\label{ltemc-iop_8c_ab717ef72de91b80e7b31d33bf6a9dad2}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_detectRxIdle@{IOP\_detectRxIdle}}
+\index{IOP\_detectRxIdle@{IOP\_detectRxIdle}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_detectRxIdle()}{IOP\_detectRxIdle()}}
+{\footnotesize\ttfamily bool I\+O\+P\+\_\+detect\+Rx\+Idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Clear receive command response buffer. 
+Check for RX idle (no incoming receives from N\+XP in 2.\+5 buffer times). 
 
-\mbox{\Hypertarget{ltemc-iop_8c_a9db71023d7554c3ae473ab010d2f1acf}\label{ltemc-iop_8c_a9db71023d7554c3ae473ab010d2f1acf}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!iop\_resetDataBuffer@{iop\_resetDataBuffer}}
-\index{iop\_resetDataBuffer@{iop\_resetDataBuffer}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{iop\_resetDataBuffer()}{iop\_resetDataBuffer()}}
-{\footnotesize\ttfamily void iop\+\_\+reset\+Data\+Buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{buf\+Indx }\end{DoxyParamCaption})}
+\begin{DoxyReturn}{Returns}
+True 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-iop_8c_a9ef55e6a25ce8ff909dbf7046bd39cba}\label{ltemc-iop_8c_a9ef55e6a25ce8ff909dbf7046bd39cba}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_initRxBufferCtrl@{IOP\_initRxBufferCtrl}}
+\index{IOP\_initRxBufferCtrl@{IOP\_initRxBufferCtrl}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_initRxBufferCtrl()}{IOP\_initRxBufferCtrl()}}
+{\footnotesize\ttfamily uint16\+\_\+t I\+O\+P\+\_\+init\+Rx\+Buffer\+Ctrl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$}]{buf\+Ctrl,  }\item[{uint8\+\_\+t $\ast$}]{rx\+Buf,  }\item[{uint16\+\_\+t}]{rx\+Buf\+Sz }\end{DoxyParamCaption})}
 
 
 
-Clear receive command response buffer. 
+Initializes a RX buffer control. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em buf\+Indx} & \mbox{[}in\mbox{]} The I\+OP data buffer array index. Data buffers are referenced by an array of pointers. \\
+{\em buf\+Ctrl} & \mbox{[}in\mbox{]} Pointer to RX data buffer control structure to initialize. \\
+\hline
+{\em rx\+Buf} & \mbox{[}in\mbox{]} Pointer to raw byte buffer to integrate into Rx\+Buffer\+Ctrl. \\
+\hline
+{\em rx\+Buf\+Sz} & \mbox{[}in\mbox{]} The size of the rx\+Buf passed in. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-iop_8c_a499e14029136c4eb243a5458b6bac682}\label{ltemc-iop_8c_a499e14029136c4eb243a5458b6bac682}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!iop\_rxParseImmediate@{iop\_rxParseImmediate}}
-\index{iop\_rxParseImmediate@{iop\_rxParseImmediate}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{iop\_rxParseImmediate()}{iop\_rxParseImmediate()}}
-{\footnotesize\ttfamily void iop\+\_\+rx\+Parse\+Immediate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-iop_8c_ab8fd0c82d50c72c29bccc37f9fd72dbd}\label{ltemc-iop_8c_ab8fd0c82d50c72c29bccc37f9fd72dbd}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_registerStream@{IOP\_registerStream}}
+\index{IOP\_registerStream@{IOP\_registerStream}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_registerStream()}{IOP\_registerStream()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+register\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_a950612d73b3a439198b37f3125babc25}{stream\+Peer\+\_\+t}}}]{stream\+Indx,  }\item[{\mbox{\hyperlink{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}{iop\+Stream\+Ctrl\+\_\+t}} $\ast$}]{stream\+Ctrl }\end{DoxyParamCaption})}
+
+
+
+register a stream peer with I\+OP to control communications. Typically performed by protocol open. 
+
+\mbox{\Hypertarget{ltemc-iop_8c_ad726cfd88029a9eff03f4595c24ea81c}\label{ltemc-iop_8c_ad726cfd88029a9eff03f4595c24ea81c}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_resetCoreRxBuffer@{IOP\_resetCoreRxBuffer}}
+\index{IOP\_resetCoreRxBuffer@{IOP\_resetCoreRxBuffer}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_resetCoreRxBuffer()}{IOP\_resetCoreRxBuffer()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+reset\+Core\+Rx\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear receive C\+O\+M\+M\+A\+N\+D/\+C\+O\+RE response buffer. 
+
+\mbox{\Hypertarget{ltemc-iop_8c_af44a81a156fc9eac12f73dbffa01a893}\label{ltemc-iop_8c_af44a81a156fc9eac12f73dbffa01a893}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_resetRxDataBufferPage@{IOP\_resetRxDataBufferPage}}
+\index{IOP\_resetRxDataBufferPage@{IOP\_resetRxDataBufferPage}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_resetRxDataBufferPage()}{IOP\_resetRxDataBufferPage()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+reset\+Rx\+Data\+Buffer\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$}]{buf\+Ptr,  }\item[{uint8\+\_\+t}]{page }\end{DoxyParamCaption})}
+
+
+
+Reset a receive buffer for reuse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf\+Ptr} & \mbox{[}in\mbox{]} Pointer to the buffer struct. \\
+\hline
+{\em page} & \mbox{[}in\mbox{]} Index to buffer page to be reset. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-iop_8c_a9f0be39a6399b95fc875ab368d935e21}\label{ltemc-iop_8c_a9f0be39a6399b95fc875ab368d935e21}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_rxParseForUrcEvents@{IOP\_rxParseForUrcEvents}}
+\index{IOP\_rxParseForUrcEvents@{IOP\_rxParseForUrcEvents}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_rxParseForUrcEvents()}{IOP\_rxParseForUrcEvents()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+rx\+Parse\+For\+Urc\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Parse recv\textquotesingle{}d data (in command RX buffer) for async event preambles that need to be handled immediately. 
 
-\mbox{\Hypertarget{ltemc-iop_8c_adc850da968c0996c7645ef06e277708f}\label{ltemc-iop_8c_adc850da968c0996c7645ef06e277708f}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!iop\_start@{iop\_start}}
-\index{iop\_start@{iop\_start}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{iop\_start()}{iop\_start()}}
-{\footnotesize\ttfamily void iop\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Complete initialization and start running iop processes. 
-
-\mbox{\Hypertarget{ltemc-iop_8c_a666094e51c449560d25b82867a708ca9}\label{ltemc-iop_8c_a666094e51c449560d25b82867a708ca9}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!iop\_txDataPromptParser@{iop\_txDataPromptParser}}
-\index{iop\_txDataPromptParser@{iop\_txDataPromptParser}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{iop\_txDataPromptParser()}{iop\_txDataPromptParser()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} iop\+\_\+tx\+Data\+Prompt\+Parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{response,  }\item[{char $\ast$$\ast$}]{endptr }\end{DoxyParamCaption})}
-
-
-
-Response parser looking for \char`\"{}$>$\char`\"{} prompt to send data to network and then initiates the send. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em response} & \mbox{[}in\mbox{]} The character string received from B\+Gx (so far, may not be complete). \\
-\hline
-{\em endptr} & \mbox{[}out\mbox{]} Pointer to char immediately following match, nullptr for error.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Result code enum value (http status code) 
-\end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-iop_8c_aa30098ddd513173d5c6ac1cd07f492b9}\label{ltemc-iop_8c_aa30098ddd513173d5c6ac1cd07f492b9}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!iop\_txSend@{iop\_txSend}}
-\index{iop\_txSend@{iop\_txSend}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{iop\_txSend()}{iop\_txSend()}}
-{\footnotesize\ttfamily uint16\+\_\+t iop\+\_\+tx\+Send (\begin{DoxyParamCaption}\item[{const char $\ast$}]{send\+Data,  }\item[{uint16\+\_\+t}]{send\+Sz,  }\item[{bool}]{send\+Ready }\end{DoxyParamCaption})}
+Internal only function. Dependency in atcmd \mbox{\Hypertarget{ltemc-iop_8c_af109051869f4374c5ff6ff0e4dbe4a90}\label{ltemc-iop_8c_af109051869f4374c5ff6ff0e4dbe4a90}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_sendTx@{IOP\_sendTx}}
+\index{IOP\_sendTx@{IOP\_sendTx}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_sendTx()}{IOP\_sendTx()}}
+{\footnotesize\ttfamily uint16\+\_\+t I\+O\+P\+\_\+send\+Tx (\begin{DoxyParamCaption}\item[{const char $\ast$}]{send\+Data,  }\item[{uint16\+\_\+t}]{send\+Sz,  }\item[{bool}]{send\+Immediate }\end{DoxyParamCaption})}
 
 
 
@@ -178,9 +201,56 @@ Start a (raw) send operation.
 \hline
 {\em send\+Sz} & \mbox{[}in\mbox{]} -\/ The number of characters to send. \\
 \hline
-{\em send\+Ready} & \mbox{[}in\mbox{]} -\/ If true, queue send\+Data then initiate the actual send process. If false continue queueing and wait to send.\\
+{\em send\+Immediate} & \mbox{[}in\mbox{]} -\/ If true\+: queue send\+Data then initiate the actual send process. If false\+: continue queueing and wait to send.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Number of characters queued for sending. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-iop_8c_a433190280a770fb33dbcceb681d0b146}\label{ltemc-iop_8c_a433190280a770fb33dbcceb681d0b146}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_start@{IOP\_start}}
+\index{IOP\_start@{IOP\_start}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_start()}{IOP\_start()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Complete initialization and start running iop processes. 
+
+\mbox{\Hypertarget{ltemc-iop_8c_aa2f0fc700d14f4734f6dd8405a973ae3}\label{ltemc-iop_8c_aa2f0fc700d14f4734f6dd8405a973ae3}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_swapRxBufferPage@{IOP\_swapRxBufferPage}}
+\index{IOP\_swapRxBufferPage@{IOP\_swapRxBufferPage}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_swapRxBufferPage()}{IOP\_swapRxBufferPage()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+swap\+Rx\+Buffer\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$}]{buf\+Ctrl }\end{DoxyParamCaption})}
+
+
+
+Syncs RX consumers with I\+SR for buffer swap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf\+Ctrl} & \mbox{[}in\mbox{]} RX data buffer to sync.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if overflow detected\+: buffer being assigned to I\+OP for filling is not empty 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ltemc-iop_8c_a7b00d49600e4c14d2894e89b89e2a70d}\label{ltemc-iop_8c_a7b00d49600e4c14d2894e89b89e2a70d}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!dbg\_urcInCmdLock@{dbg\_urcInCmdLock}}
+\index{dbg\_urcInCmdLock@{dbg\_urcInCmdLock}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{dbg\_urcInCmdLock}{dbg\_urcInCmdLock}}
+{\footnotesize\ttfamily uint8\+\_\+t dbg\+\_\+urc\+In\+Cmd\+Lock = 0}
+
+\mbox{\Hypertarget{ltemc-iop_8c_a5f9b6913ff818fbc74934a69849fb48b}\label{ltemc-iop_8c_a5f9b6913ff818fbc74934a69849fb48b}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!g\_ltem@{g\_ltem}}
+\index{g\_ltem@{g\_ltem}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{g\_ltem}{g\_ltem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} g\+\_\+ltem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+The L\+T\+Em \char`\"{}object\char`\"{}. 
+

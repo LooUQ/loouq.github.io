@@ -177,14 +177,22 @@
 \label{md__l_t_em1-_f_a_q}
 \Hypertarget{md__l_t_em1-_f_a_q}
 \input{md__l_t_em1-_f_a_q}
+\chapter{L\+T\+EmC Design Assumptions}
+\label{md__l_t_em_c__design__assumptions}
+\Hypertarget{md__l_t_em_c__design__assumptions}
+\input{md__l_t_em_c__design__assumptions}
 \chapter{Circuit River -\/ L\+T\+Em1c}
 \label{md__r_e_a_d_m_e}
 \Hypertarget{md__r_e_a_d_m_e}
 \input{md__r_e_a_d_m_e}
-\chapter{Release\+\_\+1\+\_\+0}
+\chapter{L\+T\+EmC Release 1.0}
 \label{md__release_1_0}
 \Hypertarget{md__release_1_0}
 \input{md__release_1_0}
+\chapter{Release\+\_\+2\+\_\+0}
+\label{md__release_2_0}
+\Hypertarget{md__release_2_0}
+\input{md__release_2_0}
 \chapter{C\+R-\/\+L\+T\+Em1-\/\+Modem-\/C}
 \label{md_tests__l_t_em_c-1-platform__r_e_a_d_m_e}
 \Hypertarget{md_tests__l_t_em_c-1-platform__r_e_a_d_m_e}
@@ -210,8 +218,8 @@
 \input{union____sc16is741a__reg__payload____}
 \input{structarduino__spi__tag}
 \input{structatcmd__tag}
-\input{structatcmd_history__tag}
 \input{structatcmd_result__tag}
+\input{structbase_ctrl__tag}
 \input{structcbuf__t}
 \input{structfile_download_result__tag}
 \input{structfile_info_result__tag}
@@ -224,28 +232,26 @@
 \input{structgeo__result__tag}
 \input{structgnss__latlon__tag}
 \input{structgnss_location__tag}
+\input{structhttp_ctrl__tag}
 \input{structiop__tag}
-\input{structiop_buffer__tag}
-\input{structiop_tx_ctrl_block__tag}
-\input{structkey_value_dict__tag}
-\input{structlq_app_diagnostic__tag}
-\input{structlqc_json_prop_value__tag}
 \input{structltem_device__tag}
 \input{structltem_pin_config__tag}
-\input{structmodem_info__tag}
-\input{structmqtt__tag}
-\input{structmqtt_subscription__tag}
+\input{structmqtt_ctrl__tag}
+\input{structmqtt_topic_sub__tag}
 \input{structnetwork__tag}
 \input{structnetwork_operator__tag}
 \input{structpdp_cntxt__tag}
-\input{structpeer_type_map__tag}
-\input{structsocket_ctrl__tag}
-\input{structsockets__tag}
-\input{structspi_config__tag}
-\input{structspi_device__tag}
+\input{structrx_buffer_page__tag}
+\input{structrx_core_buffer_ctrl__tag}
+\input{structrx_data_buffer_ctrl__tag}
+\input{structsckt_ctrl__tag}
+\input{structspi__tag}
+\input{structtls_options__tag}
+\input{structtx_buffer_ctrl__tag}
 \chapter{File Documentation}
 \input{doxy_main_8md}
 \input{_l_t_em1-_f_a_q_8md}
+\input{_l_t_em_c_01_design_01_assumptions_8md}
 \input{mqtt__testing_8txt}
 \input{pin_configuration_8txt}
 \input{_r_e_a_d_m_e_8md}
@@ -253,19 +259,22 @@
 \input{tests_2_l_t_em_c-2-components_2_r_e_a_d_m_e_8md}
 \input{tests_2_l_t_em_c-8-mqtt_2_r_e_a_d_m_e_8md}
 \input{_release__1__0_8md}
-\input{lq_platform_8h}
-\input{lq_types_8h}
+\input{_release__2__0_8md}
+\input{lq-platform_8h}
 \input{ltemc-atcmd_8c}
 \input{ltemc-atcmd_8h}
 \input{ltemc-cbuf_8c}
 \input{ltemc-cbuf_8h}
+\input{ltemc-filecodes_8h}
 \input{ltemc-filesys_8c}
 \input{ltemc-filesys_8h}
 \input{ltemc-geo_8c}
 \input{ltemc-geo_8h}
 \input{ltemc-gnss_8c}
 \input{ltemc-gnss_8h}
+\input{ltemc-http_8c}
 \input{ltemc-http_8h}
+\input{ltemc-internal_8h}
 \input{ltemc-iop_8c}
 \input{ltemc-iop_8h}
 \input{ltemc-mdminfo_8c}
@@ -278,8 +287,11 @@
 \input{ltemc-nxp-sc16is_8h}
 \input{ltemc-quectel-bg_8c}
 \input{ltemc-quectel-bg_8h}
-\input{ltemc-sockets_8c}
-\input{ltemc-sockets_8h}
+\input{ltemc-sckt_8c}
+\input{ltemc-sckt_8h}
+\input{ltemc-streams_8h}
+\input{ltemc-tls_8c}
+\input{ltemc-tls_8h}
 \input{ltemc_8c}
 \input{ltemc_8h}
 \input{arduino-debug_8cpp}
@@ -294,8 +306,7 @@
 \input{cmd_01response_01examples_8txt}
 \input{_az_io_t_hub_01ssl_trace_8txt}
 \input{_az_m_q_t_t_01trace_8txt}
-\input{lqc__collections_8c}
-\input{lqc__collections_8h}
+\input{http_01testing_8txt}
 \input{version-history_8md}
 %--- End generated contents ---
 

@@ -1,40 +1,89 @@
 \hypertarget{ltemc-mqtt_8c}{}\doxysection{src/ltemc-\/mqtt.c File Reference}
 \label{ltemc-mqtt_8c}\index{src/ltemc-\/mqtt.c@{src/ltemc-\/mqtt.c}}
-{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$jlink\+Rtt.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/mqtt.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lq-\/str.\+h$>$}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{ltemc-mqtt_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
+\#define \mbox{\hyperlink{ltemc-mqtt_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~2
 \item 
-\#define \mbox{\hyperlink{ltemc-mqtt_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\#define \mbox{\hyperlink{ltemc-mqtt_8c_a7acb4d06a9fd952f51471791f06d60a8}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+,  \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+...)~do \{ rtt\+\_\+printf(c\+\_\+, (f\+\_\+), \#\# \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+); \} while(0)
 \item 
 \#define \mbox{\hyperlink{ltemc-mqtt_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
 \item 
-\#define \mbox{\hyperlink{ltemc-mqtt_8c_a8b3fe77d44699d08d82b43f7948b89d6}{M\+Q\+T\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+SZ}}~81
+\#define \mbox{\hyperlink{ltemc-mqtt_8c_aea51ccaa5e874f93c9d2d4f6c0571eb7}{A\+S\+C\+I\+I\+\_\+\+Ctrl\+Z\+\_\+\+S\+TR}}~\char`\"{}\textbackslash{}x1A\char`\"{}
 \item 
-\#define \mbox{\hyperlink{ltemc-mqtt_8c_a436b5ef943285e419c48b7a7d7aaf609}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+C\+M\+D\+\_\+\+SZ}}~300
+\#define \mbox{\hyperlink{ltemc-mqtt_8c_a2b89e9ab95d93dd5fc5d800df5de1467}{A\+S\+C\+I\+I\+\_\+\+Dbl\+Quote\+\_\+\+C\+H\+AR}}~\textquotesingle{}\char`\"{}\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}{atcmd\+\_\+\+\_\+use\+Default\+Timeout}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}{atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto}} = 1, 
+\newline
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}{A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}{A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}{http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec}} = 60, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}{I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size}} = 1800, 
+\newline
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}} = 192, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS}} = 6, 
+\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
+\newline
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 3, 
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}{N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz}} = 20, 
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}{nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver}} = 0x01U, 
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
+\newline
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}{nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error}} = 0x80U, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}{B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt}} = 1, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}{B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts}} = 2, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
+\newline
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}{B\+G\+X\+\_\+\+\_\+power\+Off\+Delay}} = 1500, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}{B\+G\+X\+\_\+\+\_\+reset\+Delay}} = 300, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}{B\+G\+X\+\_\+\+\_\+baud\+Rate}} = 115200, 
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
+\newline
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}{sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS}} = 60000, 
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}{S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz}} = 1500
+ \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{ltemc-mqtt_8c_a8051af90648cef323dd3d207f477657b}{mqtt\+\_\+create}} ()
-\begin{DoxyCompactList}\small\item\em Initialize M\+Q\+TT service structure and add it to L\+T\+Em1c services. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_aefdeff1177520d62588b48a41a5e8045}{mqtt\+\_\+status}} (const char $\ast$host, bool force)
+\mbox{\hyperlink{ltemc-mqtt_8c_abf9daa62d261abcac1e4cb27c9e72adf}{asm}} (\char`\"{}.global \+\_\+printf\+\_\+float\char`\"{})
+\item 
+void \mbox{\hyperlink{ltemc-mqtt_8c_aa55c5ff1c379910b467c77294aa7460f}{mqtt\+\_\+init\+Control}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt, bool use\+Tls, \mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}} use\+Mqtt\+Version, uint8\+\_\+t $\ast$recv\+Buf, uint16\+\_\+t recv\+Buf\+Sz, \mbox{\hyperlink{ltemc-mqtt_8h_a511663720bdcd80c97bef4b2804b4196}{mqtt\+Recv\+Func\+\_\+t}} recv\+Callback)
 \begin{DoxyCompactList}\small\item\em Query the status of the M\+Q\+TT server state. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_a2a633eb17a04cfcf8638ec75fdefcff0}{mqtt\+\_\+open}} (const char $\ast$host, uint16\+\_\+t port, \mbox{\hyperlink{ltemc-mqtt_8h_af4fb66f436707c44f2e350dbc5108224}{ssl\+Version\+\_\+t}} use\+Ssl\+Version, \mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}} use\+Mqtt\+Version)
+\mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_aa90563e785d692af76fbb8b0999ef22d}{mqtt\+\_\+get\+Status}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$host)
+\begin{DoxyCompactList}\small\item\em Query the status of the M\+Q\+TT server state. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_a2b686fdb5fb861c9d6283fd7ca1a83da}{mqtt\+\_\+get\+Msg\+Id}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl)
+\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_accc88867fece34baa7b992d3ab60d4aa}{mqtt\+\_\+open}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$host, uint16\+\_\+t port)
 \begin{DoxyCompactList}\small\item\em Open a remote M\+Q\+TT server for use. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-mqtt_8c_ad52f5ef51a9488dda1c573e26137371a}{mqtt\+\_\+close}} ()
+void \mbox{\hyperlink{ltemc-mqtt_8c_afb874ed8fe83efb81a6e206a00059ad0}{mqtt\+\_\+close}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl)
 \begin{DoxyCompactList}\small\item\em Disconnect and close a connection to a M\+Q\+TT server. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_ac72b2188722710984f36386c7793cc7c}{mqtt\+\_\+connect}} (const char $\ast$client\+Id, const char $\ast$username, const char $\ast$password, \mbox{\hyperlink{ltemc-mqtt_8h_a455558a85512fdfa977572eae49314c0}{mqtt\+Session\+\_\+t}} clean\+Session)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_aa10d9f4c2b26ec478eeee8056081d021}{mqtt\+\_\+connect}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$client\+Id, const char $\ast$username, const char $\ast$password, \mbox{\hyperlink{ltemc-mqtt_8h_a455558a85512fdfa977572eae49314c0}{mqtt\+Session\+\_\+t}} clean\+Session)
 \begin{DoxyCompactList}\small\item\em Connect (authenticate) to a M\+Q\+TT server. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_a4f91e63bc1ee41e58948d1feaae1b1a2}{mqtt\+\_\+subscribe}} (const char $\ast$topic, \mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}} qos, \mbox{\hyperlink{ltemc-mqtt_8h_a98539737eefd41c88388bada5c4116b4}{mqtt\+\_\+recv\+Func\+\_\+t}} recv\+\_\+func)
+uint8\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_adc8032ed4b4fd1d27f14183965a439b5}{mqtt\+\_\+subscribe}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$topic, \mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}} qos)
 \begin{DoxyCompactList}\small\item\em Subscribe to a topic on the M\+Q\+TT server. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_a438017fd271d124a86605407edd6e3a1}{mqtt\+\_\+unsubscribe}} (const char $\ast$topic)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_a4052b98fe0795af64f4fe611ed007302}{mqtt\+\_\+unsubscribe}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$topic)
 \begin{DoxyCompactList}\small\item\em Unsubscribe to a topic on the M\+Q\+TT server. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_ac840825f9f828ae6b756cc2f9ede3569}{mqtt\+\_\+publish}} (const char $\ast$topic, \mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}} qos, const char $\ast$message)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_ab008a6b06b403798a785036d5bf06629}{mqtt\+\_\+publish}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$topic, \mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}} qos, const char $\ast$message)
 \begin{DoxyCompactList}\small\item\em Publish a message to server. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-mqtt_8c_a2e7d6a65ee3363eae8283f57d686a4c4}{mqtt\+\_\+do\+Work}} ()
-\begin{DoxyCompactList}\small\item\em Performs background tasks to advance M\+Q\+TT pipeline dataflows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+uint16\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_a3615ae26f711acc2c3caca74260fb7a8}{mqtt\+\_\+get\+Last\+Buffer\+Reqd}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_a5f9b6913ff818fbc74934a69849fb48b}{g\+\_\+ltem}}
+\begin{DoxyCompactList}\small\item\em The L\+T\+Em \char`\"{}object\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -42,7 +91,19 @@ void \mbox{\hyperlink{ltemc-mqtt_8c_a2e7d6a65ee3363eae8283f57d686a4c4}{mqtt\+\_\
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!\_DEBUG@{\_DEBUG}}
 \index{\_DEBUG@{\_DEBUG}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
 \doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
-{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~2}
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_aea51ccaa5e874f93c9d2d4f6c0571eb7}\label{ltemc-mqtt_8c_aea51ccaa5e874f93c9d2d4f6c0571eb7}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!ASCII\_CtrlZ\_STR@{ASCII\_CtrlZ\_STR}}
+\index{ASCII\_CtrlZ\_STR@{ASCII\_CtrlZ\_STR}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{ASCII\_CtrlZ\_STR}{ASCII\_CtrlZ\_STR}}
+{\footnotesize\ttfamily \#define A\+S\+C\+I\+I\+\_\+\+Ctrl\+Z\+\_\+\+S\+TR~\char`\"{}\textbackslash{}x1A\char`\"{}}
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_a2b89e9ab95d93dd5fc5d800df5de1467}\label{ltemc-mqtt_8c_a2b89e9ab95d93dd5fc5d800df5de1467}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!ASCII\_DblQuote\_CHAR@{ASCII\_DblQuote\_CHAR}}
+\index{ASCII\_DblQuote\_CHAR@{ASCII\_DblQuote\_CHAR}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{ASCII\_DblQuote\_CHAR}{ASCII\_DblQuote\_CHAR}}
+{\footnotesize\ttfamily \#define A\+S\+C\+I\+I\+\_\+\+Dbl\+Quote\+\_\+\+C\+H\+AR~\textquotesingle{}\char`\"{}\textquotesingle{}}
 
 \mbox{\Hypertarget{ltemc-mqtt_8c_a74e75242132eaabbc1c512488a135926}\label{ltemc-mqtt_8c_a74e75242132eaabbc1c512488a135926}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!MIN@{MIN}}
@@ -50,47 +111,154 @@ void \mbox{\hyperlink{ltemc-mqtt_8c_a2e7d6a65ee3363eae8283f57d686a4c4}{mqtt\+\_\
 \doxysubsubsection{\texorpdfstring{MIN}{MIN}}
 {\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (x) \+: (y))}
 
-\mbox{\Hypertarget{ltemc-mqtt_8c_a8b3fe77d44699d08d82b43f7948b89d6}\label{ltemc-mqtt_8c_a8b3fe77d44699d08d82b43f7948b89d6}} 
-\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!MQTT\_ACTION\_CMD\_SZ@{MQTT\_ACTION\_CMD\_SZ}}
-\index{MQTT\_ACTION\_CMD\_SZ@{MQTT\_ACTION\_CMD\_SZ}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
-\doxysubsubsection{\texorpdfstring{MQTT\_ACTION\_CMD\_SZ}{MQTT\_ACTION\_CMD\_SZ}}
-{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+SZ~81}
-
-\mbox{\Hypertarget{ltemc-mqtt_8c_a436b5ef943285e419c48b7a7d7aaf609}\label{ltemc-mqtt_8c_a436b5ef943285e419c48b7a7d7aaf609}} 
-\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!MQTT\_CONNECT\_CMD\_SZ@{MQTT\_CONNECT\_CMD\_SZ}}
-\index{MQTT\_CONNECT\_CMD\_SZ@{MQTT\_CONNECT\_CMD\_SZ}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
-\doxysubsubsection{\texorpdfstring{MQTT\_CONNECT\_CMD\_SZ}{MQTT\_CONNECT\_CMD\_SZ}}
-{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+C\+M\+D\+\_\+\+SZ~300}
-
-\mbox{\Hypertarget{ltemc-mqtt_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-mqtt_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\mbox{\Hypertarget{ltemc-mqtt_8c_a7acb4d06a9fd952f51471791f06d60a8}\label{ltemc-mqtt_8c_a7acb4d06a9fd952f51471791f06d60a8}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!PRINTF@{PRINTF}}
 \index{PRINTF@{PRINTF}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
 \doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
-{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+... }\end{DoxyParamCaption})~do \{ rtt\+\_\+printf(c\+\_\+, (f\+\_\+), \#\# \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+); \} while(0)}
 
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55b}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}} 
+atcmd\+\_\+\+\_\+use\+Default\+Timeout&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}} 
+atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_setLockModeManual@{atcmd\_\_setLockModeManual}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!atcmd\_\_setLockModeManual@{atcmd\_\_setLockModeManual}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}} 
+atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_setLockModeAuto@{atcmd\_\_setLockModeAuto}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!atcmd\_\_setLockModeAuto@{atcmd\_\_setLockModeAuto}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}} 
+atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}} 
+A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}} 
+A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result&private declaration; value returned from response parsers indicating a pattern match has not yet been detected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}} 
+http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_txBufferSize@{IOP\_\_txBufferSize}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!IOP\_\_txBufferSize@{IOP\_\_txBufferSize}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}} 
+I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_rxCoreBufferSize@{IOP\_\_rxCoreBufferSize}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!IOP\_\_rxCoreBufferSize@{IOP\_\_rxCoreBufferSize}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}} 
+I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{resultCode\_\_parserPending@{resultCode\_\_parserPending}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!resultCode\_\_parserPending@{resultCode\_\_parserPending}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}} 
+result\+Code\+\_\+\+\_\+parser\+Pending&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NTWK\_\_pdpContextCnt@{NTWK\_\_pdpContextCnt}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!NTWK\_\_pdpContextCnt@{NTWK\_\_pdpContextCnt}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}} 
+N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NTWK\_\_operatorNameSz@{NTWK\_\_operatorNameSz}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!NTWK\_\_operatorNameSz@{NTWK\_\_operatorNameSz}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}} 
+N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_DataInReceiver@{nxp\_\_lsr\_DataInReceiver}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!nxp\_\_lsr\_DataInReceiver@{nxp\_\_lsr\_DataInReceiver}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_THR\_empty@{nxp\_\_lsr\_THR\_empty}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!nxp\_\_lsr\_THR\_empty@{nxp\_\_lsr\_THR\_empty}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_FIFO\_dataError@{nxp\_\_lsr\_FIFO\_dataError}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!nxp\_\_lsr\_FIFO\_dataError@{nxp\_\_lsr\_FIFO\_dataError}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_initCommandCnt@{BGX\_\_initCommandCnt}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!BGX\_\_initCommandCnt@{BGX\_\_initCommandCnt}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}} 
+B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_initCommandAttempts@{BGX\_\_initCommandAttempts}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!BGX\_\_initCommandAttempts@{BGX\_\_initCommandAttempts}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}} 
+B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_powerOnDelay@{BGX\_\_powerOnDelay}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!BGX\_\_powerOnDelay@{BGX\_\_powerOnDelay}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}} 
+B\+G\+X\+\_\+\+\_\+power\+On\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_powerOffDelay@{BGX\_\_powerOffDelay}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!BGX\_\_powerOffDelay@{BGX\_\_powerOffDelay}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}} 
+B\+G\+X\+\_\+\+\_\+power\+Off\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_resetDelay@{BGX\_\_resetDelay}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!BGX\_\_resetDelay@{BGX\_\_resetDelay}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}} 
+B\+G\+X\+\_\+\+\_\+reset\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_baudRate@{BGX\_\_baudRate}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!BGX\_\_baudRate@{BGX\_\_baudRate}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}} 
+B\+G\+X\+\_\+\+\_\+baud\+Rate&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sckt\_\_resultCode\_previouslyOpen@{sckt\_\_resultCode\_previouslyOpen}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!sckt\_\_resultCode\_previouslyOpen@{sckt\_\_resultCode\_previouslyOpen}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}} 
+sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sckt\_\_defaultOpenTimeoutMS@{sckt\_\_defaultOpenTimeoutMS}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!sckt\_\_defaultOpenTimeoutMS@{sckt\_\_defaultOpenTimeoutMS}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}} 
+sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCKT\_\_IRD\_requestMaxSz@{SCKT\_\_IRD\_requestMaxSz}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!SCKT\_\_IRD\_requestMaxSz@{SCKT\_\_IRD\_requestMaxSz}}}\mbox{\Hypertarget{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}\label{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}} 
+S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{ltemc-mqtt_8c_ad52f5ef51a9488dda1c573e26137371a}\label{ltemc-mqtt_8c_ad52f5ef51a9488dda1c573e26137371a}} 
+\mbox{\Hypertarget{ltemc-mqtt_8c_abf9daa62d261abcac1e4cb27c9e72adf}\label{ltemc-mqtt_8c_abf9daa62d261abcac1e4cb27c9e72adf}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!asm@{asm}}
+\index{asm@{asm}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{asm()}{asm()}}
+{\footnotesize\ttfamily asm (\begin{DoxyParamCaption}\item[{\char`\"{}.global \+\_\+printf\+\_\+float\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_afb874ed8fe83efb81a6e206a00059ad0}\label{ltemc-mqtt_8c_afb874ed8fe83efb81a6e206a00059ad0}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_close@{mqtt\_close}}
 \index{mqtt\_close@{mqtt\_close}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
 \doxysubsubsection{\texorpdfstring{mqtt\_close()}{mqtt\_close()}}
-{\footnotesize\ttfamily void mqtt\+\_\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void mqtt\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl }\end{DoxyParamCaption})}
 
 
 
 Disconnect and close a connection to a M\+Q\+TT server. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em socket\+Id} & -\/ The socket based identifier for the connection to close \\
+\begin{DoxyParams}{Parameters}
+{\em mqtt\+Ctrl} & \mbox{[}in\mbox{]} Pointer to M\+Q\+TT type stream control to operate on. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-mqtt_8c_ac72b2188722710984f36386c7793cc7c}\label{ltemc-mqtt_8c_ac72b2188722710984f36386c7793cc7c}} 
+\mbox{\Hypertarget{ltemc-mqtt_8c_aa10d9f4c2b26ec478eeee8056081d021}\label{ltemc-mqtt_8c_aa10d9f4c2b26ec478eeee8056081d021}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_connect@{mqtt\_connect}}
 \index{mqtt\_connect@{mqtt\_connect}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
 \doxysubsubsection{\texorpdfstring{mqtt\_connect()}{mqtt\_connect()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+connect (\begin{DoxyParamCaption}\item[{const char $\ast$}]{client\+Id,  }\item[{const char $\ast$}]{username,  }\item[{const char $\ast$}]{password,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a455558a85512fdfa977572eae49314c0}{mqtt\+Session\+\_\+t}}}]{clean\+Session }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t mqtt\+\_\+connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl,  }\item[{const char $\ast$}]{client\+Id,  }\item[{const char $\ast$}]{username,  }\item[{const char $\ast$}]{password,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a455558a85512fdfa977572eae49314c0}{mqtt\+Session\+\_\+t}}}]{clean\+Session }\end{DoxyParamCaption})}
 
 
 
@@ -98,6 +266,8 @@ Connect (authenticate) to a M\+Q\+TT server.
 
 
 \begin{DoxyParams}{Parameters}
+{\em mqtt\+Ctrl} & \mbox{[}in\mbox{]} Pointer to M\+Q\+TT type stream control to operate on. \\
+\hline
 {\em client\+Id} & \mbox{[}in\mbox{]} -\/ The client or device identifier for the connection. \\
 \hline
 {\em username} & \mbox{[}in\mbox{]} -\/ The user identifier or name for the connection to authenticate. \\
@@ -110,31 +280,73 @@ Connect (authenticate) to a M\+Q\+TT server.
 \begin{DoxyReturn}{Returns}
 A result\+Code\+\_\+t value indicating the success or type of failure, OK = 200. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-mqtt_8c_a8051af90648cef323dd3d207f477657b}\label{ltemc-mqtt_8c_a8051af90648cef323dd3d207f477657b}} 
-\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_create@{mqtt\_create}}
-\index{mqtt\_create@{mqtt\_create}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
-\doxysubsubsection{\texorpdfstring{mqtt\_create()}{mqtt\_create()}}
-{\footnotesize\ttfamily void mqtt\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-mqtt_8c_a3615ae26f711acc2c3caca74260fb7a8}\label{ltemc-mqtt_8c_a3615ae26f711acc2c3caca74260fb7a8}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_getLastBufferReqd@{mqtt\_getLastBufferReqd}}
+\index{mqtt\_getLastBufferReqd@{mqtt\_getLastBufferReqd}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_getLastBufferReqd()}{mqtt\_getLastBufferReqd()}}
+{\footnotesize\ttfamily uint16\+\_\+t mqtt\+\_\+get\+Last\+Buffer\+Reqd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_a2b686fdb5fb861c9d6283fd7ca1a83da}\label{ltemc-mqtt_8c_a2b686fdb5fb861c9d6283fd7ca1a83da}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_getMsgId@{mqtt\_getMsgId}}
+\index{mqtt\_getMsgId@{mqtt\_getMsgId}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_getMsgId()}{mqtt\_getMsgId()}}
+{\footnotesize\ttfamily uint16\+\_\+t mqtt\+\_\+get\+Msg\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-mqtt_8c_aa90563e785d692af76fbb8b0999ef22d}\label{ltemc-mqtt_8c_aa90563e785d692af76fbb8b0999ef22d}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_getStatus@{mqtt\_getStatus}}
+\index{mqtt\_getStatus@{mqtt\_getStatus}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_getStatus()}{mqtt\_getStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} mqtt\+\_\+get\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl,  }\item[{const char $\ast$}]{host }\end{DoxyParamCaption})}
 
 
 
-Initialize M\+Q\+TT service structure and add it to L\+T\+Em1c services. 
-
-\mbox{\Hypertarget{ltemc-mqtt_8c_a2e7d6a65ee3363eae8283f57d686a4c4}\label{ltemc-mqtt_8c_a2e7d6a65ee3363eae8283f57d686a4c4}} 
-\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_doWork@{mqtt\_doWork}}
-\index{mqtt\_doWork@{mqtt\_doWork}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
-\doxysubsubsection{\texorpdfstring{mqtt\_doWork()}{mqtt\_doWork()}}
-{\footnotesize\ttfamily void mqtt\+\_\+do\+Work (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Query the status of the M\+Q\+TT server state. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em mqtt\+Ctrl} & \mbox{[}in\mbox{]} Pointer to M\+Q\+TT type stream control to operate on. \\
+\hline
+{\em host} & \mbox{[}in\mbox{]} A char string to match with the currently connected server. Host is not checked if empty string passed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A mqtt\+Status\+\_\+t value indicating the state of the M\+Q\+TT connection. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mqtt_8c_aa55c5ff1c379910b467c77294aa7460f}\label{ltemc-mqtt_8c_aa55c5ff1c379910b467c77294aa7460f}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_initControl@{mqtt\_initControl}}
+\index{mqtt\_initControl@{mqtt\_initControl}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_initControl()}{mqtt\_initControl()}}
+{\footnotesize\ttfamily void mqtt\+\_\+init\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}]{data\+Cntxt,  }\item[{bool}]{use\+Tls,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}}}]{use\+Mqtt\+Version,  }\item[{uint8\+\_\+t $\ast$}]{recv\+Buf,  }\item[{uint16\+\_\+t}]{recv\+Buf\+Sz,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a511663720bdcd80c97bef4b2804b4196}{mqtt\+Recv\+Func\+\_\+t}}}]{recv\+Callback }\end{DoxyParamCaption})}
 
-Performs background tasks to advance M\+Q\+TT pipeline dataflows. 
 
-\mbox{\Hypertarget{ltemc-mqtt_8c_a2a633eb17a04cfcf8638ec75fdefcff0}\label{ltemc-mqtt_8c_a2a633eb17a04cfcf8638ec75fdefcff0}} 
+
+Query the status of the M\+Q\+TT server state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mqtt\+Ctrl} & \mbox{[}in\mbox{]} Pointer to M\+Q\+TT control structure governing communications. \\
+\hline
+{\em data\+Cntxt} & \mbox{[}in\mbox{]} Data context to host this protocol stream. \\
+\hline
+{\em use\+Tls} & \mbox{[}in\mbox{]} Specifies if a S\+S\+L/\+T\+LS configuration has been applied to data context to protect communications. \\
+\hline
+{\em use\+Mqtt\+Version} & \mbox{[}in\mbox{]} Specifies the M\+Q\+TT protocol revision to use for communications.\\
+\hline
+{\em recv\+Buf} & \mbox{[}in\mbox{]} Pointer to application provided receive data buffer. \\
+\hline
+{\em recv\+Buf\+Sz} & \mbox{[}in\mbox{]} Size of provided data buffer. \\
+\hline
+{\em recv\+Callback} & \mbox{[}in\mbox{]} Callback function to be invoked when received data is ready.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A mqtt object to govern operations for this protocol stream value indicating the state of the M\+Q\+TT connection. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mqtt_8c_accc88867fece34baa7b992d3ab60d4aa}\label{ltemc-mqtt_8c_accc88867fece34baa7b992d3ab60d4aa}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_open@{mqtt\_open}}
 \index{mqtt\_open@{mqtt\_open}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
 \doxysubsubsection{\texorpdfstring{mqtt\_open()}{mqtt\_open()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{host,  }\item[{uint16\+\_\+t}]{port,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_af4fb66f436707c44f2e350dbc5108224}{ssl\+Version\+\_\+t}}}]{use\+Ssl\+Version,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}}}]{use\+Mqtt\+Version }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t mqtt\+\_\+open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl,  }\item[{const char $\ast$}]{host,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
 
 
 
@@ -142,23 +354,21 @@ Open a remote M\+Q\+TT server for use.
 
 
 \begin{DoxyParams}{Parameters}
+{\em mqtt\+Ctrl} & \mbox{[}in\mbox{]} M\+Q\+TT type stream control to operate on. \\
+\hline
 {\em host} & \mbox{[}in\mbox{]} The host IP address or name of the remote server. \\
 \hline
-{\em port} & \mbox{[}in\mbox{]} The IP port number to use for the communications. \\
-\hline
-{\em use\+Ssl\+Version} & \mbox{[}in\mbox{]} Specifies the version and options for use of S\+SL to protect communications. \\
-\hline
-{\em use\+Mqtt\+Version} & \mbox{[}in\mbox{]} Specifies the M\+Q\+TT protocol revision to use for communications.\\
+{\em port} & \mbox{[}in\mbox{]} The IP port number to use for the communications.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 A result\+Code\+\_\+t value indicating the success or type of failure. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-mqtt_8c_ac840825f9f828ae6b756cc2f9ede3569}\label{ltemc-mqtt_8c_ac840825f9f828ae6b756cc2f9ede3569}} 
+\mbox{\Hypertarget{ltemc-mqtt_8c_ab008a6b06b403798a785036d5bf06629}\label{ltemc-mqtt_8c_ab008a6b06b403798a785036d5bf06629}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_publish@{mqtt\_publish}}
 \index{mqtt\_publish@{mqtt\_publish}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
 \doxysubsubsection{\texorpdfstring{mqtt\_publish()}{mqtt\_publish()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+publish (\begin{DoxyParamCaption}\item[{const char $\ast$}]{topic,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}}}]{qos,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t mqtt\+\_\+publish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl,  }\item[{const char $\ast$}]{topic,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}}}]{qos,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
 
 
 
@@ -166,6 +376,8 @@ Publish a message to server.
 
 
 \begin{DoxyParams}{Parameters}
+{\em mqtt\+Ctrl} & \mbox{[}in\mbox{]} Pointer to M\+Q\+TT type stream control to operate on. \\
+\hline
 {\em topic} & \mbox{[}in\mbox{]} -\/ Pointer to the message topic (see your server for topic formatting details). \\
 \hline
 {\em qos} & \mbox{[}in\mbox{]} -\/ The M\+Q\+TT Q\+OS to be assigned to sent message. \\
@@ -176,31 +388,11 @@ Publish a message to server.
 \begin{DoxyReturn}{Returns}
 A result\+Code\+\_\+t value indicating the success or type of failure (http status type code). 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-mqtt_8c_aefdeff1177520d62588b48a41a5e8045}\label{ltemc-mqtt_8c_aefdeff1177520d62588b48a41a5e8045}} 
-\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_status@{mqtt\_status}}
-\index{mqtt\_status@{mqtt\_status}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
-\doxysubsubsection{\texorpdfstring{mqtt\_status()}{mqtt\_status()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} mqtt\+\_\+status (\begin{DoxyParamCaption}\item[{const char $\ast$}]{host,  }\item[{bool}]{force }\end{DoxyParamCaption})}
-
-
-
-Query the status of the M\+Q\+TT server state. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em host} & \mbox{[}in\mbox{]} A char string to match with the currently connected server. Host is not checked if empty string passed. \\
-\hline
-{\em force} & \mbox{[}in\mbox{]} If true query B\+Gx for current state, otherwise return internal property value\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A mqtt\+Status\+\_\+t value indicating the state of the M\+Q\+TT connection. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-mqtt_8c_a4f91e63bc1ee41e58948d1feaae1b1a2}\label{ltemc-mqtt_8c_a4f91e63bc1ee41e58948d1feaae1b1a2}} 
+\mbox{\Hypertarget{ltemc-mqtt_8c_adc8032ed4b4fd1d27f14183965a439b5}\label{ltemc-mqtt_8c_adc8032ed4b4fd1d27f14183965a439b5}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_subscribe@{mqtt\_subscribe}}
 \index{mqtt\_subscribe@{mqtt\_subscribe}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
 \doxysubsubsection{\texorpdfstring{mqtt\_subscribe()}{mqtt\_subscribe()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+subscribe (\begin{DoxyParamCaption}\item[{const char $\ast$}]{topic,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}}}]{qos,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a98539737eefd41c88388bada5c4116b4}{mqtt\+\_\+recv\+Func\+\_\+t}}}]{recv\+\_\+func }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint8\+\_\+t mqtt\+\_\+subscribe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl,  }\item[{const char $\ast$}]{topic,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}}}]{qos }\end{DoxyParamCaption})}
 
 
 
@@ -208,21 +400,21 @@ Subscribe to a topic on the M\+Q\+TT server.
 
 
 \begin{DoxyParams}{Parameters}
+{\em mqtt\+Ctrl} & \mbox{[}in\mbox{]} Pointer to M\+Q\+TT type stream control to operate on. \\
+\hline
 {\em topic} & \mbox{[}in\mbox{]} -\/ The messaging topic to subscribe to. \\
 \hline
-{\em qos} & \mbox{[}in\mbox{]} -\/ The M\+Q\+TT Q\+OS level for messages subscribed to. \\
-\hline
-{\em recv\+\_\+func} & \mbox{[}in\mbox{]} -\/ The receiver function in the application to receive subscribed messages on arrival.\\
+{\em qos} & \mbox{[}in\mbox{]} -\/ The M\+Q\+TT Q\+OS level for messages subscribed to.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A result\+Code\+\_\+t value indicating the success or type of failure, OK = 200. 
+The topic index handle. 0x\+FF indicates the topic subscription was unsuccessful 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-mqtt_8c_a438017fd271d124a86605407edd6e3a1}\label{ltemc-mqtt_8c_a438017fd271d124a86605407edd6e3a1}} 
+\mbox{\Hypertarget{ltemc-mqtt_8c_a4052b98fe0795af64f4fe611ed007302}\label{ltemc-mqtt_8c_a4052b98fe0795af64f4fe611ed007302}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_unsubscribe@{mqtt\_unsubscribe}}
 \index{mqtt\_unsubscribe@{mqtt\_unsubscribe}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
 \doxysubsubsection{\texorpdfstring{mqtt\_unsubscribe()}{mqtt\_unsubscribe()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lq_types_8h_a700eddbbbf80623f66eb7ae253ecd887}{result\+Code\+\_\+t}} mqtt\+\_\+unsubscribe (\begin{DoxyParamCaption}\item[{const char $\ast$}]{topic }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t mqtt\+\_\+unsubscribe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl,  }\item[{const char $\ast$}]{topic }\end{DoxyParamCaption})}
 
 
 
@@ -230,9 +422,24 @@ Unsubscribe to a topic on the M\+Q\+TT server.
 
 
 \begin{DoxyParams}{Parameters}
+{\em mqtt\+Ctrl} & \mbox{[}in\mbox{]} Pointer to M\+Q\+TT type stream control to operate on. \\
+\hline
 {\em topic} & \mbox{[}in\mbox{]} -\/ The messaging topic to unsubscribe from.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 A result\+Code\+\_\+t (http status type) value indicating the success or type of failure, OK = 200. 
 \end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ltemc-mqtt_8c_a5f9b6913ff818fbc74934a69849fb48b}\label{ltemc-mqtt_8c_a5f9b6913ff818fbc74934a69849fb48b}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!g\_ltem@{g\_ltem}}
+\index{g\_ltem@{g\_ltem}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{g\_ltem}{g\_ltem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} g\+\_\+ltem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+The L\+T\+Em \char`\"{}object\char`\"{}. 
+

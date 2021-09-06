@@ -1,0 +1,245 @@
+\hypertarget{structhttp_ctrl__tag}{}\doxysection{http\+Ctrl\+\_\+tag Struct Reference}
+\label{structhttp_ctrl__tag}\index{httpCtrl\_tag@{httpCtrl\_tag}}
+
+
+{\ttfamily \#include $<$ltemc-\/http.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_a0bbe3acc8af66c269be9842e1ba3b4e8}{ctrl\+Magic}}
+\begin{DoxyCompactList}\small\item\em magic flag to validate incoming requests \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} \mbox{\hyperlink{structhttp_ctrl__tag_a0d521bc1dcfb2a34dc497b7ee2232d4a}{data\+Cntxt}}
+\begin{DoxyCompactList}\small\item\em Data context where this control operates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}} \mbox{\hyperlink{structhttp_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}{protocol}}
+\begin{DoxyCompactList}\small\item\em Socket\textquotesingle{}s protocol \+: U\+D\+P/\+T\+C\+P/\+S\+SL. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structhttp_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}{use\+Tls}}
+\begin{DoxyCompactList}\small\item\em flag indicating S\+S\+L/\+T\+LS applied to stream \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} \mbox{\hyperlink{structhttp_ctrl__tag_abf49f0c9fac1ef9ac027dc3af5fece67}{recv\+Buf\+Ctrl}}
+\begin{DoxyCompactList}\small\item\em RX smart buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}{http\+Recv\+Func\+\_\+t}} \mbox{\hyperlink{structhttp_ctrl__tag_ad90f4f52c64809ad22571c8ffe0b1a65}{data\+Recv\+CB}}
+\begin{DoxyCompactList}\small\item\em callback to application, signals data ready \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_a041584a6e1a61e146aa3852c0be60744}{buf\+Page\+Swap\+Tck}}
+\begin{DoxyCompactList}\small\item\em last check for U\+R\+C/data\+Pending \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_ad4525893215cd6b3f3ed59908bc6dda1}{buf\+Page\+Timeout}}
+\begin{DoxyCompactList}\small\item\em set at init for do\+Work A\+S\+S\+E\+RT, if timeout reached chance for a data overflow on socket \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structhttp_ctrl__tag_a16d9da1506ec26ad72df4e883b884ae5}{url\+Host}} \mbox{[}\mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcab5a3f3a7b1573f2e5bed7dd16098b096}{http\+\_\+\+\_\+url\+Host\+Sz}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em host portion of U\+RL for G\+E\+T/\+P\+O\+ST requests \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structhttp_ctrl__tag_ad95114e759c85069103a0492f02db5b7}{return\+Response\+Hdrs}}
+\begin{DoxyCompactList}\small\item\em if set true, response headers are included in the returned response \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structhttp_ctrl__tag_adb7a1e99e532f8c2f75408162b910ed8}{cstm\+Hdrs}}
+\begin{DoxyCompactList}\small\item\em custom header content, optional buffer provided by application \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_a9594e3a80f1c90402ef10f2158a2b7eb}{cstm\+Hdrs\+Sz}}
+\begin{DoxyCompactList}\small\item\em size of custom header buffer \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structhttp_ctrl__tag_a3b9fdc0e1601a315fb8529001d27fc38}{request\+Type}}
+\begin{DoxyCompactList}\small\item\em type of current/last request\+: \textquotesingle{}G\textquotesingle{}=G\+ET, \textquotesingle{}P\textquotesingle{}=P\+O\+ST \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-http_8h_aa03ddb83b8bb9dfbd81633b86cf3f5d1}{http\+State\+\_\+t}} \mbox{\hyperlink{structhttp_ctrl__tag_ae2815bd62c196db16e142ccfbea5c2b9}{request\+State}}
+\begin{DoxyCompactList}\small\item\em current state machine variable for H\+T\+TP request \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_a1071f3132982a41053359eef69ccc21c}{bgx\+Error}}
+\begin{DoxyCompactList}\small\item\em B\+Gx sprecific error code returned from G\+E\+T/\+P\+O\+ST. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_abf3669c13d71e6869690e8466b9b1411}{http\+Status}}
+\begin{DoxyCompactList}\small\item\em set to 0 during a request, initialized to 0x\+F\+F\+FF before any request \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_a0280e51e144c396db5421a34d7c0db99}{page\+Size}}
+\begin{DoxyCompactList}\small\item\em if provided in page response, the page size \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_a04a6cd9b8590c2b39e66072b56ddee2f}{page\+Remaining}}
+\begin{DoxyCompactList}\small\item\em set to page size (if incl in respose) counts down to 0 (used for optimizing page end parsing) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structhttp_ctrl__tag_a4974a0e69b5526617bef8af3a18b4b04}{page\+Cancellation}}
+\begin{DoxyCompactList}\small\item\em set to abandon further page loading \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structhttp_ctrl__tag_a1071f3132982a41053359eef69ccc21c}\label{structhttp_ctrl__tag_a1071f3132982a41053359eef69ccc21c}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!bgxError@{bgxError}}
+\index{bgxError@{bgxError}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{bgxError}{bgxError}}
+{\footnotesize\ttfamily uint16\+\_\+t bgx\+Error}
+
+
+
+B\+Gx sprecific error code returned from G\+E\+T/\+P\+O\+ST. 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a041584a6e1a61e146aa3852c0be60744}\label{structhttp_ctrl__tag_a041584a6e1a61e146aa3852c0be60744}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!bufPageSwapTck@{bufPageSwapTck}}
+\index{bufPageSwapTck@{bufPageSwapTck}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{bufPageSwapTck}{bufPageSwapTck}}
+{\footnotesize\ttfamily uint32\+\_\+t buf\+Page\+Swap\+Tck}
+
+
+
+last check for U\+R\+C/data\+Pending 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_ad4525893215cd6b3f3ed59908bc6dda1}\label{structhttp_ctrl__tag_ad4525893215cd6b3f3ed59908bc6dda1}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!bufPageTimeout@{bufPageTimeout}}
+\index{bufPageTimeout@{bufPageTimeout}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{bufPageTimeout}{bufPageTimeout}}
+{\footnotesize\ttfamily uint32\+\_\+t buf\+Page\+Timeout}
+
+
+
+set at init for do\+Work A\+S\+S\+E\+RT, if timeout reached chance for a data overflow on socket 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_adb7a1e99e532f8c2f75408162b910ed8}\label{structhttp_ctrl__tag_adb7a1e99e532f8c2f75408162b910ed8}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!cstmHdrs@{cstmHdrs}}
+\index{cstmHdrs@{cstmHdrs}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{cstmHdrs}{cstmHdrs}}
+{\footnotesize\ttfamily char$\ast$ cstm\+Hdrs}
+
+
+
+custom header content, optional buffer provided by application 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a9594e3a80f1c90402ef10f2158a2b7eb}\label{structhttp_ctrl__tag_a9594e3a80f1c90402ef10f2158a2b7eb}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!cstmHdrsSz@{cstmHdrsSz}}
+\index{cstmHdrsSz@{cstmHdrsSz}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{cstmHdrsSz}{cstmHdrsSz}}
+{\footnotesize\ttfamily uint16\+\_\+t cstm\+Hdrs\+Sz}
+
+
+
+size of custom header buffer 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a0bbe3acc8af66c269be9842e1ba3b4e8}\label{structhttp_ctrl__tag_a0bbe3acc8af66c269be9842e1ba3b4e8}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!ctrlMagic@{ctrlMagic}}
+\index{ctrlMagic@{ctrlMagic}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{ctrlMagic}{ctrlMagic}}
+{\footnotesize\ttfamily uint8\+\_\+t ctrl\+Magic}
+
+
+
+magic flag to validate incoming requests 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a0d521bc1dcfb2a34dc497b7ee2232d4a}\label{structhttp_ctrl__tag_a0d521bc1dcfb2a34dc497b7ee2232d4a}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!dataCntxt@{dataCntxt}}
+\index{dataCntxt@{dataCntxt}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{dataCntxt}{dataCntxt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt}
+
+
+
+Data context where this control operates. 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_ad90f4f52c64809ad22571c8ffe0b1a65}\label{structhttp_ctrl__tag_ad90f4f52c64809ad22571c8ffe0b1a65}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!dataRecvCB@{dataRecvCB}}
+\index{dataRecvCB@{dataRecvCB}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{dataRecvCB}{dataRecvCB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}{http\+Recv\+Func\+\_\+t}} data\+Recv\+CB}
+
+
+
+callback to application, signals data ready 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_abf3669c13d71e6869690e8466b9b1411}\label{structhttp_ctrl__tag_abf3669c13d71e6869690e8466b9b1411}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!httpStatus@{httpStatus}}
+\index{httpStatus@{httpStatus}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{httpStatus}{httpStatus}}
+{\footnotesize\ttfamily uint16\+\_\+t http\+Status}
+
+
+
+set to 0 during a request, initialized to 0x\+F\+F\+FF before any request 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a4974a0e69b5526617bef8af3a18b4b04}\label{structhttp_ctrl__tag_a4974a0e69b5526617bef8af3a18b4b04}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!pageCancellation@{pageCancellation}}
+\index{pageCancellation@{pageCancellation}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{pageCancellation}{pageCancellation}}
+{\footnotesize\ttfamily bool page\+Cancellation}
+
+
+
+set to abandon further page loading 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a04a6cd9b8590c2b39e66072b56ddee2f}\label{structhttp_ctrl__tag_a04a6cd9b8590c2b39e66072b56ddee2f}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!pageRemaining@{pageRemaining}}
+\index{pageRemaining@{pageRemaining}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{pageRemaining}{pageRemaining}}
+{\footnotesize\ttfamily uint32\+\_\+t page\+Remaining}
+
+
+
+set to page size (if incl in respose) counts down to 0 (used for optimizing page end parsing) 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a0280e51e144c396db5421a34d7c0db99}\label{structhttp_ctrl__tag_a0280e51e144c396db5421a34d7c0db99}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!pageSize@{pageSize}}
+\index{pageSize@{pageSize}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{pageSize}{pageSize}}
+{\footnotesize\ttfamily uint32\+\_\+t page\+Size}
+
+
+
+if provided in page response, the page size 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}\label{structhttp_ctrl__tag_a60b084aaf44cc3f9359e1e93f92c162f}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!protocol@{protocol}}
+\index{protocol@{protocol}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{protocol}{protocol}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a988399cca5c04587b2bb6e93cad4a06a}{protocol\+\_\+t}} protocol}
+
+
+
+Socket\textquotesingle{}s protocol \+: U\+D\+P/\+T\+C\+P/\+S\+SL. 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_abf49f0c9fac1ef9ac027dc3af5fece67}\label{structhttp_ctrl__tag_abf49f0c9fac1ef9ac027dc3af5fece67}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!recvBufCtrl@{recvBufCtrl}}
+\index{recvBufCtrl@{recvBufCtrl}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{recvBufCtrl}{recvBufCtrl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} recv\+Buf\+Ctrl}
+
+
+
+RX smart buffer. 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_ae2815bd62c196db16e142ccfbea5c2b9}\label{structhttp_ctrl__tag_ae2815bd62c196db16e142ccfbea5c2b9}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!requestState@{requestState}}
+\index{requestState@{requestState}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{requestState}{requestState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-http_8h_aa03ddb83b8bb9dfbd81633b86cf3f5d1}{http\+State\+\_\+t}} request\+State}
+
+
+
+current state machine variable for H\+T\+TP request 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a3b9fdc0e1601a315fb8529001d27fc38}\label{structhttp_ctrl__tag_a3b9fdc0e1601a315fb8529001d27fc38}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!requestType@{requestType}}
+\index{requestType@{requestType}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{requestType}{requestType}}
+{\footnotesize\ttfamily char request\+Type}
+
+
+
+type of current/last request\+: \textquotesingle{}G\textquotesingle{}=G\+ET, \textquotesingle{}P\textquotesingle{}=P\+O\+ST 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_ad95114e759c85069103a0492f02db5b7}\label{structhttp_ctrl__tag_ad95114e759c85069103a0492f02db5b7}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!returnResponseHdrs@{returnResponseHdrs}}
+\index{returnResponseHdrs@{returnResponseHdrs}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{returnResponseHdrs}{returnResponseHdrs}}
+{\footnotesize\ttfamily bool return\+Response\+Hdrs}
+
+
+
+if set true, response headers are included in the returned response 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a16d9da1506ec26ad72df4e883b884ae5}\label{structhttp_ctrl__tag_a16d9da1506ec26ad72df4e883b884ae5}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!urlHost@{urlHost}}
+\index{urlHost@{urlHost}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{urlHost}{urlHost}}
+{\footnotesize\ttfamily char url\+Host\mbox{[}\mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcab5a3f3a7b1573f2e5bed7dd16098b096}{http\+\_\+\+\_\+url\+Host\+Sz}}\mbox{]}}
+
+
+
+host portion of U\+RL for G\+E\+T/\+P\+O\+ST requests 
+
+\mbox{\Hypertarget{structhttp_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}\label{structhttp_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}} 
+\index{httpCtrl\_tag@{httpCtrl\_tag}!useTls@{useTls}}
+\index{useTls@{useTls}!httpCtrl\_tag@{httpCtrl\_tag}}
+\doxysubsubsection{\texorpdfstring{useTls}{useTls}}
+{\footnotesize\ttfamily bool use\+Tls}
+
+
+
+flag indicating S\+S\+L/\+T\+LS applied to stream 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ltemc-http_8h}{ltemc-\/http.\+h}}\end{DoxyCompactItemize}

@@ -1,19 +1,60 @@
 \hypertarget{ltemc-quectel-bg_8c}{}\doxysection{src/ltemc-\/quectel-\/bg.c File Reference}
 \label{ltemc-quectel-bg_8c}\index{src/ltemc-\/quectel-\/bg.c@{src/ltemc-\/quectel-\/bg.c}}
-{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/quectel-\/bg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltemc-\/internal.\+h\char`\"{}}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{ltemc-quectel-bg_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
 \item 
 \#define \mbox{\hyperlink{ltemc-quectel-bg_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{ltemc-quectel-bg_8c_afbf0923e7059933b31dda38d751cb01a}{B\+G96\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+C\+O\+U\+NT}}~1
+enum \{ \newline
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}{atcmd\+\_\+\+\_\+use\+Default\+Timeout}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}{atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto}} = 1, 
+\newline
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}{A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}{A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}{http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec}} = 60, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}{I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size}} = 1800, 
+\newline
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}} = 192, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS}} = 6, 
+\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
+\newline
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 3, 
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}{N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz}} = 20, 
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}{nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver}} = 0x01U, 
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
+\newline
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}{nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error}} = 0x80U, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}{B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt}} = 1, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}{B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts}} = 2, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
+\newline
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}{B\+G\+X\+\_\+\+\_\+power\+Off\+Delay}} = 1500, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}{B\+G\+X\+\_\+\+\_\+reset\+Delay}} = 300, 
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}{B\+G\+X\+\_\+\+\_\+baud\+Rate}} = 115200, 
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
+\newline
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}{sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS}} = 60000, 
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}{S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz}} = 1500
+ \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{ltemc-quectel-bg_8c_acb7ce91ebb048c2a8e9255fed32d4564}{qbg\+\_\+power\+On}} ()
+bool \mbox{\hyperlink{ltemc-quectel-bg_8c_a931465ba717e93a2fc27aec299a5977f}{S\+\_\+issue\+Start\+Command}} (const char $\ast$cmd\+Str)
+\item 
+bool \mbox{\hyperlink{ltemc-quectel-bg_8c_adb09a74d94dbf4d3e6b6cae45196aaff}{qbg\+\_\+is\+Power\+On}} ()
+\begin{DoxyCompactList}\small\item\em Check for B\+Gx power status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-quectel-bg_8c_af38f43891616b10e764a40f62dd67d99}{qbg\+\_\+power\+On}} ()
 \begin{DoxyCompactList}\small\item\em Power on the B\+Gx module. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8c_a25333f44c61fbf3627065cbd31375a1e}{qbg\+\_\+power\+Off}} ()
 \begin{DoxyCompactList}\small\item\em Powers off the B\+Gx module. \end{DoxyCompactList}\item 
@@ -31,7 +72,9 @@ void \mbox{\hyperlink{ltemc-quectel-bg_8c_acbc1ca7e44fafdcebb214e74547761de}{qbg
 \begin{DoxyCompactItemize}
 \item 
 const char $\ast$const \mbox{\hyperlink{ltemc-quectel-bg_8c_a1d4f4dde31edc393e62b6278a0218d24}{qbg\+\_\+init\+Cmds}} \mbox{[}$\,$\mbox{]}
-\end{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} \mbox{\hyperlink{ltemc-quectel-bg_8c_a5f9b6913ff818fbc74934a69849fb48b}{g\+\_\+ltem}}
+\begin{DoxyCompactList}\small\item\em The L\+T\+Em \char`\"{}object\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -41,12 +84,6 @@ const char $\ast$const \mbox{\hyperlink{ltemc-quectel-bg_8c_a1d4f4dde31edc393e62
 \doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
 {\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
 
-\mbox{\Hypertarget{ltemc-quectel-bg_8c_afbf0923e7059933b31dda38d751cb01a}\label{ltemc-quectel-bg_8c_afbf0923e7059933b31dda38d751cb01a}} 
-\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!BG96\_INIT\_COMMAND\_COUNT@{BG96\_INIT\_COMMAND\_COUNT}}
-\index{BG96\_INIT\_COMMAND\_COUNT@{BG96\_INIT\_COMMAND\_COUNT}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
-\doxysubsubsection{\texorpdfstring{BG96\_INIT\_COMMAND\_COUNT}{BG96\_INIT\_COMMAND\_COUNT}}
-{\footnotesize\ttfamily \#define B\+G96\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+C\+O\+U\+NT~1}
-
 \mbox{\Hypertarget{ltemc-quectel-bg_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-quectel-bg_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
 \index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!PRINTF@{PRINTF}}
 \index{PRINTF@{PRINTF}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
@@ -55,7 +92,133 @@ const char $\ast$const \mbox{\hyperlink{ltemc-quectel-bg_8c_a1d4f4dde31edc393e62
 
 
 
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55b}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}} 
+atcmd\+\_\+\+\_\+use\+Default\+Timeout&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}} 
+atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_setLockModeManual@{atcmd\_\_setLockModeManual}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!atcmd\_\_setLockModeManual@{atcmd\_\_setLockModeManual}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}} 
+atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_setLockModeAuto@{atcmd\_\_setLockModeAuto}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!atcmd\_\_setLockModeAuto@{atcmd\_\_setLockModeAuto}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}} 
+atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}} 
+A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}} 
+A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result&private declaration; value returned from response parsers indicating a pattern match has not yet been detected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}} 
+http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_txBufferSize@{IOP\_\_txBufferSize}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!IOP\_\_txBufferSize@{IOP\_\_txBufferSize}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}} 
+I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_rxCoreBufferSize@{IOP\_\_rxCoreBufferSize}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!IOP\_\_rxCoreBufferSize@{IOP\_\_rxCoreBufferSize}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}} 
+I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{resultCode\_\_parserPending@{resultCode\_\_parserPending}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!resultCode\_\_parserPending@{resultCode\_\_parserPending}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}} 
+result\+Code\+\_\+\+\_\+parser\+Pending&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NTWK\_\_pdpContextCnt@{NTWK\_\_pdpContextCnt}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!NTWK\_\_pdpContextCnt@{NTWK\_\_pdpContextCnt}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}} 
+N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NTWK\_\_operatorNameSz@{NTWK\_\_operatorNameSz}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!NTWK\_\_operatorNameSz@{NTWK\_\_operatorNameSz}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}} 
+N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_DataInReceiver@{nxp\_\_lsr\_DataInReceiver}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!nxp\_\_lsr\_DataInReceiver@{nxp\_\_lsr\_DataInReceiver}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_THR\_empty@{nxp\_\_lsr\_THR\_empty}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!nxp\_\_lsr\_THR\_empty@{nxp\_\_lsr\_THR\_empty}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nxp\_\_lsr\_FIFO\_dataError@{nxp\_\_lsr\_FIFO\_dataError}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!nxp\_\_lsr\_FIFO\_dataError@{nxp\_\_lsr\_FIFO\_dataError}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}} 
+nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_initCommandCnt@{BGX\_\_initCommandCnt}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!BGX\_\_initCommandCnt@{BGX\_\_initCommandCnt}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}} 
+B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_initCommandAttempts@{BGX\_\_initCommandAttempts}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!BGX\_\_initCommandAttempts@{BGX\_\_initCommandAttempts}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}} 
+B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_powerOnDelay@{BGX\_\_powerOnDelay}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!BGX\_\_powerOnDelay@{BGX\_\_powerOnDelay}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}} 
+B\+G\+X\+\_\+\+\_\+power\+On\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_powerOffDelay@{BGX\_\_powerOffDelay}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!BGX\_\_powerOffDelay@{BGX\_\_powerOffDelay}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}} 
+B\+G\+X\+\_\+\+\_\+power\+Off\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_resetDelay@{BGX\_\_resetDelay}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!BGX\_\_resetDelay@{BGX\_\_resetDelay}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}} 
+B\+G\+X\+\_\+\+\_\+reset\+Delay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BGX\_\_baudRate@{BGX\_\_baudRate}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!BGX\_\_baudRate@{BGX\_\_baudRate}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}} 
+B\+G\+X\+\_\+\+\_\+baud\+Rate&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sckt\_\_resultCode\_previouslyOpen@{sckt\_\_resultCode\_previouslyOpen}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!sckt\_\_resultCode\_previouslyOpen@{sckt\_\_resultCode\_previouslyOpen}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}} 
+sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sckt\_\_defaultOpenTimeoutMS@{sckt\_\_defaultOpenTimeoutMS}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!sckt\_\_defaultOpenTimeoutMS@{sckt\_\_defaultOpenTimeoutMS}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}} 
+sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCKT\_\_IRD\_requestMaxSz@{SCKT\_\_IRD\_requestMaxSz}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!SCKT\_\_IRD\_requestMaxSz@{SCKT\_\_IRD\_requestMaxSz}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}} 
+S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-quectel-bg_8c_adb09a74d94dbf4d3e6b6cae45196aaff}\label{ltemc-quectel-bg_8c_adb09a74d94dbf4d3e6b6cae45196aaff}} 
+\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_isPowerOn@{qbg\_isPowerOn}}
+\index{qbg\_isPowerOn@{qbg\_isPowerOn}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
+\doxysubsubsection{\texorpdfstring{qbg\_isPowerOn()}{qbg\_isPowerOn()}}
+{\footnotesize\ttfamily bool qbg\+\_\+is\+Power\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check for B\+Gx power status. 
+
+\begin{DoxyReturn}{Returns}
+B\+Gx power state 
+\end{DoxyReturn}
 \mbox{\Hypertarget{ltemc-quectel-bg_8c_a25333f44c61fbf3627065cbd31375a1e}\label{ltemc-quectel-bg_8c_a25333f44c61fbf3627065cbd31375a1e}} 
 \index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_powerOff@{qbg\_powerOff}}
 \index{qbg\_powerOff@{qbg\_powerOff}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
@@ -66,11 +229,11 @@ const char $\ast$const \mbox{\hyperlink{ltemc-quectel-bg_8c_a1d4f4dde31edc393e62
 
 Powers off the B\+Gx module. 
 
-\mbox{\Hypertarget{ltemc-quectel-bg_8c_acb7ce91ebb048c2a8e9255fed32d4564}\label{ltemc-quectel-bg_8c_acb7ce91ebb048c2a8e9255fed32d4564}} 
+\mbox{\Hypertarget{ltemc-quectel-bg_8c_af38f43891616b10e764a40f62dd67d99}\label{ltemc-quectel-bg_8c_af38f43891616b10e764a40f62dd67d99}} 
 \index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_powerOn@{qbg\_powerOn}}
 \index{qbg\_powerOn@{qbg\_powerOn}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
 \doxysubsubsection{\texorpdfstring{qbg\_powerOn()}{qbg\_powerOn()}}
-{\footnotesize\ttfamily bool qbg\+\_\+power\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void qbg\+\_\+power\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -129,9 +292,25 @@ Configure R\+AT searching sequence.
 
 Initializes the B\+Gx module. 
 
+\mbox{\Hypertarget{ltemc-quectel-bg_8c_a931465ba717e93a2fc27aec299a5977f}\label{ltemc-quectel-bg_8c_a931465ba717e93a2fc27aec299a5977f}} 
+\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!S\_issueStartCommand@{S\_issueStartCommand}}
+\index{S\_issueStartCommand@{S\_issueStartCommand}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
+\doxysubsubsection{\texorpdfstring{S\_issueStartCommand()}{S\_issueStartCommand()}}
+{\footnotesize\ttfamily bool S\+\_\+issue\+Start\+Command (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd\+Str }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ltemc-quectel-bg_8c_a5f9b6913ff818fbc74934a69849fb48b}\label{ltemc-quectel-bg_8c_a5f9b6913ff818fbc74934a69849fb48b}} 
+\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!g\_ltem@{g\_ltem}}
+\index{g\_ltem@{g\_ltem}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
+\doxysubsubsection{\texorpdfstring{g\_ltem}{g\_ltem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} g\+\_\+ltem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+The L\+T\+Em \char`\"{}object\char`\"{}. 
+
 \mbox{\Hypertarget{ltemc-quectel-bg_8c_a1d4f4dde31edc393e62b6278a0218d24}\label{ltemc-quectel-bg_8c_a1d4f4dde31edc393e62b6278a0218d24}} 
 \index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_initCmds@{qbg\_initCmds}}
 \index{qbg\_initCmds@{qbg\_initCmds}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}

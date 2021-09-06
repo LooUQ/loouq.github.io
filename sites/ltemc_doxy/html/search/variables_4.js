@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['data_1099',['DATA',['../ltemc-nxp-sc16is_8h.html#ab6ea38dfcb975b2e6cc6cb8e6c794d6f',1,'ltemc-nxp-sc16is.h']]],
-  ['data_5fin_5frecvr_1100',['DATA_IN_RECVR',['../ltemc-nxp-sc16is_8h.html#aba07d3d6fcfeca2a544fa5bf9ed7c00e',1,'ltemc-nxp-sc16is.h']]],
-  ['databufferindx_1101',['dataBufferIndx',['../structmqtt__tag.html#adab807efc09cb10f5017455fd0a8f701',1,'mqtt_tag::dataBufferIndx()'],['../structsocket_ctrl__tag.html#adab807efc09cb10f5017455fd0a8f701',1,'socketCtrl_tag::dataBufferIndx()']]],
-  ['datacontext_1102',['dataContext',['../structltem_device__tag.html#a273a8b7c0260d25a374376909ce50436',1,'ltemDevice_tag']]],
-  ['datamode_1103',['dataMode',['../structspi_config__tag.html#a483c401b442ceac95dfc80cc87e7aca1',1,'spiConfig_tag']]],
-  ['datapeer_1104',['dataPeer',['../structiop_buffer__tag.html#ac007cc83d8747f0db51b12bf338b8877',1,'iopBuffer_tag']]],
-  ['datapending_1105',['dataPending',['../structsocket_ctrl__tag.html#a0aa4b1a1d45612b09ac1926c0006ef61',1,'socketCtrl_tag']]],
-  ['datarate_1106',['dataRate',['../structspi_config__tag.html#ae49075e9ecb00fd804abef02be4045db',1,'spiConfig_tag']]],
-  ['dataready_1107',['dataReady',['../structiop_buffer__tag.html#a82a99f40fde1f46139d8a8c5eec8a3aa',1,'iopBuffer_tag']]],
-  ['date_1108',['date',['../structgnss_location__tag.html#ad217ba16d0b42c0e3c986247572e9ec8',1,'gnssLocation_tag']]],
-  ['devicestartmsg_1109',['DeviceStartMsg',['../_az_io_t_hub_01ssl_trace_8txt.html#a1518fbd579a83aa1d26565a66eb47601',1,'AzIoTHub sslTrace.txt']]],
-  ['dir_1110',['dir',['../structgnss__latlon__tag.html#afc966782c25222ee96a1bdd1d4b360f8',1,'gnss_latlon_tag']]],
-  ['divisor_5flatch_5fen_1111',['DIVISOR_LATCH_EN',['../ltemc-nxp-sc16is_8h.html#acd42dc3bb2dfefa64c3581cbd3ed68ac',1,'ltemc-nxp-sc16is.h']]],
-  ['duration_1112',['duration',['../structatcmd_history__tag.html#a49f89df0e765bee620c337c51d397eff',1,'atcmdHistory_tag']]]
+  ['data_1151',['DATA',['../ltemc-nxp-sc16is_8h.html#ab6ea38dfcb975b2e6cc6cb8e6c794d6f',1,'ltemc-nxp-sc16is.h']]],
+  ['data_5fin_5frecvr_1152',['DATA_IN_RECVR',['../ltemc-nxp-sc16is_8h.html#aba07d3d6fcfeca2a544fa5bf9ed7c00e',1,'ltemc-nxp-sc16is.h']]],
+  ['datacntxt_1153',['dataCntxt',['../structhttp_ctrl__tag.html#a0d521bc1dcfb2a34dc497b7ee2232d4a',1,'httpCtrl_tag::dataCntxt()'],['../structmqtt_ctrl__tag.html#a0d521bc1dcfb2a34dc497b7ee2232d4a',1,'mqttCtrl_tag::dataCntxt()'],['../structsckt_ctrl__tag.html#a0d521bc1dcfb2a34dc497b7ee2232d4a',1,'scktCtrl_tag::dataCntxt()'],['../structbase_ctrl__tag.html#a0d521bc1dcfb2a34dc497b7ee2232d4a',1,'baseCtrl_tag::dataCntxt()']]],
+  ['datamode_1154',['dataMode',['../structspi__tag.html#a483c401b442ceac95dfc80cc87e7aca1',1,'spi_tag']]],
+  ['datapending_1155',['dataPending',['../structsckt_ctrl__tag.html#a0aa4b1a1d45612b09ac1926c0006ef61',1,'scktCtrl_tag']]],
+  ['datarate_1156',['dataRate',['../structspi__tag.html#ae49075e9ecb00fd804abef02be4045db',1,'spi_tag']]],
+  ['datarecvcb_1157',['dataRecvCB',['../structhttp_ctrl__tag.html#ad90f4f52c64809ad22571c8ffe0b1a65',1,'httpCtrl_tag::dataRecvCB()'],['../structmqtt_ctrl__tag.html#a9744de27edaf4964cd655295d440ac72',1,'mqttCtrl_tag::dataRecvCB()'],['../structsckt_ctrl__tag.html#afcaedbb7e90d65934218d4eb4f7db690',1,'scktCtrl_tag::dataRecvCB()']]],
+  ['date_1158',['date',['../structgnss_location__tag.html#ad217ba16d0b42c0e3c986247572e9ec8',1,'gnssLocation_tag']]],
+  ['dbg_5furcincmdlock_1159',['dbg_urcInCmdLock',['../ltemc-iop_8c.html#a7b00d49600e4c14d2894e89b89e2a70d',1,'ltemc-iop.c']]],
+  ['devicestartmsg_1160',['DeviceStartMsg',['../_az_io_t_hub_01ssl_trace_8txt.html#a1518fbd579a83aa1d26565a66eb47601',1,'AzIoTHub sslTrace.txt']]],
+  ['dir_1161',['dir',['../structgnss__latlon__tag.html#afc966782c25222ee96a1bdd1d4b360f8',1,'gnss_latlon_tag']]],
+  ['divisor_5flatch_5fen_1162',['DIVISOR_LATCH_EN',['../ltemc-nxp-sc16is_8h.html#acd42dc3bb2dfefa64c3581cbd3ed68ac',1,'ltemc-nxp-sc16is.h']]],
+  ['doworklasttck_1163',['doWorkLastTck',['../structmqtt_ctrl__tag.html#a1adbeaaadf1660241c2cd901a96232bb',1,'mqttCtrl_tag::doWorkLastTck()'],['../structsckt_ctrl__tag.html#a1adbeaaadf1660241c2cd901a96232bb',1,'scktCtrl_tag::doWorkLastTck()']]],
+  ['doworktimeout_1164',['doWorkTimeout',['../structmqtt_ctrl__tag.html#aa98ea8bc77f07a149ecafa27b29beb97',1,'mqttCtrl_tag::doWorkTimeout()'],['../structsckt_ctrl__tag.html#aa98ea8bc77f07a149ecafa27b29beb97',1,'scktCtrl_tag::doWorkTimeout()']]]
 ];

@@ -1,0 +1,310 @@
+\hypertarget{ltemc-tls_8h}{}\doxysection{src/ltemc-\/tls.h File Reference}
+\label{ltemc-tls_8h}\index{src/ltemc-\/tls.h@{src/ltemc-\/tls.h}}
+{\ttfamily \#include \char`\"{}ltemc-\/streams.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lq-\/diagnostics.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtls_options__tag}{tls\+Options\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Return struct for get T\+LC information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}{tls\+Version\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_a61182e3801e1f66177d95fa416341dc2}{tls\+Version\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enum of available S\+SL version options for an S\+SL connection. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109}{tls\+Cipher\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_ac3c7657f825cb66b386b539e2f037b92}{tls\+Cipher\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enum of the available cipher suites for T\+LS processing. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1}{tls\+Cert\+Expiration\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_a82cad7746d9446cc276666b5de2af9aa}{tls\+Cert\+Expiration\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enum of the options for certificate expiration date/time checking. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}{tls\+Security\+Level\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_ae881c2df83ac48f033b492b442067906}{tls\+Security\+Level\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Enum of the certification validation options. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structtls_options__tag}{tls\+Options\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_a7748d21587494b057d7569aeb3be5001}{tls\+Options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Return struct for get T\+LC information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}{tls\+Version\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea2a8d7e664c8fc26985e74f79b8733fc5}{tls\+Version\+\_\+none}} = 255, 
+\mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea77842091b581fbf76b7bedfb3e03f0e9}{tls\+Version\+\_\+ssl30}} = 0, 
+\mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea5f37b2ae6f59b7e50167d574a3decbbe}{tls\+Version\+\_\+tls10}} = 1, 
+\mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ead85c7f74bce601396e63e8fa73dbb2dd}{tls\+Version\+\_\+tls11}} = 2, 
+\newline
+\mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8eae8144a425fddf3de3fe075eb9a8c9678}{tls\+Version\+\_\+tls12}} = 3, 
+\mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8eab57f5ac25177daf7f6fd1f28b321e0a4}{tls\+Version\+\_\+any}} = 4, 
+\mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea6e4c469d9aeced361472efd7517de1d3}{tls\+Version\+\_\+default}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of available S\+SL version options for an S\+SL connection. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109}{tls\+Cipher\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a0afe8298d2f5647da36d0fb26751a316}{tls\+Cipher\+\_\+rsa\+Aes256\+Cbc\+Sha}} = 0X0035, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a9e77ee5dfcf50a7ee7824559407c9e74}{tls\+Cipher\+\_\+rsa\+Aes128\+Cbc\+Sha}} = 0X002F, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109ac922f88277e60a0e886f65b7c5a05514}{tls\+Cipher\+\_\+rsa\+Rc4128\+Sha}} = 0x0005, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109af4b27452288753554e8b27992373aeb6}{tls\+Cipher\+\_\+rsa\+Rc4128\+Md5}} = 0x0004, 
+\newline
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109aa4c2342f3fbf9160033097b7a6c97725}{tls\+Cipher\+\_\+rsa3des\+Ede\+Cbc\+Sha}} = 0x000A, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a7cb7474bb8a82f3b8531b12f8e5970ad}{tls\+Cipher\+\_\+rsa\+Aes256\+Cbc\+Sha256}} = 0x003D, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109ab069b5a79289681ac179c9792128f0d6}{tls\+Cipher\+\_\+ecdhe\+Rsa\+Rc4128\+Sha}} = 0x\+C011, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a852449371a1f7529deb0791bc9cac266}{tls\+Cipher\+\_\+ecdhe\+Rsa3des\+Ede\+Cbc\+Sha}} = 0x\+C012, 
+\newline
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109affc4813f1c3e73d5512f51f3d4e1d051}{tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes128\+Cbc\+Sha}} = 0x\+C013, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109af8f14952d08ab03bd7b0151aaf69ce92}{tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes256\+Cbc\+Sha}} = 0x\+C014, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a177c290dd86c65f33bc8b60971abac1c}{tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes128\+Cbc\+Sha256}} = 0x\+C027, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109aace8243d7ed78ee41bb8dd015c9debb1}{tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes256\+Cbc\+Sha384}} = 0x\+C028, 
+\newline
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109abce8b382fa48a0e8b20d92a03bb3684c}{tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes128\+Gcm\+Sha256}} = 0x\+C02F, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a3d038ae3c5e4154d57ef0259e90a80bf}{tls\+Cipher\+\_\+any}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109afd477f7bf94e0b47d8f9f99b61d85de4}{tls\+Cipher\+\_\+default}} = 0x\+F\+F\+FF
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of the available cipher suites for T\+LS processing. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1}{tls\+Cert\+Expiration\+\_\+tag}} \{ \mbox{\hyperlink{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1a062ec922c2fd4100612e66021376043b}{tls\+Cert\+Expiration\+\_\+check}} = 0, 
+\mbox{\hyperlink{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1a3b7cb06fd6c75f59cf482f34675583ea}{tls\+Cert\+Expiration\+\_\+ignore}} = 1, 
+\mbox{\hyperlink{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1a4422f5c11c76bf4644919f1e38a4a652}{tls\+Cert\+Expiration\+\_\+default}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of the options for certificate expiration date/time checking. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}{tls\+Security\+Level\+\_\+tag}} \{ \mbox{\hyperlink{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aa52d622ded151e2855affa58fa2aee33d}{tls\+Security\+Level\+\_\+no\+Authentication}} = 0, 
+\mbox{\hyperlink{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aa79c12cf7d3c52cc449a84969b76cd5e1}{tls\+Security\+Level\+\_\+server\+Authentication}} = 1, 
+\mbox{\hyperlink{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aae7ec5c11b1a12b815277a0d727fa223b}{tls\+Security\+Level\+\_\+server\+Client\+Authentication}} = 2, 
+\mbox{\hyperlink{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aa91b85e41d44e787f64ddcdbebf6fca48}{tls\+Security\+Level\+\_\+default}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of the certification validation options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{ltemc-tls_8h_a49ae06c68ee9b174a3fc0e097bf1da89}{tls\+\_\+configure}} (\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} contxt, \mbox{\hyperlink{ltemc-tls_8h_a61182e3801e1f66177d95fa416341dc2}{tls\+Version\+\_\+t}} version, \mbox{\hyperlink{ltemc-tls_8h_ac3c7657f825cb66b386b539e2f037b92}{tls\+Cipher\+\_\+t}} cipher\+Suite, \mbox{\hyperlink{ltemc-tls_8h_a82cad7746d9446cc276666b5de2af9aa}{tls\+Cert\+Expiration\+\_\+t}} cert\+Expiration\+Check, \mbox{\hyperlink{ltemc-tls_8h_ae881c2df83ac48f033b492b442067906}{tls\+Security\+Level\+\_\+t}} security\+Level)
+\item 
+\mbox{\hyperlink{ltemc-tls_8h_a7748d21587494b057d7569aeb3be5001}{tls\+Options\+\_\+t}} \mbox{\hyperlink{ltemc-tls_8h_a1c242f6ac3ef8f29c599d63150d07abd}{tls\+Get\+Options}} (\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} cntxt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ltemc-tls_8h_a82cad7746d9446cc276666b5de2af9aa}\label{ltemc-tls_8h_a82cad7746d9446cc276666b5de2af9aa}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCertExpiration\_t@{tlsCertExpiration\_t}}
+\index{tlsCertExpiration\_t@{tlsCertExpiration\_t}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsCertExpiration\_t}{tlsCertExpiration\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1}{tls\+Cert\+Expiration\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_a82cad7746d9446cc276666b5de2af9aa}{tls\+Cert\+Expiration\+\_\+t}}}
+
+
+
+Enum of the options for certificate expiration date/time checking. 
+
+\mbox{\Hypertarget{ltemc-tls_8h_ac3c7657f825cb66b386b539e2f037b92}\label{ltemc-tls_8h_ac3c7657f825cb66b386b539e2f037b92}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_t@{tlsCipher\_t}}
+\index{tlsCipher\_t@{tlsCipher\_t}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsCipher\_t}{tlsCipher\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109}{tls\+Cipher\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_ac3c7657f825cb66b386b539e2f037b92}{tls\+Cipher\+\_\+t}}}
+
+
+
+Enum of the available cipher suites for T\+LS processing. 
+
+\mbox{\Hypertarget{ltemc-tls_8h_a7748d21587494b057d7569aeb3be5001}\label{ltemc-tls_8h_a7748d21587494b057d7569aeb3be5001}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsOptions\_t@{tlsOptions\_t}}
+\index{tlsOptions\_t@{tlsOptions\_t}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsOptions\_t}{tlsOptions\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structtls_options__tag}{tls\+Options\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_a7748d21587494b057d7569aeb3be5001}{tls\+Options\+\_\+t}}}
+
+
+
+Return struct for get T\+LC information. 
+
+\mbox{\Hypertarget{ltemc-tls_8h_ae881c2df83ac48f033b492b442067906}\label{ltemc-tls_8h_ae881c2df83ac48f033b492b442067906}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsSecurityLevel\_t@{tlsSecurityLevel\_t}}
+\index{tlsSecurityLevel\_t@{tlsSecurityLevel\_t}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsSecurityLevel\_t}{tlsSecurityLevel\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}{tls\+Security\+Level\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_ae881c2df83ac48f033b492b442067906}{tls\+Security\+Level\+\_\+t}}}
+
+
+
+Enum of the certification validation options. 
+
+\mbox{\Hypertarget{ltemc-tls_8h_a61182e3801e1f66177d95fa416341dc2}\label{ltemc-tls_8h_a61182e3801e1f66177d95fa416341dc2}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsVersion\_t@{tlsVersion\_t}}
+\index{tlsVersion\_t@{tlsVersion\_t}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsVersion\_t}{tlsVersion\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}{tls\+Version\+\_\+tag}} \mbox{\hyperlink{ltemc-tls_8h_a61182e3801e1f66177d95fa416341dc2}{tls\+Version\+\_\+t}}}
+
+
+
+Enum of available S\+SL version options for an S\+SL connection. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1}\label{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCertExpiration\_tag@{tlsCertExpiration\_tag}}
+\index{tlsCertExpiration\_tag@{tlsCertExpiration\_tag}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsCertExpiration\_tag}{tlsCertExpiration\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1}{tls\+Cert\+Expiration\+\_\+tag}}}
+
+
+
+Enum of the options for certificate expiration date/time checking. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCertExpiration\_check@{tlsCertExpiration\_check}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCertExpiration\_check@{tlsCertExpiration\_check}}}\mbox{\Hypertarget{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1a062ec922c2fd4100612e66021376043b}\label{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1a062ec922c2fd4100612e66021376043b}} 
+tls\+Cert\+Expiration\+\_\+check&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCertExpiration\_ignore@{tlsCertExpiration\_ignore}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCertExpiration\_ignore@{tlsCertExpiration\_ignore}}}\mbox{\Hypertarget{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1a3b7cb06fd6c75f59cf482f34675583ea}\label{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1a3b7cb06fd6c75f59cf482f34675583ea}} 
+tls\+Cert\+Expiration\+\_\+ignore&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCertExpiration\_default@{tlsCertExpiration\_default}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCertExpiration\_default@{tlsCertExpiration\_default}}}\mbox{\Hypertarget{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1a4422f5c11c76bf4644919f1e38a4a652}\label{ltemc-tls_8h_aa77d249362844b70b7730af569bb50f1a4422f5c11c76bf4644919f1e38a4a652}} 
+tls\+Cert\+Expiration\+\_\+default&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_tag@{tlsCipher\_tag}}
+\index{tlsCipher\_tag@{tlsCipher\_tag}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsCipher\_tag}{tlsCipher\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109}{tls\+Cipher\+\_\+tag}}}
+
+
+
+Enum of the available cipher suites for T\+LS processing. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_rsaAes256CbcSha@{tlsCipher\_rsaAes256CbcSha}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_rsaAes256CbcSha@{tlsCipher\_rsaAes256CbcSha}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a0afe8298d2f5647da36d0fb26751a316}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a0afe8298d2f5647da36d0fb26751a316}} 
+tls\+Cipher\+\_\+rsa\+Aes256\+Cbc\+Sha&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_rsaAes128CbcSha@{tlsCipher\_rsaAes128CbcSha}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_rsaAes128CbcSha@{tlsCipher\_rsaAes128CbcSha}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a9e77ee5dfcf50a7ee7824559407c9e74}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a9e77ee5dfcf50a7ee7824559407c9e74}} 
+tls\+Cipher\+\_\+rsa\+Aes128\+Cbc\+Sha&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_rsaRc4128Sha@{tlsCipher\_rsaRc4128Sha}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_rsaRc4128Sha@{tlsCipher\_rsaRc4128Sha}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109ac922f88277e60a0e886f65b7c5a05514}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109ac922f88277e60a0e886f65b7c5a05514}} 
+tls\+Cipher\+\_\+rsa\+Rc4128\+Sha&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_rsaRc4128Md5@{tlsCipher\_rsaRc4128Md5}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_rsaRc4128Md5@{tlsCipher\_rsaRc4128Md5}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109af4b27452288753554e8b27992373aeb6}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109af4b27452288753554e8b27992373aeb6}} 
+tls\+Cipher\+\_\+rsa\+Rc4128\+Md5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_rsa3desEdeCbcSha@{tlsCipher\_rsa3desEdeCbcSha}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_rsa3desEdeCbcSha@{tlsCipher\_rsa3desEdeCbcSha}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109aa4c2342f3fbf9160033097b7a6c97725}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109aa4c2342f3fbf9160033097b7a6c97725}} 
+tls\+Cipher\+\_\+rsa3des\+Ede\+Cbc\+Sha&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_rsaAes256CbcSha256@{tlsCipher\_rsaAes256CbcSha256}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_rsaAes256CbcSha256@{tlsCipher\_rsaAes256CbcSha256}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a7cb7474bb8a82f3b8531b12f8e5970ad}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a7cb7474bb8a82f3b8531b12f8e5970ad}} 
+tls\+Cipher\+\_\+rsa\+Aes256\+Cbc\+Sha256&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_ecdheRsaRc4128Sha@{tlsCipher\_ecdheRsaRc4128Sha}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_ecdheRsaRc4128Sha@{tlsCipher\_ecdheRsaRc4128Sha}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109ab069b5a79289681ac179c9792128f0d6}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109ab069b5a79289681ac179c9792128f0d6}} 
+tls\+Cipher\+\_\+ecdhe\+Rsa\+Rc4128\+Sha&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_ecdheRsa3desEdeCbcSha@{tlsCipher\_ecdheRsa3desEdeCbcSha}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_ecdheRsa3desEdeCbcSha@{tlsCipher\_ecdheRsa3desEdeCbcSha}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a852449371a1f7529deb0791bc9cac266}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a852449371a1f7529deb0791bc9cac266}} 
+tls\+Cipher\+\_\+ecdhe\+Rsa3des\+Ede\+Cbc\+Sha&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_ecdheRsaAes128CbcSha@{tlsCipher\_ecdheRsaAes128CbcSha}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_ecdheRsaAes128CbcSha@{tlsCipher\_ecdheRsaAes128CbcSha}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109affc4813f1c3e73d5512f51f3d4e1d051}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109affc4813f1c3e73d5512f51f3d4e1d051}} 
+tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes128\+Cbc\+Sha&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_ecdheRsaAes256CbcSha@{tlsCipher\_ecdheRsaAes256CbcSha}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_ecdheRsaAes256CbcSha@{tlsCipher\_ecdheRsaAes256CbcSha}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109af8f14952d08ab03bd7b0151aaf69ce92}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109af8f14952d08ab03bd7b0151aaf69ce92}} 
+tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes256\+Cbc\+Sha&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_ecdheRsaAes128CbcSha256@{tlsCipher\_ecdheRsaAes128CbcSha256}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_ecdheRsaAes128CbcSha256@{tlsCipher\_ecdheRsaAes128CbcSha256}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a177c290dd86c65f33bc8b60971abac1c}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a177c290dd86c65f33bc8b60971abac1c}} 
+tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes128\+Cbc\+Sha256&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_ecdheRsaAes256CbcSha384@{tlsCipher\_ecdheRsaAes256CbcSha384}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_ecdheRsaAes256CbcSha384@{tlsCipher\_ecdheRsaAes256CbcSha384}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109aace8243d7ed78ee41bb8dd015c9debb1}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109aace8243d7ed78ee41bb8dd015c9debb1}} 
+tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes256\+Cbc\+Sha384&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_ecdheRsaAes128GcmSha256@{tlsCipher\_ecdheRsaAes128GcmSha256}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_ecdheRsaAes128GcmSha256@{tlsCipher\_ecdheRsaAes128GcmSha256}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109abce8b382fa48a0e8b20d92a03bb3684c}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109abce8b382fa48a0e8b20d92a03bb3684c}} 
+tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes128\+Gcm\+Sha256&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_any@{tlsCipher\_any}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_any@{tlsCipher\_any}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a3d038ae3c5e4154d57ef0259e90a80bf}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109a3d038ae3c5e4154d57ef0259e90a80bf}} 
+tls\+Cipher\+\_\+any&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsCipher\_default@{tlsCipher\_default}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsCipher\_default@{tlsCipher\_default}}}\mbox{\Hypertarget{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109afd477f7bf94e0b47d8f9f99b61d85de4}\label{ltemc-tls_8h_a1516baf2026fd7bb0a27180cb3ee6109afd477f7bf94e0b47d8f9f99b61d85de4}} 
+tls\+Cipher\+\_\+default&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}\label{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsSecurityLevel\_tag@{tlsSecurityLevel\_tag}}
+\index{tlsSecurityLevel\_tag@{tlsSecurityLevel\_tag}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsSecurityLevel\_tag}{tlsSecurityLevel\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}{tls\+Security\+Level\+\_\+tag}}}
+
+
+
+Enum of the certification validation options. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsSecurityLevel\_noAuthentication@{tlsSecurityLevel\_noAuthentication}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsSecurityLevel\_noAuthentication@{tlsSecurityLevel\_noAuthentication}}}\mbox{\Hypertarget{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aa52d622ded151e2855affa58fa2aee33d}\label{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aa52d622ded151e2855affa58fa2aee33d}} 
+tls\+Security\+Level\+\_\+no\+Authentication&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsSecurityLevel\_serverAuthentication@{tlsSecurityLevel\_serverAuthentication}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsSecurityLevel\_serverAuthentication@{tlsSecurityLevel\_serverAuthentication}}}\mbox{\Hypertarget{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aa79c12cf7d3c52cc449a84969b76cd5e1}\label{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aa79c12cf7d3c52cc449a84969b76cd5e1}} 
+tls\+Security\+Level\+\_\+server\+Authentication&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsSecurityLevel\_serverClientAuthentication@{tlsSecurityLevel\_serverClientAuthentication}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsSecurityLevel\_serverClientAuthentication@{tlsSecurityLevel\_serverClientAuthentication}}}\mbox{\Hypertarget{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aae7ec5c11b1a12b815277a0d727fa223b}\label{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aae7ec5c11b1a12b815277a0d727fa223b}} 
+tls\+Security\+Level\+\_\+server\+Client\+Authentication&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsSecurityLevel\_default@{tlsSecurityLevel\_default}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsSecurityLevel\_default@{tlsSecurityLevel\_default}}}\mbox{\Hypertarget{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aa91b85e41d44e787f64ddcdbebf6fca48}\label{ltemc-tls_8h_a4cce55df07f0dae3c4ece5bbc11a7e2aa91b85e41d44e787f64ddcdbebf6fca48}} 
+tls\+Security\+Level\+\_\+default&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}\label{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsVersion\_tag@{tlsVersion\_tag}}
+\index{tlsVersion\_tag@{tlsVersion\_tag}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsVersion\_tag}{tlsVersion\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}{tls\+Version\+\_\+tag}}}
+
+
+
+Enum of available S\+SL version options for an S\+SL connection. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsVersion\_none@{tlsVersion\_none}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsVersion\_none@{tlsVersion\_none}}}\mbox{\Hypertarget{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea2a8d7e664c8fc26985e74f79b8733fc5}\label{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea2a8d7e664c8fc26985e74f79b8733fc5}} 
+tls\+Version\+\_\+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsVersion\_ssl30@{tlsVersion\_ssl30}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsVersion\_ssl30@{tlsVersion\_ssl30}}}\mbox{\Hypertarget{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea77842091b581fbf76b7bedfb3e03f0e9}\label{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea77842091b581fbf76b7bedfb3e03f0e9}} 
+tls\+Version\+\_\+ssl30&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsVersion\_tls10@{tlsVersion\_tls10}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsVersion\_tls10@{tlsVersion\_tls10}}}\mbox{\Hypertarget{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea5f37b2ae6f59b7e50167d574a3decbbe}\label{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea5f37b2ae6f59b7e50167d574a3decbbe}} 
+tls\+Version\+\_\+tls10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsVersion\_tls11@{tlsVersion\_tls11}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsVersion\_tls11@{tlsVersion\_tls11}}}\mbox{\Hypertarget{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ead85c7f74bce601396e63e8fa73dbb2dd}\label{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ead85c7f74bce601396e63e8fa73dbb2dd}} 
+tls\+Version\+\_\+tls11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsVersion\_tls12@{tlsVersion\_tls12}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsVersion\_tls12@{tlsVersion\_tls12}}}\mbox{\Hypertarget{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8eae8144a425fddf3de3fe075eb9a8c9678}\label{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8eae8144a425fddf3de3fe075eb9a8c9678}} 
+tls\+Version\+\_\+tls12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsVersion\_any@{tlsVersion\_any}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsVersion\_any@{tlsVersion\_any}}}\mbox{\Hypertarget{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8eab57f5ac25177daf7f6fd1f28b321e0a4}\label{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8eab57f5ac25177daf7f6fd1f28b321e0a4}} 
+tls\+Version\+\_\+any&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tlsVersion\_default@{tlsVersion\_default}!ltemc-\/tls.h@{ltemc-\/tls.h}}\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsVersion\_default@{tlsVersion\_default}}}\mbox{\Hypertarget{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea6e4c469d9aeced361472efd7517de1d3}\label{ltemc-tls_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8ea6e4c469d9aeced361472efd7517de1d3}} 
+tls\+Version\+\_\+default&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-tls_8h_a49ae06c68ee9b174a3fc0e097bf1da89}\label{ltemc-tls_8h_a49ae06c68ee9b174a3fc0e097bf1da89}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tls\_configure@{tls\_configure}}
+\index{tls\_configure@{tls\_configure}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tls\_configure()}{tls\_configure()}}
+{\footnotesize\ttfamily bool tls\+\_\+configure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}]{contxt,  }\item[{\mbox{\hyperlink{ltemc-tls_8h_a61182e3801e1f66177d95fa416341dc2}{tls\+Version\+\_\+t}}}]{version,  }\item[{\mbox{\hyperlink{ltemc-tls_8h_ac3c7657f825cb66b386b539e2f037b92}{tls\+Cipher\+\_\+t}}}]{cipher\+Suite,  }\item[{\mbox{\hyperlink{ltemc-tls_8h_a82cad7746d9446cc276666b5de2af9aa}{tls\+Cert\+Expiration\+\_\+t}}}]{cert\+Expiration\+Check,  }\item[{\mbox{\hyperlink{ltemc-tls_8h_ae881c2df83ac48f033b492b442067906}{tls\+Security\+Level\+\_\+t}}}]{security\+Level }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ltemc-tls_8h_a1c242f6ac3ef8f29c599d63150d07abd}\label{ltemc-tls_8h_a1c242f6ac3ef8f29c599d63150d07abd}} 
+\index{ltemc-\/tls.h@{ltemc-\/tls.h}!tlsGetOptions@{tlsGetOptions}}
+\index{tlsGetOptions@{tlsGetOptions}!ltemc-\/tls.h@{ltemc-\/tls.h}}
+\doxysubsubsection{\texorpdfstring{tlsGetOptions()}{tlsGetOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-tls_8h_a7748d21587494b057d7569aeb3be5001}{tls\+Options\+\_\+t}} tls\+Get\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}]{cntxt }\end{DoxyParamCaption})}
+

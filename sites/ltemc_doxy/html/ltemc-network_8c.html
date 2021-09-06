@@ -70,19 +70,20 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ltemc-network.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ltemc_8h_source.html">ltemc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ltemc-internal_8h_source.html">ltemc-internal.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a152fc5203b90b1cff03b7b78579b8f52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a152fc5203b90b1cff03b7b78579b8f52">_DEBUG</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a152fc5203b90b1cff03b7b78579b8f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab818574b6e7324559d0b09a6fc9ca1f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#ab818574b6e7324559d0b09a6fc9ca1f2">PRINTF</a>(c_,  f_, ...)&#160;&#160;&#160;;</td></tr>
-<tr class="separator:ab818574b6e7324559d0b09a6fc9ca1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae81e48a168d1f74717b95b199a699f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#abae81e48a168d1f74717b95b199a699f">SERIAL_DBG</a>&#160;&#160;&#160;<a class="el" href="ltemc_8c.html#a152fc5203b90b1cff03b7b78579b8f52">_DEBUG</a></td></tr>
+<tr class="separator:abae81e48a168d1f74717b95b199a699f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acded44a40a84c6e4ecf02b6da518ce4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#acded44a40a84c6e4ecf02b6da518ce4e">PROTOCOLS_CMD_BUFFER_SZ</a>&#160;&#160;&#160;80</td></tr>
 <tr class="separator:acded44a40a84c6e4ecf02b6da518ce4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74e75242132eaabbc1c512488a135926"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a74e75242132eaabbc1c512488a135926">MIN</a>(x,  y)&#160;&#160;&#160;(((x)&lt;(y)) ? (x):(y))</td></tr>
@@ -94,27 +95,35 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:abf9daa62d261abcac1e4cb27c9e72adf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#abf9daa62d261abcac1e4cb27c9e72adf">asm</a> (&quot;.global _printf_float&quot;)</td></tr>
+<tr class="separator:abf9daa62d261abcac1e4cb27c9e72adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a59f08d7a2cf3e7d6685e377aff6bc57d">ntwk_create</a> ()</td></tr>
 <tr class="memdesc:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the IP network contexts structure.  <a href="ltemc-network_8c.html#a59f08d7a2cf3e7d6685e377aff6bc57d">More...</a><br /></td></tr>
 <tr class="separator:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdbd836a01669dcf68329ef31c73d45a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a58db2e79250f681c695c651d586fd25f">networkOperator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#abdbd836a01669dcf68329ef31c73d45a">ntwk_awaitOperator</a> (uint16_t waitDuration)</td></tr>
-<tr class="memdesc:abdbd836a01669dcf68329ef31c73d45a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a network operator name and network mode. Can be cancelled in threaded env via g_ltem-&gt;cancellationRequest.  <a href="ltemc-network_8c.html#abdbd836a01669dcf68329ef31c73d45a">More...</a><br /></td></tr>
-<tr class="separator:abdbd836a01669dcf68329ef31c73d45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada224a6a88782263e4a9cf65c3678d7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a58db2e79250f681c695c651d586fd25f">networkOperator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#ada224a6a88782263e4a9cf65c3678d7e">ntwk_awaitOperator</a> (uint16_t waitDurSeconds)</td></tr>
+<tr class="memdesc:ada224a6a88782263e4a9cf65c3678d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a network operator name and network mode. Can be cancelled in threaded env via g_ltem-&gt;cancellationRequest.  <a href="ltemc-network_8c.html#ada224a6a88782263e4a9cf65c3678d7e">More...</a><br /></td></tr>
+<tr class="separator:ada224a6a88782263e4a9cf65c3678d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3398dd81e1b122fcacdafb90c3eb33f3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a3398dd81e1b122fcacdafb90c3eb33f3">ntwk_getActivePdpCntxtCnt</a> ()</td></tr>
 <tr class="memdesc:a3398dd81e1b122fcacdafb90c3eb33f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get count of APN active data contexts from BGx.  <a href="ltemc-network_8c.html#a3398dd81e1b122fcacdafb90c3eb33f3">More...</a><br /></td></tr>
 <tr class="separator:a3398dd81e1b122fcacdafb90c3eb33f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a367bc946024cf86d08b2d31e225496b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a09b80c31caeeb52da11154ae652c16d2">pdpCntxt_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a367bc946024cf86d08b2d31e225496b7">ntwk_getPdpCntxt</a> (uint8_t cntxtId)</td></tr>
 <tr class="memdesc:a367bc946024cf86d08b2d31e225496b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PDP Context/APN information.  <a href="ltemc-network_8c.html#a367bc946024cf86d08b2d31e225496b7">More...</a><br /></td></tr>
 <tr class="separator:a367bc946024cf86d08b2d31e225496b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c317e9a6462c1893406d87f3db501cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a3c317e9a6462c1893406d87f3db501cb">ntwk_activatePdpContext</a> (uint8_t cntxtId)</td></tr>
-<tr class="memdesc:a3c317e9a6462c1893406d87f3db501cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN.  <a href="ltemc-network_8c.html#a3c317e9a6462c1893406d87f3db501cb">More...</a><br /></td></tr>
-<tr class="separator:a3c317e9a6462c1893406d87f3db501cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78dc53e53f6e09746344b1103972a900"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a78dc53e53f6e09746344b1103972a900">ntwk_activatePdpContext</a> (uint8_t cntxtId)</td></tr>
+<tr class="memdesc:a78dc53e53f6e09746344b1103972a900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN.  <a href="ltemc-network_8c.html#a78dc53e53f6e09746344b1103972a900">More...</a><br /></td></tr>
+<tr class="separator:a78dc53e53f6e09746344b1103972a900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1211e162b3e2ae3af1a9430e6254adee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a1211e162b3e2ae3af1a9430e6254adee">ntwk_deactivatePdpContext</a> (uint8_t cntxtId)</td></tr>
 <tr class="memdesc:a1211e162b3e2ae3af1a9430e6254adee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deactivate APN.  <a href="ltemc-network_8c.html#a1211e162b3e2ae3af1a9430e6254adee">More...</a><br /></td></tr>
 <tr class="separator:a1211e162b3e2ae3af1a9430e6254adee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44958b492843d449944cfc78d937241d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a44958b492843d449944cfc78d937241d">ntwk_resetPdpContexts</a> ()</td></tr>
 <tr class="memdesc:a44958b492843d449944cfc78d937241d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset (deactivate/activate) all network APNs.  <a href="ltemc-network_8c.html#a44958b492843d449944cfc78d937241d">More...</a><br /></td></tr>
 <tr class="separator:a44958b492843d449944cfc78d937241d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a5f9b6913ff818fbc74934a69849fb48b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a5f9b6913ff818fbc74934a69849fb48b">g_ltem</a></td></tr>
+<tr class="memdesc:a5f9b6913ff818fbc74934a69849fb48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LTEm "object".  <a href="ltemc-network_8c.html#a5f9b6913ff818fbc74934a69849fb48b">More...</a><br /></td></tr>
+<tr class="separator:a5f9b6913ff818fbc74934a69849fb48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a152fc5203b90b1cff03b7b78579b8f52"></a>
@@ -173,40 +182,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab818574b6e7324559d0b09a6fc9ca1f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab818574b6e7324559d0b09a6fc9ca1f2">&#9670;&nbsp;</a></span>PRINTF</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PRINTF</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">c_, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">f_, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="acded44a40a84c6e4ecf02b6da518ce4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acded44a40a84c6e4ecf02b6da518ce4e">&#9670;&nbsp;</a></span>PROTOCOLS_CMD_BUFFER_SZ</h2>
 
@@ -215,6 +190,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define PROTOCOLS_CMD_BUFFER_SZ&#160;&#160;&#160;80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abae81e48a168d1f74717b95b199a699f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae81e48a168d1f74717b95b199a699f">&#9670;&nbsp;</a></span>SERIAL_DBG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIAL_DBG&#160;&#160;&#160;<a class="el" href="ltemc_8c.html#a152fc5203b90b1cff03b7b78579b8f52">_DEBUG</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -236,14 +225,32 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a3c317e9a6462c1893406d87f3db501cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c317e9a6462c1893406d87f3db501cb">&#9670;&nbsp;</a></span>ntwk_activatePdpContext()</h2>
+<a id="abf9daa62d261abcac1e4cb27c9e72adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9daa62d261abcac1e4cb27c9e72adf">&#9670;&nbsp;</a></span>asm()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ntwk_activatePdpContext </td>
+          <td class="memname">asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;.global _printf_float&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78dc53e53f6e09746344b1103972a900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78dc53e53f6e09746344b1103972a900">&#9670;&nbsp;</a></span>ntwk_activatePdpContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ntwk_activatePdpContext </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>cntxtId</em></td><td>)</td>
@@ -262,8 +269,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abdbd836a01669dcf68329ef31c73d45a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdbd836a01669dcf68329ef31c73d45a">&#9670;&nbsp;</a></span>ntwk_awaitOperator()</h2>
+<a id="ada224a6a88782263e4a9cf65c3678d7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada224a6a88782263e4a9cf65c3678d7e">&#9670;&nbsp;</a></span>ntwk_awaitOperator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +279,7 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="ltemc-network_8h.html#a58db2e79250f681c695c651d586fd25f">networkOperator_t</a> ntwk_awaitOperator </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>waitDuration</em></td><td>)</td>
+          <td class="paramname"><em>waitDurSeconds</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -281,7 +288,7 @@ Functions</h2></td></tr>
 <p>Wait for a network operator name and network mode. Can be cancelled in threaded env via g_ltem-&gt;cancellationRequest. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">waitDuration</td><td>[in] Number of seconds to wait for a network. Supply 0 for no wait.</td></tr>
+    <tr><td class="paramname">waitDurSeconds</td><td>[in] Number of seconds to wait for a network. Supply 0 for no wait.</td></tr>
   </table>
   </dd>
 </dl>
@@ -398,6 +405,31 @@ Functions</h2></td></tr>
 
 <p>Reset (deactivate/activate) all network APNs. </p>
 <p>NOTE: activate and deactivate have side effects, they internally call getActiveContexts prior to return </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a5f9b6913ff818fbc74934a69849fb48b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9b6913ff818fbc74934a69849fb48b">&#9670;&nbsp;</a></span>g_ltem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a> g_ltem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The LTEm "object". </p>
 
 </div>
 </div>

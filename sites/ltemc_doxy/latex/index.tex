@@ -1,13 +1,13 @@
 \hypertarget{index_autotoc_md0}{}\doxysection{Circuit River -\/ L\+T\+EmC}\label{index_autotoc_md0}
-\hypertarget{index_autotoc_md1}{}\doxysubsection{Release Status\+: v1.\+0.\+0 (initial production release)}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md1}{}\doxysubsection{Release Status\+: v2.\+0.\+0}\label{index_autotoc_md1}
 L\+T\+Em1 modem driver implemented in C99 for portability and a small footprint.
 
 The Loo\+UQ L\+T\+EmC driver supports the Loo\+UQ Circuit River L\+T\+Em1 L\+TE modem. The L\+T\+Em1 is designed to allow for cost-\/effective cellular communications in embedded systems by supporting L\+TE C\+A\+T-\/\+M1 and L\+TE C\+A\+T-\/\+N\+B1 (N\+B-\/\+I\+OT) communications. The L\+T\+Em1 is certified for use on the Verizon network. It is also fully tested and supported using Hologram S\+I\+Ms and several US carriers.
 
-{\bfseries{1st off, thanks for taking a look at the L\+T\+Em1 hardware and L\+T\+EmC software!}}\hypertarget{index_autotoc_md2}{}\doxysubsection{Getting Started}\label{index_autotoc_md2}
-The best way to get started understanding L\+T\+EmC and considering it for your projects {\bfseries{today}} is to look at the tests folder in the repository. This will be supplemented in the coming weeks. We are working on getting the source code documented with a more complete suite of {\itshape doxygen} markdown tags. We are also adding a couple real world example projects soon. The tests folder contains a series of progressive L\+T\+EmC tests. Starting with simple platform I/O verification, thru M\+Q\+TT protocol support. Each test builds on a succesful previous level test. Each test can serve as a template for you to start your implementation from.
+{\bfseries{First off, thanks for taking a look at the L\+T\+Em1 hardware and L\+T\+EmC software!}}\hypertarget{index_autotoc_md2}{}\doxysubsection{Getting Started}\label{index_autotoc_md2}
+The best way to get started understanding L\+T\+EmC and considering it for your projects {\itshape today} is to look at the tests folder in the repository. This collection of test/examples will continue to grow in future releases and new use cases are demonstrated. The tests folder contains a series of progressive L\+T\+Em1c tests. Starting with simple platform I/O verification through to application protocol support (sockets, M\+Q\+TT, H\+T\+TP), each test builds upon a succesful previous level test. While called {\bfseries{tests}}, these projects they serve as {\bfseries{examples of how to do specific use cases}}. These are your best source for scaffold code to start your L\+T\+Em project.
 
-Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.\hypertarget{index_autotoc_md3}{}\doxysubsubsection{L\+T\+Em\+C Subsystems}\label{index_autotoc_md3}
+{\bfseries{Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.}}\hypertarget{index_autotoc_md3}{}\doxysubsubsection{L\+T\+Em\+C Subsystems}\label{index_autotoc_md3}
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
 \hline
@@ -24,6 +24,7 @@ Each test shows the process for initializing, starting services, and a loop exer
 {\itshape geo\+\_\+}  &The L\+T\+Em1 supports the creation of geo-\/fence outlines and monitoring of device positioning relative to the geo-\/fence boundary. Note\+: geo\+\_\+ requires the gnss\+\_\+ module be built into your project to use these functions.   \\\cline{1-2}
 {\itshape sockets\+\_\+}  &This is the typical P\+O\+S\+IX style sockets layer. Support if T\+C\+P/\+U\+D\+P/\+S\+SL clients are there. {\itshape Note\+:} server mode is not currently planned, all US networks I have worked with do not support incoming connections for cellular without add-\/on services like V\+P\+Ns or other network constructs. I recommend alternatives to attempting direct connection to your device over cellular.   \\\cline{1-2}
 {\itshape mqtt\+\_\+}  &Support for M\+Q\+TT client functionality is built here. Attach, connect, subscribe, unsubscribe and publish all are supported. Limited testing so far on Q\+OS levels and advance features like clean and will. The M\+Q\+TT module supports message properties appended to the topic and has a property parser available.   \\\cline{1-2}
+{\itshape http\+\_\+}  &Support for H\+T\+TP client functionality is found here. Perform H\+T\+TP G\+ET or P\+O\+ST actions with standard or custom request headers.   \\\cline{1-2}
 {\itshape iop\+\_\+}  &Generally you won\textquotesingle{}t directly interact with the iop\+\_\+ subsystem. It performs the buffer management to/from hardware. It interfaces with the action\+\_\+, sockets\+\_\+, and mqtt\+\_\+ subsystems to perform the necessary transfers.   \\\cline{1-2}
 \end{longtabu}
 

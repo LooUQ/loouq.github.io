@@ -16,71 +16,111 @@ Struct for the I\+OP subsystem state. During initialization a pointer to this st
 \begin{DoxyCompactList}\small\item\em transmit buffer (there is just one) \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{structiop__tag_a22a4b57e21b265f031022af67841c26f}{tx\+Pend}}
 \begin{DoxyCompactList}\small\item\em outstanding TX char pending \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}} $\ast$ \mbox{\hyperlink{structiop__tag_aba8a893ba549b27ead7c4ecc7a25b057}{rx\+Cmd\+Buf}}
-\begin{DoxyCompactList}\small\item\em command receive buffer, this is the default RX buffer \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-iop_8h_afcf2c451d40c6d56cb76f1e79132ed92}{iop\+Data\+Peer\+\_\+t}} \mbox{\hyperlink{structiop__tag_a52048c68d5750b887e72958a6983cdb2}{rx\+Data\+Peer}}
-\begin{DoxyCompactList}\small\item\em protocol data source\+: if no peer, I\+OP is in command mode \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{structiop__tag_a03f9c4d94b0bc50d9dec134a4f8f55d0}{rx\+Data\+Buf\+Indx}}
-\begin{DoxyCompactList}\small\item\em data goes into this slot rx\+Data\+Bufs \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}} $\ast$ \mbox{\hyperlink{structiop__tag_a8022e777adbae0d01364bed96e018a71}{rx\+Data\+Bufs}} \mbox{[}\mbox{\hyperlink{ltemc-iop_8h_a334b237ed433f40d502f5f17ff4a688c}{I\+O\+P\+\_\+\+R\+X\+\_\+\+D\+A\+T\+A\+B\+U\+F\+F\+E\+R\+S\+\_\+\+M\+AX}}\mbox{]}
-\begin{DoxyCompactList}\small\item\em the data buffers (smart buffer structs) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-iop_8h_a860bd27bc7a3b9593ff71a49def3caef}{peer\+Type\+Map\+\_\+t}} \mbox{\hyperlink{structiop__tag_ae6a02b1e34b41656319f5197e5a60439}{peer\+Type\+Map}}
-\begin{DoxyCompactList}\small\item\em map (struct) of possible I\+OP peers (data sources), used to optimise I\+SR string scanning \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{ltemc-streams_8h_a37c2c70d8dc8028852a4345574c5104a}{rx\+Core\+Buffer\+Ctrl\+\_\+t}} $\ast$ \mbox{\hyperlink{structiop__tag_a4827cd28d7a4be33fa663a4b2b0e2ccb}{rx\+C\+Buffer}}
+\begin{DoxyCompactList}\small\item\em U\+RC and command response receive buffer, this is the default RX buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}{iop\+Stream\+Ctrl\+\_\+t}} \mbox{\hyperlink{structiop__tag_aceb5e03a83a4fadf749e094ee70b603b}{stream\+Peers}} \mbox{[}\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a7b1e06a3f0b4504ede6a057e651025f5}{stream\+Peer\+\_\+cnt}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em array of iop\+Stream ctrl pointers, cast to a specific stream type\+: protocol or file stream \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}{iop\+Stream\+Ctrl\+\_\+t}} \mbox{\hyperlink{structiop__tag_a6335ffc4dd4d3bc7b9788fd595f85ea8}{rx\+Stream\+Ctrl}}
+\begin{DoxyCompactList}\small\item\em stream data source, if not null \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structiop__tag_a310d1973152a94bcc1d700e23fa82b8e}{tx\+Send\+Start\+Tck}}
+\begin{DoxyCompactList}\small\item\em tick count when TX send started, used for response timeout detection \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structiop__tag_a463de859a03e29b723f6d736c0295a1b}{rx\+Last\+Recv\+Tck}}
+\begin{DoxyCompactList}\small\item\em receive timeout detection\+: performed at tick count \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structiop__tag_ae48a20b886c2b2d0ffc91524fe52896d}{rx\+Last\+Recv\+Chk\+Lvl}}
+\begin{DoxyCompactList}\small\item\em receive timeout detection\+: fill level at check \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structiop__tag_a60317576660accd5312f1c3941ce5984}{sckt\+Map}}
+\begin{DoxyCompactList}\small\item\em bitmap indicating open sockets (T\+C\+P/\+U\+D\+P/\+S\+SL), bit position is the data\+Context (I\+OP event detect shortcut) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structiop__tag_ad2d01a62eb718b3391164c48d4528984}{sckt\+Lst\+Wrk}}
+\begin{DoxyCompactList}\small\item\em bit mask of last sckt do work I\+RD inquiry (fairness) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structiop__tag_af9dd0d3efe722656a56b79fba9c8923c}{mqtt\+Map}}
+\begin{DoxyCompactList}\small\item\em bitmap indicating open mqtt(s) connections, bit position is the data\+Context (I\+OP event detect shortcut) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Struct for the I\+OP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. 
 
+Each of the protocols (sockets, M\+Q\+TT, H\+T\+TP) have unique behaviors\+: sockets receive asynchronous alerts but the data receive process is fully synchronous, H\+T\+TP is synchronous on receive tied to page read, M\+Q\+TT is fully asynchronous with msg event receive signaling and data transfer taking place async behind the scenes initiated on interrupt. 
+
 \doxysubsection{Field Documentation}
-\mbox{\Hypertarget{structiop__tag_ae6a02b1e34b41656319f5197e5a60439}\label{structiop__tag_ae6a02b1e34b41656319f5197e5a60439}} 
-\index{iop\_tag@{iop\_tag}!peerTypeMap@{peerTypeMap}}
-\index{peerTypeMap@{peerTypeMap}!iop\_tag@{iop\_tag}}
-\doxysubsubsection{\texorpdfstring{peerTypeMap}{peerTypeMap}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-iop_8h_a860bd27bc7a3b9593ff71a49def3caef}{peer\+Type\+Map\+\_\+t}} peer\+Type\+Map}
+\mbox{\Hypertarget{structiop__tag_af9dd0d3efe722656a56b79fba9c8923c}\label{structiop__tag_af9dd0d3efe722656a56b79fba9c8923c}} 
+\index{iop\_tag@{iop\_tag}!mqttMap@{mqttMap}}
+\index{mqttMap@{mqttMap}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{mqttMap}{mqttMap}}
+{\footnotesize\ttfamily uint8\+\_\+t mqtt\+Map}
 
 
 
-map (struct) of possible I\+OP peers (data sources), used to optimise I\+SR string scanning 
+bitmap indicating open mqtt(s) connections, bit position is the data\+Context (I\+OP event detect shortcut) 
 
-\mbox{\Hypertarget{structiop__tag_aba8a893ba549b27ead7c4ecc7a25b057}\label{structiop__tag_aba8a893ba549b27ead7c4ecc7a25b057}} 
-\index{iop\_tag@{iop\_tag}!rxCmdBuf@{rxCmdBuf}}
-\index{rxCmdBuf@{rxCmdBuf}!iop\_tag@{iop\_tag}}
-\doxysubsubsection{\texorpdfstring{rxCmdBuf}{rxCmdBuf}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}}$\ast$ rx\+Cmd\+Buf}
-
-
-
-command receive buffer, this is the default RX buffer 
-
-\mbox{\Hypertarget{structiop__tag_a03f9c4d94b0bc50d9dec134a4f8f55d0}\label{structiop__tag_a03f9c4d94b0bc50d9dec134a4f8f55d0}} 
-\index{iop\_tag@{iop\_tag}!rxDataBufIndx@{rxDataBufIndx}}
-\index{rxDataBufIndx@{rxDataBufIndx}!iop\_tag@{iop\_tag}}
-\doxysubsubsection{\texorpdfstring{rxDataBufIndx}{rxDataBufIndx}}
-{\footnotesize\ttfamily uint8\+\_\+t rx\+Data\+Buf\+Indx}
+\mbox{\Hypertarget{structiop__tag_a4827cd28d7a4be33fa663a4b2b0e2ccb}\label{structiop__tag_a4827cd28d7a4be33fa663a4b2b0e2ccb}} 
+\index{iop\_tag@{iop\_tag}!rxCBuffer@{rxCBuffer}}
+\index{rxCBuffer@{rxCBuffer}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{rxCBuffer}{rxCBuffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a37c2c70d8dc8028852a4345574c5104a}{rx\+Core\+Buffer\+Ctrl\+\_\+t}}$\ast$ rx\+C\+Buffer}
 
 
 
-data goes into this slot rx\+Data\+Bufs 
+U\+RC and command response receive buffer, this is the default RX buffer. 
 
-\mbox{\Hypertarget{structiop__tag_a8022e777adbae0d01364bed96e018a71}\label{structiop__tag_a8022e777adbae0d01364bed96e018a71}} 
-\index{iop\_tag@{iop\_tag}!rxDataBufs@{rxDataBufs}}
-\index{rxDataBufs@{rxDataBufs}!iop\_tag@{iop\_tag}}
-\doxysubsubsection{\texorpdfstring{rxDataBufs}{rxDataBufs}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-iop_8h_a1f5794d6ebb16471baa9b404dbac155d}{iop\+Buffer\+\_\+t}}$\ast$ rx\+Data\+Bufs\mbox{[}\mbox{\hyperlink{ltemc-iop_8h_a334b237ed433f40d502f5f17ff4a688c}{I\+O\+P\+\_\+\+R\+X\+\_\+\+D\+A\+T\+A\+B\+U\+F\+F\+E\+R\+S\+\_\+\+M\+AX}}\mbox{]}}
-
-
-
-the data buffers (smart buffer structs) 
-
-\mbox{\Hypertarget{structiop__tag_a52048c68d5750b887e72958a6983cdb2}\label{structiop__tag_a52048c68d5750b887e72958a6983cdb2}} 
-\index{iop\_tag@{iop\_tag}!rxDataPeer@{rxDataPeer}}
-\index{rxDataPeer@{rxDataPeer}!iop\_tag@{iop\_tag}}
-\doxysubsubsection{\texorpdfstring{rxDataPeer}{rxDataPeer}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-iop_8h_afcf2c451d40c6d56cb76f1e79132ed92}{iop\+Data\+Peer\+\_\+t}} rx\+Data\+Peer}
+\mbox{\Hypertarget{structiop__tag_ae48a20b886c2b2d0ffc91524fe52896d}\label{structiop__tag_ae48a20b886c2b2d0ffc91524fe52896d}} 
+\index{iop\_tag@{iop\_tag}!rxLastRecvChkLvl@{rxLastRecvChkLvl}}
+\index{rxLastRecvChkLvl@{rxLastRecvChkLvl}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{rxLastRecvChkLvl}{rxLastRecvChkLvl}}
+{\footnotesize\ttfamily uint16\+\_\+t rx\+Last\+Recv\+Chk\+Lvl}
 
 
 
-protocol data source\+: if no peer, I\+OP is in command mode 
+receive timeout detection\+: fill level at check 
+
+\mbox{\Hypertarget{structiop__tag_a463de859a03e29b723f6d736c0295a1b}\label{structiop__tag_a463de859a03e29b723f6d736c0295a1b}} 
+\index{iop\_tag@{iop\_tag}!rxLastRecvTck@{rxLastRecvTck}}
+\index{rxLastRecvTck@{rxLastRecvTck}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{rxLastRecvTck}{rxLastRecvTck}}
+{\footnotesize\ttfamily uint32\+\_\+t rx\+Last\+Recv\+Tck}
+
+
+
+receive timeout detection\+: performed at tick count 
+
+\mbox{\Hypertarget{structiop__tag_a6335ffc4dd4d3bc7b9788fd595f85ea8}\label{structiop__tag_a6335ffc4dd4d3bc7b9788fd595f85ea8}} 
+\index{iop\_tag@{iop\_tag}!rxStreamCtrl@{rxStreamCtrl}}
+\index{rxStreamCtrl@{rxStreamCtrl}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{rxStreamCtrl}{rxStreamCtrl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}{iop\+Stream\+Ctrl\+\_\+t}} rx\+Stream\+Ctrl}
+
+
+
+stream data source, if not null 
+
+\mbox{\Hypertarget{structiop__tag_ad2d01a62eb718b3391164c48d4528984}\label{structiop__tag_ad2d01a62eb718b3391164c48d4528984}} 
+\index{iop\_tag@{iop\_tag}!scktLstWrk@{scktLstWrk}}
+\index{scktLstWrk@{scktLstWrk}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{scktLstWrk}{scktLstWrk}}
+{\footnotesize\ttfamily uint8\+\_\+t sckt\+Lst\+Wrk}
+
+
+
+bit mask of last sckt do work I\+RD inquiry (fairness) 
+
+\mbox{\Hypertarget{structiop__tag_a60317576660accd5312f1c3941ce5984}\label{structiop__tag_a60317576660accd5312f1c3941ce5984}} 
+\index{iop\_tag@{iop\_tag}!scktMap@{scktMap}}
+\index{scktMap@{scktMap}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{scktMap}{scktMap}}
+{\footnotesize\ttfamily uint8\+\_\+t sckt\+Map}
+
+
+
+bitmap indicating open sockets (T\+C\+P/\+U\+D\+P/\+S\+SL), bit position is the data\+Context (I\+OP event detect shortcut) 
+
+\mbox{\Hypertarget{structiop__tag_aceb5e03a83a4fadf749e094ee70b603b}\label{structiop__tag_aceb5e03a83a4fadf749e094ee70b603b}} 
+\index{iop\_tag@{iop\_tag}!streamPeers@{streamPeers}}
+\index{streamPeers@{streamPeers}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{streamPeers}{streamPeers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}{iop\+Stream\+Ctrl\+\_\+t}} stream\+Peers\mbox{[}\mbox{\hyperlink{ltemc-streams_8h_a67400f5b10b3dbea6ed09f26d44917c3a7b1e06a3f0b4504ede6a057e651025f5}{stream\+Peer\+\_\+cnt}}\mbox{]}}
+
+
+
+array of iop\+Stream ctrl pointers, cast to a specific stream type\+: protocol or file stream 
 
 \mbox{\Hypertarget{structiop__tag_ae8fcab96ab403b0c0b89c2fdd74a2ac8}\label{structiop__tag_ae8fcab96ab403b0c0b89c2fdd74a2ac8}} 
 \index{iop\_tag@{iop\_tag}!txBuf@{txBuf}}
@@ -101,6 +141,16 @@ transmit buffer (there is just one)
 
 
 outstanding TX char pending 
+
+\mbox{\Hypertarget{structiop__tag_a310d1973152a94bcc1d700e23fa82b8e}\label{structiop__tag_a310d1973152a94bcc1d700e23fa82b8e}} 
+\index{iop\_tag@{iop\_tag}!txSendStartTck@{txSendStartTck}}
+\index{txSendStartTck@{txSendStartTck}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{txSendStartTck}{txSendStartTck}}
+{\footnotesize\ttfamily uint32\+\_\+t tx\+Send\+Start\+Tck}
+
+
+
+tick count when TX send started, used for response timeout detection 
 
 
 
