@@ -79,7 +79,7 @@ Added HTTP(S) functionality and redesigned buffering model. Enhancements to AT-C
 <li>Changed signature for LTEmC create and execute</li>
 <li>Added granular locking and general usability enhancements to ATCMD module</li>
 <li>Migrated TLS configuration for a connection into its own module ltemc-tls</li>
-<li>- Changed signature of <a class="el" href="ltemc-mqtt_8c.html#accc88867fece34baa7b992d3ab60d4aa" title="Open a remote MQTT server for use.">mqtt_open()</a> to only specify TLS enabled. User should configure TLS for Context_5 prior to open</li>
+<li>Changed signature of <a class="el" href="ltemc-mqtt_8c.html#accc88867fece34baa7b992d3ab60d4aa" title="Open a remote MQTT server for use.">mqtt_open()</a> to only specify TLS enabled.</li>
 <li>IOP was re-architected to streamline buffer only operations. Application now provides and owns receive data buffers, allowing for more flexibility and minimum memory usage base on your application's requirements.</li>
 <li>Support for multiple MQTT and HTTP(S) sessions per modem</li>
 <li>Decoupled MQTT from fixed data context number 5, HTTP created without fixed data context coupling.</li>
