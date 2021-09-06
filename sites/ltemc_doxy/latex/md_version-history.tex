@@ -1,16 +1,19 @@
 \hypertarget{md_version-history_autotoc_md36}{}\doxysubsubsection{Major or breaking changes will be called out with section explaining the change and the release header will be decorated with either $<$em$>$\+Major$<$/em$>$ or $<$em$>$\+Breaking$<$/em$>$}\label{md_version-history_autotoc_md36}
-\hypertarget{md_version-history_autotoc_md37}{}\doxysection{v1.\+1.\+0 -\/ Added H\+T\+T\+P(\+S) functionality}\label{md_version-history_autotoc_md37}
+\hypertarget{md_version-history_autotoc_md37}{}\doxysection{v2.\+0.\+0 -\/ Major long-\/term release}\label{md_version-history_autotoc_md37}
+\hypertarget{md_version-history_autotoc_md38}{}\doxysubsection{Added H\+T\+T\+P(\+S) functionality and redesigned buffering model. Enhancements to A\+T-\/\+Command module to allow for continued extensions to supported features.}\label{md_version-history_autotoc_md38}
 
 \begin{DoxyItemize}
 \item Added support for H\+T\+T\+P(\+S) G\+E\+T/\+P\+O\+ST
+\item Changed signature for L\+T\+EmC create and execute
+\item Added granular locking and general usability enhancements to A\+T\+C\+MD module
 \item Migrated T\+LS configuration for a connection into its own module ltemc-\/tls
 \item -\/ Changed signature of \mbox{\hyperlink{ltemc-mqtt_8c_accc88867fece34baa7b992d3ab60d4aa}{mqtt\+\_\+open()}} to only specify T\+LS enabled. User should configure T\+LS for Context\+\_\+5 prior to open
-\item Enabling future I\+OP changes to remove fixed size internal receive buffering, migrating to application owned and managed buffers
-\item Enabling future multiple M\+Q\+TT and H\+T\+T\+P(\+S) sessions per modem
-\item Enabling future decoupling of M\+Q\+TT and H\+T\+T\+P(\+S) from fixed data contexts (currently\+: M\+Q\+TT=5, H\+T\+TP=4).
-\item Misc fixes
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md38}{}\doxysection{v1.\+0.\+0 -\/ M\+A\+J\+O\+R R\+E\+L\+E\+A\+SE}\label{md_version-history_autotoc_md38}
-\hypertarget{md_version-history_autotoc_md39}{}\doxysubsection{Version 1.\+0.\+0 is a major release with several breaking changes. This release is the 1st version fully vetted in commercial projects and sets the stage for future multiple Loo\+U\+Q L\+T\+E modem models.}\label{md_version-history_autotoc_md39}
+\item I\+OP was re-\/architected to streamline buffer only operations. Application now provides and owns receive data buffers, allowing for more flexibility and minimum memory usage base on your application\textquotesingle{}s requirements.
+\item Support for multiple M\+Q\+TT and H\+T\+T\+P(\+S) sessions per modem
+\item Decoupled M\+Q\+TT from fixed data context number 5, H\+T\+TP created without fixed data context coupling.
+\item Misc fixes to B\+Gx, M\+Q\+TT, Network modules.
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md39}{}\doxysection{v1.\+0.\+0 -\/ M\+A\+J\+O\+R R\+E\+L\+E\+A\+SE}\label{md_version-history_autotoc_md39}
+\hypertarget{md_version-history_autotoc_md40}{}\doxysubsection{Version 1.\+0.\+0 is a major release with several breaking changes. This release is the 1st version fully vetted in commercial projects and sets the stage for future multiple Loo\+U\+Q L\+T\+E modem models.}\label{md_version-history_autotoc_md40}
 \href{https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/Release_1_0.md}{\texttt{ https\+://github.\+com/\+Loo\+U\+Q/\+Circuit\+River-\/\+L\+T\+Em\+C/blob/master/\+Release\+\_\+1\+\_\+0.\+md}}
 
 You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics on the major changes and how to adapt your application code.
@@ -22,7 +25,7 @@ You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics o
 \item Improved support for Segger R\+TT debug output
 \item Filename and .h file adjustments and cleanup
 \item Misc fixes
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md40}{}\doxysection{v0.\+5.\+0 -\/ Fixes and Network P\+D\+P context handling (\+Dec 28, 2020)}\label{md_version-history_autotoc_md40}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md41}{}\doxysection{v0.\+5.\+0 -\/ Fixes and Network P\+D\+P context handling (\+Dec 28, 2020)}\label{md_version-history_autotoc_md41}
 
 \begin{DoxyItemize}
 \item Fixed M\+Q\+TT not trapping publish errors
@@ -34,26 +37,26 @@ You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics o
 \item Added reset to deactivate/activate all presently active P\+DP contexts
 \end{DoxyItemize}
 \item Change I\+OP P\+DP deactivated detect logic to match internal implementation in N\+E\+T\+W\+O\+RK module
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md41}{}\doxysection{0.\+4.\+2 (\+Dec 15, 2020)}\label{md_version-history_autotoc_md41}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md42}{}\doxysection{0.\+4.\+2 (\+Dec 15, 2020)}\label{md_version-history_autotoc_md42}
 
 \begin{DoxyItemize}
 \item Updated I\+SR for intermittent missed event when receiving M\+Q\+TT publish
 \item Reformatted tests/\+L\+T\+Em1c-\/8-\/mqtt.\+ino for readability and test setup with Azure Io\+T\+Hub
 \item Removed utils.\+c from L\+T\+Em1c library
 \item Functionality is now part of LQ Cloud but can be used independently as lqc\+\_\+collections (.h.c)
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md42}{}\doxysection{v0.\+4.\+2 -\/ Misc (\+Dec-\/15-\/2020)}\label{md_version-history_autotoc_md42}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md43}{}\doxysection{v0.\+4.\+2 -\/ Misc (\+Dec-\/15-\/2020)}\label{md_version-history_autotoc_md43}
 
 \begin{DoxyItemize}
 \item Updated I\+SR for intermittent missed event when receiving M\+Q\+TT publish
 \item Reformatted tests/\+L\+T\+Em1c-\/8-\/mqtt.\+ino for readability and test setup with Azure Io\+T\+Hub
 \item Removed utils.\+c from L\+T\+Em1c library
 \item Functionality is now part of LQ Cloud but can be used independently as lqc\+\_\+collections (.h.c)
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md43}{}\doxysection{v0.\+4.\+1 -\/ Misc (\+Nov 28, 2020)}\label{md_version-history_autotoc_md43}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md44}{}\doxysection{v0.\+4.\+1 -\/ Misc (\+Nov 28, 2020)}\label{md_version-history_autotoc_md44}
 
 \begin{DoxyItemize}
 \item Remove dependency on J\+Link R\+TT
 \item Fixed parse issue in G\+N\+SS get\+Location()
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md44}{}\doxysection{v0.\+3 -\/ I\+O\+P Redesign (\+Oct 6, 2020)}\label{md_version-history_autotoc_md44}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md45}{}\doxysection{v0.\+3 -\/ I\+O\+P Redesign (\+Oct 6, 2020)}\label{md_version-history_autotoc_md45}
 Overhaul of the I\+OP buffering system.
 \begin{DoxyItemize}
 \item Simplified receive buffer management and eliminated copies from receive pipeline
@@ -69,7 +72,7 @@ Overhaul of the I\+OP buffering system.
 \item Receiver events per subscription (subscriptions can share a receiver function or have distinct receiver functions)
 \end{DoxyItemize}
 \item Multiple fixes
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md45}{}\doxysection{v0.\+2 -\/ Fixes and Enhancements (\+Jun 25, 2020)}\label{md_version-history_autotoc_md45}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md46}{}\doxysection{v0.\+2 -\/ Fixes and Enhancements (\+Jun 25, 2020)}\label{md_version-history_autotoc_md46}
 
 \begin{DoxyItemize}
 \item T\+C\+P/\+U\+DP large packets (60 $<$ packets $<$=1460 bytes), M\+Q\+T\+T(s) functional, Geo-\/\+Fence support
@@ -78,7 +81,7 @@ Overhaul of the I\+OP buffering system.
 \item Background tasks alignment for R\+T\+OS and Arduino Scheduler compatibility
 \item Added Geo-\/\+Fence support
 \item F\+O\+TA partial support for D\+F\+O\+TA via H\+T\+T\+PS (file system F\+O\+TA is a roadmap feature )
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md46}{}\doxysection{v0.\+1 -\/ Initial publish}\label{md_version-history_autotoc_md46}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md47}{}\doxysection{v0.\+1 -\/ Initial publish}\label{md_version-history_autotoc_md47}
 First release of a functional L\+T\+Em1 driver. Supported sockets (T\+C\+P/\+U\+D\+P/\+S\+SL) and limited M\+Q\+TT.
 \begin{DoxyItemize}
 \item Pure C99

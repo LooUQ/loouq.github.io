@@ -23,9 +23,9 @@
   <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEmC
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v2.0.0</span>
    </div>
-   <div id="projectbrief">C99 device driver for the LooUQ LTE cellular modems</div>
+   <div id="projectbrief">C device driver for the LooUQ LTE cellular modems</div>
   </td>
  </tr>
  </tbody>
@@ -71,8 +71,8 @@ $(function() {
 <div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
 Circuit River - LTEmC</h1>
 <h2><a class="anchor" id="autotoc_md1"></a>
-Release Status: v2.0.0</h2>
-<p>LTEm1 modem driver implemented in C99 for portability and a small footprint.</p>
+Latest Release: v2.0.0</h2>
+<p>LTEm1 modem driver implemented in C for portability and a small footprint.</p>
 <p>The LooUQ LTEmC driver supports the LooUQ Circuit River LTEm1 LTE modem. The LTEm1 is designed to allow for cost-effective cellular communications in embedded systems by supporting LTE CAT-M1 and LTE CAT-NB1 (NB-IOT) communications. The LTEm1 is certified for use on the Verizon network. It is also fully tested and supported using Hologram SIMs and several US carriers.</p>
 <p><b>First off, thanks for taking a look at the LTEm1 hardware and LTEmC software!</b></p>
 <h2><a class="anchor" id="autotoc_md2"></a>
@@ -113,9 +113,8 @@ LTEmC Subsystems</h3>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Future Directions</h2>
 <p>If you have an opinion on any of these functions and their applicability to your product/project please let LooUQ know. Send your thoughts to <a href="#" onclick="location.href='mai'+'lto:'+'ans'+'we'+'rs@'+'lo'+'ouq'+'.c'+'om'; return false;">answe<span style="display: none;">.nosp@m.</span>rs@l<span style="display: none;">.nosp@m.</span>oouq.<span style="display: none;">.nosp@m.</span>com</a>.</p><ul>
-<li>Power Management - Support for PSM, wake options, etc.</li>
-<li>HTTP(S) - Support for HTTP client in driver (planned for July 2021)</li>
-<li>FTP(S) - Support for FTP client in BGx firmware without application FTP stack</li>
+<li>Support for BG95 and BG77</li>
+<li>Power Management - Support for PSM, eDRX, etc.</li>
 <li>File System - Support for file storage on BGx via driver (BG96 has approx. 3MB available)</li>
 <li>FOTA - Support for scheduled FOTA </li>
 </ul>

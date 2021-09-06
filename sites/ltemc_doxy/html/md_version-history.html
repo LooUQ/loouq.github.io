@@ -23,9 +23,9 @@
   <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEmC
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v2.0.0</span>
    </div>
-   <div id="projectbrief">C99 device driver for the LooUQ LTE cellular modems</div>
+   <div id="projectbrief">C device driver for the LooUQ LTE cellular modems</div>
   </td>
  </tr>
  </tbody>
@@ -71,19 +71,23 @@ $(function() {
 <div class="textblock"><h3><a class="anchor" id="autotoc_md36"></a>
 Major or breaking changes will be called out with section explaining the change and the release header will be decorated with either &lt;em&gt;Major&lt;/em&gt; or &lt;em&gt;Breaking&lt;/em&gt;</h3>
 <h1><a class="anchor" id="autotoc_md37"></a>
-v1.1.0 - Added HTTP(S) functionality</h1>
+v2.0.0 - Major long-term release</h1>
+<h2><a class="anchor" id="autotoc_md38"></a>
+Added HTTP(S) functionality and redesigned buffering model. Enhancements to AT-Command module to allow for continued extensions to supported features.</h2>
 <ul>
 <li>Added support for HTTP(S) GET/POST</li>
+<li>Changed signature for LTEmC create and execute</li>
+<li>Added granular locking and general usability enhancements to ATCMD module</li>
 <li>Migrated TLS configuration for a connection into its own module ltemc-tls</li>
 <li>- Changed signature of <a class="el" href="ltemc-mqtt_8c.html#accc88867fece34baa7b992d3ab60d4aa" title="Open a remote MQTT server for use.">mqtt_open()</a> to only specify TLS enabled. User should configure TLS for Context_5 prior to open</li>
-<li>Enabling future IOP changes to remove fixed size internal receive buffering, migrating to application owned and managed buffers</li>
-<li>Enabling future multiple MQTT and HTTP(S) sessions per modem</li>
-<li>Enabling future decoupling of MQTT and HTTP(S) from fixed data contexts (currently: MQTT=5, HTTP=4).</li>
-<li>Misc fixes</li>
+<li>IOP was re-architected to streamline buffer only operations. Application now provides and owns receive data buffers, allowing for more flexibility and minimum memory usage base on your application's requirements.</li>
+<li>Support for multiple MQTT and HTTP(S) sessions per modem</li>
+<li>Decoupled MQTT from fixed data context number 5, HTTP created without fixed data context coupling.</li>
+<li>Misc fixes to BGx, MQTT, Network modules.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md38"></a>
+<h1><a class="anchor" id="autotoc_md39"></a>
 v1.0.0 - MAJOR RELEASE</h1>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 Version 1.0.0 is a major release with several breaking changes. This release is the 1st version fully vetted in commercial projects and sets the stage for future multiple LooUQ LTE modem models.</h2>
 <p><a href="https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/Release_1_0.md">https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/Release_1_0.md</a></p>
 <p>You are encouraged to review the Release_V1-0.md file for specifics on the major changes and how to adapt your application code.</p><ul>
@@ -95,7 +99,7 @@ Version 1.0.0 is a major release with several breaking changes. This release is 
 <li>Filename and .h file adjustments and cleanup</li>
 <li>Misc fixes</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md40"></a>
+<h1><a class="anchor" id="autotoc_md41"></a>
 v0.5.0 - Fixes and Network PDP context handling (Dec 28, 2020)</h1>
 <ul>
 <li>Fixed MQTT not trapping publish errors</li>
@@ -108,7 +112,7 @@ v0.5.0 - Fixes and Network PDP context handling (Dec 28, 2020)</h1>
 </li>
 <li>Change IOP PDP deactivated detect logic to match internal implementation in NETWORK module</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md41"></a>
+<h1><a class="anchor" id="autotoc_md42"></a>
 0.4.2 (Dec 15, 2020)</h1>
 <ul>
 <li>Updated ISR for intermittent missed event when receiving MQTT publish</li>
@@ -116,7 +120,7 @@ v0.5.0 - Fixes and Network PDP context handling (Dec 28, 2020)</h1>
 <li>Removed utils.c from LTEm1c library</li>
 <li>Functionality is now part of LQ Cloud but can be used independently as lqc_collections (.h.c)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md42"></a>
+<h1><a class="anchor" id="autotoc_md43"></a>
 v0.4.2 - Misc (Dec-15-2020)</h1>
 <ul>
 <li>Updated ISR for intermittent missed event when receiving MQTT publish</li>
@@ -124,13 +128,13 @@ v0.4.2 - Misc (Dec-15-2020)</h1>
 <li>Removed utils.c from LTEm1c library</li>
 <li>Functionality is now part of LQ Cloud but can be used independently as lqc_collections (.h.c)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md43"></a>
+<h1><a class="anchor" id="autotoc_md44"></a>
 v0.4.1 - Misc (Nov 28, 2020)</h1>
 <ul>
 <li>Remove dependency on JLink RTT</li>
 <li>Fixed parse issue in GNSS getLocation()</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md44"></a>
+<h1><a class="anchor" id="autotoc_md45"></a>
 v0.3 - IOP Redesign (Oct 6, 2020)</h1>
 <p>Overhaul of the IOP buffering system.</p><ul>
 <li>Simplified receive buffer management and eliminated copies from receive pipeline<ul>
@@ -147,7 +151,7 @@ v0.3 - IOP Redesign (Oct 6, 2020)</h1>
 </li>
 <li>Multiple fixes</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md45"></a>
+<h1><a class="anchor" id="autotoc_md46"></a>
 v0.2 - Fixes and Enhancements (Jun 25, 2020)</h1>
 <ul>
 <li>TCP/UDP large packets (60 &lt; packets &lt;=1460 bytes), MQTT(s) functional, Geo-Fence support</li>
@@ -157,7 +161,7 @@ v0.2 - Fixes and Enhancements (Jun 25, 2020)</h1>
 <li>Added Geo-Fence support</li>
 <li>FOTA partial support for DFOTA via HTTPS (file system FOTA is a roadmap feature )</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md46"></a>
+<h1><a class="anchor" id="autotoc_md47"></a>
 v0.1 - Initial publish</h1>
 <p>First release of a functional LTEm1 driver. Supported sockets (TCP/UDP/SSL) and limited MQTT.</p><ul>
 <li>Pure C99</li>
