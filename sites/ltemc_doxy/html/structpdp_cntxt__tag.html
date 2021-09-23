@@ -81,12 +81,12 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a56824b587d7ef835ff95c13ed36afc2d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_cntxt__tag.html#a56824b587d7ef835ff95c13ed36afc2d">contextId</a></td></tr>
 <tr class="memdesc:a56824b587d7ef835ff95c13ed36afc2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">context ID recognized by the carrier (valid are 1 to 16)  <a href="structpdp_cntxt__tag.html#a56824b587d7ef835ff95c13ed36afc2d">More...</a><br /></td></tr>
 <tr class="separator:a56824b587d7ef835ff95c13ed36afc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a702cdbdfc301e973c784cde24a1d8c36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a0086f053bcf6b99f83d0680de3b087f8">pdpCntxtIpType_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_cntxt__tag.html#a702cdbdfc301e973c784cde24a1d8c36">ipType</a></td></tr>
-<tr class="memdesc:a702cdbdfc301e973c784cde24a1d8c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 or IPv6.  <a href="structpdp_cntxt__tag.html#a702cdbdfc301e973c784cde24a1d8c36">More...</a><br /></td></tr>
-<tr class="separator:a702cdbdfc301e973c784cde24a1d8c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ad0b447cc593426dbdc96b969bec1e9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_cntxt__tag.html#a5ad0b447cc593426dbdc96b969bec1e9">ipAddress</a> [16]</td></tr>
-<tr class="memdesc:a5ad0b447cc593426dbdc96b969bec1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IP address obtained from the carrier for this context. The IP address of the modem.  <a href="structpdp_cntxt__tag.html#a5ad0b447cc593426dbdc96b969bec1e9">More...</a><br /></td></tr>
-<tr class="separator:a5ad0b447cc593426dbdc96b969bec1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dd0e95105d8e53fe7a35c3aaf8c19f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a5a1b3a2daf47f69a2999ad2b30e4f4a4">pdpCntxtProtocolType_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_cntxt__tag.html#a3dd0e95105d8e53fe7a35c3aaf8c19f2">protoType</a></td></tr>
+<tr class="memdesc:a3dd0e95105d8e53fe7a35c3aaf8c19f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 or IPv6.  <a href="structpdp_cntxt__tag.html#a3dd0e95105d8e53fe7a35c3aaf8c19f2">More...</a><br /></td></tr>
+<tr class="separator:a3dd0e95105d8e53fe7a35c3aaf8c19f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc723d0808984ddff2d51804075dd67"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpdp_cntxt__tag.html#a0dc723d0808984ddff2d51804075dd67">ipAddress</a> [40]</td></tr>
+<tr class="memdesc:a0dc723d0808984ddff2d51804075dd67"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IP address obtained from the carrier for this context. The IP address of the modem.  <a href="structpdp_cntxt__tag.html#a0dc723d0808984ddff2d51804075dd67">More...</a><br /></td></tr>
+<tr class="separator:a0dc723d0808984ddff2d51804075dd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Struct representing the state of active PDP contexts (aka: APN or data context). </p>
@@ -107,14 +107,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a5ad0b447cc593426dbdc96b969bec1e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ad0b447cc593426dbdc96b969bec1e9">&#9670;&nbsp;</a></span>ipAddress</h2>
+<a id="a0dc723d0808984ddff2d51804075dd67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc723d0808984ddff2d51804075dd67">&#9670;&nbsp;</a></span>ipAddress</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char ipAddress[16]</td>
+          <td class="memname">char ipAddress[40]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -123,14 +123,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a702cdbdfc301e973c784cde24a1d8c36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a702cdbdfc301e973c784cde24a1d8c36">&#9670;&nbsp;</a></span>ipType</h2>
+<a id="a3dd0e95105d8e53fe7a35c3aaf8c19f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dd0e95105d8e53fe7a35c3aaf8c19f2">&#9670;&nbsp;</a></span>protoType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ltemc-network_8h.html#a0086f053bcf6b99f83d0680de3b087f8">pdpCntxtIpType_t</a> ipType</td>
+          <td class="memname"><a class="el" href="ltemc-network_8h.html#a5a1b3a2daf47f69a2999ad2b30e4f4a4">pdpCntxtProtocolType_t</a> protoType</td>
         </tr>
       </table>
 </div><div class="memdoc">

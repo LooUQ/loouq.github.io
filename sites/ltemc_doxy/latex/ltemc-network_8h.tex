@@ -24,7 +24,7 @@ struct \mbox{\hyperlink{structnetwork__tag}{network\+\_\+tag}}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef enum \mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cc}{pdp\+Cntxt\+Ip\+Type\+\_\+tag}} \mbox{\hyperlink{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}{pdp\+Cntxt\+Ip\+Type\+\_\+t}}
+typedef enum \mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cc}{pdp\+Cntxt\+Ip\+Type\+\_\+tag}} \mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em Enum of the two available P\+DP contexts for B\+Gx provided by network carriers. \end{DoxyCompactList}\item 
 typedef enum \mbox{\hyperlink{ltemc-network_8h_a75359f333c3d195cffe786d2025294c7}{pdp\+Cntxt\+Auth\+Methods\+\_\+tag}} \mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}}
 \item 
@@ -38,42 +38,45 @@ typedef struct \mbox{\hyperlink{structnetwork__tag}{network\+\_\+tag}} \mbox{\hy
 \begin{DoxyCompactItemize}
 \item 
 enum \{ \newline
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}{atcmd\+\_\+\+\_\+use\+Default\+Timeout}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}{atcmd\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}{atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser}} = 0, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual}} = 0, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto}} = 1, 
 \newline
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}{A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}{A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}{atcmd\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
 \mbox{\hyperlink{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}{http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec}} = 60, 
 \mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}{I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size}} = 1800, 
-\newline
 \mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}} = 192, 
-\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
-\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS}} = 6, 
-\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
 \newline
-\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 3, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}{I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate}} = 115200, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period}} = (int)(1 / (double)I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate $\ast$ 10 $\ast$ I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz $\ast$ 1000) + 1, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}{I\+O\+P\+\_\+\+\_\+rx\+Default\+Timeout}} = I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period $\ast$ 2 + 192, 
+\newline
+\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 2, 
 \mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}{N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz}} = 20, 
 \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}{nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver}} = 0x01U, 
-\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
 \newline
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
 \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}{nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error}} = 0x80U, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}{B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt}} = 1, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}{B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts}} = 2, 
-\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
 \newline
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}{B\+G\+X\+\_\+\+\_\+power\+Off\+Delay}} = 1500, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}{B\+G\+X\+\_\+\+\_\+reset\+Delay}} = 300, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}{B\+G\+X\+\_\+\+\_\+baud\+Rate}} = 115200, 
-\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
 \newline
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
 \mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}{sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS}} = 60000, 
 \mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}{S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz}} = 1500
  \}
 \item 
-enum \mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cc}{pdp\+Cntxt\+Ip\+Type\+\_\+tag}} \{ \mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca00d39362795bf25c1e9e986de55fc686}{pdp\+Cntxt\+Ip\+Type\+\_\+\+I\+P\+V4}} = 1, 
-\mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca6abc753b936555b9a2e6ce3cd1fb2c09}{pdp\+Cntxt\+Ip\+Type\+\_\+\+I\+P\+V6}} = 2
+enum \mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cc}{pdp\+Cntxt\+Ip\+Type\+\_\+tag}} \{ \mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767ccab3c2370bd9321f21cbde8044ab23f5eb}{pdp\+Cntxt\+Protocol\+Type\+\_\+\+I\+P\+V4}} = 1, 
+\mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca80224e474408f02d34316e817ed604cb}{pdp\+Cntxt\+Protocol\+Type\+\_\+\+I\+P\+V6}} = 2, 
+\mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca26f9dc685fe2a618f53059d5298436f8}{pdp\+Cntxt\+Protocol\+Type\+\_\+\+I\+P\+V4\+V6}} = 3, 
+\mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca576f0cab97611d9882386ab5ae764ca9}{pdp\+Cntxt\+Protocol\+Type\+\_\+\+P\+PP}} = 9
  \}
 \begin{DoxyCompactList}\small\item\em Enum of the two available P\+DP contexts for B\+Gx provided by network carriers. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{ltemc-network_8h_a75359f333c3d195cffe786d2025294c7}{pdp\+Cntxt\+Auth\+Methods\+\_\+tag}} \{ \mbox{\hyperlink{ltemc-network_8h_a75359f333c3d195cffe786d2025294c7a7beba2b95c8d806b9ce64963a1683801}{pdp\+Cntxt\+Auth\+Methods\+\_\+none}} = 0, 
@@ -89,18 +92,16 @@ void \mbox{\hyperlink{ltemc-network_8h_a59f08d7a2cf3e7d6685e377aff6bc57d}{ntwk\+
 \begin{DoxyCompactList}\small\item\em Initialize the IP network contexts structure. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-network_8h_a58db2e79250f681c695c651d586fd25f}{network\+Operator\+\_\+t}} \mbox{\hyperlink{ltemc-network_8h_ada224a6a88782263e4a9cf65c3678d7e}{ntwk\+\_\+await\+Operator}} (uint16\+\_\+t wait\+Dur\+Seconds)
 \begin{DoxyCompactList}\small\item\em Wait for a network operator name and network mode. Can be cancelled in threaded env via g\+\_\+ltem-\/$>$cancellation\+Request. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8h_a3398dd81e1b122fcacdafb90c3eb33f3}{ntwk\+\_\+get\+Active\+Pdp\+Cntxt\+Cnt}} ()
-\begin{DoxyCompactList}\small\item\em Get count of A\+PN active data contexts from B\+Gx. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-network_8h_a3bda30e06064bcd9899972a12d766a3f}{ntwk\+\_\+config\+Pdp\+Cntxt}} (uint8\+\_\+t contxt\+Id, \mbox{\hyperlink{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}{pdp\+Cntxt\+Ip\+Type\+\_\+t}} ip\+Type, const char $\ast$user\+Id, const char $\ast$pw, \mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}} auth\+Method)
-\item 
-\mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}} $\ast$ \mbox{\hyperlink{ltemc-network_8h_ad85d2407b51d513c48d0dc2622d6d2cb}{ntwk\+\_\+get\+Pdp\+Cntxt}} (uint8\+\_\+t contxt\+Id)
-\begin{DoxyCompactList}\small\item\em Get P\+DP Context/\+A\+PN information. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-network_8h_ae16dc0bfd169ac72135a4bab0109f64f}{ntwk\+\_\+activate\+Pdp\+Context}} (uint8\+\_\+t contxt\+Id)
+bool \mbox{\hyperlink{ltemc-network_8h_a338e4b654dde96a6abbb5802085b5808}{ntwk\+\_\+activate\+Pdp\+Context}} (uint8\+\_\+t cntxt\+Id, \mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}} proto\+Type, const char $\ast$p\+Apn)
 \begin{DoxyCompactList}\small\item\em Activate P\+DP Context/\+A\+PN. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-network_8h_aa121d8f8af5adccbe9fb4e79d8fdc7ce}{ntwk\+\_\+activate\+Pdp\+Context\+With\+Auth}} (uint8\+\_\+t cntxt\+Id, const char $\ast$p\+User\+Name, const char $\ast$p\+PW, \mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}} auth\+Method)
+\begin{DoxyCompactList}\small\item\em Activate P\+DP Context/\+A\+PN requiring authentication. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8h_ad3bc4e9d0b6d6f181ac180fbd91d5ce0}{ntwk\+\_\+deactivate\+Pdp\+Context}} (uint8\+\_\+t contxt\+Id)
 \begin{DoxyCompactList}\small\item\em Deactivate A\+PN. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-network_8h_a44958b492843d449944cfc78d937241d}{ntwk\+\_\+reset\+Pdp\+Contexts}} ()
-\begin{DoxyCompactList}\small\item\em Reset (deactivate/activate) all network A\+P\+Ns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8h_a7fc41326ad93487aacd65148f4289223}{ntwk\+\_\+fetch\+Active\+Pdp\+Cntxts}} ()
+\begin{DoxyCompactList}\small\item\em Get count of A\+PN active data contexts from B\+Gx. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}} $\ast$ \mbox{\hyperlink{ltemc-network_8h_a91dd799b4855140d918c82cb27bb3e65}{ntwk\+\_\+get\+Pdp\+Cntxt\+Info}} (uint8\+\_\+t contxt\+Id)
+\begin{DoxyCompactList}\small\item\em Get P\+DP Context/\+A\+PN information. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -167,11 +168,11 @@ Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data con
 \doxysubsubsection{\texorpdfstring{pdpCntxtAuthMethods\_t}{pdpCntxtAuthMethods\_t}}
 {\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-network_8h_a75359f333c3d195cffe786d2025294c7}{pdp\+Cntxt\+Auth\+Methods\+\_\+tag}} \mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}}}
 
-\mbox{\Hypertarget{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}\label{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}} 
-\index{ltemc-\/network.h@{ltemc-\/network.h}!pdpCntxtIpType\_t@{pdpCntxtIpType\_t}}
-\index{pdpCntxtIpType\_t@{pdpCntxtIpType\_t}!ltemc-\/network.h@{ltemc-\/network.h}}
-\doxysubsubsection{\texorpdfstring{pdpCntxtIpType\_t}{pdpCntxtIpType\_t}}
-{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cc}{pdp\+Cntxt\+Ip\+Type\+\_\+tag}} \mbox{\hyperlink{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}{pdp\+Cntxt\+Ip\+Type\+\_\+t}}}
+\mbox{\Hypertarget{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}\label{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}} 
+\index{ltemc-\/network.h@{ltemc-\/network.h}!pdpCntxtProtocolType\_t@{pdpCntxtProtocolType\_t}}
+\index{pdpCntxtProtocolType\_t@{pdpCntxtProtocolType\_t}!ltemc-\/network.h@{ltemc-\/network.h}}
+\doxysubsubsection{\texorpdfstring{pdpCntxtProtocolType\_t}{pdpCntxtProtocolType\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cc}{pdp\+Cntxt\+Ip\+Type\+\_\+tag}} \mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}}}
 
 
 
@@ -185,8 +186,8 @@ Enum of the two available P\+DP contexts for B\+Gx provided by network carriers.
 {\footnotesize\ttfamily anonymous enum}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}} 
-atcmd\+\_\+\+\_\+use\+Default\+Timeout&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_defaultTimeoutMS@{atcmd\_\_defaultTimeoutMS}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!atcmd\_\_defaultTimeoutMS@{atcmd\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}} 
+atcmd\+\_\+\+\_\+default\+Timeout\+MS&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}} 
@@ -201,12 +202,8 @@ atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual&\\
 atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}} 
-A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}} 
-A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result&private declaration; value returned from response parsers indicating a pattern match has not yet been detected \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_parserPendingResult@{atcmd\_\_parserPendingResult}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!atcmd\_\_parserPendingResult@{atcmd\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}} 
+atcmd\+\_\+\+\_\+parser\+Pending\+Result&value returned from response parsers indicating a pattern match has not yet been detected \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}} 
@@ -221,12 +218,20 @@ I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size&\\
 I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartBaudRate@{IOP\_\_uartBaudRate}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!IOP\_\_uartBaudRate@{IOP\_\_uartBaudRate}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}} 
+I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate&\\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}} 
 I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}} 
-I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOFillPeriod@{IOP\_\_uartFIFOFillPeriod}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!IOP\_\_uartFIFOFillPeriod@{IOP\_\_uartFIFOFillPeriod}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_rxDefaultTimeout@{IOP\_\_rxDefaultTimeout}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!IOP\_\_rxDefaultTimeout@{IOP\_\_rxDefaultTimeout}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}} 
+I\+O\+P\+\_\+\+\_\+rx\+Default\+Timeout&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{resultCode\_\_parserPending@{resultCode\_\_parserPending}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!resultCode\_\_parserPending@{resultCode\_\_parserPending}}}\mbox{\Hypertarget{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}\label{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}} 
@@ -325,23 +330,31 @@ pdp\+Cntxt\+Auth\+Methods\+\_\+pap\+Chap&\\
 Enum of the two available P\+DP contexts for B\+Gx provided by network carriers. 
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{pdpCntxtIpType\_IPV4@{pdpCntxtIpType\_IPV4}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!pdpCntxtIpType\_IPV4@{pdpCntxtIpType\_IPV4}}}\mbox{\Hypertarget{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca00d39362795bf25c1e9e986de55fc686}\label{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca00d39362795bf25c1e9e986de55fc686}} 
-pdp\+Cntxt\+Ip\+Type\+\_\+\+I\+P\+V4&IP v4, 32-\/bit address (ex\+: 192.\+168.\+37.\+52) \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pdpCntxtProtocolType\_IPV4@{pdpCntxtProtocolType\_IPV4}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!pdpCntxtProtocolType\_IPV4@{pdpCntxtProtocolType\_IPV4}}}\mbox{\Hypertarget{ltemc-network_8h_aa55a4d211043314594fd0ca9150767ccab3c2370bd9321f21cbde8044ab23f5eb}\label{ltemc-network_8h_aa55a4d211043314594fd0ca9150767ccab3c2370bd9321f21cbde8044ab23f5eb}} 
+pdp\+Cntxt\+Protocol\+Type\+\_\+\+I\+P\+V4&IP v4, 32-\/bit address (ex\+: 192.\+168.\+37.\+52) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{pdpCntxtIpType\_IPV6@{pdpCntxtIpType\_IPV6}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!pdpCntxtIpType\_IPV6@{pdpCntxtIpType\_IPV6}}}\mbox{\Hypertarget{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca6abc753b936555b9a2e6ce3cd1fb2c09}\label{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca6abc753b936555b9a2e6ce3cd1fb2c09}} 
-pdp\+Cntxt\+Ip\+Type\+\_\+\+I\+P\+V6&IP v6, 128-\/bit address (ex\+: 2001\+:0db8\+:0000\+:0000\+:0000\+:8a2e\+:0370\+:7334) \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pdpCntxtProtocolType\_IPV6@{pdpCntxtProtocolType\_IPV6}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!pdpCntxtProtocolType\_IPV6@{pdpCntxtProtocolType\_IPV6}}}\mbox{\Hypertarget{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca80224e474408f02d34316e817ed604cb}\label{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca80224e474408f02d34316e817ed604cb}} 
+pdp\+Cntxt\+Protocol\+Type\+\_\+\+I\+P\+V6&IP v6, 128-\/bit address (ex\+: 2001\+:0db8\+:0000\+:0000\+:0000\+:8a2e\+:0370\+:7334) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pdpCntxtProtocolType\_IPV4V6@{pdpCntxtProtocolType\_IPV4V6}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!pdpCntxtProtocolType\_IPV4V6@{pdpCntxtProtocolType\_IPV4V6}}}\mbox{\Hypertarget{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca26f9dc685fe2a618f53059d5298436f8}\label{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca26f9dc685fe2a618f53059d5298436f8}} 
+pdp\+Cntxt\+Protocol\+Type\+\_\+\+I\+P\+V4\+V6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pdpCntxtProtocolType\_PPP@{pdpCntxtProtocolType\_PPP}!ltemc-\/network.h@{ltemc-\/network.h}}\index{ltemc-\/network.h@{ltemc-\/network.h}!pdpCntxtProtocolType\_PPP@{pdpCntxtProtocolType\_PPP}}}\mbox{\Hypertarget{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca576f0cab97611d9882386ab5ae764ca9}\label{ltemc-network_8h_aa55a4d211043314594fd0ca9150767cca576f0cab97611d9882386ab5ae764ca9}} 
+pdp\+Cntxt\+Protocol\+Type\+\_\+\+P\+PP&\\
 \hline
 
 \end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{ltemc-network_8h_ae16dc0bfd169ac72135a4bab0109f64f}\label{ltemc-network_8h_ae16dc0bfd169ac72135a4bab0109f64f}} 
+\mbox{\Hypertarget{ltemc-network_8h_a338e4b654dde96a6abbb5802085b5808}\label{ltemc-network_8h_a338e4b654dde96a6abbb5802085b5808}} 
 \index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_activatePdpContext@{ntwk\_activatePdpContext}}
 \index{ntwk\_activatePdpContext@{ntwk\_activatePdpContext}!ltemc-\/network.h@{ltemc-\/network.h}}
 \doxysubsubsection{\texorpdfstring{ntwk\_activatePdpContext()}{ntwk\_activatePdpContext()}}
-{\footnotesize\ttfamily bool ntwk\+\_\+activate\+Pdp\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool ntwk\+\_\+activate\+Pdp\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}}}]{proto\+Type,  }\item[{const char $\ast$}]{p\+Apn }\end{DoxyParamCaption})}
 
 
 
@@ -350,6 +363,31 @@ Activate P\+DP Context/\+A\+PN.
 
 \begin{DoxyParams}{Parameters}
 {\em cntxt\+Id} & \mbox{[}in\mbox{]} -\/ The A\+PN to operate on. Typically 0 or 1 \\
+\hline
+{\em proto\+Type} & \mbox{[}in\mbox{]} -\/ The P\+DP protocol I\+P\+V4, I\+P\+V6, I\+P\+V4\+V6 (both). \\
+\hline
+{\em p\+Apn} & \mbox{[}in\mbox{]} -\/ The A\+PN name if required by network carrier. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-network_8h_aa121d8f8af5adccbe9fb4e79d8fdc7ce}\label{ltemc-network_8h_aa121d8f8af5adccbe9fb4e79d8fdc7ce}} 
+\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_activatePdpContextWithAuth@{ntwk\_activatePdpContextWithAuth}}
+\index{ntwk\_activatePdpContextWithAuth@{ntwk\_activatePdpContextWithAuth}!ltemc-\/network.h@{ltemc-\/network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_activatePdpContextWithAuth()}{ntwk\_activatePdpContextWithAuth()}}
+{\footnotesize\ttfamily bool ntwk\+\_\+activate\+Pdp\+Context\+With\+Auth (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id,  }\item[{const char $\ast$}]{p\+User\+Name,  }\item[{const char $\ast$}]{p\+PW,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}}}]{auth\+Method }\end{DoxyParamCaption})}
+
+
+
+Activate P\+DP Context/\+A\+PN requiring authentication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cntxt\+Id} & \mbox{[}in\mbox{]} -\/ The A\+PN to operate on. Typically 0 or 1 \\
+\hline
+{\em p\+User\+Name} & \mbox{[}in\mbox{]} -\/ String with user name \\
+\hline
+{\em p\+PW} & \mbox{[}in\mbox{]} -\/ String with password \\
+\hline
+{\em auth\+Method} & \mbox{[}in\mbox{]} -\/ Enum specifying the type of authentication expected by network \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{ltemc-network_8h_ada224a6a88782263e4a9cf65c3678d7e}\label{ltemc-network_8h_ada224a6a88782263e4a9cf65c3678d7e}} 
@@ -370,12 +408,6 @@ Wait for a network operator name and network mode. Can be cancelled in threaded 
 \begin{DoxyReturn}{Returns}
 Struct containing the network operator name (oper\+Name) and network mode (ntwk\+Mode). 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-network_8h_a3bda30e06064bcd9899972a12d766a3f}\label{ltemc-network_8h_a3bda30e06064bcd9899972a12d766a3f}} 
-\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_configPdpCntxt@{ntwk\_configPdpCntxt}}
-\index{ntwk\_configPdpCntxt@{ntwk\_configPdpCntxt}!ltemc-\/network.h@{ltemc-\/network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_configPdpCntxt()}{ntwk\_configPdpCntxt()}}
-{\footnotesize\ttfamily void ntwk\+\_\+config\+Pdp\+Cntxt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{contxt\+Id,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}{pdp\+Cntxt\+Ip\+Type\+\_\+t}}}]{ip\+Type,  }\item[{const char $\ast$}]{user\+Id,  }\item[{const char $\ast$}]{pw,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}}}]{auth\+Method }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{ltemc-network_8h_a59f08d7a2cf3e7d6685e377aff6bc57d}\label{ltemc-network_8h_a59f08d7a2cf3e7d6685e377aff6bc57d}} 
 \index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_create@{ntwk\_create}}
 \index{ntwk\_create@{ntwk\_create}!ltemc-\/network.h@{ltemc-\/network.h}}
@@ -401,11 +433,11 @@ Deactivate A\+PN.
 {\em cntxt\+Id} & \mbox{[}in\mbox{]} -\/ The A\+PN number to operate on. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-network_8h_a3398dd81e1b122fcacdafb90c3eb33f3}\label{ltemc-network_8h_a3398dd81e1b122fcacdafb90c3eb33f3}} 
-\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_getActivePdpCntxtCnt@{ntwk\_getActivePdpCntxtCnt}}
-\index{ntwk\_getActivePdpCntxtCnt@{ntwk\_getActivePdpCntxtCnt}!ltemc-\/network.h@{ltemc-\/network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_getActivePdpCntxtCnt()}{ntwk\_getActivePdpCntxtCnt()}}
-{\footnotesize\ttfamily uint8\+\_\+t ntwk\+\_\+get\+Active\+Pdp\+Cntxt\+Cnt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-network_8h_a7fc41326ad93487aacd65148f4289223}\label{ltemc-network_8h_a7fc41326ad93487aacd65148f4289223}} 
+\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_fetchActivePdpCntxts@{ntwk\_fetchActivePdpCntxts}}
+\index{ntwk\_fetchActivePdpCntxts@{ntwk\_fetchActivePdpCntxts}!ltemc-\/network.h@{ltemc-\/network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_fetchActivePdpCntxts()}{ntwk\_fetchActivePdpCntxts()}}
+{\footnotesize\ttfamily uint8\+\_\+t ntwk\+\_\+fetch\+Active\+Pdp\+Cntxts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -414,11 +446,11 @@ Get count of A\+PN active data contexts from B\+Gx.
 \begin{DoxyReturn}{Returns}
 Count of active data contexts (B\+Gx max is 3). 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-network_8h_ad85d2407b51d513c48d0dc2622d6d2cb}\label{ltemc-network_8h_ad85d2407b51d513c48d0dc2622d6d2cb}} 
-\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_getPdpCntxt@{ntwk\_getPdpCntxt}}
-\index{ntwk\_getPdpCntxt@{ntwk\_getPdpCntxt}!ltemc-\/network.h@{ltemc-\/network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_getPdpCntxt()}{ntwk\_getPdpCntxt()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}}$\ast$ ntwk\+\_\+get\+Pdp\+Cntxt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-network_8h_a91dd799b4855140d918c82cb27bb3e65}\label{ltemc-network_8h_a91dd799b4855140d918c82cb27bb3e65}} 
+\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_getPdpCntxtInfo@{ntwk\_getPdpCntxtInfo}}
+\index{ntwk\_getPdpCntxtInfo@{ntwk\_getPdpCntxtInfo}!ltemc-\/network.h@{ltemc-\/network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_getPdpCntxtInfo()}{ntwk\_getPdpCntxtInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}}$\ast$ ntwk\+\_\+get\+Pdp\+Cntxt\+Info (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id }\end{DoxyParamCaption})}
 
 
 
@@ -432,14 +464,3 @@ Get P\+DP Context/\+A\+PN information.
 \begin{DoxyReturn}{Returns}
 Pointer to P\+DP context info in active context table, N\+U\+LL if not active 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-network_8h_a44958b492843d449944cfc78d937241d}\label{ltemc-network_8h_a44958b492843d449944cfc78d937241d}} 
-\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_resetPdpContexts@{ntwk\_resetPdpContexts}}
-\index{ntwk\_resetPdpContexts@{ntwk\_resetPdpContexts}!ltemc-\/network.h@{ltemc-\/network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_resetPdpContexts()}{ntwk\_resetPdpContexts()}}
-{\footnotesize\ttfamily void ntwk\+\_\+reset\+Pdp\+Contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Reset (deactivate/activate) all network A\+P\+Ns. 
-
-N\+O\+TE\+: activate and deactivate have side effects, they internally call get\+Active\+Contexts prior to return 

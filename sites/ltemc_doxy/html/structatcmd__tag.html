@@ -84,12 +84,12 @@ Data Fields</h2></td></tr>
 <tr class="memitem:ac5fe4d4ad6a0194a80fb1d08aea1383f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#ac5fe4d4ad6a0194a80fb1d08aea1383f">timeoutMS</a></td></tr>
 <tr class="memdesc:ac5fe4d4ad6a0194a80fb1d08aea1383f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timout in milliseconds for the command, defaults to 300mS. BGx documentation indicates cmds with longer timeout.  <a href="structatcmd__tag.html#ac5fe4d4ad6a0194a80fb1d08aea1383f">More...</a><br /></td></tr>
 <tr class="separator:ac5fe4d4ad6a0194a80fb1d08aea1383f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c69c52917ebde0247df730ac97d94aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a5c69c52917ebde0247df730ac97d94aa">autoLock</a></td></tr>
-<tr class="memdesc:a5c69c52917ebde0247df730ac97d94aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">next invoke should acquire lock (true), or reuse lock (false)  <a href="structatcmd__tag.html#a5c69c52917ebde0247df730ac97d94aa">More...</a><br /></td></tr>
-<tr class="separator:a5c69c52917ebde0247df730ac97d94aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19772b5f09be5cf1b45db25c6710173e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a19772b5f09be5cf1b45db25c6710173e">isOpenLocked</a></td></tr>
 <tr class="memdesc:a19772b5f09be5cf1b45db25c6710173e"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation.  <a href="structatcmd__tag.html#a19772b5f09be5cf1b45db25c6710173e">More...</a><br /></td></tr>
 <tr class="separator:a19772b5f09be5cf1b45db25c6710173e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c69c52917ebde0247df730ac97d94aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a5c69c52917ebde0247df730ac97d94aa">autoLock</a></td></tr>
+<tr class="memdesc:a5c69c52917ebde0247df730ac97d94aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">last invoke was auto and should be closed automatically on complete  <a href="structatcmd__tag.html#a5c69c52917ebde0247df730ac97d94aa">More...</a><br /></td></tr>
+<tr class="separator:a5c69c52917ebde0247df730ac97d94aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5060510445edaff8c6d26aba0141eaae"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html#a5060510445edaff8c6d26aba0141eaae">invokedAt</a></td></tr>
 <tr class="memdesc:a5060510445edaff8c6d26aba0141eaae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tick value at the command invocation, used for timeout detection.  <a href="structatcmd__tag.html#a5060510445edaff8c6d26aba0141eaae">More...</a><br /></td></tr>
 <tr class="separator:a5060510445edaff8c6d26aba0141eaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,7 +123,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>next invoke should acquire lock (true), or reuse lock (false) </p>
+<p>last invoke was auto and should be closed automatically on complete </p>
 
 </div>
 </div>

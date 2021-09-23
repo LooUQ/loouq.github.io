@@ -5,6 +5,7 @@
 {\ttfamily \#include \char`\"{}ltemc-\/internal.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/sckt.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/mqtt.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lq-\/str.\+h$>$}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,6 +16,8 @@
 \#define \mbox{\hyperlink{ltemc-iop_8c_abf43a3af3a4735d3f139e0ac8b2eac9c}{Q\+B\+G\+\_\+\+A\+P\+P\+R\+E\+A\+D\+Y\+\_\+\+M\+I\+L\+L\+I\+S\+M\+AX}}~5000
 \item 
 \#define \mbox{\hyperlink{ltemc-iop_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
+\item 
+\#define \mbox{\hyperlink{ltemc-iop_8c_aacc3ee1a7f283f8ef65cea31f4436a95}{M\+AX}}(x,  y)~(((x) $>$ (y)) ? (x) \+: (y))
 \item 
 \#define \mbox{\hyperlink{ltemc-iop_8c_a7d19c8e4b85d2ff5dc1267321330fe4d}{I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+A\+D\+V\+I\+N\+D\+EX}}(I\+N\+DX)~I\+N\+DX = (++I\+N\+DX == I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+C\+O\+U\+NT) ? 0 \+: I\+N\+DX
 \end{DoxyCompactItemize}
@@ -27,12 +30,18 @@ void \mbox{\hyperlink{ltemc-iop_8c_ab8fd0c82d50c72c29bccc37f9fd72dbd}{I\+O\+P\+\
 \begin{DoxyCompactList}\small\item\em register a stream peer with I\+OP to control communications. Typically performed by protocol open. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-iop_8c_a433190280a770fb33dbcceb681d0b146}{I\+O\+P\+\_\+start}} ()
 \begin{DoxyCompactList}\small\item\em Complete initialization and start running iop processes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-iop_8c_a4bff30d4da421246bd6c776a750e0f4e}{I\+O\+P\+\_\+stop\+Irq}} ()
+\item 
 void \mbox{\hyperlink{ltemc-iop_8c_a9b915345fc60a5413c07164fd1c2630d}{I\+O\+P\+\_\+await\+App\+Ready}} ()
 \begin{DoxyCompactList}\small\item\em Verify L\+T\+Em1 is ready for driver operations. \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_af109051869f4374c5ff6ff0e4dbe4a90}{I\+O\+P\+\_\+send\+Tx}} (const char $\ast$send\+Data, uint16\+\_\+t send\+Sz, bool send\+Immediate)
 \begin{DoxyCompactList}\small\item\em Start a (raw) send operation. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-iop_8c_ab717ef72de91b80e7b31d33bf6a9dad2}{I\+O\+P\+\_\+detect\+Rx\+Idle}} ()
-\begin{DoxyCompactList}\small\item\em Check for RX idle (no incoming receives from N\+XP in 2.\+5 buffer times). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_af4b541597e39b3850bdea2de36e57e03}{I\+O\+P\+\_\+get\+Rx\+Idle\+Duration}} ()
+\begin{DoxyCompactList}\small\item\em Check for RX progress/idle. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{ltemc-iop_8c_a8054cc5eebb16fb04f6c09d1929a5dfd}{I\+O\+P\+\_\+find\+Rx\+Ahead}} (\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$p\+Buf, uint8\+\_\+t rewind\+Cnt, const char $\ast$p\+Needle, const char $\ast$p\+Term)
+\begin{DoxyCompactList}\small\item\em Finds a string in the last X characters of the I\+OP RX stream. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_a797563dda768f4b3aefd009f1f60739d}{I\+O\+P\+\_\+fetch\+Rx\+Ahead}} (\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$p\+Buf, char $\ast$p\+Start, uint16\+\_\+t take\+Cnt, char $\ast$p\+Chars)
+\begin{DoxyCompactList}\small\item\em Get a contiguous block of characters from the RX buffer pages. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-iop_8c_ad726cfd88029a9eff03f4595c24ea81c}{I\+O\+P\+\_\+reset\+Core\+Rx\+Buffer}} ()
 \begin{DoxyCompactList}\small\item\em Clear receive C\+O\+M\+M\+A\+N\+D/\+C\+O\+RE response buffer. \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_a9ef55e6a25ce8ff909dbf7046bd39cba}{I\+O\+P\+\_\+init\+Rx\+Buffer\+Ctrl}} (\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$buf\+Ctrl, uint8\+\_\+t $\ast$rx\+Buf, uint16\+\_\+t rx\+Buf\+Sz)
@@ -47,9 +56,7 @@ void \mbox{\hyperlink{ltemc-iop_8c_a9f0be39a6399b95fc875ab368d935e21}{I\+O\+P\+\
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} \mbox{\hyperlink{ltemc-iop_8c_a5f9b6913ff818fbc74934a69849fb48b}{g\+\_\+ltem}}
-\begin{DoxyCompactList}\small\item\em The L\+T\+Em \char`\"{}object\char`\"{}. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_a7b00d49600e4c14d2894e89b89e2a70d}{dbg\+\_\+urc\+In\+Cmd\+Lock}} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The L\+T\+Em \char`\"{}object\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -64,6 +71,12 @@ uint8\+\_\+t \mbox{\hyperlink{ltemc-iop_8c_a7b00d49600e4c14d2894e89b89e2a70d}{db
 \index{IOP\_RXCTRLBLK\_ADVINDEX@{IOP\_RXCTRLBLK\_ADVINDEX}!ltemc-\/iop.c@{ltemc-\/iop.c}}
 \doxysubsubsection{\texorpdfstring{IOP\_RXCTRLBLK\_ADVINDEX}{IOP\_RXCTRLBLK\_ADVINDEX}}
 {\footnotesize\ttfamily \#define I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+A\+D\+V\+I\+N\+D\+EX(\begin{DoxyParamCaption}\item[{}]{I\+N\+DX }\end{DoxyParamCaption})~I\+N\+DX = (++I\+N\+DX == I\+O\+P\+\_\+\+R\+X\+C\+T\+R\+L\+B\+L\+K\+\_\+\+C\+O\+U\+NT) ? 0 \+: I\+N\+DX}
+
+\mbox{\Hypertarget{ltemc-iop_8c_aacc3ee1a7f283f8ef65cea31f4436a95}\label{ltemc-iop_8c_aacc3ee1a7f283f8ef65cea31f4436a95}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!MAX@{MAX}}
+\index{MAX@{MAX}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \#define M\+AX(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $>$ (y)) ? (x) \+: (y))}
 
 \mbox{\Hypertarget{ltemc-iop_8c_a74e75242132eaabbc1c512488a135926}\label{ltemc-iop_8c_a74e75242132eaabbc1c512488a135926}} 
 \index{ltemc-\/iop.c@{ltemc-\/iop.c}!MIN@{MIN}}
@@ -106,18 +119,66 @@ Verify L\+T\+Em1 is ready for driver operations.
 
 Initialize the Input/\+Output Process subsystem. 
 
-\mbox{\Hypertarget{ltemc-iop_8c_ab717ef72de91b80e7b31d33bf6a9dad2}\label{ltemc-iop_8c_ab717ef72de91b80e7b31d33bf6a9dad2}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_detectRxIdle@{IOP\_detectRxIdle}}
-\index{IOP\_detectRxIdle@{IOP\_detectRxIdle}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{IOP\_detectRxIdle()}{IOP\_detectRxIdle()}}
-{\footnotesize\ttfamily bool I\+O\+P\+\_\+detect\+Rx\+Idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-iop_8c_a797563dda768f4b3aefd009f1f60739d}\label{ltemc-iop_8c_a797563dda768f4b3aefd009f1f60739d}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_fetchRxAhead@{IOP\_fetchRxAhead}}
+\index{IOP\_fetchRxAhead@{IOP\_fetchRxAhead}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_fetchRxAhead()}{IOP\_fetchRxAhead()}}
+{\footnotesize\ttfamily uint16\+\_\+t I\+O\+P\+\_\+fetch\+Rx\+Ahead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$}]{p\+Buf,  }\item[{char $\ast$}]{p\+Start,  }\item[{uint16\+\_\+t}]{take\+Cnt,  }\item[{char $\ast$}]{p\+Chars }\end{DoxyParamCaption})}
 
 
 
-Check for RX idle (no incoming receives from N\+XP in 2.\+5 buffer times). 
+Get a contiguous block of characters from the RX buffer pages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Buf} & \mbox{[}in\mbox{]} -\/ Pointer data receive buffer. \\
+\hline
+{\em p\+Start} & \mbox{[}in\mbox{]} -\/ Address within the RX buffer to start retrieving chars. \\
+\hline
+{\em take\+Cnt} & \mbox{[}in\mbox{]} -\/ The number of chars to return. \\
+\hline
+{\em p\+Chars} & \mbox{[}out\mbox{]} -\/ Buffer to hold retrieved characters, must be take\+Cnt + 1. Buffer will be null terminated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the character after the needle match (if found), otherwise return N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-iop_8c_a8054cc5eebb16fb04f6c09d1929a5dfd}\label{ltemc-iop_8c_a8054cc5eebb16fb04f6c09d1929a5dfd}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_findRxAhead@{IOP\_findRxAhead}}
+\index{IOP\_findRxAhead@{IOP\_findRxAhead}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_findRxAhead()}{IOP\_findRxAhead()}}
+{\footnotesize\ttfamily char$\ast$ I\+O\+P\+\_\+find\+Rx\+Ahead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$}]{p\+Buf,  }\item[{uint8\+\_\+t}]{rewind\+Cnt,  }\item[{const char $\ast$}]{p\+Needle,  }\item[{const char $\ast$}]{p\+Term }\end{DoxyParamCaption})}
+
+
+
+Finds a string in the last X characters of the I\+OP RX stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Buf} & \mbox{[}in\mbox{]} -\/ Pointer data receive buffer. \\
+\hline
+{\em rewind\+Cnt} & \mbox{[}in\mbox{]} -\/ The number of chars to search backward. \\
+\hline
+{\em p\+Needle} & \mbox{[}in\mbox{]} -\/ The string to find. \\
+\hline
+{\em p\+Term} & \mbox{[}in\mbox{]} -\/ Optional phrase that must be found after needle phrase.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the character after the needle match (if found), otherwise return N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-iop_8c_af4b541597e39b3850bdea2de36e57e03}\label{ltemc-iop_8c_af4b541597e39b3850bdea2de36e57e03}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_getRxIdleDuration@{IOP\_getRxIdleDuration}}
+\index{IOP\_getRxIdleDuration@{IOP\_getRxIdleDuration}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_getRxIdleDuration()}{IOP\_getRxIdleDuration()}}
+{\footnotesize\ttfamily uint32\+\_\+t I\+O\+P\+\_\+get\+Rx\+Idle\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check for RX progress/idle. 
 
 \begin{DoxyReturn}{Returns}
-True 
+Duration since last fill level change detected; returns 0 if a change is detected since last call 
 \end{DoxyReturn}
 \mbox{\Hypertarget{ltemc-iop_8c_a9ef55e6a25ce8ff909dbf7046bd39cba}\label{ltemc-iop_8c_a9ef55e6a25ce8ff909dbf7046bd39cba}} 
 \index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_initRxBufferCtrl@{IOP\_initRxBufferCtrl}}
@@ -217,6 +278,12 @@ Number of characters queued for sending.
 
 Complete initialization and start running iop processes. 
 
+\mbox{\Hypertarget{ltemc-iop_8c_a4bff30d4da421246bd6c776a750e0f4e}\label{ltemc-iop_8c_a4bff30d4da421246bd6c776a750e0f4e}} 
+\index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_stopIrq@{IOP\_stopIrq}}
+\index{IOP\_stopIrq@{IOP\_stopIrq}!ltemc-\/iop.c@{ltemc-\/iop.c}}
+\doxysubsubsection{\texorpdfstring{IOP\_stopIrq()}{IOP\_stopIrq()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+stop\+Irq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{ltemc-iop_8c_aa2f0fc700d14f4734f6dd8405a973ae3}\label{ltemc-iop_8c_aa2f0fc700d14f4734f6dd8405a973ae3}} 
 \index{ltemc-\/iop.c@{ltemc-\/iop.c}!IOP\_swapRxBufferPage@{IOP\_swapRxBufferPage}}
 \index{IOP\_swapRxBufferPage@{IOP\_swapRxBufferPage}!ltemc-\/iop.c@{ltemc-\/iop.c}}
@@ -238,12 +305,6 @@ True if overflow detected\+: buffer being assigned to I\+OP for filling is not e
 
 
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{ltemc-iop_8c_a7b00d49600e4c14d2894e89b89e2a70d}\label{ltemc-iop_8c_a7b00d49600e4c14d2894e89b89e2a70d}} 
-\index{ltemc-\/iop.c@{ltemc-\/iop.c}!dbg\_urcInCmdLock@{dbg\_urcInCmdLock}}
-\index{dbg\_urcInCmdLock@{dbg\_urcInCmdLock}!ltemc-\/iop.c@{ltemc-\/iop.c}}
-\doxysubsubsection{\texorpdfstring{dbg\_urcInCmdLock}{dbg\_urcInCmdLock}}
-{\footnotesize\ttfamily uint8\+\_\+t dbg\+\_\+urc\+In\+Cmd\+Lock = 0}
-
 \mbox{\Hypertarget{ltemc-iop_8c_a5f9b6913ff818fbc74934a69849fb48b}\label{ltemc-iop_8c_a5f9b6913ff818fbc74934a69849fb48b}} 
 \index{ltemc-\/iop.c@{ltemc-\/iop.c}!g\_ltem@{g\_ltem}}
 \index{g\_ltem@{g\_ltem}!ltemc-\/iop.c@{ltemc-\/iop.c}}

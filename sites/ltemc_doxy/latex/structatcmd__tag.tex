@@ -16,10 +16,10 @@ char \mbox{\hyperlink{structatcmd__tag_af07b48436c03fc28b9a57f6f64b82bd5}{cmd\+S
 \begin{DoxyCompactList}\small\item\em AT command string to be passed to the B\+Gx module. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structatcmd__tag_ac5fe4d4ad6a0194a80fb1d08aea1383f}{timeout\+MS}}
 \begin{DoxyCompactList}\small\item\em Timout in milliseconds for the command, defaults to 300mS. B\+Gx documentation indicates cmds with longer timeout. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{structatcmd__tag_a5c69c52917ebde0247df730ac97d94aa}{auto\+Lock}}
-\begin{DoxyCompactList}\small\item\em next invoke should acquire lock (true), or reuse lock (false) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structatcmd__tag_a19772b5f09be5cf1b45db25c6710173e}{is\+Open\+Locked}}
 \begin{DoxyCompactList}\small\item\em True if the command is still open, AT commands are single threaded and this blocks a new cmd initiation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structatcmd__tag_a5c69c52917ebde0247df730ac97d94aa}{auto\+Lock}}
+\begin{DoxyCompactList}\small\item\em last invoke was auto and should be closed automatically on complete \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structatcmd__tag_a5060510445edaff8c6d26aba0141eaae}{invoked\+At}}
 \begin{DoxyCompactList}\small\item\em Tick value at the command invocation, used for timeout detection. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{structatcmd__tag_a11373f02c42587a1853ad6c8be5fe10e}{response}}
@@ -46,7 +46,7 @@ Structure to control invocation and management of an AT command with the B\+Gx m
 
 
 
-next invoke should acquire lock (true), or reuse lock (false) 
+last invoke was auto and should be closed automatically on complete 
 
 \mbox{\Hypertarget{structatcmd__tag_af07b48436c03fc28b9a57f6f64b82bd5}\label{structatcmd__tag_af07b48436c03fc28b9a57f6f64b82bd5}} 
 \index{atcmd\_tag@{atcmd\_tag}!cmdStr@{cmdStr}}

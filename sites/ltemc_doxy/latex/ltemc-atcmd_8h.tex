@@ -19,36 +19,37 @@ typedef struct \mbox{\hyperlink{structatcmd_result__tag}{atcmd\+Result\+\_\+tag}
 \begin{DoxyCompactItemize}
 \item 
 enum \{ \newline
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}{atcmd\+\_\+\+\_\+use\+Default\+Timeout}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}{atcmd\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}{atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser}} = 0, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual}} = 0, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto}} = 1, 
 \newline
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}{A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}{A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}{atcmd\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
 \mbox{\hyperlink{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}{http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec}} = 60, 
 \mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}{I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size}} = 1800, 
-\newline
 \mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}} = 192, 
-\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
-\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS}} = 6, 
-\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
 \newline
-\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 3, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}{I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate}} = 115200, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period}} = (int)(1 / (double)I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate $\ast$ 10 $\ast$ I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz $\ast$ 1000) + 1, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}{I\+O\+P\+\_\+\+\_\+rx\+Default\+Timeout}} = I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period $\ast$ 2 + 192, 
+\newline
+\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 2, 
 \mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}{N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz}} = 20, 
 \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}{nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver}} = 0x01U, 
-\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
 \newline
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
 \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}{nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error}} = 0x80U, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}{B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt}} = 1, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}{B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts}} = 2, 
-\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
 \newline
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}{B\+G\+X\+\_\+\+\_\+power\+Off\+Delay}} = 1500, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}{B\+G\+X\+\_\+\+\_\+reset\+Delay}} = 300, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}{B\+G\+X\+\_\+\+\_\+baud\+Rate}} = 115200, 
-\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
 \newline
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
 \mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}{sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS}} = 60000, 
 \mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}{S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz}} = 1500
  \}
@@ -56,34 +57,36 @@ enum \{ \newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{ltemc-atcmd_8h_a041ce47c579b978450cebc1fdc18ee05}{atcmd\+\_\+set\+Options}} (bool lock\+Mode\+Auto, uint32\+\_\+t timeout\+MS, uint16\+\_\+t($\ast$custom\+Cmd\+Complete\+Parser\+\_\+func)(const char $\ast$response, char $\ast$$\ast$endptr))
+void \mbox{\hyperlink{ltemc-atcmd_8h_ae0e4d7042f37307984aedcc2841a67f6}{atcmd\+\_\+set\+Options}} (uint32\+\_\+t timeout\+MS, uint16\+\_\+t($\ast$custom\+Cmd\+Complete\+Parser\+\_\+func)(const char $\ast$response, char $\ast$$\ast$endptr))
 \begin{DoxyCompactList}\small\item\em Sets options for B\+Gx AT command control (atcmd). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8h_a84f840a308983f46590c9df6d1860c33}{atcmd\+\_\+restore\+Option\+Defaults}} ()
 \begin{DoxyCompactList}\small\item\em Reset AT command options to defaults. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{ltemc-atcmd_8h_a8b77f56cc9e05b074701cd27c416c4a8}{atcmd\+\_\+try\+Invoke}} (const char $\ast$cmd\+Str,...)
 \begin{DoxyCompactList}\small\item\em Invokes a B\+Gx AT command using default option values. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-atcmd_8h_a1c8740111a052b8adcf920e866858faf}{atcmd\+\_\+try\+Invoke\+Auto\+Lock\+With\+Options}} (const char $\ast$cmd\+Str,...)
+bool \mbox{\hyperlink{ltemc-atcmd_8h_ac15f7801568c1d7f999bbaeff0c743c5}{atcmd\+\_\+try\+Invoke\+With\+Options}} (const char $\ast$cmd\+Str,...)
 \begin{DoxyCompactList}\small\item\em Invokes a B\+Gx AT command using previously set option values\+: set\+Options(). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-atcmd_8h_aa2df7377f96277071281ba2a558bc6af}{atcmd\+\_\+await\+Lock}} (uint16\+\_\+t wait\+Millis)
+\begin{DoxyCompactList}\small\item\em Awaits exclusive access to Q\+BG module command interface. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8h_ae1a2428084d6abbb04c8fac5dc0cfb15}{atcmd\+\_\+invoke\+Reuse\+Lock}} (const char $\ast$cmd\+Str,...)
 \begin{DoxyCompactList}\small\item\em Invokes a B\+Gx AT command without acquiring a lock, using previously set set\+Options() values. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8h_a6395a65d2a57ad6884417a1db9055f44}{atcmd\+\_\+send\+Cmd\+Data}} (const char $\ast$data, uint16\+\_\+t data\+Sz, const char $\ast$eot\+Phrase)
 \begin{DoxyCompactList}\small\item\em Performs data transfer (send) sub-\/action. \end{DoxyCompactList}\item 
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8h_a128cc1893fd2d595f69804a084aeef5d}{atcmd\+\_\+await\+Result}} ()
 \item 
+void \mbox{\hyperlink{ltemc-atcmd_8h_a21879b7a1081e79194bac8a6f1ced757}{atcmd\+\_\+get\+Result}} ()
+\item 
+bool \mbox{\hyperlink{ltemc-atcmd_8h_a5e3a56e67097b2df956a60c54a610a37}{atcmd\+\_\+is\+Lock\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current at\+Cmd lock state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-atcmd_8h_a6564b7b17223a1e581beef02914406dc}{atcmd\+\_\+reset}} (bool release\+Lock)
+\begin{DoxyCompactList}\small\item\em Resets at\+Cmd struct and optionally releases lock, a B\+Gx AT command structure. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8h_a74edf80fef3ee4cfaebbb9607ca58a78}{atcmd\+\_\+close}} ()
 \begin{DoxyCompactList}\small\item\em Closes (completes) a B\+Gx AT command structure and frees action resource (release action lock). \end{DoxyCompactList}\item 
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8h_ab76b9b2243099596bdf5d358926a9498}{atcmd\+\_\+get\+Last\+Result}} ()
-\begin{DoxyCompactList}\small\item\em Returns the at\+Cmd result code, 0x\+F\+F\+FF or A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result if command is pending completion. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns the at\+Cmd result code, 0x\+F\+F\+FF or atcmd\+\_\+\+\_\+parser\+Pending\+Result if command is pending completion. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8h_a58dfe505931cc9f78013ce15b91c52a1}{atcmd\+\_\+get\+Last\+Duration}} ()
 \begin{DoxyCompactList}\small\item\em Returns the at\+Cmd last execution duration in milliseconds. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{ltemc-atcmd_8h_aad0c278f529e90b32c6d65677ac77db9}{atcmd\+\_\+get\+Last\+Response}} ()
 \begin{DoxyCompactList}\small\item\em Returns the at\+Cmd response text if completed, will be empty C-\/string prior to completion. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-atcmd_8h_aa2df7377f96277071281ba2a558bc6af}{atcmd\+\_\+await\+Lock}} (uint16\+\_\+t wait\+Millis)
-\begin{DoxyCompactList}\small\item\em Awaits exclusive access to Q\+BG module command interface. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-atcmd_8h_a5e3a56e67097b2df956a60c54a610a37}{atcmd\+\_\+is\+Lock\+Active}} ()
-\begin{DoxyCompactList}\small\item\em Returns the current at\+Cmd lock state. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-atcmd_8h_a6564b7b17223a1e581beef02914406dc}{atcmd\+\_\+reset}} (bool release\+Lock)
-\begin{DoxyCompactList}\small\item\em Initializes an at\+Cmd struct, a B\+Gx AT command structure. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8h_a3742317e3225c92af7b6487aee1c3f38}{atcmd\+\_\+exit\+Text\+Mode}} ()
 \begin{DoxyCompactList}\small\item\em Sends E\+SC character to ensure B\+Gx is not in text mode ($>$ prompt awaiting $^\wedge$\+Z/\+E\+SC). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8h_ac9151ae79098ea2379de42f180114825}{atcmd\+\_\+exit\+Data\+Mode}} ()
@@ -139,8 +142,8 @@ Result structure returned from a action request (await or get).
 {\footnotesize\ttfamily anonymous enum}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}} 
-atcmd\+\_\+\+\_\+use\+Default\+Timeout&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_defaultTimeoutMS@{atcmd\_\_defaultTimeoutMS}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_\_defaultTimeoutMS@{atcmd\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}} 
+atcmd\+\_\+\+\_\+default\+Timeout\+MS&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}} 
@@ -155,12 +158,8 @@ atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual&\\
 atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}} 
-A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}} 
-A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result&private declaration; value returned from response parsers indicating a pattern match has not yet been detected \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_parserPendingResult@{atcmd\_\_parserPendingResult}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_\_parserPendingResult@{atcmd\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}} 
+atcmd\+\_\+\+\_\+parser\+Pending\+Result&value returned from response parsers indicating a pattern match has not yet been detected \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}} 
@@ -175,12 +174,20 @@ I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size&\\
 I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartBaudRate@{IOP\_\_uartBaudRate}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!IOP\_\_uartBaudRate@{IOP\_\_uartBaudRate}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}} 
+I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate&\\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}} 
 I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}} 
-I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOFillPeriod@{IOP\_\_uartFIFOFillPeriod}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!IOP\_\_uartFIFOFillPeriod@{IOP\_\_uartFIFOFillPeriod}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_rxDefaultTimeout@{IOP\_\_rxDefaultTimeout}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!IOP\_\_rxDefaultTimeout@{IOP\_\_rxDefaultTimeout}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}} 
+I\+O\+P\+\_\+\+\_\+rx\+Default\+Timeout&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{resultCode\_\_parserPending@{resultCode\_\_parserPending}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!resultCode\_\_parserPending@{resultCode\_\_parserPending}}}\mbox{\Hypertarget{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}\label{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}} 
@@ -377,7 +384,13 @@ Returns the at\+Cmd response text if completed, will be empty C-\/string prior t
 
 
 
-Returns the at\+Cmd result code, 0x\+F\+F\+FF or A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result if command is pending completion. 
+Returns the at\+Cmd result code, 0x\+F\+F\+FF or atcmd\+\_\+\+\_\+parser\+Pending\+Result if command is pending completion. 
+
+\mbox{\Hypertarget{ltemc-atcmd_8h_a21879b7a1081e79194bac8a6f1ced757}\label{ltemc-atcmd_8h_a21879b7a1081e79194bac8a6f1ced757}} 
+\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_getResult@{atcmd\_getResult}}
+\index{atcmd\_getResult@{atcmd\_getResult}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
+\doxysubsubsection{\texorpdfstring{atcmd\_getResult()}{atcmd\_getResult()}}
+{\footnotesize\ttfamily void atcmd\+\_\+get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{ltemc-atcmd_8h_ac293b0ebd4630df8c9ffb6449d8864f7}\label{ltemc-atcmd_8h_ac293b0ebd4630df8c9ffb6449d8864f7}} 
 \index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!ATCMD\_getResult@{ATCMD\_getResult}}
@@ -462,7 +475,7 @@ Result code enum value (http status code)
 
 
 
-Initializes an at\+Cmd struct, a B\+Gx AT command structure. 
+Resets at\+Cmd struct and optionally releases lock, a B\+Gx AT command structure. 
 
 \mbox{\Hypertarget{ltemc-atcmd_8h_a84f840a308983f46590c9df6d1860c33}\label{ltemc-atcmd_8h_a84f840a308983f46590c9df6d1860c33}} 
 \index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_restoreOptionDefaults@{atcmd\_restoreOptionDefaults}}
@@ -483,6 +496,8 @@ Use after set\+Options() to return to default internal settings. \mbox{\Hypertar
 
 
 Performs data transfer (send) sub-\/action. 
+
+Operates in without regard to atcmd lock. Doesn\textquotesingle{}t set/reset lock, doesn\textquotesingle{}t check for lock.
 
 
 \begin{DoxyParams}{Parameters}
@@ -545,11 +560,11 @@ Expected form\+: +\mbox{[}landmark\mbox{]}\+: \mbox{[}other\+Info\mbox{]},\mbox{
 \begin{DoxyReturn}{Returns}
 200 + R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+DE, if satisfies, otherwise Pending\+Result code. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-atcmd_8h_a041ce47c579b978450cebc1fdc18ee05}\label{ltemc-atcmd_8h_a041ce47c579b978450cebc1fdc18ee05}} 
+\mbox{\Hypertarget{ltemc-atcmd_8h_ae0e4d7042f37307984aedcc2841a67f6}\label{ltemc-atcmd_8h_ae0e4d7042f37307984aedcc2841a67f6}} 
 \index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_setOptions@{atcmd\_setOptions}}
 \index{atcmd\_setOptions@{atcmd\_setOptions}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
 \doxysubsubsection{\texorpdfstring{atcmd\_setOptions()}{atcmd\_setOptions()}}
-{\footnotesize\ttfamily void atcmd\+\_\+set\+Options (\begin{DoxyParamCaption}\item[{bool}]{lock\+Mode\+Auto,  }\item[{uint32\+\_\+t}]{timeout\+MS,  }\item[{uint16\+\_\+t($\ast$)(const char $\ast$response, char $\ast$$\ast$endptr)}]{custom\+Cmd\+Complete\+Parser\+\_\+func }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void atcmd\+\_\+set\+Options (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timeout\+MS,  }\item[{uint16\+\_\+t($\ast$)(const char $\ast$response, char $\ast$$\ast$endptr)}]{custom\+Cmd\+Complete\+Parser\+\_\+func }\end{DoxyParamCaption})}
 
 
 
@@ -557,8 +572,6 @@ Sets options for B\+Gx AT command control (atcmd).
 
 
 \begin{DoxyParams}{Parameters}
-{\em lock\+Mode\+Auto} & \mbox{[}in\mbox{]} -\/ Enable autolocking mode (default). \\
-\hline
 {\em timeout\+MS} & \mbox{[}in\mbox{]} Number of milliseconds the action can take. Use system default A\+C\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+Tms or your value. \\
 \hline
 {\em custom\+Cmd\+Complete\+Parser\+\_\+func} & \mbox{[}in\mbox{]} Custom command response parser to signal result is complete. N\+U\+LL for std parser.\\
@@ -625,15 +638,17 @@ Invokes a B\+Gx AT command using default option values.
 \begin{DoxyReturn}{Returns}
 True if action was invoked, false if not 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-atcmd_8h_a1c8740111a052b8adcf920e866858faf}\label{ltemc-atcmd_8h_a1c8740111a052b8adcf920e866858faf}} 
-\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_tryInvokeAutoLockWithOptions@{atcmd\_tryInvokeAutoLockWithOptions}}
-\index{atcmd\_tryInvokeAutoLockWithOptions@{atcmd\_tryInvokeAutoLockWithOptions}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
-\doxysubsubsection{\texorpdfstring{atcmd\_tryInvokeAutoLockWithOptions()}{atcmd\_tryInvokeAutoLockWithOptions()}}
-{\footnotesize\ttfamily bool atcmd\+\_\+try\+Invoke\+Auto\+Lock\+With\+Options (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd\+Str\+Template,  }\item[{}]{... }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-atcmd_8h_ac15f7801568c1d7f999bbaeff0c743c5}\label{ltemc-atcmd_8h_ac15f7801568c1d7f999bbaeff0c743c5}} 
+\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_tryInvokeWithOptions@{atcmd\_tryInvokeWithOptions}}
+\index{atcmd\_tryInvokeWithOptions@{atcmd\_tryInvokeWithOptions}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
+\doxysubsubsection{\texorpdfstring{atcmd\_tryInvokeWithOptions()}{atcmd\_tryInvokeWithOptions()}}
+{\footnotesize\ttfamily bool atcmd\+\_\+try\+Invoke\+With\+Options (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd\+Str\+Template,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
 
 Invokes a B\+Gx AT command using previously set option values\+: set\+Options(). 
+
+N\+O\+TE\+: This function will automatically attempt lock and will F\+A\+IL is lock is not acquired!
 
 
 \begin{DoxyParams}{Parameters}

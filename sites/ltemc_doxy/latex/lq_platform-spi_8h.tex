@@ -39,8 +39,10 @@ void \mbox{\hyperlink{lq_platform-spi_8h_af13bba8dc61b765c9c87bf71854af7e6}{spi\
 \begin{DoxyCompactList}\small\item\em Start S\+PI facility. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{lq_platform-spi_8h_add9525c59f9ca04352a57672dd3b3367}{spi\+\_\+stop}} (void $\ast$spi)
 \begin{DoxyCompactList}\small\item\em Shutdown S\+PI facility. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{lq_platform-spi_8h_ae30b7a448d1cb625b9d41a85c7899910}{spi\+\_\+protect\+From\+Interrupt}} (void $\ast$spi, int8\+\_\+t irq\+Number)
-\begin{DoxyCompactList}\small\item\em Uninitialize and deallocate memory from the S\+PI resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lq_platform-spi_8h_aadd6a2485b229019a4d4646e0b0c59a6}{spi\+\_\+using\+Interrupt}} (void $\ast$spi, int8\+\_\+t irq\+Number)
+\begin{DoxyCompactList}\small\item\em Gaurd S\+PI resource from recursive interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lq_platform-spi_8h_ab860ce0b85b73251f77100b3b1fbf4c8}{spi\+\_\+not\+Using\+Interrupt}} (void $\ast$spi, int8\+\_\+t irq\+Number)
+\begin{DoxyCompactList}\small\item\em Gaurd S\+PI resource from recursive interrupts. \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{lq_platform-spi_8h_ab6a45ca7f91593e6a2ff310e98c0157b}{spi\+\_\+transfer\+Byte}} (void $\ast$spi, uint8\+\_\+t write\+Val)
 \begin{DoxyCompactList}\small\item\em Transfer a byte to the N\+XP bridge. \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{lq_platform-spi_8h_a0051435d7263d69fc4e6c64ee86fe3aa}{spi\+\_\+transfer\+Word}} (void $\ast$spi, uint16\+\_\+t write\+Val)
@@ -129,15 +131,15 @@ Initialize and configure S\+PI resource.
 \begin{DoxyReturn}{Returns}
 S\+PI device 
 \end{DoxyReturn}
-\mbox{\Hypertarget{lq_platform-spi_8h_ae30b7a448d1cb625b9d41a85c7899910}\label{lq_platform-spi_8h_ae30b7a448d1cb625b9d41a85c7899910}} 
-\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_protectFromInterrupt@{spi\_protectFromInterrupt}}
-\index{spi\_protectFromInterrupt@{spi\_protectFromInterrupt}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
-\doxysubsubsection{\texorpdfstring{spi\_protectFromInterrupt()}{spi\_protectFromInterrupt()}}
-{\footnotesize\ttfamily void spi\+\_\+protect\+From\+Interrupt (\begin{DoxyParamCaption}\item[{void $\ast$}]{spi,  }\item[{int8\+\_\+t}]{irq\+Number }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{lq_platform-spi_8h_ab860ce0b85b73251f77100b3b1fbf4c8}\label{lq_platform-spi_8h_ab860ce0b85b73251f77100b3b1fbf4c8}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_notUsingInterrupt@{spi\_notUsingInterrupt}}
+\index{spi\_notUsingInterrupt@{spi\_notUsingInterrupt}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_notUsingInterrupt()}{spi\_notUsingInterrupt()}}
+{\footnotesize\ttfamily void spi\+\_\+not\+Using\+Interrupt (\begin{DoxyParamCaption}\item[{void $\ast$}]{spi,  }\item[{int8\+\_\+t}]{irq\+Number }\end{DoxyParamCaption})}
 
 
 
-Uninitialize and deallocate memory from the S\+PI resource. 
+Gaurd S\+PI resource from recursive interrupts. 
 
 \mbox{\Hypertarget{lq_platform-spi_8h_af13bba8dc61b765c9c87bf71854af7e6}\label{lq_platform-spi_8h_af13bba8dc61b765c9c87bf71854af7e6}} 
 \index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_start@{spi\_start}}
@@ -220,3 +222,13 @@ Transfer a word (16-\/bits) to the N\+XP bridge.
 \begin{DoxyReturn}{Returns}
 A 16-\/bit word received during the transfer. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{lq_platform-spi_8h_aadd6a2485b229019a4d4646e0b0c59a6}\label{lq_platform-spi_8h_aadd6a2485b229019a4d4646e0b0c59a6}} 
+\index{lqPlatform-\/spi.h@{lqPlatform-\/spi.h}!spi\_usingInterrupt@{spi\_usingInterrupt}}
+\index{spi\_usingInterrupt@{spi\_usingInterrupt}!lqPlatform-\/spi.h@{lqPlatform-\/spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_usingInterrupt()}{spi\_usingInterrupt()}}
+{\footnotesize\ttfamily void spi\+\_\+using\+Interrupt (\begin{DoxyParamCaption}\item[{void $\ast$}]{spi,  }\item[{int8\+\_\+t}]{irq\+Number }\end{DoxyParamCaption})}
+
+
+
+Gaurd S\+PI resource from recursive interrupts. 
+

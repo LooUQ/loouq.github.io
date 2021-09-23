@@ -96,12 +96,12 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a310d1973152a94bcc1d700e23fa82b8e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a310d1973152a94bcc1d700e23fa82b8e">txSendStartTck</a></td></tr>
 <tr class="memdesc:a310d1973152a94bcc1d700e23fa82b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">tick count when TX send started, used for response timeout detection  <a href="structiop__tag.html#a310d1973152a94bcc1d700e23fa82b8e">More...</a><br /></td></tr>
 <tr class="separator:a310d1973152a94bcc1d700e23fa82b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a463de859a03e29b723f6d736c0295a1b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a463de859a03e29b723f6d736c0295a1b">rxLastRecvTck</a></td></tr>
-<tr class="memdesc:a463de859a03e29b723f6d736c0295a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive timeout detection: performed at tick count  <a href="structiop__tag.html#a463de859a03e29b723f6d736c0295a1b">More...</a><br /></td></tr>
-<tr class="separator:a463de859a03e29b723f6d736c0295a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae48a20b886c2b2d0ffc91524fe52896d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#ae48a20b886c2b2d0ffc91524fe52896d">rxLastRecvChkLvl</a></td></tr>
-<tr class="memdesc:ae48a20b886c2b2d0ffc91524fe52896d"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive timeout detection: fill level at check  <a href="structiop__tag.html#ae48a20b886c2b2d0ffc91524fe52896d">More...</a><br /></td></tr>
-<tr class="separator:ae48a20b886c2b2d0ffc91524fe52896d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b2a11cfcbd0dcb0d3eb83846167248"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a53b2a11cfcbd0dcb0d3eb83846167248">rxLastFillChgTck</a></td></tr>
+<tr class="memdesc:a53b2a11cfcbd0dcb0d3eb83846167248"><td class="mdescLeft">&#160;</td><td class="mdescRight">tick count when RX buffer fill level was known to have change  <a href="structiop__tag.html#a53b2a11cfcbd0dcb0d3eb83846167248">More...</a><br /></td></tr>
+<tr class="separator:a53b2a11cfcbd0dcb0d3eb83846167248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fb33b8e09ba1fc1330ff3d7b7ca5114"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a2fb33b8e09ba1fc1330ff3d7b7ca5114">rxLastFillLevel</a></td></tr>
+<tr class="memdesc:a2fb33b8e09ba1fc1330ff3d7b7ca5114"><td class="mdescLeft">&#160;</td><td class="mdescRight">last known fill level (updated only during check)  <a href="structiop__tag.html#a2fb33b8e09ba1fc1330ff3d7b7ca5114">More...</a><br /></td></tr>
+<tr class="separator:a2fb33b8e09ba1fc1330ff3d7b7ca5114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60317576660accd5312f1c3941ce5984"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html#a60317576660accd5312f1c3941ce5984">scktMap</a></td></tr>
 <tr class="memdesc:a60317576660accd5312f1c3941ce5984"><td class="mdescLeft">&#160;</td><td class="mdescRight">bitmap indicating open sockets (TCP/UDP/SSL), bit position is the dataContext (IOP event detect shortcut)  <a href="structiop__tag.html#a60317576660accd5312f1c3941ce5984">More...</a><br /></td></tr>
 <tr class="separator:a60317576660accd5312f1c3941ce5984"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,35 +148,35 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="ae48a20b886c2b2d0ffc91524fe52896d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae48a20b886c2b2d0ffc91524fe52896d">&#9670;&nbsp;</a></span>rxLastRecvChkLvl</h2>
+<a id="a53b2a11cfcbd0dcb0d3eb83846167248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b2a11cfcbd0dcb0d3eb83846167248">&#9670;&nbsp;</a></span>rxLastFillChgTck</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t rxLastRecvChkLvl</td>
+          <td class="memname">uint32_t rxLastFillChgTck</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>receive timeout detection: fill level at check </p>
+<p>tick count when RX buffer fill level was known to have change </p>
 
 </div>
 </div>
-<a id="a463de859a03e29b723f6d736c0295a1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a463de859a03e29b723f6d736c0295a1b">&#9670;&nbsp;</a></span>rxLastRecvTck</h2>
+<a id="a2fb33b8e09ba1fc1330ff3d7b7ca5114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb33b8e09ba1fc1330ff3d7b7ca5114">&#9670;&nbsp;</a></span>rxLastFillLevel</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t rxLastRecvTck</td>
+          <td class="memname">uint16_t rxLastFillLevel</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>receive timeout detection: performed at tick count </p>
+<p>last known fill level (updated only during check) </p>
 
 </div>
 </div>

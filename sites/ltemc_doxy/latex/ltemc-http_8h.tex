@@ -60,7 +60,7 @@ result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_afa4288aa4cda4fd9791592ce93b7
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_a7796d179f44f07b0d0c6170830a0337e}{http\+\_\+post}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$relative\+Url, bool return\+Response\+Hdrs, const char $\ast$post\+Data, uint16\+\_\+t data\+Sz, uint8\+\_\+t timeout\+Sec)
 \begin{DoxyCompactList}\small\item\em Performs a H\+T\+TP P\+O\+ST page web request. \end{DoxyCompactList}\item 
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_a9259a6152e50da53e8f64dbb68b203bd}{http\+\_\+read\+Page}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, uint16\+\_\+t timeout\+Sec)
-\item 
+\begin{DoxyCompactList}\small\item\em Performs a H\+T\+TP P\+O\+ST page web request. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-http_8h_adc3e553b77a6341664862d7b8a9c0060}{http\+\_\+cancel\+Page}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl)
 \end{DoxyCompactItemize}
 
@@ -348,3 +348,17 @@ true if P\+O\+ST request completed
 \doxysubsubsection{\texorpdfstring{http\_readPage()}{http\_readPage()}}
 {\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+read\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{uint16\+\_\+t}]{timeout\+Sec }\end{DoxyParamCaption})}
 
+
+
+Performs a H\+T\+TP P\+O\+ST page web request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for H\+T\+TP communications. \\
+\hline
+{\em timeout\+Sec} & \mbox{[}in\mbox{]} -\/ the number of seconds to wait (blocking) for a page response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if P\+O\+ST request completed 
+\end{DoxyReturn}

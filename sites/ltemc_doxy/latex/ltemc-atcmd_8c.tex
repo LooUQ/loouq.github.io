@@ -34,13 +34,13 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{ltemc-atcmd_8c_a041ce47c579b978450cebc1fdc18ee05}{atcmd\+\_\+set\+Options}} (bool lock\+Mode\+Auto, uint32\+\_\+t timeout\+MS, uint16\+\_\+t($\ast$custom\+Cmd\+Complete\+Parser\+\_\+func)(const char $\ast$response, char $\ast$$\ast$endptr))
+void \mbox{\hyperlink{ltemc-atcmd_8c_ae0e4d7042f37307984aedcc2841a67f6}{atcmd\+\_\+set\+Options}} (uint32\+\_\+t timeout\+MS, uint16\+\_\+t($\ast$custom\+Cmd\+Complete\+Parser\+\_\+func)(const char $\ast$response, char $\ast$$\ast$endptr))
 \begin{DoxyCompactList}\small\item\em Sets options for B\+Gx AT command control (atcmd). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8c_a84f840a308983f46590c9df6d1860c33}{atcmd\+\_\+restore\+Option\+Defaults}} ()
 \begin{DoxyCompactList}\small\item\em Reset AT command options to defaults. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{ltemc-atcmd_8c_ad80ed1b881e126d7d97e382f7bd38035}{atcmd\+\_\+try\+Invoke}} (const char $\ast$cmd\+Str\+Template,...)
 \begin{DoxyCompactList}\small\item\em Invokes a B\+Gx AT command using default option values. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-atcmd_8c_ad8c8245baf60debb18a9a520de9bbcea}{atcmd\+\_\+try\+Invoke\+Auto\+Lock\+With\+Options}} (const char $\ast$cmd\+Str\+Template,...)
+bool \mbox{\hyperlink{ltemc-atcmd_8c_a205e86dbfb4157be2f01ed19a727d273}{atcmd\+\_\+try\+Invoke\+With\+Options}} (const char $\ast$cmd\+Str\+Template,...)
 \begin{DoxyCompactList}\small\item\em Invokes a B\+Gx AT command using previously set option values\+: set\+Options(). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8c_aacf15a68815186ee5c19b338fb61b234}{atcmd\+\_\+invoke\+Reuse\+Lock}} (const char $\ast$cmd\+Str\+Template,...)
 \begin{DoxyCompactList}\small\item\em Invokes a B\+Gx AT command without acquiring a lock, using previously set set\+Options() values. \end{DoxyCompactList}\item 
@@ -50,14 +50,14 @@ void \mbox{\hyperlink{ltemc-atcmd_8c_a6395a65d2a57ad6884417a1db9055f44}{atcmd\+\
 \begin{DoxyCompactList}\small\item\em Performs data transfer (send) sub-\/action. \end{DoxyCompactList}\item 
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8c_a128cc1893fd2d595f69804a084aeef5d}{atcmd\+\_\+await\+Result}} ()
 \item 
-void \mbox{\hyperlink{ltemc-atcmd_8c_ac293b0ebd4630df8c9ffb6449d8864f7}{A\+T\+C\+M\+D\+\_\+get\+Result}} ()
+void \mbox{\hyperlink{ltemc-atcmd_8c_a21879b7a1081e79194bac8a6f1ced757}{atcmd\+\_\+get\+Result}} ()
 \item 
 void \mbox{\hyperlink{ltemc-atcmd_8c_a3742317e3225c92af7b6487aee1c3f38}{atcmd\+\_\+exit\+Text\+Mode}} ()
 \begin{DoxyCompactList}\small\item\em Sends E\+SC character to ensure B\+Gx is not in text mode ($>$ prompt awaiting $^\wedge$\+Z/\+E\+SC). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8c_ac9151ae79098ea2379de42f180114825}{atcmd\+\_\+exit\+Data\+Mode}} ()
 \begin{DoxyCompactList}\small\item\em Sends +++ sequence to transition B\+Gx out of data mode to command mode. \end{DoxyCompactList}\item 
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8c_ab76b9b2243099596bdf5d358926a9498}{atcmd\+\_\+get\+Last\+Result}} ()
-\begin{DoxyCompactList}\small\item\em Returns the at\+Cmd result code, 0x\+F\+F\+FF or A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result if command is pending completion. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns the at\+Cmd result code, 0x\+F\+F\+FF or atcmd\+\_\+\+\_\+parser\+Pending\+Result if command is pending completion. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8c_a58dfe505931cc9f78013ce15b91c52a1}{atcmd\+\_\+get\+Last\+Duration}} ()
 \begin{DoxyCompactList}\small\item\em Returns the at\+Cmd last execution duration in milliseconds. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{ltemc-atcmd_8c_aad0c278f529e90b32c6d65677ac77db9}{atcmd\+\_\+get\+Last\+Response}} ()
@@ -69,7 +69,7 @@ bool \mbox{\hyperlink{ltemc-atcmd_8c_a2195e838cd324a210bc5bd8c8ba52965}{atcmd\+\
 bool \mbox{\hyperlink{ltemc-atcmd_8c_a5e3a56e67097b2df956a60c54a610a37}{atcmd\+\_\+is\+Lock\+Active}} ()
 \begin{DoxyCompactList}\small\item\em Returns the current at\+Cmd lock state. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8c_a614ea4511c550971cba7befa2ad8b50c}{atcmd\+\_\+reset}} (bool release\+Open\+Lock)
-\begin{DoxyCompactList}\small\item\em Initializes an at\+Cmd struct, a B\+Gx AT command structure. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Resets at\+Cmd struct and optionally releases lock, a B\+Gx AT command structure. \end{DoxyCompactList}\item 
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8c_a2405bff7bc676f90ee17535c796afe44}{atcmd\+\_\+default\+Result\+Parser}} (const char $\ast$response, const char $\ast$preamble, bool preamble\+Reqd, uint8\+\_\+t gap\+Reqd, const char $\ast$terminator, char $\ast$$\ast$endptr)
 \begin{DoxyCompactList}\small\item\em Performs a standardized parse of command responses. This function can be wrapped to match atcmd command\+Completed\+Parse signature. \end{DoxyCompactList}\item 
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8c_ad2cda78525644fabae5de68a876bad4a}{atcmd\+\_\+token\+Result\+Parser}} (const char $\ast$response, const char $\ast$preamble, char delim, uint8\+\_\+t reqd\+Tokens, const char $\ast$terminator, char $\ast$$\ast$endptr)
@@ -313,13 +313,13 @@ Returns the at\+Cmd response text if completed, will be empty C-\/string prior t
 
 
 
-Returns the at\+Cmd result code, 0x\+F\+F\+FF or A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result if command is pending completion. 
+Returns the at\+Cmd result code, 0x\+F\+F\+FF or atcmd\+\_\+\+\_\+parser\+Pending\+Result if command is pending completion. 
 
-\mbox{\Hypertarget{ltemc-atcmd_8c_ac293b0ebd4630df8c9ffb6449d8864f7}\label{ltemc-atcmd_8c_ac293b0ebd4630df8c9ffb6449d8864f7}} 
-\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!ATCMD\_getResult@{ATCMD\_getResult}}
-\index{ATCMD\_getResult@{ATCMD\_getResult}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
-\doxysubsubsection{\texorpdfstring{ATCMD\_getResult()}{ATCMD\_getResult()}}
-{\footnotesize\ttfamily void A\+T\+C\+M\+D\+\_\+get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a21879b7a1081e79194bac8a6f1ced757}\label{ltemc-atcmd_8c_a21879b7a1081e79194bac8a6f1ced757}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_getResult@{atcmd\_getResult}}
+\index{atcmd\_getResult@{atcmd\_getResult}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_getResult()}{atcmd\_getResult()}}
+{\footnotesize\ttfamily void atcmd\+\_\+get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{ltemc-atcmd_8c_aacf15a68815186ee5c19b338fb61b234}\label{ltemc-atcmd_8c_aacf15a68815186ee5c19b338fb61b234}} 
 \index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_invokeReuseLock@{atcmd\_invokeReuseLock}}
@@ -398,7 +398,7 @@ Result code enum value (http status code)
 
 
 
-Initializes an at\+Cmd struct, a B\+Gx AT command structure. 
+Resets at\+Cmd struct and optionally releases lock, a B\+Gx AT command structure. 
 
 \mbox{\Hypertarget{ltemc-atcmd_8c_a84f840a308983f46590c9df6d1860c33}\label{ltemc-atcmd_8c_a84f840a308983f46590c9df6d1860c33}} 
 \index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_restoreOptionDefaults@{atcmd\_restoreOptionDefaults}}
@@ -419,6 +419,8 @@ Use after set\+Options() to return to default internal settings. \mbox{\Hypertar
 
 
 Performs data transfer (send) sub-\/action. 
+
+Operates in without regard to atcmd lock. Doesn\textquotesingle{}t set/reset lock, doesn\textquotesingle{}t check for lock.
 
 
 \begin{DoxyParams}{Parameters}
@@ -481,11 +483,11 @@ Expected form\+: +\mbox{[}landmark\mbox{]}\+: \mbox{[}other\+Info\mbox{]},\mbox{
 \begin{DoxyReturn}{Returns}
 200 + R\+E\+S\+U\+L\+T\+\_\+\+C\+O\+DE, if satisfies, otherwise Pending\+Result code. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-atcmd_8c_a041ce47c579b978450cebc1fdc18ee05}\label{ltemc-atcmd_8c_a041ce47c579b978450cebc1fdc18ee05}} 
+\mbox{\Hypertarget{ltemc-atcmd_8c_ae0e4d7042f37307984aedcc2841a67f6}\label{ltemc-atcmd_8c_ae0e4d7042f37307984aedcc2841a67f6}} 
 \index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_setOptions@{atcmd\_setOptions}}
 \index{atcmd\_setOptions@{atcmd\_setOptions}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
 \doxysubsubsection{\texorpdfstring{atcmd\_setOptions()}{atcmd\_setOptions()}}
-{\footnotesize\ttfamily void atcmd\+\_\+set\+Options (\begin{DoxyParamCaption}\item[{bool}]{lock\+Mode\+Auto,  }\item[{uint32\+\_\+t}]{timeout\+MS,  }\item[{uint16\+\_\+t($\ast$)(const char $\ast$response, char $\ast$$\ast$endptr)}]{custom\+Cmd\+Complete\+Parser\+\_\+func }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void atcmd\+\_\+set\+Options (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timeout\+MS,  }\item[{uint16\+\_\+t($\ast$)(const char $\ast$response, char $\ast$$\ast$endptr)}]{custom\+Cmd\+Complete\+Parser\+\_\+func }\end{DoxyParamCaption})}
 
 
 
@@ -493,8 +495,6 @@ Sets options for B\+Gx AT command control (atcmd).
 
 
 \begin{DoxyParams}{Parameters}
-{\em lock\+Mode\+Auto} & \mbox{[}in\mbox{]} -\/ Enable autolocking mode (default). \\
-\hline
 {\em timeout\+MS} & \mbox{[}in\mbox{]} Number of milliseconds the action can take. Use system default A\+C\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+Tms or your value. \\
 \hline
 {\em custom\+Cmd\+Complete\+Parser\+\_\+func} & \mbox{[}in\mbox{]} Custom command response parser to signal result is complete. N\+U\+LL for std parser.\\
@@ -561,15 +561,17 @@ Invokes a B\+Gx AT command using default option values.
 \begin{DoxyReturn}{Returns}
 True if action was invoked, false if not 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-atcmd_8c_ad8c8245baf60debb18a9a520de9bbcea}\label{ltemc-atcmd_8c_ad8c8245baf60debb18a9a520de9bbcea}} 
-\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_tryInvokeAutoLockWithOptions@{atcmd\_tryInvokeAutoLockWithOptions}}
-\index{atcmd\_tryInvokeAutoLockWithOptions@{atcmd\_tryInvokeAutoLockWithOptions}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
-\doxysubsubsection{\texorpdfstring{atcmd\_tryInvokeAutoLockWithOptions()}{atcmd\_tryInvokeAutoLockWithOptions()}}
-{\footnotesize\ttfamily bool atcmd\+\_\+try\+Invoke\+Auto\+Lock\+With\+Options (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd\+Str\+Template,  }\item[{}]{... }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-atcmd_8c_a205e86dbfb4157be2f01ed19a727d273}\label{ltemc-atcmd_8c_a205e86dbfb4157be2f01ed19a727d273}} 
+\index{ltemc-\/atcmd.c@{ltemc-\/atcmd.c}!atcmd\_tryInvokeWithOptions@{atcmd\_tryInvokeWithOptions}}
+\index{atcmd\_tryInvokeWithOptions@{atcmd\_tryInvokeWithOptions}!ltemc-\/atcmd.c@{ltemc-\/atcmd.c}}
+\doxysubsubsection{\texorpdfstring{atcmd\_tryInvokeWithOptions()}{atcmd\_tryInvokeWithOptions()}}
+{\footnotesize\ttfamily bool atcmd\+\_\+try\+Invoke\+With\+Options (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd\+Str\+Template,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
 
 Invokes a B\+Gx AT command using previously set option values\+: set\+Options(). 
+
+N\+O\+TE\+: This function will automatically attempt lock and will F\+A\+IL is lock is not acquired!
 
 
 \begin{DoxyParams}{Parameters}

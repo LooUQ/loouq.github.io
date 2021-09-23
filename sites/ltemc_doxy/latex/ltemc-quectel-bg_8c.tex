@@ -13,36 +13,37 @@
 \begin{DoxyCompactItemize}
 \item 
 enum \{ \newline
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}{atcmd\+\_\+\+\_\+use\+Default\+Timeout}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}{atcmd\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}{atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser}} = 0, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual}} = 0, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto}} = 1, 
 \newline
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}{A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}{A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}{atcmd\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
 \mbox{\hyperlink{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}{http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec}} = 60, 
 \mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}{I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size}} = 1800, 
-\newline
 \mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}} = 192, 
-\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
-\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS}} = 6, 
-\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
 \newline
-\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 3, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}{I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate}} = 115200, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period}} = (int)(1 / (double)I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate $\ast$ 10 $\ast$ I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz $\ast$ 1000) + 1, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}{I\+O\+P\+\_\+\+\_\+rx\+Default\+Timeout}} = I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period $\ast$ 2 + 192, 
+\newline
+\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 2, 
 \mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}{N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz}} = 20, 
 \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}{nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver}} = 0x01U, 
-\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
 \newline
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
 \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}{nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error}} = 0x80U, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}{B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt}} = 1, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}{B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts}} = 2, 
-\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
 \newline
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}{B\+G\+X\+\_\+\+\_\+power\+Off\+Delay}} = 1500, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}{B\+G\+X\+\_\+\+\_\+reset\+Delay}} = 300, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}{B\+G\+X\+\_\+\+\_\+baud\+Rate}} = 115200, 
-\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
 \newline
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
 \mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}{sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS}} = 60000, 
 \mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}{S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz}} = 1500
  \}
@@ -58,9 +59,7 @@ void \mbox{\hyperlink{ltemc-quectel-bg_8c_af38f43891616b10e764a40f62dd67d99}{qbg
 \begin{DoxyCompactList}\small\item\em Power on the B\+Gx module. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8c_a25333f44c61fbf3627065cbd31375a1e}{qbg\+\_\+power\+Off}} ()
 \begin{DoxyCompactList}\small\item\em Powers off the B\+Gx module. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8c_a2a3d8a8f9233b11bf96c88ba3ead764a}{qbg\+\_\+reset}} ()
-\begin{DoxyCompactList}\small\item\em Powers off the B\+Gx module. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8c_aff79bc5f56d845c2f16aae7e967bb39e}{qbg\+\_\+start}} ()
+void \mbox{\hyperlink{ltemc-quectel-bg_8c_a7eef2dcadd6c14fb6aa65c2b4c38e132}{qbg\+\_\+set\+Options}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the B\+Gx module. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8c_ac5d3138c74ce003186141238a4be502a}{qbg\+\_\+set\+Nw\+Scan\+Seq}} (const char $\ast$sequence)
 \begin{DoxyCompactList}\small\item\em Configure R\+AT searching sequence. \end{DoxyCompactList}\item 
@@ -98,8 +97,8 @@ const char $\ast$const \mbox{\hyperlink{ltemc-quectel-bg_8c_a1d4f4dde31edc393e62
 {\footnotesize\ttfamily anonymous enum}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}} 
-atcmd\+\_\+\+\_\+use\+Default\+Timeout&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_defaultTimeoutMS@{atcmd\_\_defaultTimeoutMS}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!atcmd\_\_defaultTimeoutMS@{atcmd\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}} 
+atcmd\+\_\+\+\_\+default\+Timeout\+MS&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}} 
@@ -114,12 +113,8 @@ atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual&\\
 atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}} 
-A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}} 
-A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result&private declaration; value returned from response parsers indicating a pattern match has not yet been detected \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_parserPendingResult@{atcmd\_\_parserPendingResult}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!atcmd\_\_parserPendingResult@{atcmd\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}} 
+atcmd\+\_\+\+\_\+parser\+Pending\+Result&value returned from response parsers indicating a pattern match has not yet been detected \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}} 
@@ -134,12 +129,20 @@ I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size&\\
 I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartBaudRate@{IOP\_\_uartBaudRate}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!IOP\_\_uartBaudRate@{IOP\_\_uartBaudRate}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}} 
+I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate&\\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}} 
 I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}} 
-I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOFillPeriod@{IOP\_\_uartFIFOFillPeriod}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!IOP\_\_uartFIFOFillPeriod@{IOP\_\_uartFIFOFillPeriod}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_rxDefaultTimeout@{IOP\_\_rxDefaultTimeout}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!IOP\_\_rxDefaultTimeout@{IOP\_\_rxDefaultTimeout}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}} 
+I\+O\+P\+\_\+\+\_\+rx\+Default\+Timeout&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{resultCode\_\_parserPending@{resultCode\_\_parserPending}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!resultCode\_\_parserPending@{resultCode\_\_parserPending}}}\mbox{\Hypertarget{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}\label{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}} 
@@ -242,16 +245,6 @@ Power on the B\+Gx module.
 \begin{DoxyReturn}{Returns}
 Prior B\+Gx power state\+: true=previously powered on 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-quectel-bg_8c_a2a3d8a8f9233b11bf96c88ba3ead764a}\label{ltemc-quectel-bg_8c_a2a3d8a8f9233b11bf96c88ba3ead764a}} 
-\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_reset@{qbg\_reset}}
-\index{qbg\_reset@{qbg\_reset}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
-\doxysubsubsection{\texorpdfstring{qbg\_reset()}{qbg\_reset()}}
-{\footnotesize\ttfamily void qbg\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Powers off the B\+Gx module. 
-
 \mbox{\Hypertarget{ltemc-quectel-bg_8c_acbc1ca7e44fafdcebb214e74547761de}\label{ltemc-quectel-bg_8c_acbc1ca7e44fafdcebb214e74547761de}} 
 \index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_setIotOpMode@{qbg\_setIotOpMode}}
 \index{qbg\_setIotOpMode@{qbg\_setIotOpMode}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
@@ -282,11 +275,11 @@ Configure R\+A\+T(s) allowed to be searched.
 
 Configure R\+AT searching sequence. 
 
-\mbox{\Hypertarget{ltemc-quectel-bg_8c_aff79bc5f56d845c2f16aae7e967bb39e}\label{ltemc-quectel-bg_8c_aff79bc5f56d845c2f16aae7e967bb39e}} 
-\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_start@{qbg\_start}}
-\index{qbg\_start@{qbg\_start}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
-\doxysubsubsection{\texorpdfstring{qbg\_start()}{qbg\_start()}}
-{\footnotesize\ttfamily void qbg\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-quectel-bg_8c_a7eef2dcadd6c14fb6aa65c2b4c38e132}\label{ltemc-quectel-bg_8c_a7eef2dcadd6c14fb6aa65c2b4c38e132}} 
+\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_setOptions@{qbg\_setOptions}}
+\index{qbg\_setOptions@{qbg\_setOptions}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
+\doxysubsubsection{\texorpdfstring{qbg\_setOptions()}{qbg\_setOptions()}}
+{\footnotesize\ttfamily void qbg\+\_\+set\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 

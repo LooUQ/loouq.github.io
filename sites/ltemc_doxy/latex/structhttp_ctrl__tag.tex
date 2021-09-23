@@ -19,10 +19,6 @@ bool \mbox{\hyperlink{structhttp_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}{us
 \begin{DoxyCompactList}\small\item\em RX smart buffer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}{http\+Recv\+Func\+\_\+t}} \mbox{\hyperlink{structhttp_ctrl__tag_ad90f4f52c64809ad22571c8ffe0b1a65}{data\+Recv\+CB}}
 \begin{DoxyCompactList}\small\item\em callback to application, signals data ready \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_a041584a6e1a61e146aa3852c0be60744}{buf\+Page\+Swap\+Tck}}
-\begin{DoxyCompactList}\small\item\em last check for U\+R\+C/data\+Pending \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{structhttp_ctrl__tag_ad4525893215cd6b3f3ed59908bc6dda1}{buf\+Page\+Timeout}}
-\begin{DoxyCompactList}\small\item\em set at init for do\+Work A\+S\+S\+E\+RT, if timeout reached chance for a data overflow on socket \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{structhttp_ctrl__tag_a16d9da1506ec26ad72df4e883b884ae5}{url\+Host}} \mbox{[}\mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dcab5a3f3a7b1573f2e5bed7dd16098b096}{http\+\_\+\+\_\+url\+Host\+Sz}}\mbox{]}
 \begin{DoxyCompactList}\small\item\em host portion of U\+RL for G\+E\+T/\+P\+O\+ST requests \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structhttp_ctrl__tag_ad95114e759c85069103a0492f02db5b7}{return\+Response\+Hdrs}}
@@ -57,26 +53,6 @@ bool \mbox{\hyperlink{structhttp_ctrl__tag_a4974a0e69b5526617bef8af3a18b4b04}{pa
 
 
 B\+Gx sprecific error code returned from G\+E\+T/\+P\+O\+ST. 
-
-\mbox{\Hypertarget{structhttp_ctrl__tag_a041584a6e1a61e146aa3852c0be60744}\label{structhttp_ctrl__tag_a041584a6e1a61e146aa3852c0be60744}} 
-\index{httpCtrl\_tag@{httpCtrl\_tag}!bufPageSwapTck@{bufPageSwapTck}}
-\index{bufPageSwapTck@{bufPageSwapTck}!httpCtrl\_tag@{httpCtrl\_tag}}
-\doxysubsubsection{\texorpdfstring{bufPageSwapTck}{bufPageSwapTck}}
-{\footnotesize\ttfamily uint32\+\_\+t buf\+Page\+Swap\+Tck}
-
-
-
-last check for U\+R\+C/data\+Pending 
-
-\mbox{\Hypertarget{structhttp_ctrl__tag_ad4525893215cd6b3f3ed59908bc6dda1}\label{structhttp_ctrl__tag_ad4525893215cd6b3f3ed59908bc6dda1}} 
-\index{httpCtrl\_tag@{httpCtrl\_tag}!bufPageTimeout@{bufPageTimeout}}
-\index{bufPageTimeout@{bufPageTimeout}!httpCtrl\_tag@{httpCtrl\_tag}}
-\doxysubsubsection{\texorpdfstring{bufPageTimeout}{bufPageTimeout}}
-{\footnotesize\ttfamily uint32\+\_\+t buf\+Page\+Timeout}
-
-
-
-set at init for do\+Work A\+S\+S\+E\+RT, if timeout reached chance for a data overflow on socket 
 
 \mbox{\Hypertarget{structhttp_ctrl__tag_adb7a1e99e532f8c2f75408162b910ed8}\label{structhttp_ctrl__tag_adb7a1e99e532f8c2f75408162b910ed8}} 
 \index{httpCtrl\_tag@{httpCtrl\_tag}!cstmHdrs@{cstmHdrs}}

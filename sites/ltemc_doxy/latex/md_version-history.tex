@@ -1,6 +1,53 @@
 \hypertarget{md_version-history_autotoc_md36}{}\doxysubsubsection{Major or breaking changes will be called out with section explaining the change and the release header will be decorated with either $<$em$>$\+Major$<$/em$>$ or $<$em$>$\+Breaking$<$/em$>$}\label{md_version-history_autotoc_md36}
-\hypertarget{md_version-history_autotoc_md37}{}\doxysection{v2.\+0.\+0 -\/ Major long-\/term release}\label{md_version-history_autotoc_md37}
-\hypertarget{md_version-history_autotoc_md38}{}\doxysubsection{Added H\+T\+T\+P(\+S) functionality and redesigned buffering model. Enhancements to A\+T-\/\+Command module to allow for continued extensions to supported features.}\label{md_version-history_autotoc_md38}
+\hypertarget{md_version-history_autotoc_md37}{}\doxysection{v2.\+2.\+0}\label{md_version-history_autotoc_md37}
+\hypertarget{md_version-history_autotoc_md38}{}\doxysubsection{Enhancements to network module for specification of A\+P\+N name, P\+D\+P I\+P type (v4\textbackslash{}v6\textbackslash{}both) username\textbackslash{}password, authentication method}\label{md_version-history_autotoc_md38}
+
+\begin{DoxyItemize}
+\item Changed signatures for ntwk functions for activate P\+DP and get active contexts
+\item Enhanced ntwk P\+DP options
+\item Updates to atcmd functions
+\begin{DoxyItemize}
+\item Made \mbox{\hyperlink{ltemc-atcmd_8c_a21879b7a1081e79194bac8a6f1ced757}{atcmd\+\_\+get\+Result()}} public to allow for deferred AT response retrieval 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md39}{}\doxysubsubsection{Breaking Changes}\label{md_version-history_autotoc_md39}
+
+\begin{DoxyItemize}
+\item atcmd functions
+\begin{DoxyItemize}
+\item Removed locking option from \mbox{\hyperlink{ltemc-atcmd_8c_ae0e4d7042f37307984aedcc2841a67f6}{atcmd\+\_\+set\+Options()}}
+\item Changed atcmd\+\_\+try\+Invoke\+Auto\+Lock\+With\+Options() to \mbox{\hyperlink{ltemc-atcmd_8c_a205e86dbfb4157be2f01ed19a727d273}{atcmd\+\_\+try\+Invoke\+With\+Options()}}
+\end{DoxyItemize}
+\item ntwk
+\begin{DoxyItemize}
+\item Changed ntwk\+\_\+get\+Active\+Pdp\+Cntxt\+Cnt() to \mbox{\hyperlink{ltemc-network_8c_a7fc41326ad93487aacd65148f4289223}{ntwk\+\_\+fetch\+Active\+Pdp\+Cntxts()}}
+\item Added two new parameters to ntwk\+\_\+activate\+Pdp\+Context(D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+T\+E\+XT, pdp\+Cntxt\+Protocol\+Type\+\_\+\+I\+P\+V4, \char`\"{}your\+A\+P\+Nname\char`\"{})
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md40}{}\doxysection{v2.\+1.\+1}\label{md_version-history_autotoc_md40}
+\hypertarget{md_version-history_autotoc_md41}{}\doxysubsection{Fixes to H\+T\+T\+P and network modules}\label{md_version-history_autotoc_md41}
+
+\begin{DoxyItemize}
+\item Updated network to ensure network is I\+P\+V4. Future version will allow for complete configurability of the A\+PN\textbackslash{}\+P\+DP parameters
+\item Fixed a timing issue in the http\+\_\+read()
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md42}{}\doxysection{v2.\+1.\+0}\label{md_version-history_autotoc_md42}
+\hypertarget{md_version-history_autotoc_md43}{}\doxysubsection{Fixes and minor enhancements}\label{md_version-history_autotoc_md43}
+
+\begin{DoxyItemize}
+\item Fixed intermittent timing issue in H\+T\+TP read response
+\item Fixed deadlock condition if H\+T\+TP request failed
+\item Fixed modem info, where after loss of connection modem reported previous carrier and network type
+\item Changed modem reset logic to be more resilient
+\item Changed B\+Gx startup logic to be more resilient
+\item Changed tests to reflect other changes in this release 
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md44}{}\doxysubsubsection{Breaking Changes}\label{md_version-history_autotoc_md44}
+
+\begin{DoxyItemize}
+\item Changed signature for application event notification callback to include uint8\+\_\+t assembly and instance indications.
+\begin{DoxyItemize}
+\item L\+T\+EmC will set assembly to 0x\+C0, L\+Q\+Cloud will set assembly to 0x\+C1
+\end{DoxyItemize}
+\item Changed name of set yield callback to \mbox{\hyperlink{ltemc_8c_a865c84636366086193ccac32d0d9c23d}{ltem\+\_\+set\+Yield\+Callback()}}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md45}{}\doxysection{v2.\+0.\+0 -\/ Major long-\/term release}\label{md_version-history_autotoc_md45}
+\hypertarget{md_version-history_autotoc_md46}{}\doxysubsection{Added H\+T\+T\+P(\+S) functionality and redesigned buffering model. Enhancements to A\+T-\/\+Command module to allow for continued extensions to supported features.}\label{md_version-history_autotoc_md46}
 
 \begin{DoxyItemize}
 \item Added support for H\+T\+T\+P(\+S) G\+E\+T/\+P\+O\+ST
@@ -12,8 +59,8 @@
 \item Support for multiple M\+Q\+TT and H\+T\+T\+P(\+S) sessions per modem
 \item Decoupled M\+Q\+TT from fixed data context number 5, H\+T\+TP created without fixed data context coupling.
 \item Misc fixes to B\+Gx, M\+Q\+TT, Network modules.
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md39}{}\doxysection{v1.\+0.\+0 -\/ M\+A\+J\+O\+R R\+E\+L\+E\+A\+SE}\label{md_version-history_autotoc_md39}
-\hypertarget{md_version-history_autotoc_md40}{}\doxysubsection{Version 1.\+0.\+0 is a major release with several breaking changes. This release is the 1st version fully vetted in commercial projects and sets the stage for future multiple Loo\+U\+Q L\+T\+E modem models.}\label{md_version-history_autotoc_md40}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md47}{}\doxysection{v1.\+0.\+0 -\/ M\+A\+J\+O\+R R\+E\+L\+E\+A\+SE}\label{md_version-history_autotoc_md47}
+\hypertarget{md_version-history_autotoc_md48}{}\doxysubsection{Version 1.\+0.\+0 is a major release with several breaking changes. This release is the 1st version fully vetted in commercial projects and sets the stage for future multiple Loo\+U\+Q L\+T\+E modem models.}\label{md_version-history_autotoc_md48}
 \href{https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/Release_1_0.md}{\texttt{ https\+://github.\+com/\+Loo\+U\+Q/\+Circuit\+River-\/\+L\+T\+Em\+C/blob/master/\+Release\+\_\+1\+\_\+0.\+md}}
 
 You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics on the major changes and how to adapt your application code.
@@ -25,7 +72,7 @@ You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics o
 \item Improved support for Segger R\+TT debug output
 \item Filename and .h file adjustments and cleanup
 \item Misc fixes
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md41}{}\doxysection{v0.\+5.\+0 -\/ Fixes and Network P\+D\+P context handling (\+Dec 28, 2020)}\label{md_version-history_autotoc_md41}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md49}{}\doxysection{v0.\+5.\+0 -\/ Fixes and Network P\+D\+P context handling (\+Dec 28, 2020)}\label{md_version-history_autotoc_md49}
 
 \begin{DoxyItemize}
 \item Fixed M\+Q\+TT not trapping publish errors
@@ -37,26 +84,26 @@ You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics o
 \item Added reset to deactivate/activate all presently active P\+DP contexts
 \end{DoxyItemize}
 \item Change I\+OP P\+DP deactivated detect logic to match internal implementation in N\+E\+T\+W\+O\+RK module
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md42}{}\doxysection{0.\+4.\+2 (\+Dec 15, 2020)}\label{md_version-history_autotoc_md42}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md50}{}\doxysection{0.\+4.\+2 (\+Dec 15, 2020)}\label{md_version-history_autotoc_md50}
 
 \begin{DoxyItemize}
 \item Updated I\+SR for intermittent missed event when receiving M\+Q\+TT publish
 \item Reformatted tests/\+L\+T\+Em1c-\/8-\/mqtt.\+ino for readability and test setup with Azure Io\+T\+Hub
 \item Removed utils.\+c from L\+T\+Em1c library
 \item Functionality is now part of LQ Cloud but can be used independently as lqc\+\_\+collections (.h.c)
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md43}{}\doxysection{v0.\+4.\+2 -\/ Misc (\+Dec-\/15-\/2020)}\label{md_version-history_autotoc_md43}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md51}{}\doxysection{v0.\+4.\+2 -\/ Misc (\+Dec-\/15-\/2020)}\label{md_version-history_autotoc_md51}
 
 \begin{DoxyItemize}
 \item Updated I\+SR for intermittent missed event when receiving M\+Q\+TT publish
 \item Reformatted tests/\+L\+T\+Em1c-\/8-\/mqtt.\+ino for readability and test setup with Azure Io\+T\+Hub
 \item Removed utils.\+c from L\+T\+Em1c library
 \item Functionality is now part of LQ Cloud but can be used independently as lqc\+\_\+collections (.h.c)
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md44}{}\doxysection{v0.\+4.\+1 -\/ Misc (\+Nov 28, 2020)}\label{md_version-history_autotoc_md44}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md52}{}\doxysection{v0.\+4.\+1 -\/ Misc (\+Nov 28, 2020)}\label{md_version-history_autotoc_md52}
 
 \begin{DoxyItemize}
 \item Remove dependency on J\+Link R\+TT
 \item Fixed parse issue in G\+N\+SS get\+Location()
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md45}{}\doxysection{v0.\+3 -\/ I\+O\+P Redesign (\+Oct 6, 2020)}\label{md_version-history_autotoc_md45}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md53}{}\doxysection{v0.\+3 -\/ I\+O\+P Redesign (\+Oct 6, 2020)}\label{md_version-history_autotoc_md53}
 Overhaul of the I\+OP buffering system.
 \begin{DoxyItemize}
 \item Simplified receive buffer management and eliminated copies from receive pipeline
@@ -72,7 +119,7 @@ Overhaul of the I\+OP buffering system.
 \item Receiver events per subscription (subscriptions can share a receiver function or have distinct receiver functions)
 \end{DoxyItemize}
 \item Multiple fixes
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md46}{}\doxysection{v0.\+2 -\/ Fixes and Enhancements (\+Jun 25, 2020)}\label{md_version-history_autotoc_md46}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md54}{}\doxysection{v0.\+2 -\/ Fixes and Enhancements (\+Jun 25, 2020)}\label{md_version-history_autotoc_md54}
 
 \begin{DoxyItemize}
 \item T\+C\+P/\+U\+DP large packets (60 $<$ packets $<$=1460 bytes), M\+Q\+T\+T(s) functional, Geo-\/\+Fence support
@@ -81,7 +128,7 @@ Overhaul of the I\+OP buffering system.
 \item Background tasks alignment for R\+T\+OS and Arduino Scheduler compatibility
 \item Added Geo-\/\+Fence support
 \item F\+O\+TA partial support for D\+F\+O\+TA via H\+T\+T\+PS (file system F\+O\+TA is a roadmap feature )
-\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md47}{}\doxysection{v0.\+1 -\/ Initial publish}\label{md_version-history_autotoc_md47}
+\end{DoxyItemize}\hypertarget{md_version-history_autotoc_md55}{}\doxysection{v0.\+1 -\/ Initial publish}\label{md_version-history_autotoc_md55}
 First release of a functional L\+T\+Em1 driver. Supported sockets (T\+C\+P/\+U\+D\+P/\+S\+SL) and limited M\+Q\+TT.
 \begin{DoxyItemize}
 \item Pure C99

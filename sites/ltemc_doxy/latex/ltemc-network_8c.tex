@@ -6,7 +6,7 @@
 \item 
 \#define \mbox{\hyperlink{ltemc-network_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
 \item 
-\#define \mbox{\hyperlink{ltemc-network_8c_abae81e48a168d1f74717b95b199a699f}{S\+E\+R\+I\+A\+L\+\_\+\+D\+BG}}~\mbox{\hyperlink{ltemc_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}
+\#define \mbox{\hyperlink{ltemc-network_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
 \item 
 \#define \mbox{\hyperlink{ltemc-network_8c_acded44a40a84c6e4ecf02b6da518ce4e}{P\+R\+O\+T\+O\+C\+O\+L\+S\+\_\+\+C\+M\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+SZ}}~80
 \item 
@@ -19,22 +19,20 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{ltemc-network_8c_abf9daa62d261abcac1e4cb27c9e72adf}{asm}} (\char`\"{}.global \+\_\+printf\+\_\+float\char`\"{})
-\item 
 void \mbox{\hyperlink{ltemc-network_8c_a59f08d7a2cf3e7d6685e377aff6bc57d}{ntwk\+\_\+create}} ()
 \begin{DoxyCompactList}\small\item\em Initialize the IP network contexts structure. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-network_8h_a58db2e79250f681c695c651d586fd25f}{network\+Operator\+\_\+t}} \mbox{\hyperlink{ltemc-network_8c_ada224a6a88782263e4a9cf65c3678d7e}{ntwk\+\_\+await\+Operator}} (uint16\+\_\+t wait\+Dur\+Seconds)
 \begin{DoxyCompactList}\small\item\em Wait for a network operator name and network mode. Can be cancelled in threaded env via g\+\_\+ltem-\/$>$cancellation\+Request. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8c_a3398dd81e1b122fcacdafb90c3eb33f3}{ntwk\+\_\+get\+Active\+Pdp\+Cntxt\+Cnt}} ()
+uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8c_a7fc41326ad93487aacd65148f4289223}{ntwk\+\_\+fetch\+Active\+Pdp\+Cntxts}} ()
 \begin{DoxyCompactList}\small\item\em Get count of A\+PN active data contexts from B\+Gx. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}} $\ast$ \mbox{\hyperlink{ltemc-network_8c_a367bc946024cf86d08b2d31e225496b7}{ntwk\+\_\+get\+Pdp\+Cntxt}} (uint8\+\_\+t cntxt\+Id)
+\mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}} $\ast$ \mbox{\hyperlink{ltemc-network_8c_a906fa5291e94f73b59c183e0ed7c1e52}{ntwk\+\_\+get\+Pdp\+Cntxt\+Info}} (uint8\+\_\+t cntxt\+Id)
 \begin{DoxyCompactList}\small\item\em Get P\+DP Context/\+A\+PN information. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-network_8c_a78dc53e53f6e09746344b1103972a900}{ntwk\+\_\+activate\+Pdp\+Context}} (uint8\+\_\+t cntxt\+Id)
+bool \mbox{\hyperlink{ltemc-network_8c_a338e4b654dde96a6abbb5802085b5808}{ntwk\+\_\+activate\+Pdp\+Context}} (uint8\+\_\+t cntxt\+Id, \mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}} proto\+Type, const char $\ast$p\+Apn)
 \begin{DoxyCompactList}\small\item\em Activate P\+DP Context/\+A\+PN. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ltemc-network_8c_aa121d8f8af5adccbe9fb4e79d8fdc7ce}{ntwk\+\_\+activate\+Pdp\+Context\+With\+Auth}} (uint8\+\_\+t cntxt\+Id, const char $\ast$p\+User\+Name, const char $\ast$p\+PW, \mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}} auth\+Method)
+\begin{DoxyCompactList}\small\item\em Activate P\+DP Context/\+A\+PN requiring authentication. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8c_a1211e162b3e2ae3af1a9430e6254adee}{ntwk\+\_\+deactivate\+Pdp\+Context}} (uint8\+\_\+t cntxt\+Id)
-\begin{DoxyCompactList}\small\item\em Deactivate A\+PN. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-network_8c_a44958b492843d449944cfc78d937241d}{ntwk\+\_\+reset\+Pdp\+Contexts}} ()
-\begin{DoxyCompactList}\small\item\em Reset (deactivate/activate) all network A\+P\+Ns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Deactivate A\+PN. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -61,17 +59,17 @@ void \mbox{\hyperlink{ltemc-network_8c_a44958b492843d449944cfc78d937241d}{ntwk\+
 \doxysubsubsection{\texorpdfstring{MIN}{MIN}}
 {\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x)$<$(y)) ? (x)\+:(y))}
 
+\mbox{\Hypertarget{ltemc-network_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-network_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
+\index{ltemc-\/network.c@{ltemc-\/network.c}!PRINTF@{PRINTF}}
+\index{PRINTF@{PRINTF}!ltemc-\/network.c@{ltemc-\/network.c}}
+\doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
 \mbox{\Hypertarget{ltemc-network_8c_acded44a40a84c6e4ecf02b6da518ce4e}\label{ltemc-network_8c_acded44a40a84c6e4ecf02b6da518ce4e}} 
 \index{ltemc-\/network.c@{ltemc-\/network.c}!PROTOCOLS\_CMD\_BUFFER\_SZ@{PROTOCOLS\_CMD\_BUFFER\_SZ}}
 \index{PROTOCOLS\_CMD\_BUFFER\_SZ@{PROTOCOLS\_CMD\_BUFFER\_SZ}!ltemc-\/network.c@{ltemc-\/network.c}}
 \doxysubsubsection{\texorpdfstring{PROTOCOLS\_CMD\_BUFFER\_SZ}{PROTOCOLS\_CMD\_BUFFER\_SZ}}
 {\footnotesize\ttfamily \#define P\+R\+O\+T\+O\+C\+O\+L\+S\+\_\+\+C\+M\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+SZ~80}
-
-\mbox{\Hypertarget{ltemc-network_8c_abae81e48a168d1f74717b95b199a699f}\label{ltemc-network_8c_abae81e48a168d1f74717b95b199a699f}} 
-\index{ltemc-\/network.c@{ltemc-\/network.c}!SERIAL\_DBG@{SERIAL\_DBG}}
-\index{SERIAL\_DBG@{SERIAL\_DBG}!ltemc-\/network.c@{ltemc-\/network.c}}
-\doxysubsubsection{\texorpdfstring{SERIAL\_DBG}{SERIAL\_DBG}}
-{\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+\_\+\+D\+BG~\mbox{\hyperlink{ltemc_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}}
 
 \mbox{\Hypertarget{ltemc-network_8c_a804ecb67b072321269af36bc17d26886}\label{ltemc-network_8c_a804ecb67b072321269af36bc17d26886}} 
 \index{ltemc-\/network.c@{ltemc-\/network.c}!TOKEN\_BUF\_SZ@{TOKEN\_BUF\_SZ}}
@@ -82,17 +80,11 @@ void \mbox{\hyperlink{ltemc-network_8c_a44958b492843d449944cfc78d937241d}{ntwk\+
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{ltemc-network_8c_abf9daa62d261abcac1e4cb27c9e72adf}\label{ltemc-network_8c_abf9daa62d261abcac1e4cb27c9e72adf}} 
-\index{ltemc-\/network.c@{ltemc-\/network.c}!asm@{asm}}
-\index{asm@{asm}!ltemc-\/network.c@{ltemc-\/network.c}}
-\doxysubsubsection{\texorpdfstring{asm()}{asm()}}
-{\footnotesize\ttfamily asm (\begin{DoxyParamCaption}\item[{\char`\"{}.global \+\_\+printf\+\_\+float\char`\"{}}]{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{ltemc-network_8c_a78dc53e53f6e09746344b1103972a900}\label{ltemc-network_8c_a78dc53e53f6e09746344b1103972a900}} 
+\mbox{\Hypertarget{ltemc-network_8c_a338e4b654dde96a6abbb5802085b5808}\label{ltemc-network_8c_a338e4b654dde96a6abbb5802085b5808}} 
 \index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_activatePdpContext@{ntwk\_activatePdpContext}}
 \index{ntwk\_activatePdpContext@{ntwk\_activatePdpContext}!ltemc-\/network.c@{ltemc-\/network.c}}
 \doxysubsubsection{\texorpdfstring{ntwk\_activatePdpContext()}{ntwk\_activatePdpContext()}}
-{\footnotesize\ttfamily bool ntwk\+\_\+activate\+Pdp\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool ntwk\+\_\+activate\+Pdp\+Context (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}}}]{proto\+Type,  }\item[{const char $\ast$}]{p\+Apn }\end{DoxyParamCaption})}
 
 
 
@@ -101,6 +93,31 @@ Activate P\+DP Context/\+A\+PN.
 
 \begin{DoxyParams}{Parameters}
 {\em cntxt\+Id} & \mbox{[}in\mbox{]} -\/ The A\+PN to operate on. Typically 0 or 1 \\
+\hline
+{\em proto\+Type} & \mbox{[}in\mbox{]} -\/ The P\+DP protocol I\+P\+V4, I\+P\+V6, I\+P\+V4\+V6 (both). \\
+\hline
+{\em p\+Apn} & \mbox{[}in\mbox{]} -\/ The A\+PN name if required by network carrier. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-network_8c_aa121d8f8af5adccbe9fb4e79d8fdc7ce}\label{ltemc-network_8c_aa121d8f8af5adccbe9fb4e79d8fdc7ce}} 
+\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_activatePdpContextWithAuth@{ntwk\_activatePdpContextWithAuth}}
+\index{ntwk\_activatePdpContextWithAuth@{ntwk\_activatePdpContextWithAuth}!ltemc-\/network.c@{ltemc-\/network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_activatePdpContextWithAuth()}{ntwk\_activatePdpContextWithAuth()}}
+{\footnotesize\ttfamily bool ntwk\+\_\+activate\+Pdp\+Context\+With\+Auth (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id,  }\item[{const char $\ast$}]{p\+User\+Name,  }\item[{const char $\ast$}]{p\+PW,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}}}]{auth\+Method }\end{DoxyParamCaption})}
+
+
+
+Activate P\+DP Context/\+A\+PN requiring authentication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cntxt\+Id} & \mbox{[}in\mbox{]} -\/ The A\+PN to operate on. Typically 0 or 1 \\
+\hline
+{\em p\+User\+Name} & \mbox{[}in\mbox{]} -\/ String with user name \\
+\hline
+{\em p\+PW} & \mbox{[}in\mbox{]} -\/ String with password \\
+\hline
+{\em auth\+Method} & \mbox{[}in\mbox{]} -\/ Enum specifying the type of authentication expected by network \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{ltemc-network_8c_ada224a6a88782263e4a9cf65c3678d7e}\label{ltemc-network_8c_ada224a6a88782263e4a9cf65c3678d7e}} 
@@ -146,11 +163,11 @@ Deactivate A\+PN.
 {\em cntxt\+Id} & \mbox{[}in\mbox{]} -\/ The A\+PN number to operate on. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-network_8c_a3398dd81e1b122fcacdafb90c3eb33f3}\label{ltemc-network_8c_a3398dd81e1b122fcacdafb90c3eb33f3}} 
-\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_getActivePdpCntxtCnt@{ntwk\_getActivePdpCntxtCnt}}
-\index{ntwk\_getActivePdpCntxtCnt@{ntwk\_getActivePdpCntxtCnt}!ltemc-\/network.c@{ltemc-\/network.c}}
-\doxysubsubsection{\texorpdfstring{ntwk\_getActivePdpCntxtCnt()}{ntwk\_getActivePdpCntxtCnt()}}
-{\footnotesize\ttfamily uint8\+\_\+t ntwk\+\_\+get\+Active\+Pdp\+Cntxt\+Cnt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-network_8c_a7fc41326ad93487aacd65148f4289223}\label{ltemc-network_8c_a7fc41326ad93487aacd65148f4289223}} 
+\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_fetchActivePdpCntxts@{ntwk\_fetchActivePdpCntxts}}
+\index{ntwk\_fetchActivePdpCntxts@{ntwk\_fetchActivePdpCntxts}!ltemc-\/network.c@{ltemc-\/network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_fetchActivePdpCntxts()}{ntwk\_fetchActivePdpCntxts()}}
+{\footnotesize\ttfamily uint8\+\_\+t ntwk\+\_\+fetch\+Active\+Pdp\+Cntxts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -159,11 +176,11 @@ Get count of A\+PN active data contexts from B\+Gx.
 \begin{DoxyReturn}{Returns}
 Count of active data contexts (B\+Gx max is 3). 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-network_8c_a367bc946024cf86d08b2d31e225496b7}\label{ltemc-network_8c_a367bc946024cf86d08b2d31e225496b7}} 
-\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_getPdpCntxt@{ntwk\_getPdpCntxt}}
-\index{ntwk\_getPdpCntxt@{ntwk\_getPdpCntxt}!ltemc-\/network.c@{ltemc-\/network.c}}
-\doxysubsubsection{\texorpdfstring{ntwk\_getPdpCntxt()}{ntwk\_getPdpCntxt()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}}$\ast$ ntwk\+\_\+get\+Pdp\+Cntxt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-network_8c_a906fa5291e94f73b59c183e0ed7c1e52}\label{ltemc-network_8c_a906fa5291e94f73b59c183e0ed7c1e52}} 
+\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_getPdpCntxtInfo@{ntwk\_getPdpCntxtInfo}}
+\index{ntwk\_getPdpCntxtInfo@{ntwk\_getPdpCntxtInfo}!ltemc-\/network.c@{ltemc-\/network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_getPdpCntxtInfo()}{ntwk\_getPdpCntxtInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-network_8h_a09b80c31caeeb52da11154ae652c16d2}{pdp\+Cntxt\+\_\+t}}$\ast$ ntwk\+\_\+get\+Pdp\+Cntxt\+Info (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id }\end{DoxyParamCaption})}
 
 
 
@@ -177,17 +194,7 @@ Get P\+DP Context/\+A\+PN information.
 \begin{DoxyReturn}{Returns}
 Pointer to P\+DP context info in active context table, N\+U\+LL if not active 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-network_8c_a44958b492843d449944cfc78d937241d}\label{ltemc-network_8c_a44958b492843d449944cfc78d937241d}} 
-\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_resetPdpContexts@{ntwk\_resetPdpContexts}}
-\index{ntwk\_resetPdpContexts@{ntwk\_resetPdpContexts}!ltemc-\/network.c@{ltemc-\/network.c}}
-\doxysubsubsection{\texorpdfstring{ntwk\_resetPdpContexts()}{ntwk\_resetPdpContexts()}}
-{\footnotesize\ttfamily void ntwk\+\_\+reset\+Pdp\+Contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Reset (deactivate/activate) all network A\+P\+Ns. 
-
-N\+O\+TE\+: activate and deactivate have side effects, they internally call get\+Active\+Contexts prior to return 
 
 \doxysubsection{Variable Documentation}
 \mbox{\Hypertarget{ltemc-network_8c_a5f9b6913ff818fbc74934a69849fb48b}\label{ltemc-network_8c_a5f9b6913ff818fbc74934a69849fb48b}} 

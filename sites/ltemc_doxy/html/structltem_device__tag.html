@@ -87,9 +87,12 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a4c823cc492a5660ab1b9766726774474"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-quectel-bg_8h.html#a3b346c5dfd0f8d950e7bc92c1b22b844">qbgReadyState_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structltem_device__tag.html#a4c823cc492a5660ab1b9766726774474">qbgReadyState</a></td></tr>
 <tr class="memdesc:a4c823cc492a5660ab1b9766726774474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ready state of the BGx module.  <a href="structltem_device__tag.html#a4c823cc492a5660ab1b9766726774474">More...</a><br /></td></tr>
 <tr class="separator:a4c823cc492a5660ab1b9766726774474"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9723ddf0aa161ed8bb25bc4d7bd7b8a"><td class="memItemLeft" align="right" valign="top">appNotifyFunc_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structltem_device__tag.html#af9723ddf0aa161ed8bb25bc4d7bd7b8a">appNotifyCB</a></td></tr>
-<tr class="memdesc:af9723ddf0aa161ed8bb25bc4d7bd7b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification callback to application.  <a href="structltem_device__tag.html#af9723ddf0aa161ed8bb25bc4d7bd7b8a">More...</a><br /></td></tr>
-<tr class="separator:af9723ddf0aa161ed8bb25bc4d7bd7b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f79b286819407c7514b9430d4c8587"><td class="memItemLeft" align="right" valign="top">eventNotifFunc_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structltem_device__tag.html#a43f79b286819407c7514b9430d4c8587">appNotifCB</a></td></tr>
+<tr class="memdesc:a43f79b286819407c7514b9430d4c8587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event notification callback to parent application.  <a href="structltem_device__tag.html#a43f79b286819407c7514b9430d4c8587">More...</a><br /></td></tr>
+<tr class="separator:a43f79b286819407c7514b9430d4c8587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6227f6a70bb8ecd27044b70891f502c8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structltem_device__tag.html#a6227f6a70bb8ecd27044b70891f502c8">instNm</a></td></tr>
+<tr class="memdesc:a6227f6a70bb8ecd27044b70891f502c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">LTEm instance number 0=undefined, 1..254.  <a href="structltem_device__tag.html#a6227f6a70bb8ecd27044b70891f502c8">More...</a><br /></td></tr>
+<tr class="separator:a6227f6a70bb8ecd27044b70891f502c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15871f597217ab79cc8e1790f38359bf"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structltem_device__tag.html#a15871f597217ab79cc8e1790f38359bf">spi</a></td></tr>
 <tr class="memdesc:a15871f597217ab79cc8e1790f38359bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI device (methods signatures compatible with Arduino).  <a href="structltem_device__tag.html#a15871f597217ab79cc8e1790f38359bf">More...</a><br /></td></tr>
 <tr class="separator:a15871f597217ab79cc8e1790f38359bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,19 +119,19 @@ Data Fields</h2></td></tr>
 <div class="textblock"><p>Struct representing the LTEmC model. The struct behind the g_ltem1 global variable with all driver controls. </p>
 <p>Most subsystems are linked to this struct with pointers to allow for better abstraction and optional subsystems </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="af9723ddf0aa161ed8bb25bc4d7bd7b8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9723ddf0aa161ed8bb25bc4d7bd7b8a">&#9670;&nbsp;</a></span>appNotifyCB</h2>
+<a id="a43f79b286819407c7514b9430d4c8587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43f79b286819407c7514b9430d4c8587">&#9670;&nbsp;</a></span>appNotifCB</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">appNotifyFunc_t appNotifyCB</td>
+          <td class="memname">eventNotifFunc_t appNotifCB</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Notification callback to application. </p>
+<p>Event notification callback to parent application. </p>
 
 </div>
 </div>
@@ -161,6 +164,22 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>For RTOS implementations, token to request cancellation of long running task/action. </p>
+
+</div>
+</div>
+<a id="a6227f6a70bb8ecd27044b70891f502c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6227f6a70bb8ecd27044b70891f502c8">&#9670;&nbsp;</a></span>instNm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t instNm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LTEm instance number 0=undefined, 1..254. </p>
 
 </div>
 </div>

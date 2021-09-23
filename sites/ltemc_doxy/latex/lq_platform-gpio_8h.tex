@@ -56,6 +56,10 @@ void \mbox{\hyperlink{lq_platform-gpio_8h_af4da8a510d58ff910332ea4c3e83684b}{gpi
 void \mbox{\hyperlink{lq_platform-gpio_8h_ad40f9fb053e1d6ac6bf7b239d169b7f1}{gpio\+\_\+attach\+Isr}} (uint8\+\_\+t pin\+Num, bool enabled, \mbox{\hyperlink{lq_platform-gpio_8h_a44deb91e3c2203670f250799bf3c22a9}{gpio\+Irq\+Trigger\+\_\+t}} trigger\+On, \mbox{\hyperlink{lq_platform-gpio_8h_a28749c3b8ef8d52af199ace9e0d64dc6}{platform\+Gpio\+Pin\+Irq\+Callback}} isr\+Callback)
 \item 
 void \mbox{\hyperlink{lq_platform-gpio_8h_a4b7d9127ea1406418fe9b3a3c4b28008}{gpio\+\_\+detach\+Isr}} (uint8\+\_\+t pin\+Num)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{lq_platform-gpio_8h_a6ac1f7c5a73e69cb4439e1a083b5ef50}{gpio\+\_\+get\+Int\+Flags}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{lq_platform-gpio_8h_a665ba3ab77e0faccb0a41f45dad15d2c}{gpio\+\_\+get\+Pin\+Interrupt}} (uint32\+\_\+t pin)
 \end{DoxyCompactItemize}
 
 
@@ -178,6 +182,18 @@ gpio\+Value\+\_\+high&\\
 \index{gpio\_detachIsr@{gpio\_detachIsr}!lqPlatform-\/gpio.h@{lqPlatform-\/gpio.h}}
 \doxysubsubsection{\texorpdfstring{gpio\_detachIsr()}{gpio\_detachIsr()}}
 {\footnotesize\ttfamily void gpio\+\_\+detach\+Isr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin\+Num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lq_platform-gpio_8h_a6ac1f7c5a73e69cb4439e1a083b5ef50}\label{lq_platform-gpio_8h_a6ac1f7c5a73e69cb4439e1a083b5ef50}} 
+\index{lqPlatform-\/gpio.h@{lqPlatform-\/gpio.h}!gpio\_getIntFlags@{gpio\_getIntFlags}}
+\index{gpio\_getIntFlags@{gpio\_getIntFlags}!lqPlatform-\/gpio.h@{lqPlatform-\/gpio.h}}
+\doxysubsubsection{\texorpdfstring{gpio\_getIntFlags()}{gpio\_getIntFlags()}}
+{\footnotesize\ttfamily uint32\+\_\+t gpio\+\_\+get\+Int\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{lq_platform-gpio_8h_a665ba3ab77e0faccb0a41f45dad15d2c}\label{lq_platform-gpio_8h_a665ba3ab77e0faccb0a41f45dad15d2c}} 
+\index{lqPlatform-\/gpio.h@{lqPlatform-\/gpio.h}!gpio\_getPinInterrupt@{gpio\_getPinInterrupt}}
+\index{gpio\_getPinInterrupt@{gpio\_getPinInterrupt}!lqPlatform-\/gpio.h@{lqPlatform-\/gpio.h}}
+\doxysubsubsection{\texorpdfstring{gpio\_getPinInterrupt()}{gpio\_getPinInterrupt()}}
+{\footnotesize\ttfamily uint32\+\_\+t gpio\+\_\+get\+Pin\+Interrupt (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{pin }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{lq_platform-gpio_8h_a2cebc40ef5df00291f9d05a24cd2e651}\label{lq_platform-gpio_8h_a2cebc40ef5df00291f9d05a24cd2e651}} 
 \index{lqPlatform-\/gpio.h@{lqPlatform-\/gpio.h}!gpio\_openPin@{gpio\_openPin}}

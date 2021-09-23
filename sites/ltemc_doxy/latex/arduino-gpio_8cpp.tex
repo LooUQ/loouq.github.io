@@ -15,6 +15,10 @@ void \mbox{\hyperlink{arduino-gpio_8cpp_a38fadf663b1e4bd5489855dad7771e04}{gpio\
 \item 
 void \mbox{\hyperlink{arduino-gpio_8cpp_ad40f9fb053e1d6ac6bf7b239d169b7f1}{gpio\+\_\+attach\+Isr}} (uint8\+\_\+t pin\+Num, bool enabled, \mbox{\hyperlink{lq_platform-gpio_8h_a44deb91e3c2203670f250799bf3c22a9}{gpio\+Irq\+Trigger\+\_\+t}} trigger\+On, \mbox{\hyperlink{lq_platform-gpio_8h_a28749c3b8ef8d52af199ace9e0d64dc6}{platform\+Gpio\+Pin\+Irq\+Callback}} isr\+Callback)
 \item 
+uint32\+\_\+t \mbox{\hyperlink{arduino-gpio_8cpp_a6ac1f7c5a73e69cb4439e1a083b5ef50}{gpio\+\_\+get\+Int\+Flags}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{arduino-gpio_8cpp_a665ba3ab77e0faccb0a41f45dad15d2c}{gpio\+\_\+get\+Pin\+Interrupt}} (uint32\+\_\+t pin)
+\item 
 void \mbox{\hyperlink{arduino-gpio_8cpp_a4b7d9127ea1406418fe9b3a3c4b28008}{gpio\+\_\+detach\+Isr}} (uint8\+\_\+t pin\+Num)
 \end{DoxyCompactItemize}
 
@@ -37,6 +41,18 @@ void \mbox{\hyperlink{arduino-gpio_8cpp_a4b7d9127ea1406418fe9b3a3c4b28008}{gpio\
 \index{gpio\_detachIsr@{gpio\_detachIsr}!arduino-\/gpio.cpp@{arduino-\/gpio.cpp}}
 \doxysubsubsection{\texorpdfstring{gpio\_detachIsr()}{gpio\_detachIsr()}}
 {\footnotesize\ttfamily void gpio\+\_\+detach\+Isr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin\+Num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{arduino-gpio_8cpp_a6ac1f7c5a73e69cb4439e1a083b5ef50}\label{arduino-gpio_8cpp_a6ac1f7c5a73e69cb4439e1a083b5ef50}} 
+\index{arduino-\/gpio.cpp@{arduino-\/gpio.cpp}!gpio\_getIntFlags@{gpio\_getIntFlags}}
+\index{gpio\_getIntFlags@{gpio\_getIntFlags}!arduino-\/gpio.cpp@{arduino-\/gpio.cpp}}
+\doxysubsubsection{\texorpdfstring{gpio\_getIntFlags()}{gpio\_getIntFlags()}}
+{\footnotesize\ttfamily uint32\+\_\+t gpio\+\_\+get\+Int\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{arduino-gpio_8cpp_a665ba3ab77e0faccb0a41f45dad15d2c}\label{arduino-gpio_8cpp_a665ba3ab77e0faccb0a41f45dad15d2c}} 
+\index{arduino-\/gpio.cpp@{arduino-\/gpio.cpp}!gpio\_getPinInterrupt@{gpio\_getPinInterrupt}}
+\index{gpio\_getPinInterrupt@{gpio\_getPinInterrupt}!arduino-\/gpio.cpp@{arduino-\/gpio.cpp}}
+\doxysubsubsection{\texorpdfstring{gpio\_getPinInterrupt()}{gpio\_getPinInterrupt()}}
+{\footnotesize\ttfamily uint32\+\_\+t gpio\+\_\+get\+Pin\+Interrupt (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{pin }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{arduino-gpio_8cpp_a662fb34c1d7e68e8ad49df905a34679f}\label{arduino-gpio_8cpp_a662fb34c1d7e68e8ad49df905a34679f}} 
 \index{arduino-\/gpio.cpp@{arduino-\/gpio.cpp}!gpio\_openPin@{gpio\_openPin}}

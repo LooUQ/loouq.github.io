@@ -17,36 +17,37 @@ typedef volatile struct \mbox{\hyperlink{structiop__tag}{iop\+\_\+tag}} \mbox{\h
 \begin{DoxyCompactItemize}
 \item 
 enum \{ \newline
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}{atcmd\+\_\+\+\_\+use\+Default\+Timeout}} = 0, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}{atcmd\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}{atcmd\+\_\+\+\_\+use\+Default\+O\+K\+Completion\+Parser}} = 0, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual}} = 0, 
 \mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3}{atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto}} = 1, 
 \newline
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}{A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS}} = 800, 
-\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}{A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-atcmd_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}{atcmd\+\_\+\+\_\+parser\+Pending\+Result}} = 0x\+F\+F\+FF, 
 \mbox{\hyperlink{ltemc-http_8c_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}{http\+\_\+\+\_\+\+L\+T\+E\+M\+\_\+default\+Timeout\+B\+Gx\+Sec}} = 60, 
 \mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060}{I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size}} = 1800, 
-\newline
 \mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8}{I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size}} = 192, 
-\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
-\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS}} = 6, 
-\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
 \newline
-\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 3, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}{I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate}} = 115200, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz}} = 64, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}{I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period}} = (int)(1 / (double)I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate $\ast$ 10 $\ast$ I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz $\ast$ 1000) + 1, 
+\mbox{\hyperlink{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}{I\+O\+P\+\_\+\+\_\+rx\+Default\+Timeout}} = I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period $\ast$ 2 + 192, 
+\newline
+\mbox{\hyperlink{ltemc-mqtt_8c_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}{result\+Code\+\_\+\+\_\+parser\+Pending}} = 0x\+F\+F\+FF, 
+\mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991}{N\+T\+W\+K\+\_\+\+\_\+pdp\+Context\+Cnt}} = 2, 
 \mbox{\hyperlink{ltemc-network_8h_a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83}{N\+T\+W\+K\+\_\+\+\_\+operator\+Name\+Sz}} = 20, 
 \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98}{nxp\+\_\+\+\_\+lsr\+\_\+\+Data\+In\+Receiver}} = 0x01U, 
-\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
 \newline
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5}{nxp\+\_\+\+\_\+lsr\+\_\+\+T\+H\+R\+\_\+empty}} = 0x02U, 
 \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb}{nxp\+\_\+\+\_\+lsr\+\_\+\+F\+I\+F\+O\+\_\+data\+Error}} = 0x80U, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1}{B\+G\+X\+\_\+\+\_\+init\+Command\+Cnt}} = 1, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d}{B\+G\+X\+\_\+\+\_\+init\+Command\+Attempts}} = 2, 
-\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
 \newline
+\mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d}{B\+G\+X\+\_\+\+\_\+power\+On\+Delay}} = 500, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb}{B\+G\+X\+\_\+\+\_\+power\+Off\+Delay}} = 1500, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf}{B\+G\+X\+\_\+\+\_\+reset\+Delay}} = 300, 
 \mbox{\hyperlink{ltemc-quectel-bg_8c_a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c}{B\+G\+X\+\_\+\+\_\+baud\+Rate}} = 115200, 
-\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
 \newline
+\mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc}{sckt\+\_\+\+\_\+result\+Code\+\_\+previously\+Open}} = 563, 
 \mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06}{sckt\+\_\+\+\_\+default\+Open\+Timeout\+MS}} = 60000, 
 \mbox{\hyperlink{ltemc-sckt_8c_a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050}{S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz}} = 1500
  \}
@@ -58,6 +59,8 @@ void \mbox{\hyperlink{ltemc-iop_8h_a014586177c48478e7636c076ad9ecd7c}{I\+O\+P\+\
 \begin{DoxyCompactList}\small\item\em Initialize the Input/\+Output Process subsystem. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-iop_8h_a433190280a770fb33dbcceb681d0b146}{I\+O\+P\+\_\+start}} ()
 \begin{DoxyCompactList}\small\item\em Complete initialization and start running iop processes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-iop_8h_a4bff30d4da421246bd6c776a750e0f4e}{I\+O\+P\+\_\+stop\+Irq}} ()
+\item 
 void \mbox{\hyperlink{ltemc-iop_8h_a9b915345fc60a5413c07164fd1c2630d}{I\+O\+P\+\_\+await\+App\+Ready}} ()
 \begin{DoxyCompactList}\small\item\em Verify L\+T\+Em1 is ready for driver operations. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-iop_8h_ad726cfd88029a9eff03f4595c24ea81c}{I\+O\+P\+\_\+reset\+Core\+Rx\+Buffer}} ()
@@ -68,12 +71,16 @@ void \mbox{\hyperlink{ltemc-iop_8h_a32b0db6aab0ed6f5f4f81a8fe4ad4783}{I\+O\+P\+\
 \begin{DoxyCompactList}\small\item\em Syncs RX consumers with I\+SR for buffer swap. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-iop_8h_af44a81a156fc9eac12f73dbffa01a893}{I\+O\+P\+\_\+reset\+Rx\+Data\+Buffer\+Page}} (\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$buf\+Ptr, uint8\+\_\+t page)
 \begin{DoxyCompactList}\small\item\em Reset a receive buffer for reuse. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{ltemc-iop_8h_af4b541597e39b3850bdea2de36e57e03}{I\+O\+P\+\_\+get\+Rx\+Idle\+Duration}} ()
+\begin{DoxyCompactList}\small\item\em Check for RX progress/idle. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{ltemc-iop_8h_a8054cc5eebb16fb04f6c09d1929a5dfd}{I\+O\+P\+\_\+find\+Rx\+Ahead}} (\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$p\+Buf, uint8\+\_\+t rewind\+Cnt, const char $\ast$p\+Needle, const char $\ast$p\+Term)
+\begin{DoxyCompactList}\small\item\em Finds a string in the last X characters of the I\+OP RX stream. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{ltemc-iop_8h_a797563dda768f4b3aefd009f1f60739d}{I\+O\+P\+\_\+fetch\+Rx\+Ahead}} (\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$p\+Buf, char $\ast$p\+Start, uint16\+\_\+t take\+Cnt, char $\ast$p\+Chars)
+\begin{DoxyCompactList}\small\item\em Get a contiguous block of characters from the RX buffer pages. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-iop_8h_a9b6d8c57ec4bab28cd1c446ae03e7c60}{I\+O\+P\+\_\+register\+Stream}} (\mbox{\hyperlink{ltemc-streams_8h_a950612d73b3a439198b37f3125babc25}{stream\+Peer\+\_\+t}} stream, \mbox{\hyperlink{ltemc-streams_8h_a8ad6b0a37ec9bbaf450e4aa95e7984dc}{iop\+Stream\+Ctrl\+\_\+t}} $\ast$stream\+Ctrl)
 \begin{DoxyCompactList}\small\item\em register a stream peer with I\+OP to control communications. Typically performed by protocol open. \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{ltemc-iop_8h_af109051869f4374c5ff6ff0e4dbe4a90}{I\+O\+P\+\_\+send\+Tx}} (const char $\ast$send\+Data, uint16\+\_\+t send\+Sz, bool send\+Immediate)
-\begin{DoxyCompactList}\small\item\em Start a (raw) send operation. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-iop_8h_ab717ef72de91b80e7b31d33bf6a9dad2}{I\+O\+P\+\_\+detect\+Rx\+Idle}} ()
-\begin{DoxyCompactList}\small\item\em Check for RX idle (no incoming receives from N\+XP in 2.\+5 buffer times). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Start a (raw) send operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
@@ -95,8 +102,8 @@ Each of the protocols (sockets, M\+Q\+TT, H\+T\+TP) have unique behaviors\+: soc
 {\footnotesize\ttfamily anonymous enum}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!atcmd\_\_useDefaultTimeout@{atcmd\_\_useDefaultTimeout}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca}} 
-atcmd\+\_\+\+\_\+use\+Default\+Timeout&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_defaultTimeoutMS@{atcmd\_\_defaultTimeoutMS}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!atcmd\_\_defaultTimeoutMS@{atcmd\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180}} 
+atcmd\+\_\+\+\_\+default\+Timeout\+MS&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!atcmd\_\_useDefaultOKCompletionParser@{atcmd\_\_useDefaultOKCompletionParser}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78}} 
@@ -111,12 +118,8 @@ atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual&\\
 atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!ATCMD\_\_defaultTimeoutMS@{ATCMD\_\_defaultTimeoutMS}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753}} 
-A\+T\+C\+M\+D\+\_\+\+\_\+default\+Timeout\+MS&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!ATCMD\_\_parserPendingResult@{ATCMD\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d}} 
-A\+T\+C\+M\+D\+\_\+\+\_\+parser\+Pending\+Result&private declaration; value returned from response parsers indicating a pattern match has not yet been detected \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atcmd\_\_parserPendingResult@{atcmd\_\_parserPendingResult}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!atcmd\_\_parserPendingResult@{atcmd\_\_parserPendingResult}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1}} 
+atcmd\+\_\+\+\_\+parser\+Pending\+Result&value returned from response parsers indicating a pattern match has not yet been detected \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!http\_\_LTEM\_defaultTimeoutBGxSec@{http\_\_LTEM\_defaultTimeoutBGxSec}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed}} 
@@ -131,12 +134,20 @@ I\+O\+P\+\_\+\+\_\+tx\+Buffer\+Size&\\
 I\+O\+P\+\_\+\+\_\+rx\+Core\+Buffer\+Size&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartBaudRate@{IOP\_\_uartBaudRate}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_\_uartBaudRate@{IOP\_\_uartBaudRate}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31}} 
+I\+O\+P\+\_\+\+\_\+uart\+Baud\+Rate&\\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_\_uartFIFOBufferSz@{IOP\_\_uartFIFOBufferSz}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7}} 
 I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Buffer\+Sz&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_\_uartFIFO\_fillMS@{IOP\_\_uartFIFO\_fillMS}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4}} 
-I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+\_\+fill\+MS&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_uartFIFOFillPeriod@{IOP\_\_uartFIFOFillPeriod}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_\_uartFIFOFillPeriod@{IOP\_\_uartFIFOFillPeriod}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1}} 
+I\+O\+P\+\_\+\+\_\+uart\+F\+I\+F\+O\+Fill\+Period&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IOP\_\_rxDefaultTimeout@{IOP\_\_rxDefaultTimeout}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_\_rxDefaultTimeout@{IOP\_\_rxDefaultTimeout}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5}} 
+I\+O\+P\+\_\+\+\_\+rx\+Default\+Timeout&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{resultCode\_\_parserPending@{resultCode\_\_parserPending}!ltemc-\/iop.h@{ltemc-\/iop.h}}\index{ltemc-\/iop.h@{ltemc-\/iop.h}!resultCode\_\_parserPending@{resultCode\_\_parserPending}}}\mbox{\Hypertarget{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}\label{ltemc-iop_8h_a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2}} 
@@ -223,18 +234,66 @@ Verify L\+T\+Em1 is ready for driver operations.
 
 Initialize the Input/\+Output Process subsystem. 
 
-\mbox{\Hypertarget{ltemc-iop_8h_ab717ef72de91b80e7b31d33bf6a9dad2}\label{ltemc-iop_8h_ab717ef72de91b80e7b31d33bf6a9dad2}} 
-\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_detectRxIdle@{IOP\_detectRxIdle}}
-\index{IOP\_detectRxIdle@{IOP\_detectRxIdle}!ltemc-\/iop.h@{ltemc-\/iop.h}}
-\doxysubsubsection{\texorpdfstring{IOP\_detectRxIdle()}{IOP\_detectRxIdle()}}
-{\footnotesize\ttfamily bool I\+O\+P\+\_\+detect\+Rx\+Idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-iop_8h_a797563dda768f4b3aefd009f1f60739d}\label{ltemc-iop_8h_a797563dda768f4b3aefd009f1f60739d}} 
+\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_fetchRxAhead@{IOP\_fetchRxAhead}}
+\index{IOP\_fetchRxAhead@{IOP\_fetchRxAhead}!ltemc-\/iop.h@{ltemc-\/iop.h}}
+\doxysubsubsection{\texorpdfstring{IOP\_fetchRxAhead()}{IOP\_fetchRxAhead()}}
+{\footnotesize\ttfamily uint16\+\_\+t I\+O\+P\+\_\+fetch\+Rx\+Ahead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$}]{p\+Buf,  }\item[{char $\ast$}]{p\+Start,  }\item[{uint16\+\_\+t}]{take\+Cnt,  }\item[{char $\ast$}]{p\+Chars }\end{DoxyParamCaption})}
 
 
 
-Check for RX idle (no incoming receives from N\+XP in 2.\+5 buffer times). 
+Get a contiguous block of characters from the RX buffer pages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Buf} & \mbox{[}in\mbox{]} -\/ Pointer data receive buffer. \\
+\hline
+{\em p\+Start} & \mbox{[}in\mbox{]} -\/ Address within the RX buffer to start retrieving chars. \\
+\hline
+{\em take\+Cnt} & \mbox{[}in\mbox{]} -\/ The number of chars to return. \\
+\hline
+{\em p\+Chars} & \mbox{[}out\mbox{]} -\/ Buffer to hold retrieved characters, must be take\+Cnt + 1. Buffer will be null terminated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the character after the needle match (if found), otherwise return N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-iop_8h_a8054cc5eebb16fb04f6c09d1929a5dfd}\label{ltemc-iop_8h_a8054cc5eebb16fb04f6c09d1929a5dfd}} 
+\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_findRxAhead@{IOP\_findRxAhead}}
+\index{IOP\_findRxAhead@{IOP\_findRxAhead}!ltemc-\/iop.h@{ltemc-\/iop.h}}
+\doxysubsubsection{\texorpdfstring{IOP\_findRxAhead()}{IOP\_findRxAhead()}}
+{\footnotesize\ttfamily char$\ast$ I\+O\+P\+\_\+find\+Rx\+Ahead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_a40071528946947c15514d22d34620931}{rx\+Data\+Buffer\+Ctrl\+\_\+t}} $\ast$}]{p\+Buf,  }\item[{uint8\+\_\+t}]{rewind\+Cnt,  }\item[{const char $\ast$}]{p\+Needle,  }\item[{const char $\ast$}]{p\+Term }\end{DoxyParamCaption})}
+
+
+
+Finds a string in the last X characters of the I\+OP RX stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Buf} & \mbox{[}in\mbox{]} -\/ Pointer data receive buffer. \\
+\hline
+{\em rewind\+Cnt} & \mbox{[}in\mbox{]} -\/ The number of chars to search backward. \\
+\hline
+{\em p\+Needle} & \mbox{[}in\mbox{]} -\/ The string to find. \\
+\hline
+{\em p\+Term} & \mbox{[}in\mbox{]} -\/ Optional phrase that must be found after needle phrase.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the character after the needle match (if found), otherwise return N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-iop_8h_af4b541597e39b3850bdea2de36e57e03}\label{ltemc-iop_8h_af4b541597e39b3850bdea2de36e57e03}} 
+\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_getRxIdleDuration@{IOP\_getRxIdleDuration}}
+\index{IOP\_getRxIdleDuration@{IOP\_getRxIdleDuration}!ltemc-\/iop.h@{ltemc-\/iop.h}}
+\doxysubsubsection{\texorpdfstring{IOP\_getRxIdleDuration()}{IOP\_getRxIdleDuration()}}
+{\footnotesize\ttfamily uint32\+\_\+t I\+O\+P\+\_\+get\+Rx\+Idle\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check for RX progress/idle. 
 
 \begin{DoxyReturn}{Returns}
-True 
+Duration since last fill level change detected; returns 0 if a change is detected since last call 
 \end{DoxyReturn}
 \mbox{\Hypertarget{ltemc-iop_8h_a9ef55e6a25ce8ff909dbf7046bd39cba}\label{ltemc-iop_8h_a9ef55e6a25ce8ff909dbf7046bd39cba}} 
 \index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_initRxBufferCtrl@{IOP\_initRxBufferCtrl}}
@@ -323,6 +382,12 @@ Number of characters queued for sending.
 
 
 Complete initialization and start running iop processes. 
+
+\mbox{\Hypertarget{ltemc-iop_8h_a4bff30d4da421246bd6c776a750e0f4e}\label{ltemc-iop_8h_a4bff30d4da421246bd6c776a750e0f4e}} 
+\index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_stopIrq@{IOP\_stopIrq}}
+\index{IOP\_stopIrq@{IOP\_stopIrq}!ltemc-\/iop.h@{ltemc-\/iop.h}}
+\doxysubsubsection{\texorpdfstring{IOP\_stopIrq()}{IOP\_stopIrq()}}
+{\footnotesize\ttfamily void I\+O\+P\+\_\+stop\+Irq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{ltemc-iop_8h_a32b0db6aab0ed6f5f4f81a8fe4ad4783}\label{ltemc-iop_8h_a32b0db6aab0ed6f5f4f81a8fe4ad4783}} 
 \index{ltemc-\/iop.h@{ltemc-\/iop.h}!IOP\_swapRxBufferPage@{IOP\_swapRxBufferPage}}

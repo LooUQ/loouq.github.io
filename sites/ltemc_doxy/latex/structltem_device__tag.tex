@@ -18,8 +18,10 @@ bool \mbox{\hyperlink{structltem_device__tag_a770e37c3ac5e43757b7f0256f6108811}{
 \begin{DoxyCompactList}\small\item\em For R\+T\+OS implementations, token to request cancellation of long running task/action. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-quectel-bg_8h_a3b346c5dfd0f8d950e7bc92c1b22b844}{qbg\+Ready\+State\+\_\+t}} \mbox{\hyperlink{structltem_device__tag_a4c823cc492a5660ab1b9766726774474}{qbg\+Ready\+State}}
 \begin{DoxyCompactList}\small\item\em Ready state of the B\+Gx module. \end{DoxyCompactList}\item 
-app\+Notify\+Func\+\_\+t \mbox{\hyperlink{structltem_device__tag_af9723ddf0aa161ed8bb25bc4d7bd7b8a}{app\+Notify\+CB}}
-\begin{DoxyCompactList}\small\item\em Notification callback to application. \end{DoxyCompactList}\item 
+event\+Notif\+Func\+\_\+t \mbox{\hyperlink{structltem_device__tag_a43f79b286819407c7514b9430d4c8587}{app\+Notif\+CB}}
+\begin{DoxyCompactList}\small\item\em Event notification callback to parent application. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structltem_device__tag_a6227f6a70bb8ecd27044b70891f502c8}{inst\+Nm}}
+\begin{DoxyCompactList}\small\item\em L\+T\+Em instance number 0=undefined, 1..254. \end{DoxyCompactList}\item 
 void $\ast$ \mbox{\hyperlink{structltem_device__tag_a15871f597217ab79cc8e1790f38359bf}{spi}}
 \begin{DoxyCompactList}\small\item\em S\+PI device (methods signatures compatible with Arduino). \end{DoxyCompactList}\item 
 void $\ast$ \mbox{\hyperlink{structltem_device__tag_ac2b3325635c230dac1e33d53167e38a5}{pdp\+Context}}
@@ -42,15 +44,15 @@ Struct representing the L\+T\+EmC model. The struct behind the g\+\_\+ltem1 glob
 Most subsystems are linked to this struct with pointers to allow for better abstraction and optional subsystems 
 
 \doxysubsection{Field Documentation}
-\mbox{\Hypertarget{structltem_device__tag_af9723ddf0aa161ed8bb25bc4d7bd7b8a}\label{structltem_device__tag_af9723ddf0aa161ed8bb25bc4d7bd7b8a}} 
-\index{ltemDevice\_tag@{ltemDevice\_tag}!appNotifyCB@{appNotifyCB}}
-\index{appNotifyCB@{appNotifyCB}!ltemDevice\_tag@{ltemDevice\_tag}}
-\doxysubsubsection{\texorpdfstring{appNotifyCB}{appNotifyCB}}
-{\footnotesize\ttfamily app\+Notify\+Func\+\_\+t app\+Notify\+CB}
+\mbox{\Hypertarget{structltem_device__tag_a43f79b286819407c7514b9430d4c8587}\label{structltem_device__tag_a43f79b286819407c7514b9430d4c8587}} 
+\index{ltemDevice\_tag@{ltemDevice\_tag}!appNotifCB@{appNotifCB}}
+\index{appNotifCB@{appNotifCB}!ltemDevice\_tag@{ltemDevice\_tag}}
+\doxysubsubsection{\texorpdfstring{appNotifCB}{appNotifCB}}
+{\footnotesize\ttfamily event\+Notif\+Func\+\_\+t app\+Notif\+CB}
 
 
 
-Notification callback to application. 
+Event notification callback to parent application. 
 
 \mbox{\Hypertarget{structltem_device__tag_a64b877016f25936112f443bf4a91f32b}\label{structltem_device__tag_a64b877016f25936112f443bf4a91f32b}} 
 \index{ltemDevice\_tag@{ltemDevice\_tag}!atcmd@{atcmd}}
@@ -71,6 +73,16 @@ Action subsystem controls.
 
 
 For R\+T\+OS implementations, token to request cancellation of long running task/action. 
+
+\mbox{\Hypertarget{structltem_device__tag_a6227f6a70bb8ecd27044b70891f502c8}\label{structltem_device__tag_a6227f6a70bb8ecd27044b70891f502c8}} 
+\index{ltemDevice\_tag@{ltemDevice\_tag}!instNm@{instNm}}
+\index{instNm@{instNm}!ltemDevice\_tag@{ltemDevice\_tag}}
+\doxysubsubsection{\texorpdfstring{instNm}{instNm}}
+{\footnotesize\ttfamily uint8\+\_\+t inst\+Nm}
+
+
+
+L\+T\+Em instance number 0=undefined, 1..254. 
 
 \mbox{\Hypertarget{structltem_device__tag_a6855742c0e51f39b6d90a7e65d1d290f}\label{structltem_device__tag_a6855742c0e51f39b6d90a7e65d1d290f}} 
 \index{ltemDevice\_tag@{ltemDevice\_tag}!iop@{iop}}

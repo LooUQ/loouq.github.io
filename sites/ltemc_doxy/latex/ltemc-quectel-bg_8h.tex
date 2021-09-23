@@ -39,16 +39,14 @@ enum \mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}{qbg
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8h_aff79bc5f56d845c2f16aae7e967bb39e}{qbg\+\_\+start}} ()
-\begin{DoxyCompactList}\small\item\em Initializes the B\+Gx module. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{ltemc-quectel-bg_8h_adb09a74d94dbf4d3e6b6cae45196aaff}{qbg\+\_\+is\+Power\+On}} ()
 \begin{DoxyCompactList}\small\item\em Check for B\+Gx power status. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8h_af38f43891616b10e764a40f62dd67d99}{qbg\+\_\+power\+On}} ()
 \begin{DoxyCompactList}\small\item\em Power on the B\+Gx module. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8h_a25333f44c61fbf3627065cbd31375a1e}{qbg\+\_\+power\+Off}} ()
 \begin{DoxyCompactList}\small\item\em Powers off the B\+Gx module. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8h_a2a3d8a8f9233b11bf96c88ba3ead764a}{qbg\+\_\+reset}} ()
-\begin{DoxyCompactList}\small\item\em Powers off the B\+Gx module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-quectel-bg_8h_a7eef2dcadd6c14fb6aa65c2b4c38e132}{qbg\+\_\+set\+Options}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the B\+Gx module. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8h_ac5d3138c74ce003186141238a4be502a}{qbg\+\_\+set\+Nw\+Scan\+Seq}} (const char $\ast$sequence)
 \begin{DoxyCompactList}\small\item\em Configure R\+AT searching sequence. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8h_a13d5b4a9ba595000de151d9a0eb776f8}{qbg\+\_\+set\+Nw\+Scan\+Mode}} (\mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+t}} mode)
@@ -209,16 +207,6 @@ Power on the B\+Gx module.
 \begin{DoxyReturn}{Returns}
 Prior B\+Gx power state\+: true=previously powered on 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_a2a3d8a8f9233b11bf96c88ba3ead764a}\label{ltemc-quectel-bg_8h_a2a3d8a8f9233b11bf96c88ba3ead764a}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_reset@{qbg\_reset}}
-\index{qbg\_reset@{qbg\_reset}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{qbg\_reset()}{qbg\_reset()}}
-{\footnotesize\ttfamily void qbg\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Powers off the B\+Gx module. 
-
 \mbox{\Hypertarget{ltemc-quectel-bg_8h_acbc1ca7e44fafdcebb214e74547761de}\label{ltemc-quectel-bg_8h_acbc1ca7e44fafdcebb214e74547761de}} 
 \index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_setIotOpMode@{qbg\_setIotOpMode}}
 \index{qbg\_setIotOpMode@{qbg\_setIotOpMode}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
@@ -249,11 +237,11 @@ Configure R\+A\+T(s) allowed to be searched.
 
 Configure R\+AT searching sequence. 
 
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_aff79bc5f56d845c2f16aae7e967bb39e}\label{ltemc-quectel-bg_8h_aff79bc5f56d845c2f16aae7e967bb39e}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_start@{qbg\_start}}
-\index{qbg\_start@{qbg\_start}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{qbg\_start()}{qbg\_start()}}
-{\footnotesize\ttfamily void qbg\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-quectel-bg_8h_a7eef2dcadd6c14fb6aa65c2b4c38e132}\label{ltemc-quectel-bg_8h_a7eef2dcadd6c14fb6aa65c2b4c38e132}} 
+\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_setOptions@{qbg\_setOptions}}
+\index{qbg\_setOptions@{qbg\_setOptions}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
+\doxysubsubsection{\texorpdfstring{qbg\_setOptions()}{qbg\_setOptions()}}
+{\footnotesize\ttfamily void qbg\+\_\+set\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 

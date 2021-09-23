@@ -122,9 +122,12 @@ Functions</h2></td></tr>
 <tr class="memitem:add9525c59f9ca04352a57672dd3b3367"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lq_platform-spi_8h.html#add9525c59f9ca04352a57672dd3b3367">spi_stop</a> (void *spi)</td></tr>
 <tr class="memdesc:add9525c59f9ca04352a57672dd3b3367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown SPI facility.  <a href="lq_platform-spi_8h.html#add9525c59f9ca04352a57672dd3b3367">More...</a><br /></td></tr>
 <tr class="separator:add9525c59f9ca04352a57672dd3b3367"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae30b7a448d1cb625b9d41a85c7899910"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lq_platform-spi_8h.html#ae30b7a448d1cb625b9d41a85c7899910">spi_protectFromInterrupt</a> (void *spi, int8_t irqNumber)</td></tr>
-<tr class="memdesc:ae30b7a448d1cb625b9d41a85c7899910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uninitialize and deallocate memory from the SPI resource.  <a href="lq_platform-spi_8h.html#ae30b7a448d1cb625b9d41a85c7899910">More...</a><br /></td></tr>
-<tr class="separator:ae30b7a448d1cb625b9d41a85c7899910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd6a2485b229019a4d4646e0b0c59a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lq_platform-spi_8h.html#aadd6a2485b229019a4d4646e0b0c59a6">spi_usingInterrupt</a> (void *spi, int8_t irqNumber)</td></tr>
+<tr class="memdesc:aadd6a2485b229019a4d4646e0b0c59a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gaurd SPI resource from recursive interrupts.  <a href="lq_platform-spi_8h.html#aadd6a2485b229019a4d4646e0b0c59a6">More...</a><br /></td></tr>
+<tr class="separator:aadd6a2485b229019a4d4646e0b0c59a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab860ce0b85b73251f77100b3b1fbf4c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lq_platform-spi_8h.html#ab860ce0b85b73251f77100b3b1fbf4c8">spi_notUsingInterrupt</a> (void *spi, int8_t irqNumber)</td></tr>
+<tr class="memdesc:ab860ce0b85b73251f77100b3b1fbf4c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gaurd SPI resource from recursive interrupts.  <a href="lq_platform-spi_8h.html#ab860ce0b85b73251f77100b3b1fbf4c8">More...</a><br /></td></tr>
+<tr class="separator:ab860ce0b85b73251f77100b3b1fbf4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a45ca7f91593e6a2ff310e98c0157b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lq_platform-spi_8h.html#ab6a45ca7f91593e6a2ff310e98c0157b">spi_transferByte</a> (void *spi, uint8_t writeVal)</td></tr>
 <tr class="memdesc:ab6a45ca7f91593e6a2ff310e98c0157b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer a byte to the NXP bridge.  <a href="lq_platform-spi_8h.html#ab6a45ca7f91593e6a2ff310e98c0157b">More...</a><br /></td></tr>
 <tr class="separator:ab6a45ca7f91593e6a2ff310e98c0157b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,14 +235,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae30b7a448d1cb625b9d41a85c7899910"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae30b7a448d1cb625b9d41a85c7899910">&#9670;&nbsp;</a></span>spi_protectFromInterrupt()</h2>
+<a id="ab860ce0b85b73251f77100b3b1fbf4c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab860ce0b85b73251f77100b3b1fbf4c8">&#9670;&nbsp;</a></span>spi_notUsingInterrupt()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void spi_protectFromInterrupt </td>
+          <td class="memname">void spi_notUsingInterrupt </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>spi</em>, </td>
@@ -258,7 +261,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Uninitialize and deallocate memory from the SPI resource. </p>
+<p>Gaurd SPI resource from recursive interrupts. </p>
 
 </div>
 </div>
@@ -426,6 +429,36 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A 16-bit word received during the transfer. </dd></dl>
+
+</div>
+</div>
+<a id="aadd6a2485b229019a4d4646e0b0c59a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd6a2485b229019a4d4646e0b0c59a6">&#9670;&nbsp;</a></span>spi_usingInterrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spi_usingInterrupt </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>spi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>irqNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gaurd SPI resource from recursive interrupts. </p>
 
 </div>
 </div>

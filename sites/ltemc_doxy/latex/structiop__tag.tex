@@ -24,10 +24,10 @@ uint16\+\_\+t \mbox{\hyperlink{structiop__tag_a22a4b57e21b265f031022af67841c26f}
 \begin{DoxyCompactList}\small\item\em stream data source, if not null \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structiop__tag_a310d1973152a94bcc1d700e23fa82b8e}{tx\+Send\+Start\+Tck}}
 \begin{DoxyCompactList}\small\item\em tick count when TX send started, used for response timeout detection \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{structiop__tag_a463de859a03e29b723f6d736c0295a1b}{rx\+Last\+Recv\+Tck}}
-\begin{DoxyCompactList}\small\item\em receive timeout detection\+: performed at tick count \end{DoxyCompactList}\item 
-uint16\+\_\+t \mbox{\hyperlink{structiop__tag_ae48a20b886c2b2d0ffc91524fe52896d}{rx\+Last\+Recv\+Chk\+Lvl}}
-\begin{DoxyCompactList}\small\item\em receive timeout detection\+: fill level at check \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structiop__tag_a53b2a11cfcbd0dcb0d3eb83846167248}{rx\+Last\+Fill\+Chg\+Tck}}
+\begin{DoxyCompactList}\small\item\em tick count when RX buffer fill level was known to have change \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structiop__tag_a2fb33b8e09ba1fc1330ff3d7b7ca5114}{rx\+Last\+Fill\+Level}}
+\begin{DoxyCompactList}\small\item\em last known fill level (updated only during check) \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{structiop__tag_a60317576660accd5312f1c3941ce5984}{sckt\+Map}}
 \begin{DoxyCompactList}\small\item\em bitmap indicating open sockets (T\+C\+P/\+U\+D\+P/\+S\+SL), bit position is the data\+Context (I\+OP event detect shortcut) \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{structiop__tag_ad2d01a62eb718b3391164c48d4528984}{sckt\+Lst\+Wrk}}
@@ -62,25 +62,25 @@ bitmap indicating open mqtt(s) connections, bit position is the data\+Context (I
 
 U\+RC and command response receive buffer, this is the default RX buffer. 
 
-\mbox{\Hypertarget{structiop__tag_ae48a20b886c2b2d0ffc91524fe52896d}\label{structiop__tag_ae48a20b886c2b2d0ffc91524fe52896d}} 
-\index{iop\_tag@{iop\_tag}!rxLastRecvChkLvl@{rxLastRecvChkLvl}}
-\index{rxLastRecvChkLvl@{rxLastRecvChkLvl}!iop\_tag@{iop\_tag}}
-\doxysubsubsection{\texorpdfstring{rxLastRecvChkLvl}{rxLastRecvChkLvl}}
-{\footnotesize\ttfamily uint16\+\_\+t rx\+Last\+Recv\+Chk\+Lvl}
+\mbox{\Hypertarget{structiop__tag_a53b2a11cfcbd0dcb0d3eb83846167248}\label{structiop__tag_a53b2a11cfcbd0dcb0d3eb83846167248}} 
+\index{iop\_tag@{iop\_tag}!rxLastFillChgTck@{rxLastFillChgTck}}
+\index{rxLastFillChgTck@{rxLastFillChgTck}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{rxLastFillChgTck}{rxLastFillChgTck}}
+{\footnotesize\ttfamily uint32\+\_\+t rx\+Last\+Fill\+Chg\+Tck}
 
 
 
-receive timeout detection\+: fill level at check 
+tick count when RX buffer fill level was known to have change 
 
-\mbox{\Hypertarget{structiop__tag_a463de859a03e29b723f6d736c0295a1b}\label{structiop__tag_a463de859a03e29b723f6d736c0295a1b}} 
-\index{iop\_tag@{iop\_tag}!rxLastRecvTck@{rxLastRecvTck}}
-\index{rxLastRecvTck@{rxLastRecvTck}!iop\_tag@{iop\_tag}}
-\doxysubsubsection{\texorpdfstring{rxLastRecvTck}{rxLastRecvTck}}
-{\footnotesize\ttfamily uint32\+\_\+t rx\+Last\+Recv\+Tck}
+\mbox{\Hypertarget{structiop__tag_a2fb33b8e09ba1fc1330ff3d7b7ca5114}\label{structiop__tag_a2fb33b8e09ba1fc1330ff3d7b7ca5114}} 
+\index{iop\_tag@{iop\_tag}!rxLastFillLevel@{rxLastFillLevel}}
+\index{rxLastFillLevel@{rxLastFillLevel}!iop\_tag@{iop\_tag}}
+\doxysubsubsection{\texorpdfstring{rxLastFillLevel}{rxLastFillLevel}}
+{\footnotesize\ttfamily uint16\+\_\+t rx\+Last\+Fill\+Level}
 
 
 
-receive timeout detection\+: performed at tick count 
+last known fill level (updated only during check) 
 
 \mbox{\Hypertarget{structiop__tag_a6335ffc4dd4d3bc7b9788fd595f85ea8}\label{structiop__tag_a6335ffc4dd4d3bc7b9788fd595f85ea8}} 
 \index{iop\_tag@{iop\_tag}!rxStreamCtrl@{rxStreamCtrl}}

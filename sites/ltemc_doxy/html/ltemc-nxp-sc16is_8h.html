@@ -180,37 +180,38 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:a8ead74b40710969b1449284ab45105ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode for Interrupt indicator register priority bits.  <a href="ltemc-nxp-sc16is_8h.html#a8ead74b40710969b1449284ab45105ee">More...</a><br /></td></tr>
 <tr class="separator:a8ead74b40710969b1449284ab45105ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca">atcmd__useDefaultTimeout</a> = 0, 
+&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180">atcmd__defaultTimeoutMS</a> = 800, 
 <a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78">atcmd__useDefaultOKCompletionParser</a> = 0, 
 <a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd">atcmd__setLockModeManual</a> = 0, 
 <a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3">atcmd__setLockModeAuto</a> = 1, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753">ATCMD__defaultTimeoutMS</a> = 800, 
-<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d">ATCMD__parserPendingResult</a> = 0xFFFF, 
+&#160;&#160;<a class="el" href="ltemc-atcmd_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1">atcmd__parserPendingResult</a> = 0xFFFF, 
 <a class="el" href="ltemc-http_8c.html#a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed">http__LTEM_defaultTimeoutBGxSec</a> = 60, 
 <a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060">IOP__txBufferSize</a> = 1800, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8">IOP__rxCoreBufferSize</a> = 192, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8">IOP__rxCoreBufferSize</a> = 192, 
+&#160;&#160;<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31">IOP__uartBaudRate</a> = 115200, 
 <a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7">IOP__uartFIFOBufferSz</a> = 64, 
-<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4">IOP__uartFIFO_fillMS</a> = 6, 
-<a class="el" href="ltemc-mqtt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2">resultCode__parserPending</a> = 0xFFFF, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1">IOP__uartFIFOFillPeriod</a> = (int)(1 / (double)IOP__uartBaudRate * 10 * IOP__uartFIFOBufferSz * 1000) + 1, 
+<a class="el" href="ltemc-iop_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5">IOP__rxDefaultTimeout</a> = IOP__uartFIFOFillPeriod * 2 + 192, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-network_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991">NTWK__pdpContextCnt</a> = 3, 
+&#160;&#160;<a class="el" href="ltemc-mqtt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2">resultCode__parserPending</a> = 0xFFFF, 
+<a class="el" href="ltemc-network_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991">NTWK__pdpContextCnt</a> = 2, 
 <a class="el" href="ltemc-network_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83">NTWK__operatorNameSz</a> = 20, 
 <a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba17739b3720b1f97f63c707642014eb98">nxp__lsr_DataInReceiver</a> = 0x01U, 
-<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5">nxp__lsr_THR_empty</a> = 0x02U, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb">nxp__lsr_FIFO_dataError</a> = 0x80U, 
+&#160;&#160;<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1800ea00c8ce3ca06c3c74ffff7e29b5">nxp__lsr_THR_empty</a> = 0x02U, 
+<a class="el" href="ltemc-nxp-sc16is_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9caf8f7409f12167e0b5c1941fa412eb">nxp__lsr_FIFO_dataError</a> = 0x80U, 
 <a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba0faf2a0e3498964ae8028ab9e558f3a1">BGX__initCommandCnt</a> = 1, 
 <a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5181a8dfd1fabb621afe16a809ddf79d">BGX__initCommandAttempts</a> = 2, 
-<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d">BGX__powerOnDelay</a> = 500, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb">BGX__powerOffDelay</a> = 1500, 
+&#160;&#160;<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba9c8008ad3262cfc58cd36c6d6fbc910d">BGX__powerOnDelay</a> = 500, 
+<a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab8c8d8ff68679df1c58256d060fbe3cb">BGX__powerOffDelay</a> = 1500, 
 <a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba4e4747a62ca63574eada7d0ec13a79cf">BGX__resetDelay</a> = 300, 
 <a class="el" href="ltemc-quectel-bg_8c.html#a06fc87d81c62e9abb8790b6e5713c55baa1bd36078a73fd5bb2014e5f0257073c">BGX__baudRate</a> = 115200, 
-<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc">sckt__resultCode_previouslyOpen</a> = 563, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06">sckt__defaultOpenTimeoutMS</a> = 60000, 
+&#160;&#160;<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5c596eed1896dfd3b86ae5cae21a0cfc">sckt__resultCode_previouslyOpen</a> = 563, 
+<a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba1b4db3604439e64063c1128a45694f06">sckt__defaultOpenTimeoutMS</a> = 60000, 
 <a class="el" href="ltemc-sckt_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba3211c53c548afe10e13a02d76223c050">SCKT__IRD_requestMaxSz</a> = 1500
 <br />
  }</td></tr>
@@ -423,18 +424,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba54c369d0442c6f771a131bbf71df93ca"></a>atcmd__useDefaultTimeout&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba6b460899aee4c0d2ac1cc3822c9e5180"></a>atcmd__defaultTimeoutMS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf2ed8ff5f1abac8e574c12d72328be78"></a>atcmd__useDefaultOKCompletionParser&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac470b685191257f4e162dfeb1f7b9cfd"></a>atcmd__setLockModeManual&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55badcfa481ce0a0596e1ccf042a428d32c3"></a>atcmd__setLockModeAuto&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba45eec31607108860beb9275a15262753"></a>ATCMD__defaultTimeoutMS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba8e4b59393f48f2a574bb95eec5c45d5d"></a>ATCMD__parserPendingResult&#160;</td><td class="fielddoc"><p>private declaration; value returned from response parsers indicating a pattern match has not yet been detected </p>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bae1042e8a68fa17110b4a74fda95283f1"></a>atcmd__parserPendingResult&#160;</td><td class="fielddoc"><p>value returned from response parsers indicating a pattern match has not yet been detected </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bade1e7043513fb04abc96fc4786c871ed"></a>http__LTEM_defaultTimeoutBGxSec&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1404ab1c595ab7248ff79ae2699cc060"></a>IOP__txBufferSize&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba317aa0c4c3cb6943d1a6f1b6787f43f8"></a>IOP__rxCoreBufferSize&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bab912700a8f2284d32dbebf4ad9cf9c31"></a>IOP__uartBaudRate&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba306e5cd4e15e2ecc165684a431171cf7"></a>IOP__uartFIFOBufferSz&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba36a21b8e89c21ef8f78036a7d4f74fe4"></a>IOP__uartFIFO_fillMS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55badafc04c114b71a8376391361d97b70a1"></a>IOP__uartFIFOFillPeriod&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba4b6a4b9f12389c9ae29a470d2a6149c5"></a>IOP__rxDefaultTimeout&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba6a50f871ac2c78363f4b9573b4708ab2"></a>resultCode__parserPending&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac29f4d76c2911f24c259f4787ff9e991"></a>NTWK__pdpContextCnt&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9770f801ef9e34afa7cb745508659d83"></a>NTWK__operatorNameSz&#160;</td><td class="fielddoc"></td></tr>

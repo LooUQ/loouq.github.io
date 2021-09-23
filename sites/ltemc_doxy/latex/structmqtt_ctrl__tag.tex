@@ -34,8 +34,6 @@ uint16\+\_\+t \mbox{\hyperlink{structmqtt_ctrl__tag_a2acf66d2c12f7b04f90ed704f5a
 \begin{DoxyCompactList}\small\item\em Array of M\+Q\+TT topic subscriptions. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structmqtt_ctrl__tag_a1adbeaaadf1660241c2cd901a96232bb}{do\+Work\+Last\+Tck}}
 \begin{DoxyCompactList}\small\item\em last check for U\+R\+C/data\+Pending \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{structmqtt_ctrl__tag_aa98ea8bc77f07a149ecafa27b29beb97}{do\+Work\+Timeout}}
-\begin{DoxyCompactList}\small\item\em set at init for do\+Work A\+S\+S\+E\+RT, if timeout reached chance for a data overflow on socket \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{structmqtt_ctrl__tag_abcf9ea0863419239251f200c1df819fd}{last\+Buffer\+Reqd}}
 \begin{DoxyCompactList}\small\item\em last receive buffer required size, provides feedback to developer to minimize buffer sizing ~\newline
  \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -84,16 +82,6 @@ callback to application, signals data ready
 
 
 last check for U\+R\+C/data\+Pending 
-
-\mbox{\Hypertarget{structmqtt_ctrl__tag_aa98ea8bc77f07a149ecafa27b29beb97}\label{structmqtt_ctrl__tag_aa98ea8bc77f07a149ecafa27b29beb97}} 
-\index{mqttCtrl\_tag@{mqttCtrl\_tag}!doWorkTimeout@{doWorkTimeout}}
-\index{doWorkTimeout@{doWorkTimeout}!mqttCtrl\_tag@{mqttCtrl\_tag}}
-\doxysubsubsection{\texorpdfstring{doWorkTimeout}{doWorkTimeout}}
-{\footnotesize\ttfamily uint32\+\_\+t do\+Work\+Timeout}
-
-
-
-set at init for do\+Work A\+S\+S\+E\+RT, if timeout reached chance for a data overflow on socket 
 
 \mbox{\Hypertarget{structmqtt_ctrl__tag_abcf9ea0863419239251f200c1df819fd}\label{structmqtt_ctrl__tag_abcf9ea0863419239251f200c1df819fd}} 
 \index{mqttCtrl\_tag@{mqttCtrl\_tag}!lastBufferReqd@{lastBufferReqd}}

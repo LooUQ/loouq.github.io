@@ -14,9 +14,9 @@ Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data con
 \item 
 uint8\+\_\+t \mbox{\hyperlink{structpdp_cntxt__tag_a56824b587d7ef835ff95c13ed36afc2d}{context\+Id}}
 \begin{DoxyCompactList}\small\item\em context ID recognized by the carrier (valid are 1 to 16) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}{pdp\+Cntxt\+Ip\+Type\+\_\+t}} \mbox{\hyperlink{structpdp_cntxt__tag_a702cdbdfc301e973c784cde24a1d8c36}{ip\+Type}}
+\mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}} \mbox{\hyperlink{structpdp_cntxt__tag_a3dd0e95105d8e53fe7a35c3aaf8c19f2}{proto\+Type}}
 \begin{DoxyCompactList}\small\item\em I\+Pv4 or I\+Pv6. \end{DoxyCompactList}\item 
-char \mbox{\hyperlink{structpdp_cntxt__tag_a5ad0b447cc593426dbdc96b969bec1e9}{ip\+Address}} \mbox{[}16\mbox{]}
+char \mbox{\hyperlink{structpdp_cntxt__tag_a0dc723d0808984ddff2d51804075dd67}{ip\+Address}} \mbox{[}40\mbox{]}
 \begin{DoxyCompactList}\small\item\em The IP address obtained from the carrier for this context. The IP address of the modem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -34,21 +34,21 @@ Struct representing the state of active P\+DP contexts (aka\+: A\+PN or data con
 
 context ID recognized by the carrier (valid are 1 to 16) 
 
-\mbox{\Hypertarget{structpdp_cntxt__tag_a5ad0b447cc593426dbdc96b969bec1e9}\label{structpdp_cntxt__tag_a5ad0b447cc593426dbdc96b969bec1e9}} 
+\mbox{\Hypertarget{structpdp_cntxt__tag_a0dc723d0808984ddff2d51804075dd67}\label{structpdp_cntxt__tag_a0dc723d0808984ddff2d51804075dd67}} 
 \index{pdpCntxt\_tag@{pdpCntxt\_tag}!ipAddress@{ipAddress}}
 \index{ipAddress@{ipAddress}!pdpCntxt\_tag@{pdpCntxt\_tag}}
 \doxysubsubsection{\texorpdfstring{ipAddress}{ipAddress}}
-{\footnotesize\ttfamily char ip\+Address\mbox{[}16\mbox{]}}
+{\footnotesize\ttfamily char ip\+Address\mbox{[}40\mbox{]}}
 
 
 
 The IP address obtained from the carrier for this context. The IP address of the modem. 
 
-\mbox{\Hypertarget{structpdp_cntxt__tag_a702cdbdfc301e973c784cde24a1d8c36}\label{structpdp_cntxt__tag_a702cdbdfc301e973c784cde24a1d8c36}} 
-\index{pdpCntxt\_tag@{pdpCntxt\_tag}!ipType@{ipType}}
-\index{ipType@{ipType}!pdpCntxt\_tag@{pdpCntxt\_tag}}
-\doxysubsubsection{\texorpdfstring{ipType}{ipType}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-network_8h_a0086f053bcf6b99f83d0680de3b087f8}{pdp\+Cntxt\+Ip\+Type\+\_\+t}} ip\+Type}
+\mbox{\Hypertarget{structpdp_cntxt__tag_a3dd0e95105d8e53fe7a35c3aaf8c19f2}\label{structpdp_cntxt__tag_a3dd0e95105d8e53fe7a35c3aaf8c19f2}} 
+\index{pdpCntxt\_tag@{pdpCntxt\_tag}!protoType@{protoType}}
+\index{protoType@{protoType}!pdpCntxt\_tag@{pdpCntxt\_tag}}
+\doxysubsubsection{\texorpdfstring{protoType}{protoType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}} proto\+Type}
 
 
 
