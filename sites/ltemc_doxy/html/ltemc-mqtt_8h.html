@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEmC
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v2.3.0</span>
    </div>
    <div id="projectbrief">C device driver for LooUQ LTE cellular modems</div>
   </td>
@@ -162,11 +162,11 @@ Enumerations</h2></td></tr>
 <tr class="separator:aff6fa5bd5d79dc17b987e00b771579c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51686657313aedeaa79d74869e1d9d39"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39">mqttStatus_tag</a> { <br />
 &#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39ada8342e02f0afb8fb3a997a7eb4ea6ca">mqttStatus_closed</a> = 0, 
-<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a56db1975479de9626cfae7946a30ea27">mqttStatus_open</a> = 1, 
-<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39af001d69f757d9c37adc01227d2dae517">mqttStatus_connected</a> = 2, 
-<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a95a5df6e5e1e1dce593d397cc15cdecf">mqttStatus_pending</a> = 200, 
+<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a6690b30f5249891d1188212d0cd23778">mqttStatus_invalidHost</a> = 1, 
+<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a56db1975479de9626cfae7946a30ea27">mqttStatus_open</a> = 2, 
+<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a95a5df6e5e1e1dce593d397cc15cdecf">mqttStatus_pending</a> = 3, 
 <br />
-&#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39a6690b30f5249891d1188212d0cd23778">mqttStatus_invalidHost</a> = 201
+&#160;&#160;<a class="el" href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39af001d69f757d9c37adc01227d2dae517">mqttStatus_connected</a> = 4
 <br />
  }</td></tr>
 <tr class="memdesc:a51686657313aedeaa79d74869e1d9d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emum describing current state of the MQTT protocol service.  <a href="ltemc-mqtt_8h.html#a51686657313aedeaa79d74869e1d9d39">More...</a><br /></td></tr>
@@ -192,14 +192,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a4052b98fe0795af64f4fe611ed007302"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a4052b98fe0795af64f4fe611ed007302">mqtt_unsubscribe</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic)</td></tr>
 <tr class="memdesc:a4052b98fe0795af64f4fe611ed007302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe to a topic on the MQTT server.  <a href="ltemc-mqtt_8h.html#a4052b98fe0795af64f4fe611ed007302">More...</a><br /></td></tr>
 <tr class="separator:a4052b98fe0795af64f4fe611ed007302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27950fda1c826882f99e81c2cf308460"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a27950fda1c826882f99e81c2cf308460">mqtt_publish</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos, const char *message, uint8_t timeoutSeconds)</td></tr>
+<tr class="memdesc:a27950fda1c826882f99e81c2cf308460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish a message to server.  <a href="ltemc-mqtt_8h.html#a27950fda1c826882f99e81c2cf308460">More...</a><br /></td></tr>
+<tr class="separator:a27950fda1c826882f99e81c2cf308460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa90563e785d692af76fbb8b0999ef22d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-mqtt_8h.html#a148a3f73f6a3ee40ff17182f67586932">mqttStatus_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#aa90563e785d692af76fbb8b0999ef22d">mqtt_getStatus</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *host)</td></tr>
 <tr class="memdesc:aa90563e785d692af76fbb8b0999ef22d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query the status of the MQTT server state.  <a href="ltemc-mqtt_8h.html#aa90563e785d692af76fbb8b0999ef22d">More...</a><br /></td></tr>
 <tr class="separator:aa90563e785d692af76fbb8b0999ef22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f8f7fad993878eb0ee5f177a40e502"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a07f8f7fad993878eb0ee5f177a40e502">mqtt_getContextState</a> (<a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a> cntxt, const char *host)</td></tr>
+<tr class="separator:a07f8f7fad993878eb0ee5f177a40e502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b686fdb5fb861c9d6283fd7ca1a83da"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a2b686fdb5fb861c9d6283fd7ca1a83da">mqtt_getMsgId</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
 <tr class="separator:a2b686fdb5fb861c9d6283fd7ca1a83da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab008a6b06b403798a785036d5bf06629"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#ab008a6b06b403798a785036d5bf06629">mqtt_publish</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos, const char *message)</td></tr>
-<tr class="memdesc:ab008a6b06b403798a785036d5bf06629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish a message to server.  <a href="ltemc-mqtt_8h.html#ab008a6b06b403798a785036d5bf06629">More...</a><br /></td></tr>
-<tr class="separator:ab008a6b06b403798a785036d5bf06629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3615ae26f711acc2c3caca74260fb7a8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8h.html#a3615ae26f711acc2c3caca74260fb7a8">mqtt_getLastBufferReqd</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
 <tr class="separator:a3615ae26f711acc2c3caca74260fb7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -466,13 +468,13 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39ada8342e02f0afb8fb3a997a7eb4ea6ca"></a>mqttStatus_closed&#160;</td><td class="fielddoc"><p>MQTT is idle, not active. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a6690b30f5249891d1188212d0cd23778"></a>mqttStatus_invalidHost&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a56db1975479de9626cfae7946a30ea27"></a>mqttStatus_open&#160;</td><td class="fielddoc"><p>MQTT is open, open but not connected. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39af001d69f757d9c37adc01227d2dae517"></a>mqttStatus_connected&#160;</td><td class="fielddoc"><p>MQTT is connected, in session with server. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a95a5df6e5e1e1dce593d397cc15cdecf"></a>mqttStatus_pending&#160;</td><td class="fielddoc"><p>MQTT is attempting connect (BGx MQTT problem area that needs to be detected, reset BGx if stays here). </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39a6690b30f5249891d1188212d0cd23778"></a>mqttStatus_invalidHost&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a51686657313aedeaa79d74869e1d9d39af001d69f757d9c37adc01227d2dae517"></a>mqttStatus_connected&#160;</td><td class="fielddoc"><p>MQTT is connected, in session with server. </p>
+</td></tr>
 </table>
 
 </div>
@@ -582,6 +584,34 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A resultCode_t value indicating the success or type of failure, OK = 200. </dd></dl>
+
+</div>
+</div>
+<a id="a07f8f7fad993878eb0ee5f177a40e502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f8f7fad993878eb0ee5f177a40e502">&#9670;&nbsp;</a></span>mqtt_getContextState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t mqtt_getContextState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-streams_8h.html#acde6c0e6fc349b24a2e8028be3d21646">dataContext_t</a>&#160;</td>
+          <td class="paramname"><em>cntxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>host</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -777,8 +807,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab008a6b06b403798a785036d5bf06629"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab008a6b06b403798a785036d5bf06629">&#9670;&nbsp;</a></span>mqtt_publish()</h2>
+<a id="a27950fda1c826882f99e81c2cf308460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27950fda1c826882f99e81c2cf308460">&#9670;&nbsp;</a></span>mqtt_publish()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -805,7 +835,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>timeoutSeconds</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -821,7 +857,8 @@ Functions</h2></td></tr>
     <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
     <tr><td class="paramname">topic</td><td>[in] - Pointer to the message topic (see your server for topic formatting details). </td></tr>
     <tr><td class="paramname">qos</td><td>[in] - The MQTT QOS to be assigned to sent message. </td></tr>
-    <tr><td class="paramname">message</td><td>[in] - Pointer to message to be sent.</td></tr>
+    <tr><td class="paramname">message</td><td>[in] - Pointer to message to be sent. </td></tr>
+    <tr><td class="paramname">timeoutSeconds</td><td>[in] - Seconds to wait for publish to complete, highly dependent on network and remote server.</td></tr>
   </table>
   </dd>
 </dl>

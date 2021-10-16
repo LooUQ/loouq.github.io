@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEmC
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v2.3.0</span>
    </div>
    <div id="projectbrief">C device driver for LooUQ LTE cellular modems</div>
   </td>
@@ -90,6 +90,9 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:abf9daa62d261abcac1e4cb27c9e72adf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#abf9daa62d261abcac1e4cb27c9e72adf">asm</a> (&quot;.global _printf_float&quot;)</td></tr>
 <tr class="separator:abf9daa62d261abcac1e4cb27c9e72adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925ee30afeef05c0a40a10433c82ffd3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a925ee30afeef05c0a40a10433c82ffd3">ltem_ltemcVersion</a> ()</td></tr>
+<tr class="memdesc:a925ee30afeef05c0a40a10433c82ffd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the LTEmC software version.  <a href="ltemc_8c.html#a925ee30afeef05c0a40a10433c82ffd3">More...</a><br /></td></tr>
+<tr class="separator:a925ee30afeef05c0a40a10433c82ffd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc9a6f77c91b6933e29870ec61ccc4fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#afc9a6f77c91b6933e29870ec61ccc4fc">ltem_create</a> (const <a class="el" href="lq_platform-gpio_8h.html#a179aa93a99cd81e3a0f037bd9f07d70e">ltemPinConfig_t</a> ltem_config, eventNotifFunc_t eventNotifCallback)</td></tr>
 <tr class="memdesc:afc9a6f77c91b6933e29870ec61ccc4fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the LTEm1 modem.  <a href="ltemc_8c.html#afc9a6f77c91b6933e29870ec61ccc4fc">More...</a><br /></td></tr>
 <tr class="separator:afc9a6f77c91b6933e29870ec61ccc4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +131,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:aa190ecfd4e3b1602b5502c1ff92f37b0"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#aa190ecfd4e3b1602b5502c1ff92f37b0">ltemcVersion</a> = &quot;2.2.1&quot;</td></tr>
+<tr class="separator:aa190ecfd4e3b1602b5502c1ff92f37b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9b6913ff818fbc74934a69849fb48b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8c.html#a5f9b6913ff818fbc74934a69849fb48b">g_ltem</a></td></tr>
 <tr class="memdesc:a5f9b6913ff818fbc74934a69849fb48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LTEm "object".  <a href="ltemc_8c.html#a5f9b6913ff818fbc74934a69849fb48b">More...</a><br /></td></tr>
 <tr class="separator:a5f9b6913ff818fbc74934a69849fb48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -314,6 +319,26 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a925ee30afeef05c0a40a10433c82ffd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925ee30afeef05c0a40a10433c82ffd3">&#9670;&nbsp;</a></span>ltem_ltemcVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ltem_ltemcVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the LTEmC software version. </p>
+<dl class="section return"><dt>Returns</dt><dd>Version as a const char pointer. </dd></dl>
+
+</div>
+</div>
 <a id="a80df97bbc632eda7178e56368c3d0a1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80df97bbc632eda7178e56368c3d0a1e">&#9670;&nbsp;</a></span>ltem_notifyApp()</h2>
 
@@ -492,6 +517,20 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The LTEm "object". </p>
+
+</div>
+</div>
+<a id="aa190ecfd4e3b1602b5502c1ff92f37b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa190ecfd4e3b1602b5502c1ff92f37b0">&#9670;&nbsp;</a></span>ltemcVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ltemcVersion = &quot;2.2.1&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

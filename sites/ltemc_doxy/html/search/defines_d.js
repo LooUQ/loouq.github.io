@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reg_5fmodify_1730',['REG_MODIFY',['../ltemc-nxp-sc16is_8c.html#ac68c9cc3a2aa93d4a25933c31d0e6196',1,'ltemc-nxp-sc16is.c']]]
+  ['reg_5fmodify_1740',['REG_MODIFY',['../ltemc-nxp-sc16is_8c.html#ac68c9cc3a2aa93d4a25933c31d0e6196',1,'ltemc-nxp-sc16is.c']]]
 ];

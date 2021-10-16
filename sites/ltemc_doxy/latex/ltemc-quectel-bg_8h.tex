@@ -25,17 +25,7 @@ enum \mbox{\hyperlink{ltemc-quectel-bg_8h_a029afb5b9d9f256347f037bcb091b860}{qbg
 \mbox{\hyperlink{ltemc-quectel-bg_8h_a029afb5b9d9f256347f037bcb091b860ab1d36f587350dfc189347fbbf3894a2c}{qbg\+\_\+ready\+State\+\_\+power\+On}} = 1, 
 \mbox{\hyperlink{ltemc-quectel-bg_8h_a029afb5b9d9f256347f037bcb091b860a2f8b72f80346ddb0c45e0321f3d52f1b}{qbg\+\_\+ready\+State\+\_\+app\+Ready}} = 2
  \}
-\begin{DoxyCompactList}\small\item\em Enum describing the current B\+Gx module state. \end{DoxyCompactList}\item 
-enum \mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432a494904fd8160bb2b1bc5a462b2ebe68d}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+auto}} = 0U, 
-\mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432a451a5aa0ed800c9d08302b5249d8b2dd}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+gsmonly}} = 1U, 
-\mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432a573b73decba7990830452044da0bf2ef}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+lteonly}} = 3U
- \}
-\begin{DoxyCompactList}\small\item\em Enum describing the mode the B\+Gx module is using to look for available networks (carriers). \end{DoxyCompactList}\item 
-enum \mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}{qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17fa9925c3857d89a5e9073b4ffef915a561}{qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+m1}} = 0U, 
-\mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17fac3f4a26bd26b6dd1fa6724929d00dbb8}{qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+nb1}} = 1U, 
-\mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17fa9ec8555596d3f782c76ee46ed928b278}{qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+m1nb1}} = 2U
- \}
-\begin{DoxyCompactList}\small\item\em Enum describing the available options for an IoT protocol when connecting to the network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enum describing the current B\+Gx module state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,13 +36,7 @@ void \mbox{\hyperlink{ltemc-quectel-bg_8h_af38f43891616b10e764a40f62dd67d99}{qbg
 void \mbox{\hyperlink{ltemc-quectel-bg_8h_a25333f44c61fbf3627065cbd31375a1e}{qbg\+\_\+power\+Off}} ()
 \begin{DoxyCompactList}\small\item\em Powers off the B\+Gx module. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8h_a7eef2dcadd6c14fb6aa65c2b4c38e132}{qbg\+\_\+set\+Options}} ()
-\begin{DoxyCompactList}\small\item\em Initializes the B\+Gx module. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8h_ac5d3138c74ce003186141238a4be502a}{qbg\+\_\+set\+Nw\+Scan\+Seq}} (const char $\ast$sequence)
-\begin{DoxyCompactList}\small\item\em Configure R\+AT searching sequence. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8h_a13d5b4a9ba595000de151d9a0eb776f8}{qbg\+\_\+set\+Nw\+Scan\+Mode}} (\mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+t}} mode)
-\begin{DoxyCompactList}\small\item\em Configure R\+A\+T(s) allowed to be searched. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8h_acbc1ca7e44fafdcebb214e74547761de}{qbg\+\_\+set\+Iot\+Op\+Mode}} (\mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}{qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+t}} mode)
-\begin{DoxyCompactList}\small\item\em Configure the network category to be searched under L\+TE R\+AT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initializes the B\+Gx module. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -96,54 +80,6 @@ Enum describing the current B\+Gx module state.
 
 
 \doxysubsection{Enumeration Type Documentation}
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}\label{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_nw\_iot\_mode\_t@{qbg\_nw\_iot\_mode\_t}}
-\index{qbg\_nw\_iot\_mode\_t@{qbg\_nw\_iot\_mode\_t}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{qbg\_nw\_iot\_mode\_t}{qbg\_nw\_iot\_mode\_t}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}{qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+t}}}
-
-
-
-Enum describing the available options for an IoT protocol when connecting to the network. 
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{qbg\_nw\_iot\_mode\_m1@{qbg\_nw\_iot\_mode\_m1}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_nw\_iot\_mode\_m1@{qbg\_nw\_iot\_mode\_m1}}}\mbox{\Hypertarget{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17fa9925c3857d89a5e9073b4ffef915a561}\label{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17fa9925c3857d89a5e9073b4ffef915a561}} 
-qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+m1&C\+A\+T-\/\+M1 only mode\+: B\+Gx is filtering visible networks and only considering C\+A\+T-\/\+M1 connections. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{qbg\_nw\_iot\_mode\_nb1@{qbg\_nw\_iot\_mode\_nb1}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_nw\_iot\_mode\_nb1@{qbg\_nw\_iot\_mode\_nb1}}}\mbox{\Hypertarget{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17fac3f4a26bd26b6dd1fa6724929d00dbb8}\label{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17fac3f4a26bd26b6dd1fa6724929d00dbb8}} 
-qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+nb1&N\+B-\/\+I\+OT only mode\+: B\+Gx is filtering visible networks and only considering N\+B-\/\+I\+OT connections. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{qbg\_nw\_iot\_mode\_m1nb1@{qbg\_nw\_iot\_mode\_m1nb1}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_nw\_iot\_mode\_m1nb1@{qbg\_nw\_iot\_mode\_m1nb1}}}\mbox{\Hypertarget{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17fa9ec8555596d3f782c76ee46ed928b278}\label{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17fa9ec8555596d3f782c76ee46ed928b278}} 
-qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+m1nb1&The B\+Gx will connect to either a C\+A\+T-\/\+M1 or N\+B-\/\+I\+OT network. \\
-\hline
-
-\end{DoxyEnumFields}
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432}\label{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_nw\_scan\_mode\_t@{qbg\_nw\_scan\_mode\_t}}
-\index{qbg\_nw\_scan\_mode\_t@{qbg\_nw\_scan\_mode\_t}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{qbg\_nw\_scan\_mode\_t}{qbg\_nw\_scan\_mode\_t}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+t}}}
-
-
-
-Enum describing the mode the B\+Gx module is using to look for available networks (carriers). 
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{qbg\_nw\_scan\_mode\_auto@{qbg\_nw\_scan\_mode\_auto}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_nw\_scan\_mode\_auto@{qbg\_nw\_scan\_mode\_auto}}}\mbox{\Hypertarget{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432a494904fd8160bb2b1bc5a462b2ebe68d}\label{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432a494904fd8160bb2b1bc5a462b2ebe68d}} 
-qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+auto&B\+Gx is considering either G\+SM or L\+TE carrier connections. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{qbg\_nw\_scan\_mode\_gsmonly@{qbg\_nw\_scan\_mode\_gsmonly}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_nw\_scan\_mode\_gsmonly@{qbg\_nw\_scan\_mode\_gsmonly}}}\mbox{\Hypertarget{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432a451a5aa0ed800c9d08302b5249d8b2dd}\label{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432a451a5aa0ed800c9d08302b5249d8b2dd}} 
-qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+gsmonly&G\+SM only mode\+: B\+Gx is filtering visible networks and only considering connections to G\+SM endpoints. \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{qbg\_nw\_scan\_mode\_lteonly@{qbg\_nw\_scan\_mode\_lteonly}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_nw\_scan\_mode\_lteonly@{qbg\_nw\_scan\_mode\_lteonly}}}\mbox{\Hypertarget{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432a573b73decba7990830452044da0bf2ef}\label{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432a573b73decba7990830452044da0bf2ef}} 
-qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+lteonly&L\+TE only mode\+: B\+Gx is filtering visible networks and only considering connections to L\+TE endpoints. \\
-\hline
-
-\end{DoxyEnumFields}
 \mbox{\Hypertarget{ltemc-quectel-bg_8h_a029afb5b9d9f256347f037bcb091b860}\label{ltemc-quectel-bg_8h_a029afb5b9d9f256347f037bcb091b860}} 
 \index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbgReadyState\_tag@{qbgReadyState\_tag}}
 \index{qbgReadyState\_tag@{qbgReadyState\_tag}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
@@ -207,36 +143,6 @@ Power on the B\+Gx module.
 \begin{DoxyReturn}{Returns}
 Prior B\+Gx power state\+: true=previously powered on 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_acbc1ca7e44fafdcebb214e74547761de}\label{ltemc-quectel-bg_8h_acbc1ca7e44fafdcebb214e74547761de}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_setIotOpMode@{qbg\_setIotOpMode}}
-\index{qbg\_setIotOpMode@{qbg\_setIotOpMode}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{qbg\_setIotOpMode()}{qbg\_setIotOpMode()}}
-{\footnotesize\ttfamily void qbg\+\_\+set\+Iot\+Op\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}{qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+t}}}]{mode }\end{DoxyParamCaption})}
-
-
-
-Configure the network category to be searched under L\+TE R\+AT. 
-
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_a13d5b4a9ba595000de151d9a0eb776f8}\label{ltemc-quectel-bg_8h_a13d5b4a9ba595000de151d9a0eb776f8}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_setNwScanMode@{qbg\_setNwScanMode}}
-\index{qbg\_setNwScanMode@{qbg\_setNwScanMode}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{qbg\_setNwScanMode()}{qbg\_setNwScanMode()}}
-{\footnotesize\ttfamily void qbg\+\_\+set\+Nw\+Scan\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+t}}}]{mode }\end{DoxyParamCaption})}
-
-
-
-Configure R\+A\+T(s) allowed to be searched. 
-
-\mbox{\Hypertarget{ltemc-quectel-bg_8h_ac5d3138c74ce003186141238a4be502a}\label{ltemc-quectel-bg_8h_ac5d3138c74ce003186141238a4be502a}} 
-\index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_setNwScanSeq@{qbg\_setNwScanSeq}}
-\index{qbg\_setNwScanSeq@{qbg\_setNwScanSeq}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}
-\doxysubsubsection{\texorpdfstring{qbg\_setNwScanSeq()}{qbg\_setNwScanSeq()}}
-{\footnotesize\ttfamily void qbg\+\_\+set\+Nw\+Scan\+Seq (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sequence }\end{DoxyParamCaption})}
-
-
-
-Configure R\+AT searching sequence. 
-
 \mbox{\Hypertarget{ltemc-quectel-bg_8h_a7eef2dcadd6c14fb6aa65c2b4c38e132}\label{ltemc-quectel-bg_8h_a7eef2dcadd6c14fb6aa65c2b4c38e132}} 
 \index{ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}!qbg\_setOptions@{qbg\_setOptions}}
 \index{qbg\_setOptions@{qbg\_setOptions}!ltemc-\/quectel-\/bg.h@{ltemc-\/quectel-\/bg.h}}

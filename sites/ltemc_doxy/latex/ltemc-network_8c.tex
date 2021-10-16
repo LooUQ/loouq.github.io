@@ -29,10 +29,18 @@ uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8c_a7fc41326ad93487aacd65148f4289223
 \begin{DoxyCompactList}\small\item\em Get P\+DP Context/\+A\+PN information. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{ltemc-network_8c_a338e4b654dde96a6abbb5802085b5808}{ntwk\+\_\+activate\+Pdp\+Context}} (uint8\+\_\+t cntxt\+Id, \mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}} proto\+Type, const char $\ast$p\+Apn)
 \begin{DoxyCompactList}\small\item\em Activate P\+DP Context/\+A\+PN. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-network_8c_aa121d8f8af5adccbe9fb4e79d8fdc7ce}{ntwk\+\_\+activate\+Pdp\+Context\+With\+Auth}} (uint8\+\_\+t cntxt\+Id, const char $\ast$p\+User\+Name, const char $\ast$p\+PW, \mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}} auth\+Method)
+bool \mbox{\hyperlink{ltemc-network_8c_a6dcc260480be4032284ece434f465095}{ntwk\+\_\+activate\+Pdp\+Context\+With\+Auth}} (uint8\+\_\+t cntxt\+Id, \mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}} proto\+Type, const char $\ast$p\+Apn, const char $\ast$p\+User\+Name, const char $\ast$p\+PW, \mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}} auth\+Method)
 \begin{DoxyCompactList}\small\item\em Activate P\+DP Context/\+A\+PN requiring authentication. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-network_8c_a1211e162b3e2ae3af1a9430e6254adee}{ntwk\+\_\+deactivate\+Pdp\+Context}} (uint8\+\_\+t cntxt\+Id)
-\begin{DoxyCompactList}\small\item\em Deactivate A\+PN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Deactivate A\+PN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-network_8c_a0c93acbf89a8eda580d4cbb126b1c102}{ntwk\+\_\+set\+Nw\+Scan\+Seq}} (const char $\ast$scan\+Sequence)
+\begin{DoxyCompactList}\small\item\em Configure R\+AT searching sequence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-network_8c_a915529df2042d2f7f6781d29b1a89442}{ntwk\+\_\+set\+Nw\+Scan\+Mode}} (\mbox{\hyperlink{ltemc-network_8h_a2100a5b3e7f85b38469f5a557e5651fc}{ntwk\+\_\+scan\+Mode\+\_\+t}} scan\+Mode)
+\begin{DoxyCompactList}\small\item\em Configure R\+A\+T(s) allowed to be searched \mbox{[}scanmode\mbox{]} Number format. R\+A\+T(s) to be searched. 0 Automatic 1 G\+SM only 3 L\+TE only. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-network_8c_a649b65b6b2a94a68924deda4b9d706a1}{ntwk\+\_\+set\+Iot\+Op\+Mode}} (\mbox{\hyperlink{ltemc-network_8h_a6d499e51cdf4249e3bbccca130f473b8}{ntwk\+\_\+iot\+Mode\+\_\+t}} iot\+Mode)
+\begin{DoxyCompactList}\small\item\em Configure the network category to be searched under L\+TE R\+AT. \mbox{[}mode\mbox{]} Number format. Network category to be searched under L\+TE R\+AT. 0 L\+TE Cat M1 1 L\+TE Cat N\+B1 2 L\+TE Cat M1 and Cat N\+B1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-network_8c_adf844059037881ac948ed76863eec54f}{ntwk\+\_\+get\+Operators}} (char $\ast$operator\+List, uint16\+\_\+t list\+Sz)
+\begin{DoxyCompactList}\small\item\em Development/diagnostic function to retrieve visible operators from radio. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -99,11 +107,11 @@ Activate P\+DP Context/\+A\+PN.
 {\em p\+Apn} & \mbox{[}in\mbox{]} -\/ The A\+PN name if required by network carrier. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-network_8c_aa121d8f8af5adccbe9fb4e79d8fdc7ce}\label{ltemc-network_8c_aa121d8f8af5adccbe9fb4e79d8fdc7ce}} 
+\mbox{\Hypertarget{ltemc-network_8c_a6dcc260480be4032284ece434f465095}\label{ltemc-network_8c_a6dcc260480be4032284ece434f465095}} 
 \index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_activatePdpContextWithAuth@{ntwk\_activatePdpContextWithAuth}}
 \index{ntwk\_activatePdpContextWithAuth@{ntwk\_activatePdpContextWithAuth}!ltemc-\/network.c@{ltemc-\/network.c}}
 \doxysubsubsection{\texorpdfstring{ntwk\_activatePdpContextWithAuth()}{ntwk\_activatePdpContextWithAuth()}}
-{\footnotesize\ttfamily bool ntwk\+\_\+activate\+Pdp\+Context\+With\+Auth (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id,  }\item[{const char $\ast$}]{p\+User\+Name,  }\item[{const char $\ast$}]{p\+PW,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}}}]{auth\+Method }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool ntwk\+\_\+activate\+Pdp\+Context\+With\+Auth (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cntxt\+Id,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a5a1b3a2daf47f69a2999ad2b30e4f4a4}{pdp\+Cntxt\+Protocol\+Type\+\_\+t}}}]{proto\+Type,  }\item[{const char $\ast$}]{p\+Apn,  }\item[{const char $\ast$}]{p\+User\+Name,  }\item[{const char $\ast$}]{p\+PW,  }\item[{\mbox{\hyperlink{ltemc-network_8h_a8b858b502f4f3a91124a381d4d35fdc9}{pdp\+Cntxt\+Auth\+Methods\+\_\+t}}}]{auth\+Method }\end{DoxyParamCaption})}
 
 
 
@@ -112,6 +120,10 @@ Activate P\+DP Context/\+A\+PN requiring authentication.
 
 \begin{DoxyParams}{Parameters}
 {\em cntxt\+Id} & \mbox{[}in\mbox{]} -\/ The A\+PN to operate on. Typically 0 or 1 \\
+\hline
+{\em proto\+Type} & \mbox{[}in\mbox{]} -\/ The P\+DP protocol I\+P\+V4, I\+P\+V6, I\+P\+V4\+V6 (both). \\
+\hline
+{\em p\+Apn} & \mbox{[}in\mbox{]} -\/ The A\+PN name if required by network carrier. \\
 \hline
 {\em p\+User\+Name} & \mbox{[}in\mbox{]} -\/ String with user name \\
 \hline
@@ -176,6 +188,25 @@ Get count of A\+PN active data contexts from B\+Gx.
 \begin{DoxyReturn}{Returns}
 Count of active data contexts (B\+Gx max is 3). 
 \end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-network_8c_adf844059037881ac948ed76863eec54f}\label{ltemc-network_8c_adf844059037881ac948ed76863eec54f}} 
+\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_getOperators@{ntwk\_getOperators}}
+\index{ntwk\_getOperators@{ntwk\_getOperators}!ltemc-\/network.c@{ltemc-\/network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_getOperators()}{ntwk\_getOperators()}}
+{\footnotesize\ttfamily void ntwk\+\_\+get\+Operators (\begin{DoxyParamCaption}\item[{char $\ast$}]{operator\+List,  }\item[{uint16\+\_\+t}]{list\+Sz }\end{DoxyParamCaption})}
+
+
+
+Development/diagnostic function to retrieve visible operators from radio. 
+
+Note\+: This command can be minutes in response. It is generally considered a command used solely for diagnostics.
+
+
+\begin{DoxyParams}{Parameters}
+{\em operator\+List} & \mbox{[}in/out\mbox{]} -\/ Pointer to char buffer to return operator list information retrieved from B\+Gx. \\
+\hline
+{\em list\+Sz} & \mbox{[}in\mbox{]} -\/ Length of provided buffer. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ltemc-network_8c_a906fa5291e94f73b59c183e0ed7c1e52}\label{ltemc-network_8c_a906fa5291e94f73b59c183e0ed7c1e52}} 
 \index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_getPdpCntxtInfo@{ntwk\_getPdpCntxtInfo}}
 \index{ntwk\_getPdpCntxtInfo@{ntwk\_getPdpCntxtInfo}!ltemc-\/network.c@{ltemc-\/network.c}}
@@ -194,6 +225,53 @@ Get P\+DP Context/\+A\+PN information.
 \begin{DoxyReturn}{Returns}
 Pointer to P\+DP context info in active context table, N\+U\+LL if not active 
 \end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-network_8c_a649b65b6b2a94a68924deda4b9d706a1}\label{ltemc-network_8c_a649b65b6b2a94a68924deda4b9d706a1}} 
+\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_setIotOpMode@{ntwk\_setIotOpMode}}
+\index{ntwk\_setIotOpMode@{ntwk\_setIotOpMode}!ltemc-\/network.c@{ltemc-\/network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_setIotOpMode()}{ntwk\_setIotOpMode()}}
+{\footnotesize\ttfamily void ntwk\+\_\+set\+Iot\+Op\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-network_8h_a6d499e51cdf4249e3bbccca130f473b8}{ntwk\+\_\+iot\+Mode\+\_\+t}}}]{iot\+Mode }\end{DoxyParamCaption})}
+
+
+
+Configure the network category to be searched under L\+TE R\+AT. \mbox{[}mode\mbox{]} Number format. Network category to be searched under L\+TE R\+AT. 0 L\+TE Cat M1 1 L\+TE Cat N\+B1 2 L\+TE Cat M1 and Cat N\+B1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iot\+Mode} & \mbox{[}in\mbox{]} -\/ Enum specifying the L\+TE L\+P\+W\+AN protocol(s) to scan for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-network_8c_a915529df2042d2f7f6781d29b1a89442}\label{ltemc-network_8c_a915529df2042d2f7f6781d29b1a89442}} 
+\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_setNwScanMode@{ntwk\_setNwScanMode}}
+\index{ntwk\_setNwScanMode@{ntwk\_setNwScanMode}!ltemc-\/network.c@{ltemc-\/network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_setNwScanMode()}{ntwk\_setNwScanMode()}}
+{\footnotesize\ttfamily void ntwk\+\_\+set\+Nw\+Scan\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-network_8h_a2100a5b3e7f85b38469f5a557e5651fc}{ntwk\+\_\+scan\+Mode\+\_\+t}}}]{scan\+Mode }\end{DoxyParamCaption})}
+
+
+
+Configure R\+A\+T(s) allowed to be searched \mbox{[}scanmode\mbox{]} Number format. R\+A\+T(s) to be searched. 0 Automatic 1 G\+SM only 3 L\+TE only. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+Mode} & \mbox{[}in\mbox{]} -\/ Enum specifying what cell network to scan. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-network_8c_a0c93acbf89a8eda580d4cbb126b1c102}\label{ltemc-network_8c_a0c93acbf89a8eda580d4cbb126b1c102}} 
+\index{ltemc-\/network.c@{ltemc-\/network.c}!ntwk\_setNwScanSeq@{ntwk\_setNwScanSeq}}
+\index{ntwk\_setNwScanSeq@{ntwk\_setNwScanSeq}!ltemc-\/network.c@{ltemc-\/network.c}}
+\doxysubsubsection{\texorpdfstring{ntwk\_setNwScanSeq()}{ntwk\_setNwScanSeq()}}
+{\footnotesize\ttfamily void ntwk\+\_\+set\+Nw\+Scan\+Seq (\begin{DoxyParamCaption}\item[{const char $\ast$}]{scan\+Sequence }\end{DoxyParamCaption})}
+
+
+
+Configure R\+AT searching sequence. 
+
+\mbox{[}scanseq\mbox{]} Number format. R\+AT search sequence. (e.\+g.\+: 020301 stands for L\+TE Cat M1 $\vert$ L\+TE Cat N\+B1 $\vert$ G\+SM)) 00 Automatic (L\+TE Cat M1 $\vert$ L\+TE Cat N\+B1 $\vert$ G\+SM) 01 G\+SM 02 L\+TE Cat M1 03 L\+TE Cat N\+B1
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+Sequence} & \mbox{[}in\mbox{]} -\/ Character string specifying the R\+AT scanning order. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Variable Documentation}

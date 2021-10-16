@@ -62,10 +62,6 @@ enum \{ \newline
 \item 
 void \mbox{\hyperlink{ltemc-mqtt_8c_aa55c5ff1c379910b467c77294aa7460f}{mqtt\+\_\+init\+Control}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt, bool use\+Tls, \mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}} use\+Mqtt\+Version, uint8\+\_\+t $\ast$recv\+Buf, uint16\+\_\+t recv\+Buf\+Sz, \mbox{\hyperlink{ltemc-mqtt_8h_a511663720bdcd80c97bef4b2804b4196}{mqtt\+Recv\+Func\+\_\+t}} recv\+Callback)
 \begin{DoxyCompactList}\small\item\em Query the status of the M\+Q\+TT server state. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_aa90563e785d692af76fbb8b0999ef22d}{mqtt\+\_\+get\+Status}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$host)
-\begin{DoxyCompactList}\small\item\em Query the status of the M\+Q\+TT server state. \end{DoxyCompactList}\item 
-uint16\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_a2b686fdb5fb861c9d6283fd7ca1a83da}{mqtt\+\_\+get\+Msg\+Id}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl)
-\item 
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_accc88867fece34baa7b992d3ab60d4aa}{mqtt\+\_\+open}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$host, uint16\+\_\+t port)
 \begin{DoxyCompactList}\small\item\em Open a remote M\+Q\+TT server for use. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-mqtt_8c_afb874ed8fe83efb81a6e206a00059ad0}{mqtt\+\_\+close}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl)
@@ -76,8 +72,14 @@ uint8\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_adc8032ed4b4fd1d27f14183965a439b5}{m
 \begin{DoxyCompactList}\small\item\em Subscribe to a topic on the M\+Q\+TT server. \end{DoxyCompactList}\item 
 result\+Code\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_a4052b98fe0795af64f4fe611ed007302}{mqtt\+\_\+unsubscribe}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$topic)
 \begin{DoxyCompactList}\small\item\em Unsubscribe to a topic on the M\+Q\+TT server. \end{DoxyCompactList}\item 
-result\+Code\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_ab008a6b06b403798a785036d5bf06629}{mqtt\+\_\+publish}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$topic, \mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}} qos, const char $\ast$message)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_a27950fda1c826882f99e81c2cf308460}{mqtt\+\_\+publish}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$topic, \mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}} qos, const char $\ast$message, uint8\+\_\+t timeout\+Seconds)
 \begin{DoxyCompactList}\small\item\em Publish a message to server. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-mqtt_8h_a148a3f73f6a3ee40ff17182f67586932}{mqtt\+Status\+\_\+t}} \mbox{\hyperlink{ltemc-mqtt_8c_aa90563e785d692af76fbb8b0999ef22d}{mqtt\+\_\+get\+Status}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl, const char $\ast$host)
+\begin{DoxyCompactList}\small\item\em Query the status of the M\+Q\+TT server state. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_a07f8f7fad993878eb0ee5f177a40e502}{mqtt\+\_\+get\+Context\+State}} (\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} cntxt, const char $\ast$host)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_a2b686fdb5fb861c9d6283fd7ca1a83da}{mqtt\+\_\+get\+Msg\+Id}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl)
+\item 
 uint16\+\_\+t \mbox{\hyperlink{ltemc-mqtt_8c_a3615ae26f711acc2c3caca74260fb7a8}{mqtt\+\_\+get\+Last\+Buffer\+Reqd}} (\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$mqtt\+Ctrl)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
@@ -285,6 +287,12 @@ Connect (authenticate) to a M\+Q\+TT server.
 \begin{DoxyReturn}{Returns}
 A result\+Code\+\_\+t value indicating the success or type of failure, OK = 200. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-mqtt_8c_a07f8f7fad993878eb0ee5f177a40e502}\label{ltemc-mqtt_8c_a07f8f7fad993878eb0ee5f177a40e502}} 
+\index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_getContextState@{mqtt\_getContextState}}
+\index{mqtt\_getContextState@{mqtt\_getContextState}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_getContextState()}{mqtt\_getContextState()}}
+{\footnotesize\ttfamily uint8\+\_\+t mqtt\+\_\+get\+Context\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}}}]{cntxt,  }\item[{const char $\ast$}]{host }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{ltemc-mqtt_8c_a3615ae26f711acc2c3caca74260fb7a8}\label{ltemc-mqtt_8c_a3615ae26f711acc2c3caca74260fb7a8}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_getLastBufferReqd@{mqtt\_getLastBufferReqd}}
 \index{mqtt\_getLastBufferReqd@{mqtt\_getLastBufferReqd}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
@@ -369,11 +377,11 @@ Open a remote M\+Q\+TT server for use.
 \begin{DoxyReturn}{Returns}
 A result\+Code\+\_\+t value indicating the success or type of failure. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-mqtt_8c_ab008a6b06b403798a785036d5bf06629}\label{ltemc-mqtt_8c_ab008a6b06b403798a785036d5bf06629}} 
+\mbox{\Hypertarget{ltemc-mqtt_8c_a27950fda1c826882f99e81c2cf308460}\label{ltemc-mqtt_8c_a27950fda1c826882f99e81c2cf308460}} 
 \index{ltemc-\/mqtt.c@{ltemc-\/mqtt.c}!mqtt\_publish@{mqtt\_publish}}
 \index{mqtt\_publish@{mqtt\_publish}!ltemc-\/mqtt.c@{ltemc-\/mqtt.c}}
 \doxysubsubsection{\texorpdfstring{mqtt\_publish()}{mqtt\_publish()}}
-{\footnotesize\ttfamily result\+Code\+\_\+t mqtt\+\_\+publish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl,  }\item[{const char $\ast$}]{topic,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}}}]{qos,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t mqtt\+\_\+publish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-mqtt_8h_a876dd6d72ad65cf52ec8fb8ed35fbe91}{mqtt\+Ctrl\+\_\+t}} $\ast$}]{mqtt\+Ctrl,  }\item[{const char $\ast$}]{topic,  }\item[{\mbox{\hyperlink{ltemc-mqtt_8h_ab96c1d590faaf00728d862d36838bb3c}{mqtt\+Qos\+\_\+t}}}]{qos,  }\item[{const char $\ast$}]{message,  }\item[{uint8\+\_\+t}]{timeout\+Seconds }\end{DoxyParamCaption})}
 
 
 
@@ -387,7 +395,9 @@ Publish a message to server.
 \hline
 {\em qos} & \mbox{[}in\mbox{]} -\/ The M\+Q\+TT Q\+OS to be assigned to sent message. \\
 \hline
-{\em message} & \mbox{[}in\mbox{]} -\/ Pointer to message to be sent.\\
+{\em message} & \mbox{[}in\mbox{]} -\/ Pointer to message to be sent. \\
+\hline
+{\em timeout\+Seconds} & \mbox{[}in\mbox{]} -\/ Seconds to wait for publish to complete, highly dependent on network and remote server.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

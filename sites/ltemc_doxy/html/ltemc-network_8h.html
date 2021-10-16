@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEmC
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v2.3.0</span>
    </div>
    <div id="projectbrief">C device driver for LooUQ LTE cellular modems</div>
   </td>
@@ -161,6 +161,18 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2100a5b3e7f85b38469f5a557e5651fc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fc">ntwk_scanMode_t</a> { <a class="el" href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fcaddcb7d0b39ce9b8e018dda5fc98cf09a">ntwk_scanMode_auto</a> = 0U, 
+<a class="el" href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fca257e8cbcea6369c0408f0d928a5e604c">ntwk_scanMode_gsmonly</a> = 1U, 
+<a class="el" href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fcad95abb6681653b107fabea4c2a62562b">ntwk_scanMode_lteonly</a> = 3U
+ }</td></tr>
+<tr class="memdesc:a2100a5b3e7f85b38469f5a557e5651fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum describing the mode the BGx module is using to look for available networks (carriers).  <a href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fc">More...</a><br /></td></tr>
+<tr class="separator:a2100a5b3e7f85b38469f5a557e5651fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d499e51cdf4249e3bbccca130f473b8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8">ntwk_iotMode_t</a> { <a class="el" href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8af8c21cc05958560740038cb3656d0c59">ntwk_iotMode_m1</a> = 0U, 
+<a class="el" href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8ad3f80c5ae0335d42da570c1e0441d5c6">ntwk_iotMode_nb1</a> = 1U, 
+<a class="el" href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8af8fbf07e9ddd182a51e574b508a189f9">ntwk_iotMode_m1nb1</a> = 2U
+ }</td></tr>
+<tr class="memdesc:a6d499e51cdf4249e3bbccca130f473b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum describing the available options for an IoT protocol when connecting to the network.  <a href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8">More...</a><br /></td></tr>
+<tr class="separator:a6d499e51cdf4249e3bbccca130f473b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa55a4d211043314594fd0ca9150767cc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cc">pdpCntxtIpType_tag</a> { <a class="el" href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767ccab3c2370bd9321f21cbde8044ab23f5eb">pdpCntxtProtocolType_IPV4</a> = 1, 
 <a class="el" href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cca80224e474408f02d34316e817ed604cb">pdpCntxtProtocolType_IPV6</a> = 2, 
 <a class="el" href="ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cca26f9dc685fe2a618f53059d5298436f8">pdpCntxtProtocolType_IPV4V6</a> = 3, 
@@ -177,18 +189,33 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a925ee30afeef05c0a40a10433c82ffd3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a925ee30afeef05c0a40a10433c82ffd3">ltem_ltemcVersion</a> ()</td></tr>
+<tr class="memdesc:a925ee30afeef05c0a40a10433c82ffd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the LTEmC software version.  <a href="ltemc-network_8h.html#a925ee30afeef05c0a40a10433c82ffd3">More...</a><br /></td></tr>
+<tr class="separator:a925ee30afeef05c0a40a10433c82ffd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a59f08d7a2cf3e7d6685e377aff6bc57d">ntwk_create</a> ()</td></tr>
 <tr class="memdesc:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the IP network contexts structure.  <a href="ltemc-network_8h.html#a59f08d7a2cf3e7d6685e377aff6bc57d">More...</a><br /></td></tr>
 <tr class="separator:a59f08d7a2cf3e7d6685e377aff6bc57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac192787c3cc04797c7fd0633ba531534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#ac192787c3cc04797c7fd0633ba531534">ntwk_setNwScanSeq</a> (const char *sequence)</td></tr>
+<tr class="memdesc:ac192787c3cc04797c7fd0633ba531534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure RAT searching sequence.  <a href="ltemc-network_8h.html#ac192787c3cc04797c7fd0633ba531534">More...</a><br /></td></tr>
+<tr class="separator:ac192787c3cc04797c7fd0633ba531534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b48306ce21259f9dd871eab7f81cd8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a2b48306ce21259f9dd871eab7f81cd8c">ntwk_setNwScanMode</a> (<a class="el" href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fc">ntwk_scanMode_t</a> mode)</td></tr>
+<tr class="memdesc:a2b48306ce21259f9dd871eab7f81cd8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure RAT(s) allowed to be searched [scanmode] Number format. RAT(s) to be searched. 0 Automatic 1 GSM only 3 LTE only.  <a href="ltemc-network_8h.html#a2b48306ce21259f9dd871eab7f81cd8c">More...</a><br /></td></tr>
+<tr class="separator:a2b48306ce21259f9dd871eab7f81cd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113fed7d34af8e380524258491d59855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a113fed7d34af8e380524258491d59855">ntwk_setIotOpMode</a> (<a class="el" href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8">ntwk_iotMode_t</a> mode)</td></tr>
+<tr class="memdesc:a113fed7d34af8e380524258491d59855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the network category to be searched under LTE RAT. [mode] Number format. Network category to be searched under LTE RAT. 0 LTE Cat M1 1 LTE Cat NB1 2 LTE Cat M1 and Cat NB1.  <a href="ltemc-network_8h.html#a113fed7d34af8e380524258491d59855">More...</a><br /></td></tr>
+<tr class="separator:a113fed7d34af8e380524258491d59855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf844059037881ac948ed76863eec54f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#adf844059037881ac948ed76863eec54f">ntwk_getOperators</a> (char *operatorList, uint16_t listSz)</td></tr>
+<tr class="memdesc:adf844059037881ac948ed76863eec54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Development/diagnostic function to retrieve visible operators from radio.  <a href="ltemc-network_8h.html#adf844059037881ac948ed76863eec54f">More...</a><br /></td></tr>
+<tr class="separator:adf844059037881ac948ed76863eec54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada224a6a88782263e4a9cf65c3678d7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-network_8h.html#a58db2e79250f681c695c651d586fd25f">networkOperator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#ada224a6a88782263e4a9cf65c3678d7e">ntwk_awaitOperator</a> (uint16_t waitDurSeconds)</td></tr>
 <tr class="memdesc:ada224a6a88782263e4a9cf65c3678d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a network operator name and network mode. Can be cancelled in threaded env via g_ltem-&gt;cancellationRequest.  <a href="ltemc-network_8h.html#ada224a6a88782263e4a9cf65c3678d7e">More...</a><br /></td></tr>
 <tr class="separator:ada224a6a88782263e4a9cf65c3678d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a338e4b654dde96a6abbb5802085b5808"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a338e4b654dde96a6abbb5802085b5808">ntwk_activatePdpContext</a> (uint8_t cntxtId, <a class="el" href="ltemc-network_8h.html#a5a1b3a2daf47f69a2999ad2b30e4f4a4">pdpCntxtProtocolType_t</a> protoType, const char *pApn)</td></tr>
 <tr class="memdesc:a338e4b654dde96a6abbb5802085b5808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN.  <a href="ltemc-network_8h.html#a338e4b654dde96a6abbb5802085b5808">More...</a><br /></td></tr>
 <tr class="separator:a338e4b654dde96a6abbb5802085b5808"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa121d8f8af5adccbe9fb4e79d8fdc7ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#aa121d8f8af5adccbe9fb4e79d8fdc7ce">ntwk_activatePdpContextWithAuth</a> (uint8_t cntxtId, const char *pUserName, const char *pPW, <a class="el" href="ltemc-network_8h.html#a8b858b502f4f3a91124a381d4d35fdc9">pdpCntxtAuthMethods_t</a> authMethod)</td></tr>
-<tr class="memdesc:aa121d8f8af5adccbe9fb4e79d8fdc7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN requiring authentication.  <a href="ltemc-network_8h.html#aa121d8f8af5adccbe9fb4e79d8fdc7ce">More...</a><br /></td></tr>
-<tr class="separator:aa121d8f8af5adccbe9fb4e79d8fdc7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dcc260480be4032284ece434f465095"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#a6dcc260480be4032284ece434f465095">ntwk_activatePdpContextWithAuth</a> (uint8_t cntxtId, <a class="el" href="ltemc-network_8h.html#a5a1b3a2daf47f69a2999ad2b30e4f4a4">pdpCntxtProtocolType_t</a> protoType, const char *pApn, const char *pUserName, const char *pPW, <a class="el" href="ltemc-network_8h.html#a8b858b502f4f3a91124a381d4d35fdc9">pdpCntxtAuthMethods_t</a> authMethod)</td></tr>
+<tr class="memdesc:a6dcc260480be4032284ece434f465095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN requiring authentication.  <a href="ltemc-network_8h.html#a6dcc260480be4032284ece434f465095">More...</a><br /></td></tr>
+<tr class="separator:a6dcc260480be4032284ece434f465095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3bc4e9d0b6d6f181ac180fbd91d5ce0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8h.html#ad3bc4e9d0b6d6f181ac180fbd91d5ce0">ntwk_deactivatePdpContext</a> (uint8_t contxtId)</td></tr>
 <tr class="memdesc:ad3bc4e9d0b6d6f181ac180fbd91d5ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deactivate APN.  <a href="ltemc-network_8h.html#ad3bc4e9d0b6d6f181ac180fbd91d5ce0">More...</a><br /></td></tr>
 <tr class="separator:ad3bc4e9d0b6d6f181ac180fbd91d5ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -380,6 +407,54 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6d499e51cdf4249e3bbccca130f473b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d499e51cdf4249e3bbccca130f473b8">&#9670;&nbsp;</a></span>ntwk_iotMode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8">ntwk_iotMode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum describing the available options for an IoT protocol when connecting to the network. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6d499e51cdf4249e3bbccca130f473b8af8c21cc05958560740038cb3656d0c59"></a>ntwk_iotMode_m1&#160;</td><td class="fielddoc"><p>CAT-M1 only mode: BGx is filtering visible networks and only considering CAT-M1 connections. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6d499e51cdf4249e3bbccca130f473b8ad3f80c5ae0335d42da570c1e0441d5c6"></a>ntwk_iotMode_nb1&#160;</td><td class="fielddoc"><p>NB-IOT only mode: BGx is filtering visible networks and only considering NB-IOT connections. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6d499e51cdf4249e3bbccca130f473b8af8fbf07e9ddd182a51e574b508a189f9"></a>ntwk_iotMode_m1nb1&#160;</td><td class="fielddoc"><p>The BGx will connect to either a CAT-M1 or NB-IOT network. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a2100a5b3e7f85b38469f5a557e5651fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2100a5b3e7f85b38469f5a557e5651fc">&#9670;&nbsp;</a></span>ntwk_scanMode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fc">ntwk_scanMode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum describing the mode the BGx module is using to look for available networks (carriers). </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2100a5b3e7f85b38469f5a557e5651fcaddcb7d0b39ce9b8e018dda5fc98cf09a"></a>ntwk_scanMode_auto&#160;</td><td class="fielddoc"><p>BGx is considering either GSM or LTE carrier connections. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2100a5b3e7f85b38469f5a557e5651fca257e8cbcea6369c0408f0d928a5e604c"></a>ntwk_scanMode_gsmonly&#160;</td><td class="fielddoc"><p>GSM only mode: BGx is filtering visible networks and only considering connections to GSM endpoints. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2100a5b3e7f85b38469f5a557e5651fcad95abb6681653b107fabea4c2a62562b"></a>ntwk_scanMode_lteonly&#160;</td><td class="fielddoc"><p>LTE only mode: BGx is filtering visible networks and only considering connections to LTE endpoints. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a75359f333c3d195cffe786d2025294c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75359f333c3d195cffe786d2025294c7">&#9670;&nbsp;</a></span>pdpCntxtAuthMethods_tag</h2>
 
@@ -425,6 +500,26 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a925ee30afeef05c0a40a10433c82ffd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925ee30afeef05c0a40a10433c82ffd3">&#9670;&nbsp;</a></span>ltem_ltemcVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ltem_ltemcVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the LTEmC software version. </p>
+<dl class="section return"><dt>Returns</dt><dd>Version as a const char pointer. </dd></dl>
+
+</div>
+</div>
 <a id="a338e4b654dde96a6abbb5802085b5808"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a338e4b654dde96a6abbb5802085b5808">&#9670;&nbsp;</a></span>ntwk_activatePdpContext()</h2>
 
@@ -469,8 +564,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa121d8f8af5adccbe9fb4e79d8fdc7ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa121d8f8af5adccbe9fb4e79d8fdc7ce">&#9670;&nbsp;</a></span>ntwk_activatePdpContextWithAuth()</h2>
+<a id="a6dcc260480be4032284ece434f465095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dcc260480be4032284ece434f465095">&#9670;&nbsp;</a></span>ntwk_activatePdpContextWithAuth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,6 +575,18 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>cntxtId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-network_8h.html#a5a1b3a2daf47f69a2999ad2b30e4f4a4">pdpCntxtProtocolType_t</a>&#160;</td>
+          <td class="paramname"><em>protoType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pApn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -511,6 +618,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cntxtId</td><td>[in] - The APN to operate on. Typically 0 or 1 </td></tr>
+    <tr><td class="paramname">protoType</td><td>[in] - The PDP protocol IPV4, IPV6, IPV4V6 (both). </td></tr>
+    <tr><td class="paramname">pApn</td><td>[in] - The APN name if required by network carrier. </td></tr>
     <tr><td class="paramname">pUserName</td><td>[in] - String with user name </td></tr>
     <tr><td class="paramname">pPW</td><td>[in] - String with password </td></tr>
     <tr><td class="paramname">authMethod</td><td>[in] - Enum specifying the type of authentication expected by network </td></tr>
@@ -612,6 +721,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="adf844059037881ac948ed76863eec54f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf844059037881ac948ed76863eec54f">&#9670;&nbsp;</a></span>ntwk_getOperators()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ntwk_getOperators </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>operatorList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>listSz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Development/diagnostic function to retrieve visible operators from radio. </p>
+<p>Note: This command can be minutes in response. It is generally considered a command used solely for diagnostics.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operatorList</td><td>[in/out] - Pointer to char buffer to return operator list information retrieved from BGx. </td></tr>
+    <tr><td class="paramname">listSz</td><td>[in] - Length of provided buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a91dd799b4855140d918c82cb27bb3e65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91dd799b4855140d918c82cb27bb3e65">&#9670;&nbsp;</a></span>ntwk_getPdpCntxtInfo()</h2>
 
@@ -636,6 +783,85 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to PDP context info in active context table, NULL if not active </dd></dl>
+
+</div>
+</div>
+<a id="a113fed7d34af8e380524258491d59855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113fed7d34af8e380524258491d59855">&#9670;&nbsp;</a></span>ntwk_setIotOpMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ntwk_setIotOpMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8">ntwk_iotMode_t</a>&#160;</td>
+          <td class="paramname"><em>iotMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure the network category to be searched under LTE RAT. [mode] Number format. Network category to be searched under LTE RAT. 0 LTE Cat M1 1 LTE Cat NB1 2 LTE Cat M1 and Cat NB1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iotMode</td><td>[in] - Enum specifying the LTE LPWAN protocol(s) to scan for. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2b48306ce21259f9dd871eab7f81cd8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b48306ce21259f9dd871eab7f81cd8c">&#9670;&nbsp;</a></span>ntwk_setNwScanMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ntwk_setNwScanMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fc">ntwk_scanMode_t</a>&#160;</td>
+          <td class="paramname"><em>scanMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure RAT(s) allowed to be searched [scanmode] Number format. RAT(s) to be searched. 0 Automatic 1 GSM only 3 LTE only. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scanMode</td><td>[in] - Enum specifying what cell network to scan. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac192787c3cc04797c7fd0633ba531534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac192787c3cc04797c7fd0633ba531534">&#9670;&nbsp;</a></span>ntwk_setNwScanSeq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ntwk_setNwScanSeq </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>scanSequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure RAT searching sequence. </p>
+<p>[scanseq] Number format. RAT search sequence. (e.g.: 020301 stands for LTE Cat M1 | LTE Cat NB1 | GSM)) 00 Automatic (LTE Cat M1 | LTE Cat NB1 | GSM) 01 GSM 02 LTE Cat M1 03 LTE Cat NB1</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scanSequence</td><td>[in] - Character string specifying the RAT scanning order. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

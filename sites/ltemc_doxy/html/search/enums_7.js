@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['qbg_5fnw_5fiot_5fmode_5ft_1409',['qbg_nw_iot_mode_t',['../ltemc-quectel-bg_8h.html#a2191ec3f5a5386782fe35c35116bd17f',1,'ltemc-quectel-bg.h']]],
-  ['qbg_5fnw_5fscan_5fmode_5ft_1410',['qbg_nw_scan_mode_t',['../ltemc-quectel-bg_8h.html#aa1a289b110c85590df8e3c8628820432',1,'ltemc-quectel-bg.h']]],
-  ['qbgreadystate_5ftag_1411',['qbgReadyState_tag',['../ltemc-quectel-bg_8h.html#a029afb5b9d9f256347f037bcb091b860',1,'ltemc-quectel-bg.h']]]
+  ['pdpcntxtauthmethods_5ftag_1417',['pdpCntxtAuthMethods_tag',['../ltemc-network_8h.html#a75359f333c3d195cffe786d2025294c7',1,'ltemc-network.h']]],
+  ['pdpcntxtiptype_5ftag_1418',['pdpCntxtIpType_tag',['../ltemc-network_8h.html#aa55a4d211043314594fd0ca9150767cc',1,'ltemc-network.h']]],
+  ['protocol_5ftag_1419',['protocol_tag',['../ltemc-streams_8h.html#a3f393a98760199ca61cd643f317eee6c',1,'ltemc-streams.h']]]
 ];

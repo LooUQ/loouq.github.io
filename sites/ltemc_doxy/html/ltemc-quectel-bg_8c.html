@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEmC
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v2.3.0</span>
    </div>
    <div id="projectbrief">C device driver for LooUQ LTE cellular modems</div>
   </td>
@@ -143,15 +143,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a7eef2dcadd6c14fb6aa65c2b4c38e132"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#a7eef2dcadd6c14fb6aa65c2b4c38e132">qbg_setOptions</a> ()</td></tr>
 <tr class="memdesc:a7eef2dcadd6c14fb6aa65c2b4c38e132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the BGx module.  <a href="ltemc-quectel-bg_8c.html#a7eef2dcadd6c14fb6aa65c2b4c38e132">More...</a><br /></td></tr>
 <tr class="separator:a7eef2dcadd6c14fb6aa65c2b4c38e132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5d3138c74ce003186141238a4be502a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#ac5d3138c74ce003186141238a4be502a">qbg_setNwScanSeq</a> (const char *sequence)</td></tr>
-<tr class="memdesc:ac5d3138c74ce003186141238a4be502a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure RAT searching sequence.  <a href="ltemc-quectel-bg_8c.html#ac5d3138c74ce003186141238a4be502a">More...</a><br /></td></tr>
-<tr class="separator:ac5d3138c74ce003186141238a4be502a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13d5b4a9ba595000de151d9a0eb776f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#a13d5b4a9ba595000de151d9a0eb776f8">qbg_setNwScanMode</a> (<a class="el" href="ltemc-quectel-bg_8h.html#aa1a289b110c85590df8e3c8628820432">qbg_nw_scan_mode_t</a> mode)</td></tr>
-<tr class="memdesc:a13d5b4a9ba595000de151d9a0eb776f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure RAT(s) allowed to be searched.  <a href="ltemc-quectel-bg_8c.html#a13d5b4a9ba595000de151d9a0eb776f8">More...</a><br /></td></tr>
-<tr class="separator:a13d5b4a9ba595000de151d9a0eb776f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbc1ca7e44fafdcebb214e74547761de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-quectel-bg_8c.html#acbc1ca7e44fafdcebb214e74547761de">qbg_setIotOpMode</a> (<a class="el" href="ltemc-quectel-bg_8h.html#a2191ec3f5a5386782fe35c35116bd17f">qbg_nw_iot_mode_t</a> mode)</td></tr>
-<tr class="memdesc:acbc1ca7e44fafdcebb214e74547761de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the network category to be searched under LTE RAT.  <a href="ltemc-quectel-bg_8c.html#acbc1ca7e44fafdcebb214e74547761de">More...</a><br /></td></tr>
-<tr class="separator:acbc1ca7e44fafdcebb214e74547761de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -312,66 +303,6 @@ Variables</h2></td></tr>
 
 <p>Power on the BGx module. </p>
 <dl class="section return"><dt>Returns</dt><dd>Prior BGx power state: true=previously powered on </dd></dl>
-
-</div>
-</div>
-<a id="acbc1ca7e44fafdcebb214e74547761de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbc1ca7e44fafdcebb214e74547761de">&#9670;&nbsp;</a></span>qbg_setIotOpMode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void qbg_setIotOpMode </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="ltemc-quectel-bg_8h.html#a2191ec3f5a5386782fe35c35116bd17f">qbg_nw_iot_mode_t</a>&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Configure the network category to be searched under LTE RAT. </p>
-
-</div>
-</div>
-<a id="a13d5b4a9ba595000de151d9a0eb776f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13d5b4a9ba595000de151d9a0eb776f8">&#9670;&nbsp;</a></span>qbg_setNwScanMode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void qbg_setNwScanMode </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="ltemc-quectel-bg_8h.html#aa1a289b110c85590df8e3c8628820432">qbg_nw_scan_mode_t</a>&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Configure RAT(s) allowed to be searched. </p>
-
-</div>
-</div>
-<a id="ac5d3138c74ce003186141238a4be502a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5d3138c74ce003186141238a4be502a">&#9670;&nbsp;</a></span>qbg_setNwScanSeq()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void qbg_setNwScanSeq </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>sequence</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Configure RAT searching sequence. </p>
 
 </div>
 </div>

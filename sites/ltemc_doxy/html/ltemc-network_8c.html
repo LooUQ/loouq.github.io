@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LTEmC
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v2.3.0</span>
    </div>
    <div id="projectbrief">C device driver for LooUQ LTE cellular modems</div>
   </td>
@@ -110,12 +110,24 @@ Functions</h2></td></tr>
 <tr class="memitem:a338e4b654dde96a6abbb5802085b5808"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a338e4b654dde96a6abbb5802085b5808">ntwk_activatePdpContext</a> (uint8_t cntxtId, <a class="el" href="ltemc-network_8h.html#a5a1b3a2daf47f69a2999ad2b30e4f4a4">pdpCntxtProtocolType_t</a> protoType, const char *pApn)</td></tr>
 <tr class="memdesc:a338e4b654dde96a6abbb5802085b5808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN.  <a href="ltemc-network_8c.html#a338e4b654dde96a6abbb5802085b5808">More...</a><br /></td></tr>
 <tr class="separator:a338e4b654dde96a6abbb5802085b5808"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa121d8f8af5adccbe9fb4e79d8fdc7ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#aa121d8f8af5adccbe9fb4e79d8fdc7ce">ntwk_activatePdpContextWithAuth</a> (uint8_t cntxtId, const char *pUserName, const char *pPW, <a class="el" href="ltemc-network_8h.html#a8b858b502f4f3a91124a381d4d35fdc9">pdpCntxtAuthMethods_t</a> authMethod)</td></tr>
-<tr class="memdesc:aa121d8f8af5adccbe9fb4e79d8fdc7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN requiring authentication.  <a href="ltemc-network_8c.html#aa121d8f8af5adccbe9fb4e79d8fdc7ce">More...</a><br /></td></tr>
-<tr class="separator:aa121d8f8af5adccbe9fb4e79d8fdc7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dcc260480be4032284ece434f465095"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a6dcc260480be4032284ece434f465095">ntwk_activatePdpContextWithAuth</a> (uint8_t cntxtId, <a class="el" href="ltemc-network_8h.html#a5a1b3a2daf47f69a2999ad2b30e4f4a4">pdpCntxtProtocolType_t</a> protoType, const char *pApn, const char *pUserName, const char *pPW, <a class="el" href="ltemc-network_8h.html#a8b858b502f4f3a91124a381d4d35fdc9">pdpCntxtAuthMethods_t</a> authMethod)</td></tr>
+<tr class="memdesc:a6dcc260480be4032284ece434f465095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate PDP Context/APN requiring authentication.  <a href="ltemc-network_8c.html#a6dcc260480be4032284ece434f465095">More...</a><br /></td></tr>
+<tr class="separator:a6dcc260480be4032284ece434f465095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1211e162b3e2ae3af1a9430e6254adee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a1211e162b3e2ae3af1a9430e6254adee">ntwk_deactivatePdpContext</a> (uint8_t cntxtId)</td></tr>
 <tr class="memdesc:a1211e162b3e2ae3af1a9430e6254adee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deactivate APN.  <a href="ltemc-network_8c.html#a1211e162b3e2ae3af1a9430e6254adee">More...</a><br /></td></tr>
 <tr class="separator:a1211e162b3e2ae3af1a9430e6254adee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c93acbf89a8eda580d4cbb126b1c102"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a0c93acbf89a8eda580d4cbb126b1c102">ntwk_setNwScanSeq</a> (const char *scanSequence)</td></tr>
+<tr class="memdesc:a0c93acbf89a8eda580d4cbb126b1c102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure RAT searching sequence.  <a href="ltemc-network_8c.html#a0c93acbf89a8eda580d4cbb126b1c102">More...</a><br /></td></tr>
+<tr class="separator:a0c93acbf89a8eda580d4cbb126b1c102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915529df2042d2f7f6781d29b1a89442"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a915529df2042d2f7f6781d29b1a89442">ntwk_setNwScanMode</a> (<a class="el" href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fc">ntwk_scanMode_t</a> scanMode)</td></tr>
+<tr class="memdesc:a915529df2042d2f7f6781d29b1a89442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure RAT(s) allowed to be searched [scanmode] Number format. RAT(s) to be searched. 0 Automatic 1 GSM only 3 LTE only.  <a href="ltemc-network_8c.html#a915529df2042d2f7f6781d29b1a89442">More...</a><br /></td></tr>
+<tr class="separator:a915529df2042d2f7f6781d29b1a89442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a649b65b6b2a94a68924deda4b9d706a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a649b65b6b2a94a68924deda4b9d706a1">ntwk_setIotOpMode</a> (<a class="el" href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8">ntwk_iotMode_t</a> iotMode)</td></tr>
+<tr class="memdesc:a649b65b6b2a94a68924deda4b9d706a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the network category to be searched under LTE RAT. [mode] Number format. Network category to be searched under LTE RAT. 0 LTE Cat M1 1 LTE Cat NB1 2 LTE Cat M1 and Cat NB1.  <a href="ltemc-network_8c.html#a649b65b6b2a94a68924deda4b9d706a1">More...</a><br /></td></tr>
+<tr class="separator:a649b65b6b2a94a68924deda4b9d706a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf844059037881ac948ed76863eec54f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#adf844059037881ac948ed76863eec54f">ntwk_getOperators</a> (char *operatorList, uint16_t listSz)</td></tr>
+<tr class="memdesc:adf844059037881ac948ed76863eec54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Development/diagnostic function to retrieve visible operators from radio.  <a href="ltemc-network_8c.html#adf844059037881ac948ed76863eec54f">More...</a><br /></td></tr>
+<tr class="separator:adf844059037881ac948ed76863eec54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -287,8 +299,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa121d8f8af5adccbe9fb4e79d8fdc7ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa121d8f8af5adccbe9fb4e79d8fdc7ce">&#9670;&nbsp;</a></span>ntwk_activatePdpContextWithAuth()</h2>
+<a id="a6dcc260480be4032284ece434f465095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dcc260480be4032284ece434f465095">&#9670;&nbsp;</a></span>ntwk_activatePdpContextWithAuth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,6 +310,18 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>cntxtId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-network_8h.html#a5a1b3a2daf47f69a2999ad2b30e4f4a4">pdpCntxtProtocolType_t</a>&#160;</td>
+          <td class="paramname"><em>protoType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pApn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -329,6 +353,8 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cntxtId</td><td>[in] - The APN to operate on. Typically 0 or 1 </td></tr>
+    <tr><td class="paramname">protoType</td><td>[in] - The PDP protocol IPV4, IPV6, IPV4V6 (both). </td></tr>
+    <tr><td class="paramname">pApn</td><td>[in] - The APN name if required by network carrier. </td></tr>
     <tr><td class="paramname">pUserName</td><td>[in] - String with user name </td></tr>
     <tr><td class="paramname">pPW</td><td>[in] - String with password </td></tr>
     <tr><td class="paramname">authMethod</td><td>[in] - Enum specifying the type of authentication expected by network </td></tr>
@@ -430,6 +456,44 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="adf844059037881ac948ed76863eec54f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf844059037881ac948ed76863eec54f">&#9670;&nbsp;</a></span>ntwk_getOperators()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ntwk_getOperators </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>operatorList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>listSz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Development/diagnostic function to retrieve visible operators from radio. </p>
+<p>Note: This command can be minutes in response. It is generally considered a command used solely for diagnostics.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operatorList</td><td>[in/out] - Pointer to char buffer to return operator list information retrieved from BGx. </td></tr>
+    <tr><td class="paramname">listSz</td><td>[in] - Length of provided buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a906fa5291e94f73b59c183e0ed7c1e52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a906fa5291e94f73b59c183e0ed7c1e52">&#9670;&nbsp;</a></span>ntwk_getPdpCntxtInfo()</h2>
 
@@ -454,6 +518,85 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to PDP context info in active context table, NULL if not active </dd></dl>
+
+</div>
+</div>
+<a id="a649b65b6b2a94a68924deda4b9d706a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a649b65b6b2a94a68924deda4b9d706a1">&#9670;&nbsp;</a></span>ntwk_setIotOpMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ntwk_setIotOpMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-network_8h.html#a6d499e51cdf4249e3bbccca130f473b8">ntwk_iotMode_t</a>&#160;</td>
+          <td class="paramname"><em>iotMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure the network category to be searched under LTE RAT. [mode] Number format. Network category to be searched under LTE RAT. 0 LTE Cat M1 1 LTE Cat NB1 2 LTE Cat M1 and Cat NB1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iotMode</td><td>[in] - Enum specifying the LTE LPWAN protocol(s) to scan for. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a915529df2042d2f7f6781d29b1a89442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a915529df2042d2f7f6781d29b1a89442">&#9670;&nbsp;</a></span>ntwk_setNwScanMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ntwk_setNwScanMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-network_8h.html#a2100a5b3e7f85b38469f5a557e5651fc">ntwk_scanMode_t</a>&#160;</td>
+          <td class="paramname"><em>scanMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure RAT(s) allowed to be searched [scanmode] Number format. RAT(s) to be searched. 0 Automatic 1 GSM only 3 LTE only. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scanMode</td><td>[in] - Enum specifying what cell network to scan. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c93acbf89a8eda580d4cbb126b1c102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c93acbf89a8eda580d4cbb126b1c102">&#9670;&nbsp;</a></span>ntwk_setNwScanSeq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ntwk_setNwScanSeq </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>scanSequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure RAT searching sequence. </p>
+<p>[scanseq] Number format. RAT search sequence. (e.g.: 020301 stands for LTE Cat M1 | LTE Cat NB1 | GSM)) 00 Automatic (LTE Cat M1 | LTE Cat NB1 | GSM) 01 GSM 02 LTE Cat M1 03 LTE Cat NB1</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scanSequence</td><td>[in] - Character string specifying the RAT scanning order. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

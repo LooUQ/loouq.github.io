@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['tlscertexpiration_5ftag_1423',['tlsCertExpiration_tag',['../ltemc-tls_8h.html#aa77d249362844b70b7730af569bb50f1',1,'ltemc-tls.h']]],
-  ['tlscipher_5ftag_1424',['tlsCipher_tag',['../ltemc-tls_8h.html#a1516baf2026fd7bb0a27180cb3ee6109',1,'ltemc-tls.h']]],
-  ['tlssecuritylevel_5ftag_1425',['tlsSecurityLevel_tag',['../ltemc-tls_8h.html#a4cce55df07f0dae3c4ece5bbc11a7e2a',1,'ltemc-tls.h']]],
-  ['tlsversion_5ftag_1426',['tlsVersion_tag',['../ltemc-tls_8h.html#a169ddf2597c67fc6e45fe6e8a5fd4f8e',1,'ltemc-tls.h']]]
+  ['sc16is741a_5f_5fconstants_1422',['SC16IS741A__constants',['../ltemc-nxp-sc16is_8c.html#ac47e2c5c65fa42351fda4c4ab80ef1f9',1,'ltemc-nxp-sc16is.c']]],
+  ['sc16is741a_5f_5fltem_5fconstants_1423',['sc16is741a__LTEM_constants',['../ltemc-nxp-sc16is_8h.html#a25fdad3bbc7fb4cd55e79f6be85f83df',1,'ltemc-nxp-sc16is.h']]],
+  ['sc16is741a_5ffcr_5frx_5ftrigger_5fval_1424',['sc16is741a_fcr_rx_trigger_val',['../ltemc-nxp-sc16is_8h.html#a0afe2c580cccb666fc66686c3dec1182',1,'ltemc-nxp-sc16is.h']]],
+  ['sc16is741a_5ffcr_5ftx_5ftrigger_5fval_1425',['sc16is741a_fcr_tx_trigger_val',['../ltemc-nxp-sc16is_8h.html#a4d5bc53c395930accc1f62e6349037b2',1,'ltemc-nxp-sc16is.h']]],
+  ['sc16is741a_5firq_5fpriority_5fval_1426',['sc16is741a_irq_priority_val',['../ltemc-nxp-sc16is_8h.html#a8ead74b40710969b1449284ab45105ee',1,'ltemc-nxp-sc16is.h']]],
+  ['sc16is741a_5freg_5faddr_1427',['sc16is741a_reg_addr',['../ltemc-nxp-sc16is_8h.html#a4776e503a26e75f55bdba7f98f9531f5',1,'ltemc-nxp-sc16is.h']]],
+  ['spibitorder_5ft_1428',['spiBitOrder_t',['../lq_platform-spi_8h.html#a41e9db63135115a4aeec30d37da5f983',1,'lqPlatform-spi.h']]],
+  ['spidatamode_5ft_1429',['spiDataMode_t',['../lq_platform-spi_8h.html#a56cf6a29389ff85388002cb9d2c5df2a',1,'lqPlatform-spi.h']]],
+  ['streampeer_5ftag_1430',['streamPeer_tag',['../ltemc-streams_8h.html#a67400f5b10b3dbea6ed09f26d44917c3',1,'ltemc-streams.h']]],
+  ['streams_5f_5fconstants_1431',['streams__constants',['../ltemc-streams_8h.html#a172f379ee1371fdf9c09579bbc3f779a',1,'ltemc-streams.h']]]
 ];

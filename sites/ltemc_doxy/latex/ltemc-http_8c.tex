@@ -1,15 +1,14 @@
 \hypertarget{ltemc-http_8c}{}\doxysection{src/ltemc-\/http.c File Reference}
 \label{ltemc-http_8c}\index{src/ltemc-\/http.c@{src/ltemc-\/http.c}}
-{\ttfamily \#include $<$jlink\+Rtt.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/http.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ltemc-\/internal.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$lq-\/str.\+h$>$}\newline
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{ltemc-http_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~2
+\#define \mbox{\hyperlink{ltemc-http_8c_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}}~0
 \item 
-\#define \mbox{\hyperlink{ltemc-http_8c_a7acb4d06a9fd952f51471791f06d60a8}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+,  \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+...)~do \{ rtt\+\_\+printf(c\+\_\+, (f\+\_\+), \#\# \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+); \} while(0)
+\#define \mbox{\hyperlink{ltemc-http_8c_ab818574b6e7324559d0b09a6fc9ca1f2}{P\+R\+I\+N\+TF}}(c\+\_\+,  f\+\_\+, ...)~;
 \item 
 \#define \mbox{\hyperlink{ltemc-http_8c_a74e75242132eaabbc1c512488a135926}{M\+IN}}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
 \end{DoxyCompactItemize}
@@ -55,8 +54,6 @@ enum \{ \newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{ltemc-http_8c_abf9daa62d261abcac1e4cb27c9e72adf}{asm}} (\char`\"{}.global \+\_\+printf\+\_\+float\char`\"{})
-\item 
 void \mbox{\hyperlink{ltemc-http_8c_a4d6b9933d020080a3c211fd32a9e1df0}{http\+\_\+init\+Control}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, \mbox{\hyperlink{ltemc-streams_8h_acde6c0e6fc349b24a2e8028be3d21646}{data\+Context\+\_\+t}} data\+Cntxt, const char $\ast$url\+Host, char $\ast$recv\+Buf, uint16\+\_\+t recv\+Buf\+Sz, \mbox{\hyperlink{ltemc-http_8h_a70761bf42af348ac2511bcf4a4a31c4a}{http\+Recv\+Func\+\_\+t}} recv\+Callback)
 \begin{DoxyCompactList}\small\item\em Create a H\+T\+T\+P(s) control structure to manage web communications. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-http_8c_a1b52256d58e1cda2059bec8ad897a8ff}{http\+\_\+enable\+Custom\+Hdrs}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, char $\ast$header\+Buf, uint16\+\_\+t header\+Buf\+Sz)
@@ -85,7 +82,7 @@ void \mbox{\hyperlink{ltemc-http_8c_adc3e553b77a6341664862d7b8a9c0060}{http\+\_\
 \index{ltemc-\/http.c@{ltemc-\/http.c}!\_DEBUG@{\_DEBUG}}
 \index{\_DEBUG@{\_DEBUG}!ltemc-\/http.c@{ltemc-\/http.c}}
 \doxysubsubsection{\texorpdfstring{\_DEBUG}{\_DEBUG}}
-{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~2}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG~0}
 
 \mbox{\Hypertarget{ltemc-http_8c_a74e75242132eaabbc1c512488a135926}\label{ltemc-http_8c_a74e75242132eaabbc1c512488a135926}} 
 \index{ltemc-\/http.c@{ltemc-\/http.c}!MIN@{MIN}}
@@ -93,11 +90,11 @@ void \mbox{\hyperlink{ltemc-http_8c_adc3e553b77a6341664862d7b8a9c0060}{http\+\_\
 \doxysubsubsection{\texorpdfstring{MIN}{MIN}}
 {\footnotesize\ttfamily \#define M\+IN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$ (y)) ? (x) \+: (y))}
 
-\mbox{\Hypertarget{ltemc-http_8c_a7acb4d06a9fd952f51471791f06d60a8}\label{ltemc-http_8c_a7acb4d06a9fd952f51471791f06d60a8}} 
+\mbox{\Hypertarget{ltemc-http_8c_ab818574b6e7324559d0b09a6fc9ca1f2}\label{ltemc-http_8c_ab818574b6e7324559d0b09a6fc9ca1f2}} 
 \index{ltemc-\/http.c@{ltemc-\/http.c}!PRINTF@{PRINTF}}
 \index{PRINTF@{PRINTF}!ltemc-\/http.c@{ltemc-\/http.c}}
 \doxysubsubsection{\texorpdfstring{PRINTF}{PRINTF}}
-{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+... }\end{DoxyParamCaption})~do \{ rtt\+\_\+printf(c\+\_\+, (f\+\_\+), \#\# \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+); \} while(0)}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{c\+\_\+,  }\item[{}]{f\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~;}
 
 
 
@@ -219,12 +216,6 @@ S\+C\+K\+T\+\_\+\+\_\+\+I\+R\+D\+\_\+request\+Max\+Sz&\\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{ltemc-http_8c_abf9daa62d261abcac1e4cb27c9e72adf}\label{ltemc-http_8c_abf9daa62d261abcac1e4cb27c9e72adf}} 
-\index{ltemc-\/http.c@{ltemc-\/http.c}!asm@{asm}}
-\index{asm@{asm}!ltemc-\/http.c@{ltemc-\/http.c}}
-\doxysubsubsection{\texorpdfstring{asm()}{asm()}}
-{\footnotesize\ttfamily asm (\begin{DoxyParamCaption}\item[{\char`\"{}.global \+\_\+printf\+\_\+float\char`\"{}}]{ }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{ltemc-http_8c_acbc88b6c789280f7df70c2995d524030}\label{ltemc-http_8c_acbc88b6c789280f7df70c2995d524030}} 
 \index{ltemc-\/http.c@{ltemc-\/http.c}!http\_addBasicAuthHdr@{http\_addBasicAuthHdr}}
 \index{http\_addBasicAuthHdr@{http\_addBasicAuthHdr}!ltemc-\/http.c@{ltemc-\/http.c}}

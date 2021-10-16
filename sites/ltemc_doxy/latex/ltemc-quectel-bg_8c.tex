@@ -60,13 +60,7 @@ void \mbox{\hyperlink{ltemc-quectel-bg_8c_af38f43891616b10e764a40f62dd67d99}{qbg
 void \mbox{\hyperlink{ltemc-quectel-bg_8c_a25333f44c61fbf3627065cbd31375a1e}{qbg\+\_\+power\+Off}} ()
 \begin{DoxyCompactList}\small\item\em Powers off the B\+Gx module. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-quectel-bg_8c_a7eef2dcadd6c14fb6aa65c2b4c38e132}{qbg\+\_\+set\+Options}} ()
-\begin{DoxyCompactList}\small\item\em Initializes the B\+Gx module. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8c_ac5d3138c74ce003186141238a4be502a}{qbg\+\_\+set\+Nw\+Scan\+Seq}} (const char $\ast$sequence)
-\begin{DoxyCompactList}\small\item\em Configure R\+AT searching sequence. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8c_a13d5b4a9ba595000de151d9a0eb776f8}{qbg\+\_\+set\+Nw\+Scan\+Mode}} (\mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+t}} mode)
-\begin{DoxyCompactList}\small\item\em Configure R\+A\+T(s) allowed to be searched. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-quectel-bg_8c_acbc1ca7e44fafdcebb214e74547761de}{qbg\+\_\+set\+Iot\+Op\+Mode}} (\mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}{qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+t}} mode)
-\begin{DoxyCompactList}\small\item\em Configure the network category to be searched under L\+TE R\+AT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initializes the B\+Gx module. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -245,36 +239,6 @@ Power on the B\+Gx module.
 \begin{DoxyReturn}{Returns}
 Prior B\+Gx power state\+: true=previously powered on 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-quectel-bg_8c_acbc1ca7e44fafdcebb214e74547761de}\label{ltemc-quectel-bg_8c_acbc1ca7e44fafdcebb214e74547761de}} 
-\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_setIotOpMode@{qbg\_setIotOpMode}}
-\index{qbg\_setIotOpMode@{qbg\_setIotOpMode}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
-\doxysubsubsection{\texorpdfstring{qbg\_setIotOpMode()}{qbg\_setIotOpMode()}}
-{\footnotesize\ttfamily void qbg\+\_\+set\+Iot\+Op\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-quectel-bg_8h_a2191ec3f5a5386782fe35c35116bd17f}{qbg\+\_\+nw\+\_\+iot\+\_\+mode\+\_\+t}}}]{mode }\end{DoxyParamCaption})}
-
-
-
-Configure the network category to be searched under L\+TE R\+AT. 
-
-\mbox{\Hypertarget{ltemc-quectel-bg_8c_a13d5b4a9ba595000de151d9a0eb776f8}\label{ltemc-quectel-bg_8c_a13d5b4a9ba595000de151d9a0eb776f8}} 
-\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_setNwScanMode@{qbg\_setNwScanMode}}
-\index{qbg\_setNwScanMode@{qbg\_setNwScanMode}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
-\doxysubsubsection{\texorpdfstring{qbg\_setNwScanMode()}{qbg\_setNwScanMode()}}
-{\footnotesize\ttfamily void qbg\+\_\+set\+Nw\+Scan\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-quectel-bg_8h_aa1a289b110c85590df8e3c8628820432}{qbg\+\_\+nw\+\_\+scan\+\_\+mode\+\_\+t}}}]{mode }\end{DoxyParamCaption})}
-
-
-
-Configure R\+A\+T(s) allowed to be searched. 
-
-\mbox{\Hypertarget{ltemc-quectel-bg_8c_ac5d3138c74ce003186141238a4be502a}\label{ltemc-quectel-bg_8c_ac5d3138c74ce003186141238a4be502a}} 
-\index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_setNwScanSeq@{qbg\_setNwScanSeq}}
-\index{qbg\_setNwScanSeq@{qbg\_setNwScanSeq}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
-\doxysubsubsection{\texorpdfstring{qbg\_setNwScanSeq()}{qbg\_setNwScanSeq()}}
-{\footnotesize\ttfamily void qbg\+\_\+set\+Nw\+Scan\+Seq (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sequence }\end{DoxyParamCaption})}
-
-
-
-Configure R\+AT searching sequence. 
-
 \mbox{\Hypertarget{ltemc-quectel-bg_8c_a7eef2dcadd6c14fb6aa65c2b4c38e132}\label{ltemc-quectel-bg_8c_a7eef2dcadd6c14fb6aa65c2b4c38e132}} 
 \index{ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}!qbg\_setOptions@{qbg\_setOptions}}
 \index{qbg\_setOptions@{qbg\_setOptions}!ltemc-\/quectel-\/bg.c@{ltemc-\/quectel-\/bg.c}}
