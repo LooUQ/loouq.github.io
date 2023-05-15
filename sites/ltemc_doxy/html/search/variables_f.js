@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['qbg_5finitcmds_1251',['qbg_initCmds',['../ltemc-quectel-bg_8c.html#a1d4f4dde31edc393e62b6278a0218d24',1,'ltemc-quectel-bg.c']]],
-  ['qbgreadystate_1252',['qbgReadyState',['../structltem_device__tag.html#a4c823cc492a5660ab1b9766726774474',1,'ltemDevice_tag']]],
-  ['qiurc_1253',['QIURC',['../cmd_01response_01examples_8txt.html#a06f73baf15c13152e346a3070019e4e1',1,'cmd response examples.txt']]],
-  ['qmtcfg_1254',['QMTCFG',['../mqtt__testing_8txt.html#a5d995e059cc842ef6b9929f3c53ab429',1,'mqtt_testing.txt']]],
-  ['qmtconn_1255',['QMTCONN',['../mqtt__testing_8txt.html#a8d7760b076333f655e4f91eee493e6ba',1,'QMTCONN():&#160;mqtt_testing.txt'],['../http_01testing_8txt.html#af3da04b98bfe8e1dc168535c7bac26b1',1,'QMTCONN():&#160;http testing.txt']]],
-  ['qmtopen_1256',['qmtopen',['../http_01testing_8txt.html#a98bcfc50b4a66df981ddc5a8d7365b0c',1,'qmtopen():&#160;http testing.txt'],['../mqtt__testing_8txt.html#a8daf1e2c833c22f47038b94accafed69',1,'QMTOPEN():&#160;mqtt_testing.txt']]],
-  ['qping_1257',['QPING',['../cmd_01response_01examples_8txt.html#a17843a26b8c1a1720c473d14b1ecec04',1,'cmd response examples.txt']]],
-  ['qsslcfg_1258',['QSSLCFG',['../mqtt__testing_8txt.html#acf86d232eee30518e922be32144e94f5',1,'mqtt_testing.txt']]]
+  ['usetls_0',['useTls',['../structhttp_ctrl__tag.html#a8ee05bf20eb22e34322544df417b4348',1,'httpCtrl_tag']]],
+  ['utc_1',['utc',['../structgnss_location__tag.html#a6ae8d28098d79f0dcb73395e7d2698df',1,'gnssLocation_tag']]]
 ];

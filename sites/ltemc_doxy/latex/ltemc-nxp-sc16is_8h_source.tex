@@ -1,0 +1,372 @@
+\hypertarget{ltemc-nxp-sc16is_8h_source}{}\doxysection{ltemc-\/nxp-\/sc16is.h}
+\label{ltemc-nxp-sc16is_8h_source}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/nxp-\/sc16is.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/nxp-\/sc16is.h}}
+\mbox{\hyperlink{ltemc-nxp-sc16is_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ \_\_LTEMC\_NXP\_SC16IS\_H\_\_}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ \_\_LTEMC\_NXP\_SC16IS\_H\_\_}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <cstdbool>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc-types_8h}{ltemc-\/types.h}}"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}platform/lqPlatform-\/spi.h"{}}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ DEF\_SC16IS7xx\_REG(REG\_NAME,\ REG\_BITS)\ \(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{typedef\ union\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ struct\ \{\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ REG\_BITS\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\ \ \ \ \};\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ uint8\_t\ reg;\ \(\backslash\)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\}\ SC16IS7xx\_\#\#REG\_NAME;}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#pragma\ region\ structures}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{const}\ uint8\_t\ ro8;}
+\DoxyCodeLine{00057\ \textcolor{keyword}{typedef}\ uint8\_t\ rw8;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{enum}\ SC16IS7xx\_\_constants}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ BGx\ default\ baudrate\ is\ 115200,\ LTEm-\/OSC\ raw\ clock\ is\ 7.378MHz\ (SC16IS740\ section\ 7.8)}}
+\DoxyCodeLine{00062\ \ \ \ \ SC16IS7xx\_\_DLL\_baudClockDivisorLOW\ =\ 0x04U,}
+\DoxyCodeLine{00063\ \ \ \ \ SC16IS7xx\_\_DLH\_baudClockDivisorHIGH\ =\ 0x00U,}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ Bridge<>BG96\ UART\ framing\ -\/\ 8\ data,\ no\ parity,\ 1\ stop\ (bits)}}
+\DoxyCodeLine{00066\ \ \ \ \ SC16IS7xx\_\_LCR\_UARTframing\ =\ 0x03U,}
+\DoxyCodeLine{00067\ \ \ \ \ SC16IS7xx\_\_LCR\_break\ =\ 0x40U,}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//SC16IS7xx\_\_SC16IS7xx\_EFR\_ENHANCED\_FUNCTIONS\ =\ 0x10U}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ TLR\ Register\ [7:4]\ RX,\ [3:0]\ TX\ Interrupt\ trigger\ points\ (MCR[2]=1\ and\ EFR[4]=1\ required)}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ set\ field\ to\ level\ /\ 4\ (buffer\ granularity\ is\ 4)}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ SC16IS7xx\_\_TLR\_TriggerLevels\ =\ 0x22U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ **!**\ testing\ value\ -\/\ 8\ char\ buffer\ **!**}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ SC16IS7xx\_\_TLR\_TRIGGER\_LEVELS\ =\ 0xFFU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ 0xF=15\ (*4)\ =\ 60\ char\ buffer}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ fcr\ is\ a\ WrOnly\ register,\ flush\ and\ FIFO\ enable\ are\ both\ in\ this\ register\ }}
+\DoxyCodeLine{00076\ \ \ \ \ SC16IS7xx\_\_FCR\_BASIC\_MODE\ =\ 0xB7U,}
+\DoxyCodeLine{00077\ \ \ \ \ SC16IS7xx\_\_FCR\_IOP\_FIFO\_ENABLE\ =\ 0xB1U,}
+\DoxyCodeLine{00078\ \ \ \ \ SC16IS7xx\_\_FCR\_IOP\_RX\_FLUSH\ =\ 0x02U,}
+\DoxyCodeLine{00079\ \ \ \ \ SC16IS7xx\_\_FCR\_IOP\_TX\_FLUSH\ =\ 0x04U,}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ SC16IS7xx\_\_FIFO\_bufferSz\ =\ 0x40,}
+\DoxyCodeLine{00082\ \ \ \ \ SC16IS7xx\_\_FIFO\_readRnW\ =\ 0x01,}
+\DoxyCodeLine{00083\ \ \ \ \ SC16IS7xx\_\_FIFO\_writeRnW\ =\ 0x00,}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ SC16IS7xx\_\_LCR\_REGSET\_general\ =\ 0x00,}
+\DoxyCodeLine{00086\ \ \ \ \ SC16IS7xx\_\_LCR\_REGSET\_special\ =\ 0x80,}
+\DoxyCodeLine{00087\ \ \ \ \ SC16IS7xx\_\_LCR\_REGSET\_enhanced\ =\ 0xBF,}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ SC16IS7xx\_\_HW\_resetDelay\ =\ 1U,}
+\DoxyCodeLine{00090\ \ \ \ \ SC16IS7xx\_\_SW\_resetMask\ =\ 0x08,}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ SC16IS7xx\_\_LSR\_RHR\_dataReady\ =\ 0x01U,}
+\DoxyCodeLine{00093\ \ \ \ \ SC16IS7xx\_\_LSR\_THR\_empty\ =\ 0x02U,}
+\DoxyCodeLine{00094\ \ \ \ \ SC16IS7xx\_\_LSR\_FIFO\_dataError\ =\ 0x80U,}
+\DoxyCodeLine{00095\ \ \ \ \ SC16IS7xx\_\_LSR\_FIFO\_overrun\ =\ 0x02U}
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6}{SC16IS7xx\_regAddr\_tag}}}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a70d9e3415cb550db7855ef2cfdfc6204}{SC16IS7xx\_FIFO\_regAddr}}\ =\ 0x00U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a0218b2ad84ea2264935dda52b6f79366}{SC16IS7xx\_IER\_regAddr}}\ =\ 0x01U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6aeb33ac136b890c2ffc82e0ce47d21e1a}{SC16IS7xx\_FCR\_regAddr}}\ =\ 0x02U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a9be7486269581ac1c5709da899d9a40b}{SC16IS7xx\_IIR\_regAddr}}\ =\ 0x02U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6ac32fa33ce97cc520efc5c36d1a0d09fe}{SC16IS7xx\_LCR\_regAddr}}\ =\ 0x03U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a8d15777e98c57e6e95da37925f476b49}{SC16IS7xx\_MCR\_regAddr}}\ =\ 0x04U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a3617ea90e3b954e2428a40d444887a15}{SC16IS7xx\_LSR\_regAddr}}\ =\ 0x05U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6ace3deb1a5f739c0586e78cff14ae5c4a}{SC16IS7xx\_MSR\_regAddr}}\ =\ 0x06U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a861d21d400aaff48b440f7ec21c53fe6}{SC16IS7xx\_SPR\_regAddr}}\ =\ 0x07U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a22d4575c549270eeb38f255781f794c1}{SC16IS7xx\_TCR\_regAddr}}\ =\ 0x06U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a011791a6d53faf63c78aa740e2bcc884}{SC16IS7xx\_TLR\_regAddr}}\ =\ 0x07U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a63158f535876909aea419ebbc1820240}{SC16IS7xx\_TXLVL\_regAddr}}\ =\ 0x08U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6ae7cca8b43770662a043ba73119a0d1de}{SC16IS7xx\_RXLVL\_regAddr}}\ =\ 0x09U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6adfc97d546c9dc0f861924056bc500846}{SC16IS7xx\_UARTRST\_regAddr}}\ =\ 0x0EU,\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6ad57395bcb83b7fa439768bb1bcf0821b}{SC16IS7xx\_EFCR\_regAddr}}\ =\ 0x0FU,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a30270b11e76567693d072a6e7b1d317c}{SC16IS7xx\_DLL\_regAddr}}\ =\ 0x00U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6aed9070af7bae0f017849294241091516}{SC16IS7xx\_DLH\_regAddr}}\ =\ 0x01U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a8d8d53699c0e79892c3919d80c0c4be4}{SC16IS7xx\_EFR\_regAddr}}\ =\ 0x02U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a06555da463c49b0e2c93934d79f25064}{SC16IS7xx\_XON1\_regAddr}}\ =\ 0x04U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a197d047f895f2760d51cd2411fae06b4}{SC16IS7xx\_XON2\_regAddr}}\ =\ 0x05U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a25cd55245ddce6d741f1487dbdd7e300}{SC16IS7xx\_XOFF1\_regAddr}}\ =\ 0x06U,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af8db8bc181d7125d84d6682759a1faa6a445f911ab5350b7fdd4a5f1df33eafe8}{SC16IS7xx\_XOFF2\_regAddr}}\ =\ 0x07U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \}\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a3e7934b9d696b499d7a5ee972aaae7bd}{SC16IS7xx\_regAddr\_t}};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{comment}{//\ //\ BG96\ default\ baudrate\ is\ 115200,\ LTEm1\ raw\ clock\ is\ 7.378MHz\ (SC16IS741a\ pg13)}}
+\DoxyCodeLine{00130\ \textcolor{comment}{//\ \#define\ BAUDCLOCK\_DIVISOR\_DLL\ 0x04U}}
+\DoxyCodeLine{00131\ \textcolor{comment}{//\ \#define\ BAUDCLOCK\_DIVISOR\_DLH\ 0x00U}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{comment}{//\ //\ Bridge<>BG96\ UART\ framing\ -\/\ 8\ data,\ no\ parity,\ 1\ stop\ (bits)}}
+\DoxyCodeLine{00134\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_LCR\_UART\_FRAMING\ 0x03U}}
+\DoxyCodeLine{00135\ \textcolor{comment}{//\ //\#define\ SC16IS7xx\_EFR\_ENHANCED\_FUNCTIONS\ 0x10U}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{comment}{//\ //\ [7:4]\ RX,\ [3:0]\ TX\ -\/\ level\ /\ 4\ (buffer\ granularity\ is\ 4)}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_TLR\_TRIGGER\_LEVELS\ 0x22U\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ **!**\ testing\ value\ **!**}}
+\DoxyCodeLine{00139\ \textcolor{comment}{//\ //\#define\ SC16IS7xx\_TLR\_TRIGGER\_LEVELS\ 0xFFU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ 15\ (*4)\ =\ 60\ char\ buffer}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{comment}{//\ //\ fcr\ is\ a\ RdOnly\ register,\ flush\ and\ FIFO\ enable\ are\ both\ in\ this\ register\ }}
+\DoxyCodeLine{00142\ \textcolor{comment}{//\ \#define\ FCR\_REGISTER\_VALUE\_BASIC\_MODE\ 0xB7U}}
+\DoxyCodeLine{00143\ \textcolor{comment}{//\ \#define\ FCR\_REGISTER\_VALUE\_IOP\_FIFO\_ENABLE\ 0xB1U}}
+\DoxyCodeLine{00144\ \textcolor{comment}{//\ \#define\ FCR\_REGISTER\_VALUE\_IOP\_RX\_FLUSH\ 0x02U}}
+\DoxyCodeLine{00145\ \textcolor{comment}{//\ \#define\ FCR\_REGISTER\_VALUE\_IOP\_TX\_FLUSH\ 0x04U}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_FIFO\_BUFFER\_SZ\ \ \ 0x40}}
+\DoxyCodeLine{00150\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_FIFO\_RnW\_READ\ \ \ \ 0x01}}
+\DoxyCodeLine{00151\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_FIFO\_RnW\_WRITE\ \ \ 0x00}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{comment}{//\ \#define\ NXP\_TX\_FIFOSZ\ 0x40}}
+\DoxyCodeLine{00154\ \textcolor{comment}{//\ \#define\ NXP\_RX\_FIFOSZ\ 0x40}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{comment}{//\ //\ NXP\ Bridge\ register\ set\ selector\ values\ (applied\ to\ LCR\ register)}}
+\DoxyCodeLine{00157\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_REG\_SET\_GENERAL\ \ 0x00}}
+\DoxyCodeLine{00158\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_REG\_SET\_SPECIAL\ \ 0x80}}
+\DoxyCodeLine{00159\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_REG\_SET\_ENHANCED\ 0xBF}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_HW\_RESET\_DELAY\ \ \ \ \ \ 1U}}
+\DoxyCodeLine{00162\ \textcolor{comment}{//\ \#define\ SC16IS7xx\_SW\_RESET\_MASK\ \ \ \ \ \ \ 0x08}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00168\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a76b0b9d740bca0aceb6b54b882fe9faf}{sc16IS7xx\_FifoResetAction\_tag}}}
+\DoxyCodeLine{00169\ \{\ }
+\DoxyCodeLine{00170\ \ \ \ \ SC16IS7xx\_FIFO\_resetActionRx\ =\ 0x02U,}
+\DoxyCodeLine{00171\ \ \ \ \ SC16IS7xx\_FIFO\_resetActionTx\ =\ 0x04U,}
+\DoxyCodeLine{00172\ \ \ \ \ SC16IS7xx\_FIFO\_resetActionRxTx\ =\ 0x06U,}
+\DoxyCodeLine{00173\ \}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a80dca3b6c9389349664cb818df639eb3}{sc16IS7xx\_FifoResetAction\_t}};}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00182\ \textcolor{keyword}{union\ }\mbox{\hyperlink{union_____s_c16_i_s7xx__reg__addr__byte____}{\_\_SC16IS7xx\_reg\_addr\_byte\_\_}}}
+\DoxyCodeLine{00183\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00185\ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ ro8\ :\ 1;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ rw8\ CH0\ :\ 1;}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ rw8\ CH1\ :\ 1;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ rw8\ A\ :\ 4;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ rw8\ RnW\ :\ 1;}
+\DoxyCodeLine{00191\ \ \ \ \ \};}
+\DoxyCodeLine{00192\ \ \ \ \ uint8\_t\ reg\_address;}
+\DoxyCodeLine{00193\ \};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00199\ \textcolor{keyword}{union\ }\mbox{\hyperlink{union_____s_c16_i_s7xx__reg__payload____}{\_\_SC16IS7xx\_reg\_payload\_\_}}}
+\DoxyCodeLine{00200\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00202\ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{union_____s_c16_i_s7xx__reg__addr__byte____}{\_\_SC16IS7xx\_reg\_addr\_byte\_\_}}\ reg\_addr;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ uint8\_t\ reg\_data;}
+\DoxyCodeLine{00205\ \ \ \ \ \};}
+\DoxyCodeLine{00206\ \ \ \ \ uint16\_t\ reg\_payload;}
+\DoxyCodeLine{00207\ \};}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{comment}{/*\ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!}}
+\DoxyCodeLine{00214\ \textcolor{comment}{*}}
+\DoxyCodeLine{00215\ \textcolor{comment}{*\ \ bit-\/order\ may\ be\ affected\ by\ compiler\ and\ platform\ for\ DEF\_SC16IS7xx\_REG\ }}
+\DoxyCodeLine{00216\ \textcolor{comment}{*\ \ register\ structs\ below.\ These\ are\ composed\ as\ bit\ [0]\ first.}}
+\DoxyCodeLine{00217\ \textcolor{comment}{*}}
+\DoxyCodeLine{00218\ \textcolor{comment}{!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\ */}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00223\ DEF\_SC16IS7xx\_REG(IER,}
+\DoxyCodeLine{00224\ \ \ \ \ rw8\ RHR\_DATA\_AVAIL\_INT\_EN\ :\ 1;}
+\DoxyCodeLine{00225\ \ \ \ \ rw8\ THR\_EMPTY\_INT\_EN\ :\ 1;}
+\DoxyCodeLine{00226\ \ \ \ \ rw8\ RECEIVE\_LINE\_STAT\_INT\_EN\ :\ 1;}
+\DoxyCodeLine{00227\ \ \ \ \ rw8\ MDM\_STAT\_INT\_EN\ :\ 1;}
+\DoxyCodeLine{00228\ \ \ \ \ rw8\ SLP\_MODE\_EN\ :\ 1;}
+\DoxyCodeLine{00229\ \ \ \ \ rw8\ nXOFF\_INT\_EN\ :\ 1;}
+\DoxyCodeLine{00230\ \ \ \ \ rw8\ nRTS\_INT\_EN\ :\ 1;}
+\DoxyCodeLine{00231\ \ \ \ \ rw8\ nCTS\_INT\_EN\ :\ 1;}
+\DoxyCodeLine{00232\ )\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00238\ DEF\_SC16IS7xx\_REG(FCR,}
+\DoxyCodeLine{00239\ \ \ \ \ rw8\ FIFO\_EN\ :\ 1;}
+\DoxyCodeLine{00240\ \ \ \ \ rw8\ RX\_FIFO\_RST\ :\ 1;}
+\DoxyCodeLine{00241\ \ \ \ \ rw8\ TX\_FIFO\_RST\ :\ 1;}
+\DoxyCodeLine{00242\ \ \ \ \ ro8\ :\ 1;}
+\DoxyCodeLine{00243\ \ \ \ \ rw8\ TX\_TRIGGER\_LVL\ :\ 2;}
+\DoxyCodeLine{00244\ \ \ \ \ rw8\ RX\_TRIGGER\_LVL\ :\ 2;}
+\DoxyCodeLine{00245\ )}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00249\ \{}
+\DoxyCodeLine{00250\ \ \ \ \ TX\_LVL\_8SPACES\ =\ 0b00U,}
+\DoxyCodeLine{00251\ \ \ \ \ TX\_LVL\_16SPACES\ =\ 0b01U,}
+\DoxyCodeLine{00252\ \ \ \ \ TX\_LVL\_32SPACES\ =\ 0b10U,}
+\DoxyCodeLine{00253\ \ \ \ \ TX\_LVL\_56SPACES\ =\ 0b11U}
+\DoxyCodeLine{00254\ \}\ SC16IS7xx\_fcr\_tx\_trigger\_val;}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00258\ \{}
+\DoxyCodeLine{00259\ \ \ \ \ RX\_LVL\_8CHARS\ =\ 0b00U,}
+\DoxyCodeLine{00260\ \ \ \ \ RX\_LVL\_16CHARS\ =\ 0b01U,}
+\DoxyCodeLine{00261\ \ \ \ \ RX\_LVL\_56CHARS\ =\ 0b10U,}
+\DoxyCodeLine{00262\ \ \ \ \ RX\_LVL\_60CHARS\ =\ 0b11U}
+\DoxyCodeLine{00263\ \}\ SC16IS7xx\_fcr\_rx\_trigger\_val;}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00269\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00270\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ IRQ\_1\_RCVR\_STATUS\_ERROR\ =\ 0x03U,}
+\DoxyCodeLine{00272\ \ \ \ \ IRQ\_2\_RCVR\_TIMEOUT\ =\ 0x06U,}
+\DoxyCodeLine{00273\ \ \ \ \ IRQ\_2\_RCVR\_RHR\ =\ 0x02U,}
+\DoxyCodeLine{00274\ \ \ \ \ IRQ\_3\_XMIT\_THR\ =\ 0x01U,}
+\DoxyCodeLine{00275\ \ \ \ \ IRQ\_4\_MODEM\ =\ 0x00U,}
+\DoxyCodeLine{00276\ \ \ \ \ IRQ\_6\_XOFF\ =\ 0x08U,}
+\DoxyCodeLine{00277\ \ \ \ \ IRQ\_7\_CTSRTS\ =\ 0x10U}
+\DoxyCodeLine{00278\ \}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a06d1f94f3a146c7556a0fdfe985d001b}{SC16IS7xx\_irq\_priority\_val}};}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00284\ DEF\_SC16IS7xx\_REG(IIR,}
+\DoxyCodeLine{00285\ \ \ \ \ ro8\ IRQ\_nPENDING\ :\ 1;}
+\DoxyCodeLine{00286\ \ \ \ \ ro8\ IRQ\_SOURCE\ :\ 5;}
+\DoxyCodeLine{00287\ \ \ \ \ ro8\ FIFO\_EN\ :\ 2;}
+\DoxyCodeLine{00288\ )}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00294\ DEF\_SC16IS7xx\_REG(LCR,\ }
+\DoxyCodeLine{00295\ \ \ \ \ rw8\ WORD\_LEN\ :\ 2;}
+\DoxyCodeLine{00296\ \ \ \ \ rw8\ STOP\ :\ 1;}
+\DoxyCodeLine{00297\ \ \ \ \ rw8\ PARITY\_EN\ :\ 1;}
+\DoxyCodeLine{00298\ \ \ \ \ rw8\ EVEN\_PARITY\ :\ 1;}
+\DoxyCodeLine{00299\ \ \ \ \ rw8\ SET\_PARITY\ :\ 1;}
+\DoxyCodeLine{00300\ \ \ \ \ rw8\ SET\_BREAK\ :\ 1;}
+\DoxyCodeLine{00301\ \ \ \ \ rw8\ DIVISOR\_LATCH\_EN\ :\ 1;}
+\DoxyCodeLine{00302\ )}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00308\ DEF\_SC16IS7xx\_REG(MCR,}
+\DoxyCodeLine{00309\ \ \ \ \ ro8\ :\ 1;}
+\DoxyCodeLine{00310\ \ \ \ \ rw8\ nRTS\ :\ 1;}
+\DoxyCodeLine{00311\ \ \ \ \ rw8\ TCR\_TLR\_EN\ :\ 1;}
+\DoxyCodeLine{00312\ \ \ \ \ ro8\ :\ 1;}
+\DoxyCodeLine{00313\ \ \ \ \ rw8\ LOOPBACK\_EN\ :\ 1;}
+\DoxyCodeLine{00314\ \ \ \ \ rw8\ XON\_ANY\ :\ 1;}
+\DoxyCodeLine{00315\ \ \ \ \ rw8\ IRDA\_MODE\_EN\ :\ 1;}
+\DoxyCodeLine{00316\ \ \ \ \ rw8\ CLOCK\_DIVISOR\ :\ 1;}
+\DoxyCodeLine{00317\ )}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00323\ DEF\_SC16IS7xx\_REG(LSR,}
+\DoxyCodeLine{00324\ \ \ \ \ ro8\ DATA\_IN\_RECVR\ :\ 1;}
+\DoxyCodeLine{00325\ \ \ \ \ ro8\ OVERRUN\_ERROR\ :\ 1;}
+\DoxyCodeLine{00326\ \ \ \ \ ro8\ PARITY\_ERROR\ :\ 1;}
+\DoxyCodeLine{00327\ \ \ \ \ ro8\ FRAMING\_ERROR\ :\ 1;}
+\DoxyCodeLine{00328\ \ \ \ \ ro8\ BREAK\_INT\ :\ 1;}
+\DoxyCodeLine{00329\ \ \ \ \ ro8\ THR\_EMPTY\ :\ 1;}
+\DoxyCodeLine{00330\ \ \ \ \ ro8\ THR\_TSR\_EMPTY\ :\ 1;}
+\DoxyCodeLine{00331\ \ \ \ \ ro8\ FIFO\_DATA\_ERROR\ :\ 1;}
+\DoxyCodeLine{00332\ )}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00338\ DEF\_SC16IS7xx\_REG(MSR,}
+\DoxyCodeLine{00339\ \ \ \ \ ro8\ DELTA\_CTS\ :\ 1;}
+\DoxyCodeLine{00340\ \ \ \ \ ro8\ :\ 3;}
+\DoxyCodeLine{00341\ \ \ \ \ ro8\ CTS\ :\ 1;}
+\DoxyCodeLine{00342\ \ \ \ \ ro8\ :\ 3;}
+\DoxyCodeLine{00343\ )}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00349\ DEF\_SC16IS7xx\_REG(SPR,}
+\DoxyCodeLine{00350\ \ \ \ \ rw8\ DATA;}
+\DoxyCodeLine{00351\ )}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00357\ DEF\_SC16IS7xx\_REG(UARTRST,}
+\DoxyCodeLine{00358\ \ \ \ \ ro8\ :\ 3;}
+\DoxyCodeLine{00359\ \ \ \ \ rw8\ UART\_SWRST\ :\ 1;}
+\DoxyCodeLine{00360\ )}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00366\ DEF\_SC16IS7xx\_REG(EFCR,}
+\DoxyCodeLine{00367\ \ \ \ \ rw8\ MODE\_9BIT\_EN\ :\ 1;}
+\DoxyCodeLine{00368\ \ \ \ \ rw8\ RECVR\_DISABLE\ :\ 1;}
+\DoxyCodeLine{00369\ \ \ \ \ rw8\ TRANSMITTER\_DISABLE\ :\ 1;}
+\DoxyCodeLine{00370\ \ \ \ \ ro8\ :\ 1;}
+\DoxyCodeLine{00371\ \ \ \ \ rw8\ AUTO\_RS\_485\_RTS\_DIR\_CTRL\ :\ 1;}
+\DoxyCodeLine{00372\ \ \ \ \ rw8\ AUTO\_RS\_485\_RTS\_OUTPUT\_INV\ :\ 1;}
+\DoxyCodeLine{00373\ \ \ \ \ ro8\ :\ 1;}
+\DoxyCodeLine{00374\ \ \ \ \ rw8\ IRDA\_MODE\ :\ 1;}
+\DoxyCodeLine{00375\ )}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00381\ DEF\_SC16IS7xx\_REG(TLR,}
+\DoxyCodeLine{00382\ \ \ \ \ rw8\ TX\_TRIGGER\_LVL\ :\ 4;}
+\DoxyCodeLine{00383\ \ \ \ \ rw8\ RX\_TRIGGER\_LVL\ :\ 4;}
+\DoxyCodeLine{00384\ )}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00390\ DEF\_SC16IS7xx\_REG(EFR,\ }
+\DoxyCodeLine{00391\ \ \ \ \ rw8\ SWFLOW\_CTRL\ :\ 4;}
+\DoxyCodeLine{00392\ \ \ \ \ rw8\ ENHANCED\_FNS\_EN\ :\ 1;}
+\DoxyCodeLine{00393\ \ \ \ \ rw8\ SPECIAL\_CHAR\_DETECT\ :\ 1;}
+\DoxyCodeLine{00394\ \ \ \ \ rw8\ AUTO\_nRTS\ :\ 1;}
+\DoxyCodeLine{00395\ \ \ \ \ rw8\ AUTO\_nCTS\ :\ 1;}
+\DoxyCodeLine{00396\ )}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \#pragma\ endregion}
+\DoxyCodeLine{00399\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \#ifdef\ \_\_cplusplus}
+\DoxyCodeLine{00403\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00404\ \{}
+\DoxyCodeLine{00405\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00411\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a828934bda4ffacd5a3f8300f7bab356f}{SC16IS7xx\_start}}();}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00413\ }
+\DoxyCodeLine{00417\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_adada1b94043722438018bc74f784c81f}{SC16IS7xx\_enableIrqMode}}();}
+\DoxyCodeLine{00418\ }
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00423\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a8ccfb7663d4ca7cee5335eb97f06e9ab}{SC16IS7xx\_isAvailable}}();}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00431\ uint8\_t\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a209d8785c37ccbc531eb37a73feb60a8}{SC16IS7xx\_readReg}}(uint8\_t\ reg\_addr);}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00439\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a69ada6721796577cc4910900f5273118}{SC16IS7xx\_writeReg}}(uint8\_t\ reg\_addr,\ uint8\_t\ reg\_data);}
+\DoxyCodeLine{00440\ }
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00447\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a13241994787ce057d96658b47366d76f}{SC16IS7xx\_read}}(\textcolor{keywordtype}{void}*\ dest,\ uint8\_t\ dest\_len);}
+\DoxyCodeLine{00448\ }
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00455\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a6292427dfbc749bc8e12fadb16b7f25d}{SC16IS7xx\_write}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ src,\ uint8\_t\ src\_len);}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00462\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a146c0f112933b81e851f398746a06e6c}{SC16IS7xx\_resetFifo}}(\mbox{\hyperlink{ltemc-nxp-sc16is_8h_a80dca3b6c9389349664cb818df639eb3}{sc16IS7xx\_FifoResetAction\_t}}\ resetAction);}
+\DoxyCodeLine{00463\ }
+\DoxyCodeLine{00464\ }
+\DoxyCodeLine{00465\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af179c6e75e2190c69a232d478de1ce98}{SC16IS7xx\_sendBreak}}();}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00471\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_af40dfcf2e05c938cba3c9744491b330c}{SC16IS7xx\_flushRxFifo}}();}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00473\ }
+\DoxyCodeLine{00477\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-nxp-sc16is_8h_a6333f649741936c484fa1a7fa3c96859}{SC16IS7xx\_\_displayFifoStatus}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *dispMsg);}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ }
+\DoxyCodeLine{00480\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00481\ \}}
+\DoxyCodeLine{00482\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{00483\ }
+\DoxyCodeLine{00484\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_LTEMC\_NXP\_SC16IS\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

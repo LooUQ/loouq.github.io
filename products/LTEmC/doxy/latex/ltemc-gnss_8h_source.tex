@@ -1,0 +1,59 @@
+\hypertarget{ltemc-gnss_8h_source}{}\doxysection{ltemc-\/gnss.h}
+\label{ltemc-gnss_8h_source}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/gnss.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/gnss.h}}
+\mbox{\hyperlink{ltemc-gnss_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ \_\_LTEMC\_GNSS\_H\_\_}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ \_\_LTEMC\_GNSS\_H\_\_}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{ltemc-gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa2be7b41c6412b0d4e8a20b25d882ef91}{gnss\_format\_dms}}\ =\ 0,\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{ltemc-gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa5ae188cff5324e72f416cb9d0c7ff983}{gnss\_format\_dmsPrecise}}\ =\ 1,\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{ltemc-gnss_8h_a46b97d6f8fb57adfb8286e47f114254fa9af098c45656fbc2d248c4f2283be453}{gnss\_format\_dcmDegrees}}\ =\ 2\ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \}\ \mbox{\hyperlink{ltemc-gnss_8h_a46b97d6f8fb57adfb8286e47f114254f}{gnss\_format\_t}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structgnss__latlon__tag}{gnss\_latlon\_tag}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structgnss__latlon__tag_a3c8bc0bb4f045bfe78d1196cb786792c}{val}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structgnss__latlon__tag_afc966782c25222ee96a1bdd1d4b360f8}{dir}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \}\ \mbox{\hyperlink{ltemc-gnss_8h_a7fb5f996ad0280dea37f6c01720ec081}{gnss\_latlon\_t}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structgnss_location__tag}{gnssLocation\_tag}}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structgnss_location__tag_a6ae8d28098d79f0dcb73395e7d2698df}{utc}}[11];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{structgnss__latlon__tag}{gnss\_latlon\_t}}\ \mbox{\hyperlink{structgnss_location__tag_a02a69dc037237e8b7e078e07108a4f35}{lat}};\ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{structgnss__latlon__tag}{gnss\_latlon\_t}}\ \mbox{\hyperlink{structgnss_location__tag_a5c655e2b8eff4c0c4d3a3a6daa8b7d4f}{lon}};\ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structgnss_location__tag_a7ede759392ed439219bdbac4c8ede827}{hdop}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structgnss_location__tag_a2b13d276aee0d9fd646c8fa3647e869b}{altitude}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structgnss_location__tag_aa04398e6b3b3d95a5cdca3b2d816062d}{fixType}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structgnss_location__tag_acaa2fde7e3fad7df8f5755347603d17b}{course}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structgnss_location__tag_ae0962fef9bfddefc9440afc8f6ef33d1}{speedkm}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structgnss_location__tag_aa1de6861ea631ed59dd15f99a59ca500}{speedkn}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structgnss_location__tag_ad217ba16d0b42c0e3c986247572e9ec8}{date}}[7];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structgnss_location__tag_aaf5c2a56263f9ac50dbd2e77755bf528}{nsat}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structgnss_location__tag_ade31e7fd99344e8c35f2c373af659551}{statusCode}};\ \ \ \ }
+\DoxyCodeLine{00069\ \}\ \mbox{\hyperlink{ltemc-gnss_8h_a7208b78f87202cf33a6c2f6dc64cf4b1}{gnssLocation\_t}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00073\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ resultCode\_t\ \mbox{\hyperlink{ltemc-gnss_8h_a8743198221b51ffe544bd16ecfe22ab7}{gnss\_on}}();\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ AT+QGPS=1}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ resultCode\_t\ \mbox{\hyperlink{ltemc-gnss_8h_ad88660fe85512a86a06c88650457c210}{gnss\_off}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \mbox{\hyperlink{structgnss_location__tag}{gnssLocation\_t}}\ \mbox{\hyperlink{ltemc-gnss_8h_a9413e5c78c4efb1aa3ae5daebad7bd46}{gnss\_getLocation}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00097\ \}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ !\_\_LTEMC\_GNSS\_H\_\_}}
+
+\end{DoxyCode}

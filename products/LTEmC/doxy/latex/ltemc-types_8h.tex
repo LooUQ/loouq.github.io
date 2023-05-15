@@ -1,0 +1,431 @@
+\hypertarget{ltemc-types_8h}{}\doxysection{C\+:/\+Users/\+Greg\+Terrell/\+Documents/\+Code\+Dev/\+Arduino/libraries/\+Loo\+UQ-\/\+LTEm\+C/src/ltemc-\/types.h File Reference}
+\label{ltemc-types_8h}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/types.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/types.h}}
+
+
+Public API type definitions for consumption of LTEmC services.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$lq-\/types.\+h$>$}\newline
+{\ttfamily \#include $<$lq-\/c\+Buffer.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structltem_pin_config__tag}{ltem\+Pin\+Config\+\_\+tag}}
+\item 
+struct \mbox{\hyperlink{structmodem_settings__tag}{modem\+Settings\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct holding cellular and radio settings. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmodem_info__tag}{modem\+Info\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct holding information about the physical BGx module. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnetwork_info__tag}{network\+Info\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct representing the state of active PDP contexts (aka\+: APN or data context). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structprovider_info__tag}{provider\+Info\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct respresenting an ACTIVE network carrier/operator. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstream_ctrl__tag}{stream\+Ctrl\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Base struct containing common properties required of a stream control. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structiop__tag}{iop\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structatcmd__tag}{atcmd\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Structure to control invocation and management of an AT command with the BGx module. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structatcmd_result__tag}{atcmd\+Result\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Result structure returned from a action request (await or get). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtls_options__tag}{tls\+Options\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Return struct for get TLC information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_ad3b91e24560d61f634daec7e228530c6}\label{ltemc-types_8h_ad3b91e24560d61f634daec7e228530c6}} 
+\#define {\bfseries NTWK\+\_\+\+PROVIDER\+\_\+\+RAT\+\_\+\+AUTO}~\char`\"{}00\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a1c7074a404836f36c43f36f1f209eca2}\label{ltemc-types_8h_a1c7074a404836f36c43f36f1f209eca2}} 
+\#define {\bfseries NTWK\+\_\+\+PROVIDER\+\_\+\+RAT\+\_\+\+GSM}~\char`\"{}01\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_ae5e2c5b72b7a0d16aaa9ac7cf7bbb3b3}\label{ltemc-types_8h_ae5e2c5b72b7a0d16aaa9ac7cf7bbb3b3}} 
+\#define {\bfseries NTWK\+\_\+\+PROVIDER\+\_\+\+RAT\+\_\+\+M1}~\char`\"{}02\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a629352fb46606de56e517364fbbfde1c}\label{ltemc-types_8h_a629352fb46606de56e517364fbbfde1c}} 
+\#define {\bfseries NTWK\+\_\+\+PROVIDER\+\_\+\+RAT\+\_\+\+NB}~\char`\"{}03\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_afa5d04bd78ffbcd2ea9bac8ede5d567f}\label{ltemc-types_8h_afa5d04bd78ffbcd2ea9bac8ede5d567f}} 
+\#define {\bfseries PDP\+\_\+\+PROTOCOL\+\_\+\+IPV4}~\char`\"{}IP\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a47edb124e7bf9a57268184196cbf87c0}\label{ltemc-types_8h_a47edb124e7bf9a57268184196cbf87c0}} 
+\#define {\bfseries PDP\+\_\+\+PROTOCOL\+\_\+\+IPV6}~\char`\"{}IPV6\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_adfcb606f620a83c083d24fb5a3d9d102}\label{ltemc-types_8h_adfcb606f620a83c083d24fb5a3d9d102}} 
+\#define {\bfseries PDP\+\_\+\+PROTOCOL\+\_\+\+IPV4\+V6}~\char`\"{}IPV4\+V6\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a81ddabe8434b8ae650e64c7c62b8cf3f}\label{ltemc-types_8h_a81ddabe8434b8ae650e64c7c62b8cf3f}} 
+\#define {\bfseries PDP\+\_\+\+PROTOCOL\+\_\+\+PPP}~\char`\"{}PPP\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_afa6106fd20175dab26f9dffe61be58b4}\label{ltemc-types_8h_afa6106fd20175dab26f9dffe61be58b4}} 
+\#define {\bfseries STREAM\+\_\+\+UDP}~\char`\"{}UDP\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a18220fb57a65065e7fdf7f4ce53d4417}\label{ltemc-types_8h_a18220fb57a65065e7fdf7f4ce53d4417}} 
+\#define {\bfseries STREAM\+\_\+\+TCP}~\char`\"{}TCP\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_ad37e591831c2c40892e6e3e5aeeeff48}\label{ltemc-types_8h_ad37e591831c2c40892e6e3e5aeeeff48}} 
+\#define {\bfseries STREAM\+\_\+\+SSL}~\char`\"{}SSL\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_ab28ace352f6f2491002a2992aed13b37}\label{ltemc-types_8h_ab28ace352f6f2491002a2992aed13b37}} 
+\#define {\bfseries STREAM\+\_\+\+MQTT}~\char`\"{}MQTT\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_af343323e8079365cf257b32c1c934ee8}\label{ltemc-types_8h_af343323e8079365cf257b32c1c934ee8}} 
+\#define {\bfseries STREAM\+\_\+\+HTTP}~\char`\"{}HTTP\char`\"{}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a85e7f427bdc394b9f01ce36483c18b05}\label{ltemc-types_8h_a85e7f427bdc394b9f01ce36483c18b05}} 
+\#define {\bfseries STREAM\+\_\+\+\_\+\+CNT}~6
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_af9f11b7ed55a6d2cdabcde7844b218f6}\label{ltemc-types_8h_af9f11b7ed55a6d2cdabcde7844b218f6}} 
+\#define {\bfseries STREAM\+\_\+\+FILE}~\char`\"{}FILE\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a179aa93a99cd81e3a0f037bd9f07d70e}\label{ltemc-types_8h_a179aa93a99cd81e3a0f037bd9f07d70e}} 
+typedef struct \mbox{\hyperlink{structltem_pin_config__tag}{ltem\+Pin\+Config\+\_\+tag}} {\bfseries ltem\+Pin\+Config\+\_\+t}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_aa8cc0cd14abcf26157f9aae9974e9643}\label{ltemc-types_8h_aa8cc0cd14abcf26157f9aae9974e9643}} 
+typedef enum \mbox{\hyperlink{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1}{device\+State\+\_\+tag}} {\bfseries device\+State\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enum describing the current device/module state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}\label{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}} 
+typedef enum \mbox{\hyperlink{ltemc-types_8h_a60771942fe81f8ea2900e2b8242e3b7a}{data\+Cntxt\+\_\+tag}} {\bfseries data\+Cntxt\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enum of the available data\+Cntxt indexes for BGx (only SSL/\+TLS capable contexts are supported). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a70850dfb65782ccd8ec681deb092b22c}\label{ltemc-types_8h_a70850dfb65782ccd8ec681deb092b22c}} 
+typedef void($\ast$ {\bfseries do\+Work\+\_\+func}) ()
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_ae460ece804bee37f9c266a252f035906}\label{ltemc-types_8h_ae460ece804bee37f9c266a252f035906}} 
+typedef void($\ast$ {\bfseries power\+Save\+Callback\+\_\+func}) (uint8\+\_\+t new\+Power\+Save\+State)
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a8e9d1f53c1e7c1c59f08200324201cc2}\label{ltemc-types_8h_a8e9d1f53c1e7c1c59f08200324201cc2}} 
+typedef enum \mbox{\hyperlink{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0}{ntwk\+Scan\+Mode\+\_\+tag}} {\bfseries ntwk\+Scan\+Mode\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enum describing the mode the BGx module is using to look for available networks (carriers). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_ac8e908eadfb655392c2a198d9738575e}\label{ltemc-types_8h_ac8e908eadfb655392c2a198d9738575e}} 
+typedef enum \mbox{\hyperlink{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091}{ntwk\+Iot\+Mode\+\_\+tag}} {\bfseries ntwk\+Iot\+Mode\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enum describing the available options for an IoT protocol when connecting to the network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a8b858b502f4f3a91124a381d4d35fdc9}\label{ltemc-types_8h_a8b858b502f4f3a91124a381d4d35fdc9}} 
+typedef enum pdp\+Cntxt\+Auth\+Methods\+\_\+tag {\bfseries pdp\+Cntxt\+Auth\+Methods\+\_\+t}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a6d589fb3917bc5e0a677bed7624ddda3}\label{ltemc-types_8h_a6d589fb3917bc5e0a677bed7624ddda3}} 
+typedef struct \mbox{\hyperlink{structmodem_settings__tag}{modem\+Settings\+\_\+tag}} {\bfseries modem\+Settings\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Struct holding cellular and radio settings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a4d98cb161d7f9ecce35606aa98f98fd3}\label{ltemc-types_8h_a4d98cb161d7f9ecce35606aa98f98fd3}} 
+typedef struct \mbox{\hyperlink{structmodem_info__tag}{modem\+Info\+\_\+tag}} {\bfseries modem\+Info\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Struct holding information about the physical BGx module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_ae26f0ad19cc23e69b5636940bc7067d6}\label{ltemc-types_8h_ae26f0ad19cc23e69b5636940bc7067d6}} 
+typedef struct \mbox{\hyperlink{structnetwork_info__tag}{network\+Info\+\_\+tag}} {\bfseries network\+Info\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Struct representing the state of active PDP contexts (aka\+: APN or data context). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a48b1c7151c8e716c7b857586ce5d5fa5}\label{ltemc-types_8h_a48b1c7151c8e716c7b857586ce5d5fa5}} 
+typedef struct \mbox{\hyperlink{structprovider_info__tag}{provider\+Info\+\_\+tag}} {\bfseries provider\+Info\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Struct respresenting an ACTIVE network carrier/operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a5b68890a2d181735ec234557e2500251}\label{ltemc-types_8h_a5b68890a2d181735ec234557e2500251}} 
+typedef void($\ast$ {\bfseries urc\+Handler\+\_\+func}) ()
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_aa98e9691cafea97d71c3333f0e19f38d}\label{ltemc-types_8h_aa98e9691cafea97d71c3333f0e19f38d}} 
+typedef void($\ast$ {\bfseries cb\+Proto\+\_\+func}) ()
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a2e14c00a33139e42bf3f40070147a3b9}\label{ltemc-types_8h_a2e14c00a33139e42bf3f40070147a3b9}} 
+typedef result\+Code\+\_\+t($\ast$ {\bfseries stream\+Data\+Rcvr\+\_\+func}) ()
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_ad81935905b623abc9443ea6a08412229}\label{ltemc-types_8h_ad81935905b623abc9443ea6a08412229}} 
+typedef void($\ast$ {\bfseries stream\+Close\+\_\+func}) (uint8\+\_\+t cntxt\+Nm)
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}\label{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}} 
+typedef struct \mbox{\hyperlink{structstream_ctrl__tag}{stream\+Ctrl\+\_\+tag}} {\bfseries stream\+Ctrl\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Base struct containing common properties required of a stream control. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structiop__tag}{iop\+\_\+tag}} \mbox{\hyperlink{ltemc-types_8h_a1ed4c59909ec1a9a0007da89586254ff}{iop\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}\label{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}} 
+typedef enum \mbox{\hyperlink{ltemc-types_8h_aad0e841ab77e1029b26f6132e41e084d}{cmd\+Parse\+Rslt\+\_\+tag}} {\bfseries cmd\+Parse\+Rslt\+\_\+t}
+\begin{DoxyCompactList}\small\item\em AT command response parser result codes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a04591edc11b34ab2d9780add070842a2}\label{ltemc-types_8h_a04591edc11b34ab2d9780add070842a2}} 
+typedef \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}}($\ast$ {\bfseries cmd\+Response\+Parser\+\_\+func}) ()
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a46359dab5bcffab8c23b412d093ce64e}\label{ltemc-types_8h_a46359dab5bcffab8c23b412d093ce64e}} 
+typedef struct \mbox{\hyperlink{structatcmd__tag}{atcmd\+\_\+tag}} {\bfseries atcmd\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure to control invocation and management of an AT command with the BGx module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_ab9a28dd6dc94d1c92a647f1c9557d584}\label{ltemc-types_8h_ab9a28dd6dc94d1c92a647f1c9557d584}} 
+typedef struct \mbox{\hyperlink{structatcmd_result__tag}{atcmd\+Result\+\_\+tag}} {\bfseries atcmd\+Result\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Result structure returned from a action request (await or get). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a61182e3801e1f66177d95fa416341dc2}\label{ltemc-types_8h_a61182e3801e1f66177d95fa416341dc2}} 
+typedef enum \mbox{\hyperlink{ltemc-types_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}{tls\+Version\+\_\+tag}} {\bfseries tls\+Version\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enum of available SSL version options for an SSL connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_ac3c7657f825cb66b386b539e2f037b92}\label{ltemc-types_8h_ac3c7657f825cb66b386b539e2f037b92}} 
+typedef enum \mbox{\hyperlink{ltemc-types_8h_a1516baf2026fd7bb0a27180cb3ee6109}{tls\+Cipher\+\_\+tag}} {\bfseries tls\+Cipher\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enum of the available cipher suites for TLS processing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a82cad7746d9446cc276666b5de2af9aa}\label{ltemc-types_8h_a82cad7746d9446cc276666b5de2af9aa}} 
+typedef enum \mbox{\hyperlink{ltemc-types_8h_aa77d249362844b70b7730af569bb50f1}{tls\+Cert\+Expiration\+\_\+tag}} {\bfseries tls\+Cert\+Expiration\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enum of the options for certificate expiration date/time checking. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_ae881c2df83ac48f033b492b442067906}\label{ltemc-types_8h_ae881c2df83ac48f033b492b442067906}} 
+typedef enum \mbox{\hyperlink{ltemc-types_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}{tls\+Security\+Level\+\_\+tag}} {\bfseries tls\+Security\+Level\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enum of the certification validation options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a7748d21587494b057d7569aeb3be5001}\label{ltemc-types_8h_a7748d21587494b057d7569aeb3be5001}} 
+typedef struct \mbox{\hyperlink{structtls_options__tag}{tls\+Options\+\_\+tag}} {\bfseries tls\+Options\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Return struct for get TLC information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_ad77ddb3aa8fa3e278fda1de4e3f3a3ae}\label{ltemc-types_8h_ad77ddb3aa8fa3e278fda1de4e3f3a3ae}} 
+enum {\bfseries ltem\+\_\+\+\_\+constants} \{ \newline
+{\bfseries ltem\+\_\+\+\_\+buffer\+Sz\+\_\+rx} = 2000
+, {\bfseries ltem\+\_\+\+\_\+buffer\+Sz\+\_\+tx} = 1000
+, {\bfseries ltem\+\_\+\+\_\+sw\+Ver\+Sz} = 12
+, {\bfseries ltem\+\_\+\+\_\+error\+Detail\+Sz} = 18
+, \newline
+{\bfseries ltem\+\_\+\+\_\+module\+Type\+Sz} = 8
+, {\bfseries ltem\+\_\+\+\_\+stream\+Cnt} = 4
+ \}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a172f379ee1371fdf9c09579bbc3f779a}\label{ltemc-types_8h_a172f379ee1371fdf9c09579bbc3f779a}} 
+enum \mbox{\hyperlink{ltemc-types_8h_a172f379ee1371fdf9c09579bbc3f779a}{streams\+\_\+\+\_\+constants}} \{ \newline
+{\bfseries streams\+\_\+\+\_\+ctrl\+Magic} = 0x186F
+, {\bfseries streams\+\_\+\+\_\+max\+Context\+Protocols} = 5
+, {\bfseries streams\+\_\+\+\_\+type\+Code\+Sz} = 4
+, {\bfseries streams\+\_\+\+\_\+urc\+Prefixes\+Sz} = 60
+, \newline
+{\bfseries host\+\_\+\+\_\+url\+Sz} = 100
+ \}
+\begin{DoxyCompactList}\small\item\em Typed numeric constants for stream peers subsystem (sockets, mqtt, http) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1}{device\+State\+\_\+tag}} \{ {\bfseries device\+State\+\_\+power\+Off} = 0
+, \mbox{\hyperlink{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1a1201bde454b73f9fef2eeca58ee3a8e5}{device\+State\+\_\+power\+On}} = 1
+, \mbox{\hyperlink{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1a06c13036abcb1d2d6c3eb064b7ca78ee}{device\+State\+\_\+app\+Ready}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Enum describing the current device/module state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a60771942fe81f8ea2900e2b8242e3b7a}\label{ltemc-types_8h_a60771942fe81f8ea2900e2b8242e3b7a}} 
+enum \mbox{\hyperlink{ltemc-types_8h_a60771942fe81f8ea2900e2b8242e3b7a}{data\+Cntxt\+\_\+tag}} \{ \newline
+{\bfseries data\+Cntxt\+\_\+0} = 0
+, {\bfseries data\+Cntxt\+\_\+1} = 1
+, {\bfseries data\+Cntxt\+\_\+2} = 2
+, {\bfseries data\+Cntxt\+\_\+3} = 3
+, \newline
+{\bfseries data\+Cntxt\+\_\+4} = 4
+, {\bfseries data\+Cntxt\+\_\+5} = 5
+, {\bfseries data\+Cntxt\+\_\+\+\_\+cnt} = 6
+, {\bfseries data\+Cntxt\+\_\+\+\_\+none} = 255
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of the available data\+Cntxt indexes for BGx (only SSL/\+TLS capable contexts are supported). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0}{ntwk\+Scan\+Mode\+\_\+tag}} \{ {\bfseries ntwk\+Scan\+Mode\+\_\+auto} = 0U
+, \mbox{\hyperlink{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0a4947404e9e0c89361c951c4aeadf36e7}{ntwk\+Scan\+Mode\+\_\+gsmonly}} = 1U
+, \mbox{\hyperlink{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0a9187a8b84003e5658e4ce25422aad999}{ntwk\+Scan\+Mode\+\_\+lteonly}} = 3U
+ \}
+\begin{DoxyCompactList}\small\item\em Enum describing the mode the BGx module is using to look for available networks (carriers). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091}{ntwk\+Iot\+Mode\+\_\+tag}} \{ {\bfseries ntwk\+Iot\+Mode\+\_\+m1} = 0U
+, \mbox{\hyperlink{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091a61f2cada960034d2410ac66e57283b45}{ntwk\+Iot\+Mode\+\_\+nb1}} = 1U
+, \mbox{\hyperlink{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091aa7776333955db671264f4a2d70671318}{ntwk\+Iot\+Mode\+\_\+m1nb1}} = 2U
+ \}
+\begin{DoxyCompactList}\small\item\em Enum describing the available options for an IoT protocol when connecting to the network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_ac307b7b03f5f8bfcd6c9cd3875ad4dbc}\label{ltemc-types_8h_ac307b7b03f5f8bfcd6c9cd3875ad4dbc}} 
+enum \mbox{\hyperlink{ltemc-types_8h_ac307b7b03f5f8bfcd6c9cd3875ad4dbc}{ntwk}} \{ \newline
+{\bfseries ntwk\+\_\+\+\_\+pdp\+Context\+Cnt} = 4
+, {\bfseries ntwk\+\_\+\+\_\+provider\+Name\+Sz} = 20
+, {\bfseries ntwk\+\_\+\+\_\+iot\+Mode\+Name\+Sz} = 11
+, {\bfseries ntwk\+\_\+\+\_\+pdp\+Proto\+Sz} = 7
+, \newline
+{\bfseries ntwk\+\_\+\+\_\+ip\+Address\+Sz} = 40
+, {\bfseries ntwk\+\_\+\+\_\+ntwk\+Config\+Sz} = 60
+, {\bfseries ntwk\+\_\+\+\_\+imei\+Sz} = 15
+, {\bfseries ntwk\+\_\+\+\_\+iccid\+Sz} = 20
+, \newline
+{\bfseries ntwk\+\_\+\+\_\+dvc\+Fw\+Ver\+Sz} = 40
+, {\bfseries ntwk\+\_\+\+\_\+dvc\+Mfg\+Sz} = 40
+ \}
+\begin{DoxyCompactList}\small\item\em Typed numeric constants for network subsystem. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a75359f333c3d195cffe786d2025294c7}\label{ltemc-types_8h_a75359f333c3d195cffe786d2025294c7}} 
+enum {\bfseries pdp\+Cntxt\+Auth\+Methods\+\_\+tag} \{ {\bfseries pdp\+Cntxt\+Auth\+Methods\+\_\+none} = 0
+, {\bfseries pdp\+Cntxt\+Auth\+Methods\+\_\+pap} = 1
+, {\bfseries pdp\+Cntxt\+Auth\+Methods\+\_\+chap} = 2
+, {\bfseries pdp\+Cntxt\+Auth\+Methods\+\_\+pap\+Chap} = 3
+ \}
+\item 
+\mbox{\Hypertarget{ltemc-types_8h_a00e5aa3e84a24be822f6fd46336a5b3e}\label{ltemc-types_8h_a00e5aa3e84a24be822f6fd46336a5b3e}} 
+enum \mbox{\hyperlink{ltemc-types_8h_a00e5aa3e84a24be822f6fd46336a5b3e}{IOP\+\_\+\+\_\+\+Constants}} \{ \newline
+{\bfseries IOP\+\_\+\+\_\+uart\+Baud\+Rate} = 115200
+, {\bfseries IOP\+\_\+\+\_\+uart\+FIFOBuffer\+Sz} = 64
+, {\bfseries IOP\+\_\+\+\_\+uart\+FIFOFill\+Period} = (int)(1 / (double)IOP\+\_\+\+\_\+uart\+Baud\+Rate $\ast$ 10 $\ast$ IOP\+\_\+\+\_\+uart\+FIFOBuffer\+Sz $\ast$ 1000) + 1
+, {\bfseries IOP\+\_\+\+\_\+rx\+Default\+Timeout} = IOP\+\_\+\+\_\+uart\+FIFOFill\+Period $\ast$ 2
+, \newline
+{\bfseries IOP\+\_\+\+\_\+urc\+Detect\+Buffer\+Sz} = 40
+ \}
+\begin{DoxyCompactList}\small\item\em Typed numeric Input/\+Output Processor subsystem contants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a3594f53de3db832b8819598ac3ebc377}\label{ltemc-types_8h_a3594f53de3db832b8819598ac3ebc377}} 
+enum \mbox{\hyperlink{ltemc-types_8h_a3594f53de3db832b8819598ac3ebc377}{atcmd\+\_\+\+\_\+constants}} \{ \newline
+{\bfseries atcmd\+\_\+\+\_\+no\+Timeout\+Change} = 0
+, {\bfseries atcmd\+\_\+\+\_\+default\+Timeout} = 800
+, {\bfseries atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual} = 0
+, {\bfseries atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto} = 1
+, \newline
+{\bfseries atcmd\+\_\+\+\_\+cmd\+Buffer\+Sz} = 512
+, {\bfseries atcmd\+\_\+\+\_\+resp\+Buffer\+Sz} = 240
+, {\bfseries atcmd\+\_\+\+\_\+resp\+Bffr\+Shift} = atcmd\+\_\+\+\_\+resp\+Buffer\+Sz / 4
+ \}
+\begin{DoxyCompactList}\small\item\em Typed constants for AT-\/\+CMD module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_aad0e841ab77e1029b26f6132e41e084d}\label{ltemc-types_8h_aad0e841ab77e1029b26f6132e41e084d}} 
+enum \mbox{\hyperlink{ltemc-types_8h_aad0e841ab77e1029b26f6132e41e084d}{cmd\+Parse\+Rslt\+\_\+tag}} \{ \newline
+{\bfseries cmd\+Parse\+Rslt\+\_\+pending} = 0x00
+, {\bfseries cmd\+Parse\+Rslt\+\_\+preamble\+Missing} = 0x01
+, {\bfseries cmd\+Parse\+Rslt\+\_\+count\+Short} = 0x02
+, {\bfseries cmd\+Parse\+Rslt\+\_\+module\+Error} = 0x04
+, \newline
+{\bfseries cmd\+Parse\+Rslt\+\_\+success} = 0x40
+, {\bfseries cmd\+Parse\+Rslt\+\_\+error} = 0x80
+ \}
+\begin{DoxyCompactList}\small\item\em AT command response parser result codes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}\label{ltemc-types_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}} 
+enum \mbox{\hyperlink{ltemc-types_8h_a169ddf2597c67fc6e45fe6e8a5fd4f8e}{tls\+Version\+\_\+tag}} \{ \newline
+{\bfseries tls\+Version\+\_\+none} = 255
+, {\bfseries tls\+Version\+\_\+ssl30} = 0
+, {\bfseries tls\+Version\+\_\+tls10} = 1
+, {\bfseries tls\+Version\+\_\+tls11} = 2
+, \newline
+{\bfseries tls\+Version\+\_\+tls12} = 3
+, {\bfseries tls\+Version\+\_\+any} = 4
+, {\bfseries tls\+Version\+\_\+default} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of available SSL version options for an SSL connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a1516baf2026fd7bb0a27180cb3ee6109}\label{ltemc-types_8h_a1516baf2026fd7bb0a27180cb3ee6109}} 
+enum \mbox{\hyperlink{ltemc-types_8h_a1516baf2026fd7bb0a27180cb3ee6109}{tls\+Cipher\+\_\+tag}} \{ \newline
+{\bfseries tls\+Cipher\+\_\+rsa\+Aes256\+Cbc\+Sha} = 0X0035
+, {\bfseries tls\+Cipher\+\_\+rsa\+Aes128\+Cbc\+Sha} = 0X002F
+, {\bfseries tls\+Cipher\+\_\+rsa\+Rc4128\+Sha} = 0x0005
+, {\bfseries tls\+Cipher\+\_\+rsa\+Rc4128\+Md5} = 0x0004
+, \newline
+{\bfseries tls\+Cipher\+\_\+rsa3des\+Ede\+Cbc\+Sha} = 0x000A
+, {\bfseries tls\+Cipher\+\_\+rsa\+Aes256\+Cbc\+Sha256} = 0x003D
+, {\bfseries tls\+Cipher\+\_\+ecdhe\+Rsa\+Rc4128\+Sha} = 0x\+C011
+, {\bfseries tls\+Cipher\+\_\+ecdhe\+Rsa3des\+Ede\+Cbc\+Sha} = 0x\+C012
+, \newline
+{\bfseries tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes128\+Cbc\+Sha} = 0x\+C013
+, {\bfseries tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes256\+Cbc\+Sha} = 0x\+C014
+, {\bfseries tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes128\+Cbc\+Sha256} = 0x\+C027
+, {\bfseries tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes256\+Cbc\+Sha384} = 0x\+C028
+, \newline
+{\bfseries tls\+Cipher\+\_\+ecdhe\+Rsa\+Aes128\+Gcm\+Sha256} = 0x\+C02F
+, {\bfseries tls\+Cipher\+\_\+any} = 0x\+FFFF
+, {\bfseries tls\+Cipher\+\_\+default} = 0x\+FFFF
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of the available cipher suites for TLS processing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_aa77d249362844b70b7730af569bb50f1}\label{ltemc-types_8h_aa77d249362844b70b7730af569bb50f1}} 
+enum \mbox{\hyperlink{ltemc-types_8h_aa77d249362844b70b7730af569bb50f1}{tls\+Cert\+Expiration\+\_\+tag}} \{ {\bfseries tls\+Cert\+Expiration\+\_\+check} = 0
+, {\bfseries tls\+Cert\+Expiration\+\_\+ignore} = 1
+, {\bfseries tls\+Cert\+Expiration\+\_\+default} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of the options for certificate expiration date/time checking. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}\label{ltemc-types_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}} 
+enum \mbox{\hyperlink{ltemc-types_8h_a4cce55df07f0dae3c4ece5bbc11a7e2a}{tls\+Security\+Level\+\_\+tag}} \{ {\bfseries tls\+Security\+Level\+\_\+no\+Authentication} = 0
+, {\bfseries tls\+Security\+Level\+\_\+server\+Authentication} = 1
+, {\bfseries tls\+Security\+Level\+\_\+server\+Client\+Authentication} = 2
+, {\bfseries tls\+Security\+Level\+\_\+default} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of the certification validation options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Public API type definitions for consumption of LTEmC services. 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Greg Terrell, Loo\+UQ Incorporated
+\end{DoxyAuthor}
+{\bfseries{Loo\+UQ Incorporated}}~\newline
+\href{mailto:answers@loouq.com}{\texttt{ answers@loouq.\+com}}~\newline
+807 Airport Access Road, Suite 201, Traverse City, MI 49686 USA~\newline
+~\newline
+Copyright (c) 2020-\/2023 Loo\+UQ Incorporated.~\newline
+This project is released under the GPL-\/3.\+0 License.
+
+\DoxyHorRuler{0}
+ \begin{DoxyVerb}This project is released under the GPL-3.0 License.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ltemc-types_8h_a1ed4c59909ec1a9a0007da89586254ff}\label{ltemc-types_8h_a1ed4c59909ec1a9a0007da89586254ff}} 
+\index{ltemc-\/types.h@{ltemc-\/types.h}!iop\_t@{iop\_t}}
+\index{iop\_t@{iop\_t}!ltemc-\/types.h@{ltemc-\/types.h}}
+\doxysubsubsection{\texorpdfstring{iop\_t}{iop\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structiop__tag}{iop\+\_\+tag}} \mbox{\hyperlink{ltemc-types_8h_a1ed4c59909ec1a9a0007da89586254ff}{iop\+\_\+t}}}
+
+
+
+Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. 
+
+Each of the protocols (sockets, MQTT, HTTP) have unique behaviors\+: sockets receive asynchronous alerts but the data receive process is fully synchronous, HTTP is synchronous on receive tied to page read, MQTT is fully asynchronous with msg event receive signaling and data transfer taking place async behind the scenes initiated on interrupt. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1}\label{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1}} 
+\index{ltemc-\/types.h@{ltemc-\/types.h}!deviceState\_tag@{deviceState\_tag}}
+\index{deviceState\_tag@{deviceState\_tag}!ltemc-\/types.h@{ltemc-\/types.h}}
+\doxysubsubsection{\texorpdfstring{deviceState\_tag}{deviceState\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1}{device\+State\+\_\+tag}}}
+
+
+
+Enum describing the current device/module state. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{deviceState\_powerOn@{deviceState\_powerOn}!ltemc-\/types.h@{ltemc-\/types.h}}\index{ltemc-\/types.h@{ltemc-\/types.h}!deviceState\_powerOn@{deviceState\_powerOn}}}\mbox{\Hypertarget{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1a1201bde454b73f9fef2eeca58ee3a8e5}\label{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1a1201bde454b73f9fef2eeca58ee3a8e5}} 
+device\+State\+\_\+power\+On&BGx is powered off, in this state all components on the LTEm1 are powered down. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{deviceState\_appReady@{deviceState\_appReady}!ltemc-\/types.h@{ltemc-\/types.h}}\index{ltemc-\/types.h@{ltemc-\/types.h}!deviceState\_appReady@{deviceState\_appReady}}}\mbox{\Hypertarget{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1a06c13036abcb1d2d6c3eb064b7ca78ee}\label{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1a06c13036abcb1d2d6c3eb064b7ca78ee}} 
+device\+State\+\_\+app\+Ready&BGx is powered ON, while powered on the BGx may not be able to interact fully with the host application. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091}\label{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091}} 
+\index{ltemc-\/types.h@{ltemc-\/types.h}!ntwkIotMode\_tag@{ntwkIotMode\_tag}}
+\index{ntwkIotMode\_tag@{ntwkIotMode\_tag}!ltemc-\/types.h@{ltemc-\/types.h}}
+\doxysubsubsection{\texorpdfstring{ntwkIotMode\_tag}{ntwkIotMode\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091}{ntwk\+Iot\+Mode\+\_\+tag}}}
+
+
+
+Enum describing the available options for an IoT protocol when connecting to the network. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ntwkIotMode\_nb1@{ntwkIotMode\_nb1}!ltemc-\/types.h@{ltemc-\/types.h}}\index{ltemc-\/types.h@{ltemc-\/types.h}!ntwkIotMode\_nb1@{ntwkIotMode\_nb1}}}\mbox{\Hypertarget{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091a61f2cada960034d2410ac66e57283b45}\label{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091a61f2cada960034d2410ac66e57283b45}} 
+ntwk\+Iot\+Mode\+\_\+nb1&CAT-\/\+M1 only mode\+: BGx is filtering visible networks and only considering CAT-\/\+M1 connections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ntwkIotMode\_m1nb1@{ntwkIotMode\_m1nb1}!ltemc-\/types.h@{ltemc-\/types.h}}\index{ltemc-\/types.h@{ltemc-\/types.h}!ntwkIotMode\_m1nb1@{ntwkIotMode\_m1nb1}}}\mbox{\Hypertarget{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091aa7776333955db671264f4a2d70671318}\label{ltemc-types_8h_a4527d99ad5b063bf68d2b906b327d091aa7776333955db671264f4a2d70671318}} 
+ntwk\+Iot\+Mode\+\_\+m1nb1&NB-\/\+IOT only mode\+: BGx is filtering visible networks and only considering NB-\/\+IOT connections. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0}\label{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0}} 
+\index{ltemc-\/types.h@{ltemc-\/types.h}!ntwkScanMode\_tag@{ntwkScanMode\_tag}}
+\index{ntwkScanMode\_tag@{ntwkScanMode\_tag}!ltemc-\/types.h@{ltemc-\/types.h}}
+\doxysubsubsection{\texorpdfstring{ntwkScanMode\_tag}{ntwkScanMode\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0}{ntwk\+Scan\+Mode\+\_\+tag}}}
+
+
+
+Enum describing the mode the BGx module is using to look for available networks (carriers). 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ntwkScanMode\_gsmonly@{ntwkScanMode\_gsmonly}!ltemc-\/types.h@{ltemc-\/types.h}}\index{ltemc-\/types.h@{ltemc-\/types.h}!ntwkScanMode\_gsmonly@{ntwkScanMode\_gsmonly}}}\mbox{\Hypertarget{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0a4947404e9e0c89361c951c4aeadf36e7}\label{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0a4947404e9e0c89361c951c4aeadf36e7}} 
+ntwk\+Scan\+Mode\+\_\+gsmonly&BGx is considering either GSM or LTE carrier connections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ntwkScanMode\_lteonly@{ntwkScanMode\_lteonly}!ltemc-\/types.h@{ltemc-\/types.h}}\index{ltemc-\/types.h@{ltemc-\/types.h}!ntwkScanMode\_lteonly@{ntwkScanMode\_lteonly}}}\mbox{\Hypertarget{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0a9187a8b84003e5658e4ce25422aad999}\label{ltemc-types_8h_a4234fd0b44d212dc202fc188290bcab0a9187a8b84003e5658e4ce25422aad999}} 
+ntwk\+Scan\+Mode\+\_\+lteonly&GSM only mode\+: BGx is filtering visible networks and only considering connections to GSM endpoints. \\
+\hline
+
+\end{DoxyEnumFields}

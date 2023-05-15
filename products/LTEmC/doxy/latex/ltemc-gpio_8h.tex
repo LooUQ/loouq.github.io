@@ -1,0 +1,185 @@
+\hypertarget{ltemc-gpio_8h}{}\doxysection{C\+:/\+Users/\+Greg\+Terrell/\+Documents/\+Code\+Dev/\+Arduino/libraries/\+Loo\+UQ-\/\+LTEm\+C/src/ltemc-\/gpio.h File Reference}
+\label{ltemc-gpio_8h}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/gpio.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/gpio.h}}
+{\ttfamily \#include \char`\"{}ltemc.\+h\char`\"{}}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ltemc-gpio_8h_acaec18ecd4aa4ceb3f00ced8126276cb}\label{ltemc-gpio_8h_acaec18ecd4aa4ceb3f00ced8126276cb}} 
+typedef enum gpio\+Action\+Mode\+\_\+tag {\bfseries gpio\+Action\+Mode\+\_\+tag}
+\item 
+\mbox{\Hypertarget{ltemc-gpio_8h_a43946460a0310d0f38a1fda4014156fa}\label{ltemc-gpio_8h_a43946460a0310d0f38a1fda4014156fa}} 
+typedef enum gpio\+Direction\+\_\+tag {\bfseries gpio\+Direction\+\_\+t}
+\item 
+\mbox{\Hypertarget{ltemc-gpio_8h_a774a4f97bea60563bac7f21c36c707b0}\label{ltemc-gpio_8h_a774a4f97bea60563bac7f21c36c707b0}} 
+typedef enum gpio\+Pull\+\_\+tag {\bfseries gpio\+Pull\+\_\+t}
+\item 
+\mbox{\Hypertarget{ltemc-gpio_8h_a7f452180dd558daac7a354aae7a87e19}\label{ltemc-gpio_8h_a7f452180dd558daac7a354aae7a87e19}} 
+typedef enum gpio\+Pull\+Drive\+\_\+tag {\bfseries gpio\+Pull\+Drive\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ltemc-gpio_8h_a32b2a33e92b6766e86280dc0a4cf5a0e}\label{ltemc-gpio_8h_a32b2a33e92b6766e86280dc0a4cf5a0e}} 
+enum {\bfseries gpio\+\_\+\+\_\+constants} \{ {\bfseries gpio\+\_\+\+\_\+\+BG77\+\_\+\+\_\+max\+Pin} = 9
+, {\bfseries adc\+\_\+\+\_\+\+BG77\+\_\+\+\_\+max\+Pin} = 2
+, {\bfseries gpio\+\_\+\+\_\+\+LTEM3\+F\+\_\+\+\_\+max\+Pin} = 6
+, {\bfseries adc\+\_\+\+\_\+\+LTEM3\+F\+\_\+\+\_\+max\+Pin} = 2
+ \}
+\item 
+\mbox{\Hypertarget{ltemc-gpio_8h_ad531862a4671f7cc4fdb72037f5f0d42}\label{ltemc-gpio_8h_ad531862a4671f7cc4fdb72037f5f0d42}} 
+enum {\bfseries gpio\+Action\+Mode\+\_\+tag} \{ {\bfseries gpio\+Action\+Mode\+\_\+init} = 1
+, {\bfseries gpio\+Action\+Mode\+\_\+read} = 2
+, {\bfseries gpio\+Action\+Mode\+\_\+write} = 3
+ \}
+\item 
+\mbox{\Hypertarget{ltemc-gpio_8h_a70123a63dc2443e57b8f112e92a19559}\label{ltemc-gpio_8h_a70123a63dc2443e57b8f112e92a19559}} 
+enum {\bfseries gpio\+Direction\+\_\+tag} \{ {\bfseries gpio\+Direction\+\_\+input} = 0
+, {\bfseries gpio\+Direction\+\_\+output} = 1
+ \}
+\item 
+\mbox{\Hypertarget{ltemc-gpio_8h_a38199c64e54adfa320005fd7dac19074}\label{ltemc-gpio_8h_a38199c64e54adfa320005fd7dac19074}} 
+enum {\bfseries gpio\+Pull\+\_\+tag} \{ \newline
+{\bfseries gpio\+Pull\+\_\+none} = 0
+, {\bfseries gpio\+Pull\+\_\+down} = 1
+, {\bfseries gpio\+Pull\+\_\+up} = 3
+, {\bfseries gpio\+Pull\+\_\+no\+Change} = 2
+, \newline
+{\bfseries gpio\+Pull\+\_\+\+NA} = 255
+ \}
+\item 
+\mbox{\Hypertarget{ltemc-gpio_8h_a94e92f24b29a70d0cb5f9932f6da45d6}\label{ltemc-gpio_8h_a94e92f24b29a70d0cb5f9932f6da45d6}} 
+enum {\bfseries gpio\+Pull\+Drive\+\_\+tag} \{ \newline
+{\bfseries gpio\+Pull\+Drive\+\_\+2mA} = 0
+, {\bfseries gpio\+Pull\+Drive\+\_\+4mA} = 1
+, {\bfseries gpio\+Pull\+Drive\+\_\+6mA} = 2
+, {\bfseries gpio\+Pull\+Drive\+\_\+8mA} = 3
+, \newline
+{\bfseries gpio\+Pull\+Drive\+\_\+10mA} = 4
+, {\bfseries gpio\+Pull\+Drive\+\_\+12mA} = 5
+, {\bfseries gpio\+Pull\+Drive\+\_\+14mA} = 6
+, {\bfseries gpio\+Pull\+Drive\+\_\+16mA} = 7
+, \newline
+{\bfseries gpio\+Pull\+Drive\+\_\+\+NA} = 255
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-gpio_8h_aa0fe0c9d7bdd5c6b40d2696fdfe61f98}{gpio\+\_\+adc\+Read}} (uint8\+\_\+t port\+Number, uint16\+\_\+t $\ast$analog\+Value)
+\begin{DoxyCompactList}\small\item\em Read valule of ADC interface. \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-gpio_8h_ab965e34a1738d3ecd7983b1d4b5ee370}{gpio\+\_\+config\+Port}} (uint8\+\_\+t port\+Number, gpio\+Direction\+\_\+t direction, gpio\+Pull\+\_\+t pull\+Type, gpio\+Pull\+Drive\+\_\+t pull\+Drive\+Current)
+\begin{DoxyCompactList}\small\item\em Configure a GPIO port for intended use. \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-gpio_8h_a239429300c8fc833e90f836f9f72bc96}{gpio\+\_\+read}} (uint8\+\_\+t port\+Number, bool $\ast$pin\+Value)
+\begin{DoxyCompactList}\small\item\em Read digitial value from a GPIO port. \end{DoxyCompactList}\item 
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-gpio_8h_a795870e98d854b25523a40bb5f35c53b}{gpio\+\_\+write}} (uint8\+\_\+t port\+Number, bool pin\+Value)
+\begin{DoxyCompactList}\small\item\em Write digital value from to GPIO port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Greg Terrell, Loo\+UQ Incorporated
+\end{DoxyAuthor}
+{\bfseries{Loo\+UQ Incorporated}}~\newline
+\href{mailto:answers@loouq.com}{\texttt{ answers@loouq.\+com}}~\newline
+807 Airport Access Road, Suite 201, Traverse City, MI 49686 USA~\newline
+~\newline
+Copyright (c) 2020-\/2023 Loo\+UQ Incorporated.~\newline
+This project is released under the GPL-\/3.\+0 License.
+
+\DoxyHorRuler{0}
+ \begin{DoxyVerb}This project is released under the GPL-3.0 License.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc-gpio_8h_aa0fe0c9d7bdd5c6b40d2696fdfe61f98}\label{ltemc-gpio_8h_aa0fe0c9d7bdd5c6b40d2696fdfe61f98}} 
+\index{ltemc-\/gpio.h@{ltemc-\/gpio.h}!gpio\_adcRead@{gpio\_adcRead}}
+\index{gpio\_adcRead@{gpio\_adcRead}!ltemc-\/gpio.h@{ltemc-\/gpio.h}}
+\doxysubsubsection{\texorpdfstring{gpio\_adcRead()}{gpio\_adcRead()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t gpio\+\_\+adc\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port\+Number,  }\item[{uint16\+\_\+t $\ast$}]{analog\+Value }\end{DoxyParamCaption})}
+
+
+
+Read valule of ADC interface. 
+
+\begin{DoxyReturn}{Returns}
+Value read 0=low, 1=high. Result of -\/1 indicates invalid port number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-gpio_8h_ab965e34a1738d3ecd7983b1d4b5ee370}\label{ltemc-gpio_8h_ab965e34a1738d3ecd7983b1d4b5ee370}} 
+\index{ltemc-\/gpio.h@{ltemc-\/gpio.h}!gpio\_configPort@{gpio\_configPort}}
+\index{gpio\_configPort@{gpio\_configPort}!ltemc-\/gpio.h@{ltemc-\/gpio.h}}
+\doxysubsubsection{\texorpdfstring{gpio\_configPort()}{gpio\_configPort()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t gpio\+\_\+config\+Port (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port\+Number,  }\item[{gpio\+Direction\+\_\+t}]{direction,  }\item[{gpio\+Pull\+\_\+t}]{pull\+Type,  }\item[{gpio\+Pull\+Drive\+\_\+t}]{pull\+Drive\+Current }\end{DoxyParamCaption})}
+
+
+
+Configure a GPIO port for intended use. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port\+Number} & -\/ The GPIO port to configured, dependent on modem module and modem board. \\
+\hline
+\mbox{\texttt{ in}}  & {\em direction} & -\/ Set the GPIO port to be for input or output. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pull\+Type} & -\/ If the port is input, specifies the optional pull up/down behavior for the GPIO port. Ignored if \char`\"{}direction\char`\"{} is output. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pull\+Drive\+Current} & -\/ If the port is input AND pull is specified, sets the current limit for the pull circuit. Ignored if \char`\"{}direction\char`\"{} is output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value read 0=low, 1=high. Result of -\/1 indicates invalid port number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-gpio_8h_a239429300c8fc833e90f836f9f72bc96}\label{ltemc-gpio_8h_a239429300c8fc833e90f836f9f72bc96}} 
+\index{ltemc-\/gpio.h@{ltemc-\/gpio.h}!gpio\_read@{gpio\_read}}
+\index{gpio\_read@{gpio\_read}!ltemc-\/gpio.h@{ltemc-\/gpio.h}}
+\doxysubsubsection{\texorpdfstring{gpio\_read()}{gpio\_read()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t gpio\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port\+Number,  }\item[{bool $\ast$}]{pin\+Value }\end{DoxyParamCaption})}
+
+
+
+Read digitial value from a GPIO port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port\+Number} & -\/ The GPIO port to read, dependent on modem module and modem board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value read 0=low, 1=high. Result of -\/1 indicates invalid port number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-gpio_8h_a795870e98d854b25523a40bb5f35c53b}\label{ltemc-gpio_8h_a795870e98d854b25523a40bb5f35c53b}} 
+\index{ltemc-\/gpio.h@{ltemc-\/gpio.h}!gpio\_write@{gpio\_write}}
+\index{gpio\_write@{gpio\_write}!ltemc-\/gpio.h@{ltemc-\/gpio.h}}
+\doxysubsubsection{\texorpdfstring{gpio\_write()}{gpio\_write()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t gpio\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port\+Number,  }\item[{bool}]{pin\+Value }\end{DoxyParamCaption})}
+
+
+
+Write digital value from to GPIO port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port\+Number} & -\/ The GPIO port to read, dependent on modem module and modem board. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & -\/ The 0 or 1 digital value to assign to the GPIO port output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status\+: 0=no error, -\/1 indicates invalid port number. 
+\end{DoxyReturn}

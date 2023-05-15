@@ -1,0 +1,104 @@
+\hypertarget{ltemc-iop_8h_source}{}\doxysection{ltemc-\/iop.h}
+\label{ltemc-iop_8h_source}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/iop.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/iop.h}}
+\mbox{\hyperlink{ltemc-iop_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ \_\_LTEMC\_IOP\_H\_\_}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ \_\_LTEMC\_IOP\_H\_\_}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/types.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/nxp-\/sc16is.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ USR\_PG()\ (!pRxBffr-\/>iopPg)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ IOP\_PG()\ (pRxBffr-\/>iopPg)}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-iop_8h_a014586177c48478e7636c076ad9ecd7c}{IOP\_create}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-iop_8h_a0d1a07efc9726f0673267ea416925899}{IOP\_attachIrq}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-iop_8h_a6f317d1a5775cbc3bf692597a7f0f390}{IOP\_detachIrq}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-iop_8h_aaa96a7dad60cf4a36c32a358357b71db}{IOP\_awaitAppReady}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-iop_8h_a8be554d7fdafa75181bf15fa03790ea3}{IOP\_startTx}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *sendData,\ uint16\_t\ sendSz);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-iop_8h_a8536e7a9da0ef990b987b5d2ddbf27ed}{IOP\_forceTx}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *sendData,\ uint16\_t\ sendSz);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ uint32\_t\ \mbox{\hyperlink{ltemc-iop_8h_af4b541597e39b3850bdea2de36e57e03}{IOP\_getRxIdleDuration}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Finds\ a\ string\ in\ the\ last\ X\ characters\ of\ the\ IOP\ RX\ stream.}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//\ \ *\ \ @param\ pBuf\ [in]\ Pointer\ data\ receive\ buffer.}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ \ *\ \ @param\ rewindCnt\ [in]\ The\ number\ of\ chars\ to\ search\ backward.}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//\ \ *\ \ \ @param\ pNeedle\ [in]\ The\ string\ to\ find.}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//\ \ *\ \ @param\ pTerm\ [in]\ Optional\ phrase\ that\ must\ be\ found\ after\ needle\ phrase.}}
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ \ *\ \ @return\ Pointer\ to\ the\ character\ after\ the\ needle\ match\ (if\ found),\ otherwise\ return\ NULL.}}
+\DoxyCodeLine{00101\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00102\ \textcolor{comment}{//\ char\ *IOP\_findInRxReverse(rxDataBufferCtrl\_t\ *pBuf,\ uint8\_t\ rewindCnt,\ const\ char\ *pNeedle,\ const\ char\ *pTerm);}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Get\ a\ contiguous\ block\ of\ characters\ from\ the\ RX\ data\ buffer\ pages.}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//\ \ *\ \ @param\ pBuf\ [in]\ Pointer\ data\ receive\ buffer.}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//\ \ *\ \ \ @param\ pStart\ [in]\ Address\ within\ the\ RX\ buffer\ to\ start\ retrieving\ chars.}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//\ \ *\ \ @param\ takeCnt\ [in]\ The\ number\ of\ chars\ to\ return.}}
+\DoxyCodeLine{00110\ \textcolor{comment}{//\ \ *\ \ @param\ pChars\ [out]\ Buffer\ to\ hold\ retrieved\ characters,\ must\ be\ takeCnt\ +\ 1.\ Buffer\ will\ be\ null\ terminated.}}
+\DoxyCodeLine{00111\ \textcolor{comment}{//\ \ *\ \ @return\ Pointer\ to\ the\ character\ after\ the\ needle\ match\ (if\ found),\ otherwise\ return\ NULL.}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00113\ \textcolor{comment}{//\ uint16\_t\ IOP\_fetchFromRx(rxDataBufferCtrl\_t\ *pBuf,\ char\ *pStart,\ uint16\_t\ takeCnt,\ char\ *pChars);}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-iop_8h_ad726cfd88029a9eff03f4595c24ea81c}{IOP\_resetCoreRxBuffer}}();}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00123\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Initializes\ a\ RX\ data\ buffer\ control.}}
+\DoxyCodeLine{00124\ \textcolor{comment}{//\ \ *\ \ @param\ bufCtrl\ [in]\ Pointer\ to\ RX\ data\ buffer\ control\ structure\ to\ initialize.}}
+\DoxyCodeLine{00125\ \textcolor{comment}{//\ \ *\ \ @param\ rxBuf\ [in]\ Pointer\ to\ raw\ byte\ buffer\ to\ integrate\ into\ RxBufferCtrl.}}
+\DoxyCodeLine{00126\ \textcolor{comment}{//\ \ *\ \ @param\ rxBufSz\ [in]\ The\ size\ of\ the\ rxBuf\ passed\ in.}}
+\DoxyCodeLine{00127\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00128\ \textcolor{comment}{//\ uint16\_t\ IOP\_initRxBufferCtrl(rxDataBufferCtrl\_t\ *bufCtrl,\ uint8\_t\ *rxBuf,\ uint16\_t\ rxBufSz);}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00132\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Syncs\ RX\ consumers\ with\ ISR\ for\ buffer\ swap.}}
+\DoxyCodeLine{00133\ \textcolor{comment}{//\ \ *\ \ @param\ bufCtrl\ [in]\ RX\ data\ buffer\ to\ sync.}}
+\DoxyCodeLine{00134\ \textcolor{comment}{//\ \ *\ \ @return\ True\ if\ overflow\ detected:\ buffer\ being\ assigned\ to\ IOP\ for\ filling\ is\ not\ empty}}
+\DoxyCodeLine{00135\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00136\ \textcolor{comment}{//\ void\ IOP\_swapRxBufferPage(rxDataBufferCtrl\_t\ *bufPtr);}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00140\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Reset\ a\ receive\ buffer\ for\ reuse.}}
+\DoxyCodeLine{00141\ \textcolor{comment}{//\ \ *\ \ @param\ bufPtr\ [in]\ Pointer\ to\ the\ buffer\ struct.}}
+\DoxyCodeLine{00142\ \textcolor{comment}{//\ \ *\ \ @param\ page\ [in]\ Index\ to\ buffer\ page\ to\ be\ reset.}}
+\DoxyCodeLine{00143\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00144\ \textcolor{comment}{//\ void\ IOP\_resetRxDataBufferPage(rxDataBufferCtrl\_t\ *bufPtr,\ uint8\_t\ page);}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{comment}{//\ IOP\ Internal\ }}
+\DoxyCodeLine{00148\ \textcolor{comment}{//void\ IOP\_rxParseForEvents();\ \ \ \ \ \ \ \ \ \ \ \ //\ atcmd\ dependency}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00152\ \}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_\_cplusplus}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_LTEMC\_IOP\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

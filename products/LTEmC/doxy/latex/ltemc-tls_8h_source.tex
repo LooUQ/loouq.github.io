@@ -1,0 +1,40 @@
+\hypertarget{ltemc-tls_8h_source}{}\doxysection{ltemc-\/tls.h}
+\label{ltemc-tls_8h_source}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/tls.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/tls.h}}
+\mbox{\hyperlink{ltemc-tls_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ \_\_LTEMC\_TLS\_H\_\_}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ \_\_LTEMC\_TLS\_H\_\_}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\#include\ <lq-\/diagnostics.h>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc-types_8h}{ltemc-\/types.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-tls_8h_a9890dd5a67fd678ba94c391167a446c0}{tls\_configure}}(uint8\_t\ sckt,\ \mbox{\hyperlink{ltemc-types_8h_a61182e3801e1f66177d95fa416341dc2}{tlsVersion\_t}}\ version,\ \mbox{\hyperlink{ltemc-types_8h_ac3c7657f825cb66b386b539e2f037b92}{tlsCipher\_t}}\ cipherSuite,\ \mbox{\hyperlink{ltemc-types_8h_a82cad7746d9446cc276666b5de2af9aa}{tlsCertExpiration\_t}}\ certExpirationCheck,\ \mbox{\hyperlink{ltemc-types_8h_ae881c2df83ac48f033b492b442067906}{tlsSecurityLevel\_t}}\ securityLevel);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \mbox{\hyperlink{structtls_options__tag}{tlsOptions\_t}}\ \mbox{\hyperlink{ltemc-tls_8h_a996004dbe0acb228e9d8eec38b01e2f8}{tlsGetOptions}}(uint8\_t\ sckt);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{/*\ Maintenance\ of\ customer\ trustd\ root\ (TR)\ certificates\ requires\ the\ file\_\ module\ functionality\ (under\ developement\ Q3-\/2021)}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ *\ \ 1)\ upload\ certficate\ to\ BGx\ file\ system\ }}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ *\ \ 2)\ configure\ TR\ for\ context\ }}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ future\ certificate\ management\ support}}
+\DoxyCodeLine{00067\ \textcolor{comment}{//\ void\ tls\_configureTRCertificate(context\_t\ cntxt,\ const\ char\ *certificatePath);}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_\_cplusplus}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_LTEMC\_TLS\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

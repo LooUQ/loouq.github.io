@@ -1,0 +1,116 @@
+\hypertarget{ltemc_8h_source}{}\doxysection{ltemc.\+h}
+\label{ltemc_8h_source}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc.h}}
+\mbox{\hyperlink{ltemc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ \_\_LTEMC\_H\_\_}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ \_\_LTEMC\_H\_\_}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ Internal\ static\ buffers\ you\ may\ need\ to\ change\ for\ your\ application.\ Contact\ LooUQ\ for\ details.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ \#define\ IOP\_RX\_COREBUF\_SZ\ 256}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ \#define\ IOP\_TX\_BUFFER\_SZ\ 1460}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <lq-\/types.h>}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <lq-\/diagnostics.h>}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/srcfiles.h"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ source\ file\ manifest\ for\ ASSERT\ use}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc-types_8h}{ltemc-\/types.h}}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}lq-\/platform.h"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc-atcmd_8h}{ltemc-\/atcmd.h}}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc-mdminfo_8h}{ltemc-\/mdminfo.h}}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc-network_8h}{ltemc-\/network.h}}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{/*\ Add\ the\ following\ LTEmC\ feature\ sets\ as\ required\ for\ your\ project}}
+\DoxyCodeLine{00047\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/gnss.h"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ GNSS/GPS\ location\ services}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/sckt.h"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ tcp/udp\ socket\ communications}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/tls"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ SSL/TLS\ support}}
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/http"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ HTTP(S)\ support:\ GET/POST\ requests}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/mqtt"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ MQTT(S)\ support}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/filesys.h"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ use\ of\ BGx\ module\ file\ system\ functionality}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ \#include\ "{}ltemc-\/gpio.h"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ use\ of\ BGx\ module\ GPIO\ expansion\ functionality}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ LTEmC\ uses\ 2\ global\ buffers:\ the\ IOP\ transmit\ buffer\ and\ the\ ATCMD\ cmd\(\backslash\)core\ buffer.}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ *\ These\ are\ sized\ in\ the\ ltemc-\/iop.h\ and\ ltemc-\/atcmd.h\ header\ files\ respectively.}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ *\ LooUQ\ set\ defaults\ sizes\ are:}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ *\ \ \ \ \ \ IOP\_\_txBufferSize\ =\ 1800}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ *\ \ \ \ \ \ ATCMD\_\_commandBufferSz\ =\ 256}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00063\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00067\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00068\ \{}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{//\ typedef\ void\ (*eventNotifCallback\_func)(uint8\_t\ notifCode,\ const\ char\ *message);}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_a35606fbdda9e7b1a8c29e14cf554f4e9}{ltem\_create}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structltem_pin_config__tag}{ltemPinConfig\_t}}\ ltem\_config,\ yield\_func\ yieldCB,\ appEvntNotify\_func\ eventNotifyCB);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_adc4fe577a31799623ad85245e64dfea5}{ltem\_destroy}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_a0213559f7f2aa79fdb75f7b07e943ba3}{ltem\_setProviderScanSeq}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *sequence);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_a31dd953d011be34d9a89de070e103794}{ltem\_setProviderScanMode}}(\mbox{\hyperlink{ltemc-types_8h_a8e9d1f53c1e7c1c59f08200324201cc2}{ntwkScanMode\_t}}\ mode);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_a073f88d1a0dd729ca7d2061392e3ccee}{ltem\_setIotMode}}(\mbox{\hyperlink{ltemc-types_8h_ac8e908eadfb655392c2a198d9738575e}{ntwkIotMode\_t}}\ mode);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_ad8518289ac44e3c265fed338cb03f1bf}{ltem\_setDefaultNetwork}}(uint8\_t\ pdpContextId,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *protoType,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *apn);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_a0a45070f83b22dff7981905eb4c41560}{ltem\_start}}(resetAction\_t\ resetAction);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_a5fde19665106d68b37d5d3161a9f3560}{ltem\_stop}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00132\ \textcolor{comment}{//\ \ *\ \ \ \(\backslash\)brief\ Performs\ a\ software\ restart\ of\ LTEm1.}}
+\DoxyCodeLine{00133\ \textcolor{comment}{//\ \ *\ \ \(\backslash\)param\ coldStart\ [in]\ Set\ to\ true\ if\ the\ LTEm\ is\ being\ hard\ started,\ from\ a\ reset/power\ ON}}
+\DoxyCodeLine{00134\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00135\ \textcolor{comment}{//\ void\ ltem\_initDevice(bool\ coldStart);}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00141\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_ab25d4e8fc01bf95b8b6f6519da6c6612}{ltem\_reset}}(\textcolor{keywordtype}{bool}\ hardReset);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00147\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{ltemc_8h_a7029464993e485f079fa13a9891a391b}{ltem\_getSwVersion}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \mbox{\hyperlink{ltemc-types_8h_aa8cc0cd14abcf26157f9aae9974e9643}{deviceState\_t}}\ \mbox{\hyperlink{ltemc_8h_a8d7012de7962fc1187bfd0a5b3f8913e}{ltem\_getDeviceState}}();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_a68e6ef9250a50c92aaa8297db3a5085f}{ltem\_eventMgr}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00167\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_aedccf53a5146b52d7a2a6d77be935ef5}{ltem\_setYieldCallback}}(yield\_func\ yieldCB);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_a49b14b94f2a03a1a926f53aaa6fffc39}{ltem\_setEventNotifCallback}}(appEvntNotify\_func\ eventNotifyCB);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc_8h_a80df97bbc632eda7178e56368c3d0a1e}{ltem\_notifyApp}}(uint8\_t\ notifyType,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *notifyMsg);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00186\ \textcolor{comment}{//\ \ *\ \ \ \(\backslash\)brief\ Function\ of\ last\ resort,\ catastrophic\ failure\ Background\ work\ task\ runner.\ To\ be\ called\ in\ application\ Loop()\ periodically.}}
+\DoxyCodeLine{00187\ \textcolor{comment}{//\ \ *\ \ \(\backslash\)param\ faultCode\ [in]\ -\/\ HTTP\ style\ error\ code.}}
+\DoxyCodeLine{00188\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00189\ \textcolor{comment}{//\ void\ ltem\_notifyAssert(uint16\_t\ faultCode)\ \ \ \_\_attribute\_\_\ ((noreturn));}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00193\ \}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_\_cplusplus}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_LTEMC\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

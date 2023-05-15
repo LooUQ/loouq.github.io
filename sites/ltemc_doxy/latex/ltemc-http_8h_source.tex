@@ -1,0 +1,124 @@
+\hypertarget{ltemc-http_8h_source}{}\doxysection{ltemc-\/http.h}
+\label{ltemc-http_8h_source}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/http.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/http.h}}
+\mbox{\hyperlink{ltemc-http_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ \_\_LTEMC\_HTTP\_H\_\_}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ \_\_LTEMC\_HTTP\_H\_\_}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <lq-\/types.h>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc-types_8h}{ltemc-\/types.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dc}{http\_\_constants}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ http\_\_getRequestLength\ =\ 128,}
+\DoxyCodeLine{00039\ \ \ \ \ http\_\_postRequestLength\ =\ 128,}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ http\_\_noResponseHeaders\ =\ 0,\ }
+\DoxyCodeLine{00042\ \ \ \ \ http\_\_returnResponseHeaders\ =\ 1,\ }
+\DoxyCodeLine{00043\ \ \ \ \ http\_\_useDefaultTimeout\ =\ 0,}
+\DoxyCodeLine{00044\ \ \ \ \ http\_\_defaultTimeoutBGxSec\ =\ 60,}
+\DoxyCodeLine{00045\ \ \ \ \ http\_\_urlHostSz\ =\ 128,}
+\DoxyCodeLine{00046\ \ \ \ \ http\_\_rqstTypeSz\ =\ 5,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{ltemc-http_8h_a7393c11c4fd09ee34b3763324ed600dca789dc45ed676550a43c90c2a52d43f8e}{http\_\_customHdrSmallWarning}}\ =\ 40}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ http\_\_reqdResponseSz\ =\ 22\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ BGx\ HTTP(S)\ Application\ Note}}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{typedef}\ void\ (*\mbox{\hyperlink{ltemc-http_8h_ab8c07bc534dbc7dcaaabf2a8dd1361b0}{httpRecv\_func}})(\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{dataCntxt\_t}}\ sckt,\ uint16\_t\ httpRslt,\ \textcolor{keywordtype}{char}\ *data,\ uint16\_t\ dataSz);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4}{httpHeaderMap\_tag}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bit-\/map\ to\ indicate\ headers\ to\ create\ for\ add\ custom\ headers,\ bitwise\ OR\ to\ http\_addDefaultHdrs()}}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ httpHeaderMap\_accept\ =\ 0x0001,}
+\DoxyCodeLine{00071\ \ \ \ \ httpHeaderMap\_userAgent\ =\ 0x0002,}
+\DoxyCodeLine{00072\ \ \ \ \ httpHeaderMap\_connection\ =\ 0x0004,}
+\DoxyCodeLine{00073\ \ \ \ \ httpHeaderMap\_contentType\ =\ 0x0008,}
+\DoxyCodeLine{00074\ \ \ \ \ httpHeaderMap\_contentLenght\ =\ 0x0010,}
+\DoxyCodeLine{00075\ \ \ \ \ httpHeaderMap\_all\ =\ 0xFFFF}
+\DoxyCodeLine{00076\ \}\ \mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{httpHeaderMap\_t}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ httpState\_tag}
+\DoxyCodeLine{00080\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ httpState\_idle\ =\ 0,}
+\DoxyCodeLine{00082\ \ \ \ \ httpState\_requestComplete,}
+\DoxyCodeLine{00083\ \ \ \ \ httpState\_readingData,}
+\DoxyCodeLine{00084\ \ \ \ \ httpState\_closing}
+\DoxyCodeLine{00085\ \}\ httpState\_t;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_tag}}}
+\DoxyCodeLine{00089\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{/*\ Top\ section\ of\ xCtrl\ structure\ is\ the\ same\ for\ all\ LTEmC\ implemented\ protocol\ suites\ TCP/HTTP/MQTT\ etc.\ */}}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{dataCntxt\_t}}\ dataCntxt;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structhttp_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}{useTls}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structhttp_ctrl__tag_a300b9ff4303e8a75daa0611ecdc0d199}{hostUrl}}[host\_\_urlSz];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structhttp_ctrl__tag_aa0fbdfd4b0b276a823329769749441e7}{hostPort}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structhttp_ctrl__tag_ad95114e759c85069103a0492f02db5b7}{returnResponseHdrs}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structhttp_ctrl__tag_adb7a1e99e532f8c2f75408162b910ed8}{cstmHdrs}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structhttp_ctrl__tag_a9594e3a80f1c90402ef10f2158a2b7eb}{cstmHdrsSz}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structhttp_ctrl__tag_a8640026b3fe8369c2c2a74191f6b9e52}{requestType}}[http\_\_rqstTypeSz];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ httpState\_t\ \mbox{\hyperlink{structhttp_ctrl__tag_ae2815bd62c196db16e142ccfbea5c2b9}{requestState}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structhttp_ctrl__tag_a1071f3132982a41053359eef69ccc21c}{bgxError}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structhttp_ctrl__tag_abf3669c13d71e6869690e8466b9b1411}{httpStatus}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structhttp_ctrl__tag_a0280e51e144c396db5421a34d7c0db99}{pageSize}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structhttp_ctrl__tag_a04a6cd9b8590c2b39e66072b56ddee2f}{pageRemaining}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structhttp_ctrl__tag_a2923a74b9a2482663b22277a3e80bdc4}{defaultTimeoutS}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structhttp_ctrl__tag_a4974a0e69b5526617bef8af3a18b4b04}{pageCancellation}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \}\ \mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00110\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ }
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00123\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-http_8h_afba2c9cfce031883d09e0f898f7cc772}{http\_initControl}}(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl,\ \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{dataCntxt\_t}}\ dataCntxt,\ \mbox{\hyperlink{ltemc-http_8h_ab8c07bc534dbc7dcaaabf2a8dd1361b0}{httpRecv\_func}}\ recvCallback);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00132\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-http_8h_abcf94eb114c546ff64a9d8cd4f1056ee}{http\_setConnection}}(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hostUrl,\ uint16\_t\ hostPort);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00141\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}{http\_enableCustomHdrs}}(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl,\ \textcolor{keywordtype}{char}\ *hdrBuffer,\ uint16\_t\ hdrBufferSz);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00149\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-http_8h_adecbc0670a410f97952a20fe23cfd7d9}{http\_addCommonHdrs}}(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl,\ \mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{httpHeaderMap\_t}}\ headerMap);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-http_8h_a92b18393cbc41e7f0d95958949bf33a1}{http\_addBasicAuthHdr}}(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *user,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pw);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{keywordtype}{void}\ http\_addCustomHdr(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hdrText);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00166\ \textcolor{comment}{\ *\ \ Request\ and\ Response\ Section\ }}
+\DoxyCodeLine{00167\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00177\ resultCode\_t\ \mbox{\hyperlink{ltemc-http_8h_afa4288aa4cda4fd9791592ce93b737fc}{http\_get}}(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ relativeUrl,\ \textcolor{keywordtype}{bool}\ returnResponseHdrs,\ uint8\_t\ timeoutSec);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00190\ resultCode\_t\ \mbox{\hyperlink{ltemc-http_8h_a7796d179f44f07b0d0c6170830a0337e}{http\_post}}(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ relativeUrl,\ \textcolor{keywordtype}{bool}\ returnResponseHdrs,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ postData,\ uint16\_t\ dataSz,\ uint8\_t\ timeoutSec);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00202\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-http_8h_a9e8e80c8621ac1d02a0c1fc21a3d906e}{http\_readPage}}(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl,\ \textcolor{keywordtype}{char}\ *pageBffr,\ uint16\_t\ pageBffrSz,\ uint16\_t\ *httpResult);}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00210\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-http_8h_adc3e553b77a6341664862d7b8a9c0060}{http\_cancelPage}}(\mbox{\hyperlink{structhttp_ctrl__tag}{httpCtrl\_t}}\ *httpCtrl);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{comment}{//\ future\ support\ for\ fileSystem\ destinations,\ requires\ file\_\ module\ still\ under\ development\ planned\ for\ v2.1}}
+\DoxyCodeLine{00214\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00215\ \textcolor{comment}{resultCode\_t\ http\_getFileResponse(void\ *httpSession,\ const\ char*\ url,\ const\ char*\ filename);}}
+\DoxyCodeLine{00216\ \textcolor{comment}{resultCode\_t\ http\_postFileResponse(void\ *httpSession,\ const\ char*\ url,\ const\ char*\ filename);}}
+\DoxyCodeLine{00217\ \textcolor{comment}{resultCode\_t\ http\_readFileResponse(httpCtrl\_t\ *httpCtrl,\ char\ *response,\ uint16\_t\ responseSz);}}
+\DoxyCodeLine{00218\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00221\ \}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ !\_\_LTEMC\_HTTP\_H\_\_}}
+
+\end{DoxyCode}

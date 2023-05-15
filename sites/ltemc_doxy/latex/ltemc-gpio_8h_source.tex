@@ -1,0 +1,83 @@
+\hypertarget{ltemc-gpio_8h_source}{}\doxysection{ltemc-\/gpio.h}
+\label{ltemc-gpio_8h_source}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/gpio.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/gpio.h}}
+\mbox{\hyperlink{ltemc-gpio_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ \_\_LTEMC\_GPIO\_H\_\_}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ \_\_LTEMC\_GPIO\_H\_\_}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc_8h}{ltemc.h}}"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{enum}\ gpio\_\_constants}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ gpio\_\_BG77\_\_maxPin\ =\ 9,}
+\DoxyCodeLine{00036\ \ \ \ \ adc\_\_BG77\_\_maxPin\ =\ 2,}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ gpio\_\_LTEM3F\_\_maxPin\ =\ 6,}
+\DoxyCodeLine{00039\ \ \ \ \ adc\_\_LTEM3F\_\_maxPin\ =\ 2,}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ gpioActionMode\_tag}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ gpioActionMode\_init\ =\ 1,}
+\DoxyCodeLine{00046\ \ \ \ \ gpioActionMode\_read\ =\ 2,}
+\DoxyCodeLine{00047\ \ \ \ \ gpioActionMode\_write\ =\ 3}
+\DoxyCodeLine{00048\ \}\ gpioActionMode\_tag;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ gpioDirection\_tag}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ gpioDirection\_input\ =\ 0,}
+\DoxyCodeLine{00054\ \ \ \ \ gpioDirection\_output\ =\ 1}
+\DoxyCodeLine{00055\ \}\ gpioDirection\_t;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ gpioPull\_tag}
+\DoxyCodeLine{00059\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ gpioPull\_none\ =\ 0,}
+\DoxyCodeLine{00061\ \ \ \ \ gpioPull\_down\ =\ 1,}
+\DoxyCodeLine{00062\ \ \ \ \ gpioPull\_up\ =\ 3,}
+\DoxyCodeLine{00063\ \ \ \ \ gpioPull\_noChange\ =\ 2,}
+\DoxyCodeLine{00064\ \ \ \ \ gpioPull\_NA\ =\ 255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ added\ to\ enum\ for\ source\ intent\ readability\ }}
+\DoxyCodeLine{00065\ \}\ gpioPull\_t;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ gpioPullDrive\_tag}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ gpioPullDrive\_2mA\ =\ 0,}
+\DoxyCodeLine{00071\ \ \ \ \ gpioPullDrive\_4mA\ =\ 1,}
+\DoxyCodeLine{00072\ \ \ \ \ gpioPullDrive\_6mA\ =\ 2,}
+\DoxyCodeLine{00073\ \ \ \ \ gpioPullDrive\_8mA\ =\ 3,}
+\DoxyCodeLine{00074\ \ \ \ \ gpioPullDrive\_10mA\ =\ 4,}
+\DoxyCodeLine{00075\ \ \ \ \ gpioPullDrive\_12mA\ =\ 5,}
+\DoxyCodeLine{00076\ \ \ \ \ gpioPullDrive\_14mA\ =\ 6,}
+\DoxyCodeLine{00077\ \ \ \ \ gpioPullDrive\_16mA\ =\ 7,}
+\DoxyCodeLine{00078\ \ \ \ \ gpioPullDrive\_NA\ =\ 255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ added\ to\ enum\ for\ source\ intent\ readability\ }}
+\DoxyCodeLine{00079\ \}\ gpioPullDrive\_t;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00083\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ resultCode\_t\ \mbox{\hyperlink{ltemc-gpio_8h_aa0fe0c9d7bdd5c6b40d2696fdfe61f98}{gpio\_adcRead}}(uint8\_t\ portNumber,\ uint16\_t*\ analogValue);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00101\ resultCode\_t\ \mbox{\hyperlink{ltemc-gpio_8h_ab965e34a1738d3ecd7983b1d4b5ee370}{gpio\_configPort}}(uint8\_t\ portNumber,\ gpioDirection\_t\ direction,\ gpioPull\_t\ pullType,\ gpioPullDrive\_t\ pullDriveCurrent);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ resultCode\_t\ \mbox{\hyperlink{ltemc-gpio_8h_a239429300c8fc833e90f836f9f72bc96}{gpio\_read}}(uint8\_t\ portNumber,\ \textcolor{keywordtype}{bool}*\ pinValue);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00118\ resultCode\_t\ \mbox{\hyperlink{ltemc-gpio_8h_a795870e98d854b25523a40bb5f35c53b}{gpio\_write}}(uint8\_t\ portNumber,\ \textcolor{keywordtype}{bool}\ pinValue);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00122\ \}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ !\_\_LTEMC\_GPIO\_H\_\_}}
+
+\end{DoxyCode}
