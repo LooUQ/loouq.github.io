@@ -128,61 +128,55 @@ Functions</h2></td></tr>
 <tr class="memitem:abf9daa62d261abcac1e4cb27c9e72adf"><td class="memItemLeft" align="right" valign="top"><a id="abf9daa62d261abcac1e4cb27c9e72adf" name="abf9daa62d261abcac1e4cb27c9e72adf"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>asm</b> (&quot;.global _printf_float&quot;)</td></tr>
 <tr class="separator:abf9daa62d261abcac1e4cb27c9e72adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aab056b4a96d58e65f7e19b70b508b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a7aab056b4a96d58e65f7e19b70b508b5">mqtt_initControl</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, <a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a> dataCntxt, <a class="el" href="ltemc-mqtt_8h.html#a19734ffe7343a1141ef8970a9d6d5d1c">mqttRecv_func</a> recvCallback)</td></tr>
-<tr class="memdesc:a7aab056b4a96d58e65f7e19b70b508b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a MQTT protocol control structure.  <br /></td></tr>
-<tr class="separator:a7aab056b4a96d58e65f7e19b70b508b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e3fe00205f66724d71459625dc208f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#ac7e3fe00205f66724d71459625dc208f">mqtt_initControl</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, <a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a> dataCntxt)</td></tr>
+<tr class="memdesc:ac7e3fe00205f66724d71459625dc208f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a MQTT protocol control structure.  <br /></td></tr>
+<tr class="separator:ac7e3fe00205f66724d71459625dc208f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059de009eb975ced3a149d9b0b9fec96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a059de009eb975ced3a149d9b0b9fec96">mqtt_initTopicControl</a> (<a class="el" href="ltemc-mqtt_8h.html#a6f446d1fbf8b0211fc36cbbd2eaf9512">mqttTopicCtrl_t</a> *topicCtrl, const char *topic, uint8_t qos, <a class="el" href="ltemc-mqtt_8h.html#a745340d5a21db27bfb951acc46d0ed41">mqttAppRecv_func</a> appTopicRecvCB)</td></tr>
+<tr class="memdesc:a059de009eb975ced3a149d9b0b9fec96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a MQTT topic subscription control structure.  <br /></td></tr>
+<tr class="separator:a059de009eb975ced3a149d9b0b9fec96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a803b63143732cb1c0e5666f2f7a95215"><td class="memItemLeft" align="right" valign="top"><a id="a803b63143732cb1c0e5666f2f7a95215" name="a803b63143732cb1c0e5666f2f7a95215"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>mqtt_setConnection</b> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *hostUrl, uint16_t hostPort, bool useTls, <a class="el" href="ltemc-mqtt_8h.html#af6396985642256a42f60af322da5124f">mqttVersion_t</a> mqttVersion, const char *clientId, const char *username, const char *password)</td></tr>
 <tr class="memdesc:a803b63143732cb1c0e5666f2f7a95215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the remote server connection values. <br /></td></tr>
 <tr class="separator:a803b63143732cb1c0e5666f2f7a95215"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac64d750e45e17a384b1292f187813df3"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#ac64d750e45e17a384b1292f187813df3">mqtt_open</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
-<tr class="memdesc:ac64d750e45e17a384b1292f187813df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a remote MQTT server for use.  <br /></td></tr>
+<tr class="memdesc:ac64d750e45e17a384b1292f187813df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a remote MQTT server IP connection for use.  <br /></td></tr>
 <tr class="separator:ac64d750e45e17a384b1292f187813df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acecf1415da09fc451851f56cb7505935"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#acecf1415da09fc451851f56cb7505935">mqtt_connect</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, bool cleanSession)</td></tr>
 <tr class="memdesc:acecf1415da09fc451851f56cb7505935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect (authenticate) to a MQTT server.  <br /></td></tr>
 <tr class="separator:acecf1415da09fc451851f56cb7505935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b0a2889ad7be1fa24527b22e6d6fc58"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a0b0a2889ad7be1fa24527b22e6d6fc58">mqtt_subscribe</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos)</td></tr>
-<tr class="memdesc:a0b0a2889ad7be1fa24527b22e6d6fc58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a topic on the MQTT server.  <br /></td></tr>
-<tr class="separator:a0b0a2889ad7be1fa24527b22e6d6fc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4052b98fe0795af64f4fe611ed007302"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a4052b98fe0795af64f4fe611ed007302">mqtt_unsubscribe</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic)</td></tr>
-<tr class="memdesc:a4052b98fe0795af64f4fe611ed007302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe to a topic on the MQTT server.  <br /></td></tr>
-<tr class="separator:a4052b98fe0795af64f4fe611ed007302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79279dbac86c5e4b369989dcac63d213"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a79279dbac86c5e4b369989dcac63d213">mqtt_publishEncoded</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos, const char *encodedMsg, uint8_t timeoutSeconds)</td></tr>
-<tr class="memdesc:a79279dbac86c5e4b369989dcac63d213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish an encoded message to server.  <br /></td></tr>
-<tr class="separator:a79279dbac86c5e4b369989dcac63d213"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27950fda1c826882f99e81c2cf308460"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a27950fda1c826882f99e81c2cf308460">mqtt_publish</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos, const char *message, uint8_t timeoutSeconds)</td></tr>
-<tr class="memdesc:a27950fda1c826882f99e81c2cf308460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish a message to server.  <br /></td></tr>
-<tr class="separator:a27950fda1c826882f99e81c2cf308460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a23ea200618b416d0e2e317317d399"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a45a23ea200618b416d0e2e317317d399">mqtt_start</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, bool cleanSession)</td></tr>
+<tr class="memdesc:a45a23ea200618b416d0e2e317317d399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open and connect to a remote MQTT server.  <br /></td></tr>
+<tr class="separator:a45a23ea200618b416d0e2e317317d399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c9cfc49e71e6b77c483ecd7d5c2d17"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a64c9cfc49e71e6b77c483ecd7d5c2d17">mqtt_subscribeTopic</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, <a class="el" href="ltemc-mqtt_8h.html#a6f446d1fbf8b0211fc36cbbd2eaf9512">mqttTopicCtrl_t</a> *topicCtrl)</td></tr>
+<tr class="memdesc:a64c9cfc49e71e6b77c483ecd7d5c2d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open and connect to a remote MQTT server.  <br /></td></tr>
+<tr class="separator:a64c9cfc49e71e6b77c483ecd7d5c2d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4179e72b503c237427c96fed98953c8"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#ab4179e72b503c237427c96fed98953c8">mqtt_cancelTopic</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, <a class="el" href="ltemc-mqtt_8h.html#a6f446d1fbf8b0211fc36cbbd2eaf9512">mqttTopicCtrl_t</a> *topicCtrl)</td></tr>
+<tr class="memdesc:ab4179e72b503c237427c96fed98953c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from a topic on the MQTT server.  <br /></td></tr>
+<tr class="separator:ab4179e72b503c237427c96fed98953c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e6260585946cd8f28410cae3310869b"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a6e6260585946cd8f28410cae3310869b">mqtt_publish</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, const char *topic, <a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a> qos, const char *message, uint16_t messageSz, uint8_t timeoutSec)</td></tr>
+<tr class="memdesc:a6e6260585946cd8f28410cae3310869b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish a message to server.  <br /></td></tr>
+<tr class="separator:a6e6260585946cd8f28410cae3310869b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb874ed8fe83efb81a6e206a00059ad0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#afb874ed8fe83efb81a6e206a00059ad0">mqtt_close</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
 <tr class="memdesc:afb874ed8fe83efb81a6e206a00059ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and close a connection to a MQTT server.  <br /></td></tr>
 <tr class="separator:afb874ed8fe83efb81a6e206a00059ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7202a9d093c0e5c23972e4d1ffcc163e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a7202a9d093c0e5c23972e4d1ffcc163e">mqtt_reset</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, bool resetModem)</td></tr>
-<tr class="memdesc:a7202a9d093c0e5c23972e4d1ffcc163e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and close a connection to a MQTT server.  <br /></td></tr>
-<tr class="separator:a7202a9d093c0e5c23972e4d1ffcc163e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a157ce4debcceb51a37559fa9aa18db4e"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a157ce4debcceb51a37559fa9aa18db4e">mqtt_reset</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, bool resetModem)</td></tr>
+<tr class="memdesc:a157ce4debcceb51a37559fa9aa18db4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset and attempt to reestablish a server connection.  <br /></td></tr>
+<tr class="separator:a157ce4debcceb51a37559fa9aa18db4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fbc5df4372ae5a51a3a0abd28c4535f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-mqtt_8h.html#ae6c8dd33f85964954ee76aa63055cfd6">mqttState_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a7fbc5df4372ae5a51a3a0abd28c4535f">mqtt_getStatus</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
 <tr class="memdesc:a7fbc5df4372ae5a51a3a0abd28c4535f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current MQTT connection state.  <br /></td></tr>
 <tr class="separator:a7fbc5df4372ae5a51a3a0abd28c4535f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e0147daee6cbbc04f1a97bfa7997216"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-mqtt_8h.html#ae6c8dd33f85964954ee76aa63055cfd6">mqttState_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a2e0147daee6cbbc04f1a97bfa7997216">mqtt_fetchStatus</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
 <tr class="memdesc:a2e0147daee6cbbc04f1a97bfa7997216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query the status of the MQTT connection state.  <br /></td></tr>
 <tr class="separator:a2e0147daee6cbbc04f1a97bfa7997216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08a939d7e240519a8aee8da94277e2fb"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a08a939d7e240519a8aee8da94277e2fb">mqtt_getLastSentMsgId</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
-<tr class="memdesc:a08a939d7e240519a8aee8da94277e2fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and close a connection to a MQTT server.  <br /></td></tr>
-<tr class="separator:a08a939d7e240519a8aee8da94277e2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d2c09e6e664dbb2b92a63f7830e6af9"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a9d2c09e6e664dbb2b92a63f7830e6af9">mqtt_readTopic</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, char *topicBffr, uint16_t bffrSz)</td></tr>
-<tr class="memdesc:a9d2c09e6e664dbb2b92a63f7830e6af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and close a connection to a MQTT server.  <br /></td></tr>
-<tr class="separator:a9d2c09e6e664dbb2b92a63f7830e6af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc3104ef476c0d70b7e54fcda06cd8d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#adc3104ef476c0d70b7e54fcda06cd8d0">mqtt_readMessage</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl, char *messageBffr, uint16_t bffrSz)</td></tr>
-<tr class="memdesc:adc3104ef476c0d70b7e54fcda06cd8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and close a connection to a MQTT server.  <br /></td></tr>
-<tr class="separator:adc3104ef476c0d70b7e54fcda06cd8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c065a643f44f2173bc55e31e6aa3a93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#a9c065a643f44f2173bc55e31e6aa3a93">mqtt_cancelMessage</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
-<tr class="memdesc:a9c065a643f44f2173bc55e31e6aa3a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close out and discard a message receive underway. This clears message state.  <br /></td></tr>
-<tr class="separator:a9c065a643f44f2173bc55e31e6aa3a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4817cc472be7cd5a124a9cdbdcf54bd2"><td class="memItemLeft" align="right" valign="top"><a id="a4817cc472be7cd5a124a9cdbdcf54bd2" name="a4817cc472be7cd5a124a9cdbdcf54bd2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>S__mqttResetContext</b> (<a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a> dataCntxt)</td></tr>
-<tr class="separator:a4817cc472be7cd5a124a9cdbdcf54bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5223761a7f32dc59bd9f88c0f8f42a2a"><td class="memItemLeft" align="right" valign="top"><a id="a5223761a7f32dc59bd9f88c0f8f42a2a" name="a5223761a7f32dc59bd9f88c0f8f42a2a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>S__mqttCancelRecv</b> (<a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a> dataCntxt)</td></tr>
-<tr class="separator:a5223761a7f32dc59bd9f88c0f8f42a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaf74caa6843d083f3f2fc65f6300dbe"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#acaf74caa6843d083f3f2fc65f6300dbe">mqtt_getSentMsgId</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
+<tr class="memdesc:acaf74caa6843d083f3f2fc65f6300dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last outgoing message ID.  <br /></td></tr>
+<tr class="separator:acaf74caa6843d083f3f2fc65f6300dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad389b44dfd5d03013965a812df57a0f0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#ad389b44dfd5d03013965a812df57a0f0">mqtt_getRecvMsgId</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
+<tr class="memdesc:ad389b44dfd5d03013965a812df57a0f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last incoming message ID.  <br /></td></tr>
+<tr class="separator:ad389b44dfd5d03013965a812df57a0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8270aa2b36e59034bbce57252715120"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-mqtt_8c.html#ac8270aa2b36e59034bbce57252715120">mqtt_getErrCode</a> (<a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *mqttCtrl)</td></tr>
+<tr class="memdesc:ac8270aa2b36e59034bbce57252715120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last incoming message ID.  <br /></td></tr>
+<tr class="separator:ac8270aa2b36e59034bbce57252715120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -216,24 +210,34 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a9c065a643f44f2173bc55e31e6aa3a93" name="a9c065a643f44f2173bc55e31e6aa3a93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c065a643f44f2173bc55e31e6aa3a93">&#9670;&#160;</a></span>mqtt_cancelMessage()</h2>
+<a id="ab4179e72b503c237427c96fed98953c8" name="ab4179e72b503c237427c96fed98953c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4179e72b503c237427c96fed98953c8">&#9670;&#160;</a></span>mqtt_cancelTopic()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void mqtt_cancelMessage </td>
+          <td class="memname">resultCode_t mqtt_cancelTopic </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
-          <td class="paramname"><em>mqttCtrl</em></td><td>)</td>
+          <td class="paramname"><em>mqttCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a6f446d1fbf8b0211fc36cbbd2eaf9512">mqttTopicCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>topicCtrl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Close out and discard a message receive underway. This clears message state. </p>
-<p>Cancel/close and discard a message receive underway. This clears message state. </p>
+<p>Unsubscribe from a topic on the MQTT server. </p>
+<p>Unsubscribe from a MQTT topic on the server. </p>
 
 </div>
 </div>
@@ -290,18 +294,7 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 </div><div class="memdoc">
 
 <p>Connect (authenticate) to a MQTT server. </p>
-<p>Authenicate to MQTT server and create a connected data session.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">clientId</td><td>[in] - The client or device identifier for the connection. </td></tr>
-    <tr><td class="paramname">username</td><td>[in] - The user identifier or name for the connection to authenticate. </td></tr>
-    <tr><td class="paramname">password</td><td>[in] - The secret string or phrase to authenticate the connection. </td></tr>
-    <tr><td class="paramname">cleanSession</td><td>[in] - Directs MQTT to preserve or flush messages received prior to the session start. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A resultCode_t value indicating the success or type of failure, OK = 200. </dd></dl>
+<p>Preferred way for user app to connect to server is via <a class="el" href="ltemc-mqtt_8c.html#a45a23ea200618b416d0e2e317317d399" title="Open and connect to a remote MQTT server.">mqtt_start()</a> or <a class="el" href="ltemc-mqtt_8c.html#a157ce4debcceb51a37559fa9aa18db4e" title="Reset and attempt to reestablish a server connection.">mqtt_reset()</a> </p>
 
 </div>
 </div>
@@ -323,25 +316,18 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 <p>Query the status of the MQTT connection state. </p>
 <p>Query device for current MQTT connection state.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">host</td><td>[in] A char string to match with the currently connected server. Host is not checked if empty string passed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A mqttState_t value indicating the state of the MQTT connection. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function works around a known issue with most (if not all) BGx firmware versions. </dd></dl>
 
 </div>
 </div>
-<a id="a08a939d7e240519a8aee8da94277e2fb" name="a08a939d7e240519a8aee8da94277e2fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08a939d7e240519a8aee8da94277e2fb">&#9670;&#160;</a></span>mqtt_getLastSentMsgId()</h2>
+<a id="ac8270aa2b36e59034bbce57252715120" name="ac8270aa2b36e59034bbce57252715120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8270aa2b36e59034bbce57252715120">&#9670;&#160;</a></span>mqtt_getErrCode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t mqtt_getLastSentMsgId </td>
+          <td class="memname">uint16_t mqtt_getErrCode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
           <td class="paramname"><em>mqttCtrl</em></td><td>)</td>
@@ -350,14 +336,62 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
       </table>
 </div><div class="memdoc">
 
-<p>Disconnect and close a connection to a MQTT server. </p>
+<p>Get the last incoming message ID. </p>
+<p>Get the MQTT status error code. </p>
+
+</div>
+</div>
+<a id="ad389b44dfd5d03013965a812df57a0f0" name="ad389b44dfd5d03013965a812df57a0f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad389b44dfd5d03013965a812df57a0f0">&#9670;&#160;</a></span>mqtt_getRecvMsgId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t mqtt_getRecvMsgId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the last incoming message ID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">resetModem</td><td>[in] True if modem should be reset prior to reestablishing MQTT connection. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Integer value of the message identifier. </dd></dl>
+
+</div>
+</div>
+<a id="acaf74caa6843d083f3f2fc65f6300dbe" name="acaf74caa6843d083f3f2fc65f6300dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaf74caa6843d083f3f2fc65f6300dbe">&#9670;&#160;</a></span>mqtt_getSentMsgId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t mqtt_getSentMsgId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>mqttCtrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the last outgoing message ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Integer value of the message identifier. </dd></dl>
 
 </div>
 </div>
@@ -389,8 +423,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
-<a id="a7aab056b4a96d58e65f7e19b70b508b5" name="a7aab056b4a96d58e65f7e19b70b508b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7aab056b4a96d58e65f7e19b70b508b5">&#9670;&#160;</a></span>mqtt_initControl()</h2>
+<a id="ac7e3fe00205f66724d71459625dc208f" name="ac7e3fe00205f66724d71459625dc208f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e3fe00205f66724d71459625dc208f">&#9670;&#160;</a></span>mqtt_initControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,13 +439,7 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a>&#160;</td>
-          <td class="paramname"><em>dataCntxt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a19734ffe7343a1141ef8970a9d6d5d1c">mqttRecv_func</a>&#160;</td>
-          <td class="paramname"><em>recvCallback</em>&#160;</td>
+          <td class="paramname"><em>dataCntxt</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -433,6 +461,49 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
+<a id="a059de009eb975ced3a149d9b0b9fec96" name="a059de009eb975ced3a149d9b0b9fec96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059de009eb975ced3a149d9b0b9fec96">&#9670;&#160;</a></span>mqtt_initTopicControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mqtt_initTopicControl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a6f446d1fbf8b0211fc36cbbd2eaf9512">mqttTopicCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>topicCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>topic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>qos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a745340d5a21db27bfb951acc46d0ed41">mqttAppRecv_func</a>&#160;</td>
+          <td class="paramname"><em>appTopicRecvCB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a MQTT topic subscription control structure. </p>
+<p>Initialize a (subscription) topic control structure. </p>
+
+</div>
+</div>
 <a id="ac64d750e45e17a384b1292f187813df3" name="ac64d750e45e17a384b1292f187813df3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac64d750e45e17a384b1292f187813df3">&#9670;&#160;</a></span>mqtt_open()</h2>
 
@@ -449,21 +520,13 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
       </table>
 </div><div class="memdoc">
 
-<p>Open a remote MQTT server for use. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mqttCtrl</td><td>[in] MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">host</td><td>[in] The host IP address or name of the remote server. </td></tr>
-    <tr><td class="paramname">port</td><td>[in] The IP port number to use for the communications. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A resultCode_t value indicating the success or type of failure. </dd></dl>
+<p>Open a remote MQTT server IP connection for use. </p>
+<p>Preferred way for user app to connect to server is via <a class="el" href="ltemc-mqtt_8c.html#a45a23ea200618b416d0e2e317317d399" title="Open and connect to a remote MQTT server.">mqtt_start()</a> or <a class="el" href="ltemc-mqtt_8c.html#a157ce4debcceb51a37559fa9aa18db4e" title="Reset and attempt to reestablish a server connection.">mqtt_reset()</a> </p>
 
 </div>
 </div>
-<a id="a27950fda1c826882f99e81c2cf308460" name="a27950fda1c826882f99e81c2cf308460"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27950fda1c826882f99e81c2cf308460">&#9670;&#160;</a></span>mqtt_publish()</h2>
+<a id="a6e6260585946cd8f28410cae3310869b" name="a6e6260585946cd8f28410cae3310869b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e6260585946cd8f28410cae3310869b">&#9670;&#160;</a></span>mqtt_publish()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -495,8 +558,14 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>messageSz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>timeoutSeconds</em>&#160;</td>
+          <td class="paramname"><em>timeoutSec</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -507,181 +576,18 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 </div><div class="memdoc">
 
 <p>Publish a message to server. </p>
-<p>Publish (send) a message to the MQTT server.</p>
-<p><a class="el" href="ltemc-mqtt_8h.html#aeb1f4346e20cdf079f32176bd3fcd9d9" title="Publish (send) a message to the MQTT server.">mqtt_publish()</a> </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">topic</td><td>[in] - Pointer to the message topic (see your server for topic formatting details). </td></tr>
-    <tr><td class="paramname">qos</td><td>[in] - The MQTT QOS to be assigned to sent message. </td></tr>
-    <tr><td class="paramname">message</td><td>[in] - Pointer to message to be sent. </td></tr>
-    <tr><td class="paramname">timeoutSeconds</td><td>[in] - Seconds to wait for publish to complete, highly dependent on network and remote server. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A resultCode_t value indicating the success or type of failure (http status type code). </dd></dl>
+<p>Publish (send) a message to the MQTT server. </p>
 
 </div>
 </div>
-<a id="a79279dbac86c5e4b369989dcac63d213" name="a79279dbac86c5e4b369989dcac63d213"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79279dbac86c5e4b369989dcac63d213">&#9670;&#160;</a></span>mqtt_publishEncoded()</h2>
+<a id="a157ce4debcceb51a37559fa9aa18db4e" name="a157ce4debcceb51a37559fa9aa18db4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157ce4debcceb51a37559fa9aa18db4e">&#9670;&#160;</a></span>mqtt_reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">resultCode_t mqtt_publishEncoded </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
-          <td class="paramname"><em>mqttCtrl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>topic</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a>&#160;</td>
-          <td class="paramname"><em>qos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>encodedMsg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>timeoutSeconds</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Publish an encoded message to server. </p>
-<p>Publish (send) a message to the MQTT server.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">topic</td><td>[in] - Pointer to the message topic (see your server for topic formatting details). </td></tr>
-    <tr><td class="paramname">qos</td><td>[in] - The MQTT QOS to be assigned to sent message. </td></tr>
-    <tr><td class="paramname">encodedMsg</td><td>[in] - Pointer to message to be sent. </td></tr>
-    <tr><td class="paramname">timeoutSeconds</td><td>[in] - Seconds to wait for publish to complete, highly dependent on network and remote server. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A resultCode_t value indicating the success or type of failure (http status type code). </dd></dl>
-
-</div>
-</div>
-<a id="adc3104ef476c0d70b7e54fcda06cd8d0" name="adc3104ef476c0d70b7e54fcda06cd8d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc3104ef476c0d70b7e54fcda06cd8d0">&#9670;&#160;</a></span>mqtt_readMessage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mqtt_readMessage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
-          <td class="paramname"><em>mqttCtrl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>messageBffr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>bffrSz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Disconnect and close a connection to a MQTT server. </p>
-<dl class="section note"><dt>Note</dt><dd>Message recv state is cleared automatically when mqtt_fetchRecvMessage() returns false (no remaining message to deliver).</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">messageBffr</td><td>[in] pointer to application location where message should be copied. </td></tr>
-    <tr><td class="paramname">bffrSz</td><td>[in] The size of the buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>False if message transfer is complete, true if there is additional message content to transfer. </dd></dl>
-
-</div>
-</div>
-<a id="a9d2c09e6e664dbb2b92a63f7830e6af9" name="a9d2c09e6e664dbb2b92a63f7830e6af9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d2c09e6e664dbb2b92a63f7830e6af9">&#9670;&#160;</a></span>mqtt_readTopic()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">resultCode_t mqtt_readTopic </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
-          <td class="paramname"><em>mqttCtrl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>topicBffr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>bffrSz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Disconnect and close a connection to a MQTT server. </p>
-<p>Read the topic of a received MQTT message.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">topicBffr</td><td>[in] pointer to application location where topic of the received message should be copied. </td></tr>
-    <tr><td class="paramname">bffrSz</td><td>[in] The size of the buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>False if message transfer is complete, true if there is additional message content to transfer. </dd></dl>
-
-</div>
-</div>
-<a id="a7202a9d093c0e5c23972e4d1ffcc163e" name="a7202a9d093c0e5c23972e4d1ffcc163e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7202a9d093c0e5c23972e4d1ffcc163e">&#9670;&#160;</a></span>mqtt_reset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void mqtt_reset </td>
+          <td class="memname">resultCode_t mqtt_reset </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
           <td class="paramname"><em>mqttCtrl</em>, </td>
@@ -700,7 +606,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
       </table>
 </div><div class="memdoc">
 
-<p>Disconnect and close a connection to a MQTT server. </p>
+<p>Reset and attempt to reestablish a server connection. </p>
+<p>Disconnect and close a connection to a MQTT server.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
@@ -711,14 +618,14 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
-<a id="a0b0a2889ad7be1fa24527b22e6d6fc58" name="a0b0a2889ad7be1fa24527b22e6d6fc58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b0a2889ad7be1fa24527b22e6d6fc58">&#9670;&#160;</a></span>mqtt_subscribe()</h2>
+<a id="a45a23ea200618b416d0e2e317317d399" name="a45a23ea200618b416d0e2e317317d399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a23ea200618b416d0e2e317317d399">&#9670;&#160;</a></span>mqtt_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">resultCode_t mqtt_subscribe </td>
+          <td class="memname">resultCode_t mqtt_start </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
           <td class="paramname"><em>mqttCtrl</em>, </td>
@@ -726,14 +633,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>topic</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#ab96c1d590faaf00728d862d36838bb3c">mqttQos_t</a>&#160;</td>
-          <td class="paramname"><em>qos</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cleanSession</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -743,28 +644,19 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
       </table>
 </div><div class="memdoc">
 
-<p>Subscribe to a topic on the MQTT server. </p>
-<p>Subscribe to a MQTT topic on the server.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">topic</td><td>[in] - The messaging topic to subscribe to. </td></tr>
-    <tr><td class="paramname">qos</td><td>[in] - The MQTT QOS level for messages subscribed to. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The topic index handle. 0xFF indicates the topic subscription was unsuccessful </dd></dl>
+<p>Open and connect to a remote MQTT server. </p>
+<p>Open a remote MQTT server for use. </p>
 
 </div>
 </div>
-<a id="a4052b98fe0795af64f4fe611ed007302" name="a4052b98fe0795af64f4fe611ed007302"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4052b98fe0795af64f4fe611ed007302">&#9670;&#160;</a></span>mqtt_unsubscribe()</h2>
+<a id="a64c9cfc49e71e6b77c483ecd7d5c2d17" name="a64c9cfc49e71e6b77c483ecd7d5c2d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c9cfc49e71e6b77c483ecd7d5c2d17">&#9670;&#160;</a></span>mqtt_subscribeTopic()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">resultCode_t mqtt_unsubscribe </td>
+          <td class="memname">resultCode_t mqtt_subscribeTopic </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a876dd6d72ad65cf52ec8fb8ed35fbe91">mqttCtrl_t</a> *&#160;</td>
           <td class="paramname"><em>mqttCtrl</em>, </td>
@@ -772,8 +664,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>topic</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="ltemc-mqtt_8h.html#a6f446d1fbf8b0211fc36cbbd2eaf9512">mqttTopicCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>topicCtrl</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -783,16 +675,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
       </table>
 </div><div class="memdoc">
 
-<p>Unsubscribe to a topic on the MQTT server. </p>
-<p>Unsubscribe from a MQTT topic on the server.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mqttCtrl</td><td>[in] Pointer to MQTT type stream control to operate on. </td></tr>
-    <tr><td class="paramname">topic</td><td>[in] - The messaging topic to unsubscribe from. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A resultCode_t (http status type) value indicating the success or type of failure, OK = 200. </dd></dl>
+<p>Open and connect to a remote MQTT server. </p>
+<p>Subscribe to a MQTT topic on the server. </p>
 
 </div>
 </div>

@@ -6,10 +6,10 @@
 \item 
 void \mbox{\hyperlink{ltemc-atcmd_8h_a6564b7b17223a1e581beef02914406dc}{atcmd\+\_\+reset}} (bool release\+Lock)
 \begin{DoxyCompactList}\small\item\em Resets at\+Cmd struct and optionally releases lock, a BGx AT command structure. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-atcmd_8h_a84f840a308983f46590c9df6d1860c33}{atcmd\+\_\+restore\+Option\+Defaults}} ()
-\begin{DoxyCompactList}\small\item\em Reset AT command options to defaults. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-atcmd_8h_a12f91584f62bec59a930301de9d7956f}{atcmd\+\_\+set\+Data\+Handler}} (stream\+Data\+Rcvr\+\_\+func data\+Receiver)
-\begin{DoxyCompactList}\small\item\em Set/clear stream data receiver function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-atcmd_8h_a31bf4292b9879bc5730394048e4c4807}{atcmd\+\_\+config\+Data\+Mode}} (uint16\+\_\+t context\+Key, const char $\ast$trigger, data\+Rx\+Hndlr\+\_\+func rx\+Data\+Hndlr, char $\ast$tx\+Data\+Loc, uint16\+\_\+t tx\+Data\+Sz, app\+Rcv\+Proto\+\_\+func appl\+Recv\+Data\+CB, bool skip\+Parser)
+\begin{DoxyCompactList}\small\item\em Configure atcmd automatic datamode processing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-atcmd_8h_a6527523f66390dd512a40ba227820d0c}{atcmd\+\_\+config\+Data\+Mode\+Eot}} (uint8\+\_\+t eot\+Char)
+\begin{DoxyCompactList}\small\item\em Set the TX end-\/of-\/transmission (EOT) signally character. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{ltemc-atcmd_8h_a1f90e8d6a28fc9f55520566a869d062a}{atcmd\+\_\+try\+Invoke}} (const char $\ast$cmd\+Template,...)
 \begin{DoxyCompactList}\small\item\em Invokes a BGx AT command using default option values (automatic locking). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc-atcmd_8h_a2c759a85f8659aa37ab78784ebd691e6}{atcmd\+\_\+invoke\+Reuse\+Lock}} (const char $\ast$cmd\+Template,...)
@@ -17,8 +17,6 @@ void \mbox{\hyperlink{ltemc-atcmd_8h_a2c759a85f8659aa37ab78784ebd691e6}{atcmd\+\
 \mbox{\Hypertarget{ltemc-atcmd_8h_a74edf80fef3ee4cfaebbb9607ca58a78}\label{ltemc-atcmd_8h_a74edf80fef3ee4cfaebbb9607ca58a78}} 
 void {\bfseries atcmd\+\_\+close} ()
 \begin{DoxyCompactList}\small\item\em Closes (completes) a BGx AT command structure and frees action resource (release action lock). \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-atcmd_8h_ad19d2388cd6d4423be873314968de031}{atcmd\+\_\+send\+Cmd\+Data}} (const char $\ast$data, uint16\+\_\+t data\+Sz)
-\begin{DoxyCompactList}\small\item\em Performs blind send data transfer to device. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-atcmd_8h_a128cc1893fd2d595f69804a084aeef5d}\label{ltemc-atcmd_8h_a128cc1893fd2d595f69804a084aeef5d}} 
 result\+Code\+\_\+t {\bfseries atcmd\+\_\+await\+Result} ()
 \begin{DoxyCompactList}\small\item\em Waits for atcmd result, periodically checking recv buffer for valid response until timeout. \end{DoxyCompactList}\item 
@@ -42,16 +40,25 @@ uint16\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8h_a5f23ddaa6c3600110a8dbe38c107102a}
 \begin{DoxyCompactList}\small\item\em Returns the BGx reported CME/\+CMS error code as a numeric value. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8h_a755fe5f62da184a14a80971e1c8e90a0}{atcmd\+\_\+get\+Duration}} ()
 \begin{DoxyCompactList}\small\item\em Returns the at\+Cmd last execution duration in milliseconds. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{ltemc-atcmd_8h_ac9151ae79098ea2379de42f180114825}\label{ltemc-atcmd_8h_ac9151ae79098ea2379de42f180114825}} 
-void {\bfseries atcmd\+\_\+exit\+Data\+Mode} ()
-\begin{DoxyCompactList}\small\item\em Sends +++ sequence to transition BGx out of data mode to command mode. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-atcmd_8h_a3742317e3225c92af7b6487aee1c3f38}\label{ltemc-atcmd_8h_a3742317e3225c92af7b6487aee1c3f38}} 
 void {\bfseries atcmd\+\_\+exit\+Text\+Mode} ()
-\begin{DoxyCompactList}\small\item\em Sends ESC character to ensure BGx is not in text mode (\char`\"{}$>$\char`\"{} prompt awaiting $^\wedge$\+Z/\+ESC, MQTT publish etc.). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sends $^\wedge$Z character to ensure BGx is not in text mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-atcmd_8h_ac9151ae79098ea2379de42f180114825}\label{ltemc-atcmd_8h_ac9151ae79098ea2379de42f180114825}} 
+void {\bfseries atcmd\+\_\+exit\+Data\+Mode} ()
+\begin{DoxyCompactList}\small\item\em Sends break sequence to transition BGx out of fixed-\/size data mode to command mode (up to 1500 char). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-atcmd_8h_af39aa1a60b2f0269770fbadb26f4de1a}\label{ltemc-atcmd_8h_af39aa1a60b2f0269770fbadb26f4de1a}} 
+void {\bfseries atcmd\+\_\+exit\+Transparent\+Mode} ()
+\begin{DoxyCompactList}\small\item\em Sends +++ sequence to transition BGx out of transparent data mode to command mode. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} \mbox{\hyperlink{ltemc-atcmd_8h_a98a258e1580c6a67eac1cd090603c912}{atcmd\+\_\+std\+Response\+Parser}} (const char $\ast$preamble, bool preamble\+Reqd, const char $\ast$delimiters, uint8\+\_\+t tokens\+Reqd, uint8\+\_\+t value\+Indx, const char $\ast$finale, uint16\+\_\+t length\+Reqd)
 \begin{DoxyCompactList}\small\item\em Resets at\+Cmd struct and optionally releases lock, a BGx AT command structure. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} \mbox{\hyperlink{ltemc-atcmd_8h_aabe561361875acf197304759838af23a}{ATCMD\+\_\+test\+Response\+Trace}} ()
-\begin{DoxyCompactList}\small\item\em LTEmC internal testing parser to capture incoming response until timeout. This is generally not used by end-\/user applications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-atcmd_8h_a4a2dc78f4b6ac7ad2531da8d1ddaf783}{atcmd\+\_\+std\+Tx\+Data\+Hndlr}} ()
+\begin{DoxyCompactList}\small\item\em Stardard TX (out) data handler used by data\+Mode. Sends data and checks for OK response. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-atcmd_8h_ade037acf794088bb7e758d40a3f23c07}\label{ltemc-atcmd_8h_ade037acf794088bb7e758d40a3f23c07}} 
+result\+Code\+\_\+t {\bfseries atcmd\+\_\+tx\+Data\+Hndlr\+Raw} ()
+\begin{DoxyCompactList}\small\item\em TX (out) data handler that performs a blind send of data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-atcmd_8h_accbbcbce126c5cb144a447c3a1569bb2}\label{ltemc-atcmd_8h_accbbcbce126c5cb144a447c3a1569bb2}} 
+result\+Code\+\_\+t {\bfseries atcmd\+\_\+std\+Rx\+Data\+Hndlr} ()
+\begin{DoxyCompactList}\small\item\em Stardard RX (in) data handler used by data\+Mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -102,6 +109,50 @@ Waits for atcmd result, periodically checking recv buffer for valid response unt
 {\em timeout\+MS} & Time to wait for command response (0==no change). \\
 \hline
 {\em cmd\+Response\+Parser} & If provided sets parser as the response parser (NULL==no change). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc-atcmd_8h_a31bf4292b9879bc5730394048e4c4807}\label{ltemc-atcmd_8h_a31bf4292b9879bc5730394048e4c4807}} 
+\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_configDataMode@{atcmd\_configDataMode}}
+\index{atcmd\_configDataMode@{atcmd\_configDataMode}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
+\doxysubsubsection{\texorpdfstring{atcmd\_configDataMode()}{atcmd\_configDataMode()}}
+{\footnotesize\ttfamily void atcmd\+\_\+config\+Data\+Mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{context\+Key,  }\item[{const char $\ast$}]{trigger,  }\item[{data\+Rx\+Hndlr\+\_\+func}]{rx\+Data\+Hndlr,  }\item[{char $\ast$}]{data\+Loc,  }\item[{uint16\+\_\+t}]{data\+Sz,  }\item[{app\+Rcv\+Proto\+\_\+func}]{appl\+Recv\+Data\+CB,  }\item[{bool}]{skip\+Parser }\end{DoxyParamCaption})}
+
+
+
+Configure atcmd automatic datamode processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context\+Key} & \\
+\hline
+{\em trigger} & \\
+\hline
+{\em data\+Hndlr} & \\
+\hline
+{\em data\+Loc} & \\
+\hline
+{\em data\+Sz} & \\
+\hline
+{\em appl\+Recv\+Data\+CB} & \\
+\hline
+{\em skip\+Parser} & True to skip response parser after successful datamode processing\\
+\hline
+\end{DoxyParams}
+Configure atcmd automatic datamode processing. \mbox{\Hypertarget{ltemc-atcmd_8h_a6527523f66390dd512a40ba227820d0c}\label{ltemc-atcmd_8h_a6527523f66390dd512a40ba227820d0c}} 
+\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_configDataModeEot@{atcmd\_configDataModeEot}}
+\index{atcmd\_configDataModeEot@{atcmd\_configDataModeEot}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
+\doxysubsubsection{\texorpdfstring{atcmd\_configDataModeEot()}{atcmd\_configDataModeEot()}}
+{\footnotesize\ttfamily void atcmd\+\_\+config\+Data\+Mode\+Eot (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{eot\+Char }\end{DoxyParamCaption})}
+
+
+
+Set the TX end-\/of-\/transmission (EOT) signally character. 
+
+The EOT character is automatically sent by the IOP module when the TX side of the UART goes idle. Cleared automatically on send.
+
+
+\begin{DoxyParams}{Parameters}
+{\em eot\+Char} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{ltemc-atcmd_8h_a755fe5f62da184a14a80971e1c8e90a0}\label{ltemc-atcmd_8h_a755fe5f62da184a14a80971e1c8e90a0}} 
@@ -253,46 +304,7 @@ Resets at\+Cmd struct and optionally releases lock, a BGx AT command structure.
 {\em release\+Lock} & \mbox{[}in\mbox{]} If false, clears ATCMD internal state, but leaves the command lock state unchanged \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-atcmd_8h_a84f840a308983f46590c9df6d1860c33}\label{ltemc-atcmd_8h_a84f840a308983f46590c9df6d1860c33}} 
-\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_restoreOptionDefaults@{atcmd\_restoreOptionDefaults}}
-\index{atcmd\_restoreOptionDefaults@{atcmd\_restoreOptionDefaults}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
-\doxysubsubsection{\texorpdfstring{atcmd\_restoreOptionDefaults()}{atcmd\_restoreOptionDefaults()}}
-{\footnotesize\ttfamily void atcmd\+\_\+restore\+Option\+Defaults (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Reset AT command options to defaults. 
-
-Use after set\+Options() to reset AT-\/\+Cmd behaviors to default settings. \mbox{\Hypertarget{ltemc-atcmd_8h_ad19d2388cd6d4423be873314968de031}\label{ltemc-atcmd_8h_ad19d2388cd6d4423be873314968de031}} 
-\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_sendCmdData@{atcmd\_sendCmdData}}
-\index{atcmd\_sendCmdData@{atcmd\_sendCmdData}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
-\doxysubsubsection{\texorpdfstring{atcmd\_sendCmdData()}{atcmd\_sendCmdData()}}
-{\footnotesize\ttfamily void atcmd\+\_\+send\+Cmd\+Data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{uint16\+\_\+t}]{data\+Sz }\end{DoxyParamCaption})}
-
-
-
-Performs blind send data transfer to device. 
-
-ASSERTS atcmd lock; does not change lock state. This is a blocking function (no copy), returns when send count = 0. Intended to send blocks of text in middle of a command stream. 
-\begin{DoxyParams}{Parameters}
-{\em data} & \mbox{[}in\mbox{]} Pointer to the block of character data to send \\
-\hline
-{\em data\+Sz} & \mbox{[}in\mbox{]} The size of the data block \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{ltemc-atcmd_8h_a12f91584f62bec59a930301de9d7956f}\label{ltemc-atcmd_8h_a12f91584f62bec59a930301de9d7956f}} 
-\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_setDataHandler@{atcmd\_setDataHandler}}
-\index{atcmd\_setDataHandler@{atcmd\_setDataHandler}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
-\doxysubsubsection{\texorpdfstring{atcmd\_setDataHandler()}{atcmd\_setDataHandler()}}
-{\footnotesize\ttfamily void atcmd\+\_\+set\+Data\+Handler (\begin{DoxyParamCaption}\item[{stream\+Data\+Rcvr\+\_\+func}]{data\+Receiver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Set/clear stream data receiver function. 
-
-Individual commands (ex\+: \mbox{\hyperlink{ltemc-filesys_8c_aa0adfb24daccbfc7d50af35b77da32b5}{file\+\_\+read()}} could initiate a data stream, this function allows the command to register the required handler.
-
-Set/clear stream data receiver function. \mbox{\Hypertarget{ltemc-atcmd_8h_a98a258e1580c6a67eac1cd090603c912}\label{ltemc-atcmd_8h_a98a258e1580c6a67eac1cd090603c912}} 
+\mbox{\Hypertarget{ltemc-atcmd_8h_a98a258e1580c6a67eac1cd090603c912}\label{ltemc-atcmd_8h_a98a258e1580c6a67eac1cd090603c912}} 
 \index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_stdResponseParser@{atcmd\_stdResponseParser}}
 \index{atcmd\_stdResponseParser@{atcmd\_stdResponseParser}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
 \doxysubsubsection{\texorpdfstring{atcmd\_stdResponseParser()}{atcmd\_stdResponseParser()}}
@@ -322,20 +334,17 @@ LTEmC internal function, not static as it is used by several LTEmC modules Some 
 \begin{DoxyReturn}{Returns}
 Parse status result
 \end{DoxyReturn}
-Resets at\+Cmd struct and optionally releases lock, a BGx AT command structure. \mbox{\Hypertarget{ltemc-atcmd_8h_aabe561361875acf197304759838af23a}\label{ltemc-atcmd_8h_aabe561361875acf197304759838af23a}} 
-\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!ATCMD\_testResponseTrace@{ATCMD\_testResponseTrace}}
-\index{ATCMD\_testResponseTrace@{ATCMD\_testResponseTrace}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
-\doxysubsubsection{\texorpdfstring{ATCMD\_testResponseTrace()}{ATCMD\_testResponseTrace()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} ATCMD\+\_\+test\+Response\+Trace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Resets at\+Cmd struct and optionally releases lock, a BGx AT command structure. \mbox{\Hypertarget{ltemc-atcmd_8h_a4a2dc78f4b6ac7ad2531da8d1ddaf783}\label{ltemc-atcmd_8h_a4a2dc78f4b6ac7ad2531da8d1ddaf783}} 
+\index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_stdTxDataHndlr@{atcmd\_stdTxDataHndlr}}
+\index{atcmd\_stdTxDataHndlr@{atcmd\_stdTxDataHndlr}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
+\doxysubsubsection{\texorpdfstring{atcmd\_stdTxDataHndlr()}{atcmd\_stdTxDataHndlr()}}
+{\footnotesize\ttfamily result\+Code\+\_\+t atcmd\+\_\+std\+Tx\+Data\+Hndlr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-LTEmC internal testing parser to capture incoming response until timeout. This is generally not used by end-\/user applications. 
+Stardard TX (out) data handler used by data\+Mode. Sends data and checks for OK response. 
 
-\begin{DoxyReturn}{Returns}
-Parse status result (always pending for this test parser)
-\end{DoxyReturn}
-LTEmC internal testing parser to capture incoming response until timeout. This is generally not used by end-\/user applications. \mbox{\Hypertarget{ltemc-atcmd_8h_a1f90e8d6a28fc9f55520566a869d062a}\label{ltemc-atcmd_8h_a1f90e8d6a28fc9f55520566a869d062a}} 
+Stardard TX (out) data handler used by data\+Mode. Sends data and checks for OK response. \mbox{\Hypertarget{ltemc-atcmd_8h_a1f90e8d6a28fc9f55520566a869d062a}\label{ltemc-atcmd_8h_a1f90e8d6a28fc9f55520566a869d062a}} 
 \index{ltemc-\/atcmd.h@{ltemc-\/atcmd.h}!atcmd\_tryInvoke@{atcmd\_tryInvoke}}
 \index{atcmd\_tryInvoke@{atcmd\_tryInvoke}!ltemc-\/atcmd.h@{ltemc-\/atcmd.h}}
 \doxysubsubsection{\texorpdfstring{atcmd\_tryInvoke()}{atcmd\_tryInvoke()}}
@@ -346,10 +355,10 @@ LTEmC internal testing parser to capture incoming response until timeout. This i
 Invokes a BGx AT command using default option values (automatic locking). 
 
 
-\begin{DoxyParams}{Parameters}
-{\em cmd\+Str\+Template} & \mbox{[}in\mbox{]} The command string to send to the BG96 module. \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cmd\+Str\+Template} & The command string to send to the BG96 module. \\
 \hline
-{\em ...} & \mbox{[}in\mbox{]} Variadic parameter list to integrate into the cmd\+Str\+Template. \\
+\mbox{\texttt{ in}}  & {\em variadic} & \char`\"{}...\char`\"{} parameter list to integrate into the cmd\+Str\+Template. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

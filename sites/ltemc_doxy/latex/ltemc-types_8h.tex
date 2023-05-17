@@ -14,7 +14,7 @@ Public API type definitions for consumption of LTEmC services.
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structltem_pin_config__tag}{ltem\+Pin\+Config\+\_\+tag}}
-\item 
+\begin{DoxyCompactList}\small\item\em Structure describing the I/O pins for LTEm communications with the host. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structmodem_settings__tag}{modem\+Settings\+\_\+tag}}
 \begin{DoxyCompactList}\small\item\em Struct holding cellular and radio settings. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structmodem_info__tag}{modem\+Info\+\_\+tag}}
@@ -24,9 +24,11 @@ struct \mbox{\hyperlink{structnetwork_info__tag}{network\+Info\+\_\+tag}}
 struct \mbox{\hyperlink{structprovider_info__tag}{provider\+Info\+\_\+tag}}
 \begin{DoxyCompactList}\small\item\em Struct respresenting an ACTIVE network carrier/operator. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structstream_ctrl__tag}{stream\+Ctrl\+\_\+tag}}
-\begin{DoxyCompactList}\small\item\em Base struct containing common properties required of a stream control. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Abstract structure describing a data stream (protocol or filesystem). \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structiop__tag}{iop\+\_\+tag}}
 \begin{DoxyCompactList}\small\item\em Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdata_mode__tag}{data\+Mode\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Control structure for automatic switching to data mode within a command action. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structatcmd__tag}{atcmd\+\_\+tag}}
 \begin{DoxyCompactList}\small\item\em Structure to control invocation and management of an AT command with the BGx module. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structatcmd_result__tag}{atcmd\+Result\+\_\+tag}}
@@ -59,34 +61,13 @@ struct \mbox{\hyperlink{structtls_options__tag}{tls\+Options\+\_\+tag}}
 \item 
 \mbox{\Hypertarget{ltemc-types_8h_a81ddabe8434b8ae650e64c7c62b8cf3f}\label{ltemc-types_8h_a81ddabe8434b8ae650e64c7c62b8cf3f}} 
 \#define {\bfseries PDP\+\_\+\+PROTOCOL\+\_\+\+PPP}~\char`\"{}PPP\char`\"{}
-\item 
-\mbox{\Hypertarget{ltemc-types_8h_afa6106fd20175dab26f9dffe61be58b4}\label{ltemc-types_8h_afa6106fd20175dab26f9dffe61be58b4}} 
-\#define {\bfseries STREAM\+\_\+\+UDP}~\char`\"{}UDP\char`\"{}
-\item 
-\mbox{\Hypertarget{ltemc-types_8h_a18220fb57a65065e7fdf7f4ce53d4417}\label{ltemc-types_8h_a18220fb57a65065e7fdf7f4ce53d4417}} 
-\#define {\bfseries STREAM\+\_\+\+TCP}~\char`\"{}TCP\char`\"{}
-\item 
-\mbox{\Hypertarget{ltemc-types_8h_ad37e591831c2c40892e6e3e5aeeeff48}\label{ltemc-types_8h_ad37e591831c2c40892e6e3e5aeeeff48}} 
-\#define {\bfseries STREAM\+\_\+\+SSL}~\char`\"{}SSL\char`\"{}
-\item 
-\mbox{\Hypertarget{ltemc-types_8h_ab28ace352f6f2491002a2992aed13b37}\label{ltemc-types_8h_ab28ace352f6f2491002a2992aed13b37}} 
-\#define {\bfseries STREAM\+\_\+\+MQTT}~\char`\"{}MQTT\char`\"{}
-\item 
-\mbox{\Hypertarget{ltemc-types_8h_af343323e8079365cf257b32c1c934ee8}\label{ltemc-types_8h_af343323e8079365cf257b32c1c934ee8}} 
-\#define {\bfseries STREAM\+\_\+\+HTTP}~\char`\"{}HTTP\char`\"{}
-\item 
-\mbox{\Hypertarget{ltemc-types_8h_a85e7f427bdc394b9f01ce36483c18b05}\label{ltemc-types_8h_a85e7f427bdc394b9f01ce36483c18b05}} 
-\#define {\bfseries STREAM\+\_\+\+\_\+\+CNT}~6
-\item 
-\mbox{\Hypertarget{ltemc-types_8h_af9f11b7ed55a6d2cdabcde7844b218f6}\label{ltemc-types_8h_af9f11b7ed55a6d2cdabcde7844b218f6}} 
-\#define {\bfseries STREAM\+\_\+\+FILE}~\char`\"{}FILE\char`\"{}
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{ltemc-types_8h_a179aa93a99cd81e3a0f037bd9f07d70e}\label{ltemc-types_8h_a179aa93a99cd81e3a0f037bd9f07d70e}} 
 typedef struct \mbox{\hyperlink{structltem_pin_config__tag}{ltem\+Pin\+Config\+\_\+tag}} {\bfseries ltem\+Pin\+Config\+\_\+t}
-\item 
+\begin{DoxyCompactList}\small\item\em Structure describing the I/O pins for LTEm communications with the host. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-types_8h_aa8cc0cd14abcf26157f9aae9974e9643}\label{ltemc-types_8h_aa8cc0cd14abcf26157f9aae9974e9643}} 
 typedef enum \mbox{\hyperlink{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1}{device\+State\+\_\+tag}} {\bfseries device\+State\+\_\+t}
 \begin{DoxyCompactList}\small\item\em Enum describing the current device/module state. \end{DoxyCompactList}\item 
@@ -120,26 +101,27 @@ typedef struct \mbox{\hyperlink{structnetwork_info__tag}{network\+Info\+\_\+tag}
 \mbox{\Hypertarget{ltemc-types_8h_a48b1c7151c8e716c7b857586ce5d5fa5}\label{ltemc-types_8h_a48b1c7151c8e716c7b857586ce5d5fa5}} 
 typedef struct \mbox{\hyperlink{structprovider_info__tag}{provider\+Info\+\_\+tag}} {\bfseries provider\+Info\+\_\+t}
 \begin{DoxyCompactList}\small\item\em Struct respresenting an ACTIVE network carrier/operator. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{ltemc-types_8h_a5b68890a2d181735ec234557e2500251}\label{ltemc-types_8h_a5b68890a2d181735ec234557e2500251}} 
-typedef void($\ast$ {\bfseries urc\+Handler\+\_\+func}) ()
+typedef enum \mbox{\hyperlink{ltemc-types_8h_a4938ea20341909cd71dacfab64f2a572}{stream\+Type\+\_\+tag}} \mbox{\hyperlink{ltemc-types_8h_a7a6e369673a63d301becf28b22bdbec7}{stream\+Type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Streams. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_a1271c938241e3f6084b892d3a9e22c53}\label{ltemc-types_8h_a1271c938241e3f6084b892d3a9e22c53}} 
+typedef result\+Code\+\_\+t($\ast$ {\bfseries urc\+Evnt\+Hndlr\+\_\+func}) ()
 \item 
-\mbox{\Hypertarget{ltemc-types_8h_aa98e9691cafea97d71c3333f0e19f38d}\label{ltemc-types_8h_aa98e9691cafea97d71c3333f0e19f38d}} 
-typedef void($\ast$ {\bfseries cb\+Proto\+\_\+func}) ()
+\mbox{\Hypertarget{ltemc-types_8h_a7b07d8122a9d1509b6b1f8858f5f700e}\label{ltemc-types_8h_a7b07d8122a9d1509b6b1f8858f5f700e}} 
+typedef result\+Code\+\_\+t($\ast$ {\bfseries data\+Rx\+Hndlr\+\_\+func}) ()
 \item 
-\mbox{\Hypertarget{ltemc-types_8h_a2e14c00a33139e42bf3f40070147a3b9}\label{ltemc-types_8h_a2e14c00a33139e42bf3f40070147a3b9}} 
-typedef result\+Code\+\_\+t($\ast$ {\bfseries stream\+Data\+Rcvr\+\_\+func}) ()
+\mbox{\Hypertarget{ltemc-types_8h_a38136401603d89598fecd94e3d3de712}\label{ltemc-types_8h_a38136401603d89598fecd94e3d3de712}} 
+typedef void($\ast$ {\bfseries app\+Rcv\+Proto\+\_\+func}) ()
 \item 
-\mbox{\Hypertarget{ltemc-types_8h_ad81935905b623abc9443ea6a08412229}\label{ltemc-types_8h_ad81935905b623abc9443ea6a08412229}} 
-typedef void($\ast$ {\bfseries stream\+Close\+\_\+func}) (uint8\+\_\+t cntxt\+Nm)
-\item 
-\mbox{\Hypertarget{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}\label{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}} 
-typedef struct \mbox{\hyperlink{structstream_ctrl__tag}{stream\+Ctrl\+\_\+tag}} {\bfseries stream\+Ctrl\+\_\+t}
-\begin{DoxyCompactList}\small\item\em Base struct containing common properties required of a stream control. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structstream_ctrl__tag}{stream\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}{stream\+Ctrl\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Abstract structure describing a data stream (protocol or filesystem). \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structiop__tag}{iop\+\_\+tag}} \mbox{\hyperlink{ltemc-types_8h_a1ed4c59909ec1a9a0007da89586254ff}{iop\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}\label{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}} 
 typedef enum \mbox{\hyperlink{ltemc-types_8h_aad0e841ab77e1029b26f6132e41e084d}{cmd\+Parse\+Rslt\+\_\+tag}} {\bfseries cmd\+Parse\+Rslt\+\_\+t}
 \begin{DoxyCompactList}\small\item\em AT command response parser result codes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-types_8h_aff4f84049d61698685225cfe57234b02}\label{ltemc-types_8h_aff4f84049d61698685225cfe57234b02}} 
+typedef struct \mbox{\hyperlink{structdata_mode__tag}{data\+Mode\+\_\+tag}} {\bfseries data\+Mode\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Control structure for automatic switching to data mode within a command action. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-types_8h_a04591edc11b34ab2d9780add070842a2}\label{ltemc-types_8h_a04591edc11b34ab2d9780add070842a2}} 
 typedef \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}}($\ast$ {\bfseries cmd\+Response\+Parser\+\_\+func}) ()
 \item 
@@ -249,6 +231,18 @@ enum \mbox{\hyperlink{ltemc-types_8h_a00e5aa3e84a24be822f6fd46336a5b3e}{IOP\+\_\
 {\bfseries IOP\+\_\+\+\_\+urc\+Detect\+Buffer\+Sz} = 40
  \}
 \begin{DoxyCompactList}\small\item\em Typed numeric Input/\+Output Processor subsystem contants. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ltemc-types_8h_a4938ea20341909cd71dacfab64f2a572}{stream\+Type\+\_\+tag}} \{ \newline
+{\bfseries stream\+Type\+\_\+\+UDP} = \textquotesingle{}U\textquotesingle{}
+, {\bfseries stream\+Type\+\_\+\+TCP} = \textquotesingle{}T\textquotesingle{}
+, {\bfseries stream\+Type\+\_\+\+SSLTLS} = \textquotesingle{}S\textquotesingle{}
+, {\bfseries stream\+Type\+\_\+\+MQTT} = \textquotesingle{}M\textquotesingle{}
+, \newline
+{\bfseries stream\+Type\+\_\+\+HTTP} = \textquotesingle{}H\textquotesingle{}
+, {\bfseries stream\+Type\+\_\+file} = \textquotesingle{}F\textquotesingle{}
+, {\bfseries stream\+Type\+\_\+\+\_\+\+ANY} = 0
+, {\bfseries stream\+Type\+\_\+\+\_\+\+SCKT} = \textquotesingle{}k\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em Streams. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-types_8h_a3594f53de3db832b8819598ac3ebc377}\label{ltemc-types_8h_a3594f53de3db832b8819598ac3ebc377}} 
 enum \mbox{\hyperlink{ltemc-types_8h_a3594f53de3db832b8819598ac3ebc377}{atcmd\+\_\+\+\_\+constants}} \{ \newline
 {\bfseries atcmd\+\_\+\+\_\+no\+Timeout\+Change} = 0
@@ -256,9 +250,10 @@ enum \mbox{\hyperlink{ltemc-types_8h_a3594f53de3db832b8819598ac3ebc377}{atcmd\+\
 , {\bfseries atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Manual} = 0
 , {\bfseries atcmd\+\_\+\+\_\+set\+Lock\+Mode\+Auto} = 1
 , \newline
-{\bfseries atcmd\+\_\+\+\_\+cmd\+Buffer\+Sz} = 512
-, {\bfseries atcmd\+\_\+\+\_\+resp\+Buffer\+Sz} = 240
-, {\bfseries atcmd\+\_\+\+\_\+resp\+Bffr\+Shift} = atcmd\+\_\+\+\_\+resp\+Buffer\+Sz / 4
+{\bfseries atcmd\+\_\+\+\_\+cmd\+Buffer\+Sz} = 448
+, {\bfseries atcmd\+\_\+\+\_\+resp\+Buffer\+Sz} = 120
+, {\bfseries atcmd\+\_\+\+\_\+stream\+Prefix\+Sz} = 12
+, {\bfseries atcmd\+\_\+\+\_\+data\+Mode\+Trigger\+Sz} = 13
  \}
 \begin{DoxyCompactList}\small\item\em Typed constants for AT-\/\+CMD module. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-types_8h_aad0e841ab77e1029b26f6132e41e084d}\label{ltemc-types_8h_aad0e841ab77e1029b26f6132e41e084d}} 
@@ -366,7 +361,28 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g\+\_\+ltem1. 
 
-Each of the protocols (sockets, MQTT, HTTP) have unique behaviors\+: sockets receive asynchronous alerts but the data receive process is fully synchronous, HTTP is synchronous on receive tied to page read, MQTT is fully asynchronous with msg event receive signaling and data transfer taking place async behind the scenes initiated on interrupt. 
+Each of the protocols (sockets, MQTT, HTTP) have unique behaviors\+: sockets receive asynchronous alerts but the data receive process is fully synchronous, HTTP is synchronous on receive tied to page read, MQTT is fully asynchronous with msg event receive signaling and data transfer taking place async behind the scenes initiated on interrupt. \mbox{\Hypertarget{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}\label{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}} 
+\index{ltemc-\/types.h@{ltemc-\/types.h}!streamCtrl\_t@{streamCtrl\_t}}
+\index{streamCtrl\_t@{streamCtrl\_t}!ltemc-\/types.h@{ltemc-\/types.h}}
+\doxysubsubsection{\texorpdfstring{streamCtrl\_t}{streamCtrl\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstream_ctrl__tag}{stream\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}{stream\+Ctrl\+\_\+t}}}
+
+
+
+Abstract structure describing a data stream (protocol or filesystem). 
+
+The stream\+Ctrl\+\_\+t is used as an abstraction which is cast to a specific stream type EX\+: mqtt\+Ctrl\+\_\+t$\ast$ mqtt\+Ctrl = (mqtt\+Ctrl\+\_\+t$\ast$)stream\+Ctrl \mbox{\Hypertarget{ltemc-types_8h_a7a6e369673a63d301becf28b22bdbec7}\label{ltemc-types_8h_a7a6e369673a63d301becf28b22bdbec7}} 
+\index{ltemc-\/types.h@{ltemc-\/types.h}!streamType\_t@{streamType\_t}}
+\index{streamType\_t@{streamType\_t}!ltemc-\/types.h@{ltemc-\/types.h}}
+\doxysubsubsection{\texorpdfstring{streamType\_t}{streamType\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ltemc-types_8h_a4938ea20341909cd71dacfab64f2a572}{stream\+Type\+\_\+tag}} \mbox{\hyperlink{ltemc-types_8h_a7a6e369673a63d301becf28b22bdbec7}{stream\+Type\+\_\+t}}}
+
+
+
+Streams. 
+
+\hypertarget{ltemc-types_8h_autotoc_md34}{}\doxysubsection{@details Structures for stream control/processing}\label{ltemc-types_8h_autotoc_md34}
+
 
 \doxysubsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1}\label{ltemc-types_8h_a11a79f2d43f931530f2a8767426138b1}} 
@@ -429,3 +445,14 @@ ntwk\+Scan\+Mode\+\_\+lteonly&GSM only mode\+: BGx is filtering visible networks
 \hline
 
 \end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-types_8h_a4938ea20341909cd71dacfab64f2a572}\label{ltemc-types_8h_a4938ea20341909cd71dacfab64f2a572}} 
+\index{ltemc-\/types.h@{ltemc-\/types.h}!streamType\_tag@{streamType\_tag}}
+\index{streamType\_tag@{streamType\_tag}!ltemc-\/types.h@{ltemc-\/types.h}}
+\doxysubsubsection{\texorpdfstring{streamType\_tag}{streamType\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-types_8h_a4938ea20341909cd71dacfab64f2a572}{stream\+Type\+\_\+tag}}}
+
+
+
+Streams. 
+
+\hypertarget{ltemc-types_8h_autotoc_md34}{}\doxysubsection{@details Structures for stream control/processing}\label{ltemc-types_8h_autotoc_md34}

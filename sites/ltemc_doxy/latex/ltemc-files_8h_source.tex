@@ -1,0 +1,172 @@
+\hypertarget{ltemc-files_8h_source}{}\doxysection{ltemc-\/files.h}
+\label{ltemc-files_8h_source}\index{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/files.h@{C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-\/LTEmC/src/ltemc-\/files.h}}
+\mbox{\hyperlink{ltemc-files_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifndef\ \_\_LTEMC\_FILES\_H\_\_}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ \_\_LTEMC\_FILES\_H\_\_}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc_8h}{ltemc.h}}"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-files_8h_afb2259073a997864b3dcdce8603c295e}{fileConstants\_tag}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ file\_\_filenameSz\ =\ 81,}
+\DoxyCodeLine{00042\ \ \ \ \ file\_\_timeoutMS\ =\ 800,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{ltemc-files_8h_afb2259073a997864b3dcdce8603c295ea40d049fe6b71c50bdae9ae733f199eb4}{file\_\_fileListMaxCnt}}\ =\ 32,}
+\DoxyCodeLine{00044\ \ \ \ \ file\_\_openFileItemSz\ =\ 28,}
+\DoxyCodeLine{00045\ \ \ \ \ file\_\_openFileMaxCnt\ =\ 10,}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ file\_\_dataOffset\_info\ =\ 7,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{ltemc-files_8h_afb2259073a997864b3dcdce8603c295ea53474839bf60255f1b7d9f2e08bd74f7}{file\_\_dataOffset\_open}}\ =\ 9,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{ltemc-files_8h_afb2259073a997864b3dcdce8603c295ea85ec940161b354beb0384d05891910ff}{file\_\_handleSearchMax}}\ =\ 20,}
+\DoxyCodeLine{00050\ \ \ \ \ file\_\_dataOffset\_pos\ =\ 13,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{ltemc-files_8h_afb2259073a997864b3dcdce8603c295eaf0f140dd17301b30f8b0dd0701fce412}{file\_\_readTrailerSz}}\ =\ 6,}
+\DoxyCodeLine{00052\ \ \ \ \ file\_\_readTimeoutMs\ =\ 100}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-files_8h_a5e101fe61637c2863af973900d78f242}{fileErrMap}}}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ fileErr\_\_detail\_fileAlreadyOpen\ =\ 426,}
+\DoxyCodeLine{00062\ \ \ \ \ fileErr\_\_result\_fileAlreadyOpen\ =\ 409,}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ fileErr\_\_detail\_fileNotFound\ =\ 405,}
+\DoxyCodeLine{00065\ \ \ \ \ fileErr\_\_result\_fileNotFound\ =\ 404}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ fileInfoType\_tag}
+\DoxyCodeLine{00070\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ fileInfoType\_fileSystem\ =\ 0,}
+\DoxyCodeLine{00072\ \ \ \ \ fileInfoType\_file\ =\ 1}
+\DoxyCodeLine{00073\ \}\ fileInfoType\_t;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfilesys_info__tag}{filesysInfo\_tag}}}
+\DoxyCodeLine{00080\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ uint32\_t\ freeSz;}
+\DoxyCodeLine{00082\ \ \ \ \ uint32\_t\ totalSz;}
+\DoxyCodeLine{00083\ \ \ \ \ uint32\_t\ filesSz;}
+\DoxyCodeLine{00084\ \ \ \ \ uint16\_t\ filesCnt;}
+\DoxyCodeLine{00085\ \}\ \mbox{\hyperlink{ltemc-files_8h_a5b8ec8999e12d77d76477c331d171501}{filesysInfo\_t}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfile_list_item__tag}{fileListItem\_tag}}}
+\DoxyCodeLine{00092\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{char}\ filename[file\_\_filenameSz];}
+\DoxyCodeLine{00094\ \ \ \ \ uint32\_t\ fileSz;}
+\DoxyCodeLine{00095\ \}\ \mbox{\hyperlink{ltemc-files_8h_a439241d04c1f3b5e1b4aef5d11a6f199}{fileListItem\_t}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfile_list_result__tag}{fileListResult\_tag}}}
+\DoxyCodeLine{00101\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{char}\ namePattern[file\_\_filenameSz];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structfile_list_result__tag_aa8b9bb1bb378e4c04acc111519bbb3f0}{fileCnt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{structfile_list_item__tag}{fileListItem\_t}}\ \mbox{\hyperlink{structfile_list_result__tag_a2337135c4e3d24d4a244f97da3c34e87}{files}}[\mbox{\hyperlink{ltemc-files_8h_afb2259073a997864b3dcdce8603c295ea40d049fe6b71c50bdae9ae733f199eb4}{file\_\_fileListMaxCnt}}];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \}\ \mbox{\hyperlink{ltemc-files_8h_a92ef775ce58e30a0e5e1f48bbd0cfb9e}{fileListResult\_t}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfile_upload_result__tag}{fileUploadResult\_tag}}}
+\DoxyCodeLine{00112\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ uint32\_t\ size;}
+\DoxyCodeLine{00114\ \ \ \ \ uint16\_t\ checksum;}
+\DoxyCodeLine{00115\ \}\ \mbox{\hyperlink{ltemc-files_8h_a04b7573081aa642ddb3b4bd40f8f0ce4}{fileUploadResult\_t}};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00121\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfile_download_result__tag}{fileDownloadResult\_tag}}}
+\DoxyCodeLine{00122\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ uint32\_t\ size;}
+\DoxyCodeLine{00124\ \ \ \ \ uint16\_t\ checksum;}
+\DoxyCodeLine{00125\ \}\ \mbox{\hyperlink{ltemc-files_8h_a6f9890a4eb1429d71e2b5c204d6cd4cd}{fileDownloadResult\_t}};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-files_8h_a41a840b01fb65fac36c0af25773abef5}{fileOpenMode\_tag}}}
+\DoxyCodeLine{00131\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ fileOpenMode\_rdWr\ =\ 0,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{ltemc-files_8h_a41a840b01fb65fac36c0af25773abef5ab1764b8c47c31cdd4ce7df43eb5e3360}{fileOpenMode\_ovrRdWr}}\ =\ 1,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{ltemc-files_8h_a41a840b01fb65fac36c0af25773abef5a71fcad53d56f3269b432661fb353dfdd}{fileOpenMode\_rdOnly}}\ =\ 2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00135\ \}\ \mbox{\hyperlink{ltemc-files_8h_ab1f8e73ad2ef8f206d19def6769b3612}{fileOpenMode\_t}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00141\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-files_8h_acf19fd7a8126c5eb957e79b2b63abcda}{fileSeekMode\_tag}}}
+\DoxyCodeLine{00142\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ fileSeekMode\_fromBegin\ =\ 0,\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{ltemc-files_8h_acf19fd7a8126c5eb957e79b2b63abcdaab1752ee6ec8749243229d6b01f0ea4c7}{fileSeekMode\_fromCurrent}}\ =\ 1,\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{ltemc-files_8h_acf19fd7a8126c5eb957e79b2b63abcdaa0e14257ec4f35137684bbf60257e1ed9}{fileSeekMode\_fromEnd}}\ =\ 2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00146\ \}\ \mbox{\hyperlink{ltemc-files_8h_ac67a60a608a19efef54c6fc33a0390bc}{fileSeekMode\_t}};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00152\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfile_write_result__tag}{fileWriteResult\_tag}}}
+\DoxyCodeLine{00153\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ uint16\_t\ writtenSz;}
+\DoxyCodeLine{00155\ \ \ \ \ uint32\_t\ fileSz;}
+\DoxyCodeLine{00156\ \}\ \mbox{\hyperlink{ltemc-files_8h_a8a7506f92c9719ea5ead6f93501be76e}{fileWriteResult\_t}};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00162\ \textcolor{keyword}{typedef}\ void\ (*\mbox{\hyperlink{ltemc-files_8h_afa8036883ef74123f7362f58a08e5927}{fileReceiver\_func}})(uint16\_t\ fileHandle,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fileData,\ uint16\_t\ dataSz);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00166\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-files_8h_a3d2f632c2648e6962a770f396e9aff27}{file\_setAppReceiver}}(\mbox{\hyperlink{ltemc-files_8h_afa8036883ef74123f7362f58a08e5927}{fileReceiver\_func}}\ fileReceiver);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00175\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_ab06d7b3a2140dc65c7cf53eb987a34ac}{file\_getFSInfo}}(\mbox{\hyperlink{structfilesys_info__tag}{filesysInfo\_t}}\ *\ fsInfo);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00181\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_a19e8e8d8e23c44eb7daa3bc4e8433f48}{file\_getFilelist}}(\mbox{\hyperlink{structfile_list_result__tag}{fileListResult\_t}}\ *filelist,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fileName);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00185\ \textcolor{comment}{//\ \ *\ \ \ @brief\ set\ file\ read\ data\ receiver\ function\ (here\ or\ with\ filesys\_open).\ Not\ required\ if\ file\ is\ write\ only\ access.}}
+\DoxyCodeLine{00186\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00187\ \textcolor{comment}{//\ void\ file\_setRecvrFunc(fileReceiver\_func\ fileReceiver);}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00197\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_a09bcccfe2d42bc78dcf3f7601adfd8eb}{file\_open}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fileName,\ \mbox{\hyperlink{ltemc-files_8h_ab1f8e73ad2ef8f206d19def6769b3612}{fileOpenMode\_t}}\ openMode,\ uint16\_t*\ fileHandle);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00206\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_a57a012d99b96e5c1daed7888061506fa}{file\_getOpenFiles}}(\textcolor{keywordtype}{char}\ *fileinfo,\ uint16\_t\ fileinfoSz);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00214\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_af9e364960756056df997906fc0888181}{file\_close}}(uint16\_t\ fileHandle);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00221\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_a8ad4884de6cc8c1fb5a83152d429557e}{file\_closeAll}}();}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00229\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_aa0adfb24daccbfc7d50af35b77da32b5}{file\_read}}(uint16\_t\ fileHandle,\ uint16\_t\ readSz);}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00237\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_abbc1a4c61e58d679d682fe752b6bfe6a}{file\_write}}(uint16\_t\ fileHandle,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ writeData,\ uint16\_t\ writeSz,\ \mbox{\hyperlink{structfile_write_result__tag}{fileWriteResult\_t}}\ *writeResult);}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00249\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_a9cd6e92742852ab37a2866db9c96847b}{file\_seek}}(uint16\_t\ fileHandle,\ uint32\_t\ offset,\ \mbox{\hyperlink{ltemc-files_8h_ac67a60a608a19efef54c6fc33a0390bc}{fileSeekMode\_t}}\ seekFrom);}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00258\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_a7e0e1edb89b3ce76a788c42891cfd370}{file\_getPosition}}(uint16\_t\ fileHandle,\ uint32\_t*\ filePtr);}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00266\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_a9f21f445750167387749e5fa818a0ff1}{file\_truncate}}(uint16\_t\ fileHandle);}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00274\ resultCode\_t\ \mbox{\hyperlink{ltemc-files_8h_add3e7824407aa282f1bbf70f26dcea05}{file\_delete}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fileName);}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \textcolor{comment}{/*\ future\ */}}
+\DoxyCodeLine{00279\ \textcolor{comment}{//\ fileUploadResult\_t\ file\_upload(const\ char*\ fileName);}}
+\DoxyCodeLine{00280\ \textcolor{comment}{//\ fileDownloadResult\_t\ file\_download(const\ char*\ fileName);}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00284\ \}}
+\DoxyCodeLine{00285\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ !\_\_LTEMC\_FILES\_H\_\_}}
+
+\end{DoxyCode}

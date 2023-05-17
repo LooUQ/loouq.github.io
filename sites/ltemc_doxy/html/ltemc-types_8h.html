@@ -97,6 +97,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structltem_pin_config__tag.html">ltemPinConfig_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure describing the I/O pins for LTEm communications with the host.  <a href="structltem_pin_config__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodem_settings__tag.html">modemSettings_tag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct holding cellular and radio settings.  <a href="structmodem_settings__tag.html#details">More...</a><br /></td></tr>
@@ -111,10 +112,13 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct respresenting an ACTIVE network carrier/operator.  <a href="structprovider_info__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstream_ctrl__tag.html">streamCtrl_tag</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base struct containing common properties required of a stream control.  <a href="structstream_ctrl__tag.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract structure describing a data stream (protocol or filesystem).  <a href="structstream_ctrl__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiop__tag.html">iop_tag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1.  <a href="structiop__tag.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdata_mode__tag.html">dataMode_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control structure for automatic switching to data mode within a command action.  <a href="structdata_mode__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatcmd__tag.html">atcmd_tag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to control invocation and management of an AT command with the BGx module.  <a href="structatcmd__tag.html#details">More...</a><br /></td></tr>
@@ -152,32 +156,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a81ddabe8434b8ae650e64c7c62b8cf3f"><td class="memItemLeft" align="right" valign="top"><a id="a81ddabe8434b8ae650e64c7c62b8cf3f" name="a81ddabe8434b8ae650e64c7c62b8cf3f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>PDP_PROTOCOL_PPP</b>&#160;&#160;&#160;&quot;PPP&quot;</td></tr>
 <tr class="separator:a81ddabe8434b8ae650e64c7c62b8cf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa6106fd20175dab26f9dffe61be58b4"><td class="memItemLeft" align="right" valign="top"><a id="afa6106fd20175dab26f9dffe61be58b4" name="afa6106fd20175dab26f9dffe61be58b4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STREAM_UDP</b>&#160;&#160;&#160;&quot;UDP&quot;</td></tr>
-<tr class="separator:afa6106fd20175dab26f9dffe61be58b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18220fb57a65065e7fdf7f4ce53d4417"><td class="memItemLeft" align="right" valign="top"><a id="a18220fb57a65065e7fdf7f4ce53d4417" name="a18220fb57a65065e7fdf7f4ce53d4417"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STREAM_TCP</b>&#160;&#160;&#160;&quot;TCP&quot;</td></tr>
-<tr class="separator:a18220fb57a65065e7fdf7f4ce53d4417"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad37e591831c2c40892e6e3e5aeeeff48"><td class="memItemLeft" align="right" valign="top"><a id="ad37e591831c2c40892e6e3e5aeeeff48" name="ad37e591831c2c40892e6e3e5aeeeff48"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STREAM_SSL</b>&#160;&#160;&#160;&quot;SSL&quot;</td></tr>
-<tr class="separator:ad37e591831c2c40892e6e3e5aeeeff48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab28ace352f6f2491002a2992aed13b37"><td class="memItemLeft" align="right" valign="top"><a id="ab28ace352f6f2491002a2992aed13b37" name="ab28ace352f6f2491002a2992aed13b37"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STREAM_MQTT</b>&#160;&#160;&#160;&quot;MQTT&quot;</td></tr>
-<tr class="separator:ab28ace352f6f2491002a2992aed13b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af343323e8079365cf257b32c1c934ee8"><td class="memItemLeft" align="right" valign="top"><a id="af343323e8079365cf257b32c1c934ee8" name="af343323e8079365cf257b32c1c934ee8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STREAM_HTTP</b>&#160;&#160;&#160;&quot;HTTP&quot;</td></tr>
-<tr class="separator:af343323e8079365cf257b32c1c934ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85e7f427bdc394b9f01ce36483c18b05"><td class="memItemLeft" align="right" valign="top"><a id="a85e7f427bdc394b9f01ce36483c18b05" name="a85e7f427bdc394b9f01ce36483c18b05"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STREAM__CNT</b>&#160;&#160;&#160;6</td></tr>
-<tr class="separator:a85e7f427bdc394b9f01ce36483c18b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9f11b7ed55a6d2cdabcde7844b218f6"><td class="memItemLeft" align="right" valign="top"><a id="af9f11b7ed55a6d2cdabcde7844b218f6" name="af9f11b7ed55a6d2cdabcde7844b218f6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STREAM_FILE</b>&#160;&#160;&#160;&quot;FILE&quot;</td></tr>
-<tr class="separator:af9f11b7ed55a6d2cdabcde7844b218f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a179aa93a99cd81e3a0f037bd9f07d70e"><td class="memItemLeft" align="right" valign="top"><a id="a179aa93a99cd81e3a0f037bd9f07d70e" name="a179aa93a99cd81e3a0f037bd9f07d70e"></a>
 typedef struct <a class="el" href="structltem_pin_config__tag.html">ltemPinConfig_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ltemPinConfig_t</b></td></tr>
+<tr class="memdesc:a179aa93a99cd81e3a0f037bd9f07d70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure describing the I/O pins for LTEm communications with the host. <br /></td></tr>
 <tr class="separator:a179aa93a99cd81e3a0f037bd9f07d70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8cc0cd14abcf26157f9aae9974e9643"><td class="memItemLeft" align="right" valign="top"><a id="aa8cc0cd14abcf26157f9aae9974e9643" name="aa8cc0cd14abcf26157f9aae9974e9643"></a>
 typedef enum <a class="el" href="ltemc-types_8h.html#a11a79f2d43f931530f2a8767426138b1">deviceState_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>deviceState_t</b></td></tr>
@@ -220,21 +204,20 @@ typedef struct <a class="el" href="structnetwork_info__tag.html">networkInfo_tag
 typedef struct <a class="el" href="structprovider_info__tag.html">providerInfo_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>providerInfo_t</b></td></tr>
 <tr class="memdesc:a48b1c7151c8e716c7b857586ce5d5fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct respresenting an ACTIVE network carrier/operator. <br /></td></tr>
 <tr class="separator:a48b1c7151c8e716c7b857586ce5d5fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b68890a2d181735ec234557e2500251"><td class="memItemLeft" align="right" valign="top"><a id="a5b68890a2d181735ec234557e2500251" name="a5b68890a2d181735ec234557e2500251"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>urcHandler_func</b>) ()</td></tr>
-<tr class="separator:a5b68890a2d181735ec234557e2500251"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa98e9691cafea97d71c3333f0e19f38d"><td class="memItemLeft" align="right" valign="top"><a id="aa98e9691cafea97d71c3333f0e19f38d" name="aa98e9691cafea97d71c3333f0e19f38d"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>cbProto_func</b>) ()</td></tr>
-<tr class="separator:aa98e9691cafea97d71c3333f0e19f38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e14c00a33139e42bf3f40070147a3b9"><td class="memItemLeft" align="right" valign="top"><a id="a2e14c00a33139e42bf3f40070147a3b9" name="a2e14c00a33139e42bf3f40070147a3b9"></a>
-typedef resultCode_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>streamDataRcvr_func</b>) ()</td></tr>
-<tr class="separator:a2e14c00a33139e42bf3f40070147a3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad81935905b623abc9443ea6a08412229"><td class="memItemLeft" align="right" valign="top"><a id="ad81935905b623abc9443ea6a08412229" name="ad81935905b623abc9443ea6a08412229"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>streamClose_func</b>) (uint8_t cntxtNm)</td></tr>
-<tr class="separator:ad81935905b623abc9443ea6a08412229"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59d50b328873ce5798b52fac8d0886a4"><td class="memItemLeft" align="right" valign="top"><a id="a59d50b328873ce5798b52fac8d0886a4" name="a59d50b328873ce5798b52fac8d0886a4"></a>
-typedef struct <a class="el" href="structstream_ctrl__tag.html">streamCtrl_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>streamCtrl_t</b></td></tr>
-<tr class="memdesc:a59d50b328873ce5798b52fac8d0886a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base struct containing common properties required of a stream control. <br /></td></tr>
+<tr class="memitem:a7a6e369673a63d301becf28b22bdbec7"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ltemc-types_8h.html#a4938ea20341909cd71dacfab64f2a572">streamType_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-types_8h.html#a7a6e369673a63d301becf28b22bdbec7">streamType_t</a></td></tr>
+<tr class="memdesc:a7a6e369673a63d301becf28b22bdbec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Streams.  <br /></td></tr>
+<tr class="separator:a7a6e369673a63d301becf28b22bdbec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1271c938241e3f6084b892d3a9e22c53"><td class="memItemLeft" align="right" valign="top"><a id="a1271c938241e3f6084b892d3a9e22c53" name="a1271c938241e3f6084b892d3a9e22c53"></a>
+typedef resultCode_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>urcEvntHndlr_func</b>) ()</td></tr>
+<tr class="separator:a1271c938241e3f6084b892d3a9e22c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b07d8122a9d1509b6b1f8858f5f700e"><td class="memItemLeft" align="right" valign="top"><a id="a7b07d8122a9d1509b6b1f8858f5f700e" name="a7b07d8122a9d1509b6b1f8858f5f700e"></a>
+typedef resultCode_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>dataRxHndlr_func</b>) ()</td></tr>
+<tr class="separator:a7b07d8122a9d1509b6b1f8858f5f700e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38136401603d89598fecd94e3d3de712"><td class="memItemLeft" align="right" valign="top"><a id="a38136401603d89598fecd94e3d3de712" name="a38136401603d89598fecd94e3d3de712"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>appRcvProto_func</b>) ()</td></tr>
+<tr class="separator:a38136401603d89598fecd94e3d3de712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59d50b328873ce5798b52fac8d0886a4"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structstream_ctrl__tag.html">streamCtrl_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-types_8h.html#a59d50b328873ce5798b52fac8d0886a4">streamCtrl_t</a></td></tr>
+<tr class="memdesc:a59d50b328873ce5798b52fac8d0886a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract structure describing a data stream (protocol or filesystem).  <br /></td></tr>
 <tr class="separator:a59d50b328873ce5798b52fac8d0886a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ed4c59909ec1a9a0007da89586254ff"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structiop__tag.html">iop_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-types_8h.html#a1ed4c59909ec1a9a0007da89586254ff">iop_t</a></td></tr>
 <tr class="memdesc:a1ed4c59909ec1a9a0007da89586254ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for the IOP subsystem state. During initialization a pointer to this structure is reference in g_ltem1.  <br /></td></tr>
@@ -243,6 +226,10 @@ typedef struct <a class="el" href="structstream_ctrl__tag.html">streamCtrl_tag</
 typedef enum <a class="el" href="ltemc-types_8h.html#aad0e841ab77e1029b26f6132e41e084d">cmdParseRslt_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cmdParseRslt_t</b></td></tr>
 <tr class="memdesc:a66c4c183f8908a0fe0928ef236dbccce"><td class="mdescLeft">&#160;</td><td class="mdescRight">AT command response parser result codes. <br /></td></tr>
 <tr class="separator:a66c4c183f8908a0fe0928ef236dbccce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4f84049d61698685225cfe57234b02"><td class="memItemLeft" align="right" valign="top"><a id="aff4f84049d61698685225cfe57234b02" name="aff4f84049d61698685225cfe57234b02"></a>
+typedef struct <a class="el" href="structdata_mode__tag.html">dataMode_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dataMode_t</b></td></tr>
+<tr class="memdesc:aff4f84049d61698685225cfe57234b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control structure for automatic switching to data mode within a command action. <br /></td></tr>
+<tr class="separator:aff4f84049d61698685225cfe57234b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04591edc11b34ab2d9780add070842a2"><td class="memItemLeft" align="right" valign="top"><a id="a04591edc11b34ab2d9780add070842a2" name="a04591edc11b34ab2d9780add070842a2"></a>
 typedef <a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><b>cmdResponseParser_func</b>) ()</td></tr>
 <tr class="separator:a04591edc11b34ab2d9780add070842a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -365,15 +352,30 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a00e5aa3e84a24be822f6fd46336a5b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typed numeric Input/Output Processor subsystem contants. <br /></td></tr>
 <tr class="separator:a00e5aa3e84a24be822f6fd46336a5b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4938ea20341909cd71dacfab64f2a572"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-types_8h.html#a4938ea20341909cd71dacfab64f2a572">streamType_tag</a> { <br />
+&#160;&#160;<b>streamType_UDP</b> = 'U'
+, <b>streamType_TCP</b> = 'T'
+, <b>streamType_SSLTLS</b> = 'S'
+, <b>streamType_MQTT</b> = 'M'
+, <br />
+&#160;&#160;<b>streamType_HTTP</b> = 'H'
+, <b>streamType_file</b> = 'F'
+, <b>streamType__ANY</b> = 0
+, <b>streamType__SCKT</b> = 'k'
+<br />
+ }</td></tr>
+<tr class="memdesc:a4938ea20341909cd71dacfab64f2a572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Streams.  <a href="ltemc-types_8h.html#a4938ea20341909cd71dacfab64f2a572">More...</a><br /></td></tr>
+<tr class="separator:a4938ea20341909cd71dacfab64f2a572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3594f53de3db832b8819598ac3ebc377"><td class="memItemLeft" align="right" valign="top"><a id="a3594f53de3db832b8819598ac3ebc377" name="a3594f53de3db832b8819598ac3ebc377"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-types_8h.html#a3594f53de3db832b8819598ac3ebc377">atcmd__constants</a> { <br />
 &#160;&#160;<b>atcmd__noTimeoutChange</b> = 0
 , <b>atcmd__defaultTimeout</b> = 800
 , <b>atcmd__setLockModeManual</b> = 0
 , <b>atcmd__setLockModeAuto</b> = 1
 , <br />
-&#160;&#160;<b>atcmd__cmdBufferSz</b> = 512
-, <b>atcmd__respBufferSz</b> = 240
-, <b>atcmd__respBffrShift</b> = atcmd__respBufferSz / 4
+&#160;&#160;<b>atcmd__cmdBufferSz</b> = 448
+, <b>atcmd__respBufferSz</b> = 120
+, <b>atcmd__streamPrefixSz</b> = 12
+, <b>atcmd__dataModeTriggerSz</b> = 13
 <br />
  }</td></tr>
 <tr class="memdesc:a3594f53de3db832b8819598ac3ebc377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typed constants for AT-CMD module. <br /></td></tr>
@@ -483,6 +485,41 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
+<a id="a59d50b328873ce5798b52fac8d0886a4" name="a59d50b328873ce5798b52fac8d0886a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59d50b328873ce5798b52fac8d0886a4">&#9670;&#160;</a></span>streamCtrl_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structstream_ctrl__tag.html">streamCtrl_tag</a> <a class="el" href="ltemc-types_8h.html#a59d50b328873ce5798b52fac8d0886a4">streamCtrl_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Abstract structure describing a data stream (protocol or filesystem). </p>
+<p>The streamCtrl_t is used as an abstraction which is cast to a specific stream type EX: mqttCtrl_t* mqttCtrl = (mqttCtrl_t*)streamCtrl </p>
+
+</div>
+</div>
+<a id="a7a6e369673a63d301becf28b22bdbec7" name="a7a6e369673a63d301becf28b22bdbec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a6e369673a63d301becf28b22bdbec7">&#9670;&#160;</a></span>streamType_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="ltemc-types_8h.html#a4938ea20341909cd71dacfab64f2a572">streamType_tag</a> <a class="el" href="ltemc-types_8h.html#a7a6e369673a63d301becf28b22bdbec7">streamType_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Streams. </p>
+<h1><a class="anchor" id="autotoc_md34"></a>
+@details Structures for stream control/processing</h1>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a11a79f2d43f931530f2a8767426138b1" name="a11a79f2d43f931530f2a8767426138b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11a79f2d43f931530f2a8767426138b1">&#9670;&#160;</a></span>deviceState_tag</h2>
@@ -547,6 +584,24 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 <tr><td class="fieldname"><a id="a4234fd0b44d212dc202fc188290bcab0a9187a8b84003e5658e4ce25422aad999" name="a4234fd0b44d212dc202fc188290bcab0a9187a8b84003e5658e4ce25422aad999"></a>ntwkScanMode_lteonly&#160;</td><td class="fielddoc"><p>GSM only mode: BGx is filtering visible networks and only considering connections to GSM endpoints. </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<a id="a4938ea20341909cd71dacfab64f2a572" name="a4938ea20341909cd71dacfab64f2a572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4938ea20341909cd71dacfab64f2a572">&#9670;&#160;</a></span>streamType_tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ltemc-types_8h.html#a4938ea20341909cd71dacfab64f2a572">streamType_tag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Streams. </p>
+<h1><a class="anchor" id="autotoc_md34"></a>
+@details Structures for stream control/processing</h1>
 
 </div>
 </div>

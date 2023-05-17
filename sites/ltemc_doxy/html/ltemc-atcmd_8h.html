@@ -89,12 +89,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a6564b7b17223a1e581beef02914406dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#a6564b7b17223a1e581beef02914406dc">atcmd_reset</a> (bool releaseLock)</td></tr>
 <tr class="memdesc:a6564b7b17223a1e581beef02914406dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets atCmd struct and optionally releases lock, a BGx AT command structure.  <br /></td></tr>
 <tr class="separator:a6564b7b17223a1e581beef02914406dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84f840a308983f46590c9df6d1860c33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#a84f840a308983f46590c9df6d1860c33">atcmd_restoreOptionDefaults</a> ()</td></tr>
-<tr class="memdesc:a84f840a308983f46590c9df6d1860c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset AT command options to defaults.  <br /></td></tr>
-<tr class="separator:a84f840a308983f46590c9df6d1860c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12f91584f62bec59a930301de9d7956f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#a12f91584f62bec59a930301de9d7956f">atcmd_setDataHandler</a> (streamDataRcvr_func dataReceiver)</td></tr>
-<tr class="memdesc:a12f91584f62bec59a930301de9d7956f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set/clear stream data receiver function.  <br /></td></tr>
-<tr class="separator:a12f91584f62bec59a930301de9d7956f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31bf4292b9879bc5730394048e4c4807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#a31bf4292b9879bc5730394048e4c4807">atcmd_configDataMode</a> (uint16_t contextKey, const char *trigger, dataRxHndlr_func rxDataHndlr, char *txDataLoc, uint16_t txDataSz, appRcvProto_func applRecvDataCB, bool skipParser)</td></tr>
+<tr class="memdesc:a31bf4292b9879bc5730394048e4c4807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure atcmd automatic datamode processing.  <br /></td></tr>
+<tr class="separator:a31bf4292b9879bc5730394048e4c4807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6527523f66390dd512a40ba227820d0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#a6527523f66390dd512a40ba227820d0c">atcmd_configDataModeEot</a> (uint8_t eotChar)</td></tr>
+<tr class="memdesc:a6527523f66390dd512a40ba227820d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the TX end-of-transmission (EOT) signally character.  <br /></td></tr>
+<tr class="separator:a6527523f66390dd512a40ba227820d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f90e8d6a28fc9f55520566a869d062a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#a1f90e8d6a28fc9f55520566a869d062a">atcmd_tryInvoke</a> (const char *cmdTemplate,...)</td></tr>
 <tr class="memdesc:a1f90e8d6a28fc9f55520566a869d062a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes a BGx AT command using default option values (automatic locking).  <br /></td></tr>
 <tr class="separator:a1f90e8d6a28fc9f55520566a869d062a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,9 +105,6 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>atcmd_close</b> ()</td></tr>
 <tr class="memdesc:a74edf80fef3ee4cfaebbb9607ca58a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes (completes) a BGx AT command structure and frees action resource (release action lock). <br /></td></tr>
 <tr class="separator:a74edf80fef3ee4cfaebbb9607ca58a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad19d2388cd6d4423be873314968de031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#ad19d2388cd6d4423be873314968de031">atcmd_sendCmdData</a> (const char *data, uint16_t dataSz)</td></tr>
-<tr class="memdesc:ad19d2388cd6d4423be873314968de031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs blind send data transfer to device.  <br /></td></tr>
-<tr class="separator:ad19d2388cd6d4423be873314968de031"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a128cc1893fd2d595f69804a084aeef5d"><td class="memItemLeft" align="right" valign="top"><a id="a128cc1893fd2d595f69804a084aeef5d" name="a128cc1893fd2d595f69804a084aeef5d"></a>
 resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><b>atcmd_awaitResult</b> ()</td></tr>
 <tr class="memdesc:a128cc1893fd2d595f69804a084aeef5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for atcmd result, periodically checking recv buffer for valid response until timeout. <br /></td></tr>
@@ -142,20 +139,32 @@ resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><b>atcmd_awaitRe
 <tr class="memitem:a755fe5f62da184a14a80971e1c8e90a0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#a755fe5f62da184a14a80971e1c8e90a0">atcmd_getDuration</a> ()</td></tr>
 <tr class="memdesc:a755fe5f62da184a14a80971e1c8e90a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the atCmd last execution duration in milliseconds.  <br /></td></tr>
 <tr class="separator:a755fe5f62da184a14a80971e1c8e90a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9151ae79098ea2379de42f180114825"><td class="memItemLeft" align="right" valign="top"><a id="ac9151ae79098ea2379de42f180114825" name="ac9151ae79098ea2379de42f180114825"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>atcmd_exitDataMode</b> ()</td></tr>
-<tr class="memdesc:ac9151ae79098ea2379de42f180114825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends +++ sequence to transition BGx out of data mode to command mode. <br /></td></tr>
-<tr class="separator:ac9151ae79098ea2379de42f180114825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3742317e3225c92af7b6487aee1c3f38"><td class="memItemLeft" align="right" valign="top"><a id="a3742317e3225c92af7b6487aee1c3f38" name="a3742317e3225c92af7b6487aee1c3f38"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>atcmd_exitTextMode</b> ()</td></tr>
-<tr class="memdesc:a3742317e3225c92af7b6487aee1c3f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends ESC character to ensure BGx is not in text mode ("&gt;" prompt awaiting ^Z/ESC, MQTT publish etc.). <br /></td></tr>
+<tr class="memdesc:a3742317e3225c92af7b6487aee1c3f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends ^Z character to ensure BGx is not in text mode. <br /></td></tr>
 <tr class="separator:a3742317e3225c92af7b6487aee1c3f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9151ae79098ea2379de42f180114825"><td class="memItemLeft" align="right" valign="top"><a id="ac9151ae79098ea2379de42f180114825" name="ac9151ae79098ea2379de42f180114825"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>atcmd_exitDataMode</b> ()</td></tr>
+<tr class="memdesc:ac9151ae79098ea2379de42f180114825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends break sequence to transition BGx out of fixed-size data mode to command mode (up to 1500 char). <br /></td></tr>
+<tr class="separator:ac9151ae79098ea2379de42f180114825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39aa1a60b2f0269770fbadb26f4de1a"><td class="memItemLeft" align="right" valign="top"><a id="af39aa1a60b2f0269770fbadb26f4de1a" name="af39aa1a60b2f0269770fbadb26f4de1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>atcmd_exitTransparentMode</b> ()</td></tr>
+<tr class="memdesc:af39aa1a60b2f0269770fbadb26f4de1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends +++ sequence to transition BGx out of transparent data mode to command mode. <br /></td></tr>
+<tr class="separator:af39aa1a60b2f0269770fbadb26f4de1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98a258e1580c6a67eac1cd090603c912"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#a98a258e1580c6a67eac1cd090603c912">atcmd_stdResponseParser</a> (const char *preamble, bool preambleReqd, const char *delimiters, uint8_t tokensReqd, uint8_t valueIndx, const char *finale, uint16_t lengthReqd)</td></tr>
 <tr class="memdesc:a98a258e1580c6a67eac1cd090603c912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets atCmd struct and optionally releases lock, a BGx AT command structure.  <br /></td></tr>
 <tr class="separator:a98a258e1580c6a67eac1cd090603c912"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabe561361875acf197304759838af23a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#aabe561361875acf197304759838af23a">ATCMD_testResponseTrace</a> ()</td></tr>
-<tr class="memdesc:aabe561361875acf197304759838af23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">LTEmC internal testing parser to capture incoming response until timeout. This is generally not used by end-user applications.  <br /></td></tr>
-<tr class="separator:aabe561361875acf197304759838af23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2dc78f4b6ac7ad2531da8d1ddaf783"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-atcmd_8h.html#a4a2dc78f4b6ac7ad2531da8d1ddaf783">atcmd_stdTxDataHndlr</a> ()</td></tr>
+<tr class="memdesc:a4a2dc78f4b6ac7ad2531da8d1ddaf783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stardard TX (out) data handler used by dataMode. Sends data and checks for OK response.  <br /></td></tr>
+<tr class="separator:a4a2dc78f4b6ac7ad2531da8d1ddaf783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade037acf794088bb7e758d40a3f23c07"><td class="memItemLeft" align="right" valign="top"><a id="ade037acf794088bb7e758d40a3f23c07" name="ade037acf794088bb7e758d40a3f23c07"></a>
+resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><b>atcmd_txDataHndlrRaw</b> ()</td></tr>
+<tr class="memdesc:ade037acf794088bb7e758d40a3f23c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">TX (out) data handler that performs a blind send of data. <br /></td></tr>
+<tr class="separator:ade037acf794088bb7e758d40a3f23c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accbbcbce126c5cb144a447c3a1569bb2"><td class="memItemLeft" align="right" valign="top"><a id="accbbcbce126c5cb144a447c3a1569bb2" name="accbbcbce126c5cb144a447c3a1569bb2"></a>
+resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><b>atcmd_stdRxDataHndlr</b> ()</td></tr>
+<tr class="memdesc:accbbcbce126c5cb144a447c3a1569bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stardard RX (in) data handler used by dataMode. <br /></td></tr>
+<tr class="separator:accbbcbce126c5cb144a447c3a1569bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><hr  />
@@ -213,6 +222,106 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
   <table class="params">
     <tr><td class="paramname">timeoutMS</td><td>Time to wait for command response (0==no change). </td></tr>
     <tr><td class="paramname">cmdResponseParser</td><td>If provided sets parser as the response parser (NULL==no change). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31bf4292b9879bc5730394048e4c4807" name="a31bf4292b9879bc5730394048e4c4807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31bf4292b9879bc5730394048e4c4807">&#9670;&#160;</a></span>atcmd_configDataMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void atcmd_configDataMode </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>contextKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>trigger</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">dataRxHndlr_func&#160;</td>
+          <td class="paramname"><em>rxDataHndlr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dataLoc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dataSz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">appRcvProto_func&#160;</td>
+          <td class="paramname"><em>applRecvDataCB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>skipParser</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure atcmd automatic datamode processing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contextKey</td><td></td></tr>
+    <tr><td class="paramname">trigger</td><td></td></tr>
+    <tr><td class="paramname">dataHndlr</td><td></td></tr>
+    <tr><td class="paramname">dataLoc</td><td></td></tr>
+    <tr><td class="paramname">dataSz</td><td></td></tr>
+    <tr><td class="paramname">applRecvDataCB</td><td></td></tr>
+    <tr><td class="paramname">skipParser</td><td>True to skip response parser after successful datamode processing</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Configure atcmd automatic datamode processing. </p>
+
+</div>
+</div>
+<a id="a6527523f66390dd512a40ba227820d0c" name="a6527523f66390dd512a40ba227820d0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6527523f66390dd512a40ba227820d0c">&#9670;&#160;</a></span>atcmd_configDataModeEot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void atcmd_configDataModeEot </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>eotChar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the TX end-of-transmission (EOT) signally character. </p>
+<p>The EOT character is automatically sent by the IOP module when the TX side of the UART goes idle. Cleared automatically on send.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eotChar</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -467,101 +576,6 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
-<a id="a84f840a308983f46590c9df6d1860c33" name="a84f840a308983f46590c9df6d1860c33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84f840a308983f46590c9df6d1860c33">&#9670;&#160;</a></span>atcmd_restoreOptionDefaults()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void atcmd_restoreOptionDefaults </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reset AT command options to defaults. </p>
-<p>Use after setOptions() to reset AT-Cmd behaviors to default settings. </p>
-
-</div>
-</div>
-<a id="ad19d2388cd6d4423be873314968de031" name="ad19d2388cd6d4423be873314968de031"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad19d2388cd6d4423be873314968de031">&#9670;&#160;</a></span>atcmd_sendCmdData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void atcmd_sendCmdData </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>dataSz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Performs blind send data transfer to device. </p>
-<p>ASSERTS atcmd lock; does not change lock state. This is a blocking function (no copy), returns when send count = 0. Intended to send blocks of text in middle of a command stream. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>[in] Pointer to the block of character data to send </td></tr>
-    <tr><td class="paramname">dataSz</td><td>[in] The size of the data block </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a12f91584f62bec59a930301de9d7956f" name="a12f91584f62bec59a930301de9d7956f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12f91584f62bec59a930301de9d7956f">&#9670;&#160;</a></span>atcmd_setDataHandler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void atcmd_setDataHandler </td>
-          <td>(</td>
-          <td class="paramtype">streamDataRcvr_func&#160;</td>
-          <td class="paramname"><em>dataReceiver</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set/clear stream data receiver function. </p>
-<p>Individual commands (ex: <a class="el" href="ltemc-filesys_8c.html#aa0adfb24daccbfc7d50af35b77da32b5" title="Closes the file.">file_read()</a> could initiate a data stream, this function allows the command to register the required handler.</p>
-<p>Set/clear stream data receiver function. </p>
-
-</div>
-</div>
 <a id="a98a258e1580c6a67eac1cd090603c912" name="a98a258e1580c6a67eac1cd090603c912"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98a258e1580c6a67eac1cd090603c912">&#9670;&#160;</a></span>atcmd_stdResponseParser()</h2>
 
@@ -636,14 +650,14 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
-<a id="aabe561361875acf197304759838af23a" name="aabe561361875acf197304759838af23a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabe561361875acf197304759838af23a">&#9670;&#160;</a></span>ATCMD_testResponseTrace()</h2>
+<a id="a4a2dc78f4b6ac7ad2531da8d1ddaf783" name="a4a2dc78f4b6ac7ad2531da8d1ddaf783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a2dc78f4b6ac7ad2531da8d1ddaf783">&#9670;&#160;</a></span>atcmd_stdTxDataHndlr()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a> ATCMD_testResponseTrace </td>
+          <td class="memname">resultCode_t atcmd_stdTxDataHndlr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -651,9 +665,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
       </table>
 </div><div class="memdoc">
 
-<p>LTEmC internal testing parser to capture incoming response until timeout. This is generally not used by end-user applications. </p>
-<dl class="section return"><dt>Returns</dt><dd>Parse status result (always pending for this test parser)</dd></dl>
-<p>LTEmC internal testing parser to capture incoming response until timeout. This is generally not used by end-user applications. </p>
+<p>Stardard TX (out) data handler used by dataMode. Sends data and checks for OK response. </p>
+<p>Stardard TX (out) data handler used by dataMode. Sends data and checks for OK response. </p>
 
 </div>
 </div>
@@ -686,8 +699,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 <p>Invokes a BGx AT command using default option values (automatic locking). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cmdStrTemplate</td><td>[in] The command string to send to the BG96 module. </td></tr>
-    <tr><td class="paramname">...</td><td>[in] Variadic parameter list to integrate into the cmdStrTemplate. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmdStrTemplate</td><td>The command string to send to the BG96 module. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">variadic</td><td>"..." parameter list to integrate into the cmdStrTemplate. </td></tr>
   </table>
   </dd>
 </dl>

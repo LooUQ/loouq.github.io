@@ -1,35 +1,38 @@
-\hypertarget{md_version_history_autotoc_md77}{}\doxysubsubsection{Major or breaking changes will be called out with section explaining the change and the release header will be decorated with either $<$em$>$\+Major$<$/em$>$ or $<$em$>$\+Breaking$<$/em$>$}\label{md_version_history_autotoc_md77}
-\hypertarget{md_version_history_autotoc_md78}{}\doxysection{v3.\+0.\+0}\label{md_version_history_autotoc_md78}
-\hypertarget{md_version_history_autotoc_md79}{}\doxysubsection{Major update with numerous breaking changes}\label{md_version_history_autotoc_md79}
-\hypertarget{md_version_history_autotoc_md80}{}\doxysubsubsection{V3 is a top-\/to-\/bottom redesign of the LTEm\+C driver based on field/implementation experiences. User API has been minimally impacted (details below).}\label{md_version_history_autotoc_md80}
-\hypertarget{md_version_history_autotoc_md81}{}\doxysubsection{User API (breaking)}\label{md_version_history_autotoc_md81}
+\hypertarget{md_version_history_autotoc_md65}{}\doxysubsubsection{Major or breaking changes will be called out with section explaining the change and the release header will be decorated with either $<$em$>$\+Major$<$/em$>$ or $<$em$>$\+Breaking$<$/em$>$}\label{md_version_history_autotoc_md65}
+\hypertarget{md_version_history_autotoc_md66}{}\doxysection{v3.\+0.\+1 (\+May-\/15-\/2023)}\label{md_version_history_autotoc_md66}
+\hypertarget{md_version_history_autotoc_md67}{}\doxysubsection{Major update with numerous API surface changes}\label{md_version_history_autotoc_md67}
+\hypertarget{md_version_history_autotoc_md68}{}\doxysubsubsection{V3 is a top-\/to-\/bottom redesign of the LTEm\+C driver based on field/implementation experiences.}\label{md_version_history_autotoc_md68}
+\hypertarget{md_version_history_autotoc_md69}{}\doxysubsection{User API (breaking)}\label{md_version_history_autotoc_md69}
 
 \begin{DoxyItemize}
 \item Updated start and reset logic to improve reliability
-\item ATCMD API has changed to support consistent access to execution internals results, parser logic consolidate to reduce memory
+\item ATCMD API has changed to support consistent access to execution internals result and a new implementation of result parser.
+\begin{DoxyItemize}
 \item These changes only affect design with user created extended commands
-\item Exposed file-\/system and GPIO APIs (.h) for support in v3.\+1. GPIO is for LTEm3F device available in Q1-\/2023
-\item ASSERT source file specifier has been changed to a 5 char code from a 2-\/byte integer (src\+Files.\+h is now obsolete).\#\#\# Internals for those with interest 
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md82}{}\doxysubsection{Internal Changes}\label{md_version_history_autotoc_md82}
+\end{DoxyItemize}
+\item Exposed file-\/system and GPIO APIs (.h) for support in v3.\+1. GPIO is for LTEm3F device available in Q3-\/2023
+\item ASSERT source file specifier has been changed to a 5 char code from a 2-\/byte integer (src\+Files.\+h is now obsolete). 
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md70}{}\doxysubsection{Internal Changes}\label{md_version_history_autotoc_md70}
 
 \begin{DoxyItemize}
 \item Updates to start (APPRDY URC) and BGx initialization
 \item Redesign of ATCMD subsystem for consistent access to internal state
 \item Consolidated ATCMD parser logic into unified base parser.
 \item Redesign I/O buffering to reduce memory (RAM) requirements. Eliminated separate command/data buffers with a single ring-\/buffer for receive.
-\item Remove dedicated transmit buffer.
+\item Remove dedicated data transmit buffer.
+\begin{DoxyItemize}
 \item Short TX send are processed immediately (blocking) using parameter incoming const char pointer.
 \item Larger TX sends use a \char`\"{}buffered\char`\"{} background send processed from the originating caller\textquotesingle{}s buffer and ISR despooling
-\item This requires the source buffer be a non-\/local function char array. This pattern blocks successive TX sends until the prior send completes.
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md83}{}\doxysection{v2.\+3.\+0}\label{md_version_history_autotoc_md83}
-\hypertarget{md_version_history_autotoc_md84}{}\doxysubsection{Moved radio access technology (\+RAT) functions to network}\label{md_version_history_autotoc_md84}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md71}{}\doxysection{v2.\+3.\+0}\label{md_version_history_autotoc_md71}
+\hypertarget{md_version_history_autotoc_md72}{}\doxysubsection{Moved radio access technology (\+RAT) functions to network}\label{md_version_history_autotoc_md72}
 
 \begin{DoxyItemize}
 \item Moved functions to ntwk\+\_\+ module to set RAT allowed (LTE,GSM), RAT scan sequence (GSM,CAT-\/\+M1,NB-\/\+IOT), and IOP mode (CAT-\/\+M1,NB-\/\+IOT)
 \item RAT functions are beta right now, invoking them will cause BGx to suspend. Future signature and guidance likely in a 2.\+3.\+1 release.
-\item Added timeout parameter for \mbox{\hyperlink{ltemc-mqtt_8c_a27950fda1c826882f99e81c2cf308460}{mqtt\+\_\+publish()}} due to variability of network and server responsiveness
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md85}{}\doxysection{v2.\+2.\+0}\label{md_version_history_autotoc_md85}
-\hypertarget{md_version_history_autotoc_md86}{}\doxysubsection{Enhancements to network module for specification of APN name, PDP IP type (v4\textbackslash{}v6\textbackslash{}both) username\textbackslash{}password, authentication method}\label{md_version_history_autotoc_md86}
+\item Added timeout parameter for \mbox{\hyperlink{ltemc-mqtt_8c_a6e6260585946cd8f28410cae3310869b}{mqtt\+\_\+publish()}} due to variability of network and server responsiveness
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md73}{}\doxysection{v2.\+2.\+0}\label{md_version_history_autotoc_md73}
+\hypertarget{md_version_history_autotoc_md74}{}\doxysubsection{Enhancements to network module for specification of APN name, PDP IP type (v4\textbackslash{}v6\textbackslash{}both) username\textbackslash{}password, authentication method}\label{md_version_history_autotoc_md74}
 
 \begin{DoxyItemize}
 \item Changed signatures for ntwk functions for activate PDP and get active contexts
@@ -38,7 +41,7 @@
 \begin{DoxyItemize}
 \item Made \mbox{\hyperlink{ltemc-atcmd_8c_aa91cf2cfd830b79a225d5c62a0da9ef5}{atcmd\+\_\+get\+Result()}} public to allow for deferred AT response retrieval 
 \end{DoxyItemize}
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md87}{}\doxysubsubsection{Breaking Changes}\label{md_version_history_autotoc_md87}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md75}{}\doxysubsubsection{Breaking Changes}\label{md_version_history_autotoc_md75}
 
 \begin{DoxyItemize}
 \item atcmd functions
@@ -51,14 +54,14 @@
 \item Changed ntwk\+\_\+get\+Active\+Pdp\+Cntxt\+Cnt() to ntwk\+\_\+fetch\+Active\+Pdp\+Cntxts()
 \item Added two new parameters to ntwk\+\_\+activate\+Pdp\+Context(DEFAULT\+\_\+\+NETWORK\+\_\+\+CONTEXT, pdp\+Cntxt\+Protocol\+Type\+\_\+\+IPV4, \char`\"{}your\+APNname\char`\"{})
 \end{DoxyItemize}
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md88}{}\doxysection{v2.\+1.\+1}\label{md_version_history_autotoc_md88}
-\hypertarget{md_version_history_autotoc_md89}{}\doxysubsection{Fixes to HTTP and network modules}\label{md_version_history_autotoc_md89}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md76}{}\doxysection{v2.\+1.\+1}\label{md_version_history_autotoc_md76}
+\hypertarget{md_version_history_autotoc_md77}{}\doxysubsection{Fixes to HTTP and network modules}\label{md_version_history_autotoc_md77}
 
 \begin{DoxyItemize}
 \item Updated network to ensure network is IPV4. Future version will allow for complete configurability of the APN\textbackslash{}\+PDP parameters
 \item Fixed a timing issue in the http\+\_\+read()
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md90}{}\doxysection{v2.\+1.\+0}\label{md_version_history_autotoc_md90}
-\hypertarget{md_version_history_autotoc_md91}{}\doxysubsection{Fixes and minor enhancements}\label{md_version_history_autotoc_md91}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md78}{}\doxysection{v2.\+1.\+0}\label{md_version_history_autotoc_md78}
+\hypertarget{md_version_history_autotoc_md79}{}\doxysubsection{Fixes and minor enhancements}\label{md_version_history_autotoc_md79}
 
 \begin{DoxyItemize}
 \item Fixed intermittent timing issue in HTTP read response
@@ -67,7 +70,7 @@
 \item Changed modem reset logic to be more resilient
 \item Changed BGx startup logic to be more resilient
 \item Changed tests to reflect other changes in this release 
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md92}{}\doxysubsubsection{Breaking Changes}\label{md_version_history_autotoc_md92}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md80}{}\doxysubsubsection{Breaking Changes}\label{md_version_history_autotoc_md80}
 
 \begin{DoxyItemize}
 \item Changed signature for application event notification callback to include uint8\+\_\+t assembly and instance indications.
@@ -75,8 +78,8 @@
 \item LTEmC will set assembly to 0x\+C0, LQCloud will set assembly to 0x\+C1
 \end{DoxyItemize}
 \item Changed name of set yield callback to \mbox{\hyperlink{ltemc_8c_a865c84636366086193ccac32d0d9c23d}{ltem\+\_\+set\+Yield\+Callback()}}
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md93}{}\doxysection{v2.\+0.\+0 -\/ Major long-\/term release}\label{md_version_history_autotoc_md93}
-\hypertarget{md_version_history_autotoc_md94}{}\doxysubsection{Added HTTP(\+S) functionality and redesigned buffering model. Enhancements to AT-\/\+Command module to allow for continued extensions to supported features.}\label{md_version_history_autotoc_md94}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md81}{}\doxysection{v2.\+0.\+0 -\/ Major long-\/term release}\label{md_version_history_autotoc_md81}
+\hypertarget{md_version_history_autotoc_md82}{}\doxysubsection{Added HTTP(\+S) functionality and redesigned buffering model. Enhancements to AT-\/\+Command module to allow for continued extensions to supported features.}\label{md_version_history_autotoc_md82}
 
 \begin{DoxyItemize}
 \item Added support for HTTP(\+S) GET/\+POST
@@ -88,8 +91,8 @@
 \item Support for multiple MQTT and HTTP(\+S) sessions per modem
 \item Decoupled MQTT from fixed data context number 5, HTTP created without fixed data context coupling.
 \item Misc fixes to BGx, MQTT, Network modules.
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md95}{}\doxysection{v1.\+0.\+0 -\/ MAJOR RELEASE}\label{md_version_history_autotoc_md95}
-\hypertarget{md_version_history_autotoc_md96}{}\doxysubsection{Version 1.\+0.\+0 is a major release with several breaking changes. This release is the 1st version fully vetted in commercial projects and sets the stage for future multiple Loo\+UQ LTE modem models.}\label{md_version_history_autotoc_md96}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md83}{}\doxysection{v1.\+0.\+0 -\/ MAJOR RELEASE}\label{md_version_history_autotoc_md83}
+\hypertarget{md_version_history_autotoc_md84}{}\doxysubsection{Version 1.\+0.\+0 is a major release with several breaking changes. This release is the 1st version fully vetted in commercial projects and sets the stage for future multiple Loo\+UQ LTE modem models.}\label{md_version_history_autotoc_md84}
 \href{https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/Release_1_0.md}{\texttt{ https\+://github.\+com/\+Loo\+UQ/\+Circuit\+River-\/\+LTEm\+C/blob/master/\+Release\+\_\+1\+\_\+0.\+md}}
 
 You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics on the major changes and how to adapt your application code.
@@ -101,7 +104,7 @@ You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics o
 \item Improved support for Segger RTT debug output
 \item Filename and .h file adjustments and cleanup
 \item Misc fixes
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md97}{}\doxysection{v0.\+5.\+0 -\/ Fixes and Network PDP context handling (\+Dec 28, 2020)}\label{md_version_history_autotoc_md97}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md85}{}\doxysection{v0.\+5.\+0 -\/ Fixes and Network PDP context handling (\+Dec 28, 2020)}\label{md_version_history_autotoc_md85}
 
 \begin{DoxyItemize}
 \item Fixed MQTT not trapping publish errors
@@ -113,26 +116,26 @@ You are encouraged to review the Release\+\_\+\+V1-\/0.\+md file for specifics o
 \item Added reset to deactivate/activate all presently active PDP contexts
 \end{DoxyItemize}
 \item Change IOP PDP deactivated detect logic to match internal implementation in NETWORK module
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md98}{}\doxysection{0.\+4.\+2 (\+Dec 15, 2020)}\label{md_version_history_autotoc_md98}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md86}{}\doxysection{0.\+4.\+2 (\+Dec 15, 2020)}\label{md_version_history_autotoc_md86}
 
 \begin{DoxyItemize}
 \item Updated ISR for intermittent missed event when receiving MQTT publish
 \item Reformatted tests/\+LTEm1c-\/8-\/mqtt.\+ino for readability and test setup with Azure Io\+THub
 \item Removed utils.\+c from LTEm1c library
 \item Functionality is now part of LQ Cloud but can be used independently as lqc\+\_\+collections (.h.c)
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md99}{}\doxysection{v0.\+4.\+2 -\/ Misc (\+Dec-\/15-\/2020)}\label{md_version_history_autotoc_md99}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md87}{}\doxysection{v0.\+4.\+2 -\/ Misc (\+Dec-\/15-\/2020)}\label{md_version_history_autotoc_md87}
 
 \begin{DoxyItemize}
 \item Updated ISR for intermittent missed event when receiving MQTT publish
 \item Reformatted tests/\+LTEm1c-\/8-\/mqtt.\+ino for readability and test setup with Azure Io\+THub
 \item Removed utils.\+c from LTEm1c library
 \item Functionality is now part of LQ Cloud but can be used independently as lqc\+\_\+collections (.h.c)
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md100}{}\doxysection{v0.\+4.\+1 -\/ Misc (\+Nov 28, 2020)}\label{md_version_history_autotoc_md100}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md88}{}\doxysection{v0.\+4.\+1 -\/ Misc (\+Nov 28, 2020)}\label{md_version_history_autotoc_md88}
 
 \begin{DoxyItemize}
 \item Remove dependency on JLink RTT
 \item Fixed parse issue in GNSS get\+Location()
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md101}{}\doxysection{v0.\+3 -\/ IOP Redesign (\+Oct 6, 2020)}\label{md_version_history_autotoc_md101}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md89}{}\doxysection{v0.\+3 -\/ IOP Redesign (\+Oct 6, 2020)}\label{md_version_history_autotoc_md89}
 Overhaul of the IOP buffering system.
 \begin{DoxyItemize}
 \item Simplified receive buffer management and eliminated copies from receive pipeline
@@ -148,7 +151,7 @@ Overhaul of the IOP buffering system.
 \item Receiver events per subscription (subscriptions can share a receiver function or have distinct receiver functions)
 \end{DoxyItemize}
 \item Multiple fixes
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md102}{}\doxysection{v0.\+2 -\/ Fixes and Enhancements (\+Jun 25, 2020)}\label{md_version_history_autotoc_md102}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md90}{}\doxysection{v0.\+2 -\/ Fixes and Enhancements (\+Jun 25, 2020)}\label{md_version_history_autotoc_md90}
 
 \begin{DoxyItemize}
 \item TCP/\+UDP large packets (60 \texorpdfstring{$<$}{<} packets \texorpdfstring{$<$}{<}=1460 bytes), MQTT(s) functional, Geo-\/\+Fence support
@@ -157,7 +160,7 @@ Overhaul of the IOP buffering system.
 \item Background tasks alignment for RTOS and Arduino Scheduler compatibility
 \item Added Geo-\/\+Fence support
 \item FOTA partial support for DFOTA via HTTPS (file system FOTA is a roadmap feature )
-\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md103}{}\doxysection{v0.\+1 -\/ Initial publish}\label{md_version_history_autotoc_md103}
+\end{DoxyItemize}\hypertarget{md_version_history_autotoc_md91}{}\doxysection{v0.\+1 -\/ Initial publish}\label{md_version_history_autotoc_md91}
 First release of a functional LTEm1 driver. Supported sockets (TCP/\+UDP/\+SSL) and limited MQTT.
 \begin{DoxyItemize}
 \item Pure C99

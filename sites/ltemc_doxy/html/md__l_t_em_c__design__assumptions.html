@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign">
-   <div id="projectname">LTEmC<span id="projectnumber">&#160;v2.3.0</span>
+   <div id="projectname">LTEmC<span id="projectnumber">&#160;v3.0.1</span>
    </div>
    <div id="projectbrief">C device driver for LooUQ LTEm cellular modems</div>
   </td>
@@ -74,7 +74,7 @@ $(function() {
   <div class="headertitle"><div class="title">LTEmC Design Assumptions </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md7"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md56"></a>
 Code Conventions</h1>
 <ul>
 <li>The LTEmC driver is split into numerous files. Some expose interfaces for public (API) consumption, some are intended for only internal use.</li>
@@ -90,21 +90,21 @@ Code Conventions</h1>
 </li>
 <li><b>Code cleanup to adhere to these conventions is a focus for the version 2.1 release in July 2021</b></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md57"></a>
 Debug Defines</h1>
 <p>LooUQ uses the Segger J-Link as a core part of our toolkit. Beyond breakpoints and flashing memory, the J-Link software provides a facility for high-speed terminal streams to a viewer on your development computer. The RTT, or real-time terminal, facility makes it relatively straight forward to report out debugging information. The PRINTF and DBGCOLOR_ macros are designed to take advantage of the RTT facility. Additionally, the RTT viewer can display debugging information in color, the output color is specified with the DBGCOLOR_ macros. The PRINTF macros can fall-back to using the much slower serial capabilities of the Arduino platform.</p>
 <p>Segger RTT Facility: <a href="https://wiki.segger.com/UM08001_J-Link_/_J-Trace_User_Guide">https://wiki.segger.com/UM08001_J-Link_/_J-Trace_User_Guide</a></p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md58"></a>
 Using ASSERTS and Notification Callbacks</h1>
 <p>The LTEmC software was designed to be a subsystem within your application.</p>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md59"></a>
 ASSERTS</h2>
 <p>ASSERTs are macro constructs that signal a serious, and likely unrecoverable condition. They should stay in production code to prevent "weird" errors downstream of the problem. ASSERTS use the <a class="el" href="ltemc_8c.html#a80df97bbc632eda7178e56368c3d0a1e" title="Notify host application of significant events. Application may ignore, display, save status,...">ltem_notifyApp()</a> function if it is registered at application start. ASSERTs can also, optionally write a lqDiagnostics_t information block with information about the file, line and conditions of the failed ASSERT. To fully disable ASSERTs, you will need to define the NO_ASSERTS macro in your make workflow or in the lq-assert.h header file (part of LooUQ-Common library).</p>
 <p>The lqDiagnostics_t information block can be configured to survive a device reset (provided power stays on to memory). This allows for collection and reporting of this information remotely on reset. For information on how to accomplish this see the article on <em>lqDiagnostics</em> available on <a href="https://answers.loouq.com">https://answers.loouq.com</a>. For a working example, the LQCloud client automatically reports this information for a system or watchdog reset; there is a working example in examples/LQCloudTest in the LQCloud Client repository on GitHub.</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md60"></a>
 WARNING</h2>
 <p>WARNINGs are macro constructs that are intended for use during development. They won't break code if accidently left on in production but they will occupy code space. In the few spots where these are implemented they are there to check for non-optimal parameters in a function call. Example: a buffer size that will create unused, but allocate memory.</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md61"></a>
 ltem_notifyApp()</h2>
 <p>The <b><a class="el" href="ltemc_8c.html#a80df97bbc632eda7178e56368c3d0a1e" title="Notify host application of significant events. Application may ignore, display, save status,...">ltem_notifyApp(uint8_t notifyType, const char *notifyMsg)</a></b> function is an optional facility, but STRONGLY recommended, to allow the LTEmC driver to signal to the application both recoverable and non-recoverable events. ASSERTS will use this facility if provided with</p>
 <p>The <a class="el" href="ltemc_8c.html#a80df97bbc632eda7178e56368c3d0a1e" title="Notify host application of significant events. Application may ignore, display, save status,...">ltem_notifyApp()</a> callback function you provide can perform various important tasks, such as:</p><ul>
@@ -112,7 +112,7 @@ ltem_notifyApp()</h2>
 <li>Local display or indications of important conditions (examples: write messages to an OLED display, or set the color of a NeoPixel).</li>
 <li>Logging to flash or a SD-Card of events</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md13"></a>
+<h1><a class="anchor" id="autotoc_md62"></a>
 Extensibility Points</h1>
 <p>LTEmC is extensible. LooUQ believes that the major use cases are covered, but there are hundreds of AT commands on the BGx family. The guide to extensibility is below:</p><ul>
 <li><b>atcmd</b> is the primary extension API. This module handles the IO and command completion for you, with minimal assistance (see completion parsers below).</li>
@@ -124,7 +124,7 @@ Extensibility Points</h1>
 </li>
 <li>If you are porting LTEmC to non-Arduino like hardware, you will need to supply the API specified in the lq-platform.h header. If you need help or some directions, please post a question on the answers.loouq.com site.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md63"></a>
 IOP - The I/O Processor</h1>
 <p>IOP performs the duties of direct communications with the LTEm device. This is via the NXP UART/SPI bridge to the BGx module.</p>
 <ul>

@@ -1,14 +1,35 @@
 \hypertarget{structhttp_ctrl__tag}{}\doxysection{http\+Ctrl\+\_\+tag Struct Reference}
 \label{structhttp_ctrl__tag}\index{httpCtrl\_tag@{httpCtrl\_tag}}
+
+
+Structure containing the control information for processing a series of HTTP requests.  
+
+
+
+
+{\ttfamily \#include $<$ltemc-\/http.\+h$>$}
+
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{structhttp_ctrl__tag_ac3f4193fd11344e0945f6d2fb4d41a0a}\label{structhttp_ctrl__tag_ac3f4193fd11344e0945f6d2fb4d41a0a}} 
+char {\bfseries stream\+Type}
+\item 
 \mbox{\Hypertarget{structhttp_ctrl__tag_ab8de827cd09af3ed27153c2351b0897f}\label{structhttp_ctrl__tag_ab8de827cd09af3ed27153c2351b0897f}} 
 \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} {\bfseries data\+Cntxt}
-\item 
+\begin{DoxyCompactList}\small\item\em stream type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structhttp_ctrl__tag_a19f4b8e5885c0404be245cb6b658eb07}\label{structhttp_ctrl__tag_a19f4b8e5885c0404be245cb6b658eb07}} 
+data\+Rx\+Hndlr\+\_\+func {\bfseries data\+Rx\+Hndlr}
+\begin{DoxyCompactList}\small\item\em integer representing the source of the stream; fixed for protocols, file handle for FS \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structhttp_ctrl__tag_aba4b78dd6e2ad95284526c7656a8abe9}\label{structhttp_ctrl__tag_aba4b78dd6e2ad95284526c7656a8abe9}} 
+urc\+Evnt\+Hndlr\+\_\+func {\bfseries urc\+Evnt\+Hndlr}
+\begin{DoxyCompactList}\small\item\em function to handle data streaming, initiated by event\+Mgr() or atcmd module \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structhttp_ctrl__tag_a8d014aad12b0f88c80c9e3b016f40bf1}\label{structhttp_ctrl__tag_a8d014aad12b0f88c80c9e3b016f40bf1}} 
+app\+Rcv\+Proto\+\_\+func {\bfseries app\+Recv\+Data\+CB}
+\begin{DoxyCompactList}\small\item\em function to determine if \char`\"{}potential\char`\"{} URC event is for an open stream and perform reqd actions \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structhttp_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}\label{structhttp_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}} 
 bool {\bfseries use\+Tls}
-\begin{DoxyCompactList}\small\item\em Data context where this control operates (only SSL/\+TLS contexts 1-\/6) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em callback into host application with data (cast from generic func$\ast$ to stream specific function) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structhttp_ctrl__tag_a300b9ff4303e8a75daa0611ecdc0d199}\label{structhttp_ctrl__tag_a300b9ff4303e8a75daa0611ecdc0d199}} 
 char {\bfseries host\+Url} \mbox{[}host\+\_\+\+\_\+url\+Sz\mbox{]}
 \begin{DoxyCompactList}\small\item\em flag indicating SSL/\+TLS applied to stream \end{DoxyCompactList}\item 
@@ -28,7 +49,7 @@ uint16\+\_\+t {\bfseries cstm\+Hdrs\+Sz}
 char {\bfseries request\+Type} \mbox{[}http\+\_\+\+\_\+rqst\+Type\+Sz\mbox{]}
 \begin{DoxyCompactList}\small\item\em size of custom header buffer \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structhttp_ctrl__tag_ae2815bd62c196db16e142ccfbea5c2b9}\label{structhttp_ctrl__tag_ae2815bd62c196db16e142ccfbea5c2b9}} 
-http\+State\+\_\+t {\bfseries request\+State}
+\mbox{\hyperlink{ltemc-http_8h_aa03ddb83b8bb9dfbd81633b86cf3f5d1}{http\+State\+\_\+t}} {\bfseries request\+State}
 \begin{DoxyCompactList}\small\item\em type of current/last request\+: \textquotesingle{}G\textquotesingle{}=GET, \textquotesingle{}P\textquotesingle{}=POST \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structhttp_ctrl__tag_a1071f3132982a41053359eef69ccc21c}\label{structhttp_ctrl__tag_a1071f3132982a41053359eef69ccc21c}} 
 uint16\+\_\+t {\bfseries bgx\+Error}
@@ -42,13 +63,21 @@ uint32\+\_\+t {\bfseries page\+Size}
 \mbox{\Hypertarget{structhttp_ctrl__tag_a04a6cd9b8590c2b39e66072b56ddee2f}\label{structhttp_ctrl__tag_a04a6cd9b8590c2b39e66072b56ddee2f}} 
 uint32\+\_\+t {\bfseries page\+Remaining}
 \begin{DoxyCompactList}\small\item\em if provided in page response, the page size \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structhttp_ctrl__tag_a2923a74b9a2482663b22277a3e80bdc4}\label{structhttp_ctrl__tag_a2923a74b9a2482663b22277a3e80bdc4}} 
-uint8\+\_\+t {\bfseries default\+TimeoutS}
+\mbox{\Hypertarget{structhttp_ctrl__tag_ac2a4903febee4ff04ba9c1bd2118b7ee}\label{structhttp_ctrl__tag_ac2a4903febee4ff04ba9c1bd2118b7ee}} 
+uint8\+\_\+t {\bfseries timeout\+Sec}
 \begin{DoxyCompactList}\small\item\em set to page size (if incl in respose) counts down to 0 (used for optimizing page end parsing) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structhttp_ctrl__tag_a0e74ee135d6de56ec2b4b892518248a8}\label{structhttp_ctrl__tag_a0e74ee135d6de56ec2b4b892518248a8}} 
+uint16\+\_\+t {\bfseries default\+Block\+Sz}
+\begin{DoxyCompactList}\small\item\em default timeout for GET/\+POST/read requests (BGx is 60 secs) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structhttp_ctrl__tag_a4974a0e69b5526617bef8af3a18b4b04}\label{structhttp_ctrl__tag_a4974a0e69b5526617bef8af3a18b4b04}} 
 bool {\bfseries page\+Cancellation}
-\begin{DoxyCompactList}\small\item\em default timeout for page requests (BGx is 60 secs) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em default size of block (in of bytes) to transfer to app from page read (page read spans blocks) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Structure containing the control information for processing a series of HTTP requests. 
+
+Generally this is created for a \char`\"{}host\char`\"{}, each GET/\+POST takes a relative page to the host. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

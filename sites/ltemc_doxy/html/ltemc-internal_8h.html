@@ -103,6 +103,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structltem_metrics__tag.html">ltemMetrics_tag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">most LTEmC modules use LooUQ string functions  <a href="structltem_metrics__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfile_ctrl__tag.html">fileCtrl_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure with data for control of file systems processing.  <a href="structfile_ctrl__tag.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structltem_device__tag.html">ltemDevice_tag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct representing the LTEmC model. The struct behind the g_ltem1 global variable with all driver controls.  <a href="structltem_device__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,6 +126,10 @@ typedef struct <a class="el" href="structltem_metrics__tag.html">ltemMetrics_tag
 typedef enum <a class="el" href="ltemc-internal_8h.html#a102f20947356e7cfc1575e3dec82d888">recvEvent_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>recvEvent_t</b></td></tr>
 <tr class="memdesc:ad56d41d2e0b224e7d776de2dc81ee939"><td class="mdescLeft">&#160;</td><td class="mdescRight">enum describing the last receive event serviced by the ISR <br /></td></tr>
 <tr class="separator:ad56d41d2e0b224e7d776de2dc81ee939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e6cab8b075e5f6239c4ae92990b78c"><td class="memItemLeft" align="right" valign="top"><a id="aa4e6cab8b075e5f6239c4ae92990b78c" name="aa4e6cab8b075e5f6239c4ae92990b78c"></a>
+typedef struct <a class="el" href="structfile_ctrl__tag.html">fileCtrl_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fileCtrl_t</b></td></tr>
+<tr class="memdesc:aa4e6cab8b075e5f6239c4ae92990b78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure with data for control of file systems processing. <br /></td></tr>
+<tr class="separator:aa4e6cab8b075e5f6239c4ae92990b78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f38bbe75173238b7cfd922a17c69b27"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structltem_device__tag.html">ltemDevice_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-internal_8h.html#a5f38bbe75173238b7cfd922a17c69b27">ltemDevice_t</a></td></tr>
 <tr class="memdesc:a5f38bbe75173238b7cfd922a17c69b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct representing the LTEmC model. The struct behind the g_ltem1 global variable with all driver controls.  <br /></td></tr>
 <tr class="separator:a5f38bbe75173238b7cfd922a17c69b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,15 +145,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6c467232deb0591f402f1b9221d547e2"><td class="memItemLeft" align="right" valign="top"><a id="a6c467232deb0591f402f1b9221d547e2" name="a6c467232deb0591f402f1b9221d547e2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LTEM_initIo</b> ()</td></tr>
-<tr class="separator:a6c467232deb0591f402f1b9221d547e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ddd998cbb2b545227b40ddb93e47596"><td class="memItemLeft" align="right" valign="top"><a id="a5ddd998cbb2b545227b40ddb93e47596" name="a5ddd998cbb2b545227b40ddb93e47596"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LTEM_registerDoWorker</b> (doWork_func *doWorker)</td></tr>
-<tr class="separator:a5ddd998cbb2b545227b40ddb93e47596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5cd84c5342fb9cd5ebc175a09cb3229"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-internal_8h.html#ac5cd84c5342fb9cd5ebc175a09cb3229">ATCMD_readResult</a> ()</td></tr>
-<tr class="memdesc:ac5cd84c5342fb9cd5ebc175a09cb3229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks recv buffer for command response and sets atcmd structure data with result.  <br /></td></tr>
-<tr class="separator:ac5cd84c5342fb9cd5ebc175a09cb3229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b66aa6a6e85581b0abebbb139a8f546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-internal_8h.html#a8b66aa6a6e85581b0abebbb139a8f546">ATCMD_okResponseParser</a> ()</td></tr>
 <tr class="memdesc:a8b66aa6a6e85581b0abebbb139a8f546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default AT command result parser.  <br /></td></tr>
 <tr class="separator:a8b66aa6a6e85581b0abebbb139a8f546"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,14 +154,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>LTEM_registerDoWorker
 <tr class="memitem:a47d13fcac52d7cd9fabef7ce99de6705"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-internal_8h.html#a47d13fcac52d7cd9fabef7ce99de6705">ATCMD_isLockActive</a> ()</td></tr>
 <tr class="memdesc:a47d13fcac52d7cd9fabef7ce99de6705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current atCmd lock state.  <br /></td></tr>
 <tr class="separator:a47d13fcac52d7cd9fabef7ce99de6705"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a948a107cb71e1b1df505be4d2a7bbbdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-internal_8h.html#a948a107cb71e1b1df505be4d2a7bbbdd">ATCMD_readyPromptParser</a> (const char *rdyPrompt)</td></tr>
-<tr class="memdesc:a948a107cb71e1b1df505be4d2a7bbbdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base parser looking for a simple prompt string.  <br /></td></tr>
+<tr class="memitem:a948a107cb71e1b1df505be4d2a7bbbdd"><td class="memItemLeft" align="right" valign="top"><a id="a948a107cb71e1b1df505be4d2a7bbbdd" name="a948a107cb71e1b1df505be4d2a7bbbdd"></a>
+<a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ATCMD_readyPromptParser</b> (const char *rdyPrompt)</td></tr>
+<tr class="memdesc:a948a107cb71e1b1df505be4d2a7bbbdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base parser looking for a simple prompt string. <br /></td></tr>
 <tr class="separator:a948a107cb71e1b1df505be4d2a7bbbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6276c3a16859ccf82f39f00c42fd3b3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-internal_8h.html#a6276c3a16859ccf82f39f00c42fd3b3b">ATCMD_txDataPromptParser</a> ()</td></tr>
-<tr class="memdesc:a6276c3a16859ccf82f39f00c42fd3b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser looking for BGx transmit data prompt "&gt; ".  <br /></td></tr>
+<tr class="memitem:a6276c3a16859ccf82f39f00c42fd3b3b"><td class="memItemLeft" align="right" valign="top"><a id="a6276c3a16859ccf82f39f00c42fd3b3b" name="a6276c3a16859ccf82f39f00c42fd3b3b"></a>
+<a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ATCMD_txDataPromptParser</b> ()</td></tr>
+<tr class="memdesc:a6276c3a16859ccf82f39f00c42fd3b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser looking for BGx transmit data prompt "&gt; ". <br /></td></tr>
 <tr class="separator:a6276c3a16859ccf82f39f00c42fd3b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83358a615495d2c3a1f2901756869200"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-internal_8h.html#a83358a615495d2c3a1f2901756869200">ATCMD_connectPromptParser</a> ()</td></tr>
-<tr class="memdesc:a83358a615495d2c3a1f2901756869200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser looking for BGx CONNECT data prompt.  <br /></td></tr>
+<tr class="memitem:a83358a615495d2c3a1f2901756869200"><td class="memItemLeft" align="right" valign="top"><a id="a83358a615495d2c3a1f2901756869200" name="a83358a615495d2c3a1f2901756869200"></a>
+<a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ATCMD_connectPromptParser</b> ()</td></tr>
+<tr class="memdesc:a83358a615495d2c3a1f2901756869200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser looking for BGx CONNECT data prompt. <br /></td></tr>
 <tr class="separator:a83358a615495d2c3a1f2901756869200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6638afce89c033ad0af3d0a66ca7e4a6"><td class="memItemLeft" align="right" valign="top"><a id="a6638afce89c033ad0af3d0a66ca7e4a6" name="a6638afce89c033ad0af3d0a66ca7e4a6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>NTWK_initRatOptions</b> ()</td></tr>
@@ -252,34 +253,6 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
-<a id="a83358a615495d2c3a1f2901756869200" name="a83358a615495d2c3a1f2901756869200"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83358a615495d2c3a1f2901756869200">&#9670;&#160;</a></span>ATCMD_connectPromptParser()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a> ATCMD_connectPromptParser </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parser looking for BGx CONNECT data prompt. </p>
-<p>Parser looking for BGx CONNECT data prompt.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">response</td><td>[in] Character data recv'd from BGx to parse for task complete </td></tr>
-    <tr><td class="paramname">endptr</td><td>[out] Char pointer to the char following parsed text</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>HTTP style result code, 0 = not complete </dd></dl>
-
-</div>
-</div>
 <a id="a47d13fcac52d7cd9fabef7ce99de6705" name="a47d13fcac52d7cd9fabef7ce99de6705"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a47d13fcac52d7cd9fabef7ce99de6705">&#9670;&#160;</a></span>ATCMD_isLockActive()</h2>
 
@@ -317,84 +290,6 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 <p>Default AT command result parser. </p>
 <p>Default AT command result parser. </p>
-
-</div>
-</div>
-<a id="ac5cd84c5342fb9cd5ebc175a09cb3229" name="ac5cd84c5342fb9cd5ebc175a09cb3229"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5cd84c5342fb9cd5ebc175a09cb3229">&#9670;&#160;</a></span>ATCMD_readResult()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">resultCode_t ATCMD_readResult </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Checks recv buffer for command response and sets atcmd structure data with result. </p>
-<p>Checks recv buffer for command response and sets atcmd structure data with result. </p>
-
-</div>
-</div>
-<a id="a948a107cb71e1b1df505be4d2a7bbbdd" name="a948a107cb71e1b1df505be4d2a7bbbdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a948a107cb71e1b1df505be4d2a7bbbdd">&#9670;&#160;</a></span>ATCMD_readyPromptParser()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a> ATCMD_readyPromptParser </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>rdyPrompt</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Base parser looking for a simple prompt string. </p>
-<p>Base parser looking for a simple prompt string.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">response</td><td>[in] The character string received from BGx (so far, may not be complete). </td></tr>
-    <tr><td class="paramname">rdyPrompt</td><td>[in] Prompt text to check for. </td></tr>
-    <tr><td class="paramname">endptr</td><td>[out] Pointer to the char after match.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Result code enum value (http status code) </dd></dl>
-
-</div>
-</div>
-<a id="a6276c3a16859ccf82f39f00c42fd3b3b" name="a6276c3a16859ccf82f39f00c42fd3b3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6276c3a16859ccf82f39f00c42fd3b3b">&#9670;&#160;</a></span>ATCMD_txDataPromptParser()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="ltemc-types_8h.html#a66c4c183f8908a0fe0928ef236dbccce">cmdParseRslt_t</a> ATCMD_txDataPromptParser </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parser looking for BGx transmit data prompt "&gt; ". </p>
-<p>Parser looking for BGx transmit data prompt "&gt; ".</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">response</td><td>[in] Character data recv'd from BGx to parse for task complete </td></tr>
-    <tr><td class="paramname">endptr</td><td>[out] Char pointer to the char following parsed text</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>HTTP style result code, 0 = not complete </dd></dl>
 
 </div>
 </div>

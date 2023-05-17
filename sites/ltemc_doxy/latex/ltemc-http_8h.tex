@@ -6,21 +6,20 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+tag}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Structure containing the control information for processing a series of HTTP requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef void($\ast$ \mbox{\hyperlink{ltemc-http_8h_ab8c07bc534dbc7dcaaabf2a8dd1361b0}{http\+Recv\+\_\+func}}) (\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} sckt, uint16\+\_\+t http\+Rslt, char $\ast$data, uint16\+\_\+t data\+Sz)
+typedef void($\ast$ \mbox{\hyperlink{ltemc-http_8h_a454e86436bca928757a847fb1afae460}{http\+Recv\+\_\+func}}) (\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} data\+Cntxt, char $\ast$data, uint16\+\_\+t data\+Sz, bool is\+Final)
 \begin{DoxyCompactList}\small\item\em Callback function for data received event. Notifies application that new data is available and needs serviced. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}\label{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}} 
 typedef enum \mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4}{http\+Header\+Map\+\_\+tag}} {\bfseries http\+Header\+Map\+\_\+t}
 \begin{DoxyCompactList}\small\item\em If using custom headers, bit-\/map indicating what headers to create for default custom header collection. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-http_8h_aa03ddb83b8bb9dfbd81633b86cf3f5d1}\label{ltemc-http_8h_aa03ddb83b8bb9dfbd81633b86cf3f5d1}} 
-typedef enum http\+State\+\_\+tag {\bfseries http\+State\+\_\+t}
-\item 
-\mbox{\Hypertarget{ltemc-http_8h_a3af1bfb131c6a0b4e300e35c7d0e27ea}\label{ltemc-http_8h_a3af1bfb131c6a0b4e300e35c7d0e27ea}} 
-typedef volatile struct \mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+tag}} {\bfseries http\+Ctrl\+\_\+t}
-\end{DoxyCompactItemize}
+typedef enum \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}{http\+State\+\_\+tag}} {\bfseries http\+State\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enum indicating current state of a HTTP request cycle. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure containing the control information for processing a series of HTTP requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,36 +48,35 @@ enum \mbox{\hyperlink{ltemc-http_8h_a59622bad04892ad2954ef83e5d8b12e4}{http\+Hea
 , {\bfseries http\+Header\+Map\+\_\+all} = 0x\+FFFF
  \}
 \begin{DoxyCompactList}\small\item\em If using custom headers, bit-\/map indicating what headers to create for default custom header collection. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}} 
-enum {\bfseries http\+State\+\_\+tag} \{ {\bfseries http\+State\+\_\+idle} = 0
-, {\bfseries http\+State\+\_\+request\+Complete}
-, {\bfseries http\+State\+\_\+reading\+Data}
-, {\bfseries http\+State\+\_\+closing}
+enum \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}{http\+State\+\_\+tag}} \{ {\bfseries http\+State\+\_\+idle} = 0
+, \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3aefa952842e34c8d7cb93e481c436fa3a}{http\+State\+\_\+request\+Complete}}
+, \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a76a642a88929ee2f945b6c08e42bd354}{http\+State\+\_\+reading\+Data}}
+, \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a37903004520df798c973b4bc633f7462}{http\+State\+\_\+closing}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enum indicating current state of a HTTP request cycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{ltemc-http_8h_afba2c9cfce031883d09e0f898f7cc772}{http\+\_\+init\+Control}} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} data\+Cntxt, \mbox{\hyperlink{ltemc-http_8h_ab8c07bc534dbc7dcaaabf2a8dd1361b0}{http\+Recv\+\_\+func}} recv\+Callback)
+void \mbox{\hyperlink{ltemc-http_8h_afba2c9cfce031883d09e0f898f7cc772}{http\+\_\+init\+Control}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} data\+Cntxt, \mbox{\hyperlink{ltemc-http_8h_a454e86436bca928757a847fb1afae460}{http\+Recv\+\_\+func}} recv\+Callback)
 \begin{DoxyCompactList}\small\item\em Create a HTTP(s) control structure to manage web communications. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-http_8h_abcf94eb114c546ff64a9d8cd4f1056ee}{http\+\_\+set\+Connection}} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$host\+Url, uint16\+\_\+t host\+Port)
+void \mbox{\hyperlink{ltemc-http_8h_abcf94eb114c546ff64a9d8cd4f1056ee}{http\+\_\+set\+Connection}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$host\+Url, uint16\+\_\+t host\+Port)
 \begin{DoxyCompactList}\small\item\em Set host connection characteristics. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}{http\+\_\+enable\+Custom\+Hdrs}} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, char $\ast$hdr\+Buffer, uint16\+\_\+t hdr\+Buffer\+Sz)
+void \mbox{\hyperlink{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}{http\+\_\+enable\+Custom\+Hdrs}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, char $\ast$hdr\+Buffer, uint16\+\_\+t hdr\+Buffer\+Sz)
 \begin{DoxyCompactList}\small\item\em Registers custom headers (char) buffer with HTTP control. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-http_8h_adecbc0670a410f97952a20fe23cfd7d9}{http\+\_\+add\+Common\+Hdrs}} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, \mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}} header\+Map)
+void \mbox{\hyperlink{ltemc-http_8h_adecbc0670a410f97952a20fe23cfd7d9}{http\+\_\+add\+Common\+Hdrs}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, \mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}} header\+Map)
 \begin{DoxyCompactList}\small\item\em Adds common http headers to the custom headers buffer. REQUIRES previous enable of custom headers and buffer registration. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-http_8h_a92b18393cbc41e7f0d95958949bf33a1}{http\+\_\+add\+Basic\+Auth\+Hdr}} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$user, const char $\ast$pw)
+void \mbox{\hyperlink{ltemc-http_8h_a92b18393cbc41e7f0d95958949bf33a1}{http\+\_\+add\+Basic\+Auth\+Hdr}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$user, const char $\ast$pw)
 \begin{DoxyCompactList}\small\item\em Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-http_8h_a518267f87ab00e90f7005009dfd8485b}\label{ltemc-http_8h_a518267f87ab00e90f7005009dfd8485b}} 
-void {\bfseries http\+\_\+add\+Custom\+Hdr} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$hdr\+Text)
+void {\bfseries http\+\_\+add\+Custom\+Hdr} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$hdr\+Text)
 \item 
-result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_afa4288aa4cda4fd9791592ce93b737fc}{http\+\_\+get}} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$relative\+Url, bool return\+Response\+Hdrs, uint8\+\_\+t timeout\+Sec)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_a31c2de61359b0c044d552dee71e7d674}{http\+\_\+get}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$relative\+Url, bool return\+Response\+Hdrs)
 \begin{DoxyCompactList}\small\item\em Perform HTTP GET operation. Results are internally buffered on the LTEm, see http\+\_\+read(). \end{DoxyCompactList}\item 
-result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_a7796d179f44f07b0d0c6170830a0337e}{http\+\_\+post}} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$relative\+Url, bool return\+Response\+Hdrs, const char $\ast$post\+Data, uint16\+\_\+t data\+Sz, uint8\+\_\+t timeout\+Sec)
+result\+Code\+\_\+t \mbox{\hyperlink{ltemc-http_8h_a876df5cdd7f83043314ba499fea2d229}{http\+\_\+post}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, const char $\ast$relative\+Url, bool return\+Response\+Hdrs, const char $\ast$post\+Data, uint16\+\_\+t data\+Sz)
 \begin{DoxyCompactList}\small\item\em Performs a HTTP POST page web request. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{ltemc-http_8h_a9e8e80c8621ac1d02a0c1fc21a3d906e}{http\+\_\+read\+Page}} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl, char $\ast$page\+Bffr, uint16\+\_\+t page\+Bffr\+Sz, uint16\+\_\+t $\ast$http\+Result)
+uint16\+\_\+t \mbox{\hyperlink{ltemc-http_8h_abbbfd4c8512cd8b279e6726d4f8231a3}{http\+\_\+read\+Page}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl)
 \begin{DoxyCompactList}\small\item\em Retrieves page results from a previous GET or POST. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-http_8h_adc3e553b77a6341664862d7b8a9c0060}{http\+\_\+cancel\+Page}} (\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl)
+void \mbox{\hyperlink{ltemc-http_8h_adc3e553b77a6341664862d7b8a9c0060}{http\+\_\+cancel\+Page}} (\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$http\+Ctrl)
 \begin{DoxyCompactList}\small\item\em Cancels a http\+\_\+read\+Page flow if the remaining contents are not needed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -115,27 +113,35 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
  
 
 \doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{ltemc-http_8h_ab8c07bc534dbc7dcaaabf2a8dd1361b0}\label{ltemc-http_8h_ab8c07bc534dbc7dcaaabf2a8dd1361b0}} 
+\mbox{\Hypertarget{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}\label{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!httpCtrl\_t@{httpCtrl\_t}}
+\index{httpCtrl\_t@{httpCtrl\_t}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{httpCtrl\_t}{httpCtrl\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+tag}} \mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}}}
+
+
+
+Structure containing the control information for processing a series of HTTP requests. 
+
+Generally this is created for a \char`\"{}host\char`\"{}, each GET/\+POST takes a relative page to the host. \mbox{\Hypertarget{ltemc-http_8h_a454e86436bca928757a847fb1afae460}\label{ltemc-http_8h_a454e86436bca928757a847fb1afae460}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!httpRecv\_func@{httpRecv\_func}}
 \index{httpRecv\_func@{httpRecv\_func}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{httpRecv\_func}{httpRecv\_func}}
-{\footnotesize\ttfamily typedef void($\ast$ http\+Recv\+\_\+func) (\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} sckt, uint16\+\_\+t http\+Rslt, char $\ast$data, uint16\+\_\+t data\+Sz)}
+{\footnotesize\ttfamily typedef void($\ast$ http\+Recv\+\_\+func) (\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} data\+Cntxt, char $\ast$data, uint16\+\_\+t data\+Sz, bool is\+Final)}
 
 
 
 Callback function for data received event. Notifies application that new data is available and needs serviced. 
 
-The $\ast$data and data\+Sz values are for convenience, since the application supplied the buffer to LTEmC.
 
-
-\begin{DoxyParams}{Parameters}
-{\em data\+Cntxt} & \mbox{[}in\mbox{]} Data peer (data context or filesys) \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data\+Cntxt} & \mbox{[}in\mbox{]} Originating data context \\
 \hline
-{\em http\+Rslt} & \mbox{[}in\mbox{]} HTTP status code found in the page result headers \\
+\mbox{\texttt{ in}}  & {\em data} & \mbox{[}in\mbox{]} Pointer to received data buffer \\
 \hline
-{\em data} & \mbox{[}in\mbox{]} Pointer to received data buffer \\
+\mbox{\texttt{ in}}  & {\em data\+Sz} & \mbox{[}in\mbox{]} The number of bytes available \\
 \hline
-{\em data\+Sz} & \mbox{[}in\mbox{]} The number of bytes available \\
+\mbox{\texttt{ in}}  & {\em is\+Final} & Last invoke of the callback will indicate with is\+Final = true. \\
 \hline
 \end{DoxyParams}
 
@@ -157,6 +163,30 @@ http\+\_\+\+\_\+custom\+Hdr\+Small\+Warning&GET or POST. \\
 \hline
 
 \end{DoxyEnumFields}
+\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}} 
+\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_tag@{httpState\_tag}}
+\index{httpState\_tag@{httpState\_tag}!ltemc-\/http.h@{ltemc-\/http.h}}
+\doxysubsubsection{\texorpdfstring{httpState\_tag}{httpState\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3}{http\+State\+\_\+tag}}}
+
+
+
+Enum indicating current state of a HTTP request cycle. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpState\_requestComplete@{httpState\_requestComplete}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_requestComplete@{httpState\_requestComplete}}}\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3aefa952842e34c8d7cb93e481c436fa3a}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3aefa952842e34c8d7cb93e481c436fa3a}} 
+http\+State\+\_\+request\+Complete&no HTTP request is underway \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpState\_readingData@{httpState\_readingData}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_readingData@{httpState\_readingData}}}\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a76a642a88929ee2f945b6c08e42bd354}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a76a642a88929ee2f945b6c08e42bd354}} 
+http\+State\+\_\+reading\+Data&GET/\+POST request is complete (no read of response has begun) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{httpState\_closing@{httpState\_closing}!ltemc-\/http.h@{ltemc-\/http.h}}\index{ltemc-\/http.h@{ltemc-\/http.h}!httpState\_closing@{httpState\_closing}}}\mbox{\Hypertarget{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a37903004520df798c973b4bc633f7462}\label{ltemc-http_8h_a2ef3ea123ff1e791895fd5048100a4d3a37903004520df798c973b4bc633f7462}} 
+http\+State\+\_\+closing&retrieving the page response from the previous GET/\+POST request cycle is transitioning to an idle state \\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
@@ -164,43 +194,43 @@ http\+\_\+\+\_\+custom\+Hdr\+Small\+Warning&GET or POST. \\
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_addBasicAuthHdr@{http\_addBasicAuthHdr}}
 \index{http\_addBasicAuthHdr@{http\_addBasicAuthHdr}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_addBasicAuthHdr()}{http\_addBasicAuthHdr()}}
-{\footnotesize\ttfamily void http\+\_\+add\+Basic\+Auth\+Hdr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pw }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void http\+\_\+add\+Basic\+Auth\+Hdr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pw }\end{DoxyParamCaption})}
 
 
 
 Adds a basic authorization header to the custom headers buffer, requires previous custom headers buffer registration. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em http} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for HTTP communications. \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em http} & Pointer to the control block for HTTP communications. \\
 \hline
-{\em user} & \mbox{[}in\mbox{]} -\/ User name. \\
+\mbox{\texttt{ in}}  & {\em user} & User name. \\
 \hline
-{\em pw} & \mbox{[}in\mbox{]} -\/ Password/secret for header. \\
+\mbox{\texttt{ in}}  & {\em pw} & Password/secret for header. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{ltemc-http_8h_adecbc0670a410f97952a20fe23cfd7d9}\label{ltemc-http_8h_adecbc0670a410f97952a20fe23cfd7d9}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_addCommonHdrs@{http\_addCommonHdrs}}
 \index{http\_addCommonHdrs@{http\_addCommonHdrs}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_addCommonHdrs()}{http\_addCommonHdrs()}}
-{\footnotesize\ttfamily void http\+\_\+add\+Common\+Hdrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}}}]{header\+Map }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void http\+\_\+add\+Common\+Hdrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-http_8h_a8a857a48248e4895b0d7315937d53693}{http\+Header\+Map\+\_\+t}}}]{header\+Map }\end{DoxyParamCaption})}
 
 
 
 Adds common http headers to the custom headers buffer. REQUIRES previous enable of custom headers and buffer registration. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for HTTP communications. \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em http\+Ctrl} & Pointer to the control block for HTTP communications. \\
 \hline
-{\em header\+Map} & \mbox{[}in\mbox{]} -\/ Bitmap for which standard headers to use. \\
+\mbox{\texttt{ in}}  & {\em header\+Map} & Bitmap for which standard headers to use. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{ltemc-http_8h_adc3e553b77a6341664862d7b8a9c0060}\label{ltemc-http_8h_adc3e553b77a6341664862d7b8a9c0060}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_cancelPage@{http\_cancelPage}}
 \index{http\_cancelPage@{http\_cancelPage}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_cancelPage()}{http\_cancelPage()}}
-{\footnotesize\ttfamily void http\+\_\+cancel\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void http\+\_\+cancel\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl }\end{DoxyParamCaption})}
 
 
 
@@ -209,145 +239,133 @@ Cancels a http\+\_\+read\+Page flow if the remaining contents are not needed.
 This is a blocking call. The page read off the network will continue, but the contents will be discarded.
 
 
-\begin{DoxyParams}{Parameters}
-{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for HTTP communications. \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em http\+Ctrl} & Pointer to the control block for HTTP communications.\\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}\label{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}} 
+Cancels a http\+\_\+read\+Page flow if the remaining contents are not needed. \mbox{\Hypertarget{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}\label{ltemc-http_8h_a3a418a32bb67ae5ae1ab2e02c00863ec}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_enableCustomHdrs@{http\_enableCustomHdrs}}
 \index{http\_enableCustomHdrs@{http\_enableCustomHdrs}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_enableCustomHdrs()}{http\_enableCustomHdrs()}}
-{\footnotesize\ttfamily void http\+\_\+enable\+Custom\+Hdrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{char $\ast$}]{hdr\+Buffer,  }\item[{uint16\+\_\+t}]{hdr\+Buffer\+Sz }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void http\+\_\+enable\+Custom\+Hdrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{char $\ast$}]{hdr\+Buffer,  }\item[{uint16\+\_\+t}]{hdr\+Buffer\+Sz }\end{DoxyParamCaption})}
 
 
 
 Registers custom headers (char) buffer with HTTP control. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for HTTP communications. \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em http\+Ctrl} & Pointer to the control block for HTTP communications. \\
 \hline
-{\em header\+Buf} & \mbox{[}in\mbox{]} -\/ pointer to header buffer created by application \\
+\mbox{\texttt{ in}}  & {\em header\+Buf} & pointer to header buffer created by application \\
 \hline
-{\em header\+Buf\+Sz} & \mbox{[}in\mbox{]} -\/ size of the header buffer \\
+\mbox{\texttt{ in}}  & {\em header\+Buf\+Sz} & size of the header buffer \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-http_8h_afa4288aa4cda4fd9791592ce93b737fc}\label{ltemc-http_8h_afa4288aa4cda4fd9791592ce93b737fc}} 
+\mbox{\Hypertarget{ltemc-http_8h_a31c2de61359b0c044d552dee71e7d674}\label{ltemc-http_8h_a31c2de61359b0c044d552dee71e7d674}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_get@{http\_get}}
 \index{http\_get@{http\_get}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_get()}{http\_get()}}
-{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{relative\+Url,  }\item[{bool}]{return\+Response\+Hdrs,  }\item[{uint8\+\_\+t}]{timeout\+Sec }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{relative\+Url,  }\item[{bool}]{return\+Response\+Hdrs }\end{DoxyParamCaption})}
 
 
 
 Perform HTTP GET operation. Results are internally buffered on the LTEm, see http\+\_\+read(). 
 
 
-\begin{DoxyParams}{Parameters}
-{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for HTTP communications. \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em http\+Ctrl} & Pointer to the control block for HTTP communications. \\
 \hline
-{\em relative\+Url} & \mbox{[}in\mbox{]} -\/ The URL to GET (starts with \textbackslash{} and doesn\textquotesingle{}t include the host part) \\
+\mbox{\texttt{ in}}  & {\em relative\+Url} & The URL to GET (starts with \textbackslash{} and doesn\textquotesingle{}t include the host part) \\
 \hline
-{\em return\+Response\+Hdrs} & \mbox{[}in\mbox{]} -\/ Set to true for page result to include response headers at the start of the page \\
-\hline
-{\em timeout\+Sec} & \mbox{[}in\mbox{]} -\/ Timeout for entire GET request cycle \\
+\mbox{\texttt{ in}}  & {\em return\+Response\+Hdrs} & Set to true for page result to include response headers at the start of the page \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true if GET request sent successfully
 \end{DoxyReturn}
-\hypertarget{ltemc-http_8h_autotoc_md11}{}\doxysubsection{@brief Perform HTTP GET operation. Results are internally buffered on the LTEm, see http\+\_\+read().}\label{ltemc-http_8h_autotoc_md11}
+\hypertarget{ltemc-http_8h_autotoc_md11}{}\doxysubsubsection{@brief Perform HTTP GET operation. Results are internally buffered on the LTEm, see http\+\_\+read().}\label{ltemc-http_8h_autotoc_md11}
 \mbox{\Hypertarget{ltemc-http_8h_afba2c9cfce031883d09e0f898f7cc772}\label{ltemc-http_8h_afba2c9cfce031883d09e0f898f7cc772}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_initControl@{http\_initControl}}
 \index{http\_initControl@{http\_initControl}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_initControl()}{http\_initControl()}}
-{\footnotesize\ttfamily void http\+\_\+init\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}}}]{data\+Cntxt,  }\item[{\mbox{\hyperlink{ltemc-http_8h_ab8c07bc534dbc7dcaaabf2a8dd1361b0}{http\+Recv\+\_\+func}}}]{recv\+Callback }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void http\+\_\+init\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}}}]{data\+Cntxt,  }\item[{\mbox{\hyperlink{ltemc-http_8h_a454e86436bca928757a847fb1afae460}{http\+Recv\+\_\+func}}}]{recv\+Callback }\end{DoxyParamCaption})}
 
 
 
 Create a HTTP(s) control structure to manage web communications. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em http\+Ctrl} & \mbox{[}in\mbox{]} HTTP control structure pointer, struct defines parameters of communications with web server. \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em http\+Ctrl} & HTTP control structure pointer, struct defines parameters of communications with web server. \\
 \hline
-{\em data\+Cntxt} & \mbox{[}in\mbox{]} The data context (0-\/5) to use for this communications. \\
+\mbox{\texttt{ in}}  & {\em data\+Cntxt} & \mbox{[}in\mbox{]} The data context (0-\/5) to use for this communications. \\
 \hline
-{\em recv\+Buf} & \mbox{[}in\mbox{]} Pointer to application provided char buffer. \\
-\hline
-{\em recv\+Buf\+Sz} & \mbox{[}in\mbox{]} Size of the receive buffer. \\
-\hline
-{\em recv\+Callback} & \mbox{[}in\mbox{]} Callback function to receive incoming page data. \\
+\mbox{\texttt{ in}}  & {\em recv\+Callback} & \mbox{[}in\mbox{]} Callback function to receive incoming page data. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{ltemc-http_8h_a7796d179f44f07b0d0c6170830a0337e}\label{ltemc-http_8h_a7796d179f44f07b0d0c6170830a0337e}} 
+\mbox{\Hypertarget{ltemc-http_8h_a876df5cdd7f83043314ba499fea2d229}\label{ltemc-http_8h_a876df5cdd7f83043314ba499fea2d229}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_post@{http\_post}}
 \index{http\_post@{http\_post}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_post()}{http\_post()}}
-{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{relative\+Url,  }\item[{bool}]{return\+Response\+Hdrs,  }\item[{const char $\ast$}]{post\+Data,  }\item[{uint16\+\_\+t}]{post\+Data\+Sz,  }\item[{uint8\+\_\+t}]{timeout\+Sec }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily result\+Code\+\_\+t http\+\_\+post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{relative\+Url,  }\item[{bool}]{return\+Response\+Hdrs,  }\item[{const char $\ast$}]{post\+Data,  }\item[{uint16\+\_\+t}]{post\+Data\+Sz }\end{DoxyParamCaption})}
 
 
 
 Performs a HTTP POST page web request. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for HTTP communications. \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em http\+Ctrl} & Pointer to the control block for HTTP communications. \\
 \hline
-{\em relative\+Url} & \mbox{[}in\mbox{]} -\/ URL, relative to the host. If none, can be provided as \char`\"{}\char`\"{} or \char`\"{}/\char`\"{} () \\
+\mbox{\texttt{ in}}  & {\em relative\+Url} & URL, relative to the host. If none, can be provided as \char`\"{}\char`\"{} or \char`\"{}/\char`\"{} () \\
 \hline
-{\em return\+Response\+Hdrs} & \mbox{[}in\mbox{]} -\/ if requested (true) the page response stream will prefix the page data \\
+\mbox{\texttt{ in}}  & {\em return\+Response\+Hdrs} & if requested (true) the page response stream will prefix the page data \\
 \hline
-{\em post\+Data} & \mbox{[}in\mbox{]} -\/ Pointer to char buffer with POST content \\
+\mbox{\texttt{ in}}  & {\em post\+Data} & Pointer to char buffer with POST content \\
 \hline
-{\em post\+Data\+Sz} & \mbox{[}in\mbox{]} -\/ Size of the POST content reference by $\ast$post\+Data \\
-\hline
-{\em timeout\+Sec} & \mbox{[}in\mbox{]} -\/ the number of seconds to wait (blocking) for a page response \\
+\mbox{\texttt{ in}}  & {\em post\+Data\+Sz} & Size of the POST content reference by $\ast$post\+Data \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true if POST request completed
 \end{DoxyReturn}
-\hypertarget{ltemc-http_8h_autotoc_md12}{}\doxysubsection{@brief Performs a HTTP POST page web request.}\label{ltemc-http_8h_autotoc_md12}
-\mbox{\Hypertarget{ltemc-http_8h_a9e8e80c8621ac1d02a0c1fc21a3d906e}\label{ltemc-http_8h_a9e8e80c8621ac1d02a0c1fc21a3d906e}} 
+\hypertarget{ltemc-http_8h_autotoc_md12}{}\doxysubsubsection{@brief Performs a HTTP POST page web request.}\label{ltemc-http_8h_autotoc_md12}
+\mbox{\Hypertarget{ltemc-http_8h_abbbfd4c8512cd8b279e6726d4f8231a3}\label{ltemc-http_8h_abbbfd4c8512cd8b279e6726d4f8231a3}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_readPage@{http\_readPage}}
 \index{http\_readPage@{http\_readPage}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_readPage()}{http\_readPage()}}
-{\footnotesize\ttfamily bool http\+\_\+read\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{char $\ast$}]{page\+Bffr,  }\item[{uint16\+\_\+t}]{page\+Bffr\+Sz,  }\item[{uint16\+\_\+t $\ast$}]{http\+Result }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint16\+\_\+t http\+\_\+read\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl }\end{DoxyParamCaption})}
 
 
 
 Retrieves page results from a previous GET or POST. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em http\+Ctrl} & \mbox{[}in\mbox{]} -\/ Pointer to the control block for HTTP communications. \\
-\hline
-{\em page\+Bffr} & \mbox{[}in\mbox{]} -\/ Pointer to the host application buffer to receive page contents. \\
-\hline
-{\em bffr\+Sz} & \mbox{[}in\mbox{]} The number of chars to return.\\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em http\+Ctrl} & Pointer to the control block for HTTP communications. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true if there are additional chars to read, false if page contents have been transfered and the request is complete.
+HTTP status of read.
 \end{DoxyReturn}
-\hypertarget{ltemc-http_8h_autotoc_md13}{}\doxysubsection{@brief Retrieves page results from a previous GET or POST.}\label{ltemc-http_8h_autotoc_md13}
+\hypertarget{ltemc-http_8h_autotoc_md13}{}\doxysubsubsection{@brief Retrieves page results from a previous GET or POST.}\label{ltemc-http_8h_autotoc_md13}
 \mbox{\Hypertarget{ltemc-http_8h_abcf94eb114c546ff64a9d8cd4f1056ee}\label{ltemc-http_8h_abcf94eb114c546ff64a9d8cd4f1056ee}} 
 \index{ltemc-\/http.h@{ltemc-\/http.h}!http\_setConnection@{http\_setConnection}}
 \index{http\_setConnection@{http\_setConnection}!ltemc-\/http.h@{ltemc-\/http.h}}
 \doxysubsubsection{\texorpdfstring{http\_setConnection()}{http\_setConnection()}}
-{\footnotesize\ttfamily void http\+\_\+set\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttp_ctrl__tag}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{host\+Url,  }\item[{uint16\+\_\+t}]{host\+Port }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void http\+\_\+set\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-http_8h_a248527fb20f1c2f77c80603a6b295733}{http\+Ctrl\+\_\+t}} $\ast$}]{http\+Ctrl,  }\item[{const char $\ast$}]{host\+Url,  }\item[{uint16\+\_\+t}]{host\+Port }\end{DoxyParamCaption})}
 
 
 
 Set host connection characteristics. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em http\+Ctrl} & \mbox{[}in\mbox{]} HTTP control structure pointer, struct defines parameters of communications with web server. \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em http\+Ctrl} & \mbox{[}in\mbox{]} HTTP control structure pointer, struct defines parameters of communications with web server. \\
 \hline
-{\em host\+URL} & \mbox{[}in\mbox{]} The HOST address of the web server URL. \\
+\mbox{\texttt{ in}}  & {\em host\+URL} & \mbox{[}in\mbox{]} The HOST address of the web server URL. \\
 \hline
-{\em host\+Port} & \mbox{[}in\mbox{]} The port number for the host web server. 0 \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} auto-\/select HTTP(80), HTTPS(443) \\
+\mbox{\texttt{ in}}  & {\em host\+Port} & \mbox{[}in\mbox{]} The port number for the host web server. 0 \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} auto-\/select HTTP(80), HTTPS(443) \\
 \hline
 \end{DoxyParams}

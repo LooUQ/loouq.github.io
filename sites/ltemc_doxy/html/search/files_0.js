@@ -2,8 +2,8 @@ var searchData=
 [
   ['ltemc_2datcmd_2ec_0',['ltemc-atcmd.c',['../ltemc-atcmd_8c.html',1,'']]],
   ['ltemc_2datcmd_2eh_1',['ltemc-atcmd.h',['../ltemc-atcmd_8h.html',1,'']]],
-  ['ltemc_2dfilesys_2ec_2',['ltemc-filesys.c',['../ltemc-filesys_8c.html',1,'']]],
-  ['ltemc_2dfilesys_2eh_3',['ltemc-filesys.h',['../ltemc-filesys_8h.html',1,'']]],
+  ['ltemc_2dfiles_2ec_2',['ltemc-files.c',['../ltemc-files_8c.html',1,'']]],
+  ['ltemc_2dfiles_2eh_3',['ltemc-files.h',['../ltemc-files_8h.html',1,'']]],
   ['ltemc_2dgeo_2ec_4',['ltemc-geo.c',['../ltemc-geo_8c.html',1,'']]],
   ['ltemc_2dgeo_2eh_5',['ltemc-geo.h',['../ltemc-geo_8h.html',1,'']]],
   ['ltemc_2dgnss_2ec_6',['ltemc-gnss.c',['../ltemc-gnss_8c.html',1,'']]],

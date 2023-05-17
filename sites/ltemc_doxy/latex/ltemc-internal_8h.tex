@@ -17,6 +17,8 @@ LTEmC INTERNAL type/enum/struct definitions.
 \item 
 struct \mbox{\hyperlink{structltem_metrics__tag}{ltem\+Metrics\+\_\+tag}}
 \begin{DoxyCompactList}\small\item\em most LTEmC modules use Loo\+UQ string functions \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structfile_ctrl__tag}{file\+Ctrl\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Structure with data for control of file systems processing. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}}
 \begin{DoxyCompactList}\small\item\em Struct representing the LTEmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
@@ -34,6 +36,9 @@ typedef struct \mbox{\hyperlink{structltem_metrics__tag}{ltem\+Metrics\+\_\+tag}
 \mbox{\Hypertarget{ltemc-internal_8h_ad56d41d2e0b224e7d776de2dc81ee939}\label{ltemc-internal_8h_ad56d41d2e0b224e7d776de2dc81ee939}} 
 typedef enum \mbox{\hyperlink{ltemc-internal_8h_a102f20947356e7cfc1575e3dec82d888}{recv\+Event\+\_\+tag}} {\bfseries recv\+Event\+\_\+t}
 \begin{DoxyCompactList}\small\item\em enum describing the last receive event serviced by the ISR \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ltemc-internal_8h_aa4e6cab8b075e5f6239c4ae92990b78c}\label{ltemc-internal_8h_aa4e6cab8b075e5f6239c4ae92990b78c}} 
+typedef struct \mbox{\hyperlink{structfile_ctrl__tag}{file\+Ctrl\+\_\+tag}} {\bfseries file\+Ctrl\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure with data for control of file systems processing. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structltem_device__tag}{ltem\+Device\+\_\+tag}} \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em Struct representing the LTEmC model. The struct behind the g\+\_\+ltem1 global variable with all driver controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
@@ -48,25 +53,20 @@ enum \mbox{\hyperlink{ltemc-internal_8h_a102f20947356e7cfc1575e3dec82d888}{recv\
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{ltemc-internal_8h_a6c467232deb0591f402f1b9221d547e2}\label{ltemc-internal_8h_a6c467232deb0591f402f1b9221d547e2}} 
-void {\bfseries LTEM\+\_\+init\+Io} ()
-\item 
-\mbox{\Hypertarget{ltemc-internal_8h_a5ddd998cbb2b545227b40ddb93e47596}\label{ltemc-internal_8h_a5ddd998cbb2b545227b40ddb93e47596}} 
-void {\bfseries LTEM\+\_\+register\+Do\+Worker} (do\+Work\+\_\+func $\ast$do\+Worker)
-\item 
-result\+Code\+\_\+t \mbox{\hyperlink{ltemc-internal_8h_ac5cd84c5342fb9cd5ebc175a09cb3229}{ATCMD\+\_\+read\+Result}} ()
-\begin{DoxyCompactList}\small\item\em Checks recv buffer for command response and sets atcmd structure data with result. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} \mbox{\hyperlink{ltemc-internal_8h_a8b66aa6a6e85581b0abebbb139a8f546}{ATCMD\+\_\+ok\+Response\+Parser}} ()
 \begin{DoxyCompactList}\small\item\em Default AT command result parser. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{ltemc-internal_8h_ab020892ddf7994b54b41d61ff876d551}{ATCMD\+\_\+await\+Lock}} (uint16\+\_\+t timeout\+MS)
 \begin{DoxyCompactList}\small\item\em Awaits exclusive access to QBG module command interface. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{ltemc-internal_8h_a47d13fcac52d7cd9fabef7ce99de6705}{ATCMD\+\_\+is\+Lock\+Active}} ()
 \begin{DoxyCompactList}\small\item\em Returns the current at\+Cmd lock state. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} \mbox{\hyperlink{ltemc-internal_8h_a948a107cb71e1b1df505be4d2a7bbbdd}{ATCMD\+\_\+ready\+Prompt\+Parser}} (const char $\ast$rdy\+Prompt)
+\mbox{\Hypertarget{ltemc-internal_8h_a948a107cb71e1b1df505be4d2a7bbbdd}\label{ltemc-internal_8h_a948a107cb71e1b1df505be4d2a7bbbdd}} 
+\mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} {\bfseries ATCMD\+\_\+ready\+Prompt\+Parser} (const char $\ast$rdy\+Prompt)
 \begin{DoxyCompactList}\small\item\em Base parser looking for a simple prompt string. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} \mbox{\hyperlink{ltemc-internal_8h_a6276c3a16859ccf82f39f00c42fd3b3b}{ATCMD\+\_\+tx\+Data\+Prompt\+Parser}} ()
+\mbox{\Hypertarget{ltemc-internal_8h_a6276c3a16859ccf82f39f00c42fd3b3b}\label{ltemc-internal_8h_a6276c3a16859ccf82f39f00c42fd3b3b}} 
+\mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} {\bfseries ATCMD\+\_\+tx\+Data\+Prompt\+Parser} ()
 \begin{DoxyCompactList}\small\item\em Parser looking for BGx transmit data prompt \char`\"{}$>$ \char`\"{}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} \mbox{\hyperlink{ltemc-internal_8h_a83358a615495d2c3a1f2901756869200}{ATCMD\+\_\+connect\+Prompt\+Parser}} ()
+\mbox{\Hypertarget{ltemc-internal_8h_a83358a615495d2c3a1f2901756869200}\label{ltemc-internal_8h_a83358a615495d2c3a1f2901756869200}} 
+\mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} {\bfseries ATCMD\+\_\+connect\+Prompt\+Parser} ()
 \begin{DoxyCompactList}\small\item\em Parser looking for BGx CONNECT data prompt. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc-internal_8h_a6638afce89c033ad0af3d0a66ca7e4a6}\label{ltemc-internal_8h_a6638afce89c033ad0af3d0a66ca7e4a6}} 
 void {\bfseries NTWK\+\_\+init\+Rat\+Options} ()
@@ -151,28 +151,6 @@ Awaits exclusive access to QBG module command interface.
 \begin{DoxyReturn}{Returns}
 true if lock aquired prior to the timeout period. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-internal_8h_a83358a615495d2c3a1f2901756869200}\label{ltemc-internal_8h_a83358a615495d2c3a1f2901756869200}} 
-\index{ltemc-\/internal.h@{ltemc-\/internal.h}!ATCMD\_connectPromptParser@{ATCMD\_connectPromptParser}}
-\index{ATCMD\_connectPromptParser@{ATCMD\_connectPromptParser}!ltemc-\/internal.h@{ltemc-\/internal.h}}
-\doxysubsubsection{\texorpdfstring{ATCMD\_connectPromptParser()}{ATCMD\_connectPromptParser()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} ATCMD\+\_\+connect\+Prompt\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Parser looking for BGx CONNECT data prompt. 
-
-Parser looking for BGx CONNECT data prompt.
-
-
-\begin{DoxyParams}{Parameters}
-{\em response} & \mbox{[}in\mbox{]} Character data recv\textquotesingle{}d from BGx to parse for task complete \\
-\hline
-{\em endptr} & \mbox{[}out\mbox{]} Char pointer to the char following parsed text\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-HTTP style result code, 0 = not complete 
-\end{DoxyReturn}
 \mbox{\Hypertarget{ltemc-internal_8h_a47d13fcac52d7cd9fabef7ce99de6705}\label{ltemc-internal_8h_a47d13fcac52d7cd9fabef7ce99de6705}} 
 \index{ltemc-\/internal.h@{ltemc-\/internal.h}!ATCMD\_isLockActive@{ATCMD\_isLockActive}}
 \index{ATCMD\_isLockActive@{ATCMD\_isLockActive}!ltemc-\/internal.h@{ltemc-\/internal.h}}
@@ -196,59 +174,4 @@ True if atcmd lock is active (command underway)
 
 Default AT command result parser. 
 
-Default AT command result parser. \mbox{\Hypertarget{ltemc-internal_8h_ac5cd84c5342fb9cd5ebc175a09cb3229}\label{ltemc-internal_8h_ac5cd84c5342fb9cd5ebc175a09cb3229}} 
-\index{ltemc-\/internal.h@{ltemc-\/internal.h}!ATCMD\_readResult@{ATCMD\_readResult}}
-\index{ATCMD\_readResult@{ATCMD\_readResult}!ltemc-\/internal.h@{ltemc-\/internal.h}}
-\doxysubsubsection{\texorpdfstring{ATCMD\_readResult()}{ATCMD\_readResult()}}
-{\footnotesize\ttfamily result\+Code\+\_\+t ATCMD\+\_\+read\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Checks recv buffer for command response and sets atcmd structure data with result. 
-
-Checks recv buffer for command response and sets atcmd structure data with result. \mbox{\Hypertarget{ltemc-internal_8h_a948a107cb71e1b1df505be4d2a7bbbdd}\label{ltemc-internal_8h_a948a107cb71e1b1df505be4d2a7bbbdd}} 
-\index{ltemc-\/internal.h@{ltemc-\/internal.h}!ATCMD\_readyPromptParser@{ATCMD\_readyPromptParser}}
-\index{ATCMD\_readyPromptParser@{ATCMD\_readyPromptParser}!ltemc-\/internal.h@{ltemc-\/internal.h}}
-\doxysubsubsection{\texorpdfstring{ATCMD\_readyPromptParser()}{ATCMD\_readyPromptParser()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} ATCMD\+\_\+ready\+Prompt\+Parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{rdy\+Prompt }\end{DoxyParamCaption})}
-
-
-
-Base parser looking for a simple prompt string. 
-
-Base parser looking for a simple prompt string.
-
-
-\begin{DoxyParams}{Parameters}
-{\em response} & \mbox{[}in\mbox{]} The character string received from BGx (so far, may not be complete). \\
-\hline
-{\em rdy\+Prompt} & \mbox{[}in\mbox{]} Prompt text to check for. \\
-\hline
-{\em endptr} & \mbox{[}out\mbox{]} Pointer to the char after match.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Result code enum value (http status code) 
-\end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-internal_8h_a6276c3a16859ccf82f39f00c42fd3b3b}\label{ltemc-internal_8h_a6276c3a16859ccf82f39f00c42fd3b3b}} 
-\index{ltemc-\/internal.h@{ltemc-\/internal.h}!ATCMD\_txDataPromptParser@{ATCMD\_txDataPromptParser}}
-\index{ATCMD\_txDataPromptParser@{ATCMD\_txDataPromptParser}!ltemc-\/internal.h@{ltemc-\/internal.h}}
-\doxysubsubsection{\texorpdfstring{ATCMD\_txDataPromptParser()}{ATCMD\_txDataPromptParser()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmd\+Parse\+Rslt\+\_\+t}} ATCMD\+\_\+tx\+Data\+Prompt\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Parser looking for BGx transmit data prompt \char`\"{}$>$ \char`\"{}. 
-
-Parser looking for BGx transmit data prompt \char`\"{}$>$ \char`\"{}.
-
-
-\begin{DoxyParams}{Parameters}
-{\em response} & \mbox{[}in\mbox{]} Character data recv\textquotesingle{}d from BGx to parse for task complete \\
-\hline
-{\em endptr} & \mbox{[}out\mbox{]} Char pointer to the char following parsed text\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-HTTP style result code, 0 = not complete 
-\end{DoxyReturn}
+Default AT command result parser. 

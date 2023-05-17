@@ -22,82 +22,103 @@
 \DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a6564b7b17223a1e581beef02914406dc}{atcmd\_reset}}(\textcolor{keywordtype}{bool}\ releaseLock);}
 \DoxyCodeLine{00048\ }
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a84f840a308983f46590c9df6d1860c33}{atcmd\_restoreOptionDefaults}}();}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a12f91584f62bec59a930301de9d7956f}{atcmd\_setDataHandler}}(streamDataRcvr\_func\ dataReceiver);}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a31bf4292b9879bc5730394048e4c4807}{atcmd\_configDataMode}}(uint16\_t\ contextKey,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ trigger,\ dataRxHndlr\_func\ rxDataHndlr,\ \textcolor{keywordtype}{char}*\ txDataLoc,\ uint16\_t\ txDataSz,\ appRcvProto\_func\ applRecvDataCB,\ \textcolor{keywordtype}{bool}\ skipParser);}
 \DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00070\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-atcmd_8h_a1f90e8d6a28fc9f55520566a869d062a}{atcmd\_tryInvoke}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *cmdTemplate,\ ...);}
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a6527523f66390dd512a40ba227820d0c}{atcmd\_configDataModeEot}}(uint8\_t\ eotChar);}
+\DoxyCodeLine{00070\ }
 \DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a2c759a85f8659aa37ab78784ebd691e6}{atcmd\_invokeReuseLock}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *cmdTemplate,\ ...);}
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-atcmd_8h_a1f90e8d6a28fc9f55520566a869d062a}{atcmd\_tryInvoke}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *cmdTemplate,\ ...);}
 \DoxyCodeLine{00079\ }
 \DoxyCodeLine{00080\ }
-\DoxyCodeLine{00084\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a74edf80fef3ee4cfaebbb9607ca58a78}{atcmd\_close}}();}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_ad19d2388cd6d4423be873314968de031}{atcmd\_sendCmdData}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *data,\ uint16\_t\ dataSz);}
-\DoxyCodeLine{00096\ }
-\DoxyCodeLine{00097\ }
-\DoxyCodeLine{00101\ resultCode\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_a128cc1893fd2d595f69804a084aeef5d}{atcmd\_awaitResult}}();}
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00109\ resultCode\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_a0e8497b08c7790ecfffee126b043b532}{atcmd\_awaitResultWithOptions}}(uint32\_t\ timeoutMS,\ cmdResponseParser\_func\ cmdResponseParser);}
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a2c759a85f8659aa37ab78784ebd691e6}{atcmd\_invokeReuseLock}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *cmdTemplate,\ ...);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a74edf80fef3ee4cfaebbb9607ca58a78}{atcmd\_close}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Performs\ blind\ send\ data\ transfer\ to\ device.}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ \ *\ \ @details\ ASSERTS\ atcmd\ lock;\ does\ not\ change\ lock\ state.}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//\ \ *\ \ \ \ \ \ \ \ \ \ \ This\ is\ a\ blocking\ function\ (no\ copy),\ returns\ when\ send\ count\ =\ 0.}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//\ \ *\ \ \ \ \ \ \ \ \ \ \ Intended\ to\ send\ blocks\ of\ text\ in\ middle\ of\ a\ command\ stream.}}
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ \ *\ \ @param\ data\ [in]\ Pointer\ to\ the\ block\ of\ character\ data\ to\ send}}
+\DoxyCodeLine{00101\ \textcolor{comment}{//\ \ *\ \ @param\ dataSz\ [in]\ The\ size\ of\ the\ data\ block}}
+\DoxyCodeLine{00102\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00103\ \textcolor{comment}{//\ void\ atcmd\_sendCmdData(const\ char\ *data,\ uint16\_t\ dataSz);}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ resultCode\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_a128cc1893fd2d595f69804a084aeef5d}{atcmd\_awaitResult}}();}
 \DoxyCodeLine{00110\ }
 \DoxyCodeLine{00111\ }
-\DoxyCodeLine{00116\ resultCode\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_aa91cf2cfd830b79a225d5c62a0da9ef5}{atcmd\_getResult}}();}
-\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00117\ resultCode\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_a0e8497b08c7790ecfffee126b043b532}{atcmd\_awaitResultWithOptions}}(uint32\_t\ timeoutMS,\ cmdResponseParser\_func\ cmdResponseParser);}
 \DoxyCodeLine{00118\ }
-\DoxyCodeLine{00123\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{ltemc-atcmd_8h_a7ae1624ecec233ebff89cf715520852d}{atcmd\_getRawResponse}}();}
-\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ resultCode\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_aa91cf2cfd830b79a225d5c62a0da9ef5}{atcmd\_getResult}}();}
 \DoxyCodeLine{00125\ }
-\DoxyCodeLine{00130\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{ltemc-atcmd_8h_a29da0e81404893c31c9d4e4e3a5d6067}{atcmd\_getResponse}}();}
-\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{ltemc-atcmd_8h_a7ae1624ecec233ebff89cf715520852d}{atcmd\_getRawResponse}}();}
 \DoxyCodeLine{00132\ }
-\DoxyCodeLine{00137\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-atcmd_8h_a27940a322eb2239f54ca8c81c4c89af0}{atcmd\_getPreambleFound}}();}
-\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{ltemc-atcmd_8h_a29da0e81404893c31c9d4e4e3a5d6067}{atcmd\_getResponse}}();}
 \DoxyCodeLine{00139\ }
-\DoxyCodeLine{00144\ int32\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_acbf444358890a89e1bcb0bc19dba1255}{atcmd\_getValue}}();}
-\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-atcmd_8h_a27940a322eb2239f54ca8c81c4c89af0}{atcmd\_getPreambleFound}}();}
 \DoxyCodeLine{00146\ }
-\DoxyCodeLine{00151\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-atcmd_8h_a260b6b6d2ec220aec1cd774dcc482c18}{atcmd\_getParserResult}}();}
-\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00152\ int32\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_acbf444358890a89e1bcb0bc19dba1255}{atcmd\_getValue}}();}
 \DoxyCodeLine{00153\ }
-\DoxyCodeLine{00158\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{ltemc-atcmd_8h_a8b7750eee81229577ba60a018e419e7e}{atcmd\_getErrorDetail}}();}
-\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00159\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-atcmd_8h_a260b6b6d2ec220aec1cd774dcc482c18}{atcmd\_getParserResult}}();}
 \DoxyCodeLine{00160\ }
-\DoxyCodeLine{00165\ uint16\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_a5f23ddaa6c3600110a8dbe38c107102a}{atcmd\_getErrorDetailCode}}();}
-\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{ltemc-atcmd_8h_a8b7750eee81229577ba60a018e419e7e}{atcmd\_getErrorDetail}}();}
 \DoxyCodeLine{00167\ }
-\DoxyCodeLine{00172\ uint32\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_a755fe5f62da184a14a80971e1c8e90a0}{atcmd\_getDuration}}();}
-\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00173\ uint16\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_a5f23ddaa6c3600110a8dbe38c107102a}{atcmd\_getErrorDetailCode}}();}
 \DoxyCodeLine{00174\ }
-\DoxyCodeLine{00178\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_ac9151ae79098ea2379de42f180114825}{atcmd\_exitDataMode}}();}
-\DoxyCodeLine{00179\ }
-\DoxyCodeLine{00180\ }
-\DoxyCodeLine{00184\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a3742317e3225c92af7b6487aee1c3f38}{atcmd\_exitTextMode}}();}
-\DoxyCodeLine{00185\ }
-\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00180\ uint32\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_a755fe5f62da184a14a80971e1c8e90a0}{atcmd\_getDuration}}();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00186\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_a3742317e3225c92af7b6487aee1c3f38}{atcmd\_exitTextMode}}();}
 \DoxyCodeLine{00187\ }
-\DoxyCodeLine{00188\ \textcolor{comment}{//\ /**}}
-\DoxyCodeLine{00189\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Protocols\ register\ for\ URC\ callbacks}}
-\DoxyCodeLine{00190\ \textcolor{comment}{//\ \ */}}
-\DoxyCodeLine{00191\ \textcolor{comment}{//\ void\ ATCMD\_registerStream(streamPeer\_t\ streamIndx,\ iopStreamCtrl\_t\ *streamCtrl);}}
-\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00192\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_ac9151ae79098ea2379de42f180114825}{atcmd\_exitDataMode}}();}
 \DoxyCodeLine{00193\ }
-\DoxyCodeLine{00194\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00195\ }
-\DoxyCodeLine{00213\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-atcmd_8h_a98a258e1580c6a67eac1cd090603c912}{atcmd\_stdResponseParser}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *preamble,\ \textcolor{keywordtype}{bool}\ preambleReqd,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *delimiters,\ uint8\_t\ tokensReqd,\ uint8\_t\ valueIndx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *finale,\ uint16\_t\ lengthReqd);}
-\DoxyCodeLine{00214\ }
-\DoxyCodeLine{00215\ }
-\DoxyCodeLine{00220\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-atcmd_8h_aabe561361875acf197304759838af23a}{ATCMD\_testResponseTrace}}();}
-\DoxyCodeLine{00221\ }
-\DoxyCodeLine{00222\ }
-\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
-\DoxyCodeLine{00224\ \}}
-\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00226\ }
-\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ !\_\_LTEMC\_ATCMD\_H\_\_}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00198\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-atcmd_8h_af39aa1a60b2f0269770fbadb26f4de1a}{atcmd\_exitTransparentMode}}();}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00202\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Protocols\ register\ for\ URC\ callbacks}}
+\DoxyCodeLine{00203\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00204\ \textcolor{comment}{//\ void\ ATCMD\_registerStream(streamPeer\_t\ streamIndx,\ iopStreamCtrl\_t\ *streamCtrl);}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00226\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-atcmd_8h_a98a258e1580c6a67eac1cd090603c912}{atcmd\_stdResponseParser}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *preamble,\ \textcolor{keywordtype}{bool}\ preambleReqd,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *delimiters,\ uint8\_t\ tokensReqd,\ uint8\_t\ valueIndx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *finale,\ uint16\_t\ lengthReqd);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00230\ \textcolor{comment}{//\ \ *\ \ \ @brief\ LTEmC\ internal\ testing\ parser\ to\ capture\ incoming\ response\ until\ timeout.\ This\ is\ generally\ not\ used\ by\ end-\/user\ applications.}}
+\DoxyCodeLine{00231\ \textcolor{comment}{//\ \ *\ \ @return\ Parse\ status\ result\ (always\ pending\ for\ this\ test\ parser)}}
+\DoxyCodeLine{00232\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00233\ \textcolor{comment}{//\ cmdParseRslt\_t\ ATCMD\_testResponseTrace();}}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00239\ resultCode\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_a4a2dc78f4b6ac7ad2531da8d1ddaf783}{atcmd\_stdTxDataHndlr}}();}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00245\ resultCode\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_ade037acf794088bb7e758d40a3f23c07}{atcmd\_txDataHndlrRaw}}();}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00251\ resultCode\_t\ \mbox{\hyperlink{ltemc-atcmd_8h_accbbcbce126c5cb144a447c3a1569bb2}{atcmd\_stdRxDataHndlr}}();}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00254\ \}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ !\_\_LTEMC\_ATCMD\_H\_\_}}
 
 \end{DoxyCode}

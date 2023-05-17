@@ -12,15 +12,30 @@ Struct representing the state of a TCP/\+UDP/\+SSL socket stream.
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{structsckt_ctrl__tag_ac3f4193fd11344e0945f6d2fb4d41a0a}\label{structsckt_ctrl__tag_ac3f4193fd11344e0945f6d2fb4d41a0a}} 
+char {\bfseries stream\+Type}
+\item 
 \mbox{\Hypertarget{structsckt_ctrl__tag_ab8de827cd09af3ed27153c2351b0897f}\label{structsckt_ctrl__tag_ab8de827cd09af3ed27153c2351b0897f}} 
 \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} {\bfseries data\+Cntxt}
+\begin{DoxyCompactList}\small\item\em stream type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsckt_ctrl__tag_a19f4b8e5885c0404be245cb6b658eb07}\label{structsckt_ctrl__tag_a19f4b8e5885c0404be245cb6b658eb07}} 
+data\+Rx\+Hndlr\+\_\+func {\bfseries data\+Rx\+Hndlr}
+\begin{DoxyCompactList}\small\item\em integer representing the source of the stream; fixed for protocols, file handle for FS \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsckt_ctrl__tag_aba4b78dd6e2ad95284526c7656a8abe9}\label{structsckt_ctrl__tag_aba4b78dd6e2ad95284526c7656a8abe9}} 
+urc\+Evnt\+Hndlr\+\_\+func {\bfseries urc\+Evnt\+Hndlr}
+\begin{DoxyCompactList}\small\item\em function to handle data streaming, initiated by event\+Mgr() or atcmd module \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsckt_ctrl__tag_a601240ae64b44ef5040fdf2d26895226}\label{structsckt_ctrl__tag_a601240ae64b44ef5040fdf2d26895226}} 
+uint8\+\_\+t {\bfseries pdp\+Cntxt}
+\begin{DoxyCompactList}\small\item\em function to determine if \char`\"{}potential\char`\"{} URC event is for an open stream and perform reqd actions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsckt_ctrl__tag_a8d014aad12b0f88c80c9e3b016f40bf1}\label{structsckt_ctrl__tag_a8d014aad12b0f88c80c9e3b016f40bf1}} 
+app\+Rcv\+Proto\+\_\+func {\bfseries app\+Recv\+Data\+CB}
 \item 
 \mbox{\Hypertarget{structsckt_ctrl__tag_a904ab52dcb6b2bf12267ee6f3374ead0}\label{structsckt_ctrl__tag_a904ab52dcb6b2bf12267ee6f3374ead0}} 
 char {\bfseries host\+Url} \mbox{[}SET\+\_\+\+PROPLEN(sckt\+\_\+\+\_\+url\+Host\+Sz)\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em callback into host application with data (cast from generic func$\ast$ to stream specific function) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structsckt_ctrl__tag_aa0fbdfd4b0b276a823329769749441e7}\label{structsckt_ctrl__tag_aa0fbdfd4b0b276a823329769749441e7}} 
 uint16\+\_\+t {\bfseries host\+Port}
-\item 
+\begin{DoxyCompactList}\small\item\em remote host URL/\+IP address \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structsckt_ctrl__tag_a009c96a2b72a30031516b370c8f869a0}\label{structsckt_ctrl__tag_a009c96a2b72a30031516b370c8f869a0}} 
 uint16\+\_\+t {\bfseries lcl\+Port}
 \item 

@@ -1,14 +1,13 @@
 var searchData=
 [
-  ['speedkm_0',['speedkm',['../structgnss_location__tag.html#ae0962fef9bfddefc9440afc8f6ef33d1',1,'gnssLocation_tag']]],
-  ['speedkn_1',['speedkn',['../structgnss_location__tag.html#aa1de6861ea631ed59dd15f99a59ca500',1,'gnssLocation_tag']]],
-  ['spi_2',['spi',['../structltem_device__tag.html#a15871f597217ab79cc8e1790f38359bf',1,'ltemDevice_tag']]],
-  ['statsrxcnt_3',['statsRxCnt',['../structsckt_ctrl__tag.html#a8ff685d58290aec5312e7a46024421e1',1,'scktCtrl_tag']]],
-  ['statstxcnt_4',['statsTxCnt',['../structsckt_ctrl__tag.html#a9f56a31404281dea7e25a6161f1ab066',1,'scktCtrl_tag']]],
-  ['statuscode_5',['statusCode',['../structgnss_location__tag.html#ade31e7fd99344e8c35f2c373af659551',1,'gnssLocation_tag']]],
-  ['streamclose_6',['streamClose',['../structstream_ctrl__tag.html#ab7ea53a6f91261087a8a238919bfab83',1,'streamCtrl_tag']]],
-  ['streamdatarcvr_7',['streamDataRcvr',['../structatcmd__tag.html#ab47c9182bfa5728c4e5312cacb9c2fe5',1,'atcmd_tag']]],
-  ['streams_8',['streams',['../structltem_device__tag.html#ad2a4d90741d5f6ae526ffb88877a528a',1,'ltemDevice_tag']]],
-  ['streamurchndlr_9',['streamUrcHndlr',['../structstream_ctrl__tag.html#a51a7bfa65bf4993b41e81c1024194fb1',1,'streamCtrl_tag']]],
-  ['swver_10',['swver',['../structmodem_info__tag.html#af784020abab22fc405d7c39738840400',1,'modemInfo_tag']]]
+  ['rawresponse_0',['rawResponse',['../structatcmd__tag.html#acf1131816e5ab15eadb01aff2e8e4d29',1,'atcmd_tag']]],
+  ['recvmsgid_1',['recvMsgId',['../structmqtt_ctrl__tag.html#a2968a40cf58f9f04ec0a62b72efeafcc',1,'mqttCtrl_tag']]],
+  ['requeststate_2',['requestState',['../structhttp_ctrl__tag.html#ae2815bd62c196db16e142ccfbea5c2b9',1,'httpCtrl_tag']]],
+  ['requesttype_3',['requestType',['../structhttp_ctrl__tag.html#a8640026b3fe8369c2c2a74191f6b9e52',1,'httpCtrl_tag']]],
+  ['response_4',['response',['../structatcmd__tag.html#a11373f02c42587a1853ad6c8be5fe10e',1,'atcmd_tag::response()'],['../structatcmd_result__tag.html#a11373f02c42587a1853ad6c8be5fe10e',1,'atcmdResult_tag::response()']]],
+  ['responsecode_5',['responseCode',['../structatcmd_result__tag.html#a679e4f741e5316b781041aab31f5db3c',1,'atcmdResult_tag']]],
+  ['responseparserfunc_6',['responseParserFunc',['../structatcmd__tag.html#a1f87147d9b1fd52e2b3e0841e8c2b41d',1,'atcmd_tag']]],
+  ['resultcode_7',['resultCode',['../structatcmd__tag.html#a9af25a633872f85ee648a31a158bb649',1,'atcmd_tag']]],
+  ['returnresponsehdrs_8',['returnResponseHdrs',['../structhttp_ctrl__tag.html#ad95114e759c85069103a0492f02db5b7',1,'httpCtrl_tag']]],
+  ['retvalue_9',['retValue',['../structatcmd__tag.html#a79d0cbca6cb13d26d009575dcc3d599f',1,'atcmd_tag']]]
 ];

@@ -34,7 +34,7 @@ LTEmC LTEm Device Driver for Loo\+UQ LTEm Series Modems.
 \mbox{\Hypertarget{ltemc_8c_ae5e71891cce3caac2fdb9fe2f93b6da0}\label{ltemc_8c_ae5e71891cce3caac2fdb9fe2f93b6da0}} 
 void {\bfseries S\+\_\+\+\_\+init\+LTEm\+Device} (bool ltem\+Reset)
 \begin{DoxyCompactList}\small\item\em Static internal BGx initialization logic shared between start and reset. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc_8c_a613b12ec02329cfb7d54a42029a4a2f7}{ltem\+\_\+create}} (const \mbox{\hyperlink{structltem_pin_config__tag}{ltem\+Pin\+Config\+\_\+t}} ltem\+\_\+config, yield\+\_\+func yield\+Callback, app\+Evnt\+Notify\+\_\+func event\+Notif\+Callback)
+void \mbox{\hyperlink{ltemc_8c_a613b12ec02329cfb7d54a42029a4a2f7}{ltem\+\_\+create}} (const \mbox{\hyperlink{ltemc-types_8h_a179aa93a99cd81e3a0f037bd9f07d70e}{ltem\+Pin\+Config\+\_\+t}} ltem\+\_\+config, yield\+\_\+func yield\+Callback, app\+Evnt\+Notify\+\_\+func event\+Notif\+Callback)
 \begin{DoxyCompactList}\small\item\em Initialize the LTEm1 modem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{ltemc_8c_adc4fe577a31799623ad85245e64dfea5}\label{ltemc_8c_adc4fe577a31799623ad85245e64dfea5}} 
 void {\bfseries ltem\+\_\+destroy} ()
@@ -61,6 +61,12 @@ const char $\ast$ \mbox{\hyperlink{ltemc_8c_a7029464993e485f079fa13a9891a391b}{l
 \mbox{\Hypertarget{ltemc_8c_a68e6ef9250a50c92aaa8297db3a5085f}\label{ltemc_8c_a68e6ef9250a50c92aaa8297db3a5085f}} 
 void {\bfseries ltem\+\_\+event\+Mgr} ()
 \begin{DoxyCompactList}\small\item\em Background work task runner. To be called in application Loop() periodically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc_8c_add961efedf1c0d2d73ed83705bdbf29f}{ltem\+\_\+add\+Stream}} (\mbox{\hyperlink{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}{stream\+Ctrl\+\_\+t}} $\ast$stream\+Ctrl)
+\begin{DoxyCompactList}\small\item\em Adds a protocol stream to the LTEm streams table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc_8c_ade826bde748a183bd75534922c1af152}{ltem\+\_\+delete\+Stream}} (\mbox{\hyperlink{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}{stream\+Ctrl\+\_\+t}} $\ast$stream\+Ctrl)
+\begin{DoxyCompactList}\small\item\em Remove a stream from the LTEm streams table, excludes it from further processing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}{stream\+Ctrl\+\_\+t}} $\ast$ \mbox{\hyperlink{ltemc_8c_a2ca749293a23201d7867b08e933bc8ab}{ltem\+\_\+get\+Stream\+From\+Cntxt}} (uint8\+\_\+t context, \mbox{\hyperlink{ltemc-types_8h_a7a6e369673a63d301becf28b22bdbec7}{stream\+Type\+\_\+t}} stream\+Type)
+\begin{DoxyCompactList}\small\item\em Get a stream control from data context, optionally filtering on stream type. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc_8c_a80df97bbc632eda7178e56368c3d0a1e}{ltem\+\_\+notify\+App}} (uint8\+\_\+t notify\+Type, const char $\ast$notify\+Msg)
 \begin{DoxyCompactList}\small\item\em Notify host application of significant events. Application may ignore, display, save status, whatever. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ltemc_8c_a9162c355dd0f99f29f8a3ce508a0ffb6}{ltem\+\_\+set\+Event\+Notif\+Callback}} (app\+Evnt\+Notify\+\_\+func event\+Notif\+Callback)
@@ -68,14 +74,10 @@ void \mbox{\hyperlink{ltemc_8c_a9162c355dd0f99f29f8a3ce508a0ffb6}{ltem\+\_\+set\
 \mbox{\Hypertarget{ltemc_8c_a865c84636366086193ccac32d0d9c23d}\label{ltemc_8c_a865c84636366086193ccac32d0d9c23d}} 
 void {\bfseries ltem\+\_\+set\+Yield\+Callback} (platform\+\_\+yield\+CB\+\_\+func\+\_\+t yield\+Callback)
 \begin{DoxyCompactList}\small\item\em Registers the address (void$\ast$) of your application yield callback handler. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{ltemc_8c_afa5557ac86e027f5926a9513bb1f00ab}\label{ltemc_8c_afa5557ac86e027f5926a9513bb1f00ab}} 
-{\bfseries S\+\_\+\+\_\+ltem\+Urc\+Handler} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{ltemc_8c_afa5557ac86e027f5926a9513bb1f00ab}{S\+\_\+\+\_\+ltem\+Urc\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Global URC handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{ltemc_8c_aa190ecfd4e3b1602b5502c1ff92f37b0}\label{ltemc_8c_aa190ecfd4e3b1602b5502c1ff92f37b0}} 
-const char $\ast$ {\bfseries ltemc\+Version} = \char`\"{}3.\+0.\+1\char`\"{}
 \item 
 \mbox{\Hypertarget{ltemc_8c_aa520cbfde107f228ddd40be60d2b6905}\label{ltemc_8c_aa520cbfde107f228ddd40be60d2b6905}} 
 \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltem\+Device\+\_\+t}} {\bfseries g\+\_\+lq\+LTEM}
@@ -122,17 +124,51 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
  
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltemc_8c_add961efedf1c0d2d73ed83705bdbf29f}\label{ltemc_8c_add961efedf1c0d2d73ed83705bdbf29f}} 
+\index{ltemc.c@{ltemc.c}!ltem\_addStream@{ltem\_addStream}}
+\index{ltem\_addStream@{ltem\_addStream}!ltemc.c@{ltemc.c}}
+\doxysubsubsection{\texorpdfstring{ltem\_addStream()}{ltem\_addStream()}}
+{\footnotesize\ttfamily void ltem\+\_\+add\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}{stream\+Ctrl\+\_\+t}} $\ast$}]{stream\+Ctrl }\end{DoxyParamCaption})}
+
+
+
+Adds a protocol stream to the LTEm streams table. 
+
+ASSERTS that no stream is occupying the stream control\textquotesingle{}s data context
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream\+Ctrl} & The stream to add to the LTEm stream table \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{ltemc_8c_a613b12ec02329cfb7d54a42029a4a2f7}\label{ltemc_8c_a613b12ec02329cfb7d54a42029a4a2f7}} 
 \index{ltemc.c@{ltemc.c}!ltem\_create@{ltem\_create}}
 \index{ltem\_create@{ltem\_create}!ltemc.c@{ltemc.c}}
 \doxysubsubsection{\texorpdfstring{ltem\_create()}{ltem\_create()}}
-{\footnotesize\ttfamily void ltem\+\_\+create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structltem_pin_config__tag}{ltem\+Pin\+Config\+\_\+t}}}]{ltem\+\_\+config,  }\item[{yield\+\_\+func}]{yield\+Callback,  }\item[{app\+Evnt\+Notify\+\_\+func}]{event\+Notif\+Callback }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ltem\+\_\+create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{ltemc-types_8h_a179aa93a99cd81e3a0f037bd9f07d70e}{ltem\+Pin\+Config\+\_\+t}}}]{ltem\+\_\+config,  }\item[{yield\+\_\+func}]{yield\+Callback,  }\item[{app\+Evnt\+Notify\+\_\+func}]{event\+Notif\+Callback }\end{DoxyParamCaption})}
 
 
 
 Initialize the LTEm1 modem. 
 
-ASSERT and diagnostic data collection. \mbox{\Hypertarget{ltemc_8c_a8d7012de7962fc1187bfd0a5b3f8913e}\label{ltemc_8c_a8d7012de7962fc1187bfd0a5b3f8913e}} 
+ASSERT and diagnostic data collection. \mbox{\Hypertarget{ltemc_8c_ade826bde748a183bd75534922c1af152}\label{ltemc_8c_ade826bde748a183bd75534922c1af152}} 
+\index{ltemc.c@{ltemc.c}!ltem\_deleteStream@{ltem\_deleteStream}}
+\index{ltem\_deleteStream@{ltem\_deleteStream}!ltemc.c@{ltemc.c}}
+\doxysubsubsection{\texorpdfstring{ltem\_deleteStream()}{ltem\_deleteStream()}}
+{\footnotesize\ttfamily void ltem\+\_\+delete\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}{stream\+Ctrl\+\_\+t}} $\ast$}]{stream\+Ctrl }\end{DoxyParamCaption})}
+
+
+
+Remove a stream from the LTEm streams table, excludes it from further processing. 
+
+ASSERTS that the stream parameter matches the stream in the LTEm table
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream\+Ctrl} & The stream to remove from the LTEm stream table \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ltemc_8c_a8d7012de7962fc1187bfd0a5b3f8913e}\label{ltemc_8c_a8d7012de7962fc1187bfd0a5b3f8913e}} 
 \index{ltemc.c@{ltemc.c}!ltem\_getDeviceState@{ltem\_getDeviceState}}
 \index{ltem\_getDeviceState@{ltem\_getDeviceState}!ltemc.c@{ltemc.c}}
 \doxysubsubsection{\texorpdfstring{ltem\_getDeviceState()}{ltem\_getDeviceState()}}
@@ -142,7 +178,27 @@ ASSERT and diagnostic data collection. \mbox{\Hypertarget{ltemc_8c_a8d7012de7962
 
 Performs a HW reset of LTEm1 and optionally executes start sequence. 
 
-Reads the hardware status and internal application ready field to return device ready state. \mbox{\Hypertarget{ltemc_8c_a7029464993e485f079fa13a9891a391b}\label{ltemc_8c_a7029464993e485f079fa13a9891a391b}} 
+Reads the hardware status and internal application ready field to return device ready state. \mbox{\Hypertarget{ltemc_8c_a2ca749293a23201d7867b08e933bc8ab}\label{ltemc_8c_a2ca749293a23201d7867b08e933bc8ab}} 
+\index{ltemc.c@{ltemc.c}!ltem\_getStreamFromCntxt@{ltem\_getStreamFromCntxt}}
+\index{ltem\_getStreamFromCntxt@{ltem\_getStreamFromCntxt}!ltemc.c@{ltemc.c}}
+\doxysubsubsection{\texorpdfstring{ltem\_getStreamFromCntxt()}{ltem\_getStreamFromCntxt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ltemc-types_8h_a59d50b328873ce5798b52fac8d0886a4}{stream\+Ctrl\+\_\+t}} $\ast$ ltem\+\_\+get\+Stream\+From\+Cntxt (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{context,  }\item[{\mbox{\hyperlink{ltemc-types_8h_a7a6e369673a63d301becf28b22bdbec7}{stream\+Type\+\_\+t}}}]{stream\+Type }\end{DoxyParamCaption})}
+
+
+
+Get a stream control from data context, optionally filtering on stream type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The data context for the stream \\
+\hline
+{\em stream\+Type} & Protocol of the stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stream\+Ctrl\+\_\+t$\ast$ Pointer of a generic stream, can be cast (after type validation) to a specific protocol control 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc_8c_a7029464993e485f079fa13a9891a391b}\label{ltemc_8c_a7029464993e485f079fa13a9891a391b}} 
 \index{ltemc.c@{ltemc.c}!ltem\_getSwVersion@{ltem\_getSwVersion}}
 \index{ltem\_getSwVersion@{ltem\_getSwVersion}!ltemc.c@{ltemc.c}}
 \doxysubsubsection{\texorpdfstring{ltem\_getSwVersion()}{ltem\_getSwVersion()}}
@@ -259,7 +315,17 @@ Power on and start the modem. \mbox{\Hypertarget{ltemc_8c_a5fde19665106d68b37d5d
 
 Powers off the modem without destroying memory objects. Modem device will require \mbox{\hyperlink{ltemc_8c_a0a45070f83b22dff7981905eb4c41560}{ltem\+\_\+start()}} to reinit HW. 
 
-Powers off the modem without destroying memory objects. Power modem back on with \mbox{\hyperlink{ltemc_8h_a0a45070f83b22dff7981905eb4c41560}{ltem\+\_\+start()}} 
+Powers off the modem without destroying memory objects. Power modem back on with \mbox{\hyperlink{ltemc_8h_a0a45070f83b22dff7981905eb4c41560}{ltem\+\_\+start()}} \mbox{\Hypertarget{ltemc_8c_afa5557ac86e027f5926a9513bb1f00ab}\label{ltemc_8c_afa5557ac86e027f5926a9513bb1f00ab}} 
+\index{ltemc.c@{ltemc.c}!S\_\_ltemUrcHandler@{S\_\_ltemUrcHandler}}
+\index{S\_\_ltemUrcHandler@{S\_\_ltemUrcHandler}!ltemc.c@{ltemc.c}}
+\doxysubsubsection{\texorpdfstring{S\_\_ltemUrcHandler()}{S\_\_ltemUrcHandler()}}
+{\footnotesize\ttfamily S\+\_\+\+\_\+ltem\+Urc\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Global URC handler. 
+
+Services URC events that are not specific to a stream/protocol 
 
 \doxysubsection{Variable Documentation}
 \mbox{\Hypertarget{ltemc_8c_a1d4f4dde31edc393e62b6278a0218d24}\label{ltemc_8c_a1d4f4dde31edc393e62b6278a0218d24}} 
@@ -272,7 +338,8 @@ Powers off the modem without destroying memory objects. Power modem back on with
 \begin{DoxyCode}{0}
 \DoxyCodeLine{=\ }
 \DoxyCodeLine{\{\ }
-\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}ATE0"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}ATE0"{}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}AT+QURCCFG=\(\backslash\)"{}urcport\(\backslash\)"{},\(\backslash\)"{}uart1\(\backslash\)"{}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}

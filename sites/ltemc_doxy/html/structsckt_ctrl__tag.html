@@ -84,14 +84,35 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
+<tr class="memitem:ac3f4193fd11344e0945f6d2fb4d41a0a"><td class="memItemLeft" align="right" valign="top"><a id="ac3f4193fd11344e0945f6d2fb4d41a0a" name="ac3f4193fd11344e0945f6d2fb4d41a0a"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>streamType</b></td></tr>
+<tr class="separator:ac3f4193fd11344e0945f6d2fb4d41a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8de827cd09af3ed27153c2351b0897f"><td class="memItemLeft" align="right" valign="top"><a id="ab8de827cd09af3ed27153c2351b0897f" name="ab8de827cd09af3ed27153c2351b0897f"></a>
 <a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dataCntxt</b></td></tr>
+<tr class="memdesc:ab8de827cd09af3ed27153c2351b0897f"><td class="mdescLeft">&#160;</td><td class="mdescRight">stream type <br /></td></tr>
 <tr class="separator:ab8de827cd09af3ed27153c2351b0897f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f4b8e5885c0404be245cb6b658eb07"><td class="memItemLeft" align="right" valign="top"><a id="a19f4b8e5885c0404be245cb6b658eb07" name="a19f4b8e5885c0404be245cb6b658eb07"></a>
+dataRxHndlr_func&#160;</td><td class="memItemRight" valign="bottom"><b>dataRxHndlr</b></td></tr>
+<tr class="memdesc:a19f4b8e5885c0404be245cb6b658eb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer representing the source of the stream; fixed for protocols, file handle for FS <br /></td></tr>
+<tr class="separator:a19f4b8e5885c0404be245cb6b658eb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba4b78dd6e2ad95284526c7656a8abe9"><td class="memItemLeft" align="right" valign="top"><a id="aba4b78dd6e2ad95284526c7656a8abe9" name="aba4b78dd6e2ad95284526c7656a8abe9"></a>
+urcEvntHndlr_func&#160;</td><td class="memItemRight" valign="bottom"><b>urcEvntHndlr</b></td></tr>
+<tr class="memdesc:aba4b78dd6e2ad95284526c7656a8abe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to handle data streaming, initiated by eventMgr() or atcmd module <br /></td></tr>
+<tr class="separator:aba4b78dd6e2ad95284526c7656a8abe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601240ae64b44ef5040fdf2d26895226"><td class="memItemLeft" align="right" valign="top"><a id="a601240ae64b44ef5040fdf2d26895226" name="a601240ae64b44ef5040fdf2d26895226"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pdpCntxt</b></td></tr>
+<tr class="memdesc:a601240ae64b44ef5040fdf2d26895226"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to determine if "potential" URC event is for an open stream and perform reqd actions <br /></td></tr>
+<tr class="separator:a601240ae64b44ef5040fdf2d26895226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d014aad12b0f88c80c9e3b016f40bf1"><td class="memItemLeft" align="right" valign="top"><a id="a8d014aad12b0f88c80c9e3b016f40bf1" name="a8d014aad12b0f88c80c9e3b016f40bf1"></a>
+appRcvProto_func&#160;</td><td class="memItemRight" valign="bottom"><b>appRecvDataCB</b></td></tr>
+<tr class="separator:a8d014aad12b0f88c80c9e3b016f40bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a904ab52dcb6b2bf12267ee6f3374ead0"><td class="memItemLeft" align="right" valign="top"><a id="a904ab52dcb6b2bf12267ee6f3374ead0" name="a904ab52dcb6b2bf12267ee6f3374ead0"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>hostUrl</b> [SET_PROPLEN(sckt__urlHostSz)]</td></tr>
+<tr class="memdesc:a904ab52dcb6b2bf12267ee6f3374ead0"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback into host application with data (cast from generic func* to stream specific function) <br /></td></tr>
 <tr class="separator:a904ab52dcb6b2bf12267ee6f3374ead0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0fbdfd4b0b276a823329769749441e7"><td class="memItemLeft" align="right" valign="top"><a id="aa0fbdfd4b0b276a823329769749441e7" name="aa0fbdfd4b0b276a823329769749441e7"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>hostPort</b></td></tr>
+<tr class="memdesc:aa0fbdfd4b0b276a823329769749441e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">remote host URL/IP address <br /></td></tr>
 <tr class="separator:aa0fbdfd4b0b276a823329769749441e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a009c96a2b72a30031516b370c8f869a0"><td class="memItemLeft" align="right" valign="top"><a id="a009c96a2b72a30031516b370c8f869a0" name="a009c96a2b72a30031516b370c8f869a0"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>lclPort</b></td></tr>

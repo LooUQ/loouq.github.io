@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['providerinfo_5ftag_0',['providerInfo_tag',['../structprovider_info__tag.html',1,'']]]
+  ['networkinfo_5ftag_0',['networkInfo_tag',['../structnetwork_info__tag.html',1,'']]]
 ];

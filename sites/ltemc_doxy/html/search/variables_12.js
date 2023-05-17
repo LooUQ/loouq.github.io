@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wildcard_0',['wildcard',['../structmqtt_topic_sub__tag.html#accdd598bfafa3ab3fd21b695a60fd900',1,'mqttTopicSub_tag']]]
+  ['val_0',['val',['../structgnss__latlon__tag.html#a3c8bc0bb4f045bfe78d1196cb786792c',1,'gnss_latlon_tag']]]
 ];

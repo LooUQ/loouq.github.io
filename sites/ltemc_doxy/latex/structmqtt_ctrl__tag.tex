@@ -12,39 +12,54 @@ Struct representing the state of a MQTT stream service.
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structmqtt_ctrl__tag_a273a8b7c0260d25a374376909ce50436}\label{structmqtt_ctrl__tag_a273a8b7c0260d25a374376909ce50436}} 
-uint8\+\_\+t {\bfseries data\+Context}
+\mbox{\Hypertarget{structmqtt_ctrl__tag_ac3f4193fd11344e0945f6d2fb4d41a0a}\label{structmqtt_ctrl__tag_ac3f4193fd11344e0945f6d2fb4d41a0a}} 
+char {\bfseries stream\+Type}
 \item 
+\mbox{\Hypertarget{structmqtt_ctrl__tag_ab8de827cd09af3ed27153c2351b0897f}\label{structmqtt_ctrl__tag_ab8de827cd09af3ed27153c2351b0897f}} 
+\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} {\bfseries data\+Cntxt}
+\begin{DoxyCompactList}\small\item\em stream type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a19f4b8e5885c0404be245cb6b658eb07}\label{structmqtt_ctrl__tag_a19f4b8e5885c0404be245cb6b658eb07}} 
+data\+Rx\+Hndlr\+\_\+func {\bfseries data\+Rx\+Hndlr}
+\begin{DoxyCompactList}\small\item\em integer representing the source of the stream; fixed for protocols, file handle for FS \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmqtt_ctrl__tag_aba4b78dd6e2ad95284526c7656a8abe9}\label{structmqtt_ctrl__tag_aba4b78dd6e2ad95284526c7656a8abe9}} 
+urc\+Evnt\+Hndlr\+\_\+func {\bfseries urc\+Evnt\+Hndlr}
+\begin{DoxyCompactList}\small\item\em function to handle data streaming, initiated by event\+Mgr() or atcmd module \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structmqtt_ctrl__tag_ae8488f1ecc0f0672b23b4f3cecf6962d}\label{structmqtt_ctrl__tag_ae8488f1ecc0f0672b23b4f3cecf6962d}} 
 \mbox{\hyperlink{ltemc-mqtt_8h_ae6c8dd33f85964954ee76aa63055cfd6}{mqtt\+State\+\_\+t}} {\bfseries state}
-\item 
-\mbox{\Hypertarget{structmqtt_ctrl__tag_a94d8f9439f5ef57c63665316557eaf9e}\label{structmqtt_ctrl__tag_a94d8f9439f5ef57c63665316557eaf9e}} 
-mqtt\+Recv\+State\+\_\+t {\bfseries recv\+State}
-\begin{DoxyCompactList}\small\item\em Current state of the MQTT protocol services on device. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em function to determine if \char`\"{}potential\char`\"{} URC event is for an open stream and perform reqd actions \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structmqtt_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}\label{structmqtt_ctrl__tag_a8ee05bf20eb22e34322544df417b4348}} 
 bool {\bfseries use\+Tls}
-\item 
+\begin{DoxyCompactList}\small\item\em Current state of the MQTT protocol services on device. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structmqtt_ctrl__tag_a300b9ff4303e8a75daa0611ecdc0d199}\label{structmqtt_ctrl__tag_a300b9ff4303e8a75daa0611ecdc0d199}} 
 char {\bfseries host\+Url} \mbox{[}host\+\_\+\+\_\+url\+Sz\mbox{]}
 \begin{DoxyCompactList}\small\item\em flag indicating SSL/\+TLS applied to stream \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structmqtt_ctrl__tag_aa0fbdfd4b0b276a823329769749441e7}\label{structmqtt_ctrl__tag_aa0fbdfd4b0b276a823329769749441e7}} 
 uint16\+\_\+t {\bfseries host\+Port}
 \begin{DoxyCompactList}\small\item\em URL or IP address of host. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structmqtt_ctrl__tag_ac225cf8f7dbdcc50a318ed9c382c692d}\label{structmqtt_ctrl__tag_ac225cf8f7dbdcc50a318ed9c382c692d}} 
-char {\bfseries client\+Id} \mbox{[}SET\+\_\+\+PROPLEN(mqtt\+\_\+\+\_\+client\+Id\+Sz)\mbox{]}
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a8b160795cbbe5b78388a9b872ba247d1}\label{structmqtt_ctrl__tag_a8b160795cbbe5b78388a9b872ba247d1}} 
+\mbox{\hyperlink{ltemc-mqtt_8h_a6f446d1fbf8b0211fc36cbbd2eaf9512}{mqtt\+Topic\+Ctrl\+\_\+t}} $\ast$ {\bfseries topics} \mbox{[}\mbox{\hyperlink{ltemc-mqtt_8h_a5f8ab8a44e690c2450ffcf33de4996d9a8816e7da78761a9a888229df2a823221}{mqtt\+\_\+\+\_\+topics\+Cnt}}\mbox{]}
 \begin{DoxyCompactList}\small\item\em IP port number host is listening on (allows for 65535/0) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structmqtt_ctrl__tag_ab67bf8a336e2cd15f242f5754bf55f45}\label{structmqtt_ctrl__tag_ab67bf8a336e2cd15f242f5754bf55f45}} 
-char {\bfseries username} \mbox{[}SET\+\_\+\+PROPLEN(mqtt\+\_\+\+\_\+user\+Name\+Sz)\mbox{]}
-\item 
-\mbox{\Hypertarget{structmqtt_ctrl__tag_a3a451d74d08843b667791cac490dc4b4}\label{structmqtt_ctrl__tag_a3a451d74d08843b667791cac490dc4b4}} 
-char {\bfseries password} \mbox{[}SET\+\_\+\+PROPLEN(mqtt\+\_\+\+\_\+user\+Password\+Sz)\mbox{]}
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a6ce59f2ec7270b934db8d448257c73b9}\label{structmqtt_ctrl__tag_a6ce59f2ec7270b934db8d448257c73b9}} 
+char {\bfseries client\+Id} \mbox{[}PROPLEN(mqtt\+\_\+\+\_\+client\+Id\+Sz)\mbox{]}
+\begin{DoxyCompactList}\small\item\em array of topic controls, provides for independent app receive functions per topic \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a9dccfd573eb3e75b50f8497b5f7a2b26}\label{structmqtt_ctrl__tag_a9dccfd573eb3e75b50f8497b5f7a2b26}} 
+char {\bfseries username} \mbox{[}PROPLEN(mqtt\+\_\+\+\_\+user\+Name\+Sz)\mbox{]}
+\begin{DoxyCompactList}\small\item\em for auto-\/restart \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a355ffd262578c9f8a955276f345e00cb}\label{structmqtt_ctrl__tag_a355ffd262578c9f8a955276f345e00cb}} 
+char {\bfseries password} \mbox{[}PROPLEN(mqtt\+\_\+\+\_\+user\+Password\+Sz)\mbox{]}
 \item 
 \mbox{\Hypertarget{structmqtt_ctrl__tag_a224c16093375c1db5becef1b693ef7ba}\label{structmqtt_ctrl__tag_a224c16093375c1db5becef1b693ef7ba}} 
 \mbox{\hyperlink{ltemc-mqtt_8h_af6396985642256a42f60af322da5124f}{mqtt\+Version\+\_\+t}} {\bfseries mqtt\+Version}
 \item 
-\mbox{\Hypertarget{structmqtt_ctrl__tag_a763233e00ae0dce61a5a02d3af3c0687}\label{structmqtt_ctrl__tag_a763233e00ae0dce61a5a02d3af3c0687}} 
-uint16\+\_\+t {\bfseries last\+Msg\+Id}
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a2bd52016a48ca5e37180b22e910983df}\label{structmqtt_ctrl__tag_a2bd52016a48ca5e37180b22e910983df}} 
+uint16\+\_\+t {\bfseries sent\+Msg\+Id}
+\item 
+\mbox{\Hypertarget{structmqtt_ctrl__tag_a2968a40cf58f9f04ec0a62b72efeafcc}\label{structmqtt_ctrl__tag_a2968a40cf58f9f04ec0a62b72efeafcc}} 
+uint16\+\_\+t {\bfseries recv\+Msg\+Id}
+\begin{DoxyCompactList}\small\item\em MQTT TX message ID for QOS, automatically incremented, rolls at max value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmqtt_ctrl__tag_ac964175a493d2bac9f3f29ded085569c}\label{structmqtt_ctrl__tag_ac964175a493d2bac9f3f29ded085569c}} 
+uint8\+\_\+t {\bfseries err\+Code}
+\begin{DoxyCompactList}\small\item\em last received message identifier \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

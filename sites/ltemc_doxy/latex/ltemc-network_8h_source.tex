@@ -31,13 +31,13 @@
 \DoxyCodeLine{00062\ \textcolor{comment}{/*\ Deferred\ Implementation:\ Cannot\ find\ a\ network\ provider\ requiring\ authentication\ and\ Quectel\ doesn't\ support\ beyond\ IPV4}}
 \DoxyCodeLine{00063\ \textcolor{comment}{*/}}
 \DoxyCodeLine{00064\ \textcolor{comment}{//\ /**}}
-\DoxyCodeLine{00065\ \textcolor{comment}{//\ \ *\ \ \ \(\backslash\)brief\ Configure\ PDP\ Context\ requiring\ authentication.}}
-\DoxyCodeLine{00066\ \textcolor{comment}{//\ \ *\ \ \(\backslash\)param\ [in]\ pdpContextId\ The\ PDP\ context\ to\ work\ with,\ typically\ 0\ or\ 1.}}
-\DoxyCodeLine{00067\ \textcolor{comment}{//\ \ *\ \ \(\backslash\)param\ [in]\ protoType\ The\ PDP\ protocol\ IPV4,\ IPV6,\ IPV4V6\ (both).}}
-\DoxyCodeLine{00068\ \textcolor{comment}{//\ \ *\ \ \(\backslash\)param\ [in]\ apn\ The\ APN\ name\ if\ required\ by\ network\ carrier.}}
-\DoxyCodeLine{00069\ \textcolor{comment}{//\ \ *\ \ \(\backslash\)param\ [in]\ userName\ String\ with\ user\ name}}
-\DoxyCodeLine{00070\ \textcolor{comment}{//\ \ *\ \ \(\backslash\)param\ [in]\ pw\ String\ with\ password}}
-\DoxyCodeLine{00071\ \textcolor{comment}{//\ \ *\ \ \(\backslash\)param\ [in]\ authMethod\ Enum\ specifying\ the\ type\ of\ authentication\ expected\ by\ network}}
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Configure\ PDP\ Context\ requiring\ authentication.}}
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ \ *\ \ @param\ [in]\ pdpContextId\ The\ PDP\ context\ to\ work\ with,\ typically\ 0\ or\ 1.}}
+\DoxyCodeLine{00067\ \textcolor{comment}{//\ \ *\ \ @param\ [in]\ protoType\ The\ PDP\ protocol\ IPV4,\ IPV6,\ IPV4V6\ (both).}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//\ \ *\ \ @param\ [in]\ apn\ The\ APN\ name\ if\ required\ by\ network\ carrier.}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ \ *\ \ @param\ [in]\ userName\ String\ with\ user\ name}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ \ *\ \ @param\ [in]\ pw\ String\ with\ password}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ \ *\ \ @param\ [in]\ authMethod\ Enum\ specifying\ the\ type\ of\ authentication\ expected\ by\ network}}
 \DoxyCodeLine{00072\ \textcolor{comment}{//\ \ */}}
 \DoxyCodeLine{00073\ \textcolor{comment}{//\ networkInfo\_t\ *ntwk\_configureNetworkWithAuth(uint8\_t\ pdpContextId,\ pdpProtocolType\_t\ protoType,\ const\ char\ *apn,\ const\ char\ *pUserName,\ const\ char\ *pPW,\ pdpCntxtAuthMethods\_t\ authMethod);}}
 \DoxyCodeLine{00074\ }
@@ -46,8 +46,8 @@
 \DoxyCodeLine{00082\ }
 \DoxyCodeLine{00083\ }
 \DoxyCodeLine{00084\ \textcolor{comment}{//\ /**}}
-\DoxyCodeLine{00085\ \textcolor{comment}{//\ \ *\ \ \ \(\backslash\)brief\ Set\ the\ default/data\ context\ number\ for\ provider.\ Default\ is\ 1\ if\ not\ overridden\ here.}}
-\DoxyCodeLine{00086\ \textcolor{comment}{//\ \ *\ \ \(\backslash\)param\ [in]\ defaultContext\ The\ data\ context\ to\ operate\ on.\ Typically\ 0\ or\ 1,\ up\ to\ 15}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ \ *\ \ \ @brief\ Set\ the\ default/data\ context\ number\ for\ provider.\ Default\ is\ 1\ if\ not\ overridden\ here.}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ \ *\ \ @param\ [in]\ defaultContext\ The\ data\ context\ to\ operate\ on.\ Typically\ 0\ or\ 1,\ up\ to\ 15}}
 \DoxyCodeLine{00087\ \textcolor{comment}{//\ \ */}}
 \DoxyCodeLine{00088\ \textcolor{comment}{//\ void\ ntwk\_setProviderDefaultContext(uint8\_t\ defaultContext);}}
 \DoxyCodeLine{00089\ }
@@ -66,13 +66,19 @@
 \DoxyCodeLine{00119\ \mbox{\hyperlink{structnetwork_info__tag}{networkInfo\_t}}\ *\mbox{\hyperlink{ltemc-network_8h_a1f854d99e15dcc60de5f65936aaca032}{ntwk\_getNetworkInfo}}(uint8\_t\ contxtId);}
 \DoxyCodeLine{00120\ }
 \DoxyCodeLine{00121\ }
-\DoxyCodeLine{00128\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-network_8h_a38690f183a068a58aea06e40f8c65e46}{ntwk\_getProviders}}(\textcolor{keywordtype}{char}\ *operatorList,\ uint16\_t\ listSz);}
-\DoxyCodeLine{00129\ }
-\DoxyCodeLine{00130\ }
-\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
-\DoxyCodeLine{00132\ \}}
-\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_\_cplusplus}}
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_NETWORK\_H\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00126\ uint8\_t\ \mbox{\hyperlink{ltemc-network_8h_a744be5ac5f17e475843e3729d38a33b0}{ntwk\_getRegistrationStatus}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00138\ uint8\_t\ \mbox{\hyperlink{ltemc-network_8h_afaff38a985397be3494f58c99fe09534}{ntwk\_setOperator}}(uint8\_t\ mode,\ uint8\_t\ format,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ ntwkOperator);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00148\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-network_8h_a31d0822b9d9c4229f921806b8016b461}{ntwkDIAG\_getProviders}}(\textcolor{keywordtype}{char}\ *operatorList,\ uint16\_t\ listSz);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00152\ \}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_\_cplusplus}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_NETWORK\_H\_\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

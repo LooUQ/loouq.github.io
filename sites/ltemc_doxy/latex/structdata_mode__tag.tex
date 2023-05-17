@@ -1,0 +1,43 @@
+\hypertarget{structdata_mode__tag}{}\doxysection{data\+Mode\+\_\+tag Struct Reference}
+\label{structdata_mode__tag}\index{dataMode\_tag@{dataMode\_tag}}
+
+
+Control structure for automatic switching to data mode within a command action.  
+
+
+
+
+{\ttfamily \#include $<$ltemc-\/types.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structdata_mode__tag_a600ff03ffaee1ac3ea4c7958290553f0}\label{structdata_mode__tag_a600ff03ffaee1ac3ea4c7958290553f0}} 
+uint16\+\_\+t {\bfseries context\+Key}
+\item 
+\mbox{\Hypertarget{structdata_mode__tag_aa3b98278e0a66328d13b59671a9bd7a1}\label{structdata_mode__tag_aa3b98278e0a66328d13b59671a9bd7a1}} 
+char {\bfseries trigger} \mbox{[}atcmd\+\_\+\+\_\+data\+Mode\+Trigger\+Sz\mbox{]}
+\begin{DoxyCompactList}\small\item\em unique identifier for data flow, could be data\+Context(proto), handle(files), etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structdata_mode__tag_ad5d51d49f2e496ab2b3103f558bdb157}\label{structdata_mode__tag_ad5d51d49f2e496ab2b3103f558bdb157}} 
+data\+Rx\+Hndlr\+\_\+func {\bfseries data\+Hndlr}
+\begin{DoxyCompactList}\small\item\em char sequence that signals the transition to data mode, data mode starts at the following character \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structdata_mode__tag_a8f2b3c566a6148b468349462d2d7964f}\label{structdata_mode__tag_a8f2b3c566a6148b468349462d2d7964f}} 
+char $\ast$ {\bfseries tx\+Data\+Loc}
+\begin{DoxyCompactList}\small\item\em data handler function (TX/\+RX) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structdata_mode__tag_a830cd2537a8689912af31066b4e8b67d}\label{structdata_mode__tag_a830cd2537a8689912af31066b4e8b67d}} 
+uint16\+\_\+t {\bfseries tx\+Data\+Sz}
+\begin{DoxyCompactList}\small\item\em location of data buffer (TX only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structdata_mode__tag_a4b23db55d46d152a7a06b518faa57a53}\label{structdata_mode__tag_a4b23db55d46d152a7a06b518faa57a53}} 
+bool {\bfseries skip\+Parser}
+\begin{DoxyCompactList}\small\item\em size of TX data or RX request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structdata_mode__tag_acfa432cff90dafe34bf72fb5afd62fa0}\label{structdata_mode__tag_acfa432cff90dafe34bf72fb5afd62fa0}} 
+app\+Rcv\+Proto\+\_\+func {\bfseries appl\+Recv\+Data\+CB}
+\begin{DoxyCompactList}\small\item\em true = no invoke of response parser after successul datamode, error always skips parser \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Control structure for automatic switching to data mode within a command action. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Greg\+Terrell/\+Documents/\+Code\+Dev/\+Arduino/libraries/\+Loo\+UQ-\/\+LTEm\+C/src/\mbox{\hyperlink{ltemc-types_8h}{ltemc-\/types.\+h}}\end{DoxyCompactItemize}

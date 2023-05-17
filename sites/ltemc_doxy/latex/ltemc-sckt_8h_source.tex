@@ -10,93 +10,101 @@
 \DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ltemc-types_8h}{ltemc-\/types.h}}"{}}}
 \DoxyCodeLine{00032\ }
 \DoxyCodeLine{00033\ }
-\DoxyCodeLine{00037\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-sckt_8h_af2d75fc77b41b9ceeca9b685e65b0b15}{sckt\_\_constants}}}
-\DoxyCodeLine{00038\ \{}
-\DoxyCodeLine{00039\ \ \ \ \ sckt\_\_urlHostSz\ =\ 128,}
-\DoxyCodeLine{00040\ \ \ \ \ sckt\_\_resultCode\_alreadyOpen\ =\ 563,}
-\DoxyCodeLine{00041\ \ \ \ \ sckt\_\_defaultOpenTimeoutMS\ =\ 60000,}
-\DoxyCodeLine{00042\ \ \ \ \ sckt\_\_irdRequestMaxSz\ =\ 1500}
-\DoxyCodeLine{00043\ \};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ void\ (*\mbox{\hyperlink{ltemc-sckt_8h_a279f95a02b0ec0771b9561a761acfd86}{scktAppRecv\_func}})(\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{dataCntxt\_t}}\ dataCntxt,\ \textcolor{keywordtype}{char}*\ dataPtr,\ uint16\_t\ dataSz,\ \textcolor{keywordtype}{bool}\ isFinal);}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ scktState\_tag}
-\DoxyCodeLine{00048\ \{}
-\DoxyCodeLine{00049\ \ \ \ \ scktState\_closed\ =\ 0,}
-\DoxyCodeLine{00050\ \ \ \ \ scktState\_flushPending,}
-\DoxyCodeLine{00051\ \ \ \ \ scktState\_open}
-\DoxyCodeLine{00052\ \}\ scktState\_t;}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00058\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_tag}}}
-\DoxyCodeLine{00059\ \{}
-\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{dataCntxt\_t}}\ dataCntxt;}
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{char}\ hostUrl[SET\_PROPLEN(sckt\_\_urlHostSz)];}
-\DoxyCodeLine{00062\ \ \ \ \ uint16\_t\ hostPort;}
-\DoxyCodeLine{00063\ \ \ \ \ uint16\_t\ lclPort;}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ useTls;}
-\DoxyCodeLine{00065\ \ \ \ \ scktState\_t\ state;}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ flushing;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00068\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structsckt_ctrl__tag_af6606ef815155bfcf4247d3d34a4c925}{irdPending}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//uint16\_t\ dataNotified;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ Number\ of\ chars\ signaled\ as\ received\ to\ host\ application\ in\ the\ current\ recv\ flow}}
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//uint16\_t\ hostBffrHint;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ Guestimate\ on\ optimal\ transfer\ size,\ based\ on\ last\ host\ GetRecvData()\ request}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{ltemc-sckt_8h_af2d75fc77b41b9ceeca9b685e65b0b15}{sckt\_\_constants}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ sckt\_\_urlHostSz\ =\ 128,}
+\DoxyCodeLine{00055\ \ \ \ \ sckt\_\_resultCode\_alreadyOpen\ =\ 563,}
+\DoxyCodeLine{00056\ \ \ \ \ sckt\_\_defaultOpenTimeoutMS\ =\ 60000,}
+\DoxyCodeLine{00057\ \ \ \ \ sckt\_\_irdRequestMaxSz\ =\ 1500,}
+\DoxyCodeLine{00058\ \ \ \ \ sckt\_\_irdRequestPageSz\ =\ sckt\_\_irdRequestMaxSz\ /\ 2,}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ sckt\_\_readTrailerSz\ =\ 6,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{ltemc-sckt_8h_af2d75fc77b41b9ceeca9b685e65b0b15a46c01f8486ccae30e6cd8836cc48718f}{sckt\_\_readTimeoutMs}}\ =\ 1000}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ scktState\_tag}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ scktState\_closed\ =\ 0,}
+\DoxyCodeLine{00068\ \ \ \ \ scktState\_flushPending,}
+\DoxyCodeLine{00069\ \ \ \ \ scktState\_open}
+\DoxyCodeLine{00070\ \}\ scktState\_t;}
 \DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//uint32\_t\ doWorkLastTck;\ \ \ \ \ \ \ \ \ \ \ \ REPLACED\ recvEvent\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ last\ check\ for\ URC/dataPending}}
-\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//int16\_t\ irdRemaining;\ \ \ \ \ \ \ \ \ \ \ \ \ CONSOLIDATE\ INTO\ dataPending\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ SIGNED\ number\ of\ outstanding\ IRD\ bytes\ to\ receive,\ -\/1\ is\ unset\ value}}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structsckt_ctrl__tag_a9f56a31404281dea7e25a6161f1ab066}{statsTxCnt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00076\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structsckt_ctrl__tag_a8ff685d58290aec5312e7a46024421e1}{statsRxCnt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00077\ \}\ \mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{scktCtrl\_t}};}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ }
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00087\ \textcolor{keyword}{typedef}\ void\ (*\mbox{\hyperlink{ltemc-sckt_8h_a6e6c535781ec88c573e8157dffa2baf4}{scktRecv\_func}})(\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{dataCntxt\_t}}\ dataCntxt,\ uint16\_t\ dataSz);}
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
-\DoxyCodeLine{00091\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
-\DoxyCodeLine{00092\ \{}
-\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00107\ \textcolor{comment}{//\ void\ sckt\_initControl(scktCtrl\_t\ *scktCtrl,\ uint8\_t\ pdpContextId,\ dataCntxt\_t\ dataCntxt,\ protocol\_t\ protocol,\ uint8\_t\ *recvBuf,\ uint16\_t\ recvBufSz,\ scktRecvFunc\_t\ recvCallback);}}
-\DoxyCodeLine{00108\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_affb2e946e88e8344ad605f417dd16b75}{sckt\_initControl}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{dataCntxt\_t}}\ dataCntxt,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *protocol,\ \mbox{\hyperlink{ltemc-sckt_8h_a6e6c535781ec88c573e8157dffa2baf4}{scktRecv\_func}}\ recvCallback);}
-\DoxyCodeLine{00109\ }
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_a050ba590fad7980708c090f8066a2edb}{sckt\_setConnection}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hostUrl,\ \textcolor{keyword}{const}\ uint16\_t\ hostPort,\ uint16\_t\ lclPort);}
-\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_tag}}}
+\DoxyCodeLine{00077\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{char}\ streamType;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{dataCntxt\_t}}\ \mbox{\hyperlink{structsckt_ctrl__tag_ab8de827cd09af3ed27153c2351b0897f}{dataCntxt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ dataRxHndlr\_func\ \mbox{\hyperlink{structsckt_ctrl__tag_a19f4b8e5885c0404be245cb6b658eb07}{dataRxHndlr}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ urcEvntHndlr\_func\ \mbox{\hyperlink{structsckt_ctrl__tag_aba4b78dd6e2ad95284526c7656a8abe9}{urcEvntHndlr}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{/*\ Above\ section\ of\ <stream>Ctrl\ structure\ is\ the\ same\ for\ all\ LTEmC\ implemented\ streams/protocols\ TCP/HTTP/MQTT\ etc.\ }}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00085\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structsckt_ctrl__tag_a601240ae64b44ef5040fdf2d26895226}{pdpCntxt}};}
+\DoxyCodeLine{00086\ \ \ \ \ appRcvProto\_func\ appRecvDataCB;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structsckt_ctrl__tag_a904ab52dcb6b2bf12267ee6f3374ead0}{hostUrl}}[SET\_PROPLEN(sckt\_\_urlHostSz)];\ }
+\DoxyCodeLine{00088\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structsckt_ctrl__tag_aa0fbdfd4b0b276a823329769749441e7}{hostPort}};}
+\DoxyCodeLine{00089\ \ \ \ \ uint16\_t\ lclPort;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{bool}\ useTls;}
+\DoxyCodeLine{00091\ \ \ \ \ scktState\_t\ state;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ flushing;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structsckt_ctrl__tag_af6606ef815155bfcf4247d3d34a4c925}{irdPending}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structsckt_ctrl__tag_a9f56a31404281dea7e25a6161f1ab066}{statsTxCnt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structsckt_ctrl__tag_a8ff685d58290aec5312e7a46024421e1}{statsRxCnt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00097\ \}\ \mbox{\hyperlink{ltemc-sckt_8h_ac7190408332db4886968d20a407c30f7}{scktCtrl\_t}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00102\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00118\ \textcolor{comment}{//\ void\ sckt\_initControl(scktCtrl\_t\ *scktCtrl,\ uint8\_t\ pdpContextId,\ dataCntxt\_t\ dataCntxt,\ protocol\_t\ protocol,\ uint8\_t\ *recvBuf,\ uint16\_t\ recvBufSz,\ scktRecvFunc\_t\ recvCallback);}}
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_a3cad88bb34aceb492e3eee495c5e1d06}{sckt\_initControl}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ \mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{dataCntxt\_t}}\ dataCntxt,\ \mbox{\hyperlink{ltemc-types_8h_a7a6e369673a63d301becf28b22bdbec7}{streamType\_t}}\ protocol,\ \mbox{\hyperlink{ltemc-sckt_8h_a279f95a02b0ec0771b9561a761acfd86}{scktAppRecv\_func}}\ recvCallback);}
 \DoxyCodeLine{00120\ }
-\DoxyCodeLine{00127\ resultCode\_t\ \mbox{\hyperlink{ltemc-sckt_8h_a33c4cd2fc787822152689ec023e9e629}{sckt\_open}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ \textcolor{keywordtype}{bool}\ cleanSession);}
-\DoxyCodeLine{00128\ }
-\DoxyCodeLine{00129\ }
-\DoxyCodeLine{00134\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_a655595f0eaf4c982760af83e215d1e6b}{sckt\_close}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl);}
-\DoxyCodeLine{00135\ }
-\DoxyCodeLine{00136\ }
-\DoxyCodeLine{00142\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_a9936f1046c83209cf495e7fdbc2ac7a9}{SCKT\_closeCntxt}}(uint8\_t\ cntxtNm);}
-\DoxyCodeLine{00143\ }
-\DoxyCodeLine{00144\ }
-\DoxyCodeLine{00150\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-sckt_8h_a7094cfa29eae6fd7652726e3b12eeec7}{sckt\_flush}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl);}
-\DoxyCodeLine{00151\ }
-\DoxyCodeLine{00152\ }
-\DoxyCodeLine{00153\ }
-\DoxyCodeLine{00160\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-sckt_8h_a6138e5322f98a5e204a75137c971f9e6}{sckt\_getState}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl);}
-\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_afeb46e99309b0f7a0f943171a916d173}{sckt\_setConnection}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ uint8\_t\ pdpCntxt,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hostUrl,\ \textcolor{keyword}{const}\ uint16\_t\ hostPort,\ uint16\_t\ lclPort);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00138\ resultCode\_t\ \mbox{\hyperlink{ltemc-sckt_8h_a33c4cd2fc787822152689ec023e9e629}{sckt\_open}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ \textcolor{keywordtype}{bool}\ cleanSession);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_a655595f0eaf4c982760af83e215d1e6b}{sckt\_close}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_a9936f1046c83209cf495e7fdbc2ac7a9}{SCKT\_closeCntxt}}(uint8\_t\ cntxtNm);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-sckt_8h_a7094cfa29eae6fd7652726e3b12eeec7}{sckt\_flush}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl);}
 \DoxyCodeLine{00162\ }
-\DoxyCodeLine{00170\ resultCode\_t\ \mbox{\hyperlink{ltemc-sckt_8h_a9cdb1f0ba73e0a4b5bbb62b631432f4e}{sckt\_send}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *data,\ uint16\_t\ dataSz);}
-\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00171\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-sckt_8h_a6138e5322f98a5e204a75137c971f9e6}{sckt\_getState}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl);}
 \DoxyCodeLine{00172\ }
-\DoxyCodeLine{00181\ uint16\_t\ \mbox{\hyperlink{ltemc-sckt_8h_a103e984da834ac72ab08bd34d8c8739e}{sckt\_fetchRecv}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ \textcolor{keywordtype}{char}\ *recvBffr,\ uint16\_t\ bffrSz);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00181\ resultCode\_t\ \mbox{\hyperlink{ltemc-sckt_8h_a9cdb1f0ba73e0a4b5bbb62b631432f4e}{sckt\_send}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *data,\ uint16\_t\ dataSz);}
 \DoxyCodeLine{00182\ }
 \DoxyCodeLine{00183\ }
-\DoxyCodeLine{00184\ }
-\DoxyCodeLine{00191\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_a45aa3a378f7051bd476365b322cae200}{sckt\_cancelRecv}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl);}
-\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00192\ uint16\_t\ \mbox{\hyperlink{ltemc-sckt_8h_a103e984da834ac72ab08bd34d8c8739e}{sckt\_fetchRecv}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl,\ \textcolor{keywordtype}{char}\ *recvBffr,\ uint16\_t\ bffrSz);}
 \DoxyCodeLine{00193\ }
-\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
-\DoxyCodeLine{00195\ \}}
-\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_\_cplusplus}}
-\DoxyCodeLine{00197\ }
-\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_LTEMC\_SCKT\_H\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00202\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-sckt_8h_a45aa3a378f7051bd476365b322cae200}{sckt\_cancelRecv}}(\mbox{\hyperlink{structsckt_ctrl__tag}{scktCtrl\_t}}\ *scktCtrl);}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00206\ \}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_\_cplusplus}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_LTEMC\_SCKT\_H\_\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

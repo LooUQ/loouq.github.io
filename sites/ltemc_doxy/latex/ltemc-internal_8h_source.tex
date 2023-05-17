@@ -47,105 +47,115 @@
 \DoxyCodeLine{00074\ \ \ \ \ recvEvent\_timeout}
 \DoxyCodeLine{00075\ \}\ \mbox{\hyperlink{ltemc-internal_8h_ad56d41d2e0b224e7d776de2dc81ee939}{recvEvent\_t}};}
 \DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00083\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structltem_device__tag}{ltemDevice\_tag}}}
-\DoxyCodeLine{00084\ \{}
-\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{structltem_pin_config__tag}{ltemPinConfig\_t}}\ pinConfig;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structltem_device__tag_a770e37c3ac5e43757b7f0256f6108811}{cancellationRequest}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{ltemc-types_8h_aa8cc0cd14abcf26157f9aae9974e9643}{deviceState\_t}}\ \mbox{\hyperlink{structltem_device__tag_af728af3c7e2890dd561f48cdda6bf2a7}{deviceState}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00088\ \ \ \ \ appEvntNotify\_func\ \mbox{\hyperlink{structltem_device__tag_a72baf424a69a2ca8f081d1bdf7ae1010}{appEvntNotifyCB}};\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structltem_device__tag_a0e6642e4555024c3e8c447491777d52d}{moduleType}}[ltem\_\_moduleTypeSz];\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structltem_device__tag_a15871f597217ab79cc8e1790f38359bf}{spi}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{structiop__tag}{iop\_t}}\ *\mbox{\hyperlink{structltem_device__tag_aa6f5d429cb3d4f1fd6ceaa67d9461963}{iop}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{structatcmd__tag}{atcmd\_t}}\ *\mbox{\hyperlink{structltem_device__tag_ad6546644e1d219674d5e26e85a14c09f}{atcmd}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{structmodem_settings__tag}{modemSettings\_t}}\ *\mbox{\hyperlink{structltem_device__tag_a32c3e069ae5b0723420571fac32a0c28}{modemSettings}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{structmodem_info__tag}{modemInfo\_t}}\ *\mbox{\hyperlink{structltem_device__tag_a7abe378c9b5c047f6d5c61104df148bb}{modemInfo}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{structprovider_info__tag}{providerInfo\_t}}\ *\mbox{\hyperlink{structltem_device__tag_a2ea477dd5ab868574cfa8154ff02c8a8}{providerInfo}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{structstream_ctrl__tag}{streamCtrl\_t}}\ \mbox{\hyperlink{structltem_device__tag_ad2a4d90741d5f6ae526ffb88877a528a}{streams}}[ltem\_\_streamCnt];\ \ \ \ \ \ }
-\DoxyCodeLine{00097\ }
-\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//\ char\ urcActive;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ URC\ being\ serviced\ (partially\ complete)}}
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\ urcHandler\_func\ urcHandlers[ltem\_\_urcHandlersCnt];\ \ ///\ array\ of\ URC\ receipt\ handlers\ (parsers)}}
-\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//\ dataCntxt\_t\ recvCntxt;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ Data\ context\ with\ ACTIVE\ data-\/in\ flow\ underway\ (between\ URC\ and\ IRD/SSLRECV\ chars\ retrieved)}}
-\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\ recvEvent\_t\ recvEvent;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ///\ Signal\ from\ ISR\ indicating\ a\ receive\ event\ has\ just\ completed,\ needs\ servicing\ (doWork())}}
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{structltem_metrics__tag}{ltemMetrics\_t}}\ \mbox{\hyperlink{structltem_device__tag_ab2a747f42d2b9295b2ffad50aec7d2c3}{metrics}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00104\ \}\ \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltemDevice\_t}};}
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \textcolor{comment}{/*\ ================================================================================================================================}}
-\DoxyCodeLine{00108\ \textcolor{comment}{\ *\ LTEmC\ Global\ Structure\ */}}
-\DoxyCodeLine{00109\ }
-\DoxyCodeLine{00110\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structltem_device__tag}{ltemDevice\_t}}\ g\_lqLTEM;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ LTEm\ "{}object"{}.}}
-\DoxyCodeLine{00111\ }
-\DoxyCodeLine{00112\ \textcolor{comment}{/*\ LTEmC\ device\ is\ created\ as\ a\ global\ singleton\ variable}}
-\DoxyCodeLine{00113\ \textcolor{comment}{\ *\ ==============================================================================================================================*/}}
-\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfile_ctrl__tag}{fileCtrl\_tag}}}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{char}\ streamType;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ \ *\ NOTE:\ Does\ NOT\ follow\ exact\ struct\ field\ layout\ of\ the\ other\ streams,\ shares\ 1st\ field\ to\ validate\ type\ before\ casting\ }}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00086\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structfile_ctrl__tag_a1699094a55a0394ff884346e034df54c}{handle}};}
+\DoxyCodeLine{00087\ \ \ \ \ dataRxHndlr\_func\ dataRxHndlr;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ appRcvProto\_func\ \mbox{\hyperlink{structfile_ctrl__tag_a8d014aad12b0f88c80c9e3b016f40bf1}{appRecvDataCB}};}
+\DoxyCodeLine{00089\ \}\ \mbox{\hyperlink{ltemc-internal_8h_aa4e6cab8b075e5f6239c4ae92990b78c}{fileCtrl\_t}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structltem_device__tag}{ltemDevice\_tag}}}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{structltem_pin_config__tag}{ltemPinConfig\_t}}\ pinConfig;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structltem_device__tag_a770e37c3ac5e43757b7f0256f6108811}{cancellationRequest}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{ltemc-types_8h_aa8cc0cd14abcf26157f9aae9974e9643}{deviceState\_t}}\ \mbox{\hyperlink{structltem_device__tag_af728af3c7e2890dd561f48cdda6bf2a7}{deviceState}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ appEvntNotify\_func\ \mbox{\hyperlink{structltem_device__tag_a72baf424a69a2ca8f081d1bdf7ae1010}{appEvntNotifyCB}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structltem_device__tag_a0e6642e4555024c3e8c447491777d52d}{moduleType}}[ltem\_\_moduleTypeSz];\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structltem_device__tag_a15871f597217ab79cc8e1790f38359bf}{spi}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{structiop__tag}{iop\_t}}\ *\mbox{\hyperlink{structltem_device__tag_aa6f5d429cb3d4f1fd6ceaa67d9461963}{iop}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{structatcmd__tag}{atcmd\_t}}\ *\mbox{\hyperlink{structltem_device__tag_ad6546644e1d219674d5e26e85a14c09f}{atcmd}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{structmodem_settings__tag}{modemSettings\_t}}\ *\mbox{\hyperlink{structltem_device__tag_a32c3e069ae5b0723420571fac32a0c28}{modemSettings}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{structmodem_info__tag}{modemInfo\_t}}\ *\mbox{\hyperlink{structltem_device__tag_a7abe378c9b5c047f6d5c61104df148bb}{modemInfo}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{structprovider_info__tag}{providerInfo\_t}}\ *\mbox{\hyperlink{structltem_device__tag_a2ea477dd5ab868574cfa8154ff02c8a8}{providerInfo}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{structstream_ctrl__tag}{streamCtrl\_t}}*\ \mbox{\hyperlink{structltem_device__tag_a7a309fed4a30b625c601aedf00cc385f}{streams}}[ltem\_\_streamCnt];\ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{structfile_ctrl__tag}{fileCtrl\_t}}*\ \mbox{\hyperlink{structltem_device__tag_aaa80da670dd725ee791ab2d18b62da25}{fileCtrl}};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{structltem_metrics__tag}{ltemMetrics\_t}}\ metrics;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \}\ \mbox{\hyperlink{ltemc-internal_8h_a5f38bbe75173238b7cfd922a17c69b27}{ltemDevice\_t}};}
 \DoxyCodeLine{00115\ }
 \DoxyCodeLine{00116\ }
-\DoxyCodeLine{00117\ }
-\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
-\DoxyCodeLine{00119\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
-\DoxyCodeLine{00120\ \{}
-\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
-\DoxyCodeLine{00122\ }
-\DoxyCodeLine{00123\ }
-\DoxyCodeLine{00124\ \textcolor{comment}{//\ LTEM\ Internal}}
-\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ LTEM\_initIo();}
-\DoxyCodeLine{00126\ \textcolor{keywordtype}{void}\ LTEM\_registerDoWorker(doWork\_func\ *doWorker);}
-\DoxyCodeLine{00127\ \textcolor{comment}{//\ void\ LTEM\_registerUrcHandler(urcHandler\_func\ *urcHandler);}}
-\DoxyCodeLine{00128\ }
-\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#pragma\ region\ ATCMD\ LTEmC\ Internal\ Functions}}
-\DoxyCodeLine{00130\ \textcolor{comment}{/*\ LTEmC\ internal,\ not\ intended\ for\ user\ application\ consumption.}}
-\DoxyCodeLine{00131\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00117\ \textcolor{comment}{/*\ ================================================================================================================================}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ *\ LTEmC\ Global\ Structure\ */}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structltem_device__tag}{ltemDevice\_t}}\ g\_lqLTEM;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ LTEm\ "{}object"{}.}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{comment}{/*\ LTEmC\ device\ is\ created\ as\ a\ global\ singleton\ variable}}
+\DoxyCodeLine{00123\ \textcolor{comment}{\ *\ ==============================================================================================================================*/}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00129\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00130\ \{}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
 \DoxyCodeLine{00132\ }
-\DoxyCodeLine{00136\ resultCode\_t\ \mbox{\hyperlink{ltemc-internal_8h_ac5cd84c5342fb9cd5ebc175a09cb3229}{ATCMD\_readResult}}();}
-\DoxyCodeLine{00137\ }
-\DoxyCodeLine{00141\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-internal_8h_a8b66aa6a6e85581b0abebbb139a8f546}{ATCMD\_okResponseParser}}();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{comment}{//\ LTEM\ Internal}}
+\DoxyCodeLine{00135\ \textcolor{comment}{//\ void\ LTEM\_initIo();}}
+\DoxyCodeLine{00136\ \textcolor{comment}{//\ void\ LTEM\_registerDoWorker(doWork\_func\ *doWorker);}}
+\DoxyCodeLine{00137\ \textcolor{comment}{//\ void\ LTEM\_registerUrcHandler(urcHandler\_func\ *urcHandler);}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#pragma\ region\ ATCMD\ LTEmC\ Internal\ Functions}}
+\DoxyCodeLine{00140\ \textcolor{comment}{/*\ LTEmC\ internal,\ not\ intended\ for\ user\ application\ consumption.}}
+\DoxyCodeLine{00141\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
 \DoxyCodeLine{00142\ }
-\DoxyCodeLine{00148\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-internal_8h_ab020892ddf7994b54b41d61ff876d551}{ATCMD\_awaitLock}}(uint16\_t\ timeoutMS);}
-\DoxyCodeLine{00149\ }
-\DoxyCodeLine{00154\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-internal_8h_a47d13fcac52d7cd9fabef7ce99de6705}{ATCMD\_isLockActive}}();}
-\DoxyCodeLine{00155\ }
-\DoxyCodeLine{00156\ \textcolor{comment}{/*\ LTEmC\ INTERNAL\ prompt\ parsers\ }}
-\DoxyCodeLine{00157\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
-\DoxyCodeLine{00158\ }
-\DoxyCodeLine{00162\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-internal_8h_a948a107cb71e1b1df505be4d2a7bbbdd}{ATCMD\_readyPromptParser}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rdyPrompt);}
-\DoxyCodeLine{00163\ }
-\DoxyCodeLine{00167\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-internal_8h_a6276c3a16859ccf82f39f00c42fd3b3b}{ATCMD\_txDataPromptParser}}();}
+\DoxyCodeLine{00143\ \textcolor{comment}{//\ /**}}
+\DoxyCodeLine{00144\ \textcolor{comment}{//\ \ *\ \ \ \(\backslash\)brief\ Checks\ recv\ buffer\ for\ command\ response\ and\ sets\ atcmd\ structure\ data\ with\ result.}}
+\DoxyCodeLine{00145\ \textcolor{comment}{//\ \ */}}
+\DoxyCodeLine{00146\ \textcolor{comment}{//\ resultCode\_t\ ATCMD\_readResult();}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00151\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-internal_8h_a8b66aa6a6e85581b0abebbb139a8f546}{ATCMD\_okResponseParser}}();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00158\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-internal_8h_ab020892ddf7994b54b41d61ff876d551}{ATCMD\_awaitLock}}(uint16\_t\ timeoutMS);}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{ltemc-internal_8h_a47d13fcac52d7cd9fabef7ce99de6705}{ATCMD\_isLockActive}}();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{comment}{/*\ LTEmC\ INTERNAL\ prompt\ parsers\ }}
+\DoxyCodeLine{00167\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
 \DoxyCodeLine{00168\ }
-\DoxyCodeLine{00172\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-internal_8h_a83358a615495d2c3a1f2901756869200}{ATCMD\_connectPromptParser}}();}
+\DoxyCodeLine{00172\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-internal_8h_a948a107cb71e1b1df505be4d2a7bbbdd}{ATCMD\_readyPromptParser}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rdyPrompt);}
 \DoxyCodeLine{00173\ }
-\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#pragma\ endregion}}
-\DoxyCodeLine{00175\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00176\ \textcolor{comment}{\ *\ End\ ATCMD\ LTEmC\ Internal\ Functions\ */}}
-\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00177\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-internal_8h_a6276c3a16859ccf82f39f00c42fd3b3b}{ATCMD\_txDataPromptParser}}();}
 \DoxyCodeLine{00178\ }
-\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#pragma\ region\ NTWK\ LTEmC\ Internal\ Functions}}
-\DoxyCodeLine{00180\ \textcolor{comment}{/*\ LTEmC\ internal,\ not\ intended\ for\ user\ application\ consumption.}}
-\DoxyCodeLine{00181\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
-\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00182\ \mbox{\hyperlink{ltemc-types_8h_a66c4c183f8908a0fe0928ef236dbccce}{cmdParseRslt\_t}}\ \mbox{\hyperlink{ltemc-internal_8h_a83358a615495d2c3a1f2901756869200}{ATCMD\_connectPromptParser}}();}
 \DoxyCodeLine{00183\ }
-\DoxyCodeLine{00187\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-internal_8h_a6638afce89c033ad0af3d0a66ca7e4a6}{NTWK\_initRatOptions}}();}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00185\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00186\ \textcolor{comment}{\ *\ End\ ATCMD\ LTEmC\ Internal\ Functions\ */}}
+\DoxyCodeLine{00187\ }
 \DoxyCodeLine{00188\ }
-\DoxyCodeLine{00189\ }
-\DoxyCodeLine{00193\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-internal_8h_af319aa9cb0ba6997fa543f4350a46e9c}{NTWK\_applyDefaulNetwork}}();}
-\DoxyCodeLine{00194\ }
-\DoxyCodeLine{00195\ }
-\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#pragma\ endregion}}
-\DoxyCodeLine{00197\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00198\ \textcolor{comment}{\ *\ End\ NTWK\ LTEmC\ Internal\ Functions\ */}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#pragma\ region\ NTWK\ LTEmC\ Internal\ Functions}}
+\DoxyCodeLine{00190\ \textcolor{comment}{/*\ LTEmC\ internal,\ not\ intended\ for\ user\ application\ consumption.}}
+\DoxyCodeLine{00191\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00197\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-internal_8h_a6638afce89c033ad0af3d0a66ca7e4a6}{NTWK\_initRatOptions}}();}
+\DoxyCodeLine{00198\ }
 \DoxyCodeLine{00199\ }
-\DoxyCodeLine{00200\ }
-\DoxyCodeLine{00201\ }
-\DoxyCodeLine{00202\ }
-\DoxyCodeLine{00203\ \textcolor{comment}{/*}}
-\DoxyCodeLine{00204\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00205\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00206\ }
-\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
-\DoxyCodeLine{00208\ \}}
-\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_\_cplusplus}}
+\DoxyCodeLine{00203\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ltemc-internal_8h_af319aa9cb0ba6997fa543f4350a46e9c}{NTWK\_applyDefaulNetwork}}();}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00207\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00208\ \textcolor{comment}{\ *\ End\ NTWK\ LTEmC\ Internal\ Functions\ */}}
+\DoxyCodeLine{00209\ }
 \DoxyCodeLine{00210\ }
-\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_LTEMC\_INTERNAL\_H\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00214\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00215\ \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00218\ \}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_\_cplusplus}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ !\_\_LTEMC\_INTERNAL\_H\_\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

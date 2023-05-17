@@ -21,5 +21,6 @@ var searchData=
   ['sc16is7xx_5fxoff1_5fregaddr_18',['SC16IS7xx_XOFF1_regAddr',['../ltemc-nxp-sc16is_8h.html#af8db8bc181d7125d84d6682759a1faa6a25cd55245ddce6d741f1487dbdd7e300',1,'ltemc-nxp-sc16is.h']]],
   ['sc16is7xx_5fxoff2_5fregaddr_19',['SC16IS7xx_XOFF2_regAddr',['../ltemc-nxp-sc16is_8h.html#af8db8bc181d7125d84d6682759a1faa6a445f911ab5350b7fdd4a5f1df33eafe8',1,'ltemc-nxp-sc16is.h']]],
   ['sc16is7xx_5fxon1_5fregaddr_20',['SC16IS7xx_XON1_regAddr',['../ltemc-nxp-sc16is_8h.html#af8db8bc181d7125d84d6682759a1faa6a06555da463c49b0e2c93934d79f25064',1,'ltemc-nxp-sc16is.h']]],
-  ['sc16is7xx_5fxon2_5fregaddr_21',['SC16IS7xx_XON2_regAddr',['../ltemc-nxp-sc16is_8h.html#af8db8bc181d7125d84d6682759a1faa6a197d047f895f2760d51cd2411fae06b4',1,'ltemc-nxp-sc16is.h']]]
+  ['sc16is7xx_5fxon2_5fregaddr_21',['SC16IS7xx_XON2_regAddr',['../ltemc-nxp-sc16is_8h.html#af8db8bc181d7125d84d6682759a1faa6a197d047f895f2760d51cd2411fae06b4',1,'ltemc-nxp-sc16is.h']]],
+  ['sckt_5f_5freadtimeoutms_22',['sckt__readTimeoutMs',['../ltemc-sckt_8h.html#af2d75fc77b41b9ceeca9b685e65b0b15a46c01f8486ccae30e6cd8836cc48718f',1,'ltemc-sckt.h']]]
 ];

@@ -21,9 +21,12 @@ volatile uint16\+\_\+t {\bfseries tx\+Pending}
 \mbox{\Hypertarget{structiop__tag_afaccd640f5246456c675e040edc25255}\label{structiop__tag_afaccd640f5246456c675e040edc25255}} 
 c\+Buffer\+\_\+t $\ast$ {\bfseries rx\+Bffr}
 \item 
+\mbox{\Hypertarget{structiop__tag_a7c5f17bb6dff6d5b37241a3f645be5cc}\label{structiop__tag_a7c5f17bb6dff6d5b37241a3f645be5cc}} 
+char {\bfseries tx\+Eot}
+\begin{DoxyCompactList}\small\item\em receive buffer \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structiop__tag_a40b4266510cfa19af89a89e65d15730e}\label{structiop__tag_a40b4266510cfa19af89a89e65d15730e}} 
 volatile uint32\+\_\+t {\bfseries last\+Tx\+At}
-\begin{DoxyCompactList}\small\item\em receive buffer \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em if not NULL, char to output on empty TX FIFO; clears automatically on use. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{structiop__tag_a2466a32e313798c22c17b4b4aae11320}\label{structiop__tag_a2466a32e313798c22c17b4b4aae11320}} 
 volatile uint32\+\_\+t {\bfseries last\+Rx\+At}
 \begin{DoxyCompactList}\small\item\em tick count when TX send started, used for response timeout detection \end{DoxyCompactList}\end{DoxyCompactItemize}

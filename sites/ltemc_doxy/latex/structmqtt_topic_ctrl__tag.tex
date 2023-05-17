@@ -1,0 +1,34 @@
+\hypertarget{structmqtt_topic_ctrl__tag}{}\doxysection{mqtt\+Topic\+Ctrl\+\_\+tag Struct Reference}
+\label{structmqtt_topic_ctrl__tag}\index{mqttTopicCtrl\_tag@{mqttTopicCtrl\_tag}}
+
+
+Struct describing a MQTT topic subscription.  
+
+
+
+
+{\ttfamily \#include $<$ltemc-\/mqtt.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmqtt_topic_ctrl__tag_a6a436800d0cc0e3f015b43278a3ba75c}\label{structmqtt_topic_ctrl__tag_a6a436800d0cc0e3f015b43278a3ba75c}} 
+char {\bfseries topic\+Name} \mbox{[}PROPLEN(mqtt\+\_\+\+\_\+topic\+\_\+name\+Sz)\mbox{]}
+\item 
+\mbox{\Hypertarget{structmqtt_topic_ctrl__tag_accdd598bfafa3ab3fd21b695a60fd900}\label{structmqtt_topic_ctrl__tag_accdd598bfafa3ab3fd21b695a60fd900}} 
+char {\bfseries wildcard}
+\begin{DoxyCompactList}\small\item\em Topic name. Note if the topic registered with \textquotesingle{}\#\textquotesingle{} wildcard, this is removed from the topic name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmqtt_topic_ctrl__tag_a84eac7c6e4af2d4178c88f9ab9cd1704}\label{structmqtt_topic_ctrl__tag_a84eac7c6e4af2d4178c88f9ab9cd1704}} 
+uint8\+\_\+t {\bfseries Qos}
+\begin{DoxyCompactList}\small\item\em Set to \textquotesingle{}\#\textquotesingle{} if multilevel wildcard specified when subscribing to topic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmqtt_topic_ctrl__tag_a8d014aad12b0f88c80c9e3b016f40bf1}\label{structmqtt_topic_ctrl__tag_a8d014aad12b0f88c80c9e3b016f40bf1}} 
+app\+Rcv\+Proto\+\_\+func {\bfseries app\+Recv\+Data\+CB}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct describing a MQTT topic subscription. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Greg\+Terrell/\+Documents/\+Code\+Dev/\+Arduino/libraries/\+Loo\+UQ-\/\+LTEm\+C/src/\mbox{\hyperlink{ltemc-mqtt_8h}{ltemc-\/mqtt.\+h}}\end{DoxyCompactItemize}

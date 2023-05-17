@@ -77,39 +77,32 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Base struct containing common properties required of a stream control.  
+<p>Abstract structure describing a data stream (protocol or filesystem).  
  <a href="structstream_ctrl__tag.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ltemc-types_8h_source.html">ltemc-types.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a037490dfe8c157fad0ba6d2b1b0a27fa"><td class="memItemLeft" align="right" valign="top"><a id="a037490dfe8c157fad0ba6d2b1b0a27fa" name="a037490dfe8c157fad0ba6d2b1b0a27fa"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>streamType</b> [streams__typeCodeSz]</td></tr>
-<tr class="separator:a037490dfe8c157fad0ba6d2b1b0a27fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addb9297d816b26c680888115de8c9538"><td class="memItemLeft" align="right" valign="top"><a id="addb9297d816b26c680888115de8c9538" name="addb9297d816b26c680888115de8c9538"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>pCtrl</b></td></tr>
-<tr class="memdesc:addb9297d816b26c680888115de8c9538"><td class="mdescLeft">&#160;</td><td class="mdescRight">stream type <br /></td></tr>
-<tr class="separator:addb9297d816b26c680888115de8c9538"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbb0c8c5758b0cda0254a81fac1c0e7d"><td class="memItemLeft" align="right" valign="top"><a id="adbb0c8c5758b0cda0254a81fac1c0e7d" name="adbb0c8c5758b0cda0254a81fac1c0e7d"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>contextHandle</b></td></tr>
-<tr class="memdesc:adbb0c8c5758b0cda0254a81fac1c0e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">protocol specific control variables (cast to a protocol specific struct) <br /></td></tr>
-<tr class="separator:adbb0c8c5758b0cda0254a81fac1c0e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51a7bfa65bf4993b41e81c1024194fb1"><td class="memItemLeft" align="right" valign="top"><a id="a51a7bfa65bf4993b41e81c1024194fb1" name="a51a7bfa65bf4993b41e81c1024194fb1"></a>
-streamDataRcvr_func&#160;</td><td class="memItemRight" valign="bottom"><b>streamUrcHndlr</b></td></tr>
-<tr class="memdesc:a51a7bfa65bf4993b41e81c1024194fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer representing the source of the stream; fixed for protocols, file handle for FS <br /></td></tr>
-<tr class="separator:a51a7bfa65bf4993b41e81c1024194fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7ea53a6f91261087a8a238919bfab83"><td class="memItemLeft" align="right" valign="top"><a id="ab7ea53a6f91261087a8a238919bfab83" name="ab7ea53a6f91261087a8a238919bfab83"></a>
-streamClose_func&#160;</td><td class="memItemRight" valign="bottom"><b>streamClose</b></td></tr>
-<tr class="memdesc:ab7ea53a6f91261087a8a238919bfab83"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to handle data streaming, initiated by eventMgr() or atcmd module <br /></td></tr>
-<tr class="separator:ab7ea53a6f91261087a8a238919bfab83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e5e049d7c8301ec773cc79012a614d1"><td class="memItemLeft" align="right" valign="top"><a id="a6e5e049d7c8301ec773cc79012a614d1" name="a6e5e049d7c8301ec773cc79012a614d1"></a>
-cbProto_func&#160;</td><td class="memItemRight" valign="bottom"><b>recvDataCB</b></td></tr>
-<tr class="memdesc:a6e5e049d7c8301ec773cc79012a614d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">handler to perform orderly shutdown of data service <br /></td></tr>
-<tr class="separator:a6e5e049d7c8301ec773cc79012a614d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f4193fd11344e0945f6d2fb4d41a0a"><td class="memItemLeft" align="right" valign="top"><a id="ac3f4193fd11344e0945f6d2fb4d41a0a" name="ac3f4193fd11344e0945f6d2fb4d41a0a"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>streamType</b></td></tr>
+<tr class="separator:ac3f4193fd11344e0945f6d2fb4d41a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8de827cd09af3ed27153c2351b0897f"><td class="memItemLeft" align="right" valign="top"><a id="ab8de827cd09af3ed27153c2351b0897f" name="ab8de827cd09af3ed27153c2351b0897f"></a>
+<a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dataCntxt</b></td></tr>
+<tr class="memdesc:ab8de827cd09af3ed27153c2351b0897f"><td class="mdescLeft">&#160;</td><td class="mdescRight">stream type <br /></td></tr>
+<tr class="separator:ab8de827cd09af3ed27153c2351b0897f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f4b8e5885c0404be245cb6b658eb07"><td class="memItemLeft" align="right" valign="top"><a id="a19f4b8e5885c0404be245cb6b658eb07" name="a19f4b8e5885c0404be245cb6b658eb07"></a>
+dataRxHndlr_func&#160;</td><td class="memItemRight" valign="bottom"><b>dataRxHndlr</b></td></tr>
+<tr class="memdesc:a19f4b8e5885c0404be245cb6b658eb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer representing the source of the stream; fixed for protocols, file handle for FS <br /></td></tr>
+<tr class="separator:a19f4b8e5885c0404be245cb6b658eb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a344d18c298e20949312d16917ac23e9a"><td class="memItemLeft" align="right" valign="top"><a id="a344d18c298e20949312d16917ac23e9a" name="a344d18c298e20949312d16917ac23e9a"></a>
+urcEvntHndlr_func&#160;</td><td class="memItemRight" valign="bottom"><b>urcHndlr</b></td></tr>
+<tr class="memdesc:a344d18c298e20949312d16917ac23e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to handle data streaming, initiated by eventMgr() or atcmd module <br /></td></tr>
+<tr class="separator:a344d18c298e20949312d16917ac23e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base struct containing common properties required of a stream control. </p>
+<div class="textblock"><p>Abstract structure describing a data stream (protocol or filesystem). </p>
+<p>The streamCtrl_t is used as an abstraction which is cast to a specific stream type EX: mqttCtrl_t* mqttCtrl = (mqttCtrl_t*)streamCtrl </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-LTEmC/src/<a class="el" href="ltemc-types_8h_source.html">ltemc-types.h</a></li>
 </ul>

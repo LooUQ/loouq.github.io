@@ -19,7 +19,11 @@ uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8h_a5befd48d490f92aaa00cff6f7be6e770
 \begin{DoxyCompactList}\small\item\em Get count of APN active data contexts from BGx. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{ltemc-types_8h_ae26f0ad19cc23e69b5636940bc7067d6}{network\+Info\+\_\+t}} $\ast$ \mbox{\hyperlink{ltemc-network_8h_a1f854d99e15dcc60de5f65936aaca032}{ntwk\+\_\+get\+Network\+Info}} (uint8\+\_\+t contxt\+Id)
 \begin{DoxyCompactList}\small\item\em Get PDP network information. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ltemc-network_8h_a38690f183a068a58aea06e40f8c65e46}{ntwk\+\_\+get\+Providers}} (char $\ast$operator\+List, uint16\+\_\+t list\+Sz)
+uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8h_a744be5ac5f17e475843e3729d38a33b0}{ntwk\+\_\+get\+Registration\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Get current network registration status. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{ltemc-network_8h_afaff38a985397be3494f58c99fe09534}{ntwk\+\_\+set\+Operator}} (uint8\+\_\+t mode, uint8\+\_\+t format, const char $\ast$ntwk\+Operator)
+\begin{DoxyCompactList}\small\item\em Set network operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ltemc-network_8h_a31d0822b9d9c4229f921806b8016b461}{ntwk\+DIAG\+\_\+get\+Providers}} (char $\ast$operator\+List, uint16\+\_\+t list\+Sz)
 \begin{DoxyCompactList}\small\item\em Development/diagnostic function to retrieve visible providers from radio. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -150,23 +154,65 @@ Get PDP network information. \mbox{\Hypertarget{ltemc-network_8h_a740864a6bdbdf1
 Get current provider information. If not connected to a provider will be an empty provider\+Info struct. 
 
 \begin{DoxyReturn}{Returns}
+Struct containing the network operator name (oper\+Name) and network mode (ntwk\+Mode).
+
 Struct containing the network operator name (oper\+Name) and network mode (ntwk\+Mode). 
 \end{DoxyReturn}
-\mbox{\Hypertarget{ltemc-network_8h_a38690f183a068a58aea06e40f8c65e46}\label{ltemc-network_8h_a38690f183a068a58aea06e40f8c65e46}} 
-\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_getProviders@{ntwk\_getProviders}}
-\index{ntwk\_getProviders@{ntwk\_getProviders}!ltemc-\/network.h@{ltemc-\/network.h}}
-\doxysubsubsection{\texorpdfstring{ntwk\_getProviders()}{ntwk\_getProviders()}}
-{\footnotesize\ttfamily void ntwk\+\_\+get\+Providers (\begin{DoxyParamCaption}\item[{char $\ast$}]{providers\+List,  }\item[{uint16\+\_\+t}]{list\+Sz }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{ltemc-network_8h_a744be5ac5f17e475843e3729d38a33b0}\label{ltemc-network_8h_a744be5ac5f17e475843e3729d38a33b0}} 
+\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_getRegistrationStatus@{ntwk\_getRegistrationStatus}}
+\index{ntwk\_getRegistrationStatus@{ntwk\_getRegistrationStatus}!ltemc-\/network.h@{ltemc-\/network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_getRegistrationStatus()}{ntwk\_getRegistrationStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t ntwk\+\_\+get\+Registration\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get current network registration status. 
+
+\begin{DoxyReturn}{Returns}
+The current network operator registration status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-network_8h_afaff38a985397be3494f58c99fe09534}\label{ltemc-network_8h_afaff38a985397be3494f58c99fe09534}} 
+\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwk\_setOperator@{ntwk\_setOperator}}
+\index{ntwk\_setOperator@{ntwk\_setOperator}!ltemc-\/network.h@{ltemc-\/network.h}}
+\doxysubsubsection{\texorpdfstring{ntwk\_setOperator()}{ntwk\_setOperator()}}
+{\footnotesize\ttfamily uint8\+\_\+t ntwk\+\_\+set\+Operator (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode,  }\item[{uint8\+\_\+t}]{format,  }\item[{const char $\ast$}]{ntwk\+Operator }\end{DoxyParamCaption})}
+
+
+
+Set network operator. 
+
+The characteristics of the selected operator are accessible using the \mbox{\hyperlink{ltemc-atcmd_8c_a29da0e81404893c31c9d4e4e3a5d6067}{atcmd\+\_\+get\+Response()}} function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mode} & Action to be performed, set/clear/set default. \\
+\hline
+\mbox{\texttt{ in}}  & {\em format} & The form for the ntwk\+Operator parameter value\+: long, short, numeric. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ntwk\+Operator} & Operator to select, presented in the \char`\"{}format\char`\"{}. Not all modes require/act on this parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current operator selection mode. Note\+: 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ltemc-network_8h_a31d0822b9d9c4229f921806b8016b461}\label{ltemc-network_8h_a31d0822b9d9c4229f921806b8016b461}} 
+\index{ltemc-\/network.h@{ltemc-\/network.h}!ntwkDIAG\_getProviders@{ntwkDIAG\_getProviders}}
+\index{ntwkDIAG\_getProviders@{ntwkDIAG\_getProviders}!ltemc-\/network.h@{ltemc-\/network.h}}
+\doxysubsubsection{\texorpdfstring{ntwkDIAG\_getProviders()}{ntwkDIAG\_getProviders()}}
+{\footnotesize\ttfamily void ntwk\+DIAG\+\_\+get\+Providers (\begin{DoxyParamCaption}\item[{char $\ast$}]{providers\+List,  }\item[{uint16\+\_\+t}]{list\+Sz }\end{DoxyParamCaption})}
 
 
 
 Development/diagnostic function to retrieve visible providers from radio. 
 
-This command can take MINUTES to respond! It is generally considered a command used solely for diagnostics. 
+\begin{DoxyWarning}{Warning}
+This command can take MINUTES to respond! It is generally considered a command used solely for diagnostics.
+\end{DoxyWarning}
+
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in,out}}  & {\em operator\+List} & -\/ Pointer to char buffer to return operator list information retrieved from BGx. \\
+\mbox{\texttt{ out}}  & {\em operator\+List} & Pointer to char buffer to return operator list information retrieved from BGx. \\
 \hline
-\mbox{\texttt{ in}}  & {\em list\+Sz} & -\/ Length of provided buffer.\\
+\mbox{\texttt{ in}}  & {\em list\+Sz} & Length of provided buffer.\\
 \hline
 \end{DoxyParams}
 Development/diagnostic function to retrieve visible providers from radio. 

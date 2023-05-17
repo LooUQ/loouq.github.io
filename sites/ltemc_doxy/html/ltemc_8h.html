@@ -76,6 +76,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ltemc.h File Reference</div></div>
 </div><!--header-->
@@ -90,9 +91,15 @@ $(function() {
 </div>
 <p><a href="ltemc_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a90780fe978d9a762673daa6f01e31f98"><td class="memItemLeft" align="right" valign="top"><a id="a90780fe978d9a762673daa6f01e31f98" name="a90780fe978d9a762673daa6f01e31f98"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LTEmC_VERSION</b>&#160;&#160;&#160;&quot;3.0.1&quot;</td></tr>
+<tr class="separator:a90780fe978d9a762673daa6f01e31f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a35606fbdda9e7b1a8c29e14cf554f4e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8h.html#a35606fbdda9e7b1a8c29e14cf554f4e9">ltem_create</a> (const <a class="el" href="structltem_pin_config__tag.html">ltemPinConfig_t</a> ltem_config, yield_func yieldCB, appEvntNotify_func eventNotifyCB)</td></tr>
+<tr class="memitem:a35606fbdda9e7b1a8c29e14cf554f4e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8h.html#a35606fbdda9e7b1a8c29e14cf554f4e9">ltem_create</a> (const <a class="el" href="ltemc-types_8h.html#a179aa93a99cd81e3a0f037bd9f07d70e">ltemPinConfig_t</a> ltem_config, yield_func yieldCB, appEvntNotify_func eventNotifyCB)</td></tr>
 <tr class="memdesc:a35606fbdda9e7b1a8c29e14cf554f4e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASSERT and diagnostic data collection.  <br /></td></tr>
 <tr class="separator:a35606fbdda9e7b1a8c29e14cf554f4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc4fe577a31799623ad85245e64dfea5"><td class="memItemLeft" align="right" valign="top"><a id="adc4fe577a31799623ad85245e64dfea5" name="adc4fe577a31799623ad85245e64dfea5"></a>
@@ -131,6 +138,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ltem_reset</b> (bool 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ltem_eventMgr</b> ()</td></tr>
 <tr class="memdesc:a68e6ef9250a50c92aaa8297db3a5085f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background work task runner. To be called in application Loop() periodically. <br /></td></tr>
 <tr class="separator:a68e6ef9250a50c92aaa8297db3a5085f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add961efedf1c0d2d73ed83705bdbf29f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8h.html#add961efedf1c0d2d73ed83705bdbf29f">ltem_addStream</a> (<a class="el" href="ltemc-types_8h.html#a59d50b328873ce5798b52fac8d0886a4">streamCtrl_t</a> *streamCtrl)</td></tr>
+<tr class="memdesc:add961efedf1c0d2d73ed83705bdbf29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a protocol stream to the LTEm streams table.  <br /></td></tr>
+<tr class="separator:add961efedf1c0d2d73ed83705bdbf29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade826bde748a183bd75534922c1af152"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8h.html#ade826bde748a183bd75534922c1af152">ltem_deleteStream</a> (<a class="el" href="ltemc-types_8h.html#a59d50b328873ce5798b52fac8d0886a4">streamCtrl_t</a> *streamCtrl)</td></tr>
+<tr class="memdesc:ade826bde748a183bd75534922c1af152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a stream from the LTEm streams table, excludes it from further processing.  <br /></td></tr>
+<tr class="separator:ade826bde748a183bd75534922c1af152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca749293a23201d7867b08e933bc8ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-types_8h.html#a59d50b328873ce5798b52fac8d0886a4">streamCtrl_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8h.html#a2ca749293a23201d7867b08e933bc8ab">ltem_getStreamFromCntxt</a> (uint8_t context, <a class="el" href="ltemc-types_8h.html#a7a6e369673a63d301becf28b22bdbec7">streamType_t</a> streamType)</td></tr>
+<tr class="memdesc:a2ca749293a23201d7867b08e933bc8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a stream control from data context, optionally filtering on stream type.  <br /></td></tr>
+<tr class="separator:a2ca749293a23201d7867b08e933bc8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedccf53a5146b52d7a2a6d77be935ef5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc_8h.html#aedccf53a5146b52d7a2a6d77be935ef5">ltem_setYieldCallback</a> (yield_func yieldCB)</td></tr>
 <tr class="memdesc:aedccf53a5146b52d7a2a6d77be935ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the address (void*) of your application yield callback handler.  <br /></td></tr>
 <tr class="separator:aedccf53a5146b52d7a2a6d77be935ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +182,33 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="add961efedf1c0d2d73ed83705bdbf29f" name="add961efedf1c0d2d73ed83705bdbf29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add961efedf1c0d2d73ed83705bdbf29f">&#9670;&#160;</a></span>ltem_addStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ltem_addStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-types_8h.html#a59d50b328873ce5798b52fac8d0886a4">streamCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>streamCtrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a protocol stream to the LTEm streams table. </p>
+<p>ASSERTS that no stream is occupying the stream control's data context</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">streamCtrl</td><td>The stream to add to the LTEm stream table </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a35606fbdda9e7b1a8c29e14cf554f4e9" name="a35606fbdda9e7b1a8c29e14cf554f4e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35606fbdda9e7b1a8c29e14cf554f4e9">&#9670;&#160;</a></span>ltem_create()</h2>
 
@@ -175,7 +218,7 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
         <tr>
           <td class="memname">void ltem_create </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structltem_pin_config__tag.html">ltemPinConfig_t</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="ltemc-types_8h.html#a179aa93a99cd81e3a0f037bd9f07d70e">ltemPinConfig_t</a>&#160;</td>
           <td class="paramname"><em>ltem_config</em>, </td>
         </tr>
         <tr>
@@ -212,6 +255,33 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
+<a id="ade826bde748a183bd75534922c1af152" name="ade826bde748a183bd75534922c1af152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade826bde748a183bd75534922c1af152">&#9670;&#160;</a></span>ltem_deleteStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ltem_deleteStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ltemc-types_8h.html#a59d50b328873ce5798b52fac8d0886a4">streamCtrl_t</a> *&#160;</td>
+          <td class="paramname"><em>streamCtrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a stream from the LTEm streams table, excludes it from further processing. </p>
+<p>ASSERTS that the stream parameter matches the stream in the LTEm table</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">streamCtrl</td><td>The stream to remove from the LTEm stream table </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8d7012de7962fc1187bfd0a5b3f8913e" name="a8d7012de7962fc1187bfd0a5b3f8913e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d7012de7962fc1187bfd0a5b3f8913e">&#9670;&#160;</a></span>ltem_getDeviceState()</h2>
 
@@ -230,6 +300,44 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 <p>Reads the hardware status and internal application ready field to return device ready state. </p>
 <dl class="section return"><dt>Returns</dt><dd>DeviceState: 0=power off, 1=power on, 2=appl ready</dd></dl>
 <p>Reads the hardware status and internal application ready field to return device ready state. </p>
+
+</div>
+</div>
+<a id="a2ca749293a23201d7867b08e933bc8ab" name="a2ca749293a23201d7867b08e933bc8ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca749293a23201d7867b08e933bc8ab">&#9670;&#160;</a></span>ltem_getStreamFromCntxt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ltemc-types_8h.html#a59d50b328873ce5798b52fac8d0886a4">streamCtrl_t</a> * ltem_getStreamFromCntxt </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ltemc-types_8h.html#a7a6e369673a63d301becf28b22bdbec7">streamType_t</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a stream control from data context, optionally filtering on stream type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>The data context for the stream </td></tr>
+    <tr><td class="paramname">streamType</td><td>Protocol of the stream </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>streamCtrl_t* Pointer of a generic stream, can be cast (after type validation) to a specific protocol control </dd></dl>
 
 </div>
 </div>

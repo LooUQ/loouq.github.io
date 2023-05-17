@@ -2,7 +2,7 @@
 \label{structstream_ctrl__tag}\index{streamCtrl\_tag@{streamCtrl\_tag}}
 
 
-Base struct containing common properties required of a stream control.  
+Abstract structure describing a data stream (protocol or filesystem).  
 
 
 
@@ -12,28 +12,24 @@ Base struct containing common properties required of a stream control.
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structstream_ctrl__tag_a037490dfe8c157fad0ba6d2b1b0a27fa}\label{structstream_ctrl__tag_a037490dfe8c157fad0ba6d2b1b0a27fa}} 
-char {\bfseries stream\+Type} \mbox{[}streams\+\_\+\+\_\+type\+Code\+Sz\mbox{]}
+\mbox{\Hypertarget{structstream_ctrl__tag_ac3f4193fd11344e0945f6d2fb4d41a0a}\label{structstream_ctrl__tag_ac3f4193fd11344e0945f6d2fb4d41a0a}} 
+char {\bfseries stream\+Type}
 \item 
-\mbox{\Hypertarget{structstream_ctrl__tag_addb9297d816b26c680888115de8c9538}\label{structstream_ctrl__tag_addb9297d816b26c680888115de8c9538}} 
-void $\ast$ {\bfseries p\+Ctrl}
+\mbox{\Hypertarget{structstream_ctrl__tag_ab8de827cd09af3ed27153c2351b0897f}\label{structstream_ctrl__tag_ab8de827cd09af3ed27153c2351b0897f}} 
+\mbox{\hyperlink{ltemc-types_8h_a8f196c92332451166a912a2d0220d8c9}{data\+Cntxt\+\_\+t}} {\bfseries data\+Cntxt}
 \begin{DoxyCompactList}\small\item\em stream type \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structstream_ctrl__tag_adbb0c8c5758b0cda0254a81fac1c0e7d}\label{structstream_ctrl__tag_adbb0c8c5758b0cda0254a81fac1c0e7d}} 
-uint8\+\_\+t {\bfseries context\+Handle}
-\begin{DoxyCompactList}\small\item\em protocol specific control variables (cast to a protocol specific struct) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structstream_ctrl__tag_a51a7bfa65bf4993b41e81c1024194fb1}\label{structstream_ctrl__tag_a51a7bfa65bf4993b41e81c1024194fb1}} 
-stream\+Data\+Rcvr\+\_\+func {\bfseries stream\+Urc\+Hndlr}
+\mbox{\Hypertarget{structstream_ctrl__tag_a19f4b8e5885c0404be245cb6b658eb07}\label{structstream_ctrl__tag_a19f4b8e5885c0404be245cb6b658eb07}} 
+data\+Rx\+Hndlr\+\_\+func {\bfseries data\+Rx\+Hndlr}
 \begin{DoxyCompactList}\small\item\em integer representing the source of the stream; fixed for protocols, file handle for FS \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structstream_ctrl__tag_ab7ea53a6f91261087a8a238919bfab83}\label{structstream_ctrl__tag_ab7ea53a6f91261087a8a238919bfab83}} 
-stream\+Close\+\_\+func {\bfseries stream\+Close}
-\begin{DoxyCompactList}\small\item\em function to handle data streaming, initiated by event\+Mgr() or atcmd module \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structstream_ctrl__tag_a6e5e049d7c8301ec773cc79012a614d1}\label{structstream_ctrl__tag_a6e5e049d7c8301ec773cc79012a614d1}} 
-cb\+Proto\+\_\+func {\bfseries recv\+Data\+CB}
-\begin{DoxyCompactList}\small\item\em handler to perform orderly shutdown of data service \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{structstream_ctrl__tag_a344d18c298e20949312d16917ac23e9a}\label{structstream_ctrl__tag_a344d18c298e20949312d16917ac23e9a}} 
+urc\+Evnt\+Hndlr\+\_\+func {\bfseries urc\+Hndlr}
+\begin{DoxyCompactList}\small\item\em function to handle data streaming, initiated by event\+Mgr() or atcmd module \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Base struct containing common properties required of a stream control. 
+Abstract structure describing a data stream (protocol or filesystem). 
+
+The stream\+Ctrl\+\_\+t is used as an abstraction which is cast to a specific stream type EX\+: mqtt\+Ctrl\+\_\+t$\ast$ mqtt\+Ctrl = (mqtt\+Ctrl\+\_\+t$\ast$)stream\+Ctrl 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

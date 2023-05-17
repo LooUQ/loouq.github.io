@@ -153,9 +153,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ntwk_activateNetwork<
 <tr class="memitem:af5f610f4cdea52a12ed6d00d44d61c9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ltemc-types_8h.html#ae26f0ad19cc23e69b5636940bc7067d6">networkInfo_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#af5f610f4cdea52a12ed6d00d44d61c9a">ntwk_getNetworkInfo</a> (uint8_t pdpContextId)</td></tr>
 <tr class="memdesc:af5f610f4cdea52a12ed6d00d44d61c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get network (PDP) information.  <br /></td></tr>
 <tr class="separator:af5f610f4cdea52a12ed6d00d44d61c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce01ae762b14049637ad7679477ec37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a3ce01ae762b14049637ad7679477ec37">ntwk_getProviders</a> (char *providersList, uint16_t listSz)</td></tr>
-<tr class="memdesc:a3ce01ae762b14049637ad7679477ec37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Development/diagnostic function to retrieve visible providers from cell radio.  <br /></td></tr>
-<tr class="separator:a3ce01ae762b14049637ad7679477ec37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744be5ac5f17e475843e3729d38a33b0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a744be5ac5f17e475843e3729d38a33b0">ntwk_getRegistrationStatus</a> ()</td></tr>
+<tr class="memdesc:a744be5ac5f17e475843e3729d38a33b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current network registration status.  <br /></td></tr>
+<tr class="separator:a744be5ac5f17e475843e3729d38a33b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaff38a985397be3494f58c99fe09534"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#afaff38a985397be3494f58c99fe09534">ntwk_setOperator</a> (uint8_t mode, uint8_t format, const char *ntwkOperator)</td></tr>
+<tr class="memdesc:afaff38a985397be3494f58c99fe09534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set network operator.  <br /></td></tr>
+<tr class="separator:afaff38a985397be3494f58c99fe09534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9514598397a0542d4341b4cce8a8ee1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-network_8c.html#a9514598397a0542d4341b4cce8a8ee1a">ntwkDIAG_getProviders</a> (char *providersList, uint16_t listSz)</td></tr>
+<tr class="memdesc:a9514598397a0542d4341b4cce8a8ee1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Development/diagnostic function to retrieve visible providers from cell radio.  <br /></td></tr>
+<tr class="separator:a9514598397a0542d4341b4cce8a8ee1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -297,14 +303,80 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
-<a id="a3ce01ae762b14049637ad7679477ec37" name="a3ce01ae762b14049637ad7679477ec37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ce01ae762b14049637ad7679477ec37">&#9670;&#160;</a></span>ntwk_getProviders()</h2>
+<a id="a744be5ac5f17e475843e3729d38a33b0" name="a744be5ac5f17e475843e3729d38a33b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744be5ac5f17e475843e3729d38a33b0">&#9670;&#160;</a></span>ntwk_getRegistrationStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ntwk_getProviders </td>
+          <td class="memname">uint8_t ntwk_getRegistrationStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get current network registration status. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current network operator registration status. </dd></dl>
+
+</div>
+</div>
+<a id="afaff38a985397be3494f58c99fe09534" name="afaff38a985397be3494f58c99fe09534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaff38a985397be3494f58c99fe09534">&#9670;&#160;</a></span>ntwk_setOperator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ntwk_setOperator </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ntwkOperator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set network operator. </p>
+<p>The characteristics of the selected operator are accessible using the <a class="el" href="ltemc-atcmd_8c.html#a29da0e81404893c31c9d4e4e3a5d6067" title="Returns the string captured from the last command response with prefixing white-space and any preambl...">atcmd_getResponse()</a> function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Action to be performed, set/clear/set default. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>The form for the ntwkOperator parameter value: long, short, numeric. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ntwkOperator</td><td>Operator to select, presented in the "format". Not all modes require/act on this parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Current operator selection mode. Note: </dd></dl>
+
+</div>
+</div>
+<a id="a9514598397a0542d4341b4cce8a8ee1a" name="a9514598397a0542d4341b4cce8a8ee1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9514598397a0542d4341b4cce8a8ee1a">&#9670;&#160;</a></span>ntwkDIAG_getProviders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ntwkDIAG_getProviders </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>providersList</em>, </td>

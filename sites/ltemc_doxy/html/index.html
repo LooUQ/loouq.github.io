@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LTEmC: Main Page</title>
+<title>LTEmC: Circuit River - LTEmC</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,10 +70,60 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">LTEmC Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Circuit River - LTEmC </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_doxyMain"></a></p>
+<h1><a class="anchor" id="autotoc_md50"></a>
+Latest Release: v3.0.1</h1>
+<p>LTEmC modem driver implemented in C for portability and a small footprint.</p>
+<p>The LooUQ LTEmC driver supports the LooUQ Circuit River LTEm1 LTE modem. The LTEm1 is designed to allow for cost-effective cellular communications in embedded systems by supporting LTE CAT-M1 and LTE CAT-NB1 (NB-IOT) communications. The LTEm1 is certified for use on the Verizon network. It is also fully tested and supported using Hologram SIMs and several US carriers.</p>
+<p><b>First off, thanks for taking a look at the LTEm1 hardware and LTEmC software!</b></p>
+<h1><a class="anchor" id="autotoc_md51"></a>
+Getting Started</h1>
+<p>The best way to get started understanding LTEmC and considering it for your projects <em>today</em> is to look at the tests folder in the repository. This collection of test/examples will continue to grow in future releases and new use cases are demonstrated. The tests folder contains a series of progressive LTEm1c tests. Starting with simple platform I/O verification through to application protocol support (sockets, MQTT, HTTP), each test builds upon a succesful previous level test. While called <b>tests</b>, these projects they serve as <b>examples of how to do specific use cases</b>. These are your best source for scaffold code to start your LTEm project.</p>
+<p><b>Each test shows the process for initializing, starting services, and a loop exercising the functionality of the subsystem under test.</b></p>
+<h2><a class="anchor" id="autotoc_md52"></a>
+LTEmC Subsystems</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Subsystem   </th><th class="markdownTableHeadNone">Functions    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><em>atcmd_</em>   </td><td class="markdownTableBodyNone">Handles invoking AT commands to the modem's module and handling response parsing. Supports variable command timeouts, thread safety and completion determination. Results are presented in a simple STRUCT with a HTTP type status code, along with the detail string response    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><em>mdminfo_</em>   </td><td class="markdownTableBodyNone">Provides several common service functions for understanding the state of the modem and the network connection    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><em>gnss_</em>   </td><td class="markdownTableBodyNone">The LTEm1 has a multi-constellation GNSS receiver (aka GPS is the US). The GNSS module provides support for accessing this functionality, like knowing exactly where your device is.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><em>geo_</em>   </td><td class="markdownTableBodyNone">The LTEm1 supports the creation of geo-fence outlines and monitoring of device positioning relative to the geo-fence boundary. Note: geo_ requires the gnss_ module be built into your project to use these functions.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><em>sockets_</em>   </td><td class="markdownTableBodyNone">This is the typical POSIX style sockets layer. Support if TCP/UDP/SSL clients are there. <em>Note:</em> server mode is not currently planned, all US networks I have worked with do not support incoming connections for cellular without add-on services like VPNs or other network constructs. I recommend alternatives to attempting direct connection to your device over cellular.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><em>mqtt_</em>   </td><td class="markdownTableBodyNone">Support for MQTT client functionality is built here. Attach, connect, subscribe, unsubscribe and publish all are supported. Limited testing so far on QOS levels and advance features like clean and will. The MQTT module supports message properties appended to the topic and has a property parser available.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><em>http_</em>   </td><td class="markdownTableBodyNone">Support for HTTP client functionality is found here. Perform HTTP GET or POST actions with standard or custom request headers.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><em>iop_</em>   </td><td class="markdownTableBodyNone">Generally you won't directly interact with the iop_ subsystem. It performs the buffer management to/from hardware. It interfaces with the action_, sockets_, and mqtt_ subsystems to perform the necessary transfers.   </td></tr>
+</table>
+<p><a href="https://loouq.github.io/resources/CTA-LTEM1_DataSheet.pdf">LTEm1 Modem Specifications</a></p>
+<p><a href="https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/LTEm1-FAQ.md">LTEm1/LTEmC FAQ</a></p>
+<p><a href="https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/version-history.md">Version History</a></p>
+<p><a href="https://loouq.github.io/sites/LTEmC_doxy/html/index.html">LTEmC Documentation</a></p>
+<hr  />
+ <div class="image">
+<img src="LTEmC Stack.png" alt=""/>
+</div>
+<p>All of the core (blue) subsystems are functional. Extension subsystems (copper, with wide-borders) are optional and can be built into the application, or omitted to reduced code size. Grey boxes indicate future feature areas.</p>
+<h1><a class="anchor" id="autotoc_md54"></a>
+Future Directions</h1>
+<p>If you have an opinion on any of these functions and their applicability to your product/project please let LooUQ know. Send your thoughts to <a href="#" onclick="location.href='mai'+'lto:'+'ans'+'we'+'rs@'+'lo'+'ouq'+'.c'+'om'; return false;">answe<span class="obfuscator">.nosp@m.</span>rs@l<span class="obfuscator">.nosp@m.</span>oouq.<span class="obfuscator">.nosp@m.</span>com</a>.</p><ul>
+<li>Support for BG95 and BG77</li>
+<li>Power Management - Support for PSM, eDRX, etc.</li>
+<li>File System - Support for file storage on BGx via driver (BG96 has approx. 3MB available)</li>
+<li>FOTA - Support for scheduled FOTA </li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -99,27 +99,30 @@ Macros</h2></td></tr>
 <tr class="memitem:a2f0e3a84d1660f6424fdc69e2e1aea8d"><td class="memItemLeft" align="right" valign="top"><a id="a2f0e3a84d1660f6424fdc69e2e1aea8d" name="a2f0e3a84d1660f6424fdc69e2e1aea8d"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SRCFILE</b>&#160;&#160;&#160;&quot;SKT&quot;</td></tr>
 <tr class="separator:a2f0e3a84d1660f6424fdc69e2e1aea8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48b1663a06062f775262a363ce4c9e6d"><td class="memItemLeft" align="right" valign="top"><a id="a48b1663a06062f775262a363ce4c9e6d" name="a48b1663a06062f775262a363ce4c9e6d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ASCII_sSENDOK</b>&#160;&#160;&#160;&quot;SEND OK\r\n&quot;</td></tr>
-<tr class="separator:a48b1663a06062f775262a363ce4c9e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74e75242132eaabbc1c512488a135926"><td class="memItemLeft" align="right" valign="top"><a id="a74e75242132eaabbc1c512488a135926" name="a74e75242132eaabbc1c512488a135926"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>MIN</b>(x,  y)&#160;&#160;&#160;(((x) &lt; (y)) ? (x) : (y))</td></tr>
 <tr class="separator:a74e75242132eaabbc1c512488a135926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="memItemLeft" align="right" valign="top"><a id="aacc3ee1a7f283f8ef65cea31f4436a95" name="aacc3ee1a7f283f8ef65cea31f4436a95"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX</b>(x,  y)&#160;&#160;&#160;(((x) &lt; (y)) ? (y) : (x))</td></tr>
 <tr class="separator:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61569bd6377f220e1914ff0e7b2692a"><td class="memItemLeft" align="right" valign="top"><a id="ae61569bd6377f220e1914ff0e7b2692a" name="ae61569bd6377f220e1914ff0e7b2692a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DETECT_STALL</b>(tick,  threshold)&#160;&#160;&#160;if (pMillis() - tick &gt; threshold) return resultCode__timeout</td></tr>
+<tr class="separator:ae61569bd6377f220e1914ff0e7b2692a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ee6cc7481040ca347e572d4ba0d6fa"><td class="memItemLeft" align="right" valign="top"><a id="a81ee6cc7481040ca347e572d4ba0d6fa" name="a81ee6cc7481040ca347e572d4ba0d6fa"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ASSERT_NOTSTALLED</b>(tick,  threshold)&#160;&#160;&#160;ASSERT(pMillis() - tick &gt; threshold)</td></tr>
+<tr class="separator:a81ee6cc7481040ca347e572d4ba0d6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afca4d2b18bd3de9c56fe1a50d7e0ba18"><td class="memItemLeft" align="right" valign="top"><a id="afca4d2b18bd3de9c56fe1a50d7e0ba18" name="afca4d2b18bd3de9c56fe1a50d7e0ba18"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SCKT_URC_HEADERSZ</b>&#160;&#160;&#160;30</td></tr>
 <tr class="separator:afca4d2b18bd3de9c56fe1a50d7e0ba18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:affb2e946e88e8344ad605f417dd16b75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-sckt_8c.html#affb2e946e88e8344ad605f417dd16b75">sckt_initControl</a> (<a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *scktCtrl, <a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a> dataCntxt, const char *protocol, <a class="el" href="ltemc-sckt_8h.html#a6e6c535781ec88c573e8157dffa2baf4">scktRecv_func</a> recvCallback)</td></tr>
-<tr class="memdesc:affb2e946e88e8344ad605f417dd16b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a socket data control(TCP/UDP/SSL).  <br /></td></tr>
-<tr class="separator:affb2e946e88e8344ad605f417dd16b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a632926d6112d37b29240a21f25ec9259"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-sckt_8c.html#a632926d6112d37b29240a21f25ec9259">sckt_setConnection</a> (<a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *scktCtrl, const char *hostUrl, uint16_t hostPort, uint16_t lclPort)</td></tr>
-<tr class="memdesc:a632926d6112d37b29240a21f25ec9259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set connection parameters for a socket connection (TCP/UDP)  <br /></td></tr>
-<tr class="separator:a632926d6112d37b29240a21f25ec9259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cad88bb34aceb492e3eee495c5e1d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-sckt_8c.html#a3cad88bb34aceb492e3eee495c5e1d06">sckt_initControl</a> (<a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *scktCtrl, <a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a> dataCntxt, <a class="el" href="ltemc-types_8h.html#a7a6e369673a63d301becf28b22bdbec7">streamType_t</a> protocol, <a class="el" href="ltemc-sckt_8h.html#a279f95a02b0ec0771b9561a761acfd86">scktAppRecv_func</a> recvCallback)</td></tr>
+<tr class="memdesc:a3cad88bb34aceb492e3eee495c5e1d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a socket data control(TCP/UDP/SSL).  <br /></td></tr>
+<tr class="separator:a3cad88bb34aceb492e3eee495c5e1d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978f6fe8be035e3da224672c4ffb0512"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-sckt_8c.html#a978f6fe8be035e3da224672c4ffb0512">sckt_setConnection</a> (<a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *scktCtrl, uint8_t pdpCntxt, const char *hostUrl, uint16_t hostPort, uint16_t lclPort)</td></tr>
+<tr class="memdesc:a978f6fe8be035e3da224672c4ffb0512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set connection parameters for a socket connection (TCP/UDP)  <br /></td></tr>
+<tr class="separator:a978f6fe8be035e3da224672c4ffb0512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c4cd2fc787822152689ec023e9e629"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-sckt_8c.html#a33c4cd2fc787822152689ec023e9e629">sckt_open</a> (<a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *scktCtrl, bool cleanSession)</td></tr>
 <tr class="memdesc:a33c4cd2fc787822152689ec023e9e629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a data connection (socket) to d data to an established endpoint via protocol used to open socket (TCP/UDP/TCP INCOMING).  <br /></td></tr>
 <tr class="separator:a33c4cd2fc787822152689ec023e9e629"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,12 +141,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a9cdb1f0ba73e0a4b5bbb62b631432f4e"><td class="memItemLeft" align="right" valign="top">resultCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-sckt_8c.html#a9cdb1f0ba73e0a4b5bbb62b631432f4e">sckt_send</a> (<a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *scktCtrl, const char *data, uint16_t dataSz)</td></tr>
 <tr class="memdesc:a9cdb1f0ba73e0a4b5bbb62b631432f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to an established endpoint via protocol used to open socket (TCP/UDP/TCP INCOMING).  <br /></td></tr>
 <tr class="separator:a9cdb1f0ba73e0a4b5bbb62b631432f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a103e984da834ac72ab08bd34d8c8739e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-sckt_8c.html#a103e984da834ac72ab08bd34d8c8739e">sckt_fetchRecv</a> (<a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *scktCtrl, char *recvBffr, uint16_t bffrSz)</td></tr>
-<tr class="memdesc:a103e984da834ac72ab08bd34d8c8739e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch receive data by host application.  <br /></td></tr>
-<tr class="separator:a103e984da834ac72ab08bd34d8c8739e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45aa3a378f7051bd476365b322cae200"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ltemc-sckt_8c.html#a45aa3a378f7051bd476365b322cae200">sckt_cancelRecv</a> (<a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *scktCtrl)</td></tr>
-<tr class="memdesc:a45aa3a378f7051bd476365b322cae200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel an active receive flow and discard any recieved bytes.  <br /></td></tr>
-<tr class="separator:a45aa3a378f7051bd476365b322cae200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -177,33 +174,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a45aa3a378f7051bd476365b322cae200" name="a45aa3a378f7051bd476365b322cae200"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45aa3a378f7051bd476365b322cae200">&#9670;&#160;</a></span>sckt_cancelRecv()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sckt_cancelRecv </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *&#160;</td>
-          <td class="paramname"><em>scktCtrl</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Cancel an active receive flow and discard any recieved bytes. </p>
-<p>This is a blocking call, returns after all outstanding bytes are retrieved from module and discarded. Connection can continue receiving new bytes if not closed.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scktCtrl</td><td>[in] Pointer to socket control being operated on. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a655595f0eaf4c982760af83e215d1e6b" name="a655595f0eaf4c982760af83e215d1e6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a655595f0eaf4c982760af83e215d1e6b">&#9670;&#160;</a></span>sckt_close()</h2>
 
@@ -251,51 +221,6 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
-<a id="a103e984da834ac72ab08bd34d8c8739e" name="a103e984da834ac72ab08bd34d8c8739e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a103e984da834ac72ab08bd34d8c8739e">&#9670;&#160;</a></span>sckt_fetchRecv()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t sckt_fetchRecv </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *&#160;</td>
-          <td class="paramname"><em>scktCtrl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>recvBffr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>bffrSz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Fetch receive data by host application. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scktCtrl</td><td>[in] - Pointer to socket control being operated on. </td></tr>
-    <tr><td class="paramname">recvBffr</td><td>[in] - A char pointer to the data buffer for received chars </td></tr>
-    <tr><td class="paramname">dataSz</td><td>[in] - The size of the buffer or request </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of chars outstanding in receive flow. This number can increase, if new data received while processing. </dd></dl>
-
-</div>
-</div>
 <a id="a7094cfa29eae6fd7652726e3b12eeec7" name="a7094cfa29eae6fd7652726e3b12eeec7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7094cfa29eae6fd7652726e3b12eeec7">&#9670;&#160;</a></span>sckt_flush()</h2>
 
@@ -313,13 +238,7 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 </div><div class="memdoc">
 
 <p>Reset open socket connection. This function drains the connection's data pipeline. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scktCtrl</td><td>[in] - Pointer to socket control struct governing the sending socket's operation </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if flush socket data initiated </dd></dl>
+<p>NOT IMPLEMENTED </p>
 
 </div>
 </div>
@@ -350,8 +269,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
-<a id="affb2e946e88e8344ad605f417dd16b75" name="affb2e946e88e8344ad605f417dd16b75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affb2e946e88e8344ad605f417dd16b75">&#9670;&#160;</a></span>sckt_initControl()</h2>
+<a id="a3cad88bb34aceb492e3eee495c5e1d06" name="a3cad88bb34aceb492e3eee495c5e1d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cad88bb34aceb492e3eee495c5e1d06">&#9670;&#160;</a></span>sckt_initControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -371,13 +290,13 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype"><a class="el" href="ltemc-types_8h.html#a7a6e369673a63d301becf28b22bdbec7">streamType_t</a>&#160;</td>
           <td class="paramname"><em>protocol</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="ltemc-sckt_8h.html#a6e6c535781ec88c573e8157dffa2baf4">scktRecv_func</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="ltemc-sckt_8h.html#a279f95a02b0ec0771b9561a761acfd86">scktAppRecv_func</a>&#160;</td>
           <td class="paramname"><em>recvCallback</em>&#160;</td>
         </tr>
         <tr>
@@ -473,8 +392,8 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
 </div>
 </div>
-<a id="a632926d6112d37b29240a21f25ec9259" name="a632926d6112d37b29240a21f25ec9259"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a632926d6112d37b29240a21f25ec9259">&#9670;&#160;</a></span>sckt_setConnection()</h2>
+<a id="a978f6fe8be035e3da224672c4ffb0512" name="a978f6fe8be035e3da224672c4ffb0512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a978f6fe8be035e3da224672c4ffb0512">&#9670;&#160;</a></span>sckt_setConnection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,6 +403,12 @@ along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
           <td>(</td>
           <td class="paramtype"><a class="el" href="ltemc-sckt_8h.html#ac7190408332db4886968d20a407c30f7">scktCtrl_t</a> *&#160;</td>
           <td class="paramname"><em>scktCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pdpCntxt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

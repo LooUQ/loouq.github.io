@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="LooUQ-Logo(240x100-t).png"/></td>
   <td id="projectalign">
-   <div id="projectname">LTEmC<span id="projectnumber">&#160;v2.3.0</span>
+   <div id="projectname">LTEmC<span id="projectnumber">&#160;v3.0.1</span>
    </div>
    <div id="projectbrief">C device driver for LooUQ LTEm cellular modems</div>
   </td>
@@ -74,47 +74,50 @@ $(function() {
   <div class="headertitle"><div class="title">LTEmC Version History </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h3><a class="anchor" id="autotoc_md77"></a>
+<div class="textblock"><h3><a class="anchor" id="autotoc_md65"></a>
 Major or breaking changes will be called out with section explaining the change and the release header will be decorated with either &lt;em&gt;Major&lt;/em&gt; or &lt;em&gt;Breaking&lt;/em&gt;</h3>
-<h1><a class="anchor" id="autotoc_md78"></a>
-v3.0.0</h1>
-<h2><a class="anchor" id="autotoc_md79"></a>
-Major update with numerous breaking changes</h2>
-<h3><a class="anchor" id="autotoc_md80"></a>
-V3 is a top-to-bottom redesign of the LTEmC driver based on field/implementation experiences. User API has been minimally impacted (details below).</h3>
-<h2><a class="anchor" id="autotoc_md81"></a>
+<h1><a class="anchor" id="autotoc_md66"></a>
+v3.0.1 (May-15-2023)</h1>
+<h2><a class="anchor" id="autotoc_md67"></a>
+Major update with numerous API surface changes</h2>
+<h3><a class="anchor" id="autotoc_md68"></a>
+V3 is a top-to-bottom redesign of the LTEmC driver based on field/implementation experiences.</h3>
+<h2><a class="anchor" id="autotoc_md69"></a>
 User API (breaking)</h2>
 <ul>
 <li>Updated start and reset logic to improve reliability</li>
-<li>ATCMD API has changed to support consistent access to execution internals results, parser logic consolidate to reduce memory</li>
+<li>ATCMD API has changed to support consistent access to execution internals result and a new implementation of result parser.<ul>
 <li>These changes only affect design with user created extended commands</li>
-<li>Exposed file-system and GPIO APIs (.h) for support in v3.1. GPIO is for LTEm3F device available in Q1-2023</li>
-<li>ASSERT source file specifier has been changed to a 5 char code from a 2-byte integer (srcFiles.h is now obsolete).### Internals for those with interest </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md82"></a>
+</li>
+<li>Exposed file-system and GPIO APIs (.h) for support in v3.1. GPIO is for LTEm3F device available in Q3-2023</li>
+<li>ASSERT source file specifier has been changed to a 5 char code from a 2-byte integer (srcFiles.h is now obsolete). </li>
+</ul>
+<h2><a class="anchor" id="autotoc_md70"></a>
 Internal Changes</h2>
 <ul>
 <li>Updates to start (APPRDY URC) and BGx initialization</li>
 <li>Redesign of ATCMD subsystem for consistent access to internal state</li>
 <li>Consolidated ATCMD parser logic into unified base parser.</li>
 <li>Redesign I/O buffering to reduce memory (RAM) requirements. Eliminated separate command/data buffers with a single ring-buffer for receive.</li>
-<li>Remove dedicated transmit buffer.</li>
+<li>Remove dedicated data transmit buffer.<ul>
 <li>Short TX send are processed immediately (blocking) using parameter incoming const char pointer.</li>
 <li>Larger TX sends use a "buffered" background send processed from the originating caller's buffer and ISR despooling</li>
-<li>This requires the source buffer be a non-local function char array. This pattern blocks successive TX sends until the prior send completes.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md83"></a>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md71"></a>
 v2.3.0</h1>
-<h2><a class="anchor" id="autotoc_md84"></a>
+<h2><a class="anchor" id="autotoc_md72"></a>
 Moved radio access technology (RAT) functions to network</h2>
 <ul>
 <li>Moved functions to ntwk_ module to set RAT allowed (LTE,GSM), RAT scan sequence (GSM,CAT-M1,NB-IOT), and IOP mode (CAT-M1,NB-IOT)</li>
 <li>RAT functions are beta right now, invoking them will cause BGx to suspend. Future signature and guidance likely in a 2.3.1 release.</li>
-<li>Added timeout parameter for <a class="el" href="ltemc-mqtt_8c.html#a27950fda1c826882f99e81c2cf308460" title="Publish a message to server.">mqtt_publish()</a> due to variability of network and server responsiveness</li>
+<li>Added timeout parameter for <a class="el" href="ltemc-mqtt_8c.html#a6e6260585946cd8f28410cae3310869b" title="Publish a message to server.">mqtt_publish()</a> due to variability of network and server responsiveness</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md85"></a>
+<h1><a class="anchor" id="autotoc_md73"></a>
 v2.2.0</h1>
-<h2><a class="anchor" id="autotoc_md86"></a>
+<h2><a class="anchor" id="autotoc_md74"></a>
 Enhancements to network module for specification of APN name, PDP IP type (v4\v6\both) username\password, authentication method</h2>
 <ul>
 <li>Changed signatures for ntwk functions for activate PDP and get active contexts</li>
@@ -124,7 +127,7 @@ Enhancements to network module for specification of APN name, PDP IP type (v4\v6
 </ul>
 </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md87"></a>
+<h3><a class="anchor" id="autotoc_md75"></a>
 Breaking Changes</h3>
 <ul>
 <li>atcmd functions<ul>
@@ -138,17 +141,17 @@ Breaking Changes</h3>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md88"></a>
+<h1><a class="anchor" id="autotoc_md76"></a>
 v2.1.1</h1>
-<h2><a class="anchor" id="autotoc_md89"></a>
+<h2><a class="anchor" id="autotoc_md77"></a>
 Fixes to HTTP and network modules</h2>
 <ul>
 <li>Updated network to ensure network is IPV4. Future version will allow for complete configurability of the APN\PDP parameters</li>
 <li>Fixed a timing issue in the http_read()</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md90"></a>
+<h1><a class="anchor" id="autotoc_md78"></a>
 v2.1.0</h1>
-<h2><a class="anchor" id="autotoc_md91"></a>
+<h2><a class="anchor" id="autotoc_md79"></a>
 Fixes and minor enhancements</h2>
 <ul>
 <li>Fixed intermittent timing issue in HTTP read response</li>
@@ -158,7 +161,7 @@ Fixes and minor enhancements</h2>
 <li>Changed BGx startup logic to be more resilient</li>
 <li>Changed tests to reflect other changes in this release </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md92"></a>
+<h3><a class="anchor" id="autotoc_md80"></a>
 Breaking Changes</h3>
 <ul>
 <li>Changed signature for application event notification callback to include uint8_t assembly and instance indications.<ul>
@@ -167,24 +170,24 @@ Breaking Changes</h3>
 </li>
 <li>Changed name of set yield callback to <a class="el" href="ltemc_8c.html#a865c84636366086193ccac32d0d9c23d" title="Registers the address (void*) of your application yield callback handler.">ltem_setYieldCallback()</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md93"></a>
+<h1><a class="anchor" id="autotoc_md81"></a>
 v2.0.0 - Major long-term release</h1>
-<h2><a class="anchor" id="autotoc_md94"></a>
+<h2><a class="anchor" id="autotoc_md82"></a>
 Added HTTP(S) functionality and redesigned buffering model. Enhancements to AT-Command module to allow for continued extensions to supported features.</h2>
 <ul>
 <li>Added support for HTTP(S) GET/POST</li>
 <li>Changed signature for LTEmC create and execute</li>
 <li>Added granular locking and general usability enhancements to ATCMD module</li>
 <li>Migrated TLS configuration for a connection into its own module ltemc-tls</li>
-<li>Changed signature of <a class="el" href="ltemc-mqtt_8c.html#ac64d750e45e17a384b1292f187813df3" title="Open a remote MQTT server for use.">mqtt_open()</a> to only specify TLS enabled.</li>
+<li>Changed signature of <a class="el" href="ltemc-mqtt_8c.html#ac64d750e45e17a384b1292f187813df3" title="Open a remote MQTT server IP connection for use.">mqtt_open()</a> to only specify TLS enabled.</li>
 <li>IOP was re-architected to streamline buffer only operations. Application now provides and owns receive data buffers, allowing for more flexibility and minimum memory usage base on your application's requirements.</li>
 <li>Support for multiple MQTT and HTTP(S) sessions per modem</li>
 <li>Decoupled MQTT from fixed data context number 5, HTTP created without fixed data context coupling.</li>
 <li>Misc fixes to BGx, MQTT, Network modules.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md95"></a>
+<h1><a class="anchor" id="autotoc_md83"></a>
 v1.0.0 - MAJOR RELEASE</h1>
-<h2><a class="anchor" id="autotoc_md96"></a>
+<h2><a class="anchor" id="autotoc_md84"></a>
 Version 1.0.0 is a major release with several breaking changes. This release is the 1st version fully vetted in commercial projects and sets the stage for future multiple LooUQ LTE modem models.</h2>
 <p><a href="https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/Release_1_0.md">https://github.com/LooUQ/CircuitRiver-LTEmC/blob/master/Release_1_0.md</a></p>
 <p>You are encouraged to review the Release_V1-0.md file for specifics on the major changes and how to adapt your application code.</p><ul>
@@ -196,7 +199,7 @@ Version 1.0.0 is a major release with several breaking changes. This release is 
 <li>Filename and .h file adjustments and cleanup</li>
 <li>Misc fixes</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md97"></a>
+<h1><a class="anchor" id="autotoc_md85"></a>
 v0.5.0 - Fixes and Network PDP context handling (Dec 28, 2020)</h1>
 <ul>
 <li>Fixed MQTT not trapping publish errors</li>
@@ -209,7 +212,7 @@ v0.5.0 - Fixes and Network PDP context handling (Dec 28, 2020)</h1>
 </li>
 <li>Change IOP PDP deactivated detect logic to match internal implementation in NETWORK module</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md98"></a>
+<h1><a class="anchor" id="autotoc_md86"></a>
 0.4.2 (Dec 15, 2020)</h1>
 <ul>
 <li>Updated ISR for intermittent missed event when receiving MQTT publish</li>
@@ -217,7 +220,7 @@ v0.5.0 - Fixes and Network PDP context handling (Dec 28, 2020)</h1>
 <li>Removed utils.c from LTEm1c library</li>
 <li>Functionality is now part of LQ Cloud but can be used independently as lqc_collections (.h.c)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md99"></a>
+<h1><a class="anchor" id="autotoc_md87"></a>
 v0.4.2 - Misc (Dec-15-2020)</h1>
 <ul>
 <li>Updated ISR for intermittent missed event when receiving MQTT publish</li>
@@ -225,13 +228,13 @@ v0.4.2 - Misc (Dec-15-2020)</h1>
 <li>Removed utils.c from LTEm1c library</li>
 <li>Functionality is now part of LQ Cloud but can be used independently as lqc_collections (.h.c)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md100"></a>
+<h1><a class="anchor" id="autotoc_md88"></a>
 v0.4.1 - Misc (Nov 28, 2020)</h1>
 <ul>
 <li>Remove dependency on JLink RTT</li>
 <li>Fixed parse issue in GNSS getLocation()</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md101"></a>
+<h1><a class="anchor" id="autotoc_md89"></a>
 v0.3 - IOP Redesign (Oct 6, 2020)</h1>
 <p>Overhaul of the IOP buffering system.</p><ul>
 <li>Simplified receive buffer management and eliminated copies from receive pipeline<ul>
@@ -248,7 +251,7 @@ v0.3 - IOP Redesign (Oct 6, 2020)</h1>
 </li>
 <li>Multiple fixes</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md102"></a>
+<h1><a class="anchor" id="autotoc_md90"></a>
 v0.2 - Fixes and Enhancements (Jun 25, 2020)</h1>
 <ul>
 <li>TCP/UDP large packets (60 &lt; packets &lt;=1460 bytes), MQTT(s) functional, Geo-Fence support</li>
@@ -258,7 +261,7 @@ v0.2 - Fixes and Enhancements (Jun 25, 2020)</h1>
 <li>Added Geo-Fence support</li>
 <li>FOTA partial support for DFOTA via HTTPS (file system FOTA is a roadmap feature )</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md103"></a>
+<h1><a class="anchor" id="autotoc_md91"></a>
 v0.1 - Initial publish</h1>
 <p>First release of a functional LTEm1 driver. Supported sockets (TCP/UDP/SSL) and limited MQTT.</p><ul>
 <li>Pure C99</li>

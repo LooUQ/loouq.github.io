@@ -76,7 +76,8 @@ $(function() {
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>altitude&#160;:&#160;<a class="el" href="structgnss_location__tag.html#a2b13d276aee0d9fd646c8fa3647e869b">gnssLocation_tag</a></li>
 <li>appEvntNotifyCB&#160;:&#160;<a class="el" href="structltem_device__tag.html#a72baf424a69a2ca8f081d1bdf7ae1010">ltemDevice_tag</a></li>
-<li>applDataCB&#160;:&#160;<a class="el" href="structatcmd__tag.html#a463b9a72efd56d093861cb60b8f084fa">atcmd_tag</a></li>
+<li>applRecvDataCB&#160;:&#160;<a class="el" href="structdata_mode__tag.html#acfa432cff90dafe34bf72fb5afd62fa0">dataMode_tag</a></li>
+<li>appRecvDataCB&#160;:&#160;<a class="el" href="structfile_ctrl__tag.html#a8d014aad12b0f88c80c9e3b016f40bf1">fileCtrl_tag</a>, <a class="el" href="structhttp_ctrl__tag.html#a8d014aad12b0f88c80c9e3b016f40bf1">httpCtrl_tag</a></li>
 <li>atcmd&#160;:&#160;<a class="el" href="structltem_device__tag.html#ad6546644e1d219674d5e26e85a14c09f">ltemDevice_tag</a></li>
 <li>autoLock&#160;:&#160;<a class="el" href="structatcmd__tag.html#a5c69c52917ebde0247df730ac97d94aa">atcmd_tag</a></li>
 </ul>
@@ -89,9 +90,8 @@ $(function() {
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>cancellationRequest&#160;:&#160;<a class="el" href="structltem_device__tag.html#a770e37c3ac5e43757b7f0256f6108811">ltemDevice_tag</a></li>
-<li>clientId&#160;:&#160;<a class="el" href="structmqtt_ctrl__tag.html#ac225cf8f7dbdcc50a318ed9c382c692d">mqttCtrl_tag</a></li>
+<li>clientId&#160;:&#160;<a class="el" href="structmqtt_ctrl__tag.html#a6ce59f2ec7270b934db8d448257c73b9">mqttCtrl_tag</a></li>
 <li>CMDMIRROR&#160;:&#160;<a class="el" href="structatcmd__tag.html#a50fcff1e52f59c4025a699c4240f84aa">atcmd_tag</a></li>
-<li>contextHandle&#160;:&#160;<a class="el" href="structstream_ctrl__tag.html#adbb0c8c5758b0cda0254a81fac1c0e7d">streamCtrl_tag</a></li>
 <li>course&#160;:&#160;<a class="el" href="structgnss_location__tag.html#acaa2fde7e3fad7df8f5755347603d17b">gnssLocation_tag</a></li>
 <li>cstmHdrs&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#adb7a1e99e532f8c2f75408162b910ed8">httpCtrl_tag</a></li>
 <li>cstmHdrsSz&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a9594e3a80f1c90402ef10f2158a2b7eb">httpCtrl_tag</a></li>
@@ -99,21 +99,29 @@ $(function() {
 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>dataCntxt&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#ab8de827cd09af3ed27153c2351b0897f">httpCtrl_tag</a>, <a class="el" href="structmqtt_ctrl__tag.html#ab8de827cd09af3ed27153c2351b0897f">mqttCtrl_tag</a>, <a class="el" href="structsckt_ctrl__tag.html#ab8de827cd09af3ed27153c2351b0897f">scktCtrl_tag</a>, <a class="el" href="structstream_ctrl__tag.html#ab8de827cd09af3ed27153c2351b0897f">streamCtrl_tag</a></li>
+<li>dataHndlr&#160;:&#160;<a class="el" href="structdata_mode__tag.html#ad5d51d49f2e496ab2b3103f558bdb157">dataMode_tag</a></li>
+<li>dataMode&#160;:&#160;<a class="el" href="structatcmd__tag.html#a194cf8f60b193f57140937195185cc3d">atcmd_tag</a></li>
+<li>dataRxHndlr&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a19f4b8e5885c0404be245cb6b658eb07">httpCtrl_tag</a>, <a class="el" href="structmqtt_ctrl__tag.html#a19f4b8e5885c0404be245cb6b658eb07">mqttCtrl_tag</a>, <a class="el" href="structsckt_ctrl__tag.html#a19f4b8e5885c0404be245cb6b658eb07">scktCtrl_tag</a>, <a class="el" href="structstream_ctrl__tag.html#a19f4b8e5885c0404be245cb6b658eb07">streamCtrl_tag</a></li>
 <li>date&#160;:&#160;<a class="el" href="structgnss_location__tag.html#ad217ba16d0b42c0e3c986247572e9ec8">gnssLocation_tag</a></li>
+<li>defaultBlockSz&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a0e74ee135d6de56ec2b4b892518248a8">httpCtrl_tag</a></li>
 <li>defaultContext&#160;:&#160;<a class="el" href="structprovider_info__tag.html#aaa9f05b75ce8844a2c696629b3aa8228">providerInfo_tag</a></li>
-<li>defaultTimeoutS&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a2923a74b9a2482663b22277a3e80bdc4">httpCtrl_tag</a></li>
 <li>deviceState&#160;:&#160;<a class="el" href="structltem_device__tag.html#af728af3c7e2890dd561f48cdda6bf2a7">ltemDevice_tag</a></li>
 <li>dir&#160;:&#160;<a class="el" href="structgnss__latlon__tag.html#afc966782c25222ee96a1bdd1d4b360f8">gnss_latlon_tag</a></li>
 </ul>
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>errCode&#160;:&#160;<a class="el" href="structmqtt_ctrl__tag.html#ac964175a493d2bac9f3f29ded085569c">mqttCtrl_tag</a></li>
 <li>errorDetail&#160;:&#160;<a class="el" href="structatcmd__tag.html#ac1db492f3a19d34c3ab50dc7664c4abc">atcmd_tag</a></li>
 <li>execDuration&#160;:&#160;<a class="el" href="structatcmd__tag.html#a6f6e63d5193d08274eda0a0564b4d9d6">atcmd_tag</a></li>
 </ul>
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>fileCnt&#160;:&#160;<a class="el" href="structfile_list_result__tag.html#aa8b9bb1bb378e4c04acc111519bbb3f0">fileListResult_tag</a></li>
+<li>fileCtrl&#160;:&#160;<a class="el" href="structltem_device__tag.html#aaa80da670dd725ee791ab2d18b62da25">ltemDevice_tag</a></li>
+<li>files&#160;:&#160;<a class="el" href="structfile_list_result__tag.html#a2337135c4e3d24d4a244f97da3c34e87">fileListResult_tag</a></li>
 <li>fixType&#160;:&#160;<a class="el" href="structgnss_location__tag.html#aa04398e6b3b3d95a5cdca3b2d816062d">gnssLocation_tag</a></li>
 <li>fwver&#160;:&#160;<a class="el" href="structmodem_info__tag.html#a326384347fe36f5e2333d6a429f05137">modemInfo_tag</a></li>
 </ul>
@@ -125,9 +133,10 @@ $(function() {
 
 
 <h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
+<li>handle&#160;:&#160;<a class="el" href="structfile_ctrl__tag.html#a1699094a55a0394ff884346e034df54c">fileCtrl_tag</a></li>
 <li>hdop&#160;:&#160;<a class="el" href="structgnss_location__tag.html#a7ede759392ed439219bdbac4c8ede827">gnssLocation_tag</a></li>
-<li>hostPort&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#aa0fbdfd4b0b276a823329769749441e7">httpCtrl_tag</a>, <a class="el" href="structmqtt_ctrl__tag.html#aa0fbdfd4b0b276a823329769749441e7">mqttCtrl_tag</a></li>
-<li>hostUrl&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a300b9ff4303e8a75daa0611ecdc0d199">httpCtrl_tag</a>, <a class="el" href="structmqtt_ctrl__tag.html#a300b9ff4303e8a75daa0611ecdc0d199">mqttCtrl_tag</a></li>
+<li>hostPort&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#aa0fbdfd4b0b276a823329769749441e7">httpCtrl_tag</a>, <a class="el" href="structmqtt_ctrl__tag.html#aa0fbdfd4b0b276a823329769749441e7">mqttCtrl_tag</a>, <a class="el" href="structsckt_ctrl__tag.html#aa0fbdfd4b0b276a823329769749441e7">scktCtrl_tag</a></li>
+<li>hostUrl&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a300b9ff4303e8a75daa0611ecdc0d199">httpCtrl_tag</a>, <a class="el" href="structmqtt_ctrl__tag.html#a300b9ff4303e8a75daa0611ecdc0d199">mqttCtrl_tag</a>, <a class="el" href="structsckt_ctrl__tag.html#a904ab52dcb6b2bf12267ee6f3374ead0">scktCtrl_tag</a></li>
 <li>httpStatus&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#abf3669c13d71e6869690e8466b9b1411">httpCtrl_tag</a></li>
 </ul>
 
@@ -152,7 +161,6 @@ $(function() {
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
-<li>metrics&#160;:&#160;<a class="el" href="structltem_device__tag.html#ab2a747f42d2b9295b2ffad50aec7d2c3">ltemDevice_tag</a></li>
 <li>mfgmodel&#160;:&#160;<a class="el" href="structmodem_info__tag.html#a06600cc74dbf93d02cd7eced137d4205">modemInfo_tag</a></li>
 <li>modemInfo&#160;:&#160;<a class="el" href="structltem_device__tag.html#a7abe378c9b5c047f6d5c61104df148bb">ltemDevice_tag</a></li>
 <li>modemSettings&#160;:&#160;<a class="el" href="structltem_device__tag.html#a32c3e069ae5b0723420571fac32a0c28">ltemDevice_tag</a></li>
@@ -171,7 +179,7 @@ $(function() {
 <li>pageRemaining&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a04a6cd9b8590c2b39e66072b56ddee2f">httpCtrl_tag</a></li>
 <li>pageSize&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a0280e51e144c396db5421a34d7c0db99">httpCtrl_tag</a></li>
 <li>parserResult&#160;:&#160;<a class="el" href="structatcmd__tag.html#ad7890951dad534624e425284b0faada7">atcmd_tag</a></li>
-<li>pCtrl&#160;:&#160;<a class="el" href="structstream_ctrl__tag.html#addb9297d816b26c680888115de8c9538">streamCtrl_tag</a></li>
+<li>pdpCntxt&#160;:&#160;<a class="el" href="structsckt_ctrl__tag.html#a601240ae64b44ef5040fdf2d26895226">scktCtrl_tag</a></li>
 <li>pdpProtocolType&#160;:&#160;<a class="el" href="structnetwork_info__tag.html#a7a59dcba4e6f29effedfb591f4907cc8">networkInfo_tag</a></li>
 <li>position&#160;:&#160;<a class="el" href="structgeo_result__tag.html#a4f71289e4e903f904d80cf9d51c3fbe8">geoResult_tag</a></li>
 <li>preambleFound&#160;:&#160;<a class="el" href="structatcmd__tag.html#a4b5b9b7892dcf0f7c5015c5993e27e10">atcmd_tag</a></li>
@@ -179,10 +187,14 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_q" name="index_q"></a>- q -</h3><ul>
+<li>Qos&#160;:&#160;<a class="el" href="structmqtt_topic_ctrl__tag.html#a84eac7c6e4af2d4178c88f9ab9cd1704">mqttTopicCtrl_tag</a></li>
+</ul>
+
+
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>rawResponse&#160;:&#160;<a class="el" href="structatcmd__tag.html#acf1131816e5ab15eadb01aff2e8e4d29">atcmd_tag</a></li>
-<li>recvDataCB&#160;:&#160;<a class="el" href="structstream_ctrl__tag.html#a6e5e049d7c8301ec773cc79012a614d1">streamCtrl_tag</a></li>
-<li>recvState&#160;:&#160;<a class="el" href="structmqtt_ctrl__tag.html#a94d8f9439f5ef57c63665316557eaf9e">mqttCtrl_tag</a></li>
+<li>recvMsgId&#160;:&#160;<a class="el" href="structmqtt_ctrl__tag.html#a2968a40cf58f9f04ec0a62b72efeafcc">mqttCtrl_tag</a></li>
 <li>requestState&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#ae2815bd62c196db16e142ccfbea5c2b9">httpCtrl_tag</a></li>
 <li>requestType&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a8640026b3fe8369c2c2a74191f6b9e52">httpCtrl_tag</a></li>
 <li>response&#160;:&#160;<a class="el" href="structatcmd__tag.html#a11373f02c42587a1853ad6c8be5fe10e">atcmd_tag</a>, <a class="el" href="structatcmd_result__tag.html#a11373f02c42587a1853ad6c8be5fe10e">atcmdResult_tag</a></li>
@@ -195,22 +207,34 @@ $(function() {
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>skipParser&#160;:&#160;<a class="el" href="structdata_mode__tag.html#a4b23db55d46d152a7a06b518faa57a53">dataMode_tag</a></li>
 <li>speedkm&#160;:&#160;<a class="el" href="structgnss_location__tag.html#ae0962fef9bfddefc9440afc8f6ef33d1">gnssLocation_tag</a></li>
 <li>speedkn&#160;:&#160;<a class="el" href="structgnss_location__tag.html#aa1de6861ea631ed59dd15f99a59ca500">gnssLocation_tag</a></li>
 <li>spi&#160;:&#160;<a class="el" href="structltem_device__tag.html#a15871f597217ab79cc8e1790f38359bf">ltemDevice_tag</a></li>
+<li>state&#160;:&#160;<a class="el" href="structmqtt_ctrl__tag.html#ae8488f1ecc0f0672b23b4f3cecf6962d">mqttCtrl_tag</a></li>
 <li>statsRxCnt&#160;:&#160;<a class="el" href="structsckt_ctrl__tag.html#a8ff685d58290aec5312e7a46024421e1">scktCtrl_tag</a></li>
 <li>statsTxCnt&#160;:&#160;<a class="el" href="structsckt_ctrl__tag.html#a9f56a31404281dea7e25a6161f1ab066">scktCtrl_tag</a></li>
 <li>statusCode&#160;:&#160;<a class="el" href="structgnss_location__tag.html#ade31e7fd99344e8c35f2c373af659551">gnssLocation_tag</a></li>
-<li>streamClose&#160;:&#160;<a class="el" href="structstream_ctrl__tag.html#ab7ea53a6f91261087a8a238919bfab83">streamCtrl_tag</a></li>
-<li>streamDataRcvr&#160;:&#160;<a class="el" href="structatcmd__tag.html#ab47c9182bfa5728c4e5312cacb9c2fe5">atcmd_tag</a></li>
-<li>streams&#160;:&#160;<a class="el" href="structltem_device__tag.html#ad2a4d90741d5f6ae526ffb88877a528a">ltemDevice_tag</a></li>
-<li>streamUrcHndlr&#160;:&#160;<a class="el" href="structstream_ctrl__tag.html#a51a7bfa65bf4993b41e81c1024194fb1">streamCtrl_tag</a></li>
+<li>streams&#160;:&#160;<a class="el" href="structltem_device__tag.html#a7a309fed4a30b625c601aedf00cc385f">ltemDevice_tag</a></li>
 <li>swver&#160;:&#160;<a class="el" href="structmodem_info__tag.html#af784020abab22fc405d7c39738840400">modemInfo_tag</a></li>
 </ul>
 
 
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>timeoutSec&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#ac2a4903febee4ff04ba9c1bd2118b7ee">httpCtrl_tag</a></li>
+<li>topics&#160;:&#160;<a class="el" href="structmqtt_ctrl__tag.html#a8b160795cbbe5b78388a9b872ba247d1">mqttCtrl_tag</a></li>
+<li>trigger&#160;:&#160;<a class="el" href="structdata_mode__tag.html#aa3b98278e0a66328d13b59671a9bd7a1">dataMode_tag</a></li>
+<li>txDataLoc&#160;:&#160;<a class="el" href="structdata_mode__tag.html#a8f2b3c566a6148b468349462d2d7964f">dataMode_tag</a></li>
+<li>txDataSz&#160;:&#160;<a class="el" href="structdata_mode__tag.html#a830cd2537a8689912af31066b4e8b67d">dataMode_tag</a></li>
+<li>txEot&#160;:&#160;<a class="el" href="structiop__tag.html#a7c5f17bb6dff6d5b37241a3f645be5cc">iop_tag</a></li>
+</ul>
+
+
 <h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
-<li>useTls&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a8ee05bf20eb22e34322544df417b4348">httpCtrl_tag</a></li>
+<li>urcEvntHndlr&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#aba4b78dd6e2ad95284526c7656a8abe9">httpCtrl_tag</a>, <a class="el" href="structmqtt_ctrl__tag.html#aba4b78dd6e2ad95284526c7656a8abe9">mqttCtrl_tag</a>, <a class="el" href="structsckt_ctrl__tag.html#aba4b78dd6e2ad95284526c7656a8abe9">scktCtrl_tag</a></li>
+<li>urcHndlr&#160;:&#160;<a class="el" href="structstream_ctrl__tag.html#a344d18c298e20949312d16917ac23e9a">streamCtrl_tag</a></li>
+<li>username&#160;:&#160;<a class="el" href="structmqtt_ctrl__tag.html#a9dccfd573eb3e75b50f8497b5f7a2b26">mqttCtrl_tag</a></li>
+<li>useTls&#160;:&#160;<a class="el" href="structhttp_ctrl__tag.html#a8ee05bf20eb22e34322544df417b4348">httpCtrl_tag</a>, <a class="el" href="structmqtt_ctrl__tag.html#a8ee05bf20eb22e34322544df417b4348">mqttCtrl_tag</a></li>
 <li>utc&#160;:&#160;<a class="el" href="structgnss_location__tag.html#a6ae8d28098d79f0dcb73395e7d2698df">gnssLocation_tag</a></li>
 </ul>
 
@@ -221,7 +245,7 @@ $(function() {
 
 
 <h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
-<li>wildcard&#160;:&#160;<a class="el" href="structmqtt_topic_sub__tag.html#accdd598bfafa3ab3fd21b695a60fd900">mqttTopicSub_tag</a></li>
+<li>wildcard&#160;:&#160;<a class="el" href="structmqtt_topic_ctrl__tag.html#accdd598bfafa3ab3fd21b695a60fd900">mqttTopicCtrl_tag</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

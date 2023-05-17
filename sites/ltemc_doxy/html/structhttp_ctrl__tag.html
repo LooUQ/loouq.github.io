@@ -76,15 +76,36 @@ $(function() {
   <div class="headertitle"><div class="title">httpCtrl_tag Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Structure containing the control information for processing a series of HTTP requests.  
+ <a href="structhttp_ctrl__tag.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ltemc-http_8h_source.html">ltemc-http.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
+<tr class="memitem:ac3f4193fd11344e0945f6d2fb4d41a0a"><td class="memItemLeft" align="right" valign="top"><a id="ac3f4193fd11344e0945f6d2fb4d41a0a" name="ac3f4193fd11344e0945f6d2fb4d41a0a"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>streamType</b></td></tr>
+<tr class="separator:ac3f4193fd11344e0945f6d2fb4d41a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8de827cd09af3ed27153c2351b0897f"><td class="memItemLeft" align="right" valign="top"><a id="ab8de827cd09af3ed27153c2351b0897f" name="ab8de827cd09af3ed27153c2351b0897f"></a>
 <a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dataCntxt</b></td></tr>
+<tr class="memdesc:ab8de827cd09af3ed27153c2351b0897f"><td class="mdescLeft">&#160;</td><td class="mdescRight">stream type <br /></td></tr>
 <tr class="separator:ab8de827cd09af3ed27153c2351b0897f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f4b8e5885c0404be245cb6b658eb07"><td class="memItemLeft" align="right" valign="top"><a id="a19f4b8e5885c0404be245cb6b658eb07" name="a19f4b8e5885c0404be245cb6b658eb07"></a>
+dataRxHndlr_func&#160;</td><td class="memItemRight" valign="bottom"><b>dataRxHndlr</b></td></tr>
+<tr class="memdesc:a19f4b8e5885c0404be245cb6b658eb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer representing the source of the stream; fixed for protocols, file handle for FS <br /></td></tr>
+<tr class="separator:a19f4b8e5885c0404be245cb6b658eb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba4b78dd6e2ad95284526c7656a8abe9"><td class="memItemLeft" align="right" valign="top"><a id="aba4b78dd6e2ad95284526c7656a8abe9" name="aba4b78dd6e2ad95284526c7656a8abe9"></a>
+urcEvntHndlr_func&#160;</td><td class="memItemRight" valign="bottom"><b>urcEvntHndlr</b></td></tr>
+<tr class="memdesc:aba4b78dd6e2ad95284526c7656a8abe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to handle data streaming, initiated by eventMgr() or atcmd module <br /></td></tr>
+<tr class="separator:aba4b78dd6e2ad95284526c7656a8abe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d014aad12b0f88c80c9e3b016f40bf1"><td class="memItemLeft" align="right" valign="top"><a id="a8d014aad12b0f88c80c9e3b016f40bf1" name="a8d014aad12b0f88c80c9e3b016f40bf1"></a>
+appRcvProto_func&#160;</td><td class="memItemRight" valign="bottom"><b>appRecvDataCB</b></td></tr>
+<tr class="memdesc:a8d014aad12b0f88c80c9e3b016f40bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to determine if "potential" URC event is for an open stream and perform reqd actions <br /></td></tr>
+<tr class="separator:a8d014aad12b0f88c80c9e3b016f40bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ee05bf20eb22e34322544df417b4348"><td class="memItemLeft" align="right" valign="top"><a id="a8ee05bf20eb22e34322544df417b4348" name="a8ee05bf20eb22e34322544df417b4348"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>useTls</b></td></tr>
-<tr class="memdesc:a8ee05bf20eb22e34322544df417b4348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data context where this control operates (only SSL/TLS contexts 1-6) <br /></td></tr>
+<tr class="memdesc:a8ee05bf20eb22e34322544df417b4348"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback into host application with data (cast from generic func* to stream specific function) <br /></td></tr>
 <tr class="separator:a8ee05bf20eb22e34322544df417b4348"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a300b9ff4303e8a75daa0611ecdc0d199"><td class="memItemLeft" align="right" valign="top"><a id="a300b9ff4303e8a75daa0611ecdc0d199" name="a300b9ff4303e8a75daa0611ecdc0d199"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>hostUrl</b> [host__urlSz]</td></tr>
@@ -111,7 +132,7 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>requestType</b> [http
 <tr class="memdesc:a8640026b3fe8369c2c2a74191f6b9e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of custom header buffer <br /></td></tr>
 <tr class="separator:a8640026b3fe8369c2c2a74191f6b9e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2815bd62c196db16e142ccfbea5c2b9"><td class="memItemLeft" align="right" valign="top"><a id="ae2815bd62c196db16e142ccfbea5c2b9" name="ae2815bd62c196db16e142ccfbea5c2b9"></a>
-httpState_t&#160;</td><td class="memItemRight" valign="bottom"><b>requestState</b></td></tr>
+<a class="el" href="ltemc-http_8h.html#aa03ddb83b8bb9dfbd81633b86cf3f5d1">httpState_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>requestState</b></td></tr>
 <tr class="memdesc:ae2815bd62c196db16e142ccfbea5c2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">type of current/last request: 'G'=GET, 'P'=POST <br /></td></tr>
 <tr class="separator:ae2815bd62c196db16e142ccfbea5c2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1071f3132982a41053359eef69ccc21c"><td class="memItemLeft" align="right" valign="top"><a id="a1071f3132982a41053359eef69ccc21c" name="a1071f3132982a41053359eef69ccc21c"></a>
@@ -130,16 +151,23 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>pageSize</b></td>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>pageRemaining</b></td></tr>
 <tr class="memdesc:a04a6cd9b8590c2b39e66072b56ddee2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">if provided in page response, the page size <br /></td></tr>
 <tr class="separator:a04a6cd9b8590c2b39e66072b56ddee2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2923a74b9a2482663b22277a3e80bdc4"><td class="memItemLeft" align="right" valign="top"><a id="a2923a74b9a2482663b22277a3e80bdc4" name="a2923a74b9a2482663b22277a3e80bdc4"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>defaultTimeoutS</b></td></tr>
-<tr class="memdesc:a2923a74b9a2482663b22277a3e80bdc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to page size (if incl in respose) counts down to 0 (used for optimizing page end parsing) <br /></td></tr>
-<tr class="separator:a2923a74b9a2482663b22277a3e80bdc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a4903febee4ff04ba9c1bd2118b7ee"><td class="memItemLeft" align="right" valign="top"><a id="ac2a4903febee4ff04ba9c1bd2118b7ee" name="ac2a4903febee4ff04ba9c1bd2118b7ee"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeoutSec</b></td></tr>
+<tr class="memdesc:ac2a4903febee4ff04ba9c1bd2118b7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to page size (if incl in respose) counts down to 0 (used for optimizing page end parsing) <br /></td></tr>
+<tr class="separator:ac2a4903febee4ff04ba9c1bd2118b7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e74ee135d6de56ec2b4b892518248a8"><td class="memItemLeft" align="right" valign="top"><a id="a0e74ee135d6de56ec2b4b892518248a8" name="a0e74ee135d6de56ec2b4b892518248a8"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>defaultBlockSz</b></td></tr>
+<tr class="memdesc:a0e74ee135d6de56ec2b4b892518248a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">default timeout for GET/POST/read requests (BGx is 60 secs) <br /></td></tr>
+<tr class="separator:a0e74ee135d6de56ec2b4b892518248a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4974a0e69b5526617bef8af3a18b4b04"><td class="memItemLeft" align="right" valign="top"><a id="a4974a0e69b5526617bef8af3a18b4b04" name="a4974a0e69b5526617bef8af3a18b4b04"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>pageCancellation</b></td></tr>
-<tr class="memdesc:a4974a0e69b5526617bef8af3a18b4b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">default timeout for page requests (BGx is 60 secs) <br /></td></tr>
+<tr class="memdesc:a4974a0e69b5526617bef8af3a18b4b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">default size of block (in of bytes) to transfer to app from page read (page read spans blocks) <br /></td></tr>
 <tr class="separator:a4974a0e69b5526617bef8af3a18b4b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Structure containing the control information for processing a series of HTTP requests. </p>
+<p>Generally this is created for a "host", each GET/POST takes a relative page to the host. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>C:/Users/GregTerrell/Documents/CodeDev/Arduino/libraries/LooUQ-LTEmC/src/<a class="el" href="ltemc-http_8h_source.html">ltemc-http.h</a></li>
 </ul>
 </div><!-- contents -->

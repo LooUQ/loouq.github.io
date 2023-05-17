@@ -84,18 +84,28 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a273a8b7c0260d25a374376909ce50436"><td class="memItemLeft" align="right" valign="top"><a id="a273a8b7c0260d25a374376909ce50436" name="a273a8b7c0260d25a374376909ce50436"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>dataContext</b></td></tr>
-<tr class="separator:a273a8b7c0260d25a374376909ce50436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f4193fd11344e0945f6d2fb4d41a0a"><td class="memItemLeft" align="right" valign="top"><a id="ac3f4193fd11344e0945f6d2fb4d41a0a" name="ac3f4193fd11344e0945f6d2fb4d41a0a"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>streamType</b></td></tr>
+<tr class="separator:ac3f4193fd11344e0945f6d2fb4d41a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8de827cd09af3ed27153c2351b0897f"><td class="memItemLeft" align="right" valign="top"><a id="ab8de827cd09af3ed27153c2351b0897f" name="ab8de827cd09af3ed27153c2351b0897f"></a>
+<a class="el" href="ltemc-types_8h.html#a8f196c92332451166a912a2d0220d8c9">dataCntxt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dataCntxt</b></td></tr>
+<tr class="memdesc:ab8de827cd09af3ed27153c2351b0897f"><td class="mdescLeft">&#160;</td><td class="mdescRight">stream type <br /></td></tr>
+<tr class="separator:ab8de827cd09af3ed27153c2351b0897f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f4b8e5885c0404be245cb6b658eb07"><td class="memItemLeft" align="right" valign="top"><a id="a19f4b8e5885c0404be245cb6b658eb07" name="a19f4b8e5885c0404be245cb6b658eb07"></a>
+dataRxHndlr_func&#160;</td><td class="memItemRight" valign="bottom"><b>dataRxHndlr</b></td></tr>
+<tr class="memdesc:a19f4b8e5885c0404be245cb6b658eb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer representing the source of the stream; fixed for protocols, file handle for FS <br /></td></tr>
+<tr class="separator:a19f4b8e5885c0404be245cb6b658eb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba4b78dd6e2ad95284526c7656a8abe9"><td class="memItemLeft" align="right" valign="top"><a id="aba4b78dd6e2ad95284526c7656a8abe9" name="aba4b78dd6e2ad95284526c7656a8abe9"></a>
+urcEvntHndlr_func&#160;</td><td class="memItemRight" valign="bottom"><b>urcEvntHndlr</b></td></tr>
+<tr class="memdesc:aba4b78dd6e2ad95284526c7656a8abe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to handle data streaming, initiated by eventMgr() or atcmd module <br /></td></tr>
+<tr class="separator:aba4b78dd6e2ad95284526c7656a8abe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8488f1ecc0f0672b23b4f3cecf6962d"><td class="memItemLeft" align="right" valign="top"><a id="ae8488f1ecc0f0672b23b4f3cecf6962d" name="ae8488f1ecc0f0672b23b4f3cecf6962d"></a>
 <a class="el" href="ltemc-mqtt_8h.html#ae6c8dd33f85964954ee76aa63055cfd6">mqttState_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
+<tr class="memdesc:ae8488f1ecc0f0672b23b4f3cecf6962d"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to determine if "potential" URC event is for an open stream and perform reqd actions <br /></td></tr>
 <tr class="separator:ae8488f1ecc0f0672b23b4f3cecf6962d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94d8f9439f5ef57c63665316557eaf9e"><td class="memItemLeft" align="right" valign="top"><a id="a94d8f9439f5ef57c63665316557eaf9e" name="a94d8f9439f5ef57c63665316557eaf9e"></a>
-mqttRecvState_t&#160;</td><td class="memItemRight" valign="bottom"><b>recvState</b></td></tr>
-<tr class="memdesc:a94d8f9439f5ef57c63665316557eaf9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state of the MQTT protocol services on device. <br /></td></tr>
-<tr class="separator:a94d8f9439f5ef57c63665316557eaf9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ee05bf20eb22e34322544df417b4348"><td class="memItemLeft" align="right" valign="top"><a id="a8ee05bf20eb22e34322544df417b4348" name="a8ee05bf20eb22e34322544df417b4348"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>useTls</b></td></tr>
+<tr class="memdesc:a8ee05bf20eb22e34322544df417b4348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state of the MQTT protocol services on device. <br /></td></tr>
 <tr class="separator:a8ee05bf20eb22e34322544df417b4348"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a300b9ff4303e8a75daa0611ecdc0d199"><td class="memItemLeft" align="right" valign="top"><a id="a300b9ff4303e8a75daa0611ecdc0d199" name="a300b9ff4303e8a75daa0611ecdc0d199"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>hostUrl</b> [host__urlSz]</td></tr>
@@ -105,22 +115,35 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>hostUrl</b> [host__ur
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>hostPort</b></td></tr>
 <tr class="memdesc:aa0fbdfd4b0b276a823329769749441e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL or IP address of host. <br /></td></tr>
 <tr class="separator:aa0fbdfd4b0b276a823329769749441e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac225cf8f7dbdcc50a318ed9c382c692d"><td class="memItemLeft" align="right" valign="top"><a id="ac225cf8f7dbdcc50a318ed9c382c692d" name="ac225cf8f7dbdcc50a318ed9c382c692d"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>clientId</b> [SET_PROPLEN(mqtt__clientIdSz)]</td></tr>
-<tr class="memdesc:ac225cf8f7dbdcc50a318ed9c382c692d"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP port number host is listening on (allows for 65535/0) <br /></td></tr>
-<tr class="separator:ac225cf8f7dbdcc50a318ed9c382c692d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab67bf8a336e2cd15f242f5754bf55f45"><td class="memItemLeft" align="right" valign="top"><a id="ab67bf8a336e2cd15f242f5754bf55f45" name="ab67bf8a336e2cd15f242f5754bf55f45"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>username</b> [SET_PROPLEN(mqtt__userNameSz)]</td></tr>
-<tr class="separator:ab67bf8a336e2cd15f242f5754bf55f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a451d74d08843b667791cac490dc4b4"><td class="memItemLeft" align="right" valign="top"><a id="a3a451d74d08843b667791cac490dc4b4" name="a3a451d74d08843b667791cac490dc4b4"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>password</b> [SET_PROPLEN(mqtt__userPasswordSz)]</td></tr>
-<tr class="separator:a3a451d74d08843b667791cac490dc4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b160795cbbe5b78388a9b872ba247d1"><td class="memItemLeft" align="right" valign="top"><a id="a8b160795cbbe5b78388a9b872ba247d1" name="a8b160795cbbe5b78388a9b872ba247d1"></a>
+<a class="el" href="ltemc-mqtt_8h.html#a6f446d1fbf8b0211fc36cbbd2eaf9512">mqttTopicCtrl_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>topics</b> [<a class="el" href="ltemc-mqtt_8h.html#a5f8ab8a44e690c2450ffcf33de4996d9a8816e7da78761a9a888229df2a823221">mqtt__topicsCnt</a>]</td></tr>
+<tr class="memdesc:a8b160795cbbe5b78388a9b872ba247d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP port number host is listening on (allows for 65535/0) <br /></td></tr>
+<tr class="separator:a8b160795cbbe5b78388a9b872ba247d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce59f2ec7270b934db8d448257c73b9"><td class="memItemLeft" align="right" valign="top"><a id="a6ce59f2ec7270b934db8d448257c73b9" name="a6ce59f2ec7270b934db8d448257c73b9"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>clientId</b> [PROPLEN(mqtt__clientIdSz)]</td></tr>
+<tr class="memdesc:a6ce59f2ec7270b934db8d448257c73b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of topic controls, provides for independent app receive functions per topic <br /></td></tr>
+<tr class="separator:a6ce59f2ec7270b934db8d448257c73b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dccfd573eb3e75b50f8497b5f7a2b26"><td class="memItemLeft" align="right" valign="top"><a id="a9dccfd573eb3e75b50f8497b5f7a2b26" name="a9dccfd573eb3e75b50f8497b5f7a2b26"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>username</b> [PROPLEN(mqtt__userNameSz)]</td></tr>
+<tr class="memdesc:a9dccfd573eb3e75b50f8497b5f7a2b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">for auto-restart <br /></td></tr>
+<tr class="separator:a9dccfd573eb3e75b50f8497b5f7a2b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355ffd262578c9f8a955276f345e00cb"><td class="memItemLeft" align="right" valign="top"><a id="a355ffd262578c9f8a955276f345e00cb" name="a355ffd262578c9f8a955276f345e00cb"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>password</b> [PROPLEN(mqtt__userPasswordSz)]</td></tr>
+<tr class="separator:a355ffd262578c9f8a955276f345e00cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a224c16093375c1db5becef1b693ef7ba"><td class="memItemLeft" align="right" valign="top"><a id="a224c16093375c1db5becef1b693ef7ba" name="a224c16093375c1db5becef1b693ef7ba"></a>
 <a class="el" href="ltemc-mqtt_8h.html#af6396985642256a42f60af322da5124f">mqttVersion_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mqttVersion</b></td></tr>
 <tr class="separator:a224c16093375c1db5becef1b693ef7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a763233e00ae0dce61a5a02d3af3c0687"><td class="memItemLeft" align="right" valign="top"><a id="a763233e00ae0dce61a5a02d3af3c0687" name="a763233e00ae0dce61a5a02d3af3c0687"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>lastMsgId</b></td></tr>
-<tr class="separator:a763233e00ae0dce61a5a02d3af3c0687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd52016a48ca5e37180b22e910983df"><td class="memItemLeft" align="right" valign="top"><a id="a2bd52016a48ca5e37180b22e910983df" name="a2bd52016a48ca5e37180b22e910983df"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>sentMsgId</b></td></tr>
+<tr class="separator:a2bd52016a48ca5e37180b22e910983df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2968a40cf58f9f04ec0a62b72efeafcc"><td class="memItemLeft" align="right" valign="top"><a id="a2968a40cf58f9f04ec0a62b72efeafcc" name="a2968a40cf58f9f04ec0a62b72efeafcc"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>recvMsgId</b></td></tr>
+<tr class="memdesc:a2968a40cf58f9f04ec0a62b72efeafcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTT TX message ID for QOS, automatically incremented, rolls at max value. <br /></td></tr>
+<tr class="separator:a2968a40cf58f9f04ec0a62b72efeafcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac964175a493d2bac9f3f29ded085569c"><td class="memItemLeft" align="right" valign="top"><a id="ac964175a493d2bac9f3f29ded085569c" name="ac964175a493d2bac9f3f29ded085569c"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>errCode</b></td></tr>
+<tr class="memdesc:ac964175a493d2bac9f3f29ded085569c"><td class="mdescLeft">&#160;</td><td class="mdescRight">last received message identifier <br /></td></tr>
+<tr class="separator:ac964175a493d2bac9f3f29ded085569c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Struct representing the state of a MQTT stream service. </p>
